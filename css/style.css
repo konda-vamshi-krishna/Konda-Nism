@@ -770,11 +770,11 @@
     font-weight: 600;
 }
 /* Hide the Google Translate branding banner */
-.goog-te-banner-frame.skiptranslate {
+.goog-te-banner-frame.skiptranslate, .goog-te-banner-frame, iframe.goog-te-banner-frame {
     display: none !important;
-    }
+}
 body {
-    top: 0px !important; 
+    top: 0 !important;
 }
 
 /* Dual-Rendering Translation Layout */

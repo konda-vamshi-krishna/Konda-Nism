@@ -504,13 +504,9 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.removeItem('nism_test_history');
           localStorage.removeItem('nism_active_test');
           localStorage.removeItem('nism_starred_questions');
-          testHistory = [];
-          starredQuestions = [];
-          const resumeSection = document.getElementById('resumeSection');
-          if (resumeSection) resumeSection.style.display = 'none';
-          updateAnalyticsUI();
-          setupTestSelectors();
-          alert("All progress has been reset.");
+          localStorage.removeItem('nism_lang');
+          alert("All progress has been reset. The application will now reload.");
+          window.location.reload();
       }
   };
 
