@@ -726,3 +726,43 @@
 body {
     top: 0px !important; 
 }
+
+/* Dual-Rendering Translation Layout */
+.translate-box {
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--primary);
+    color: var(--text-main);
+    font-style: italic;
+    opacity: 0.9;
+}
+.opt-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.option {
+    align-items: flex-start !important; /* ensure options stack properly if they wrap */
+}
+.opt-badge {
+    margin-top: 2px; /* align with first line */
+}
+
+/* Side-by-Side Notes */
+.notes-wrapper {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+.notes-half {
+    flex: 1;
+    min-width: 0; /* prevent flex blowout */
+}
+@media (max-width: 768px) {
+    .notes-wrapper {
+        flex-direction: column;
+    }
+    .notes-half:last-child {
+        border-top: 1px dashed var(--border-color);
+        padding-top: 20px;
+    }
+}

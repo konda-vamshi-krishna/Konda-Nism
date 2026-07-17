@@ -217,7 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderActiveQuestion() {
       const q = testData[currentActiveTest][currentQ];
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
-      document.getElementById('activeQText').textContent = q.question;
+      document.getElementById('activeQText').innerHTML = `
+          <div class="notranslate">${q.question}</div>
+          <div class="translate-box">${q.question}</div>
+      `;
       
       // Update Grid active classes
       updateGridStyles();
@@ -249,7 +252,13 @@ document.addEventListener('DOMContentLoaded', () => {
               div.onclick = () => selectSimOption(text, opt);
           }
           
-          div.innerHTML = `<div class="opt-badge">${letter}</div><div>${text}</div>`;
+          div.innerHTML = `
+              <div class="opt-badge notranslate">${letter}</div>
+              <div class="opt-text-container">
+                  <div class="notranslate">${text}</div>
+                  <div class="translate-box">${text}</div>
+              </div>
+          `;
           optionsArea.appendChild(div);
       });
       
@@ -266,7 +275,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const expPanel = document.getElementById('activeExpPanel');
       if (isSubmitted || (testMode === 'practice' && answers[currentQ])) {
           expPanel.style.display = 'block';
-          expPanel.innerHTML = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
+          expPanel.innerHTML = `
+              <div class="notranslate">${expHtml}</div>
+              <div class="translate-box">${expHtml}</div>
+          `;
       } else {
           expPanel.style.display = 'none';
       }
@@ -406,14 +419,26 @@ document.addEventListener('DOMContentLoaded', () => {
           div.onclick = () => {
               document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
               div.classList.add('active');
-              bodyContainer.innerHTML = mdToHtml(part.content);
+              const htmlContent = mdToHtml(part.content);
+              bodyContainer.innerHTML = `
+                  <div class="notes-wrapper">
+                      <div class="notes-half notranslate">${htmlContent}</div>
+                      <div class="notes-half translate-box">${htmlContent}</div>
+                  </div>
+              `;
               window.scrollTo({ top: 0, behavior: 'smooth' });
           };
           tocContainer.appendChild(div);
       });
       
       // Load initial notes body
-      bodyContainer.innerHTML = mdToHtml(notesData.parts[0].content);
+      const initHtmlContent = mdToHtml(notesData.parts[0].content);
+      bodyContainer.innerHTML = `
+          <div class="notes-wrapper">
+              <div class="notes-half notranslate">${initHtmlContent}</div>
+              <div class="notes-half translate-box">${initHtmlContent}</div>
+          </div>
+      `;
   }
 
   // A very lightweight markdown formatter
@@ -558,8 +583,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').textContent = card.front;
-          document.getElementById('fcBackText').textContent = card.back;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box">${card.front}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box">${card.back}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
