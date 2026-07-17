@@ -2341,51 +2341,135 @@ if (document.readyState === 'interactive' || document.readyState === 'complete')
 }
 
 // ==========================================
-// EDGE-SIDE CLIENT TEXT INGESTION ENGINE (V7)
-// FileReader Web API — ₹0 serverless ingestion
+// EDGE-NATIVE PDF + TEXT INGESTION ENGINE (V8)
+// pdf.js CDN lazy-load | FileReader ArrayBuffer
+// ₹0 serverless — no binary backend required
 // ==========================================
 
-function ingestFileIntoWorkspace(file) {
-    if (!file) return;
+// 1. Dynamic Script Loader Vector — keeps primary page footprint optimized
+function lazyLoadPDFEngine(onSuccessCallback) {
+    if (window.pdfjsLib) {
+        onSuccessCallback();
+        return;
+    }
+    logToTerminal('Fetching micro-engine PDF compiler libraries from edge CDN...');
 
-    logToTerminal(`File Intercepted by Edge Parser: [${file.name}] - Size: ${(file.size / 1024).toFixed(2)} KB`);
+    const scriptNode = document.createElement('script');
+    scriptNode.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js';
+    scriptNode.onload = () => {
+        // Enforce specific build path mapping parameters for worker execution
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+            'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+        logToTerminal('PDF compilation infrastructure successfully operational inside local cache.');
+        onSuccessCallback();
+    };
+    scriptNode.onerror = () => {
+        logToTerminal('❌ Critical Exception: CDN packet drop blocking document parser initialization.');
+        alert('Network Error: Dynamic library ingestion failed. Check your internet connection.');
+    };
+    document.head.appendChild(scriptNode);
+}
 
-    // Guardrail: Enforce absolute 5MB memory safe-buffer boundary
-    if (file.size > 5 * 1024 * 1024) {
-        alert('Infrastructure Boundary Intercept: Source files are limited to 5MB to guarantee mobile viewport stability.');
+// 2. Spatial Heuristic Text Extraction Pipeline
+async function parseStructuralTextFromPDF(binaryBuffer) {
+    logToTerminal('Loading binary document structure variables into active browser context...');
+    try {
+        const parsingTask = window.pdfjsLib.getDocument({ data: binaryBuffer });
+        const pdfDoc = await parsingTask.promise;
+
+        logToTerminal(`System Discovery: Located ${pdfDoc.numPages} target pages. Commencing text isolation...`);
+        let consolidatedTextPayload = '';
+
+        // Sequentially loop through pages to guarantee absolute linear reading order
+        for (let i = 1; i <= pdfDoc.numPages; i++) {
+            const activePage = await pdfDoc.getPage(i);
+            const metadataItems = await activePage.getTextContent();
+
+            let coordinateTrackerY = null;
+            let lineBufferText = '';
+
+            // Read absolute Y coordinates to reconstruct structural spacing and carriage returns
+            for (const block of metadataItems.items) {
+                const currentY = block.transform[5];
+                if (coordinateTrackerY !== null && currentY !== coordinateTrackerY) {
+                    lineBufferText += '\n';
+                }
+                lineBufferText += block.str + ' ';
+                coordinateTrackerY = currentY;
+            }
+
+            consolidatedTextPayload += `\n--- [Page ${i} Reference Separation Marker] ---\n` + lineBufferText;
+        }
+
+        const prunedResultString = consolidatedTextPayload.trim();
+        if (!prunedResultString) {
+            throw new Error('Target payload holds no renderable plain-text assets (potential static scanned image bitmap layout).');
+        }
+
+        const interfaceTextarea = document.getElementById('ai-chunk-input');
+        interfaceTextarea.value = prunedResultString;
+        interfaceTextarea.style.display = 'block';
+
+        logToTerminal(`✅ Success: Extracted ${prunedResultString.length.toLocaleString()} layout character variables. Pipeline primed for AI compilation.`);
+
+    } catch (anomaly) {
+        // UT-015: PasswordException graceful handler
+        const msg = anomaly.message || anomaly.name || String(anomaly);
+        if (anomaly.name === 'PasswordException' || msg.toLowerCase().includes('password')) {
+            logToTerminal('❌ PDF Extraction Engine Fault: Document is password-protected. Encrypted PDFs cannot be parsed client-side.');
+            alert('Parser Rejection: This PDF requires a password. Please provide an unencrypted version of the document.');
+        } else {
+            logToTerminal(`❌ PDF Extraction Engine Fault: ${msg}`);
+            alert('Parser Error: Client engine failed to accurately read binary document context inputs.');
+        }
+    }
+}
+
+// 3. Complete File Ingestion Router Hook — V8 binary branch routing
+function ingestFileIntoWorkspace(targetFile) {
+    if (!targetFile) return;
+
+    logToTerminal(`File Intercepted by Intake Gateway: [${targetFile.name}] - Size: ${(targetFile.size / 1024).toFixed(2)} KB`);
+
+    // Guardrail: Protect local heap frameworks from sizing overflow limits
+    if (targetFile.size > 5 * 1024 * 1024) {
+        alert('Infrastructure Boundary Intercept: Source files limited to 5MB to guarantee mobile viewport stability.');
         return;
     }
 
     const browserFileReader = new FileReader();
+    const ext = targetFile.name.substring(targetFile.name.lastIndexOf('.')).toLowerCase();
 
-    browserFileReader.onload = function (e) {
-        try {
+    if (ext === '.pdf') {
+        // Route PDF to binary ArrayBuffer reader → pdf.js spatial extractor
+        browserFileReader.onload = function (e) {
+            // Lazy-load pdf.js only when actually needed, then run extraction
+            lazyLoadPDFEngine(() => parseStructuralTextFromPDF(e.target.result));
+        };
+        browserFileReader.onerror = () => logToTerminal('❌ Core OS Sandbox Error: Web API blocked access to file bytes path context.');
+        browserFileReader.readAsArrayBuffer(targetFile);
+
+    } else if (ext === '.txt' || ext === '.md') {
+        // Plain text route — fast UTF-8 string read
+        browserFileReader.onload = function (e) {
             const rawExtractedText = e.target.result;
-
-            // UT-013: Catch empty/zero-byte file payloads gracefully
             if (!rawExtractedText || rawExtractedText.trim().length === 0) {
-                throw new Error('Zero byte volume discovered inside text block object stream.');
+                logToTerminal('❌ Ingestion Intercept Failure: Zero byte volume discovered inside text block object stream.');
+                return;
             }
-
-            logToTerminal(`Successfully parsed ${rawExtractedText.length.toLocaleString()} character string components. Syncing to volatile staging array memory...`);
-
-            // UT-012: Overwrite cleans the workspace fully — no residual buffer remainders
+            // UT-012: Overwrite cleans workspace fully — no residual buffer remainders
             const workingTextarea = document.getElementById('ai-chunk-input');
             workingTextarea.value = rawExtractedText;
             workingTextarea.style.display = 'block';
+            logToTerminal(`✅ Flat document loaded: ${rawExtractedText.length.toLocaleString()} characters. Ready for compilation.`);
+        };
+        browserFileReader.onerror = () => logToTerminal('❌ Core OS Sandbox Error: Web API blocked access to file bytes path context.');
+        browserFileReader.readAsText(targetFile);
 
-            logToTerminal("✅ Data stream localized cleanly. Review text above, then click 'Compile & Save Current Chapter' to proceed.");
-        } catch (fault) {
-            logToTerminal(`❌ Ingestion Intercept Failure: ${fault.message}`);
-        }
-    };
-
-    browserFileReader.onerror = function () {
-        logToTerminal('❌ Core OS Sandbox Error: Web API blocked access to file bytes path context.');
-    };
-
-    // Read target bytes directly into client volatile RAM as pure string segments
-    browserFileReader.readAsText(file);
+    } else {
+        logToTerminal(`❌ File type rejected: [${targetFile.name}] — only PDF, TXT, and MD schemas are accepted.`);
+        alert('Invalid File Format: Only PDF, TXT, or MD schemas conform to compilation validation limits.');
+    }
 }
 
 // Click-to-browse: delegate click to hidden file input
@@ -2396,12 +2480,12 @@ document.getElementById('ai-file-dropzone')?.addEventListener('click', () => {
 // File picker change — fired when user selects via browse dialog
 document.getElementById('ai-file-picker')?.addEventListener('change', (event) => {
     const activeFile = event.target.files[0];
-    // UT-012: Reset the picker value so the same file can be re-selected after a swap
+    // UT-012: Reset picker value so the same file can be re-selected after a swap
     event.target.value = '';
     ingestFileIntoWorkspace(activeFile);
 });
 
-// Fix B: dragover — MUST preventDefault() to stop the browser from hijacking the drop
+// dragover — MUST preventDefault() to stop browser hijacking the drop into a new tab
 document.getElementById('ai-file-dropzone')?.addEventListener('dragover', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -2415,7 +2499,7 @@ document.getElementById('ai-file-dropzone')?.addEventListener('dragleave', (e) =
     e.currentTarget.style.borderColor = 'var(--indigo-primary)';
 });
 
-// Fix B: drop — MUST preventDefault() to prevent browser opening file in new tab
+// drop — MUST preventDefault() to prevent browser opening file as raw URL in new tab
 document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -2425,11 +2509,11 @@ document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
     const droppedFile = e.dataTransfer.files[0];
     if (!droppedFile) return;
 
-    // Validate file type client-side
-    const allowedExtensions = ['.txt', '.md'];
+    // Client-side extension gate
+    const allowedExtensions = ['.txt', '.md', '.pdf'];
     const ext = droppedFile.name.substring(droppedFile.name.lastIndexOf('.')).toLowerCase();
     if (!allowedExtensions.includes(ext)) {
-        logToTerminal(`❌ File type rejected: [${droppedFile.name}] — only .txt and .md documents are accepted.`);
+        logToTerminal(`❌ File type rejected: [${droppedFile.name}] — only PDF, TXT, and MD documents are accepted.`);
         return;
     }
 

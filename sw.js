@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kumt-engine-v7';
+const CACHE_NAME = 'kumt-engine-v8';
 // Cache version suffix appended to static assets for network-level proxy cache busting
-const ASSET_VER = '?v=7';
+const ASSET_VER = '?v=8';
 
 // Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [
@@ -19,6 +19,10 @@ const STATIC_SHELL_MATCHES = [
   '/js/app.js',
   '/js/marked.min.js'
 ];
+
+// CDN host match for pdf.js lazy-loaded binaries
+const PDF_CDN_HOST = 'cdnjs.cloudflare.com';
+const PDF_CDN_PATH = '/ajax/libs/pdf.js/';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -46,6 +50,24 @@ self.addEventListener('fetch', (event) => {
   if (isStaticShell || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
+    );
+    return;
+  }
+
+  // Strategy C: Cache-First for pdf.js CDN binaries (pdf.min.js + pdf.worker.min.js)
+  // These are large, immutable, versioned assets — cache aggressively after first load
+  if (url.hostname === PDF_CDN_HOST && url.pathname.includes(PDF_CDN_PATH)) {
+    event.respondWith(
+      caches.match(event.request).then(cached => {
+        if (cached) return cached;
+        return fetch(event.request).then(networkResponse => {
+          if (networkResponse.status === 200) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
+          return networkResponse;
+        });
+      })
     );
     return;
   }
