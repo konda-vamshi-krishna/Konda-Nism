@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kumt-engine-v8';
+const CACHE_NAME = 'kumt-engine-v9';
 // Cache version suffix appended to static assets for network-level proxy cache busting
-const ASSET_VER = '?v=8';
+const ASSET_VER = '?v=9';
 
 // Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [
@@ -44,6 +44,11 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+
+  // BUG-04 FIX: Explicitly exclude all API traffic to openrouter.ai from any
+  // caching strategy. The Strategy A .js catch-all is too broad and could
+  // intercept a proxy-rewritten API URL. Hard-pass all openrouter.ai requests.
+  if (url.hostname === 'openrouter.ai') return;
 
   // Strategy A: Cache-First for Immutable Static Core Assets
   const isStaticShell = STATIC_SHELL_MATCHES.some(path => url.pathname.endsWith(path));

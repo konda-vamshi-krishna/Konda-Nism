@@ -27,21 +27,30 @@ def validate_external_resource_pointers(notes_payload_data):
                 link_list = section["external_links"]
                 if not isinstance(link_list, list):
                     raise ValueError("Structural Error: 'external_links' must be an array list format.")
-                
+
                 for entry in link_list:
                     if not isinstance(entry, dict):
                         raise ValueError("Schema Exception: Individual link nodes must occupy exact dictionary configurations.")
                     if "label" not in entry or "url" not in entry:
                         raise KeyError("Missing Key: Link items must contain explicit 'label' and 'url' metadata properties.")
-                    
+
+                    # BUG-03 FIX: Explicit empty-string boundary assertion
+                    # An empty label or url passes the JS if(textLabel && addressUrl) gate
+                    # but would reach the renderer as an invalid empty anchor node
+                    label_string = str(entry["label"]).strip()
                     url_string = str(entry["url"]).strip()
-                    
+
+                    if not label_string:
+                        raise ValueError("Schema Violation: Link 'label' field must not be an empty string.")
+                    if not url_string:
+                        raise ValueError("Schema Violation: Link 'url' field must not be an empty string.")
+
                     if not url_string.startswith(("http://", "https://")):
                         raise ValueError(f"Protocol Violation: Direct URL target must mount a secure address pathway: {url_string}")
-                    
+
                     if malicious_pattern.search(url_string):
                         raise ValueError(f"🚨 Security Alert [Rule D]: XSS or escaping syntax injection vector blocked inside link URL: {url_string}")
-                        
+
     return True
 
 def validate_chapter_indices(notes_payload_data):

@@ -1948,10 +1948,17 @@ function isCompilerActive() {
     return typeof volatileStagingBuffer !== 'undefined' && volatileStagingBuffer && volatileStagingBuffer.chapterCounter > 0;
 }
 
+// BUG-06 FIX: Use textContent-safe span elements instead of innerHTML concatenation
+// to prevent XSS via user-supplied filenames being injected into the terminal log.
 function logToTerminal(message) {
     const consoleNode = document.getElementById('ai-terminal-console');
     if (consoleNode) {
-        consoleNode.innerHTML += `<br>[${new Date().toLocaleTimeString()}]: ${message}`;
+        const line = document.createElement('span');
+        line.style.display = 'block';
+        // message may contain safe HTML like bold tags from the system — sanitize user portions
+        // by setting textContent only for the timestamp, and using a safe join for the body
+        line.textContent = `[${new Date().toLocaleTimeString()}]: ${message}`;
+        consoleNode.appendChild(line);
         consoleNode.scrollTop = consoleNode.scrollHeight;
     }
 }
@@ -2051,12 +2058,19 @@ function checkCompilationCheckpoint() {
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
             if (key && key.startsWith('kumt_ai_staging_')) {
-                const val = localStorage.getItem(key);
-                const parsed = JSON.parse(val);
-                if (parsed && parsed.chapterCounter > 0) {
-                    savedKey = key;
-                    savedData = parsed;
-                    break;
+                // BUG-05 FIX: wrap each individual localStorage parse in its own try-catch
+                // so a single corrupted entry doesn't abort the entire scan loop
+                try {
+                    const val = localStorage.getItem(key);
+                    const parsed = JSON.parse(val);
+                    if (parsed && parsed.chapterCounter > 0) {
+                        savedKey = key;
+                        savedData = parsed;
+                        break;
+                    }
+                } catch (parseErr) {
+                    console.warn(`Skipping corrupted checkpoint key '${key}':`, parseErr);
+                    localStorage.removeItem(key); // prune broken entry
                 }
             }
         }
@@ -2066,7 +2080,15 @@ function checkCompilationCheckpoint() {
         if (savedData && panel && metaSpan) {
             const dateStr = new Date(savedData.timestamp).toLocaleString();
             const slugDisplay = savedData.courseSlug || 'temp_session';
-            metaSpan.innerHTML = `💾 Active compilation session detected: <strong>${slugDisplay}</strong> (compiled ${savedData.chapterCounter} unit(s), saved ${dateStr})`;
+            // Safe text insertion — no raw HTML injection of user-controlled slug
+            metaSpan.textContent = '';
+            const prefix = document.createTextNode('\u{1F4BE} Active compilation session detected: ');
+            const strong = document.createElement('strong');
+            strong.textContent = slugDisplay;
+            const suffix = document.createTextNode(` (compiled ${savedData.chapterCounter} unit(s), saved ${dateStr})`);
+            metaSpan.appendChild(prefix);
+            metaSpan.appendChild(strong);
+            metaSpan.appendChild(suffix);
             panel.style.display = 'flex';
             document.getElementById('ai-restore-btn').dataset.key = savedKey;
         } else if (panel) {
@@ -2120,9 +2142,18 @@ function clearCompilationCheckpoint() {
 
 document.getElementById('ai-restore-btn')?.addEventListener('click', restoreCompilationSession);
 
+// BUG-01 FIX: Dedicated in-flight flag prevents concurrent API calls from
+// corrupting chapterCounter if user rapidly re-clicks the compile button
+// while the previous async fetch is still awaiting a response.
+let _compilerInFlight = false;
+
 // 1. Chapter Transmutation Thread
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
+    if (_compilerInFlight) {
+        logToTerminal('⚠️ Compilation already in progress. Please wait for the current request to complete.');
+        return;
+    }
     
     const apiKey = document.getElementById('ai-api-key').value.trim();
     const targetModel = document.getElementById('ai-model-select').value;
@@ -2166,6 +2197,11 @@ Target JSON Structure Schema:
 Text material data block: ${normalizedTextSample}`;
 
     try {
+        _compilerInFlight = true;
+        // Disable the compile button during flight to prevent duplicate submissions
+        const transmuteBtnEl = document.getElementById('ai-transmute-btn');
+        if (transmuteBtnEl) transmuteBtnEl.disabled = true;
+
         logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModel}] architecture...`);
         const apiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
@@ -2217,6 +2253,12 @@ Text material data block: ${normalizedTextSample}`;
     } catch (fault) {
         logToTerminal(`❌ Operational Error: Parsing exception encountered - ${fault.message}`);
         alert("Compilation Anomaly: The payload format returned by the model deviated from the strict schema validation rules.");
+    } finally {
+        // BUG-01 FIX: Always release the in-flight lock and re-enable the button,
+        // regardless of success or failure, so the UI never deadlocks
+        _compilerInFlight = false;
+        const transmuteBtnEl = document.getElementById('ai-transmute-btn');
+        if (transmuteBtnEl) transmuteBtnEl.disabled = false;
     }
 });
 
@@ -2347,6 +2389,10 @@ if (document.readyState === 'interactive' || document.readyState === 'complete')
 // ==========================================
 
 // 1. Dynamic Script Loader Vector — keeps primary page footprint optimized
+// BUG-02 FIX: Track active pdfDoc instance and destroy it before starting a new parse.
+// This terminates the internal worker page references, allowing GC to reclaim heap.
+let _activePdfDocRef = null;
+
 function lazyLoadPDFEngine(onSuccessCallback) {
     if (window.pdfjsLib) {
         onSuccessCallback();
@@ -2372,10 +2418,17 @@ function lazyLoadPDFEngine(onSuccessCallback) {
 
 // 2. Spatial Heuristic Text Extraction Pipeline
 async function parseStructuralTextFromPDF(binaryBuffer) {
+    // BUG-02 FIX: Destroy previous pdfDoc before allocating a new one
+    // to prevent historical page thread references accumulating in V8 heap
+    if (_activePdfDocRef) {
+        try { await _activePdfDocRef.destroy(); } catch (_) {}
+        _activePdfDocRef = null;
+    }
     logToTerminal('Loading binary document structure variables into active browser context...');
     try {
         const parsingTask = window.pdfjsLib.getDocument({ data: binaryBuffer });
         const pdfDoc = await parsingTask.promise;
+        _activePdfDocRef = pdfDoc; // store reference for future GC cleanup
 
         logToTerminal(`System Discovery: Located ${pdfDoc.numPages} target pages. Commencing text isolation...`);
         let consolidatedTextPayload = '';
