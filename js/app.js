@@ -2265,7 +2265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Hardened Chapter Transmutation Thread Refactor (V15 Modular Endpoints)
+// Hardened Segmented Transmutation Core (V17 Micro-Chunking Pass)
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
     if (window._compilerInFlight) return;
@@ -2276,93 +2276,129 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     const rawText = document.getElementById('ai-chunk-input').value.trim();
     
     if (!apiKey || !rawText || rawText.length === 0) {
-        alert("Input Validation Error: Both the Provider Key and Target Text Content are required.");
+        alert("Input Validation Error: Active token keys and resource text areas must be populated.");
         return;
     }
 
     window._compilerInFlight = true;
     document.getElementById('ai-transmute-btn').disabled = true;
 
+    // Define strict chunk parameters to insulate edge proxy read timeouts
+    const MAX_CHUNK_SIZE = 25000;
+    const textSegments = [];
+    
+    for (let offset = 0; offset < rawText.length; offset += MAX_CHUNK_SIZE) {
+        textSegments.push(rawText.substring(offset, offset + MAX_CHUNK_SIZE));
+    }
+
+    logToTerminal(`📦 Ingestion Splitter Active: Fragmented source text array into ${textSegments.length} isolated data units.`);
+    
     if (volatileStagingBuffer.chapterCounter === 0) {
         volatileStagingBuffer.chapterCounter = 1;
     }
-    const currentChapterNum = volatileStagingBuffer.chapterCounter;
 
-    // Buffer chunk protection layer 
-    let processedChunkPayload = rawText;
-    if (rawText.length > 80000) {
-        logToTerminal(`⚠️ High Volume Buffer Triggered: Text length [${rawText.length}] chunked dynamically.`);
-        processedChunkPayload = rawText.substring(0, 80000);
-    }
-
-    logToTerminal(`Slicing text block dynamically to protect ${activeProvider} context limits...`);
-    logToTerminal(`Initiating structural validation pipeline for Chapter ${currentChapterNum}...`);
-
-    // Dynamic Endpoint and Header Construction Matrix
     let requestEndpointTarget = "";
     let customRequestHeaders = { "Content-Type": "application/json" };
 
     if (activeProvider === 'nvidia') {
-        // Utilize a reliable, high-throughput CORS bypass wrapper that does not cap heavy multi-character POST bodies
         requestEndpointTarget = "https://corsproxy.io/?" + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
-        logToTerminal(`Sending data payloads to Nvidia gateway through Edge Proxy utilizing [${targetModelName}]...`);
     } else {
         requestEndpointTarget = "https://openrouter.ai/api/v1/chat/completions";
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
         customRequestHeaders["HTTP-Origin"] = window.location.origin;
-        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModelName}]...`);
     }
-
-    const extractionPrompt = `
-    You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
-    Do NOT enclose output in markdown blocks. Output pure JSON bytes only.
-    Target Schema:
-    {
-      "questions_pool": [{"id": "q_auto_${currentChapterNum}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
-      "flashcards_pool": [{"id": "fc_auto_${currentChapterNum}_001", "front": "", "back": ""}],
-      "chapter_metadata": { "title": "Unit Title", "body": "Summary string text" }
-    }
-    Text: ${processedChunkPayload}`;
 
     try {
-        const networkPayloadResponse = await fetch(requestEndpointTarget, {
-            method: "POST",
-            headers: customRequestHeaders,
-            body: JSON.stringify({
-                model: targetModelName,
-                messages: [{ role: "user", content: extractionPrompt }],
-                temperature: 0.15
-            })
-        });
+        // Iterate through chunks sequentially to ensure chronological order of context arrays
+        for (let index = 0; index < textSegments.length; index++) {
+            const currentSubChapterIdx = volatileStagingBuffer.chapterCounter;
+            logToTerminal(`🔄 Processing Data Segment [${index + 1}/${textSegments.length}] for Unit Block ${currentSubChapterIdx}...`);
 
-        if (!networkPayloadResponse.ok) {
-            throw new Error(`Gateway returned failure status code: ${networkPayloadResponse.status}`);
+            const extractionPrompt = `
+            You are an expert computational data linguist. Transmute the following text segment into a clean JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
+            Do NOT enclose output in markdown blocks. Output pure JSON bytes only.
+            Target Schema:
+            {
+              "questions_pool": [{"id": "q_auto_${currentSubChapterIdx}_${index}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
+              "flashcards_pool": [{"id": "fc_auto_${currentSubChapterIdx}_${index}_001", "front": "", "back": ""}],
+              "chapter_metadata": { "title": "Unit Segment Title", "body": "Summary string text" }
+            }
+            Text segment block: ${textSegments[index]}`;
+
+            const networkPayloadResponse = await fetch(requestEndpointTarget, {
+                method: "POST",
+                headers: customRequestHeaders,
+                body: JSON.stringify({
+                    model: targetModelName,
+                    messages: [{ role: "user", content: extractionPrompt }],
+                    temperature: 0.15
+                })
+            });
+
+            if (!networkPayloadResponse.ok) {
+                throw new Error(`Segment [${index + 1}] failed with HTTP error status: ${networkPayloadResponse.status}`);
+            }
+            
+            const networkObject = await networkPayloadResponse.json();
+            
+            if (networkObject.error) {
+                throw new Error(networkObject.error.message || JSON.stringify(networkObject.error));
+            }
+            
+            let outputContent = networkObject.choices[0].message.content.trim();
+            
+            if (outputContent.startsWith("```json")) outputContent = outputContent.slice(7);
+            if (outputContent.endsWith("```")) outputContent = outputContent.slice(0, -3);
+
+            let dataTree;
+            const sanitizedOutput = outputContent.trim();
+            try {
+                dataTree = JSON.parse(sanitizedOutput);
+            } catch (initialErr) {
+                logToTerminal('⚠️ Initial JSON parse failed. Attempting structural string recovery...');
+                const repaired = tryRepairJSON(sanitizedOutput);
+                if (repaired) {
+                    dataTree = repaired;
+                    logToTerminal('✅ Structural recovery succeeded: Salvaged partial compilation output from truncated stream.');
+                } else {
+                    try {
+                        const normalizedText = sanitizedOutput
+                            .replace(/[\n\r\t]/g, ' ')
+                            .replace(/\\"/g, '___ESCAPED_QUOTE___')
+                            .replace(/___ESCAPED_QUOTE___/g, '\\"');
+                        dataTree = JSON.parse(normalizedText);
+                    } catch (recoveryErr) {
+                        throw new Error(`JSON Syntax Error: ${initialErr.message}`);
+                    }
+                }
+            }
+
+            const testIdentifierKey = `test_${currentSubChapterIdx}`;
+            
+            // Seamless allocation compilation into unified target state array indexes
+            if (!volatileStagingBuffer.tests[testIdentifierKey]) {
+                volatileStagingBuffer.tests[testIdentifierKey] = [];
+            }
+            
+            // Normalize questions pool values
+            const questionsPool = dataTree.questions_pool || [];
+            const flashcardsPool = dataTree.flashcards_pool || [];
+            const metadata = dataTree.chapter_metadata || { title: "Unit Segment Title", body: "Summary string text" };
+
+            volatileStagingBuffer.tests[testIdentifierKey] = volatileStagingBuffer.tests[testIdentifierKey].concat(questionsPool);
+            volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(flashcardsPool);
+            
+            volatileStagingBuffer.notes.chapters.push({
+                chapter_idx: currentSubChapterIdx + index + 1, // Rule E: sequential offset starting strictly from chapter_idx: 2
+                title: `${metadata.title} (Part ${index + 1})`,
+                sections: [{ heading: "Segmented Analysis Lecture Core", body: metadata.body }]
+            });
+
+            logToTerminal(`✅ Chunk [${index + 1}/${textSegments.length}] merged successfully into dynamic memory slots.`);
         }
-        
-        const networkObject = await networkPayloadResponse.json();
-        
-        if (networkObject.error) {
-            throw new Error(networkObject.error.message || JSON.stringify(networkObject.error));
-        }
 
-        let outputContent = networkObject.choices[0].message.content.trim();
-        
-        if (outputContent.startsWith("```json")) outputContent = outputContent.slice(7);
-        if (outputContent.endsWith("```")) outputContent = outputContent.slice(0, -3);
-
-        const dataTree = JSON.parse(outputContent.trim());
-        const testIdentifierKey = `test_${currentChapterNum}`;
-        
-        volatileStagingBuffer.tests[testIdentifierKey] = dataTree.questions_pool;
-        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(dataTree.flashcards_pool);
-        volatileStagingBuffer.notes.chapters.push({
-            chapter_idx: currentChapterNum + 1, // Rule E: sequential offset matching
-            title: dataTree.chapter_metadata.title,
-            sections: [{ heading: "Dynamic Lecture Compilations", body: dataTree.chapter_metadata.body }]
-        });
-
-        logToTerminal(`✅ Success: Chapter ${currentChapterNum} compiled and cached successfully.`);
+        logToTerminal(`🎉 Global Success: Complete unit collection compiled successfully without edge proxy timeout failures.`);
         
         document.getElementById('ai-transmute-btn').style.display = 'none';
         document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
@@ -2371,8 +2407,8 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
         saveCompilationCheckpoint();
 
     } catch (fault) {
-        logToTerminal(`❌ Operational Error: Connection pipeline anomaly - ${fault.message}`);
-        alert("Connection Error: Request parsing failed. Please verify token parameters and network connectivity.");
+        logToTerminal(`❌ System Batch Failure: Segment parsing execution terminated: ${fault.message}`);
+        alert("Transaction Timeout Exception: Request was dropped at network limits. Attempt a smaller source asset block.");
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
