@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 8
+# NISM Series VIII Equity Derivatives - Mock test_8
 
 **Question 1:** Which is an example of a calendar spread?
 
@@ -9,7 +9,8 @@ B) Buy one-month futures and sell another month futures
 C) Buy stock and short futures
 D) Sell spot and buy call
 
-**Answer:** Buy one-month futures and sell another month futures
+===
+**Answer:** B) Buy one-month futures and sell another month futures
 
 **Explanation:** Calendar spread involves buying and selling futures contracts of different expiry months.
 
@@ -24,7 +25,8 @@ B) Derivative product
 C) Cash market product
 D) Money market instrument
 
-**Answer:** Derivative product
+===
+**Answer:** B) Derivative product
 
 **Explanation:** An index option derives its value from an underlying index like Nifty or Sensex. It is classified as a derivative product, not a debt or cash market instrument.
 
@@ -39,7 +41,8 @@ B) Arbitrage
 C) Hedging
 D) Speculation
 
-**Answer:** Arbitrage
+===
+**Answer:** B) Arbitrage
 
 **Explanation:** Arbitrage means buying in one market and simultaneously selling in another to profit from price differences. It is risk-free and exploits market inefficiencies.
 
@@ -54,7 +57,8 @@ B) Hedging
 C) Arbitraging
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Derivatives serve multiple purposes — they allow trading (speculation), hedging (risk management), and arbitraging (exploiting price differences across markets).
 
@@ -69,7 +73,8 @@ B) Too much of management control
 C) Income tax regulations
 D) Government policies
 
-**Answer:** Inadequate disaster planning
+===
+**Answer:** A) Inadequate disaster planning
 
 **Explanation:** Operational risk arises from inadequate internal processes, systems, or external events — such as poor disaster planning. Tax/government factors are regulatory risks.
 
@@ -82,7 +87,8 @@ D) Government policies
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Impact cost is inversely related to liquidity. When liquidity is poor, buying/selling large quantities moves prices more, making impact cost HIGH, not low.
 
@@ -97,7 +103,8 @@ B) Impact cost
 C) SEBI charges
 D) Brokerage
 
-**Answer:** Impact cost
+===
+**Answer:** B) Impact cost
 
 **Explanation:** Impact cost is an implicit cost — it is not paid directly but reflects the price movement caused by large orders in an illiquid market. STT and brokerage are explicit costs.
 
@@ -112,7 +119,8 @@ B) 15,600
 C) -15,600
 D) -16,600
 
-**Answer:** 15,600
+===
+**Answer:** B) 15,600
 
 **Explanation:** Profit = (Sell price - Buy price) x Lot size = (278 - 265) x 1200 = 13 x 1200 = Rs. 15,600 profit (short position closed at lower price).
 
@@ -127,7 +135,8 @@ B) Buying 1 June XYZ futures contract at 3600
 C) Buying 1 June XYZ futures contract at 3200
 D) Selling 1 June XYZ futures contract at 3200
 
-**Answer:** Buying 1 June XYZ futures contract at 3200
+===
+**Answer:** C) Buying 1 June XYZ futures contract at 3200
 
 **Explanation:** Short position profits when price falls. Profit = (3400 - 3200) x 50 = 200 x 50 = Rs. 10,000. Buying back at 3200 closes the short with correct profit.
 
@@ -142,7 +151,8 @@ B) Lower margin than sum of two independent legs of futures contract
 C) Higher margin than sum of two independent legs of futures contract
 D) No margin need to be paid for calendar spread positions
 
-**Answer:** Lower margin than sum of two independent legs of futures contract
+===
+**Answer:** B) Lower margin than sum of two independent legs of futures contract
 
 **Explanation:** Calendar spreads have offsetting positions, so risk is lower. Hence, exchanges charge lower margin compared to two independent (unhedged) futures positions.
 
@@ -157,7 +167,8 @@ B) Only the seller
 C) Both the buyer and the seller
 D) The clearing corporation
 
-**Answer:** Both the buyer and the seller
+===
+**Answer:** C) Both the buyer and the seller
 
 **Explanation:** In futures trading, both buyers and sellers are obligated to pay margins. This ensures both parties honor their contractual commitments.
 
@@ -170,7 +181,8 @@ D) The clearing corporation
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Once the near-month contract expires, the hedge is gone. The far-month contract then stands alone as an independent (regular open) position, attracting full margin.
 
@@ -185,7 +197,8 @@ B) True only for American options
 C) True for all options
 D) False for all options
 
-**Answer:** True for all options
+===
+**Answer:** C) True for all options
 
 **Explanation:** Option buyers pay a premium upfront. Their maximum loss is always limited to this premium paid, regardless of whether the option is European or American.
 
@@ -200,7 +213,8 @@ B) 206
 C) 0
 D) 49
 
-**Answer:** 196
+===
+**Answer:** A) 196
 
 **Explanation:** Put seller's max loss occurs if stock falls to zero. Loss = Strike price - Premium received = 245 - 49 = Rs. 196. Premium received partially offsets downside.
 
@@ -215,7 +229,8 @@ B) 26
 C) 45
 D) 0
 
-**Answer:** 26
+===
+**Answer:** B) 26
 
 **Explanation:** Intrinsic value of a call = Current Price - Strike Price = 286 - 260 = Rs. 26. The Rs. 45 premium includes intrinsic value (26) plus time value (19).
 
@@ -228,7 +243,8 @@ D) 0
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** A European option can only be exercised ON the expiry date, not before. "On or before" describes an American option. The exercise price is also the strike price, not market price.
 
@@ -243,7 +259,8 @@ B) An option which cannot be profitably exercised by the holder immediately
 C) An option with a positive intrinsic value
 D) An option with zero-time value
 
-**Answer:** An option with a positive intrinsic value
+===
+**Answer:** C) An option with a positive intrinsic value
 
 **Explanation:** An in-the-money option has positive intrinsic value — a call is ITM when market price > strike; a put is ITM when market price < strike.
 
@@ -258,7 +275,8 @@ B) Bearish spread
 C) Butterfly spread
 D) Calendar spread
 
-**Answer:** Bullish spread
+===
+**Answer:** A) Bullish spread
 
 **Explanation:** Buying a lower-strike call and selling a higher-strike call on the same expiry creates a Bull Call Spread (Bullish spread), profiting when the underlying price rises.
 
@@ -273,7 +291,8 @@ B) Short strangle
 C) Covered call
 D) Protective put
 
-**Answer:** Protective put
+===
+**Answer:** D) Protective put
 
 **Explanation:** A protective put involves holding a stock and buying a put option, which hedges downside risk. Covered call provides partial hedge; short straddle/strangle are unhedged strategies.
 
@@ -288,7 +307,8 @@ B) Call options on the same stock with the same maturity but different strike pr
 C) Put and call options on the same stock but different strike prices and different maturity
 D) Call and put options on the same stock with the same strike prices and same maturity
 
-**Answer:** Call and put options on the same stock with the same strike prices and same maturity
+===
+**Answer:** D) Call and put options on the same stock with the same strike prices and same maturity
 
 **Explanation:** Put-call parity defines the price relationship between a call and put option on the same underlying, with identical strike price and expiration date.
 
@@ -303,7 +323,8 @@ B) A falling futures price along with rising open interest
 C) A rising futures price along with rising open interest
 D) A falling futures price along with falling open interest
 
-**Answer:** A rising futures price along with rising open interest
+===
+**Answer:** C) A rising futures price along with rising open interest
 
 **Explanation:** Rising futures price + rising open interest = new money entering long positions = bullish signal. It confirms upward momentum backed by fresh buying interest.
 
@@ -316,7 +337,8 @@ D) A falling futures price along with falling open interest
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** On derivative exchanges, order prices entered on the trading system exclude brokerage. Brokerage is charged separately by the broker outside the exchange system.
 
@@ -331,7 +353,8 @@ B) Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
 C) Place a limit buy order for 100 shares of XYZ at Rs 790 per share
 D) Place a limit buy order for 100 shares of XYZ at Rs 770 per share
 
-**Answer:** Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
+===
+**Answer:** B) Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
 
 **Explanation:** A stop-loss sell order at Rs 770 triggers if price falls to 770, limiting loss to (780-770) x 100 = Rs 1,000. This protects against downside while holding the long position.
 
@@ -346,7 +369,8 @@ B) 5,02,050
 C) 2,32,050
 D) 4,10,000
 
-**Answer:** 5,02,050
+===
+**Answer:** B) 5,02,050
 
 **Explanation:** A's margin = 20 x 50 x 4500 x 6% = Rs 2,70,000. B's margin = 17 x 50 x 4550 x 6% = Rs 2,32,050. Total = 2,70,000 + 2,32,050 = Rs 5,02,050.
 
@@ -361,7 +385,8 @@ B) 1700
 C) 900
 D) 100
 
-**Answer:** 1700
+===
+**Answer:** B) 1700
 
 **Explanation:** Client positions are NOT netted against each other. Open position = C1's long (800) + C2's short (900) = 1700 contracts is the gross open position reported to Clearing Corporation.
 
@@ -374,7 +399,8 @@ D) 100
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Each client's position is treated independently for margin purposes. Two clients' opposite positions cannot be offset — each client must maintain their own margin separately.
 
@@ -389,7 +415,8 @@ B) Every 2 days
 C) Every 3 days
 D) On a daily basis
 
-**Answer:** On a daily basis
+===
+**Answer:** D) On a daily basis
 
 **Explanation:** MTM margins are settled daily. At end of each trading day, gains/losses on open futures positions are calculated and paid/received by members the next morning.
 
@@ -402,7 +429,8 @@ D) On a daily basis
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** To avoid conflict of interest, broker-members are NOT permitted on the Governing Council of the Clearing Corporation. Independent/public interest directors govern it.
 
@@ -417,7 +445,8 @@ B) To inculcate confidence in the minds of market participants
 C) To protect the interest of the investors in securities
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** TGF serves all three purposes — guaranteeing settlements, building market confidence, and protecting investors. It is the exchange's safety net for trade settlements.
 
@@ -432,7 +461,8 @@ B) The stock broker violates the conditions of registration
 C) The stock broker is suspended by the stock exchange
 D) In any of the above situations
 
-**Answer:** In any of the above situations
+===
+**Answer:** D) In any of the above situations
 
 **Explanation:** SEBI can penalize or suspend a broker for any of these violations — non-payment of fees, breach of registration conditions, or exchange suspension.
 
@@ -447,7 +477,8 @@ B) The Exchange
 C) A suspense account
 D) Error account
 
-**Answer:** Another solvent member
+===
+**Answer:** A) Another solvent member
 
 **Explanation:** When a member defaults, the Clearing Corporation transfers client positions to another solvent (financially sound) member to protect clients' interests and ensure continuity.
 
@@ -462,7 +493,8 @@ B) Short term capital gains under the head 'capital gains'
 C) Non-speculative income under the head 'income from other sources'
 D) Non-speculative income under the head 'profits and gains of business or profession'
 
-**Answer:** Non-speculative income under the head 'profits and gains of business or profession'
+===
+**Answer:** A) Speculative income under the head 'profits and gains of business or profession'
 
 **Explanation:** Under Indian tax law, F&O income is classified as non-speculative business income under 'profits and gains of business or profession', allowing set-off against business losses.
 
@@ -477,7 +509,8 @@ B) Short term capital gain
 C) Speculative gains
 D) Income from other Sources
 
-**Answer:** Short term capital gain
+===
+**Answer:** B) Short term capital gain
 
 **Explanation:** For FPIs, derivatives gains/losses on recognized exchanges are treated as short-term capital gains, unlike domestic investors for whom it is business income.
 
@@ -490,7 +523,8 @@ D) Income from other Sources
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** This is part of the KYC (Know Your Customer) process. Trading members are required to verify client identity, financial background, and objectives before onboarding.
 
@@ -505,7 +539,8 @@ B) High Networth Clients
 C) Institutional Clients
 D) High Risk Clients
 
-**Answer:** Clients of Special Categories
+===
+**Answer:** A) Clients of Special Categories
 
 **Explanation:** Under KYC/AML regulations, Politically Exposed Persons (PEPs) — those holding prominent public positions — fall under 'Clients of Special Categories' requiring enhanced due diligence.
 
@@ -520,7 +555,8 @@ B) Unique client code
 C) ISIN code
 D) Demat account number
 
-**Answer:** Unique client code
+===
+**Answer:** B) Unique client code
 
 **Explanation:** A Unique Client Code (UCC) is assigned to every client at onboarding. It exclusively identifies the client across all transactions on the exchange.
 
@@ -535,7 +571,8 @@ B) Central Vigilance Commission
 C) Reserve Bank of India
 D) Financial Intelligence Unit - India
 
-**Answer:** Financial Intelligence Unit - India
+===
+**Answer:** D) Financial Intelligence Unit - India
 
 **Explanation:** Suspicious Transaction Reports (STRs) must be filed with the Financial Intelligence Unit - India (FIU-IND), the national agency that collects and analyses financial intelligence.
 
@@ -550,7 +587,8 @@ B) Collateral Reporting System of Clearing Corporation
 C) SEBI's web-based complaints redressal system
 D) Customer Due Diligence and e-KYC system
 
-**Answer:** SEBI's web-based complaints redressal system
+===
+**Answer:** C) SEBI's web-based complaints redressal system
 
 **Explanation:** SCORES (SEBI Complaints Redress System) is SEBI's online platform for investors to lodge complaints against listed companies or registered intermediaries and track resolution.
 
@@ -565,7 +603,8 @@ B) Only sellers
 C) Neither buyers nor sellers
 D) Only arbitrageurs
 
-**Answer:** Neither buyers nor sellers
+===
+**Answer:** C) Neither buyers nor sellers
 
 **Explanation:** Impact cost is the extra cost due to low liquidity. A high impact cost increases the buying price and reduces the selling price. Therefore, both buyers and sellers are negatively affected.
 
@@ -580,7 +619,8 @@ B) Volatility is high
 C) Market is stable
 D) None of the above
 
-**Answer:** Volatility is high
+===
+**Answer:** B) Volatility is high
 
 **Explanation:** When volatility is high, prices fluctuate more. This increases risk. Therefore, exchanges collect higher initial margins to protect against possible losses.
 
@@ -595,7 +635,8 @@ B) Theta
 C) Rho
 D) Vega
 
-**Answer:** Vega
+===
+**Answer:** D) Vega
 
 **Explanation:** Vega shows how much the option price changes when volatility changes. Higher volatility usually increases option premium.
 
@@ -608,7 +649,8 @@ D) Vega
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Clearing members handle settlement risk and guarantee trades. Hence, they are required to maintain higher net worth.
 
@@ -623,7 +665,8 @@ B) Systematic Risk
 C) Credit Risk
 D) Operational Risk
 
-**Answer:** Systematic Risk
+===
+**Answer:** A) Unsystematic Risk
 
 **Explanation:** Systematic risk affects the entire market (like inflation, policy changes). It cannot be removed by diversification.
 
@@ -636,7 +679,8 @@ D) Operational Risk
 A) Yes
 B) No
 
-**Answer:** No
+===
+**Answer:** B) No
 
 **Explanation:** A long Put can only be closed by selling the same Put contract. A Call option is a different contract and cannot offset the Put.
 
@@ -651,7 +695,8 @@ B) No impact
 C) It becomes profitable
 D) It becomes risky
 
-**Answer:** It becomes profitable
+===
+**Answer:** C) It becomes profitable
 
 **Explanation:** A long futures position benefits when price rises. Profit = Selling Price – Buying Price.
 
@@ -664,7 +709,8 @@ D) It becomes risky
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Higher returns always come with higher risk. No investment gives guaranteed high returns without risk.
 
@@ -679,7 +725,8 @@ B) Near -1
 C) Near 0
 D) Near 2
 
-**Answer:** Near 0
+===
+**Answer:** C) Near 0
 
 **Explanation:** Out-of-the-money options have very little chance of expiring in profit. Hence, their Delta is close to zero.
 
@@ -694,7 +741,8 @@ B) Broker asking for funds
 C) Daily revaluation of open positions
 D) Fixing final settlement price
 
-**Answer:** Daily revaluation of open positions
+===
+**Answer:** C) Daily revaluation of open positions
 
 **Explanation:** Mark to Market (MTM) means daily calculation of profit or loss based on market price changes. Losses are collected and profits are credited daily.
 
@@ -709,7 +757,8 @@ B) Price at Risk
 C) Volume at Risk
 D) Value at Risk
 
-**Answer:** Value at Risk
+===
+**Answer:** D) Value at Risk
 
 **Explanation:** As per regulatory guidelines, margins for index futures are calculated using the Value at Risk (VaR) method. VaR estimates the maximum expected loss at a given confidence level.
 
@@ -724,7 +773,8 @@ B) Place stop loss at Rs 970
 C) Place limit buy at Rs 990
 D) Place limit sell at Rs 970
 
-**Answer:** Place stop loss at Rs 970
+===
+**Answer:** B) Place stop loss at Rs 970
 
 **Explanation:** Maximum Loss Allowed = Rs 1,000 Shares = 100 Loss per Share = 1000 ÷ 100 = Rs 10 Stop Loss Price = 980 – 10 = Rs 970 If price falls to Rs 970, loss per share is Rs 10. Total loss = 10 × 100 = Rs 1,000.
 
@@ -737,7 +787,8 @@ D) Place limit sell at Rs 970
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** A call option gives the right to buy at the strike price, not the market price. The strike price is fixed in the contract.
 
@@ -752,7 +803,8 @@ B) Rs 12,00,000 Profit
 C) Rs 12,000 Loss
 D) Rs 10,000 Profit
 
-**Answer:** Rs 12,000 Profit
+===
+**Answer:** A) Rs 12,000 Profit
 
 **Explanation:** Profit per unit = 778 – 768 = Rs 10 Total Profit = 10 × 1200 = Rs 12,000. Since price increased, the buyer makes profit of Rs 12,000.
 
@@ -767,7 +819,8 @@ B) Must join cash segment within 2 years
 C) Provides trading facility to clients
 D) Has no trading rights
 
-**Answer:** Has no trading rights
+===
+**Answer:** D) Has no trading rights
 
 **Explanation:** A Professional Clearing Member only clears and settles trades. They do not have rights to trade on the exchange.
 
@@ -780,7 +833,8 @@ D) Has no trading rights
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Theta measures time decay (change in price due to passage of time). Vega measures sensitivity to volatility.
 
@@ -795,7 +849,8 @@ B) Matter already under arbitration
 C) Notional loss claim
 D) Unauthorized trade in client account
 
-**Answer:** Unauthorized trade in client account
+===
+**Answer:** D) Unauthorized trade in client account
 
 **Explanation:** Exchanges can resolve complaints related to trading issues like unauthorized transactions in a client’s account.
 
@@ -810,7 +865,8 @@ B) Euroclear
 C) SEBI Approved Clearing Corporation
 D) Interbank Clearing House
 
-**Answer:** SEBI Approved Clearing Corporation
+===
+**Answer:** C) SEBI Approved Clearing Corporation
 
 **Explanation:** All derivatives trades are cleared and settled through SEBI-approved Clearing Corporations.
 
@@ -823,7 +879,8 @@ D) Interbank Clearing House
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Rho measures sensitivity to interest rate. Delta measures change in option price due to change in underlying asset price.
 
@@ -836,7 +893,8 @@ B) False
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** Fixed deposits are accepted as liquid assets along with cash, government securities, and bank guarantees for margin requirements.
 
@@ -849,7 +907,8 @@ B) No
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Vega measures sensitivity of option price to volatility. Gamma measures change in Delta with respect to change in underlying price.
 
@@ -862,7 +921,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** A short Put can be squared off by buying the same Put contract with identical strike price and expiry date.
 
@@ -877,7 +937,8 @@ B) Income
 C) Loan
 D) Amortization
 
-**Answer:** Income
+===
+**Answer:** B) Income
 
 **Explanation:** If the option is exercised profitably, the difference received is treated as income in the Profit & Loss account.
 
@@ -890,7 +951,8 @@ D) Amortization
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** As strike price increases, the intrinsic value of the call decreases. Therefore, the premium generally becomes lower.
 
@@ -905,7 +967,8 @@ B) Individual Stock Options
 C) Individual Stock Futures
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Indian equity derivatives market allows trading in index options, stock options, and stock futures.
 
@@ -918,7 +981,8 @@ D) All of the above
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** Strike price is fixed in the contract, while spot price changes. So, strike price can be higher, lower, or equal to spot price.
 
@@ -931,7 +995,8 @@ B) No
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** Futures trading does not require ownership of the underlying asset. Only margin payment is required.
 
@@ -946,7 +1011,8 @@ B) 2
 C) 3
 D) 4
 
-**Answer:** 3
+===
+**Answer:** C) 3
 
 **Explanation:** Possible combinations: 1 & 2, 2 & 3, 1 & 3 Total = 3 spreads Calendar spread involves contracts of different expiry months. Three combinations are possible.
 
@@ -959,7 +1025,8 @@ D) 4
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** NIFTY 50 uses free-float market capitalization method. Stocks are weighted based on market cap, not equally.
 
@@ -974,7 +1041,8 @@ B) Right only
 C) Both right and obligation
 D) Neither right nor obligation
 
-**Answer:** Right only
+===
+**Answer:** B) Right only
 
 **Explanation:** A Call option gives the buyer the right, but not the obligation, to buy the underlying asset at the strike price.
 
@@ -987,7 +1055,8 @@ D) Neither right nor obligation
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Hedgers use derivatives to reduce or transfer risk. Speculators accept risk in expectation of profit from price movements.
 
@@ -1002,7 +1071,8 @@ B) Cannot be attached
 C) Depends on Clearing Corporation
 D) None of the above
 
-**Answer:** Cannot be attached
+===
+**Answer:** B) Cannot be attached
 
 **Explanation:** Client funds and securities must be kept separate. They cannot be used to meet the broker’s personal or proprietary obligations.
 
@@ -1017,7 +1087,8 @@ B) It decreases
 C) It remains unchanged
 D) Cannot be predicted
 
-**Answer:** It remains unchanged
+===
+**Answer:** C) It remains unchanged
 
 **Explanation:** Stock split increases number of shares but reduces price proportionally. Total market capitalization remains same, so index value is unaffected.
 
@@ -1032,7 +1103,8 @@ B) Option Seller
 C) Both equally
 D) Neither
 
-**Answer:** Option Seller
+===
+**Answer:** B) Option Seller
 
 **Explanation:** As time passes, option premium reduces due to time decay. This benefits the option seller because he has already received the premium.
 
@@ -1047,7 +1119,8 @@ B) Seller has right to buy
 C) Buyer has right but not obligation to sell
 D) Buyer has no right
 
-**Answer:** Buyer has right but not obligation to sell
+===
+**Answer:** C) Buyer has right but not obligation to sell
 
 **Explanation:** A Put option gives the buyer the right (not obligation) to sell the underlying asset at a fixed strike price.
 
@@ -1062,7 +1135,8 @@ B) He makes loss
 C) Profit or loss uncertain
 D) No effect
 
-**Answer:** He makes profit
+===
+**Answer:** A) He makes profit
 
 **Explanation:** In futures, profit = Selling Price – Buying Price. If price rises after buying, the buyer gains.
 
@@ -1077,7 +1151,8 @@ B) Fully charged to P&L immediately
 C) Amortized over life of contract
 D) Not recorded
 
-**Answer:** Amortized over life of contract
+===
+**Answer:** C) Amortized over life of contract
 
 **Explanation:** As per accounting standards, forward premium or discount for hedging is spread (amortized) over the contract period.
 
@@ -1092,7 +1167,8 @@ B) Arbitrageurs to Hedgers
 C) Hedgers to Speculators
 D) Speculators to Arbitrageurs
 
-**Answer:** Hedgers to Speculators
+===
+**Answer:** C) Hedgers to Speculators
 
 **Explanation:** Hedgers want to reduce risk. Speculators are willing to take risk for profit. So risk moves from hedgers to speculators.
 
@@ -1107,7 +1183,8 @@ B) Buy one-month futures and sell another month futures
 C) Buy stock and short futures
 D) Sell spot and buy call
 
-**Answer:** Buy one-month futures and sell another month futures
+===
+**Answer:** B) Buy one-month futures and sell another month futures
 
 **Explanation:** Calendar spread involves buying and selling futures contracts of different expiry months.
 
@@ -1122,7 +1199,8 @@ B) Must own 25% of underlying
 C) Must own 50% of underlying
 D) Need not own underlying
 
-**Answer:** Need not own underlying
+===
+**Answer:** D) Need not own underlying
 
 **Explanation:** In futures market, ownership of underlying asset is not required. Only margin payment is necessary.
 
@@ -1137,7 +1215,8 @@ B) Reallocation of risk among participants
 C) Both A and B
 D) None of the above
 
-**Answer:** Both A and B
+===
+**Answer:** C) Both A and B
 
 **Explanation:** Derivatives shift risk from hedgers (low risk appetite) to speculators (high risk appetite) and help in better risk distribution in the market.
 
@@ -1152,7 +1231,8 @@ B) Buyer has right, seller has obligation
 C) Options have non-linear payoff
 D) Options have linear payoff
 
-**Answer:** Options have linear payoff
+===
+**Answer:** D) Options have linear payoff
 
 **Explanation:** Options have non-linear payoff. Profit or loss does not move in straight line like futures. Buyer has limited loss and unlimited profit (in call).
 
@@ -1167,7 +1247,8 @@ B) Exchange Risk Management System
 C) SEBI’s Online Complaint Redressal System
 D) Suspicious Transaction Reporting System
 
-**Answer:** SEBI’s Online Complaint Redressal System
+===
+**Answer:** C) SEBI’s Online Complaint Redressal System
 
 **Explanation:** SCORES (SEBI Complaints Redress System) is SEBI’s web-based system for investor grievance redressal.
 
@@ -1182,7 +1263,8 @@ B) Reverse only
 C) Open new positions
 D) Not open new positions
 
-**Answer:** Not open new positions
+===
+**Answer:** C) Open new positions
 
 **Explanation:** When position limits are reached, fresh positions cannot be opened. However, existing positions can be reduced or reversed.
 
@@ -1197,7 +1279,8 @@ B) Short position
 C) Optional position
 D) Naked position
 
-**Answer:** Naked position
+===
+**Answer:** D) Naked position
 
 **Explanation:** When one leg of spread expires, only one contract remains. This becomes a naked (open) position.
 
@@ -1212,7 +1295,8 @@ B) Daily settlement dues not paid
 C) Both A and B
 D) None of the above
 
-**Answer:** Both A and B
+===
+**Answer:** C) Both A and B
 
 **Explanation:** Failure to pay margin or settlement dues is a serious violation. Clearing Corporation can close positions to control risk.
 
@@ -1227,7 +1311,8 @@ B) One-month USDINR Option
 C) Three-month Forward Contract
 D) One-month Government Bond Futures
 
-**Answer:** Three-month Forward Contract
+===
+**Answer:** C) Three-month Forward Contract
 
 **Explanation:** Forward contracts are private agreements between two parties and are settled bilaterally, not through an exchange.
 
@@ -1242,7 +1327,8 @@ B) Decrease
 C) Remain same
 D) Double
 
-**Answer:** Decrease
+===
+**Answer:** B) Decrease
 
 **Explanation:** Higher volatility increases option premium. Lower volatility reduces option premium.
 
@@ -1257,7 +1343,8 @@ B) Only on expiry date
 C) One day before expiry
 D) Anytime
 
-**Answer:** Only on expiry date
+===
+**Answer:** B) Only on expiry date
 
 **Explanation:** European options can be exercised only on the expiry date. In India, stock and index options follow European style.
 
@@ -1272,7 +1359,8 @@ B) Seller only
 C) Both buyer and seller
 D) Clearing Corporation
 
-**Answer:** Both buyer and seller
+===
+**Answer:** C) Both buyer and seller
 
 **Explanation:** In futures contracts, both buyer and seller must deposit initial margin. In options, only seller pays margin while buyer pays premium.
 
@@ -1287,7 +1375,8 @@ B) Derivative contract
 C) Cash deposit
 D) Physical asset
 
-**Answer:** Derivative contract
+===
+**Answer:** B) Derivative contract
 
 **Explanation:** Derivatives do not have their own value; they get their price from another asset like shares or gold.
 
@@ -1302,7 +1391,8 @@ B) Gold and silver
 C) A company's secret strategy meeting
 D) Foreign currency
 
-**Answer:** A company's secret strategy meeting
+===
+**Answer:** C) A company's secret strategy meeting
 
 **Explanation:** Derivatives must be based on tradeable assets or measurable financial variables, not private information.
 
@@ -1317,7 +1407,8 @@ B) 12th Century
 C) 15th Century
 D) 19th Century
 
-**Answer:** 12th Century
+===
+**Answer:** B) 12th Century
 
 **Explanation:** The sources mention that contracts for goods to be delivered later were signed at fairs in the 12th Century.
 
@@ -1332,7 +1423,8 @@ B) 5 years
 C) 10 years
 D) 20 years
 
-**Answer:** 20 years
+===
+**Answer:** D) 20 years
 
 **Explanation:** Monasteries in England used to pre-sell their wool as far as 20 years in advance.
 
@@ -1347,7 +1439,8 @@ B) Tulip Mania
 C) The Dutch Gold Rush
 D) The Grain Crisis
 
-**Answer:** Tulip Mania
+===
+**Answer:** B) Tulip Mania
 
 **Explanation:** Between 1634 and 1637, Holland experienced a speculative boom and bust involving tulip futures.
 
@@ -1362,7 +1455,8 @@ B) London, UK
 C) Dojima, Japan
 D) Mumbai, India
 
-**Answer:** Dojima, Japan
+===
+**Answer:** C) Dojima, Japan
 
 **Explanation:** Japan developed a rice futures market in the late 17th Century to help farmers manage risks from weather or war.
 
@@ -1377,7 +1471,8 @@ B) London Metal Exchange
 C) Chicago Board of Trade (CBOT)
 D) National Stock Exchange (NSE)
 
-**Answer:** Chicago Board of Trade (CBOT)
+===
+**Answer:** C) Chicago Board of Trade (CBOT)
 
 **Explanation:** The CBOT was created in 1848 to standardize forward contracts for commodities like grain.
 
@@ -1392,7 +1487,8 @@ B) 1865
 C) 1919
 D) 1972
 
-**Answer:** 1865
+===
+**Answer:** B) 1865
 
 **Explanation:** While CBOT started in 1848, the first standardized "futures" contract was listed in 1865.
 
@@ -1407,7 +1503,8 @@ B) Chicago Mercantile Exchange (CME)
 C) Dow Jones
 D) World Bank
 
-**Answer:** Chicago Mercantile Exchange (CME)
+===
+**Answer:** B) Chicago Mercantile Exchange (CME)
 
 **Explanation:** This board was reorganized in 1919 and eventually became the CME.
 
@@ -1422,7 +1519,8 @@ B) Oil futures
 C) Currency futures
 D) Interest rate futures
 
-**Answer:** Currency futures
+===
+**Answer:** C) Currency futures
 
 **Explanation:** The IMM was established in 1972 specifically for trading currency futures.
 
@@ -1437,9 +1535,26 @@ B) SEBI
 C) CBOE
 D) NYSE
 
-**Answer:** CBOE
+===
+**Answer:** C) CBOE
 
 **Explanation:** The Chicago Board Options Exchange (CBOE) was the first to offer listed options trading.
+
+---
+
+**Question 100:** [Ref. Question] Which Option Greek measures the sensitivity of the option's premium to a change in the price of the underlying asset (Ref Question 1)?
+
+**Options:**
+
+A) Delta
+B) Gamma
+C) Vega
+D) Theta
+
+===
+**Answer:** A) Delta
+
+**Explanation:** The Option Greek Delta measures the sensitivity to this specific underlying variable.
 
 ---
 

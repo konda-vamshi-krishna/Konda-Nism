@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 2
+# NISM Series VIII Equity Derivatives - Mock test_2
 
 **Question 1:** A "Self Clearing Member" (SCM) can clear trades for:
 
@@ -9,7 +9,8 @@ B) Only themselves and their own clients
 C) Other brokers
 D) Only foreign investors
 
-**Answer:** Only themselves and their own clients
+===
+**Answer:** B) Only themselves and their own clients
 
 **Explanation:** SCMs handle their own paperwork but cannot clear trades for other brokers.
 
@@ -24,7 +25,8 @@ B) They clear trades but do not trade themselves
 C) they are also a bank
 D) They are unregulated
 
-**Answer:** They clear trades but do not trade themselves
+===
+**Answer:** B) They clear trades but do not trade themselves
 
 **Explanation:** PCMs focus only on settling trades for others (like institutions).
 
@@ -39,7 +41,8 @@ B) Branch Manager
 C) Dealer
 D) Client
 
-**Answer:** Dealer
+===
+**Answer:** C) Dealer
 
 **Explanation:** Dealers can only see the specific clients and orders assigned to them.
 
@@ -54,7 +57,8 @@ B) Day Order
 C) Stop-loss Order
 D) Limit Order
 
-**Answer:** Day Order
+===
+**Answer:** B) Day Order
 
 **Explanation:** Day orders expire at the end of the trading session.
 
@@ -69,7 +73,8 @@ B) Must be filled instantly or it is deleted
 C) Can only be used for buying
 D) Is for long-term investors only
 
-**Answer:** Must be filled instantly or it is deleted
+===
+**Answer:** B) Must be filled instantly or it is deleted
 
 **Explanation:** IOC is "now or never".
 
@@ -84,7 +89,8 @@ B) Specify the exact price (or better) you are willing to trade at
 C) Trade only at 10 AM
 D) Limit your tax
 
-**Answer:** Specify the exact price (or better) you are willing to trade at
+===
+**Answer:** B) Specify the exact price (or better) you are willing to trade at
 
 **Explanation:** It gives the trader control over the price of the trade.
 
@@ -99,7 +105,8 @@ B) Execution Speed
 C) Dividends
 D) Safety
 
-**Answer:** Execution Speed
+===
+**Answer:** B) Execution Speed
 
 **Explanation:** Market orders fill at whatever price is available right now.
 
@@ -114,7 +121,8 @@ B) Automatically close a trade to limit your loss
 C) Stop paying brokerage
 D) Stop the clock
 
-**Answer:** Automatically close a trade to limit your loss
+===
+**Answer:** B) Automatically close a trade to limit your loss
 
 **Explanation:** It’s a safety order that triggers if the price hits a certain "danger level".
 
@@ -129,7 +137,8 @@ B) The lowest price
 C) The average price
 D) Zero
 
-**Answer:** The lowest price
+===
+**Answer:** B) The lowest price
 
 **Explanation:** Every buyer wants to buy as cheaply as possible.
 
@@ -144,7 +153,8 @@ B) The lowest price
 C) The price they paid
 D) The closing price
 
-**Answer:** The highest price
+===
+**Answer:** A) The highest price
 
 **Explanation:** Every seller wants to sell as high as possible.
 
@@ -159,7 +169,8 @@ B) The lower limit also moves up
 C) All trading stops
 D) Prices are frozen
 
-**Answer:** The lower limit also moves up
+===
+**Answer:** B) The lower limit also moves up
 
 **Explanation:** The whole band shifts to follow the market's movement.
 
@@ -172,7 +183,8 @@ D) Prices are frozen
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** In futures, profit or loss is settled daily through mark-to-market or when the position is squared off, not only at maturity.
 
@@ -187,7 +199,8 @@ B) 2
 C) 3
 D) 4
 
-**Answer:** 3
+===
+**Answer:** C) 3
 
 **Explanation:** Spreads can be created between 1&2, 2&3, and 1&3 month contracts. So total three combinations are possible.
 
@@ -202,7 +215,8 @@ B) Options
 C) Swaps
 D) Preference Shares
 
-**Answer:** Preference Shares
+===
+**Answer:** D) Preference Shares
 
 **Explanation:** Futures, options, and swaps are derivatives. Preference shares are capital instruments, not derivatives.
 
@@ -215,7 +229,8 @@ D) Preference Shares
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** In derivatives, ownership of the stock is not required. Anyone can buy or sell options.
 
@@ -228,7 +243,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** OTC options are customized as per agreement between two parties. Exchange-traded options are standardized.
 
@@ -243,7 +259,8 @@ B) Lower
 C) Nil
 D) Very High
 
-**Answer:** Lower
+===
+**Answer:** B) Lower
 
 **Explanation:** Since only basis risk exists and market risk is low, margin required is lower compared to normal positions.
 
@@ -256,7 +273,8 @@ D) Very High
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** A long position can be closed by selling, and a short position by buying. This is called squaring off.
 
@@ -271,7 +289,8 @@ B) Loss outside exchange framework
 C) Excess brokerage charged
 D) Legal expense claim
 
-**Answer:** Excess brokerage charged
+===
+**Answer:** C) Excess brokerage charged
 
 **Explanation:** Exchanges handle issues like excess brokerage, unauthorized trades, and non-receipt of funds.
 
@@ -286,7 +305,8 @@ B) Short position in stock
 C) Butterfly position
 D) Strangle position
 
-**Answer:** Short position in stock
+===
+**Answer:** B) Short position in stock
 
 **Explanation:** Exercising a put means selling the stock at strike price, creating a short position.
 
@@ -299,7 +319,8 @@ D) Strangle position
 A) Known
 B) Unknown
 
-**Answer:** Unknown
+===
+**Answer:** A) Known
 
 **Explanation:** Profit or loss depends on price movement in future. It cannot be fixed in advance.
 
@@ -314,7 +335,8 @@ B) Limited
 C) Unlimited
 D) Premium received
 
-**Answer:** Unlimited
+===
+**Answer:** B) Limited
 
 **Explanation:** If price rises infinitely, call seller’s loss can be unlimited.
 
@@ -329,7 +351,8 @@ B) Basket of stocks
 C) Single stock
 D) Fixed price index
 
-**Answer:** Basket of stocks
+===
+**Answer:** B) Basket of stocks
 
 **Explanation:** Nifty consists of multiple stocks, making manipulation very difficult.
 
@@ -342,7 +365,8 @@ D) Fixed price index
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** American options can be exercised anytime before expiry, so they have more flexibility and value.
 
@@ -355,7 +379,8 @@ B) False
 A) Can clear own trades
 B) Cannot clear trades directly
 
-**Answer:** Cannot clear trades directly
+===
+**Answer:** B) Cannot clear trades directly
 
 **Explanation:** Such members must clear trades through a Clearing Member.
 
@@ -370,7 +395,8 @@ B) Always same
 C) 28th of month
 D) Depends on regulator
 
-**Answer:** Always same
+===
+**Answer:** B) Always same
 
 **Explanation:** European options can only be exercised on expiry date.
 
@@ -385,7 +411,8 @@ B) Contango
 C) Normalization
 D) Arbitrage
 
-**Answer:** Contango
+===
+**Answer:** B) Contango
 
 **Explanation:** Contango means futures price is higher than spot price.
 
@@ -400,7 +427,8 @@ B) Stabilize markets
 C) Add liquidity
 D) Fix currency parity
 
-**Answer:** Add liquidity
+===
+**Answer:** C) Add liquidity
 
 **Explanation:** By actively trading, speculators improve liquidity.
 
@@ -415,7 +443,8 @@ B) Option
 C) Derivative
 D) Bond
 
-**Answer:** Derivative
+===
+**Answer:** C) Derivative
 
 **Explanation:** Their value is derived from index value, so they are derivatives.
 
@@ -430,7 +459,8 @@ B) Free-float market capitalization weighted
 C) Equal weighted
 D) Debt index
 
-**Answer:** Free-float market capitalization weighted
+===
+**Answer:** B) Free-float market capitalization weighted
 
 **Explanation:** Nifty is calculated using free-float market capitalization method.
 
@@ -445,7 +475,8 @@ B) Selling call while owning stock
 C) Buying put
 D) Buying call
 
-**Answer:** Selling call while owning stock
+===
+**Answer:** B) Selling call while owning stock
 
 **Explanation:** In covered call, investor owns stock and sells call option.
 
@@ -458,7 +489,8 @@ D) Buying call
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Forward contracts are customized OTC contracts and lack liquidity.
 
@@ -473,7 +505,8 @@ B) Legal counterparty
 C) Depository
 D) Custodian
 
-**Answer:** Legal counterparty
+===
+**Answer:** B) Legal counterparty
 
 **Explanation:** It guarantees settlement and becomes buyer to seller and seller to buyer.
 
@@ -488,7 +521,8 @@ B) Monthly
 C) Daily
 D) Quarterly
 
-**Answer:** Daily
+===
+**Answer:** C) Daily
 
 **Explanation:** MTM settlement happens daily in futures trading.
 
@@ -503,7 +537,8 @@ B) Very low
 C) Rising
 D) Uncertain
 
-**Answer:** Very low
+===
+**Answer:** B) Very low
 
 **Explanation:** Short straddle profits when price remains stable and volatility is low.
 
@@ -518,7 +553,8 @@ B) Derivative instrument
 C) Forex instrument
 D) Money market instrument
 
-**Answer:** Derivative instrument
+===
+**Answer:** B) Derivative instrument
 
 **Explanation:** Stock options derive value from underlying stock price.
 
@@ -533,7 +569,8 @@ B) Credit risk
 C) Counterparty risk
 D) Both B and C
 
-**Answer:** Both B and C
+===
+**Answer:** D) Both B and C
 
 **Explanation:** Default risk arises when counterparty fails to fulfill obligation. It is also called credit or counterparty risk.
 
@@ -548,7 +585,8 @@ B) ₹30,000 Loss
 C) ₹50,000 Loss
 D) ₹20,000 Profit
 
-**Answer:** ₹30,000 Loss
+===
+**Answer:** B) ₹30,000 Loss
 
 **Explanation:** Loss per share = 300 - 250 = ₹50. Net loss after premium = 50 - 20 = ₹30. Total loss = 30 × 1000 = ₹30,000.
 
@@ -563,7 +601,8 @@ B) Strike price minus spot price
 C) Full spot price
 D) Nothing
 
-**Answer:** Strike price minus spot price
+===
+**Answer:** B) Strike price minus spot price
 
 **Explanation:** A put is exercised when strike price is higher than spot price. Holder receives the difference (strike – spot).
 
@@ -576,7 +615,8 @@ D) Nothing
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** In-the-money options have real value. Out-of-the-money options have zero intrinsic value. It can never be negative.
 
@@ -591,7 +631,8 @@ B) Buy index futures
 C) Sell entire portfolio
 D) Sell index call option
 
-**Answer:** Buy index futures
+===
+**Answer:** B) Buy index futures
 
 **Explanation:** Buying index futures benefits from rising markets, matching bullish expectation.
 
@@ -604,7 +645,8 @@ D) Sell index call option
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Hedging reduces risk by taking opposite position in derivatives against existing asset.
 
@@ -619,7 +661,8 @@ B) Same for all funds
 C) Difference between fund and benchmark performance
 D) Brokerage charge
 
-**Answer:** Difference between fund and benchmark performance
+===
+**Answer:** C) Difference between fund and benchmark performance
 
 **Explanation:** Tracking error measures deviation between fund returns and benchmark returns.
 
@@ -634,7 +677,8 @@ B) Exchange traded options
 C) Forward contracts
 D) Index options
 
-**Answer:** Forward contracts
+===
+**Answer:** C) Forward contracts
 
 **Explanation:** Forward contracts are customized OTC contracts and are not easily tradable before maturity.
 
@@ -649,7 +693,8 @@ B) Can be squared off anytime before expiry
 C) Has no maturity
 D) Is only OTC
 
-**Answer:** Can be squared off anytime before expiry
+===
+**Answer:** B) Can be squared off anytime before expiry
 
 **Explanation:** Futures are exchange-traded and can be closed anytime before expiry.
 
@@ -664,7 +709,8 @@ B) Equity Share
 C) S&P 500 Futures
 D) Certificate of Deposit
 
-**Answer:** S&P 500 Futures
+===
+**Answer:** C) S&P 500 Futures
 
 **Explanation:** S&P 500 Futures derive value from the S&P 500 index, making it a derivative.
 
@@ -679,7 +725,8 @@ B) Depository
 C) Clearing Corporation
 D) Custodian
 
-**Answer:** Clearing Corporation
+===
+**Answer:** C) Clearing Corporation
 
 **Explanation:** Clearing Corporation becomes legal counterparty and ensures settlement.
 
@@ -694,7 +741,8 @@ B) Debited for gain
 C) Credited for loss
 D) Debited for loss
 
-**Answer:** Debited for loss
+===
+**Answer:** D) Debited for loss
 
 **Explanation:** Short position loses when price rises. Loss is debited from MTM margin account.
 
@@ -709,7 +757,8 @@ B) Brokerage rate
 C) Market volatility
 D) Expiry date
 
-**Answer:** Market volatility
+===
+**Answer:** C) Market volatility
 
 **Explanation:** Higher volatility means higher risk, so higher initial margin is required.
 
@@ -724,7 +773,8 @@ B) Buys stock at strike price
 C) Sells stock
 D) Receives premium
 
-**Answer:** Buys stock at strike price
+===
+**Answer:** B) Buys stock at strike price
 
 **Explanation:** Stock options are physically settled. Holder buys the shares at strike price.
 
@@ -739,7 +789,8 @@ B) Net premium inflow
 C) Unlimited loss
 D) No premium
 
-**Answer:** Net premium inflow
+===
+**Answer:** B) Net premium inflow
 
 **Explanation:** In bearish call spread, trader receives net premium initially.
 
@@ -754,7 +805,8 @@ B) Cross hedge
 C) Reverse cash-and-carry arbitrage
 D) Index arbitrage
 
-**Answer:** Reverse cash-and-carry arbitrage
+===
+**Answer:** C) Reverse cash-and-carry arbitrage
 
 **Explanation:** To sell in cash market without owning stock, borrowing facility is needed.
 
@@ -769,7 +821,8 @@ B) Short Straddle
 C) Long Butterfly
 D) Long Call
 
-**Answer:** Short Straddle
+===
+**Answer:** B) Short Straddle
 
 **Explanation:** Short straddle profits when prices remain stable and volatility is low.
 
@@ -782,7 +835,8 @@ D) Long Call
 A) Can be netted
 B) Cannot be netted
 
-**Answer:** Cannot be netted
+===
+**Answer:** B) Cannot be netted
 
 **Explanation:** Margin must be collected separately for each client’s open position.
 
@@ -795,7 +849,8 @@ B) Cannot be netted
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Trading Members without clearing rights clear trades via Clearing Members.
 
@@ -810,7 +865,8 @@ B) Backwardation
 C) Inflation
 D) Arbitrage
 
-**Answer:** Backwardation
+===
+**Answer:** B) Backwardation
 
 **Explanation:** Backwardation occurs when futures price is below spot price.
 
@@ -825,7 +881,8 @@ B) Government guarantees
 C) Clearing Corporation guarantees settlement
 D) Investor guarantees
 
-**Answer:** Clearing Corporation guarantees settlement
+===
+**Answer:** C) Clearing Corporation guarantees settlement
 
 **Explanation:** Clearing Corporation ensures settlement, reducing counterparty risk.
 
@@ -840,7 +897,8 @@ B) Derivative instrument
 C) Money market instrument
 D) Currency instrument
 
-**Answer:** Derivative instrument
+===
+**Answer:** B) Derivative instrument
 
 **Explanation:** Stock options derive value from underlying stock price.
 
@@ -855,7 +913,8 @@ B) Are compulsorily settled at last cum-date price
 C) Are cancelled without settlement
 D) Settled at predetermined price
 
-**Answer:** Are compulsorily settled at last cum-date price
+===
+**Answer:** B) Are compulsorily settled at last cum-date price
 
 **Explanation:** Outstanding contracts are settled at last available closing price on cum-date.
 
@@ -870,7 +929,8 @@ B) Reduce the NAV of the fund
 C) Sell index futures contracts
 D) Buy index futures contracts
 
-**Answer:** Sell index futures contracts
+===
+**Answer:** C) Sell index futures contracts
 
 **Explanation:** If the market falls, stock prices decline. By selling index futures, losses in shares can be offset by profit in futures. This is called hedging.
 
@@ -885,7 +945,8 @@ B) Trading
 C) Speculation
 D) Arbitrage
 
-**Answer:** Arbitrage
+===
+**Answer:** D) Arbitrage
 
 **Explanation:** Arbitrage means taking advantage of price differences in two markets by buying low in one and selling high in another.
 
@@ -900,7 +961,8 @@ B) American Put Option
 C) European Call Option
 D) European Put Option
 
-**Answer:** American Put Option
+===
+**Answer:** B) American Put Option
 
 **Explanation:** A put option gives the right to sell. American options can be exercised anytime before expiry.
 
@@ -915,7 +977,8 @@ B) Writing a Naked Call
 C) Writing a Covered Call
 D) Butterfly Strategy
 
-**Answer:** Writing a Naked Call
+===
+**Answer:** B) Writing a Naked Call
 
 **Explanation:** When a trader sells a call option without holding the shares, it is called writing a naked call.
 
@@ -930,7 +993,8 @@ B) Contango
 C) Basis
 D) Backwardation
 
-**Answer:** Backwardation
+===
+**Answer:** D) Backwardation
 
 **Explanation:** When future prices of later months are lower than near months, it is called backwardation.
 
@@ -945,7 +1009,8 @@ B) Initial Margin
 C) Ad-hoc Margin
 D) Call Margin
 
-**Answer:** Initial Margin
+===
+**Answer:** B) Initial Margin
 
 **Explanation:** Initial margin is the amount deposited at the beginning of a futures contract to cover potential losses.
 
@@ -958,7 +1023,8 @@ D) Call Margin
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Strike price is the fixed price at which asset can be bought or sold. Position limit refers to maximum quantity allowed in trading.
 
@@ -971,7 +1037,8 @@ B) False
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** If the fund manager expects a fall in market, selling index futures helps reduce losses in the portfolio.
 
@@ -984,7 +1051,8 @@ B) No
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Lower margins reduce entry barriers, so more traders participate in the derivatives market.
 
@@ -997,7 +1065,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Professional Clearing Members also clear trades for institutional clients, not only associate trading members.
 
@@ -1010,7 +1079,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** In futures contracts, both buyer and seller have equal obligations. Both can gain or lose equally depending on price movement.
 
@@ -1025,7 +1095,8 @@ B) It is settled in cash
 C) It is rarely traded in India
 D) Both A and B
 
-**Answer:** Both A and B
+===
+**Answer:** D) Both A and B
 
 **Explanation:** Index options are derivative products based on stock indices and are settled only in cash in India.
 
@@ -1040,7 +1111,8 @@ B) Central Government
 C) High Court of Mumbai
 D) Securities Appellate Tribunal
 
-**Answer:** Central Government
+===
+**Answer:** B) Central Government
 
 **Explanation:** The board members of SEBI are appointed by the Central Government of India.
 
@@ -1053,7 +1125,8 @@ D) Securities Appellate Tribunal
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Delta shows how much the option price changes when the underlying asset price changes slightly.
 
@@ -1068,7 +1141,8 @@ B) Shifts speculative trades to organized markets
 C) Both A and B
 D) None of the above
 
-**Answer:** Both A and B
+===
+**Answer:** C) Both A and B
 
 **Explanation:** Derivatives markets help in better price discovery and move speculative trading into organized and regulated markets.
 
@@ -1083,7 +1157,8 @@ B) Last Friday of the month
 C) First Thursday of the month
 D) Last Monday of the month
 
-**Answer:** Last Thursday of the month
+===
+**Answer:** A) Last Thursday of the month
 
 **Explanation:** On NSE, index futures expire on the last Thursday of the expiry month.
 
@@ -1096,7 +1171,8 @@ D) Last Monday of the month
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** If spot price is higher than strike price, the call option holder receives the difference (spot minus strike) in cash.
 
@@ -1111,7 +1187,8 @@ B) At a price decided by exchange and member
 C) At a price within daily circuit limits
 D) At a negotiated price only
 
-**Answer:** At a price within daily circuit limits
+===
+**Answer:** C) At a price within daily circuit limits
 
 **Explanation:** The price must be within the daily circuit limits set by the exchange.
 
@@ -1124,7 +1201,8 @@ D) At a negotiated price only
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Call option value rises when stock price rises. If stock price falls, call option premium usually falls.
 
@@ -1139,7 +1217,8 @@ B) Price touches Rs.450
 C) Order is placed
 D) Similar orders exist at Rs.450
 
-**Answer:** Price touches Rs.450
+===
+**Answer:** B) Price touches Rs.450
 
 **Explanation:** A stop-loss order becomes active when the market price reaches the trigger price.
 
@@ -1154,7 +1233,8 @@ B) Put and call options with different strike prices and different maturity
 C) Call options with same maturity but different strike prices
 D) Futures and options on the same stock
 
-**Answer:** Call and put options on the same stock with same strike price and same maturity
+===
+**Answer:** A) Call and put options on the same stock with same strike price and same maturity
 
 **Explanation:** Put-call parity shows the relationship between call and put options that have the same strike price and expiry date on the same underlying asset.
 
@@ -1167,7 +1247,8 @@ D) Futures and options on the same stock
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** The clearing corporation has authority to impose penalties and disable members from trading if they fail to meet obligations.
 
@@ -1182,7 +1263,8 @@ B) Building confidence among investors and brokers
 C) Guaranteeing settlement of trades
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** TGF ensures settlement of trades, protects investors, and increases trust in the stock exchange system.
 
@@ -1197,7 +1279,8 @@ B) Loss of Rs.9,000
 C) Profit of Rs.3,000
 D) Loss of Rs.3,000
 
-**Answer:** Loss of Rs.3,000
+===
+**Answer:** D) Loss of Rs.3,000
 
 **Explanation:** Price increased by Rs.6 (274−268). Since seller loses when price rises: 6 × 1500 = Rs.9,000 loss.
 
@@ -1210,7 +1293,8 @@ D) Loss of Rs.3,000
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Margin requirements are generally the same for both institutional and individual investors.
 
@@ -1225,7 +1309,8 @@ B) Speculator
 C) Hedger
 D) Market Maker
 
-**Answer:** Market Maker
+===
+**Answer:** D) Market Maker
 
 **Explanation:** A market maker provides liquidity by quoting both buy and sell prices and earns from the bid-ask spread.
 
@@ -1240,7 +1325,8 @@ B) Market makers
 C) Foreign financial institutions
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** All eligible participants including individuals, market makers, and foreign institutions can write options.
 
@@ -1253,7 +1339,8 @@ D) All of the above
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Forward contracts are private agreements between two parties and are not regulated by an exchange authority.
 
@@ -1266,7 +1353,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Liquid assets include cash, bank guarantees, and government securities, but not foreign exchange.
 
@@ -1279,7 +1367,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Volatility calculation methods are publicly available and not secret. Traders can calculate it using financial models.
 
@@ -1294,7 +1383,8 @@ B) Long Build-up
 C) Flat Trend
 D) Highly Volatile Trend
 
-**Answer:** Short Covering
+===
+**Answer:** A) Short Covering
 
 **Explanation:** When prices rise but open interest falls, it means traders with short positions are closing their positions. This is called short covering.
 
@@ -1309,7 +1399,8 @@ B) Good Till Cancelled Order
 C) Market Order
 D) Limit Order
 
-**Answer:** Good Till Cancelled Order
+===
+**Answer:** B) Good Till Cancelled Order
 
 **Explanation:** A Good Till Cancelled (GTC) order remains valid for a specified period unless cancelled by the trader.
 
@@ -1324,7 +1415,8 @@ B) 2350
 C) 2325
 D) 2450
 
-**Answer:** 2250
+===
+**Answer:** A) 2250
 
 **Explanation:** In a short futures position, profit occurs when price falls below selling price. Since 2250 is below 2300, he earns profit.
 
@@ -1339,7 +1431,8 @@ B) Spot Price + Cost of Carry
 C) Only Spot Price
 D) Only Cost of Carry
 
-**Answer:** Spot Price + Cost of Carry
+===
+**Answer:** B) Spot Price + Cost of Carry
 
 **Explanation:** Futures price equals spot price plus carrying cost such as interest and storage expenses.
 
@@ -1354,7 +1447,8 @@ B) He is suspended by stock exchange
 C) He fails to pay required fees
 D) Any of the above
 
-**Answer:** Any of the above
+===
+**Answer:** D) Any of the above
 
 **Explanation:** Suspension can occur for multiple reasons like rule violation, non-payment of fees, or exchange suspension.
 
@@ -1369,7 +1463,8 @@ B) Subtracting adjustment factor
 C) Dividing old strike price by adjustment factor
 D) Multiplying old strike price by adjustment factor
 
-**Answer:** Dividing old strike price by adjustment factor
+===
+**Answer:** C) Dividing old strike price by adjustment factor
 
 **Explanation:** During bonus or split adjustments, the old strike price is divided by the adjustment factor.
 
@@ -1384,7 +1479,8 @@ B) 590
 C) 60
 D) 0
 
-**Answer:** 60
+===
+**Answer:** C) 60
 
 **Explanation:** The maximum gain for option seller is the premium received. Here, maximum profit is Rs.60 per share.
 
@@ -1397,9 +1493,58 @@ D) 0
 A) Yes
 B) No
 
-**Answer:** No
+===
+**Answer:** B) No
 
 **Explanation:** Each client's position is calculated separately. Positions cannot be netted between different clients for margin purposes.
+
+---
+
+**Question 98:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15100 (premium Rs. 121) and a Put option at the same strike Rs. 15100 (premium Rs. 91). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+B) Upper BE: Rs. 15221 | Lower BE: Rs. 15009
+C) Upper BE: Rs. 15362 | Lower BE: Rs. 14838
+D) Upper BE: Rs. 15100 | Lower BE: Rs. 14888
+
+===
+**Answer:** A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 121 + 91 = Rs. 212. Upper Break-even = Strike + Total Premium = 15100 + 212 = Rs. 15312. Lower Break-even = Strike - Total Premium = 15100 - 212 = Rs. 14888.
+
+---
+
+**Question 99:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15200 (premium Rs. 122) and a Put option at the same strike Rs. 15200 (premium Rs. 92). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15414 | Lower BE: Rs. 14986
+B) Upper BE: Rs. 15322 | Lower BE: Rs. 15108
+C) Upper BE: Rs. 15464 | Lower BE: Rs. 14936
+D) Upper BE: Rs. 15200 | Lower BE: Rs. 14986
+
+===
+**Answer:** A) Upper BE: Rs. 15414 | Lower BE: Rs. 14986
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 122 + 92 = Rs. 214. Upper Break-even = Strike + Total Premium = 15200 + 214 = Rs. 15414. Lower Break-even = Strike - Total Premium = 15200 - 214 = Rs. 14986.
+
+---
+
+**Question 100:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15300 (premium Rs. 123) and a Put option at the same strike Rs. 15300 (premium Rs. 93). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15516 | Lower BE: Rs. 15084
+B) Upper BE: Rs. 15423 | Lower BE: Rs. 15207
+C) Upper BE: Rs. 15566 | Lower BE: Rs. 15034
+D) Upper BE: Rs. 15300 | Lower BE: Rs. 15084
+
+===
+**Answer:** A) Upper BE: Rs. 15516 | Lower BE: Rs. 15084
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 123 + 93 = Rs. 216. Upper Break-even = Strike + Total Premium = 15300 + 216 = Rs. 15516. Lower Break-even = Strike - Total Premium = 15300 - 216 = Rs. 15084.
 
 ---
 

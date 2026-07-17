@@ -2,7 +2,16 @@ import json
 import re
 
 def semantic_finance_audit():
-    with open('g:/mock text/parsed_data_clean.json', 'r', encoding='utf-8') as f:
+    import argparse
+    import os
+    parser = argparse.ArgumentParser(description="Run semantic financial audit on course module.")
+    parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
+    args = parser.parse_args()
+
+    module_dir = os.path.join('g:/mock text/content', args.module)
+    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+
+    with open(clean_json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
     errors = []
@@ -14,7 +23,10 @@ def semantic_finance_audit():
             checked_count += 1
             question = q.get('question', '').lower()
             options = [o.lower() for o in q.get('options', [])]
-            answer = q.get('answer', '').lower()
+            
+            # Resolve answer string using answer_idx
+            answer_idx = q.get('answer_idx', 0)
+            answer = options[answer_idx].lower() if answer_idx < len(options) else ""
             explanation = q.get('explanation', '').lower()
             
             # Rule 1: Option Greeks questions should contain Greek terms in the answer/options
@@ -29,12 +41,11 @@ def semantic_finance_audit():
                     errors.append(f"[{test_key} Q{idx+1}] Option buyer max loss question, but 'premium' not mentioned in answer/options.")
                     
             # Rule 3: Math pricing checking
-            # If question mentions spot price and futures price, check if calculation is relevant
             if "spot price" in question and "lot size" in question and "contracts" in question:
                 if not any(num in ''.join(options) for num in ['contract', 'contract size', 'rs']):
                      errors.append(f"[{test_key} Q{idx+1}] Hedging/Math question lacks proper unit terms in options.")
 
-    print(f"--- Semantic Finance Audit ---")
+    print(f"--- Semantic Finance Audit for module {args.module} ---")
     print(f"Total Questions Evaluated: {checked_count}")
     print(f"Semantic Alignment Warnings: {len(errors)}")
     for err in errors[:10]:

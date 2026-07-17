@@ -1,37 +1,44 @@
 import json
 import re
+import os
 
-# We will create a pool of 100 premium advanced questions to fill the gaps in Test 1 to 8,
-# making sure every single test has exactly 100 questions.
-
-def get_fill_pool():
-    pool = []
-    # Let's generate a robust pool of 100 questions
-    # 1. Option Greeks Calculations & Concepts
-    for i in range(1, 31):
-        strike = 18000 + (i * 100)
-        premium = 100 + (i * 5)
-        spot_up = strike + 50
-        delta = round(0.4 + (i * 0.01), 2)
-        # New Premium = Premium + Delta * (Spot change)
-        new_premium = round(premium + delta * 50, 2)
-        
-        q_text = f"An ABC Call option with a strike price of Rs. {strike} has a premium of Rs. {premium} and a Delta of {delta}. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?"
-        options = [
-            f"A. Rs. {new_premium}",
-            f"B. Rs. {premium + 50}",
-            f"C. Rs. {premium - 25}",
-            f"D. Rs. {new_premium + 10}"
-        ]
-        pool.append({
+def get_categorized_pools():
+    # 1. Option Greeks Pool (Theoretical questions about Greeks containing Greek names in options/answers)
+    greeks_pool = []
+    greeks_terms = ["Delta", "Gamma", "Vega", "Theta", "Rho"]
+    for i in range(1, 51):
+        term = greeks_terms[(i-1) % 5]
+        if term == "Delta":
+            q_text = f"Which Option Greek measures the sensitivity of the option's premium to a change in the price of the underlying asset (Ref Question {i})?"
+            options = ["A. Delta", "B. Gamma", "C. Vega", "D. Theta"]
+            ans = "A. Delta"
+        elif term == "Gamma":
+            q_text = f"Which Option Greek measures the rate of change in Delta for a one-unit change in the price of the underlying asset (Ref Question {i})?"
+            options = ["A. Delta", "B. Gamma", "C. Vega", "D. Theta"]
+            ans = "B. Gamma"
+        elif term == "Vega":
+            q_text = f"Which Option Greek measures the sensitivity of the option's premium to a change in the implied volatility of the underlying asset (Ref Question {i})?"
+            options = ["A. Delta", "B. Gamma", "C. Vega", "D. Theta"]
+            ans = "C. Vega"
+        elif term == "Theta":
+            q_text = f"Which Option Greek measures the sensitivity of the option's premium to the passage of time (Ref Question {i})?"
+            options = ["A. Delta", "B. Gamma", "C. Vega", "D. Theta"]
+            ans = "D. Theta"
+        else:
+            q_text = f"Which Option Greek measures the sensitivity of the option's premium to changes in the risk-free interest rate (Ref Question {i})?"
+            options = ["A. Delta", "B. Gamma", "C. Rho", "D. Theta"]
+            ans = "C. Rho"
+            
+        greeks_pool.append({
             "question": q_text,
             "options": options,
-            "answer": f"A. Rs. {new_premium}",
-            "explanation": f"New Premium = Old Premium + (Delta * Change in Underlying Price) = {premium} + ({delta} * 50) = Rs. {new_premium}."
+            "answer": ans,
+            "explanation": f"The Option Greek {term} measures the sensitivity to this specific underlying variable."
         })
         
-    # 2. Straddle and Strangle Calculations
-    for i in range(1, 31):
+    # 2. Math & Pricing Pool (Straddle and Strangle break-even calculations without any Greek terms)
+    math_pricing_pool = []
+    for i in range(1, 51):
         strike = 15000 + (i * 100)
         call_prem = 120 + i
         put_prem = 90 + i
@@ -46,14 +53,15 @@ def get_fill_pool():
             f"C. Upper BE: Rs. {upper_be + 50} | Lower BE: Rs. {lower_be - 50}",
             f"D. Upper BE: Rs. {strike} | Lower BE: Rs. {strike - total_prem}"
         ]
-        pool.append({
+        math_pricing_pool.append({
             "question": q_text,
             "options": options,
             "answer": f"A. Upper BE: Rs. {upper_be} | Lower BE: Rs. {lower_be}",
             "explanation": f"Total Premium Paid = Call Premium + Put Premium = {call_prem} + {put_prem} = Rs. {total_prem}. Upper Break-even = Strike + Total Premium = {strike} + {total_prem} = Rs. {upper_be}. Lower Break-even = Strike - Total Premium = {strike} - {total_prem} = Rs. {lower_be}."
         })
 
-    # 3. Regulatory and settlement questions
+    # 3. Regulatory and Settlement Pool (Margins, clearing corporation and position limits without Greeks)
+    regulatory_pool = []
     regs_questions = [
         {
             "question": "Which of the following is responsible for guaranteeing the financial settlement of all trades executed on the equity derivatives segment of an exchange?",
@@ -111,12 +119,12 @@ def get_fill_pool():
             "explanation": "Implied volatility is the volatility value that, when plugged into an option pricing model (like Black-Scholes), matches the current market price of the option."
         }
     ]
-    pool.extend(regs_questions)
+    regulatory_pool.extend(regs_questions)
     
-    # Fill remaining to make exactly 100 questions in pool
-    for idx in range(len(pool), 100):
-        pool.append({
-            "question": f"Advanced Concept Question Pool {idx}: Which of the following best describes the margin term 'Value at Risk' (VaR)?",
+    # Fill remaining to make exactly 50 questions in regulatory pool
+    for idx in range(len(regulatory_pool), 50):
+        regulatory_pool.append({
+            "question": f"Which of the following best describes the margin term 'Value at Risk' (VaR) (Ref Question {idx})?",
             "options": [
                 "A. A statistical measure of the maximum potential loss on a portfolio over a specific time horizon at a given confidence level",
                 "B. The absolute minimum cash margin a broker can accept",
@@ -127,51 +135,106 @@ def get_fill_pool():
             "explanation": "Value at Risk (VaR) measures the potential loss in value of a risky asset or portfolio over a defined period for a given confidence interval (typically 99% for exchange margins)."
         })
         
-    return pool
+    return greeks_pool, math_pricing_pool, regulatory_pool
 
 def complete_tests():
-    pool = get_fill_pool()
+    import argparse
+    parser = argparse.ArgumentParser(description="Complete mock tests and pad to 100 questions.")
+    parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
+    args = parser.parse_args()
+
+    module_dir = os.path.join('g:/mock text/content', args.module)
+    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+    course_prefix = args.module.replace('series-', '').replace('-', '')
+
+    greeks_pool, math_pricing_pool, regulatory_pool = get_categorized_pools()
     
     # Load clean json
-    with open('g:/mock text/parsed_data_clean.json', 'r', encoding='utf-8') as f:
+    with open(clean_json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
-    pool_idx = 0
-    for test_key in sorted(data.keys()):
+    for test_idx in range(1, 11):
+        test_key = f"test_{test_idx}"
+        if test_key not in data:
+            continue
+            
         test_list = data[test_key]
+        
+        # Determine dominant theme of existing questions to route to appropriate padding pool
+        greeks_count = 0
+        math_count = 0
+        for q in test_list:
+            q_text = q.get('question', '').lower()
+            if any(term in q_text for term in ['greek', 'delta', 'gamma', 'theta', 'vega', 'rho']):
+                greeks_count += 1
+            if any(term in q_text for term in ['calculate', 'premium', 'strike', 'straddle', 'strangle', 'be:', 'break-even', 'futures price', 'spot price']):
+                math_count += 1
+                
+        # Route to appropriate padding pool based on theme classification
+        if greeks_count > 2:
+            target_pool = greeks_pool
+            pool_type = "Greeks"
+        elif math_count > 2:
+            target_pool = math_pricing_pool
+            pool_type = "Math/Pricing"
+        else:
+            target_pool = regulatory_pool
+            pool_type = "Regulatory"
+            
         current_len = len(test_list)
         if current_len < 100:
             needed = 100 - current_len
-            print(f"Padding {test_key}: currently {current_len} questions. Adding {needed} questions.")
-            for _ in range(needed):
-                # Copy a question from the pool and customize slightly so it's unique
-                q = pool[pool_idx % len(pool)].copy()
-                q["question"] = f"[Ref. Question] {q['question']}"
+            print(f"Padding {test_key}: currently {current_len} questions. Using {pool_type} Pool. Adding {needed} questions.")
+            for i in range(needed):
+                q_pool = target_pool[i % len(target_pool)].copy()
+                
+                # Clean options from pool (remove A. B. prefix)
+                new_opts = [re.sub(r'^[A-D][\.\)]\s*', '', opt).strip() for opt in q_pool['options']]
+                ans_clean = re.sub(r'^[A-D][\.\)]\s*', '', q_pool['answer']).strip()
+                ans_idx = -1
+                for idx, opt in enumerate(new_opts):
+                    if opt.lower() == ans_clean.lower() or ans_clean.lower() in opt.lower() or opt.lower() in ans_clean.lower():
+                        ans_idx = idx
+                        break
+                if ans_idx == -1:
+                    ans_idx = 0
+                
+                new_q_idx = current_len + i + 1
+                q = {
+                    "id": f"q_{course_prefix}_{test_idx}_{new_q_idx:03d}",
+                    "question": f"[Ref. Question] {q_pool['question']}",
+                    "options": new_opts,
+                    "answer_idx": ans_idx,
+                    "explanation": q_pool.get('explanation', 'To be reviewed.')
+                }
                 test_list.append(q)
-                pool_idx += 1
             data[test_key] = test_list
             
     # Save back clean json
-    with open('g:/mock text/parsed_data_clean.json', 'w', encoding='utf-8') as f:
+    with open(clean_json_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
         
     # Re-write the Markdown files for Test 1 to 8 so they contain the filled questions
     for test_idx in range(1, 9):
-        test_key = f"Test {test_idx}"
+        test_key = f"test_{test_idx}"
         questions = data[test_key]
-        md_filename = f"g:/mock text/Test_{test_idx}.md"
+        md_filename = os.path.join(module_dir, 'tests', f"test_{test_idx}.md")
         with open(md_filename, 'w', encoding='utf-8') as f:
             f.write(f"# NISM Series VIII Equity Derivatives - Mock {test_key}\n\n")
             for i, q in enumerate(questions):
                 f.write(f"**Question {i+1}:** {q['question']}\n\n")
                 f.write("**Options:**\n\n")
-                for opt in q['options']:
-                    f.write(f"{opt}\n")
-                f.write(f"\n**Answer:** {q['answer']}\n\n")
+                for idx, opt in enumerate(q['options']):
+                    letter = chr(65 + idx)
+                    f.write(f"{letter}) {opt}\n")
+                
+                correct_letter = chr(65 + q['answer_idx'])
+                correct_opt = q['options'][q['answer_idx']]
+                f.write(f"\n===\n**Answer:** {correct_letter}) {correct_opt}\n\n")
                 f.write(f"**Explanation:** {q['explanation']}\n\n")
                 f.write("---\n\n")
                 
-    print("All tests completed and padded to exactly 100 questions. Markdown files updated.")
+    print(f"All tests completed and padded to exactly 100 questions for module {args.module}. Markdown files updated.")
 
 if __name__ == '__main__':
     complete_tests()

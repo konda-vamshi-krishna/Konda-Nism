@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 10
+# NISM Series VIII Equity Derivatives - Mock test_10
 
 **Question 1:** An investor purchases a Put Option with a strike price of Rs. 1100 for a premium of Rs. 42. At expiry, the underlying spot price is Rs. 980. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.
 
@@ -9,6 +9,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -78
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 42
 D) Intrinsic Value: Rs. 1058 | Profit: Rs. 88
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 78
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1100 - 980 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 42 = Rs. 78 per unit.
@@ -24,6 +25,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -76
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 44
 D) Intrinsic Value: Rs. 1156 | Profit: Rs. 86
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 76
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1200 - 1080 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 44 = Rs. 76 per unit.
@@ -39,6 +41,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -74
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 46
 D) Intrinsic Value: Rs. 1254 | Profit: Rs. 84
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 74
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1300 - 1180 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 46 = Rs. 74 per unit.
@@ -54,6 +57,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -72
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 48
 D) Intrinsic Value: Rs. 1352 | Profit: Rs. 82
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 72
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1400 - 1280 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 48 = Rs. 72 per unit.
@@ -69,6 +73,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -70
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 50
 D) Intrinsic Value: Rs. 1450 | Profit: Rs. 80
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 70
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1500 - 1380 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 50 = Rs. 70 per unit.
@@ -84,6 +89,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -68
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 52
 D) Intrinsic Value: Rs. 1548 | Profit: Rs. 78
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 68
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1600 - 1480 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 52 = Rs. 68 per unit.
@@ -99,6 +105,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -66
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 54
 D) Intrinsic Value: Rs. 1646 | Profit: Rs. 76
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 66
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1700 - 1580 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 54 = Rs. 66 per unit.
@@ -114,6 +121,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -64
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 56
 D) Intrinsic Value: Rs. 1744 | Profit: Rs. 74
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 64
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1800 - 1680 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 56 = Rs. 64 per unit.
@@ -129,6 +137,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -62
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 58
 D) Intrinsic Value: Rs. 1842 | Profit: Rs. 72
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 62
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 1900 - 1780 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 58 = Rs. 62 per unit.
@@ -144,6 +153,7 @@ B) Intrinsic Value: Rs. 120 | Loss: Rs. -60
 C) Intrinsic Value: Rs. 0 | Loss: Rs. 60
 D) Intrinsic Value: Rs. 1940 | Profit: Rs. 70
 
+===
 **Answer:** A) Intrinsic Value: Rs. 120 | Profit: Rs. 60
 
 **Explanation:** Intrinsic Value of Put = Max(0, Strike - Spot) = 2000 - 1880 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 60 = Rs. 60 per unit.
@@ -159,6 +169,7 @@ B) Fair Price: Rs. 824.04 | No Arbitrage Opportunity
 C) Fair Price: Rs. 834.04 | Arbitrage Profit: Rs. -7.04
 D) Fair Price: Rs. 820 | Arbitrage Profit: Rs. 2
 
+===
 **Answer:** A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 820 * (1 + 0.06 * 30/365) = Rs. 824.04. Since market futures price (822) > fair price (824.04), you can buy spot and short futures to lock in a risk-free profit of Rs. -2.04.
@@ -174,6 +185,7 @@ B) Fair Price: Rs. 844.14 | No Arbitrage Opportunity
 C) Fair Price: Rs. 854.14 | Arbitrage Profit: Rs. -5.14
 D) Fair Price: Rs. 840 | Arbitrage Profit: Rs. 4
 
+===
 **Answer:** A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 840 * (1 + 0.06 * 30/365) = Rs. 844.14. Since market futures price (844) > fair price (844.14), you can buy spot and short futures to lock in a risk-free profit of Rs. -0.14.
@@ -189,6 +201,7 @@ B) Fair Price: Rs. 864.24 | No Arbitrage Opportunity
 C) Fair Price: Rs. 874.24 | Arbitrage Profit: Rs. -3.24
 D) Fair Price: Rs. 860 | Arbitrage Profit: Rs. 6
 
+===
 **Answer:** A) Fair Price: Rs. 864.24 | Arbitrage Profit: Rs. 1.76 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 860 * (1 + 0.06 * 30/365) = Rs. 864.24. Since market futures price (866) > fair price (864.24), you can buy spot and short futures to lock in a risk-free profit of Rs. 1.76.
@@ -204,6 +217,7 @@ B) Fair Price: Rs. 884.34 | No Arbitrage Opportunity
 C) Fair Price: Rs. 894.34 | Arbitrage Profit: Rs. -1.34
 D) Fair Price: Rs. 880 | Arbitrage Profit: Rs. 8
 
+===
 **Answer:** A) Fair Price: Rs. 884.34 | Arbitrage Profit: Rs. 3.66 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 880 * (1 + 0.06 * 30/365) = Rs. 884.34. Since market futures price (888) > fair price (884.34), you can buy spot and short futures to lock in a risk-free profit of Rs. 3.66.
@@ -219,6 +233,7 @@ B) Fair Price: Rs. 904.44 | No Arbitrage Opportunity
 C) Fair Price: Rs. 914.44 | Arbitrage Profit: Rs. 0.56
 D) Fair Price: Rs. 900 | Arbitrage Profit: Rs. 10
 
+===
 **Answer:** A) Fair Price: Rs. 904.44 | Arbitrage Profit: Rs. 5.56 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 900 * (1 + 0.06 * 30/365) = Rs. 904.44. Since market futures price (910) > fair price (904.44), you can buy spot and short futures to lock in a risk-free profit of Rs. 5.56.
@@ -234,6 +249,7 @@ B) Fair Price: Rs. 924.54 | No Arbitrage Opportunity
 C) Fair Price: Rs. 934.54 | Arbitrage Profit: Rs. 2.46
 D) Fair Price: Rs. 920 | Arbitrage Profit: Rs. 12
 
+===
 **Answer:** A) Fair Price: Rs. 924.54 | Arbitrage Profit: Rs. 7.46 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 920 * (1 + 0.06 * 30/365) = Rs. 924.54. Since market futures price (932) > fair price (924.54), you can buy spot and short futures to lock in a risk-free profit of Rs. 7.46.
@@ -249,6 +265,7 @@ B) Fair Price: Rs. 944.64 | No Arbitrage Opportunity
 C) Fair Price: Rs. 954.64 | Arbitrage Profit: Rs. 4.36
 D) Fair Price: Rs. 940 | Arbitrage Profit: Rs. 14
 
+===
 **Answer:** A) Fair Price: Rs. 944.64 | Arbitrage Profit: Rs. 9.36 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 940 * (1 + 0.06 * 30/365) = Rs. 944.64. Since market futures price (954) > fair price (944.64), you can buy spot and short futures to lock in a risk-free profit of Rs. 9.36.
@@ -264,6 +281,7 @@ B) Fair Price: Rs. 964.73 | No Arbitrage Opportunity
 C) Fair Price: Rs. 974.73 | Arbitrage Profit: Rs. 6.27
 D) Fair Price: Rs. 960 | Arbitrage Profit: Rs. 16
 
+===
 **Answer:** A) Fair Price: Rs. 964.73 | Arbitrage Profit: Rs. 11.27 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 960 * (1 + 0.06 * 30/365) = Rs. 964.73. Since market futures price (976) > fair price (964.73), you can buy spot and short futures to lock in a risk-free profit of Rs. 11.27.
@@ -279,6 +297,7 @@ B) Fair Price: Rs. 984.83 | No Arbitrage Opportunity
 C) Fair Price: Rs. 994.83 | Arbitrage Profit: Rs. 8.17
 D) Fair Price: Rs. 980 | Arbitrage Profit: Rs. 18
 
+===
 **Answer:** A) Fair Price: Rs. 984.83 | Arbitrage Profit: Rs. 13.17 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 980 * (1 + 0.06 * 30/365) = Rs. 984.83. Since market futures price (998) > fair price (984.83), you can buy spot and short futures to lock in a risk-free profit of Rs. 13.17.
@@ -294,6 +313,7 @@ B) Fair Price: Rs. 1004.93 | No Arbitrage Opportunity
 C) Fair Price: Rs. 1014.93 | Arbitrage Profit: Rs. 10.07
 D) Fair Price: Rs. 1000 | Arbitrage Profit: Rs. 20
 
+===
 **Answer:** A) Fair Price: Rs. 1004.93 | Arbitrage Profit: Rs. 15.07 (Buy Spot, Sell Futures)
 
 **Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 1000 * (1 + 0.06 * 30/365) = Rs. 1004.93. Since market futures price (1020) > fair price (1004.93), you can buy spot and short futures to lock in a risk-free profit of Rs. 15.07.
@@ -309,6 +329,7 @@ B) Buy 23,810 Call options
 C) Sell 4,200 Call options
 D) Buy 4,200 Call options
 
+===
 **Answer:** A) Sell 23,810 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 10000 * 1 = 10000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 10000 / 0.42 = 23,810 calls.
@@ -324,6 +345,7 @@ B) Buy 45,455 Call options
 C) Sell 8,800 Call options
 D) Buy 8,800 Call options
 
+===
 **Answer:** A) Sell 45,455 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 20000 * 1 = 20000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 20000 / 0.44 = 45,455 calls.
@@ -339,6 +361,7 @@ B) Buy 65,217 Call options
 C) Sell 13,800 Call options
 D) Buy 13,800 Call options
 
+===
 **Answer:** A) Sell 65,217 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 30000 * 1 = 30000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 30000 / 0.46 = 65,217 calls.
@@ -354,6 +377,7 @@ B) Buy 83,333 Call options
 C) Sell 19,200 Call options
 D) Buy 19,200 Call options
 
+===
 **Answer:** A) Sell 83,333 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 40000 * 1 = 40000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 40000 / 0.48 = 83,333 calls.
@@ -369,6 +393,7 @@ B) Buy 100,000 Call options
 C) Sell 25,000 Call options
 D) Buy 25,000 Call options
 
+===
 **Answer:** A) Sell 100,000 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 50000 * 1 = 50000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 50000 / 0.50 = 100,000 calls.
@@ -384,6 +409,7 @@ B) Buy 115,385 Call options
 C) Sell 31,200 Call options
 D) Buy 31,200 Call options
 
+===
 **Answer:** A) Sell 115,385 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 60000 * 1 = 60000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 60000 / 0.52 = 115,385 calls.
@@ -399,6 +425,7 @@ B) Buy 129,630 Call options
 C) Sell 37,800 Call options
 D) Buy 37,800 Call options
 
+===
 **Answer:** A) Sell 129,630 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 70000 * 1 = 70000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 70000 / 0.54 = 129,630 calls.
@@ -414,6 +441,7 @@ B) Buy 142,857 Call options
 C) Sell 44,800 Call options
 D) Buy 44,800 Call options
 
+===
 **Answer:** A) Sell 142,857 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 80000 * 1 = 80000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 80000 / 0.56 = 142,857 calls.
@@ -429,6 +457,7 @@ B) Buy 155,172 Call options
 C) Sell 52,200 Call options
 D) Buy 52,200 Call options
 
+===
 **Answer:** A) Sell 155,172 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 90000 * 1 = 90000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 90000 / 0.58 = 155,172 calls.
@@ -444,6 +473,7 @@ B) Buy 166,667 Call options
 C) Sell 60,000 Call options
 D) Buy 60,000 Call options
 
+===
 **Answer:** A) Sell 166,667 Call options
 
 **Explanation:** To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 100000 * 1 = 100000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 100000 / 0.60 = 166,667 calls.
@@ -454,12 +484,13 @@ D) Buy 60,000 Call options
 
 **Options:**
 
-A. Theta
-B. Delta
-C. Gamma
-D. Vega
+A) Theta
+B) Delta
+C) Gamma
+D) Vega
 
-**Answer:** Theta
+===
+**Answer:** A) Theta
 
 **Explanation:** Theta measures the rate of change of the option premium with the passage of time (time decay). Theta is negative for option buyers and positive for option writers.
 
@@ -469,12 +500,13 @@ D. Vega
 
 **Options:**
 
-A. Strike Price > Spot Price
-B. Spot Price > Strike Price
-C. Strike Price = Spot Price
-D. Volatility is very high
+A) Strike Price > Spot Price
+B) Spot Price > Strike Price
+C) Strike Price = Spot Price
+D) Volatility is very high
 
-**Answer:** Strike Price > Spot Price
+===
+**Answer:** A) Strike Price > Spot Price
 
 **Explanation:** A Put option gives the right to sell. It has intrinsic value (is In-the-Money) only when the strike price at which you can sell is higher than the current spot market price.
 
@@ -484,12 +516,13 @@ D. Volatility is very high
 
 **Options:**
 
-A. A labor strike in a specific company's manufacturing plant
-B. An increase in the central bank's repo rate
-C. High inflation across the economy
-D. Changes in global crude oil prices
+A) A labor strike in a specific company's manufacturing plant
+B) An increase in the central bank's repo rate
+C) High inflation across the economy
+D) Changes in global crude oil prices
 
-**Answer:** A labor strike in a specific company's manufacturing plant
+===
+**Answer:** A) A labor strike in a specific company's manufacturing plant
 
 **Explanation:** Unsystematic risk is company-specific or industry-specific risk. It can be diversified away by holding a broad portfolio. Macroeconomic factors represent systematic risk.
 
@@ -499,12 +532,13 @@ D. Changes in global crude oil prices
 
 **Options:**
 
-A. T+1 day
-B. T+2 days
-C. Real-time online settlement
-D. At contract expiry
+A) T+1 day
+B) T+2 days
+C) Real-time online settlement
+D) At contract expiry
 
-**Answer:** T+1 day
+===
+**Answer:** A) T+1 day
 
 **Explanation:** MTM profits and losses are computed at the end of each trading session and settled on a T+1 working day basis through clearing banks.
 
@@ -514,12 +548,13 @@ D. At contract expiry
 
 **Options:**
 
-A. The strike price is reduced by the dividend amount
-B. The option contract is terminated immediately
-C. The lot size is increased
-D. No adjustments are made for cash dividends
+A) The strike price is reduced by the dividend amount
+B) The option contract is terminated immediately
+C) The lot size is increased
+D) No adjustments are made for cash dividends
 
-**Answer:** The strike price is reduced by the dividend amount
+===
+**Answer:** A) The strike price is reduced by the dividend amount
 
 **Explanation:** For extraordinary dividends (exceeding 2% of the stock price), the strike price of the options contract is adjusted downwards by the dividend amount on the ex-dividend date.
 
@@ -529,12 +564,13 @@ D. No adjustments are made for cash dividends
 
 **Options:**
 
-A. Black-Scholes-Merton Model
-B. Binomial Pricing Model
-C. Cash and Carry Model
-D. Expectancy Model
+A) Black-Scholes-Merton Model
+B) Binomial Pricing Model
+C) Cash and Carry Model
+D) Expectancy Model
 
-**Answer:** Black-Scholes-Merton Model
+===
+**Answer:** A) Black-Scholes-Merton Model
 
 **Explanation:** The Black-Scholes-Merton model is the standard mathematical model used for pricing European-style options, where exercise is only possible at expiry.
 
@@ -544,12 +580,13 @@ D. Expectancy Model
 
 **Options:**
 
-A. 3% of the contract value or 1.5 times the standard deviation, whichever is higher
-B. Flat 10% of the contract value
-C. Equal to the SPAN margin rate
-D. Determined by the broker at the end of the day
+A) 3% of the contract value or 1.5 times the standard deviation, whichever is higher
+B) Flat 10% of the contract value
+C) Equal to the SPAN margin rate
+D) Determined by the broker at the end of the day
 
-**Answer:** 3% of the contract value or 1.5 times the standard deviation, whichever is higher
+===
+**Answer:** A) 3% of the contract value or 1.5 times the standard deviation, whichever is higher
 
 **Explanation:** For individual stock futures, exposure margin is higher of 5% (or 3% for index futures) or 1.5 times the standard deviation of stock returns.
 
@@ -559,12 +596,13 @@ D. Determined by the broker at the end of the day
 
 **Options:**
 
-A. The Clearing Member
-B. The Trading Member
-C. SEBI
-D. The Investor Protection Fund
+A) The Clearing Member
+B) The Trading Member
+C) SEBI
+D) The Investor Protection Fund
 
-**Answer:** The Clearing Member
+===
+**Answer:** A) The Clearing Member
 
 **Explanation:** The Clearing Member is directly responsible to the Clearing Corporation for settling all trades cleared through him, regardless of client default.
 
@@ -574,12 +612,13 @@ D. The Investor Protection Fund
 
 **Options:**
 
-A. Rho
-B. Vega
-C. Theta
-D. Delta
+A) Rho
+B) Vega
+C) Theta
+D) Delta
 
-**Answer:** Rho
+===
+**Answer:** A) Rho
 
 **Explanation:** Rho measures the sensitivity of an option's value to changes in the risk-free interest rate.
 
@@ -589,12 +628,13 @@ D. Delta
 
 **Options:**
 
-A. 3 years
-B. 5 years
-C. 1 year
-D. Lifetime
+A) 3 years
+B) 5 years
+C) 1 year
+D) Lifetime
 
-**Answer:** 3 years
+===
+**Answer:** A) 3 years
 
 **Explanation:** A NISM certification is valid for a period of 3 years from the date of passing the examination.
 
@@ -604,12 +644,13 @@ D. Lifetime
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -619,12 +660,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -634,12 +676,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -649,12 +692,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -664,12 +708,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -679,12 +724,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -694,12 +740,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -709,12 +756,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -724,12 +772,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -739,12 +788,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -754,12 +804,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -769,12 +820,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -784,12 +836,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -799,12 +852,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -814,12 +868,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -829,12 +884,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -844,12 +900,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -859,12 +916,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -874,12 +932,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -889,12 +948,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -904,12 +964,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -919,12 +980,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -934,12 +996,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -949,12 +1012,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -964,12 +1028,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -979,12 +1044,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -994,12 +1060,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1009,12 +1076,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1024,12 +1092,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1039,12 +1108,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1054,12 +1124,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1069,12 +1140,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1084,12 +1156,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1099,12 +1172,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1114,12 +1188,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1129,12 +1204,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1144,12 +1220,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1159,12 +1236,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1174,12 +1252,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1189,12 +1268,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1204,12 +1284,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1219,12 +1300,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1234,12 +1316,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1249,12 +1332,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1264,12 +1348,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1279,12 +1364,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1294,12 +1380,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1309,12 +1396,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1324,12 +1412,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1339,12 +1428,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1354,12 +1444,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1369,12 +1460,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1384,12 +1476,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1399,12 +1492,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1414,12 +1508,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1429,12 +1524,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1444,12 +1540,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1459,12 +1556,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1474,12 +1572,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
@@ -1489,12 +1588,13 @@ D. Both Call and Put premiums decrease
 
 **Options:**
 
-A. Both Call and Put premiums increase
-B. Call premiums increase, Put premiums decrease
-C. Call premiums decrease, Put premiums increase
-D. Both Call and Put premiums decrease
+A) Both Call and Put premiums increase
+B) Call premiums increase, Put premiums decrease
+C) Call premiums decrease, Put premiums increase
+D) Both Call and Put premiums decrease
 
-**Answer:** Both Call and Put premiums increase
+===
+**Answer:** A) Both Call and Put premiums increase
 
 **Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 

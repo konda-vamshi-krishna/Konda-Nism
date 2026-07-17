@@ -17,8 +17,10 @@ def generate_flashcards():
     for test_name, questions in data.items():
         for i, q in enumerate(questions):
             front = q['question'].strip()
-            # The back should ideally be the answer and the explanation.
-            answer = q['answer'].strip()
+            if 'answer_idx' in q and 'options' in q:
+                answer = q['options'][q['answer_idx']].strip()
+            else:
+                answer = q.get('answer', '').strip()
             explanation = q.get('explanation', '').strip()
             
             back = f"<strong>{answer}</strong>"

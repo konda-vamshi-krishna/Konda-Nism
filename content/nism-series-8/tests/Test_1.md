@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 1
+# NISM Series VIII Equity Derivatives - Mock test_1
 
 **Question 1:** In the derivatives segment, who is required to pay margins as specified by the Clearing Corporation?
 
@@ -9,7 +9,8 @@ B) Arbitrageurs
 C) Financial Institutions
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Every participant trading in derivatives must pay margins. Margins protect the exchange from default risk and ensure smooth settlement.
 
@@ -24,7 +25,8 @@ B) Seller credited
 C) Both credited
 D) None
 
-**Answer:** Seller credited
+===
+**Answer:** B) Seller credited
 
 **Explanation:** When price falls, seller gains because he sold at higher price. His margin account is credited. Buyer faces notional loss and his account is debited.
 
@@ -39,7 +41,8 @@ B) ₹45,000
 C) ₹55,000
 D) ₹65,000
 
-**Answer:** ₹45,000
+===
+**Answer:** B) ₹45,000
 
 **Explanation:** Profit per unit = 3500 − 3410 = 90. Total quantity = 10 × 50 = 500. Total profit = 90 × 500 = ₹45,000.
 
@@ -54,7 +57,8 @@ B) Weekly and Monthly
 C) Premium Settlement and Final Settlement
 D) Monthly and Yearly
 
-**Answer:** Premium Settlement and Final Settlement
+===
+**Answer:** C) Premium Settlement and Final Settlement
 
 **Explanation:** Options involve daily premium settlement and final settlement at expiry. Premium is paid upfront and final settlement happens on expiry date.
 
@@ -67,7 +71,8 @@ D) Monthly and Yearly
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Investors expecting market fall are called Bears. Bulls expect prices to rise.
 
@@ -82,7 +87,8 @@ B) Standardized contracts
 C) Traded on exchange
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Futures are standardized contracts traded on recognized exchanges. Settlement is guaranteed through Clearing Corporation.
 
@@ -97,7 +103,8 @@ B) Maximum price movement
 C) Minimum permitted price movement
 D) Average of high and low prices
 
-**Answer:** Minimum permitted price movement
+===
+**Answer:** C) Minimum permitted price movement
 
 **Explanation:** Tick size is the smallest possible change allowed in price quotation of a contract. Exchanges decide tick size for each contract.
 
@@ -112,7 +119,8 @@ B) Same underlying, different delivery months
 C) Different assets and different months
 D) Same asset and same month
 
-**Answer:** Same underlying, different delivery months
+===
+**Answer:** B) Same underlying, different delivery months
 
 **Explanation:** Calendar spread involves buying and selling futures of same underlying but with different expiry months.
 
@@ -127,7 +135,8 @@ B) He has long time to deliver
 C) He must deliver immediately
 D) He does not own the stock
 
-**Answer:** He does not own the stock
+===
+**Answer:** D) He does not own the stock
 
 **Explanation:** Short selling means selling shares without owning them, expecting price to fall and buying them later at lower price.
 
@@ -142,7 +151,8 @@ B) Short Hedge
 C) Spread Trade
 D) Long Hedge
 
-**Answer:** Spread Trade
+===
+**Answer:** C) Spread Trade
 
 **Explanation:** A spread trade involves taking opposite positions (one buy and one sell) in futures contracts of the same underlying. It can be done in different maturities or related contracts.
 
@@ -157,7 +167,8 @@ B) Decreases
 C) Remains same
 D) None of the above
 
-**Answer:** Decreases
+===
+**Answer:** B) Decreases
 
 **Explanation:** Lower volatility means lower risk. Since option premium includes risk factor, decrease in volatility reduces option premium.
 
@@ -170,7 +181,8 @@ D) None of the above
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Option premium = Intrinsic Value + Time Value. Time value is the extra amount paid for possibility of favorable price movement before expiry.
 
@@ -185,7 +197,8 @@ B) Sell index futures
 C) Double holdings
 D) Buy blue chip shares
 
-**Answer:** Sell index futures
+===
+**Answer:** B) Sell index futures
 
 **Explanation:** Negative news usually causes market fall. Selling index futures allows trader to profit from falling market.
 
@@ -198,7 +211,8 @@ D) Buy blue chip shares
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Beta measures sensitivity of a stock compared to market index movement, not interest rates.
 
@@ -211,7 +225,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Dealer trades are done in PRO account while client trades are done in CLI account. This ensures transparency and avoids misuse.
 
@@ -224,7 +239,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** More time to expiry means more chance for price movement. Hence time value reduces as expiry approaches (time decay).
 
@@ -239,7 +255,8 @@ B) Move down
 C) Remain range bound
 D) Cannot buy PUT
 
-**Answer:** Move down
+===
+**Answer:** B) Move down
 
 **Explanation:** Buying a put means bearish view. You expect price to fall so that you can sell at higher strike price.
 
@@ -254,7 +271,8 @@ B) Full transparency in execution
 C) Lower technology need
 D) No exchange required
 
-**Answer:** Full transparency in execution
+===
+**Answer:** B) Full transparency in execution
 
 **Explanation:** Screen-based trading is transparent. Orders and prices are visible electronically, reducing manipulation.
 
@@ -269,7 +287,8 @@ B) Short position
 C) High position
 D) Across position
 
-**Answer:** Short position
+===
+**Answer:** B) Short position
 
 **Explanation:** A closing buy transaction is used to square off a short position. You buy back what you earlier sold.
 
@@ -284,7 +303,8 @@ B) Yes, if they do not withdraw assets
 C) No, exposure can change with asset value changes
 D) None of the above
 
-**Answer:** No, exposure can change with asset value changes
+===
+**Answer:** C) No, exposure can change with asset value changes
 
 **Explanation:** Exposure depends on market value of deposited assets. If asset prices change, exposure limits also change even if brokers do not withdraw assets.
 
@@ -299,7 +319,8 @@ B) Fall
 C) Remain constant
 D) Move sideways
 
-**Answer:** Fall
+===
+**Answer:** B) Fall
 
 **Explanation:** A bearish investor expects market prices to fall and usually takes short positions to profit from decline.
 
@@ -314,7 +335,8 @@ B) Spot Price = Spot + Cost of Carry
 C) Futures Price = Spot + Cost of Carry
 D) Futures Price = Spot − Cost of Carry
 
-**Answer:** Futures Price = Spot + Cost of Carry
+===
+**Answer:** C) Futures Price = Spot + Cost of Carry
 
 **Explanation:** Futures price equals spot price plus cost of carry. Cost of carry includes interest and holding cost until expiry.
 
@@ -329,7 +351,8 @@ B) For call options, higher strike price increases premium
 C) For put options, higher strike price increases premium
 D) For put options, lower strike price decreases premium
 
-**Answer:** For call options, higher strike price increases premium
+===
+**Answer:** B) For call options, higher strike price increases premium
 
 **Explanation:** For call options, as strike price increases, premium generally decreases because option becomes less attractive.
 
@@ -344,7 +367,8 @@ B) Depositories
 C) Custodians
 D) Clearing Corporation
 
-**Answer:** Clearing Corporation
+===
+**Answer:** D) Clearing Corporation
 
 **Explanation:** Clearing Corporation becomes central counterparty and guarantees settlement of trades.
 
@@ -359,7 +383,8 @@ B) Increases cost of trading
 C) Reduces trading risk
 D) All of the above
 
-**Answer:** Increases cost of trading
+===
+**Answer:** B) Increases cost of trading
 
 **Explanation:** Without cross margining, traders must deposit separate margins for each segment, increasing overall trading cost.
 
@@ -374,7 +399,8 @@ B) Expense
 C) Asset
 D) Liability
 
-**Answer:** Income
+===
+**Answer:** A) Income
 
 **Explanation:** Premium received by option seller is income because it is credited to his account when option is sold.
 
@@ -389,7 +415,8 @@ B) −13,500
 C) +9,800
 D) −9,800
 
-**Answer:** −13,500
+===
+**Answer:** B) −13,500
 
 **Explanation:** Loss per unit = 754 − 745 = 9. Total loss = 9 × 1500 = ₹13,500. Since price increased, seller incurs loss.
 
@@ -404,7 +431,8 @@ B) Buying a call option
 C) Buying same put with same strike and expiry
 D) Selling a call option
 
-**Answer:** Buying same put with same strike and expiry
+===
+**Answer:** C) Buying same put with same strike and expiry
 
 **Explanation:** To close an option position, you must take opposite position in same contract with same strike price and expiry date.
 
@@ -419,7 +447,8 @@ B) Hedgers avoid risk, speculators take risk
 C) Both avoid risk
 D) Both take risk
 
-**Answer:** Hedgers avoid risk, speculators take risk
+===
+**Answer:** B) Hedgers avoid risk, speculators take risk
 
 **Explanation:** Hedgers use derivatives to reduce or transfer risk. Speculators accept risk in order to earn profit from expected price movements.
 
@@ -434,7 +463,8 @@ B) Exercise option
 C) Not exercise option
 D) Exercise because he likes company
 
-**Answer:** Not exercise option
+===
+**Answer:** B) Exercise option
 
 **Explanation:** Since market price (₹100) is below strike price (₹125), call option is out of money. It is not beneficial to exercise. Maximum loss is premium paid.
 
@@ -449,7 +479,8 @@ B) Executed after-hours
 C) Executed next trading day
 D) Cancelled automatically
 
-**Answer:** Cancelled automatically
+===
+**Answer:** D) Cancelled automatically
 
 **Explanation:** A day order is valid only for that trading day. If not executed, it automatically gets cancelled at end of day.
 
@@ -464,7 +495,8 @@ B) No, not for all options
 C) Yes, only for calls
 D) Yes, only for puts
 
-**Answer:** Yes, for all options
+===
+**Answer:** A) Yes, for all options
 
 **Explanation:** At expiry, option value equals intrinsic value because time value becomes zero.
 
@@ -479,7 +511,8 @@ B) Calendar Spread
 C) Vertical Spread
 D) Diagonal Spread
 
-**Answer:** Vertical Spread
+===
+**Answer:** C) Vertical Spread
 
 **Explanation:** Vertical spreads involve options of same expiry date but different strike prices.
 
@@ -494,7 +527,8 @@ B) Buy before expiry
 C) Sell on or before expiry
 D) Sell only on expiry
 
-**Answer:** Sell on or before expiry
+===
+**Answer:** C) Sell on or before expiry
 
 **Explanation:** American options can be exercised anytime before expiry. A put option gives right to sell the underlying asset.
 
@@ -509,7 +543,8 @@ B) Index Derivatives
 C) Exchange Traded Funds
 D) Private Equity Funds
 
-**Answer:** Private Equity Funds
+===
+**Answer:** D) Private Equity Funds
 
 **Explanation:** Private equity funds are not based on stock market indices. Others use indices as base for investment products.
 
@@ -524,7 +559,8 @@ B) Tick
 C) Touchline
 D) Market Lot
 
-**Answer:** Tick
+===
+**Answer:** B) Tick
 
 **Explanation:** Tick size is the smallest allowed change in price of a trading instrument as decided by the exchange.
 
@@ -539,7 +575,8 @@ B) Option premium for change in spot price
 C) Option premium for change in interest rate
 D) Option premium for change in volatility
 
-**Answer:** Option premium for change in spot price
+===
+**Answer:** B) Option premium for change in spot price
 
 **Explanation:** Delta shows how much option premium changes when underlying price changes by one unit.
 
@@ -554,7 +591,8 @@ B) 0.0125%
 C) 0.02%
 D) 0.1%
 
-**Answer:** 0.02%
+===
+**Answer:** C) 0.02%
 
 **Explanation:** Securities Transaction Tax on sale of stock or index futures is 0.02% of transaction value.
 
@@ -569,7 +607,8 @@ B) Replacing stocks in the index with new ones
 C) Reducing the value of the index to zero
 D) Auditing the exchange's profits
 
-**Answer:** Replacing stocks in the index with new ones
+===
+**Answer:** B) Replacing stocks in the index with new ones
 
 **Explanation:** Revision is the process of updating the list of stocks included in the index.
 
@@ -584,7 +623,8 @@ B) High taxes
 C) Liquidity
 D) Name recognition
 
-**Answer:** Liquidity
+===
+**Answer:** C) Liquidity
 
 **Explanation:** An index needs to be diversified but also needs stocks that are easy to trade (liquid).
 
@@ -599,7 +639,8 @@ B) 50 stocks
 C) 100 stocks
 D) 500 stocks
 
-**Answer:** 100 stocks
+===
+**Answer:** C) 100 stocks
 
 **Explanation:** Adding more than 100 stocks provides almost zero additional reduction in risk.
 
@@ -614,7 +655,8 @@ B) S&P BSE Sensex
 C) FTSE India
 D) SX 40
 
-**Answer:** FTSE India
+===
+**Answer:** C) FTSE India
 
 **Explanation:** FTSE India is not mentioned as a major local equity index in this specific text.
 
@@ -629,7 +671,8 @@ B) Index fund
 C) Hedge fund
 D) Savings fund
 
-**Answer:** Index fund
+===
+**Answer:** B) Index fund
 
 **Explanation:** Index funds aim to mirror the performance of a specific index.
 
@@ -644,7 +687,8 @@ B) The small difference in returns between the fund and the actual index
 C) The fee charged by the broker
 D) When the market stops working
 
-**Answer:** The small difference in returns between the fund and the actual index
+===
+**Answer:** B) The small difference in returns between the fund and the actual index
 
 **Explanation:** Tracking error happens due to transaction costs and cash holdings in the fund.
 
@@ -659,7 +703,8 @@ B) Funds that only invest in gold
 C) Private loans between banks
 D) Government savings bonds
 
-**Answer:** Funds that can be bought and sold like stocks on an exchange
+===
+**Answer:** A) Funds that can be bought and sold like stocks on an exchange
 
 **Explanation:** ETFs are baskets of securities that trade throughout the day on an exchange.
 
@@ -674,7 +719,8 @@ B) Rs. 10 Lakhs
 C) Rs. 15 Lakhs
 D) Rs. 25 Lakhs
 
-**Answer:** Rs. 15 Lakhs
+===
+**Answer:** C) Rs. 15 Lakhs
 
 **Explanation:** SEBI rules state new contracts must be worth at least Rs. 15 lakhs initially.
 
@@ -689,7 +735,8 @@ B) Rs. 10 - 15 Lakhs
 C) Rs. 15 - 20 Lakhs
 D) Rs. 20 - 25 Lakhs
 
-**Answer:** Rs. 15 - 20 Lakhs
+===
+**Answer:** C) Rs. 15 - 20 Lakhs
 
 **Explanation:** Reviews ensure contract values stay within the Rs. 15-20 lakhs range.
 
@@ -704,7 +751,8 @@ B) To fix a price today and avoid future price risk
 C) To earn interest from a bank
 D) To avoid paying any money at all
 
-**Answer:** To fix a price today and avoid future price risk
+===
+**Answer:** B) To fix a price today and avoid future price risk
 
 **Explanation:** Forwards allow participants to lock in a price and stay safe from price swings.
 
@@ -719,7 +767,8 @@ B) The buyer makes a profit
 C) The seller makes a profit
 D) The contract is cancelled
 
-**Answer:** The buyer makes a profit
+===
+**Answer:** B) The buyer makes a profit
 
 **Explanation:** The buyer can buy at the low agreed price and sell at the high market price.
 
@@ -734,7 +783,8 @@ B) The contracts are tailor-made and not easily tradeable
 C) The exchange doesn't allow it
 D) You have to pay the government
 
-**Answer:** The contracts are tailor-made and not easily tradeable
+===
+**Answer:** B) The contracts are tailor-made and not easily tradeable
 
 **Explanation:** Because forwards are customized, finding someone to take over your exact deal is difficult.
 
@@ -749,7 +799,8 @@ B) Open Interest
 C) Market Cap
 D) Lot Size
 
-**Answer:** Open Interest
+===
+**Answer:** B) Open Interest
 
 **Explanation:** Open interest shows the number of contracts that haven't been settled yet.
 
@@ -764,7 +815,8 @@ B) It is dying out
 C) It has good depth and liquidity
 D) It has no buyers
 
-**Answer:** It has good depth and liquidity
+===
+**Answer:** C) It has good depth and liquidity
 
 **Explanation:** High open interest indicates many participants and a deep market.
 
@@ -779,7 +831,8 @@ B) When a new buyer and a new seller create a position
 C) When a stock price goes up
 D) When the market is closed
 
-**Answer:** When a new buyer and a new seller create a position
+===
+**Answer:** B) When a new buyer and a new seller create a position
 
 **Explanation:** New positions create new open interest.
 
@@ -794,7 +847,8 @@ B) The allowed range of prices a contract can move in a day
 C) The cost of a trading ticket
 D) The name of the broker
 
-**Answer:** The allowed range of prices a contract can move in a day
+===
+**Answer:** B) The allowed range of prices a contract can move in a day
 
 **Explanation:** Price bands set the upper and lower limits for the day's trading.
 
@@ -809,7 +863,8 @@ B) Long position
 C) Neutral position
 D) Hedge position
 
-**Answer:** Long position
+===
+**Answer:** B) Long position
 
 **Explanation:** A long position is a buy position held in anticipation of a price rise.
 
@@ -824,7 +879,8 @@ B) Long position
 C) Safe position
 D) Cash position
 
-**Answer:** Short position
+===
+**Answer:** A) Short position
 
 **Explanation:** Shorting means selling first to buy back cheaper later.
 
@@ -839,7 +895,8 @@ B) Holding a derivative without owning the actual underlying stock
 C) A trade made by a professional
 D) A trade with zero risk
 
-**Answer:** Holding a derivative without owning the actual underlying stock
+===
+**Answer:** B) Holding a derivative without owning the actual underlying stock
 
 **Explanation:** A naked position is a pure bet on price with no offsetting stock holding.
 
@@ -854,7 +911,8 @@ B) Different quantities
 C) Different expiry months
 D) Different exchanges
 
-**Answer:** Different expiry months
+===
+**Answer:** C) Different expiry months
 
 **Explanation:** You buy one month and sell another month of the same asset.
 
@@ -869,7 +927,8 @@ B) Taking an opposite trade to cancel an existing one
 C) Withdrawing all your money
 D) Paying your broker's bill
 
-**Answer:** Taking an opposite trade to cancel an existing one
+===
+**Answer:** B) Taking an opposite trade to cancel an existing one
 
 **Explanation:** To close, a buyer sells and a seller buys back.
 
@@ -884,7 +943,8 @@ B) Unlimited profit, limited loss
 C) Limited profit, unlimited loss
 D) Unlimited profit and unlimited loss
 
-**Answer:** Unlimited profit and unlimited loss
+===
+**Answer:** D) Unlimited profit and unlimited loss
 
 **Explanation:** Because the price can move anywhere, both gains and losses can be very large.
 
@@ -899,7 +959,8 @@ B) Straight line with a positive slope
 C) Straight line with a negative slope
 D) Circle
 
-**Answer:** Straight line with a positive slope
+===
+**Answer:** B) Straight line with a positive slope
 
 **Explanation:** Profit goes up as the price goes up, creating a positive slope.
 
@@ -914,7 +975,8 @@ B) Curved line
 C) Vertical line
 D) Horizontal line
 
-**Answer:** Straight line with a negative slope
+===
+**Answer:** A) Straight line with a negative slope
 
 **Explanation:** Profit goes up as the price goes down, creating a negative slope.
 
@@ -929,7 +991,8 @@ B) Spot Price minus Futures Price
 C) The profit made by the broker
 D) The margin required
 
-**Answer:** Spot Price minus Futures Price
+===
+**Answer:** B) Spot Price minus Futures Price
 
 **Explanation:** Basis shows the difference between the cash market and futures market prices.
 
@@ -944,7 +1007,8 @@ B) Negative
 C) Zero
 D) Infinite
 
-**Answer:** Negative
+===
+**Answer:** B) Negative
 
 **Explanation:** Since Spot - Future = Basis, if Future is higher, the result is negative.
 
@@ -959,7 +1023,8 @@ B) Spot should be double
 C) They should be equal (Basis is zero)
 D) They are unrelated
 
-**Answer:** They should be equal (Basis is zero)
+===
+**Answer:** C) They should be equal (Basis is zero)
 
 **Explanation:** Prices converge at expiry because the contract effectively becomes a spot trade.
 
@@ -974,7 +1039,8 @@ B) Interest paid to buy the stock minus dividends received
 C) The brokerage fee
 D) The price of the stock
 
-**Answer:** Interest paid to buy the stock minus dividends received
+===
+**Answer:** B) Interest paid to buy the stock minus dividends received
 
 **Explanation:** It’s the net cost of holding the asset until the future delivery date.
 
@@ -989,7 +1055,8 @@ B) Initial Margin
 C) Premium
 D) Tax
 
-**Answer:** Initial Margin
+===
+**Answer:** B) Initial Margin
 
 **Explanation:** Initial margin is the "security deposit" required by the exchange.
 
@@ -1004,7 +1071,8 @@ B) Only the seller
 C) Both the buyer and the seller
 D) No one pays
 
-**Answer:** Both the buyer and the seller
+===
+**Answer:** C) Both the buyer and the seller
 
 **Explanation:** Both sides must post a margin to ensure they honor the contract.
 
@@ -1019,7 +1087,8 @@ B) Mark-to-Market (MTM)
 C) Rolling over
 D) Arbitrage
 
-**Answer:** Mark-to-Market (MTM)
+===
+**Answer:** B) Mark-to-Market (MTM)
 
 **Explanation:** MTM settles the cash difference every day based on closing prices.
 
@@ -1034,7 +1103,8 @@ B) 5 Paise (Tick Size)
 C) 1 Rupee
 D) 10 Rupees
 
-**Answer:** 5 Paise (Tick Size)
+===
+**Answer:** B) 5 Paise (Tick Size)
 
 **Explanation:** The "Tick Size" is the minimum step the price can move.
 
@@ -1049,7 +1119,8 @@ B) Roll over the position to the next month
 C) Sell everything and quit
 D) Ask the government for permission
 
-**Answer:** Roll over the position to the next month
+===
+**Answer:** B) Roll over the position to the next month
 
 **Explanation:** Rollover means closing the old month and opening the new month.
 
@@ -1064,7 +1135,8 @@ B) Last Thursday of the month
 C) Every Friday
 D) First day of the month
 
-**Answer:** Last Thursday of the month
+===
+**Answer:** B) Last Thursday of the month
 
 **Explanation:** Nifty futures expire on the final Thursday of the contract month.
 
@@ -1079,7 +1151,8 @@ B) Much higher than fair value
 C) Exactly equal to spot
 D) Falling rapidly
 
-**Answer:** Much higher than fair value
+===
+**Answer:** B) Much higher than fair value
 
 **Explanation:** You buy the cheap stock and sell the expensive future to pocket the difference.
 
@@ -1094,7 +1167,8 @@ B) Convenience Yield
 C) Interest
 D) Premium
 
-**Answer:** Convenience Yield
+===
+**Answer:** B) Convenience Yield
 
 **Explanation:** Convenience yield is common in commodities like oil or wheat.
 
@@ -1109,7 +1183,8 @@ B) Backwardation
 C) Inflation
 D) Depression
 
-**Answer:** Backwardation
+===
+**Answer:** B) Backwardation
 
 **Explanation:** Backwardation means the future is cheaper than the present price.
 
@@ -1124,7 +1199,8 @@ B) Systematic risk
 C) Unsystematic risk
 D) Global risk
 
-**Answer:** Unsystematic risk
+===
+**Answer:** B) Systematic risk
 
 **Explanation:** This risk can be reduced by diversifying your portfolio.
 
@@ -1139,7 +1215,8 @@ B) Specific risk
 C) Business risk
 D) Local risk
 
-**Answer:** Systematic risk
+===
+**Answer:** A) Systematic risk
 
 **Explanation:** Systematic risk (like a recession) affects almost all stocks together.
 
@@ -1154,7 +1231,8 @@ B) How much a stock moves compared to the market index
 C) The age of the CEO
 D) The dividend rate
 
-**Answer:** How much a stock moves compared to the market index
+===
+**Answer:** B) How much a stock moves compared to the market index
 
 **Explanation:** Beta shows the sensitivity of a stock to overall market movements.
 
@@ -1169,7 +1247,8 @@ B) Aggressive (moves more than the market)
 C) Fixed
 D) Unrelated to the market
 
-**Answer:** Aggressive (moves more than the market)
+===
+**Answer:** B) Aggressive (moves more than the market)
 
 **Explanation:** A beta above 1 means the stock is more volatile than the index.
 
@@ -1184,7 +1263,8 @@ B) Cross hedge
 C) Direct hedge
 D) No hedge
 
-**Answer:** Cross hedge
+===
+**Answer:** B) Cross hedge
 
 **Explanation:** A cross hedge uses a related but different asset to protect a position.
 
@@ -1199,7 +1279,8 @@ B) Buying futures to lock in a price for a future purchase
 C) Holding a stock for 50 years
 D) Borrowing money from a broker
 
-**Answer:** Buying futures to lock in a price for a future purchase
+===
+**Answer:** B) Buying futures to lock in a price for a future purchase
 
 **Explanation:** You buy futures now to protect against prices going up before you buy the actual asset.
 
@@ -1214,7 +1295,8 @@ B) Buying futures
 C) Trading only for 5 minutes
 D) Selling all your clothes
 
-**Answer:** Selling futures to lock in a price for a future sale
+===
+**Answer:** A) Selling futures to lock in a price for a future sale
 
 **Explanation:** You sell futures now to protect against prices falling before you sell your stock.
 
@@ -1229,7 +1311,8 @@ B) Calendar spread
 C) Vertical spread
 D) Diagonal spread
 
-**Answer:** Calendar spread
+===
+**Answer:** B) Calendar spread
 
 **Explanation:** Only calendar spreads (same stock, different months) are currently traded in India.
 
@@ -1244,7 +1327,8 @@ B) The right, but not the obligation, to trade
 C) A guaranteed profit
 D) Free shares
 
-**Answer:** The right, but not the obligation, to trade
+===
+**Answer:** B) The right, but not the obligation, to trade
 
 **Explanation:** Options provide flexibility; the buyer can choose not to trade if it's not profitable.
 
@@ -1259,7 +1343,8 @@ B) Premium
 C) Strike Price
 D) Brokerage
 
-**Answer:** Premium
+===
+**Answer:** B) Premium
 
 **Explanation:** The premium is the upfront cost for the rights granted by the option.
 
@@ -1274,7 +1359,8 @@ B) Buy an asset
 C) Cancel a trade
 D) Receive a loan
 
-**Answer:** Buy an asset
+===
+**Answer:** B) Buy an asset
 
 **Explanation:** A call is a right to buy; think of "calling" something towards you.
 
@@ -1289,7 +1375,8 @@ B) Another financially sound member
 C) The stock exchange itself
 D) The error account
 
-**Answer:** Another financially sound member
+===
+**Answer:** B) Another financially sound member
 
 **Explanation:** If a broker defaults, the Clearing Corporation can shift client positions to another solvent member to protect investors and ensure smooth settlement.
 
@@ -1304,7 +1391,8 @@ B) Level of aggressiveness
 C) Cost of premium
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** A strangle uses different strike prices and usually costs less premium than a straddle. Though both expect big price movement, their structure and cost differ.
 
@@ -1319,7 +1407,8 @@ B) IT sector shares
 C) A stock market index
 D) All of the above
 
-**Answer:** A stock market index
+===
+**Answer:** C) A stock market index
 
 **Explanation:** A stock index contains many large companies. Because it represents a basket of stocks, it is very difficult for anyone to manipulate its price.
 
@@ -1334,7 +1423,8 @@ B) No, it can be adjusted between clients
 C) Only if both contracts are in the same month
 D) Only if both clients agree
 
-**Answer:** Yes, margin must be calculated separately
+===
+**Answer:** A) Yes, margin must be calculated separately
 
 **Explanation:** Margin cannot be adjusted between different clients. The broker must collect initial margin individually for each client’s open position.
 
@@ -1347,7 +1437,8 @@ D) Only if both clients agree
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Clearing Members must provide liquid assets like cash, bank guarantees, government securities, and certain mutual fund units to meet margin requirements.
 
@@ -1362,7 +1453,8 @@ B) Has the highest price
 C) Expires
 D) Is first introduced
 
-**Answer:** Expires
+===
+**Answer:** C) Expires
 
 **Explanation:** The contract month is the month in which the futures contract expires. On expiry, the contract is settled.
 
@@ -1375,7 +1467,8 @@ D) Is first introduced
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** If a Trading Member meets the extra capital and compliance requirements, they can also act as a Clearing Member.
 
@@ -1388,7 +1481,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** The minimum price movement is called a “Tick.” Basis means the difference between spot price and futures price.
 
@@ -1403,7 +1497,8 @@ B) Market risk
 C) Basis risk
 D) Interest rate risk
 
-**Answer:** Basis risk
+===
+**Answer:** C) Basis risk
 
 **Explanation:** Calendar spreads involve two futures contracts of different expiry months. The main risk is basis risk, meaning the price difference between the two contracts may change unexpectedly.
 
@@ -1416,9 +1511,74 @@ D) Interest rate risk
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Unsystematic risk is related to a specific company or industry. By investing in different companies and sectors, this type of risk can be reduced.
+
+---
+
+**Question 97:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15100 (premium Rs. 121) and a Put option at the same strike Rs. 15100 (premium Rs. 91). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+B) Upper BE: Rs. 15221 | Lower BE: Rs. 15009
+C) Upper BE: Rs. 15362 | Lower BE: Rs. 14838
+D) Upper BE: Rs. 15100 | Lower BE: Rs. 14888
+
+===
+**Answer:** A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 121 + 91 = Rs. 212. Upper Break-even = Strike + Total Premium = 15100 + 212 = Rs. 15312. Lower Break-even = Strike - Total Premium = 15100 - 212 = Rs. 14888.
+
+---
+
+**Question 98:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15200 (premium Rs. 122) and a Put option at the same strike Rs. 15200 (premium Rs. 92). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15414 | Lower BE: Rs. 14986
+B) Upper BE: Rs. 15322 | Lower BE: Rs. 15108
+C) Upper BE: Rs. 15464 | Lower BE: Rs. 14936
+D) Upper BE: Rs. 15200 | Lower BE: Rs. 14986
+
+===
+**Answer:** A) Upper BE: Rs. 15414 | Lower BE: Rs. 14986
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 122 + 92 = Rs. 214. Upper Break-even = Strike + Total Premium = 15200 + 214 = Rs. 15414. Lower Break-even = Strike - Total Premium = 15200 - 214 = Rs. 14986.
+
+---
+
+**Question 99:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15300 (premium Rs. 123) and a Put option at the same strike Rs. 15300 (premium Rs. 93). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15516 | Lower BE: Rs. 15084
+B) Upper BE: Rs. 15423 | Lower BE: Rs. 15207
+C) Upper BE: Rs. 15566 | Lower BE: Rs. 15034
+D) Upper BE: Rs. 15300 | Lower BE: Rs. 15084
+
+===
+**Answer:** A) Upper BE: Rs. 15516 | Lower BE: Rs. 15084
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 123 + 93 = Rs. 216. Upper Break-even = Strike + Total Premium = 15300 + 216 = Rs. 15516. Lower Break-even = Strike - Total Premium = 15300 - 216 = Rs. 15084.
+
+---
+
+**Question 100:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15400 (premium Rs. 124) and a Put option at the same strike Rs. 15400 (premium Rs. 94). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15618 | Lower BE: Rs. 15182
+B) Upper BE: Rs. 15524 | Lower BE: Rs. 15306
+C) Upper BE: Rs. 15668 | Lower BE: Rs. 15132
+D) Upper BE: Rs. 15400 | Lower BE: Rs. 15182
+
+===
+**Answer:** A) Upper BE: Rs. 15618 | Lower BE: Rs. 15182
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 124 + 94 = Rs. 218. Upper Break-even = Strike + Total Premium = 15400 + 218 = Rs. 15618. Lower Break-even = Strike - Total Premium = 15400 - 218 = Rs. 15182.
 
 ---
 

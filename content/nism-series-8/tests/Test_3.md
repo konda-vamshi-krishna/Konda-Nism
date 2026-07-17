@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 3
+# NISM Series VIII Equity Derivatives - Mock test_3
 
 **Question 1:** The first successful futures contract based on interest rates was introduced in 1975 using:
 
@@ -9,7 +9,8 @@ B) Treasury bills
 C) Bank loans
 D) Corporate bonds
 
-**Answer:** Treasury bills
+===
+**Answer:** B) Treasury bills
 
 **Explanation:** The CBOT introduced Treasury bill futures as the first pure interest rate derivative.
 
@@ -24,7 +25,8 @@ B) 1982
 C) 1996
 D) 2000
 
-**Answer:** 1982
+===
+**Answer:** B) 1982
 
 **Explanation:** In 1982, the first futures contract based on a stock index was introduced.
 
@@ -39,7 +41,8 @@ B) Lower global trade
 C) High price swings in assets
 D) Removal of technology
 
-**Answer:** High price swings in assets
+===
+**Answer:** C) High price swings in assets
 
 **Explanation:** Increased fluctuations in prices have driven the need for derivatives to manage risks.
 
@@ -54,7 +57,8 @@ B) It helped lower the costs of transactions
 C) it stopped international trading
 D) It made markets less transparent
 
-**Answer:** It helped lower the costs of transactions
+===
+**Answer:** B) It helped lower the costs of transactions
 
 **Explanation:** New technology has made trading faster and reduced the cost of making deals.
 
@@ -69,7 +73,8 @@ B) Dr. L. C. Gupta
 C) J.R. Varma
 D) Nirmala Sitharaman
 
-**Answer:** Dr. L. C. Gupta
+===
+**Answer:** B) Dr. L. C. Gupta
 
 **Explanation:** Dr. L.C. Gupta led the committee that developed the regulatory framework for India.
 
@@ -84,7 +89,8 @@ B) 1996
 C) 1999
 D) 2005
 
-**Answer:** 1999
+===
+**Answer:** C) 1999
 
 **Explanation:** The SCRA was amended in 1999 to allow derivatives to be regulated as securities.
 
@@ -99,7 +105,8 @@ B) Index futures
 C) Gold futures
 D) Currency swaps
 
-**Answer:** Index futures
+===
+**Answer:** B) Index futures
 
 **Explanation:** Indian exchanges first introduced index futures contracts in June 2000.
 
@@ -114,7 +121,8 @@ B) June 2001
 C) July 2001
 D) November 2001
 
-**Answer:** July 2001
+===
+**Answer:** C) July 2001
 
 **Explanation:** Stock options trading started in July 2001, right after index options.
 
@@ -129,7 +137,8 @@ B) Forward contract
 C) Index fund
 D) Mutual fund
 
-**Answer:** Forward contract
+===
+**Answer:** B) Forward contract
 
 **Explanation:** A forward contract is a direct, non-standardized deal between two parties.
 
@@ -144,7 +153,8 @@ B) Over-the-counter (OTC)
 C) In a grocery store
 D) Only at central banks
 
-**Answer:** Over-the-counter (OTC)
+===
+**Answer:** B) Over-the-counter (OTC)
 
 **Explanation:** Because they are private deals, forwards are traded OTC rather than on an organized exchange.
 
@@ -159,7 +169,8 @@ B) Only the seller
 C) Both the buyer and the seller
 D) Neither party
 
-**Answer:** Both the buyer and the seller
+===
+**Answer:** C) Both the buyer and the seller
 
 **Explanation:** Both sides are legally committed to completing the transaction at the agreed price.
 
@@ -174,7 +185,8 @@ B) Counterparty risk (Default)
 C) Fixed price risk
 D) Low margin
 
-**Answer:** Counterparty risk (Default)
+===
+**Answer:** B) Counterparty risk (Default)
 
 **Explanation:** Counterparty risk is the chance that the other person might not honor the deal.
 
@@ -189,7 +201,8 @@ B) Liquidity risk
 C) Counterparty risk
 D) Systemic risk
 
-**Answer:** Counterparty risk
+===
+**Answer:** C) Counterparty risk
 
 **Explanation:** This risk occurs when one party defaults on their contractual obligation.
 
@@ -204,7 +217,8 @@ B) Option
 C) Future
 D) Warrant
 
-**Answer:** Future
+===
+**Answer:** C) Future
 
 **Explanation:** Futures were made to solve forward contract problems by being standardized and exchange-traded.
 
@@ -219,7 +233,8 @@ B) The government
 C) The Stock Exchange
 D) The Clearing Corporation
 
-**Answer:** The Stock Exchange
+===
+**Answer:** C) The Stock Exchange
 
 **Explanation:** The exchange sets all terms like lot size and maturity so that everyone trades the same thing.
 
@@ -234,7 +249,8 @@ B) The Clearing Corporation
 C) The Bank of India
 D) SEBI
 
-**Answer:** The Clearing Corporation
+===
+**Answer:** B) The Clearing Corporation
 
 **Explanation:** The clearing corporation guarantees settlement, removing the fear of one person defaulting.
 
@@ -249,7 +265,8 @@ B) Less flexibility in terms
 C) No regulation
 D) Lack of price transparency
 
-**Answer:** Less flexibility in terms
+===
+**Answer:** B) Less flexibility in terms
 
 **Explanation:** Because futures are standardized, you cannot customize the terms to fit your specific needs.
 
@@ -264,7 +281,8 @@ B) Option
 C) Swap
 D) Forward
 
-**Answer:** Swap
+===
+**Answer:** C) Swap
 
 **Explanation:** A swap is an agreement to exchange future payments according to a set calculation.
 
@@ -279,7 +297,8 @@ B) Hedger
 C) Arbitrageur
 D) Speculator
 
-**Answer:** Arbitrageur
+===
+**Answer:** C) Arbitrageur
 
 **Explanation:** Hedgers use derivatives to reduce their exposure to market risks.
 
@@ -294,7 +313,8 @@ B) To protect a business from losses
 C) To profit from price differences in two markets
 D) To hold stocks for 20 years
 
-**Answer:** To profit from price differences in two markets
+===
+**Answer:** C) To profit from price differences in two markets
 
 **Explanation:** Arbitrage involves buying in a cheap market and selling in a dear market simultaneously for a profit.
 
@@ -309,7 +329,8 @@ B) A decentralized electronic network of dealers
 C) A government-run department
 D) A local bank branch
 
-**Answer:** A decentralized electronic network of dealers
+===
+**Answer:** B) A decentralized electronic network of dealers
 
 **Explanation:** OTC markets are not physical; they are a network of broker-dealers linked by computers.
 
@@ -324,7 +345,8 @@ B) Credit risk
 C) Liquidity risk
 D) Legal risk
 
-**Answer:** Liquidity risk
+===
+**Answer:** C) Liquidity risk
 
 **Explanation:** Liquidity risk is the inability to exit a position easily without a big price move.
 
@@ -339,7 +361,8 @@ B) Systems failing, fraud, or human errors
 C) New taxes from the government
 D) Changes in interest rates
 
-**Answer:** Systems failing, fraud, or human errors
+===
+**Answer:** B) Systems failing, fraud, or human errors
 
 **Explanation:** Operational risk comes from internal failures like tech glitches or improper trade execution.
 
@@ -354,7 +377,8 @@ B) Model Risk Disclosure Document
 C) Company Balance Sheet
 D) Bank Passbook
 
-**Answer:** Model Risk Disclosure Document
+===
+**Answer:** B) Model Risk Disclosure Document
 
 **Explanation:** This document explains the risks and is provided by brokers to prospective traders.
 
@@ -369,7 +393,8 @@ B) Forwards and Futures
 C) Introduction to Options
 D) Accounting and Taxation
 
-**Answer:** Forwards and Futures
+===
+**Answer:** B) Forwards and Futures
 
 **Explanation:** Introduction to Forwards and Futures has a 20% weightage in the syllabus.
 
@@ -384,7 +409,8 @@ B) Index
 C) Margin
 D) Hedge
 
-**Answer:** Index
+===
+**Answer:** B) Index
 
 **Explanation:** An index is a statistical indicator used to track performance in markets or sectors.
 
@@ -399,7 +425,8 @@ B) Ending value
 C) Base value
 D) Zero value
 
-**Answer:** Base value
+===
+**Answer:** C) Base value
 
 **Explanation:** Most indices start at a base value (like 100 or 1000) to measure future growth.
 
@@ -414,7 +441,8 @@ B) The percentage change
 C) The number of shares
 D) The location of the exchange
 
-**Answer:** The percentage change
+===
+**Answer:** B) The percentage change
 
 **Explanation:** Investors look at the percentage change to understand the market's trend.
 
@@ -429,7 +457,8 @@ B) Stocks with the most volume
 C) Stocks with the highest total market value
 D) Stocks that have been listed the longest
 
-**Answer:** Stocks with the highest total market value
+===
+**Answer:** C) Stocks with the highest total market value
 
 **Explanation:** In this system, the weight of a stock depends on its total market value.
 
@@ -444,7 +473,8 @@ B) Total shares × Market price per share
 C) Sales divided by expenses
 D) Total assets plus liabilities
 
-**Answer:** Total shares × Market price per share
+===
+**Answer:** B) Total shares × Market price per share
 
 **Explanation:** Market cap shows the total value of all the company's shares at current prices.
 
@@ -459,7 +489,8 @@ B) Shares that are not available for public trading
 C) Shares that are too cheap
 D) Dividends
 
-**Answer:** Shares that are not available for public trading
+===
+**Answer:** B) Shares that are not available for public trading
 
 **Explanation:** Free-float only counts shares available for the public to trade, excluding promoter holdings.
 
@@ -474,7 +505,8 @@ B) Equal-Weighted
 C) Free-Float Market Cap
 D) Alphabetical-Weighted
 
-**Answer:** Free-Float Market Cap
+===
+**Answer:** C) Free-Float Market Cap
 
 **Explanation:** Most global and Indian indices have moved to the free-float market capitalization method.
 
@@ -489,7 +521,8 @@ B) The one with the highest price per share
 C) The newest company
 D) The most profitable company
 
-**Answer:** The one with the highest price per share
+===
+**Answer:** B) The one with the highest price per share
 
 **Explanation:** In price-weighted indices like the Dow Jones, higher-priced stocks move the index more.
 
@@ -504,7 +537,8 @@ B) Sell stocks that have gone up and buy those that have fallen
 C) Do nothing at all
 D) Close the index every month
 
-**Answer:** Sell stocks that have gone up and buy those that have fallen
+===
+**Answer:** B) Sell stocks that have gone up and buy those that have fallen
 
 **Explanation:** To rebalance, the manager sells "winners" and buys "losers" to keep weights equal.
 
@@ -519,7 +553,8 @@ B) Being able to buy/sell large amounts without changing the price much
 C) The stock price being very high
 D) Paying dividends every year
 
-**Answer:** Being able to buy/sell large amounts without changing the price much
+===
+**Answer:** B) Being able to buy/sell large amounts without changing the price much
 
 **Explanation:** Liquidity means large orders can be filled quickly with minimal price impact.
 
@@ -534,7 +569,8 @@ B) Brokerage
 C) Bid-ask spread
 D) Margin
 
-**Answer:** Bid-ask spread
+===
+**Answer:** C) Bid-ask spread
 
 **Explanation:** The bid-ask spread is the gap between the best bid and the best offer.
 
@@ -549,7 +585,8 @@ B) How much the price moves against you during a trade
 C) The profit made on a trade
 D) The internet speed of the exchange
 
-**Answer:** How much the price moves against you during a trade
+===
+**Answer:** B) How much the price moves against you during a trade
 
 **Explanation:** Impact cost shows the price degradation experienced when executing a transaction.
 
@@ -564,7 +601,8 @@ B) Specialized professional agencies
 C) Retail investors
 D) Bank managers
 
-**Answer:** Specialized professional agencies
+===
+**Answer:** B) Specialized professional agencies
 
 **Explanation:** Indices are professionally maintained and revised by dedicated organizations.
 
@@ -579,7 +617,8 @@ B) Maintenance
 C) Liquidation
 D) Speculation
 
-**Answer:** Maintenance
+===
+**Answer:** B) Maintenance
 
 **Explanation:** Index maintenance involves adjusting for corporate actions to keep the index comparable.
 
@@ -592,7 +631,8 @@ D) Speculation
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Option spreads involve buying and selling options of the same type with different strike prices or expiry dates. Because both sides are combined, the maximum profit and maximum loss are limited.
 
@@ -607,7 +647,8 @@ B) It decreases
 C) It increases
 D) Volatility has no effect
 
-**Answer:** It increases
+===
+**Answer:** C) It increases
 
 **Explanation:** Higher volatility means higher price movement chances. This increases the possibility of profit from the option. Therefore, option premiums increase when volatility rises.
 
@@ -620,7 +661,8 @@ D) Volatility has no effect
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Almost all derivative contracts such as futures and options have a fixed expiry date. They must be settled on or before that date.
 
@@ -633,7 +675,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Dealers must separate proprietary (own) trades and client trades. This avoids misuse of client funds and ensures transparency.
 
@@ -648,7 +691,8 @@ B) Clearing Corporation
 C) Stock Exchange
 D) Clearing Member himself
 
-**Answer:** Clearing Member himself
+===
+**Answer:** D) Clearing Member himself
 
 **Explanation:** The Clearing Member has the authority to fix limits for trading members clearing through him, based on his risk assessment.
 
@@ -663,7 +707,8 @@ B) Buy index futures and sell those stocks
 C) Sell index futures and buy those stocks
 D) Do nothing
 
-**Answer:** Buy index futures and sell those stocks
+===
+**Answer:** B) Buy index futures and sell those stocks
 
 **Explanation:** Buying index futures benefits from market rise, and selling weak stocks avoids losses in those shares. This balances his view.
 
@@ -678,7 +723,8 @@ B) Position Limit
 C) Upper Limit
 D) Outstanding Limit
 
-**Answer:** Position Limit
+===
+**Answer:** B) Position Limit
 
 **Explanation:** Position limit is the maximum number of contracts allowed for an investor or member to control market risk.
 
@@ -693,7 +739,8 @@ B) Sell another contract
 C) Buy a call option
 D) Enter into a forward contract
 
-**Answer:** Buy the same futures contract
+===
+**Answer:** A) Buy the same futures contract
 
 **Explanation:** A short futures position is closed by purchasing the same contract in the market.
 
@@ -706,7 +753,8 @@ D) Enter into a forward contract
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** If spot price is above strike price, the call option holder gains the difference amount on exercise.
 
@@ -721,7 +769,8 @@ B) To reduce possible losses
 C) To increase speculation
 D) Only for currency markets
 
-**Answer:** To reduce possible losses
+===
+**Answer:** B) To reduce possible losses
 
 **Explanation:** Hedging reduces risk by taking an opposite position in derivatives to protect against adverse price movements.
 
@@ -734,7 +783,8 @@ D) Only for currency markets
 A) He makes a profit
 B) He makes a loss
 
-**Answer:** He makes a loss
+===
+**Answer:** B) He makes a loss
 
 **Explanation:** When a trader sells futures, he expects prices to fall. If prices rise instead, he must buy back at a higher price, resulting in a loss.
 
@@ -749,7 +799,8 @@ B) Stock moves equal to the market
 C) Stock moves more than the market
 D) Stock moves opposite to the market
 
-**Answer:** Stock moves more than the market
+===
+**Answer:** C) Stock moves more than the market
 
 **Explanation:** Beta measures sensitivity to market movement. If Beta is more than 1, the stock is more volatile than the market and moves more than the index.
 
@@ -762,7 +813,8 @@ D) Stock moves opposite to the market
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Option premium consists of intrinsic value plus time value. Intrinsic value alone is the difference between spot price and strike price.
 
@@ -775,7 +827,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Client money and securities must be kept separate. They cannot be used for the broker’s proprietary obligations.
 
@@ -788,7 +841,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** In-the-money options have positive intrinsic value. At-the-money and out-of-the-money options have zero intrinsic value.
 
@@ -801,7 +855,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Forward contracts are customized agreements between two parties. Futures contracts are standardized by exchanges.
 
@@ -814,7 +869,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Speculators take calculated risks based on expected price movements to earn profits.
 
@@ -829,7 +885,8 @@ B) Rs. 50 lakhs
 C) Rs. 100 lakhs
 D) Rs. 150 lakhs
 
-**Answer:** Rs. 50 lakhs
+===
+**Answer:** B) Rs. 50 lakhs
 
 **Explanation:** A Clearing Member must deposit Rs. 50 lakhs as part of the required security deposit.
 
@@ -842,7 +899,8 @@ D) Rs. 150 lakhs
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Higher liquid assets allow higher exposure limits. Therefore, exposure is positively related to deposited funds.
 
@@ -855,7 +913,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** When dividends are declared, stock price usually falls. Lower stock price reduces call option value.
 
@@ -870,7 +929,8 @@ B) By cash settlement
 C) Either cash or delivery
 D) Exchange for commodities
 
-**Answer:** By cash settlement
+===
+**Answer:** B) By cash settlement
 
 **Explanation:** Index futures are settled in cash. No physical delivery takes place. The difference between contract price and settlement price is paid.
 
@@ -885,7 +945,8 @@ B) Decreases
 C) Remains constant
 D) Expires worthless
 
-**Answer:** Decreases
+===
+**Answer:** B) Decreases
 
 **Explanation:** A Put option buyer expects prices to fall. When the price decreases, the value of the Put option increases.
 
@@ -900,7 +961,8 @@ B) Buyer only
 C) Both buyer and seller
 D) Neither
 
-**Answer:** Buyer only
+===
+**Answer:** B) Buyer only
 
 **Explanation:** If futures price rises, the buyer gains and his margin account is credited. The seller’s account is debited.
 
@@ -915,7 +977,8 @@ B) Without other party’s consent
 C) Only if both parties agree
 D) It cannot be cancelled
 
-**Answer:** Only if both parties agree
+===
+**Answer:** C) Only if both parties agree
 
 **Explanation:** Forward contracts are private agreements. They can be modified or cancelled only with mutual consent.
 
@@ -930,7 +993,8 @@ B) 14 contracts
 C) 7 contracts
 D) Exchange decides
 
-**Answer:** 7 contracts
+===
+**Answer:** C) 7 contracts
 
 **Explanation:** Since both are same contracts, exposure is netted. 14 minus 7 equals 7 net long contracts.
 
@@ -943,7 +1007,8 @@ D) Exchange decides
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** Mutual funds can use index futures for hedging. Selling index futures reduces market exposure without selling actual shares.
 
@@ -956,7 +1021,8 @@ B) No
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Clearing Members have higher responsibilities. Therefore, their net worth requirement is higher.
 
@@ -971,7 +1037,8 @@ B) Underlying price
 C) Time to expiry
 D) Interest rate
 
-**Answer:** Time to expiry
+===
+**Answer:** C) Time to expiry
 
 **Explanation:** Theta measures time decay. It shows how much option value decreases as expiry approaches.
 
@@ -984,7 +1051,8 @@ D) Interest rate
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Futures are traded on organized exchanges with screen-based systems. Forward contracts are private agreements and less transparent.
 
@@ -997,7 +1065,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Brokers must follow suitability norms. They should recommend derivatives only if the client understands the risks.
 
@@ -1012,7 +1081,8 @@ B) True only for American options
 C) True for all types of options
 D) False for all options
 
-**Answer:** True for all types of options
+===
+**Answer:** C) True for all types of options
 
 **Explanation:** The maximum loss for any option buyer (call or put) is limited to the premium paid. Loss cannot exceed that amount.
 
@@ -1027,7 +1097,8 @@ B) No need for exchange
 C) More transparency in price and execution
 D) No setup cost
 
-**Answer:** More transparency in price and execution
+===
+**Answer:** C) More transparency in price and execution
 
 **Explanation:** Screen-based trading provides full transparency in orders and prices. All participants can see market prices clearly.
 
@@ -1042,7 +1113,8 @@ B) Experience
 C) Funds deposited with Clearing Corporation
 D) Age
 
-**Answer:** Funds deposited with Clearing Corporation
+===
+**Answer:** C) Funds deposited with Clearing Corporation
 
 **Explanation:** Exposure limits are based on liquid assets and funds deposited, not on qualification or experience.
 
@@ -1057,7 +1129,8 @@ B) Decreases
 C) No change
 D) Becomes negative
 
-**Answer:** Decreases
+===
+**Answer:** B) Decreases
 
 **Explanation:** Intrinsic value of a Put = Strike Price – Spot Price. If strike price decreases, the difference becomes smaller.
 
@@ -1070,7 +1143,8 @@ D) Becomes negative
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** After approval of rules and bye-laws, exchanges can introduce contracts as per approved guidelines.
 
@@ -1085,7 +1159,8 @@ B) Neutral
 C) Bullish
 D) Mixed
 
-**Answer:** Bullish
+===
+**Answer:** C) Bullish
 
 **Explanation:** Buying a call option means the trader expects the price to rise. This shows a bullish view.
 
@@ -1100,7 +1175,8 @@ B) Next month contract
 C) Expiry month only
 D) Far month contract
 
-**Answer:** Current month contract
+===
+**Answer:** A) Current month contract
 
 **Explanation:** Near month means the current month futures contract available for trading.
 
@@ -1115,7 +1191,8 @@ B) Time to expiry
 C) Underlying price
 D) Interest rates
 
-**Answer:** Interest rates
+===
+**Answer:** D) Interest rates
 
 **Explanation:** Rho shows how option price changes when interest rates change.
 
@@ -1130,7 +1207,8 @@ B) Volatility
 C) Difference between futures price and spot price
 D) Market price
 
-**Answer:** Difference between futures price and spot price
+===
+**Answer:** C) Difference between futures price and spot price
 
 **Explanation:** Basis = Spot Price – Futures Price (or vice versa). It shows the difference between spot and futures prices.
 
@@ -1145,7 +1223,8 @@ B) Arbitrage between months
 C) Hedging portfolio
 D) Protecting against loss
 
-**Answer:** Buying futures expecting good results
+===
+**Answer:** A) Buying futures expecting good results
 
 **Explanation:** Speculation means taking position only to earn profit from expected price movement, not for hedging or arbitrage.
 
@@ -1160,7 +1239,8 @@ B) Only Foreign Portfolio Investors
 C) Only Individuals
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Market makers, foreign investors, and individual traders can write options as per exchange rules and margin requirements.
 
@@ -1175,7 +1255,8 @@ B) Lower than Ask price
 C) Equal to Ask price
 D) Random
 
-**Answer:** Lower than Ask price
+===
+**Answer:** B) Lower than Ask price
 
 **Explanation:** Bid is the price buyers are willing to pay. Ask is the price sellers want. Bid is always lower than Ask.
 
@@ -1188,7 +1269,8 @@ D) Random
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Higher margins mean traders must block more money. This increases the cost of trading futures.
 
@@ -1203,7 +1285,8 @@ B) Only seller
 C) Both buyer and seller
 D) No one
 
-**Answer:** Both buyer and seller
+===
+**Answer:** C) Both buyer and seller
 
 **Explanation:** In futures contracts, both buyer and seller must deposit initial margin with the exchange.
 
@@ -1218,7 +1301,8 @@ B) Self-Clearing Member
 C) Professional Clearing Member
 D) Custodial Participant
 
-**Answer:** Professional Clearing Member
+===
+**Answer:** C) Professional Clearing Member
 
 **Explanation:** A Professional Clearing Member clears trades for others but does not trade on his own behalf.
 
@@ -1233,7 +1317,8 @@ B) 7 years
 C) 8 years
 D) 10 years
 
-**Answer:** 8 years
+===
+**Answer:** C) 8 years
 
 **Explanation:** Derivative losses can be carried forward for 8 assessment years and adjusted against future business income.
 
@@ -1248,7 +1333,8 @@ B) Risk Disclosure Document
 C) Verbal explanation
 D) None
 
-**Answer:** Risk Disclosure Document
+===
+**Answer:** B) Risk Disclosure Document
 
 **Explanation:** Clients must sign a Risk Disclosure Document before trading derivatives. It explains all related risks.
 
@@ -1263,7 +1349,8 @@ B) Simple average of betas
 C) Beta of largest stock
 D) Value-weighted average of betas
 
-**Answer:** Value-weighted average of betas
+===
+**Answer:** D) Value-weighted average of betas
 
 **Explanation:** Portfolio beta is calculated by weighting each stock’s beta according to its investment proportion.
 
@@ -1278,7 +1365,8 @@ B) Moderate
 C) 25% of deliveries
 D) Does not exist
 
-**Answer:** Does not exist
+===
+**Answer:** D) Does not exist
 
 **Explanation:** Index futures are cash-settled. Since no physical delivery happens, bad delivery risk does not exist.
 
@@ -1293,7 +1381,8 @@ B) First Thursday
 C) Last Wednesday
 D) Last Thursday
 
-**Answer:** Last Thursday
+===
+**Answer:** D) Last Thursday
 
 **Explanation:** Nifty futures expire on the last Thursday of the month, or previous trading day if it is a holiday.
 
@@ -1306,7 +1395,8 @@ D) Last Thursday
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Futures are traded on exchanges where buyers and sellers are anonymous. You can close your position with any participant in the market. The Clearing Corporation becomes the legal counterparty and guarantees settlement.
 
@@ -1319,7 +1409,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Brokers are required to collect a signed Risk Disclosure Document. It informs clients about the risks involved in derivative trading and ensures they understand possible losses before trading.
 
@@ -1334,7 +1425,8 @@ B) ₹83,300
 C) ₹5,831
 D) ₹291,550
 
-**Answer:** ₹291,550
+===
+**Answer:** D) ₹291,550
 
 **Explanation:** Total contract value = 2450 × 34 × 50 = ₹41,65,000. Margin = 7% of ₹41,65,000 = ₹2,91,550. Initial margin is calculated on total contract value.
 
@@ -1347,7 +1439,8 @@ D) ₹291,550
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Arbitrage involves buying an asset at a lower price in one market and selling it at a higher price in another market simultaneously. The goal is to earn risk-free profit from price differences.
 
@@ -1360,7 +1453,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** The Clearing Corporation can transfer client positions to another broker or close them in case of default. It later reports the matter to SEBI.
 
@@ -1373,7 +1467,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** The Clearing Corporation acts as a central counterparty. It ensures that financial obligations of both buyer and seller are fulfilled even if one party defaults.
 
@@ -1388,7 +1483,8 @@ B) Out of the Money
 C) In the Money
 D) None of the above
 
-**Answer:** In the Money
+===
+**Answer:** C) In the Money
 
 **Explanation:** An option is profitable to exercise when it is “In the Money.” This means the exercise gives financial benefit, such as buying below market price (call) or selling above market price (put).
 
@@ -1401,7 +1497,8 @@ D) None of the above
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** If the market price rises sharply, the call seller must sell at the strike price, causing potentially unlimited loss because there is no limit to how high prices can rise.
 
@@ -1414,7 +1511,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Bulls believe that prices will increase and therefore take long positions. Investors expecting a fall are called Bears.
 
@@ -1427,7 +1525,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Initial margin is fixed based on volatility. Mark-to-market margin changes daily according to price movements. Therefore, both margins are different.
 
@@ -1442,7 +1541,8 @@ B) No change in price
 C) Decrease in price
 D) Both A and B
 
-**Answer:** Both A and B
+===
+**Answer:** D) Both A and B
 
 **Explanation:** A seller of a put option expects the price to rise or remain stable. If price rises, the option expires worthless and seller keeps premium. Even if price stays same, seller earns the premium.
 

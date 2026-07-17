@@ -1001,3 +1001,45 @@ body.translation-active .notes-wrapper {
   background: var(--danger-light);
   color: var(--danger);
 }
+
+/* Responsive layout query for inside-course grid (Test Case UT-004) */
+@media (min-width: 768px) {
+  .dashboard-grid.inside-course {
+    grid-template-columns: 1fr 300px !important;
+  }
+}
+
+/* Glassmorphism visual shimmer animation */
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.shimmer-card .shimmer-title::after,
+.shimmer-card .shimmer-body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

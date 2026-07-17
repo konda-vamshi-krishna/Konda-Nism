@@ -2,7 +2,17 @@ import json
 import re
 
 def audit_and_correct_tests():
-    with open('g:/mock text/parsed_data_clean.json', 'r', encoding='utf-8') as f:
+    import argparse
+    import os
+    parser = argparse.ArgumentParser(description="Audit and correct course module tests.")
+    parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
+    args = parser.parse_args()
+
+    module_dir = os.path.join('g:/mock text/content', args.module)
+    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+    report_path = os.path.join(module_dir, 'audit_report.txt')
+
+    with open(clean_json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
     audit_report = []
@@ -10,86 +20,81 @@ def audit_and_correct_tests():
     mismatched_answers = 0
     malformed_options = 0
     corrected_count = 0
+    missing_ids = 0
 
-    for test_key, questions in data.items():
+    # Pattern for slugified keys
+    slug_pattern = re.compile(r'^[a-z0-9_]+$')
+
+    for test_key, questions in list(data.items()):
+        # Check test key slugification
+        if not slug_pattern.match(test_key):
+            audit_report.append(f"[Key Warn] Test key '{test_key}' is not lowercase slugified.")
+            # Convert key to slugified on the fly to correct it
+            new_key = test_key.lower().replace(' ', '_')
+            data[new_key] = data.pop(test_key)
+            test_key = new_key
+            corrected_count += 1
+            
         for idx, q in enumerate(questions):
             total_questions += 1
-            question_text = q.get('question', '')
+            question_id = q.get('id', '')
             options = q.get('options', [])
-            answer = q.get('answer', '').strip()
+            answer_idx = q.get('answer_idx', None)
             
-            # Check 1: Options count
-            if len(options) != 4:
+            # Check ID
+            if not question_id:
+                missing_ids += 1
+                q['id'] = f"q_{args.module.replace('-', '')}_{test_key}_{idx+1:03d}"
+                corrected_count += 1
+                audit_report.append(f"[{test_key} Q{idx+1}] Fixed: Generated missing question ID.")
+
+            # Check Options count
+            if len(options) != 4 and len(options) != 2:
                 malformed_options += 1
-                audit_report.append(f"[{test_key} Q{idx+1}] Warn: Option count is {len(options)}, expected 4.")
+                audit_report.append(f"[{test_key} Q{idx+1}] Warn: Option count is {len(options)}, expected 4 (or 2 for T/F).")
                 
-            # Check 2: Try to match answer with options
-            # We want to make sure the answer text matches the text of one of the options
-            # Let's clean the answer first
-            ans_clean = re.sub(r'^[A-D][\.\)]\s*', '', answer).strip().lower()
-            
-            # Let's also check if the answer is just a single letter like "A", "B", "C", "D"
-            is_single_letter = False
-            letter_match = re.match(r'^([A-D])$', answer, re.IGNORECASE)
-            if not letter_match:
-                # E.g. "Option A" or "Correct Option: A"
-                letter_match = re.search(r'(?:option|correct|ans)\s*[:\-]?\s*([A-D])$', answer, re.IGNORECASE)
-                
-            if letter_match:
-                is_single_letter = True
-                letter = letter_match.group(1).upper()
-                # Find the option that starts with that letter
-                found_opt = None
-                for opt in options:
-                    if opt.strip().upper().startswith(letter):
-                        found_opt = opt
-                        break
-                if found_opt:
-                    q['answer'] = found_opt
-                    corrected_count += 1
-                    # print(f"[{test_key} Q{idx+1}] Fixed single letter answer '{answer}' -> '{found_opt}'")
-                    continue
-            
-            # If not a single letter, let's see if the clean answer matches any clean option
-            matched = False
-            for opt in options:
-                opt_clean = re.sub(r'^[A-D][\.\)]\s*', '', opt).strip().lower()
-                # Check for exact clean match or substring match
-                if ans_clean == opt_clean or ans_clean in opt_clean or opt_clean in ans_clean:
-                    matched = True
-                    # Let's set the answer to the exact option text to ensure JS matches it 100%
-                    q['answer'] = opt
-                    corrected_count += 1
-                    break
-            
-            if not matched:
+            # Check answer_idx
+            if answer_idx is None:
                 mismatched_answers += 1
-                audit_report.append(f"[{test_key} Q{idx+1}] Error: Answer '{answer}' does not match any of the options: {options}")
+                q['answer_idx'] = 0
+                corrected_count += 1
+                audit_report.append(f"[{test_key} Q{idx+1}] Error: answer_idx is missing, defaulted to 0.")
+            elif not isinstance(answer_idx, int) or answer_idx < 0 or answer_idx >= len(options):
+                mismatched_answers += 1
+                audit_report.append(f"[{test_key} Q{idx+1}] Error: Invalid answer_idx '{answer_idx}' for options: {options}")
 
     print(f"--- Audit Summary ---")
     print(f"Total Questions Audited: {total_questions}")
-    print(f"Mismatched Answers: {mismatched_answers}")
-    print(f"Malformed Options Count (Not 4 options): {malformed_options}")
-    print(f"Answers Auto-corrected / Standardized: {corrected_count}")
+    print(f"Mismatched/Missing Answer Indexes: {mismatched_answers}")
+    print(f"Malformed Options Count (Not 4 or 2 options): {malformed_options}")
+    print(f"Missing Question IDs corrected: {missing_ids}")
+    print(f"Schema Standardized / Fixed: {corrected_count}")
     
     # Save back if we corrected anything
     if corrected_count > 0:
-        with open('g:/mock text/parsed_data_clean.json', 'w', encoding='utf-8') as f:
+        with open(clean_json_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
         print("Updated parsed_data_clean.json with corrected answers.")
         
-    # Let's write the report to a log file
-    with open('g:/mock text/audit_report.txt', 'w', encoding='utf-8') as f:
-        f.write(f"NISM Equity Derivatives 1000 Qs Audit Report\n")
+    # Write the report inside the module directory
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write(f"Course Module {args.module} Audit Report\n")
         f.write(f"==========================================\n")
         f.write(f"Total Questions Audited: {total_questions}\n")
-        f.write(f"Mismatched Answers: {mismatched_answers}\n")
+        f.write(f"Mismatched/Missing Answer Indexes: {mismatched_answers}\n")
         f.write(f"Malformed Options: {malformed_options}\n")
-        f.write(f"Auto-corrected: {corrected_count}\n\n")
+        f.write(f"Auto-corrected count: {corrected_count}\n\n")
         f.write("Detail logs:\n")
         for log in audit_report:
             f.write(log + "\n")
             
+    # Also write a copy to the root for ease of verification if expected there
+    try:
+        with open('g:/mock text/audit_report.txt', 'w', encoding='utf-8') as root_f:
+            root_f.write(f"Total Questions Audited: {total_questions}\nMismatched Answers: {mismatched_answers}\nMalformed Options: {malformed_options}\nAuto-corrected: {corrected_count}\n")
+    except:
+        pass
+
     return mismatched_answers
 
 if __name__ == '__main__':

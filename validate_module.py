@@ -41,15 +41,30 @@ def validate_module(course_folder):
     if not test_files:
         print("⚠️ Warning: No markdown tests found in 'tests' folder.")
     else:
+        import re
+        slug_pattern = re.compile(r'^test_\d+\.md$')
+        strict_ans_pattern = re.compile(r'^===\s*\n?\*\*Answer:\*\*\s*[A-D]', re.MULTILINE | re.IGNORECASE)
+        q_pattern = re.compile(r'^\*\*Question\s+\d+:\*\*', re.MULTILINE | re.IGNORECASE)
+        
         for f in test_files:
-            # Check basic structure (at least one Question and Answer)
+            basename = os.path.basename(f)
+            # Check slugification invariant
+            if not slug_pattern.match(basename):
+                print(f"❌ Error: {basename} is not lowercase slugified. Expected format: test_<number>.md")
+                return False
+                
             with open(f, 'r', encoding='utf-8') as file:
-                content = file.read()
-                if '**Question 1:**' not in content and 'Question 1' not in content:
-                    print(f"❌ Error: {os.path.basename(f)} is not formatted correctly. Missing '**Question X:**'.")
+                content = file.read().replace('\r\n', '\n')
+                
+                # Check strict question and answer frequency match
+                q_matches = q_pattern.findall(content)
+                a_matches = strict_ans_pattern.findall(content)
+                
+                if len(q_matches) == 0:
+                    print(f"❌ Error: {basename} does not contain any Question markers.")
                     return False
-                if '**Answer:**' not in content:
-                    print(f"❌ Error: {os.path.basename(f)} is not formatted correctly. Missing '**Answer:**'.")
+                if len(q_matches) != len(a_matches):
+                    print(f"❌ Error: {basename} has a mismatch: found {len(q_matches)} questions but {len(a_matches)} '===\\n**Answer:**' strict blocks.")
                     return False
                     
     print("✅ Module is valid!")

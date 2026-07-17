@@ -1,12 +1,49 @@
-// Global variables for data
-let globalData = window.MOCK_DATA;
+let globalData = {
+    registry: [],
+    courses: {},
+    activeSimulationInProgress: false,
+    pendingCacheRefresh: false
+};
 let currentCourseId = null;
 let testData = {};
 let notesData = { parts: [], flashcards: [] };
+let activeCourseController = null;
 
 function getStorageKey(baseKey) {
     if (!currentCourseId) return `prepmaster_global_${baseKey}`;
     return `prepmaster_${currentCourseId}_${baseKey}`;
+}
+
+// Shimmer Loader Visual Feedback
+function showShimmerLoadingState() {
+    const gridContainer = document.getElementById('courseSelectionGrid');
+    if (!gridContainer) return;
+    
+    // Remove any existing shimmer first
+    const existing = document.getElementById('courseShimmerLoader');
+    if (existing) existing.remove();
+    
+    const shimmer = document.createElement('div');
+    shimmer.id = 'courseShimmerLoader';
+    shimmer.className = 'card shimmer-card';
+    shimmer.innerHTML = `
+        <div class="shimmer-title" style="height: 32px; background: var(--border-color); border-radius: 6px; width: 60%; margin-bottom: 16px; position: relative; overflow: hidden;"></div>
+        <div class="shimmer-body" style="height: 18px; background: var(--border-color); border-radius: 4px; width: 90%; margin-bottom: 8px; position: relative; overflow: hidden;"></div>
+        <div class="shimmer-body short" style="height: 18px; background: var(--border-color); border-radius: 4px; width: 50%; position: relative; overflow: hidden;"></div>
+    `;
+    gridContainer.style.display = 'none';
+    gridContainer.parentNode.insertBefore(shimmer, gridContainer.nextSibling);
+}
+
+function removeShimmerLoadingState() {
+    const shimmer = document.getElementById('courseShimmerLoader');
+    if (shimmer) {
+        shimmer.remove();
+    }
+    const gridContainer = document.getElementById('courseSelectionGrid');
+    if (gridContainer) {
+        gridContainer.style.display = 'grid';
+    }
 }
 
 // Course Scope Wrapper for strict state management
@@ -23,6 +60,7 @@ const CourseScope = {
         const courseData = globalData.courses[courseId];
         if (!courseData) {
             console.error(`Course ${courseId} not found in registry.`);
+            removeShimmerLoadingState();
             return false;
         }
 
@@ -42,6 +80,7 @@ const CourseScope = {
         currentFcIndex = 0;
 
         // UI transitions
+        removeShimmerLoadingState();
         document.getElementById('courseSelectionGrid').style.display = 'none';
         document.getElementById('courseContentArea').style.display = 'block';
         document.getElementById('courseStatsStrip').style.display = 'flex';
@@ -71,6 +110,28 @@ const CourseScope = {
         
         flashcardsList = [];
         currentFcIndex = 0;
+
+        // Clear active test simulator states to prevent leaks
+        currentActiveTest = null;
+        currentQ = 0;
+        answers = {};
+        isSubmitted = false;
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+
+        globalData.activeSimulationInProgress = false;
+        if (globalData.pendingCacheRefresh) {
+            globalData.pendingCacheRefresh = false;
+            console.log("Exited active test. Re-hydrating pending cache updates.");
+            refreshDashboardRegistry();
+        }
+
+        // Hide simulator views and buttons
+        document.getElementById('simulatorCard').style.display = 'none';
+        document.getElementById('simNavCard').style.display = 'none';
+        document.getElementById('noActiveTestCard').style.display = 'block';
 
         // UI transitions
         document.getElementById('courseContentArea').style.display = 'none';
@@ -107,18 +168,31 @@ function updateScopeUI(isInsideCourse) {
         rightCol.style.display = isInsideCourse ? 'block' : 'none';
     }
     
-    // Adjust layout based on scope
+    // Adjust layout based on scope via CSS classes
     const dashboardGrid = document.querySelector('.dashboard-grid');
     if (dashboardGrid) {
-        dashboardGrid.style.gridTemplateColumns = isInsideCourse ? '1fr 300px' : '1fr';
+        if (isInsideCourse) {
+            dashboardGrid.classList.add('inside-course');
+        } else {
+            dashboardGrid.classList.remove('inside-course');
+        }
+        dashboardGrid.style.gridTemplateColumns = ''; // Clear inline styles to let media query take effect
     }
 }
 
-// Initialize app directly (no fetch needed)
-function initializeApp() {
+// Fetch registry.json dynamically on start
+async function initializeApp() {
     try {
-        renderCourseGrid();
         updateScopeUI(false); // Hide tabs initially
+        
+        const response = await fetch('content/registry.json');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch content/registry.json: HTTP ${response.status}`);
+        }
+        const registry = await response.json();
+        globalData.registry = registry.courses || [];
+        
+        renderCourseGrid();
         
         // apply global settings (theme, lang)
         const savedLang = localStorage.getItem('prepmaster_lang');
@@ -136,6 +210,16 @@ function initializeApp() {
         }
     } catch (error) {
         console.error('Error initializing app:', error);
+        const gridContainer = document.getElementById('courseSelectionGrid');
+        if (gridContainer) {
+            gridContainer.innerHTML = `
+                <div class="card" style="border: 1px solid var(--danger); background: var(--danger-light); color: var(--danger); padding: 24px; border-radius: 12px; text-align: center; backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);">
+                    <h3 style="margin-top:0;">⚠️ Architectural Load Failure</h3>
+                    <p style="margin-bottom: 0;">Could not dynamically load registry: ${error.message}</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">Make sure you are running a local web server (e.g. <code>python -m http.server</code>) and accessing the app via http://localhost...</p>
+                </div>
+            `;
+        }
     }
 }
 
@@ -170,8 +254,70 @@ function backToCourses() {
     CourseScope.exit();
 }
 
-function selectCourse(courseId) {
-    CourseScope.enter(courseId);
+// Coordinated loading with AbortController for async safety
+async function selectCourse(courseId) {
+    if (activeCourseController) {
+        activeCourseController.abort();
+    }
+    activeCourseController = new AbortController();
+    const { signal } = activeCourseController;
+
+    const startTestBtn = document.getElementById('startTestBtn');
+    if (startTestBtn) {
+        startTestBtn.disabled = true;
+        startTestBtn.textContent = 'Loading Course Content...';
+    }
+
+    showShimmerLoadingState();
+
+    try {
+        const course = globalData.registry.find(c => c.id === courseId);
+        if (!course) {
+            throw new Error(`Course "${courseId}" not found in registry.`);
+        }
+
+        const folder = course.folder;
+        const [config, tests, notes, flashcards] = await Promise.all([
+            fetch(`content/${folder}/config.json`, { signal }).then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            }),
+            fetch(`content/${folder}/parsed_data_clean.json`, { signal }).then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            }),
+            fetch(`content/${folder}/parsed_notes.json`, { signal }).then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            }),
+            fetch(`content/${folder}/flashcards.json`, { signal }).then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            })
+        ]);
+
+        globalData.courses[courseId] = {
+            metadata: config,
+            tests: tests,
+            notes: notes.parts || notes,
+            flashcards: flashcards.flashcards || flashcards
+        };
+
+        CourseScope.enter(courseId);
+
+    } catch (error) {
+        if (error.name === 'AbortError') {
+            console.log(`Fetch aborted for course selection: ${courseId}`);
+            return;
+        }
+        console.error("Error loading course content:", error);
+        removeShimmerLoadingState();
+        if (startTestBtn) {
+            startTestBtn.disabled = false;
+            startTestBtn.textContent = 'Select a Test to Start';
+        }
+        alert(`Error loading course content: ${error.message}\nMake sure you are running a local web server.`);
+    }
 }
 
 
@@ -179,6 +325,34 @@ function selectCourse(courseId) {
 document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
 });
+
+// Register Service Worker for PWA Offline Isolation
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+    });
+
+    // Listen for background update dispatch flags from the Service Worker
+    navigator.serviceWorker.addEventListener('message', (event) => {
+        if (event.data && event.data.type === 'CONTENT_UPDATED') {
+            // Defensively check if the user is in an active test context
+            if (!globalData.activeSimulationInProgress) {
+                console.log(`Content manifest updated: ${event.data.url}. Re-hydrating engine caches.`);
+                refreshDashboardRegistry();
+            } else {
+                // Defer update execution until user returns to dashboard to prevent memory mutations mid-exam
+                globalData.pendingCacheRefresh = true;
+                console.log(`Content updated mid-test: ${event.data.url}. Deferring cache re-hydration.`);
+            }
+        }
+    });
+}
+
+function refreshDashboardRegistry() {
+    initializeApp();
+}
 
       
   let currentActiveTest = null; 
@@ -196,22 +370,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load configuration and data from LocalStorage
   function loadLocalStorage() {
-
-
       // Starred questions
       const savedStars = localStorage.getItem(getStorageKey('starred_questions'));
       if (savedStars) {
           starredQuestions = JSON.parse(savedStars);
+      } else {
+          starredQuestions = [];
       }
-      
-
       
       // Active in-progress test
       const activeTest = localStorage.getItem(getStorageKey('active_test'));
       if (activeTest) {
           const active = JSON.parse(activeTest);
-          document.getElementById('resumeSection').style.display = 'block';
-          document.getElementById('resumeDetails').textContent = `${active.testName} (${active.mode === 'exam' ? 'Exam' : 'Practice'}) - Question ${active.currentQ + 1} of ${testData[active.testName].length} answered.`;
+          const resumeDetails = document.getElementById('resumeDetails');
+          const resumeSection = document.getElementById('resumeSection');
+          if (resumeSection && resumeDetails && testData[active.testName]) {
+              resumeSection.style.display = 'block';
+              resumeDetails.textContent = `${active.testName} (${active.mode === 'exam' ? 'Exam' : 'Practice'}) - Question ${active.currentQ + 1} of ${testData[active.testName].length} answered.`;
+          } else if (resumeSection) {
+              resumeSection.style.display = 'none';
+          }
+      } else {
+          const resumeSection = document.getElementById('resumeSection');
+          if (resumeSection) {
+              resumeSection.style.display = 'none';
+          }
       }
       
       updateAnalyticsUI();
@@ -271,6 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startSimulator(isResumed = false) {
+      globalData.activeSimulationInProgress = true;
       document.getElementById('noActiveTestCard').style.display = 'none';
       document.getElementById('simulatorCard').style.display = 'block';
       document.getElementById('simNavCard').style.display = 'block';
@@ -344,10 +528,8 @@ document.addEventListener('DOMContentLoaded', () => {
               
               const q = testData[currentActiveTest][i];
               if (isSubmitted) {
-                  const qAnsClean = q.answer.replace(/^[A-D][\\.\\)]\\s*/, '').trim();
-                  if (answers[i]) {
-                      const userAnsClean = answers[i].replace(/^[A-D][\\.\\)]\\s*/, '').trim();
-                      if (qAnsClean === userAnsClean || qAnsClean.includes(userAnsClean)) {
+                  if (answers[i] !== undefined && answers[i] !== null) {
+                      if (parseInt(answers[i]) === q.answer_idx) {
                           btn.classList.add('correct');
                       } else {
                           btn.classList.add('wrong');
@@ -356,7 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       btn.classList.add('unattempted');
                   }
               } else {
-                  if (answers[i]) {
+                  if (answers[i] !== undefined && answers[i] !== null) {
                       btn.classList.add('answered');
                       answeredCount++;
                   }
@@ -389,26 +571,24 @@ document.addEventListener('DOMContentLoaded', () => {
       optionsArea.innerHTML = '';
       
       q.options.forEach((opt, idx) => {
-          const letterMatch = opt.match(/^([A-D])[\\.\\)]\\s*/);
-          const letter = letterMatch ? letterMatch[1] : String.fromCharCode(65 + idx);
-          const text = opt.replace(/^[A-D][\\.\\)]\\s*/, '').trim();
+          const letter = String.fromCharCode(65 + idx);
+          const text = opt;
           
           const div = document.createElement('div');
           div.className = 'option';
           
-          const isUserChoice = (answers[currentQ] === text || answers[currentQ] === opt);
+          const isUserChoice = (answers[currentQ] !== undefined && answers[currentQ] !== null && parseInt(answers[currentQ]) === idx);
           if (isUserChoice) div.classList.add('selected');
           
           if (isSubmitted) {
-              const qAnsClean = q.answer.replace(/^[A-D][\\.\\)]\\s*/, '').trim();
-              const isCorrect = (qAnsClean === text || qAnsClean.includes(text) || text.includes(qAnsClean));
+              const isCorrect = (q.answer_idx === idx);
               if (isCorrect) {
                   div.classList.add('correct');
               } else if (isUserChoice) {
                   div.classList.add('wrong');
               }
           } else {
-              div.onclick = function() { selectSimOptionUI(this, text, opt); };
+              div.onclick = function() { selectSimOptionUI(this, text, idx); };
           }
           
           div.innerHTML = `
@@ -432,9 +612,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Show/Hide explanations
       const expPanel = document.getElementById('activeExpPanel');
-      if (isSubmitted || (testMode === 'practice' && answers[currentQ])) {
+      if (isSubmitted || (testMode === 'practice' && answers[currentQ] !== undefined && answers[currentQ] !== null)) {
           expPanel.style.display = 'block';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const correctText = q.options[q.answer_idx] || '';
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -448,8 +629,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
-  function selectSimOptionUI(element, text, rawOpt) {
-      answers[currentQ] = rawOpt;
+  function selectSimOptionUI(element, text, optionIdx) {
+      answers[currentQ] = optionIdx;
       saveActiveTestState();
       
       // Update UI classes without destroying DOM to preserve translation
@@ -466,7 +647,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const q = testData[currentActiveTest][currentQ];
           const expPanel = document.getElementById('activeExpPanel');
           expPanel.style.display = 'block';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const correctText = q.options[q.answer_idx] || '';
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -479,8 +661,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Legacy fallback
-  function selectSimOption(text, rawOpt) {
-      answers[currentQ] = rawOpt;
+  function selectSimOption(optionIdx) {
+      answers[currentQ] = optionIdx;
       saveActiveTestState();
       renderActiveQuestion();
   }
@@ -517,11 +699,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const questions = testData[currentActiveTest];
       for (let i = 0; i < questions.length; i++) {
           const q = questions[i];
-          const qAnsClean = q.answer.replace(/^[A-D][\\.\\)]\\s*/, '').trim();
-          
-          if (answers[i]) {
-              const userAnsClean = answers[i].replace(/^[A-D][\\.\\)]\\s*/, '').trim();
-              if (qAnsClean === userAnsClean || qAnsClean.includes(userAnsClean)) {
+          if (answers[i] !== undefined && answers[i] !== null) {
+              if (parseInt(answers[i]) === q.answer_idx) {
                   correct++;
               } else {
                   wrong++;
@@ -572,7 +751,7 @@ document.addEventListener('DOMContentLoaded', () => {
               testName: currentActiveTest,
               index: currentQ,
               question: q.question,
-              answer: q.answer
+              answer: q.options[q.answer_idx] || ''
           });
       }
       localStorage.setItem(getStorageKey('starred_questions'), JSON.stringify(starredQuestions));
@@ -1155,7 +1334,7 @@ function validateStagedFiles() {
     } else {
         try {
             const config = JSON.parse(configJsonFile.content);
-            const requiredKeys = ['id', 'title', 'description', 'author'];
+            const requiredKeys = ['id', 'title', 'description', 'author', 'version'];
             let configValid = true;
             requiredKeys.forEach(k => {
                 if (!config[k] || String(config[k]).trim() === '') {
@@ -1166,7 +1345,7 @@ function validateStagedFiles() {
             });
             if (configValid) {
                 courseMetadata = config;
-                logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${config.id}, Title: ${config.title}).</div>`;
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${config.id}, Version: ${config.version}).</div>`;
             }
         } catch (e) {
             logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is not valid JSON: ${e.message}</div>`;
@@ -1181,19 +1360,26 @@ function validateStagedFiles() {
     } else {
         testFiles.forEach(f => {
             let fileValid = true;
-            if (!f.content.includes('Question 1') && !f.content.includes('**Question 1:**')) {
-                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain "Question 1" marker.</div>`;
+            
+            // Normalize carriage returns (\r\n) to standard UNIX line endings (\n)
+            const normalizedContent = f.content.replace(/\r\n/g, '\n');
+            
+            // Perform robust count validation of Question block markers vs Answer markers
+            const qMatches = [...normalizedContent.matchAll(/^\*\*Question\s+\d+:\*\*/gim)];
+            const aMatches = [...normalizedContent.matchAll(/^===\s*\n?\*\*Answer:\*\*\s*[A-D]/gim)];
+
+            if (qMatches.length === 0) {
+                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain any "Question X:" markers.</div>`;
                 fileValid = false;
                 isValid = false;
-            }
-            if (!f.content.includes('**Answer:**') && !f.content.includes('Answer:')) {
-                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain "**Answer:**" marker.</div>`;
+            } else if (qMatches.length !== aMatches.length) {
+                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} has a mismatch: found ${qMatches.length} questions but ${aMatches.length} "**Answer:**" markers. Each question must have a corresponding "**Answer:**" block on a fresh line.</div>`;
                 fileValid = false;
                 isValid = false;
             }
 
             if (fileValid) {
-                logContainer.innerHTML += `<div style="color:var(--success)">✅ Test format verified for: ${f.name}</div>`;
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ Test format verified for: ${f.name} (Found ${qMatches.length} questions).</div>`;
             }
         });
     }
@@ -1268,6 +1454,11 @@ async function submitContributionPR() {
 
     if (!pat) {
         alert("Please enter a GitHub Personal Access Token.");
+        return;
+    }
+
+    if (!courseMetadata || stagedFiles.length === 0) {
+        alert("Please upload and validate a valid course module before submitting.");
         return;
     }
 

@@ -1,4 +1,4 @@
-# NISM Series VIII Equity Derivatives - Mock Test 5
+# NISM Series VIII Equity Derivatives - Mock test_5
 
 **Question 1:** Buying a stock in one market and selling it simultaneously in another market for profit is called:
 
@@ -9,7 +9,8 @@ B) Arbitrage
 C) Speculation
 D) Jobbing
 
-**Answer:** Arbitrage
+===
+**Answer:** B) Arbitrage
 
 **Explanation:** Arbitrage means taking advantage of price difference in two markets for risk-free profit.
 
@@ -24,7 +25,8 @@ B) July
 C) August
 D) Same for all
 
-**Answer:** June
+===
+**Answer:** A) June
 
 **Explanation:** The nearest expiry option has lower time value, so it generally has the lowest premium.
 
@@ -37,7 +39,8 @@ D) Same for all
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** When the near month contract expires, only the far month position remains active, so it becomes a regular open position.
 
@@ -50,7 +53,8 @@ B) False
 A) Yes
 B) No
 
-**Answer:** No
+===
+**Answer:** B) No
 
 **Explanation:** Broker-members are not permitted to be on the Clearing Council to ensure fairness and avoid conflict of interest.
 
@@ -65,7 +69,8 @@ B) Only the buyer
 C) Only the seller
 D) Both buyer and seller
 
-**Answer:** Both buyer and seller
+===
+**Answer:** D) Both buyer and seller
 
 **Explanation:** In futures contracts, both buyer and seller must pay margins because both have equal obligations.
 
@@ -80,7 +85,8 @@ B) Rs. 4,05,000
 C) Rs. 5,87,500
 D) Rs. 7,53,075
 
-**Answer:** Rs. 7,53,075
+===
+**Answer:** D) Rs. 7,53,075
 
 **Explanation:** Margin is calculated as Contract Value × 9%. Adding both investors’ margin gives total of Rs.7,53,075.
 
@@ -95,7 +101,8 @@ B) Higher
 C) No effect
 D) Fixed
 
-**Answer:** Higher
+===
+**Answer:** B) Higher
 
 **Explanation:** Higher volatility increases risk. Since options give protection against risk, their premium becomes higher.
 
@@ -110,7 +117,8 @@ B) Make loss
 C) Break even
 D) Face no impact
 
-**Answer:** Make loss
+===
+**Answer:** B) Make loss
 
 **Explanation:** In a short futures position, profit happens only when price falls. If price rises, the seller incurs loss.
 
@@ -125,7 +133,8 @@ B) Cover potential future losses
 C) Provide bonus to exchange
 D) Reduce brokerage charges
 
-**Answer:** Cover potential future losses
+===
+**Answer:** B) Cover potential future losses
 
 **Explanation:** Initial margin protects the exchange from possible losses if the trader’s position moves against him.
 
@@ -140,7 +149,8 @@ B) Strike price
 C) Premium paid
 D) Spot price
 
-**Answer:** Premium paid
+===
+**Answer:** C) Premium paid
 
 **Explanation:** An option buyer can lose only the premium paid. Loss cannot exceed that amount.
 
@@ -155,7 +165,8 @@ B) No
 C) Only for retail clients
 D) Only for brokers
 
-**Answer:** No
+===
+**Answer:** B) No
 
 **Explanation:** A Professional Clearing Member clears trades for both institutional clients and their associated trading members. They are not limited only to institutional clients.
 
@@ -168,7 +179,8 @@ D) Only for brokers
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Clearing members have higher financial responsibilities, including settlement obligations. Therefore, they must maintain higher net worth compared to trading members.
 
@@ -181,7 +193,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** A long position is closed by selling the same contract, and a short position is closed by buying the same contract. This reduces the open position to zero.
 
@@ -196,7 +209,8 @@ B) Help trading
 C) Help hedging
 D) Help arbitrage only
 
-**Answer:** Help hedging
+===
+**Answer:** C) Help hedging
 
 **Explanation:** Forward contracts are mainly used to reduce price risk by fixing the price today for a future transaction. This helps in hedging against price fluctuations.
 
@@ -211,7 +225,8 @@ B) Bad Debts
 C) Current Assets
 D) Current Liabilities
 
-**Answer:** Current Assets
+===
+**Answer:** C) Current Assets
 
 **Explanation:** The initial margin is treated as an asset because it is refundable. Therefore, it is shown under Current Assets in the balance sheet.
 
@@ -226,7 +241,8 @@ B) Sell call option
 C) Buy put option
 D) Sell put option
 
-**Answer:** Call option
+===
+**Answer:** A) Call option
 
 **Explanation:** A bullish investor expects prices to rise. Buying a call option allows him to benefit from price increase while limiting loss to the premium paid.
 
@@ -241,7 +257,8 @@ B) Rs. 459,450
 C) Rs. 640,000
 D) Rs. 374,900
 
-**Answer:** Rs. 459,450
+===
+**Answer:** B) Rs. 459,450
 
 **Explanation:** Margin = Price × Contracts × Lot Size × 6%. Adding both investors' margins gives Rs. 459,450 total.
 
@@ -256,7 +273,8 @@ B) Bought at 1700
 C) Sold at 1900
 D) Sold at 1700
 
-**Answer:** Bought at 1700
+===
+**Answer:** B) Bought at 1700
 
 **Explanation:** He made Rs. 100 profit per unit (5000 ÷ 50). Since he was short at 1800, buying back at 1700 gives Rs. 100 profit per unit.
 
@@ -271,7 +289,8 @@ B) American Put
 C) American Call
 D) European Call
 
-**Answer:** American Call
+===
+**Answer:** C) American Call
 
 **Explanation:** A call option gives the right to buy. If it can be exercised anytime before expiry, it is an American call option.
 
@@ -286,7 +305,8 @@ B) More than specified quantity
 C) Only specified quantity
 D) Any quantity
 
-**Answer:** Only specified quantity
+===
+**Answer:** C) Only specified quantity
 
 **Explanation:** Option contracts are standardized. The buyer can exercise only the specified lot size mentioned in the contract.
 
@@ -301,7 +321,8 @@ B) 482
 C) 476
 D) 437
 
-**Answer:** 476
+===
+**Answer:** C) 476
 
 **Explanation:** Forward price = Spot + Interest. 12% of 426 ≈ 51. So 426 + 51 = 476 approximately.
 
@@ -316,7 +337,8 @@ B) Sell stock futures and buy index futures
 C) Buy stock futures and sell index futures
 D) Do nothing
 
-**Answer:** Sell stock futures and buy index futures
+===
+**Answer:** B) Sell stock futures and buy index futures
 
 **Explanation:** If the trader is bearish on specific stocks, he should sell those stock futures. Since he is bullish on the overall market, he should buy index futures.
 
@@ -331,7 +353,8 @@ B) Hedging
 C) Leverage
 D) Speculation
 
-**Answer:** Leverage
+===
+**Answer:** C) Leverage
 
 **Explanation:** Leverage allows traders to take bigger positions by paying only a small margin. This increases both profit potential and risk.
 
@@ -346,7 +369,8 @@ B) Counterparty risk
 C) Lack of central authority
 D) All of the above
 
-**Answer:** All of the above
+===
+**Answer:** D) All of the above
 
 **Explanation:** Futures are traded on exchanges with clearing corporations. This reduces counterparty risk and settlement issues compared to forward contracts.
 
@@ -359,7 +383,8 @@ D) All of the above
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Such losses can be carried forward for 8 assessment years, not 12 years.
 
@@ -372,7 +397,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** A short call can be closed only by taking a long call option with the same strike price and expiry, not a put option.
 
@@ -387,7 +413,8 @@ B) Private commercial dealings
 C) Trades not executed on exchange
 D) Excess brokerage charged
 
-**Answer:** Excess brokerage charged
+===
+**Answer:** D) Excess brokerage charged
 
 **Explanation:** Exchanges handle complaints related to trades executed on their platform. Excess brokerage charged by a trading member is covered.
 
@@ -402,7 +429,8 @@ B) Not exercise the option
 C) Exercise partially
 D) Depends on mood
 
-**Answer:** Not exercise the option
+===
+**Answer:** A) Exercise the option
 
 **Explanation:** Since market price is lower than strike price, exercising the call gives no benefit. His loss is limited to the premium paid.
 
@@ -415,7 +443,8 @@ D) Depends on mood
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Clearing members settle trades and take higher responsibility. Therefore, they must maintain higher capital adequacy.
 
@@ -430,7 +459,8 @@ B) Rs. 188
 C) Rs. 200
 D) Unlimited
 
-**Answer:** Unlimited
+===
+**Answer:** D) Unlimited
 
 **Explanation:** If the stock price rises sharply, the seller must deliver at strike price. Since price can rise indefinitely, loss can be unlimited.
 
@@ -445,7 +475,8 @@ B) Sale of derivatives only
 C) Purchase of derivatives only
 D) Both purchase of equity shares and sale of derivatives
 
-**Answer:** Both purchase of equity shares and sale of derivatives
+===
+**Answer:** D) Both purchase of equity shares and sale of derivatives
 
 **Explanation:** STT is charged on both buying and selling of equity shares. For derivatives, it is charged only on sell side transactions.
 
@@ -460,7 +491,8 @@ B) SEBI
 C) Stock exchange
 D) Parties involved
 
-**Answer:** Stock exchange
+===
+**Answer:** C) Stock exchange
 
 **Explanation:** The stock exchange fixes the contract size (lot size) to standardize trading.
 
@@ -473,7 +505,8 @@ D) Parties involved
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** The buyer pays the premium to the seller. The seller receives the premium for taking the obligation.
 
@@ -488,7 +521,8 @@ B) Forward contracts
 C) Futures contracts
 D) Options contracts
 
-**Answer:** Futures contracts
+===
+**Answer:** C) Futures contracts
 
 **Explanation:** Futures contracts are marked to market daily. Profit or loss is settled every trading day.
 
@@ -503,7 +537,8 @@ B) Hedged position
 C) Naked position
 D) Closed position
 
-**Answer:** Naked position
+===
+**Answer:** C) Naked position
 
 **Explanation:** Once one leg expires, the remaining contract becomes an open (naked) position.
 
@@ -518,7 +553,8 @@ B) Speculate
 C) Manage risk
 D) Arbitrage only
 
-**Answer:** Manage risk
+===
+**Answer:** C) Manage risk
 
 **Explanation:** Derivatives help transfer and manage risk from those who want to avoid it to those willing to take it.
 
@@ -531,7 +567,8 @@ D) Arbitrage only
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Higher interest rates increase the value of call options and decrease the value of put options.
 
@@ -546,7 +583,8 @@ B) Right only
 C) Both right and obligation
 D) No right
 
-**Answer:** Right only
+===
+**Answer:** B) Right only
 
 **Explanation:** The option buyer has the right but not the obligation to exercise the contract.
 
@@ -559,7 +597,8 @@ D) No right
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Trading members must register with SEBI to operate in both cash and derivatives segments.
 
@@ -574,7 +613,8 @@ B) Standardization
 C) Cash settlement
 D) Exchange trading
 
-**Answer:** Cash settlement
+===
+**Answer:** C) Cash settlement
 
 **Explanation:** Cash settlement allows contracts to be settled by paying price differences instead of delivering the asset.
 
@@ -589,7 +629,8 @@ B) Last Friday of February
 C) Last Friday of March
 D) Last Friday of April
 
-**Answer:** Last Friday of January
+===
+**Answer:** A) Last Friday of January
 
 **Explanation:** NSE maintains three active series at a time. When the January contract expires on the last Thursday, the April series starts trading on the next day (last Friday of January).
 
@@ -604,7 +645,8 @@ B) Power failure
 C) Inadequate contingency planning
 D) All of the above
 
-**Answer:** Inadequate contingency planning
+===
+**Answer:** C) Inadequate contingency planning
 
 **Explanation:** Operational risk arises from internal failures such as poor planning, system errors, or fraud. It relates to internal processes rather than external natural events.
 
@@ -617,7 +659,8 @@ D) All of the above
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Open interest shows the total number of unsettled contracts at a particular time. It indicates market participation and liquidity.
 
@@ -630,7 +673,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Client funds are separate and cannot be used for a clearing member’s personal or proprietary obligations.
 
@@ -645,7 +689,8 @@ B) 50
 C) 25
 D) 125
 
-**Answer:** 25
+===
+**Answer:** C) 25
 
 **Explanation:** Margin available = 75 − 50 = 25 lakhs. The excess over minimum requirement is used as trading margin.
 
@@ -658,7 +703,8 @@ D) 125
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Futures prices are based on cash market prices. If the cash market is inefficient, futures pricing will also be affected.
 
@@ -671,7 +717,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** When price rises, short position holders incur loss. Therefore, their margin account is debited, not credited.
 
@@ -684,7 +731,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Derivatives involve higher risk due to leverage. Hence, capital adequacy requirements are higher than in the cash market.
 
@@ -699,7 +747,8 @@ B) Underlying price
 C) Risk-free interest rate
 D) Liquidity
 
-**Answer:** Risk-free interest rate
+===
+**Answer:** C) Risk-free interest rate
 
 **Explanation:** Rho measures sensitivity of option price to changes in the risk-free interest rate.
 
@@ -714,7 +763,8 @@ B) Price seller is willing to sell at
 C) Average market price
 D) Settlement price
 
-**Answer:** Price seller is willing to sell at
+===
+**Answer:** B) Price seller is willing to sell at
 
 **Explanation:** Ask price is the selling price quoted by the seller. It is the price at which the trader is ready to sell.
 
@@ -729,7 +779,8 @@ B) High price stocks only
 C) Selected stocks meeting exchange criteria
 D) Stocks listed on all exchanges
 
-**Answer:** Selected stocks meeting exchange criteria
+===
+**Answer:** C) Selected stocks meeting exchange criteria
 
 **Explanation:** Only stocks that meet SEBI and exchange eligibility criteria are allowed in the derivatives segment.
 
@@ -742,7 +793,8 @@ D) Stocks listed on all exchanges
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Higher volatility increases risk. Exchanges demand higher margins to protect against price fluctuations.
 
@@ -755,7 +807,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Clearing members settle trades for others. Hence, they must maintain higher financial strength.
 
@@ -770,7 +823,8 @@ B) Protective put
 C) Straddle
 D) Aggressive put
 
-**Answer:** Protective put
+===
+**Answer:** B) Protective put
 
 **Explanation:** A protective put limits downside risk of owned shares by providing insurance against price fall.
 
@@ -783,7 +837,8 @@ D) Aggressive put
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Trade Guarantee Fund ensures settlement security. All active members contribute to maintain market confidence.
 
@@ -798,7 +853,8 @@ B) Decrease put premium
 C) Have no effect
 D) Expire option automatically
 
-**Answer:** Decrease put premium
+===
+**Answer:** B) Decrease put premium
 
 **Explanation:** Higher interest rates increase call values but reduce put option values.
 
@@ -813,7 +869,8 @@ B) Square-off position
 C) Short position
 D) Hedge position
 
-**Answer:** Short position
+===
+**Answer:** C) Short position
 
 **Explanation:** The seller in a forward contract takes a short position, agreeing to deliver the asset at a future date.
 
@@ -828,7 +885,8 @@ B) Grossed to 22 contracts
 C) Maximum of 12
 D) Decided by exchange
 
-**Answer:** Grossed to 22 contracts
+===
+**Answer:** B) Grossed to 22 contracts
 
 **Explanation:** Trading member exposure is calculated by grossing all client positions, not netting them.
 
@@ -843,7 +901,8 @@ B) Expire worthless
 C) Always profit
 D) Be compulsory exercised
 
-**Answer:** Expire worthless
+===
+**Answer:** B) Expire worthless
 
 **Explanation:** A call option is worthless if market price is below strike price since buying from market is cheaper.
 
@@ -856,7 +915,8 @@ D) Be compulsory exercised
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** The intrinsic value depends on difference between spot and strike price. Hence, premium changes with price movement.
 
@@ -869,7 +929,8 @@ B) No
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Higher margins reduce default risk. This improves the solvency and financial safety of the clearing corporation.
 
@@ -882,7 +943,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Futures contracts are named after their expiry month (e.g., March contract, April contract). This month is called the contract month.
 
@@ -897,7 +959,8 @@ B) Rs. 9,000 profit
 C) Rs. 9,000 loss
 D) Rs. 25,000 loss
 
-**Answer:** Rs. 9,000 loss
+===
+**Answer:** C) Rs. 9,000 loss
 
 **Explanation:** Loss per share = 400 − 350 = 50. Net loss per share = 50 − 32 = 18. Total loss = 18 × 500 = Rs. 9,000.
 
@@ -912,7 +975,8 @@ B) Rs. 100
 C) Rs. 10
 D) Rs. 2.5
 
-**Answer:** Rs. 10
+===
+**Answer:** B) Rs. 100
 
 **Explanation:** Tick value = 0.2 × 50 = Rs. 10. Each tick movement results in Rs. 10 profit or loss.
 
@@ -927,7 +991,8 @@ B) Marked to market periodically
 C) Marked only yearly
 D) Marked at exchange decision
 
-**Answer:** Marked to market periodically
+===
+**Answer:** B) Marked to market periodically
 
 **Explanation:** Such securities are marked to market regularly to reflect current value and ensure adequate collateral coverage.
 
@@ -942,7 +1007,8 @@ B) Expiry month of futures contract
 C) Month of listing
 D) Beginning month
 
-**Answer:** Expiry month of futures contract
+===
+**Answer:** B) Expiry month of futures contract
 
 **Explanation:** Contract month is the month in which the futures contract expires.
 
@@ -957,7 +1023,8 @@ B) Fixed percentage
 C) Black-Scholes Model
 D) Value at Risk (VaR) method
 
-**Answer:** Value at Risk (VaR) method
+===
+**Answer:** D) Value at Risk (VaR) method
 
 **Explanation:** Initial margin is calculated using Value at Risk (VaR), usually at 99% confidence level for one-day horizon.
 
@@ -970,7 +1037,8 @@ D) Value at Risk (VaR) method
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Price limits restrict excessive daily price movement to control volatility and protect investors.
 
@@ -983,7 +1051,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Index derivatives provide broader market coverage and better liquidity, making them cost-effective for hedging diversified portfolios.
 
@@ -996,7 +1065,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** A Trading-cum-Clearing Member clears his own trades as well as those of trading members associated with him.
 
@@ -1009,7 +1079,8 @@ B) False
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Default in one segment is treated as default across all segments of the exchange.
 
@@ -1022,7 +1093,8 @@ B) False
 A) Yes
 B) No
 
-**Answer:** Yes
+===
+**Answer:** A) Yes
 
 **Explanation:** Higher margin requirement blocks more funds, making trading more expensive.
 
@@ -1037,7 +1109,8 @@ B) Unsystematic Risk
 C) Arbitrage Risk
 D) Interest Rate Risk
 
-**Answer:** Unsystematic Risk
+===
+**Answer:** A) Systematic Risk
 
 **Explanation:** Unsystematic risk is company-specific risk and can be reduced by diversifying the portfolio.
 
@@ -1052,7 +1125,8 @@ B) Clearing members
 C) Both
 D) Brokers only
 
-**Answer:** Clearing members
+===
+**Answer:** B) Clearing members
 
 **Explanation:** Clearing members handle settlement and clearing of trades. Trading members cannot clear trades independently.
 
@@ -1067,7 +1141,8 @@ B) Strike price equals market price
 C) Strike price is higher than market price
 D) Strike price is zero
 
-**Answer:** Strike price is higher than market price
+===
+**Answer:** C) Strike price is higher than market price
 
 **Explanation:** A put option is profitable when strike price is higher than current market price.
 
@@ -1082,7 +1157,8 @@ B) Interest rate
 C) Time to expiry
 D) Spot price
 
-**Answer:** Spot price
+===
+**Answer:** D) Spot price
 
 **Explanation:** Delta shows how much option premium changes for a small change in underlying asset price.
 
@@ -1097,7 +1173,8 @@ B) Strike price equals market price
 C) Strike price is lower than market price
 D) Strike price is zero
 
-**Answer:** Strike price is lower than market price
+===
+**Answer:** C) Strike price is lower than market price
 
 **Explanation:** A put is OTM when market price is higher than strike price, so exercising gives no benefit.
 
@@ -1110,7 +1187,8 @@ D) Strike price is zero
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Systematic risk affects the entire market and cannot be removed by diversification.
 
@@ -1125,7 +1203,8 @@ B) Rs. 11,700
 C) Rs. 11,700 loss
 D) Rs. 8,300 loss
 
-**Answer:** Rs. 11,700
+===
+**Answer:** B) Rs. 11,700
 
 **Explanation:** Profit per unit = 354 − 341 = 13. Total profit = 13 × 900 = Rs. 11,700.
 
@@ -1140,7 +1219,8 @@ B) He sells another September futures at lower price
 C) He squares off by buying September futures at lower price
 D) He sells October futures at lower price
 
-**Answer:** He squares off by buying September futures at lower price
+===
+**Answer:** C) He squares off by buying September futures at lower price
 
 **Explanation:** In a short position, profit occurs when price falls. The trader must buy back the same expiry (September) futures at a lower price to earn profit.
 
@@ -1155,7 +1235,8 @@ B) Exchange Traded Funds (ETFs)
 C) Index funds
 D) Private equity funds
 
-**Answer:** Private equity funds
+===
+**Answer:** D) Private equity funds
 
 **Explanation:** Private equity funds are not linked to stock market indices and are not traded on stock exchanges.
 
@@ -1168,7 +1249,8 @@ D) Private equity funds
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Option buyers have rights without obligation, while sellers have obligation with unlimited risk. Hence, obligations are not equal.
 
@@ -1181,7 +1263,8 @@ B) False
 A) True
 B) False
 
-**Answer:** True
+===
+**Answer:** A) True
 
 **Explanation:** Intrinsic value is either positive or zero. Time value also cannot be negative, so total premium cannot be negative.
 
@@ -1196,7 +1279,8 @@ B) Swap contracts
 C) Futures contracts
 D) Equity cash market
 
-**Answer:** Futures contracts
+===
+**Answer:** C) Futures contracts
 
 **Explanation:** Futures contracts are settled daily through mark-to-market adjustment of margins.
 
@@ -1211,7 +1295,8 @@ B) Rs. 20
 C) Rs. 24
 D) Rs. 130
 
-**Answer:** Rs. 10
+===
+**Answer:** A) Rs. 10
 
 **Explanation:** Intrinsic value = Spot − Strike = 120 − 110 = Rs. 10. Remaining premium is time value.
 
@@ -1226,7 +1311,8 @@ B) Encourage big investors
 C) Direct market movement
 D) Prevent market manipulation by large participants
 
-**Answer:** Prevent market manipulation by large participants
+===
+**Answer:** D) Prevent market manipulation by large participants
 
 **Explanation:** Position limits prevent any single trader from taking very large positions and influencing market prices unfairly.
 
@@ -1241,7 +1327,8 @@ B) Increases
 C) Remains unchanged
 D) Both B and C
 
-**Answer:** Both B and C
+===
+**Answer:** D) Both B and C
 
 **Explanation:** A put seller earns premium and benefits if price rises or remains stable. Loss occurs only when price falls significantly.
 
@@ -1254,7 +1341,8 @@ D) Both B and C
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Diversification reduces risk up to a point. Increasing stocks from 50 to 100 reduces very little additional risk.
 
@@ -1269,7 +1357,8 @@ B) Bull spread
 C) Butterfly spread
 D) Calendar spread
 
-**Answer:** Bull spread
+===
+**Answer:** B) Bull spread
 
 **Explanation:** A bull call spread is created by buying a lower strike call and selling a higher strike call, expecting moderate price rise.
 
@@ -1284,7 +1373,8 @@ B) High volatility
 C) High leverage
 D) High regulation
 
-**Answer:** High leverage
+===
+**Answer:** C) High leverage
 
 **Explanation:** Futures allow large exposure with small margin (leverage). This increases both profit potential and risk.
 
@@ -1297,7 +1387,8 @@ D) High regulation
 A) True
 B) False
 
-**Answer:** False
+===
+**Answer:** B) False
 
 **Explanation:** Margin requirements are based on risk and position size, not on whether the investor is institutional or individual.
 
@@ -1312,7 +1403,8 @@ B) Client Agreement
 C) Risk Disclosure Document
 D) Account Opening Form
 
-**Answer:** Risk Disclosure Document
+===
+**Answer:** C) Risk Disclosure Document
 
 **Explanation:** Signing the Risk Disclosure Document serves as acknowledgment by the client that they have been informed about the risks associated with derivatives trading.
 
@@ -1327,7 +1419,8 @@ B) Currency risk
 C) Counterparty risk
 D) Political risk
 
-**Answer:** Counterparty risk
+===
+**Answer:** C) Counterparty risk
 
 **Explanation:** While Market and Liquidity risks are prominent, Counterparty risk (though mitigated by clearing corporations in exchange-traded derivatives) is also a significant consideration in finance.
 
@@ -1342,7 +1435,8 @@ B) Liquidity risk
 C) Counterparty risk
 D) Operational risk
 
-**Answer:** Counterparty risk
+===
+**Answer:** C) Counterparty risk
 
 **Explanation:** For exchange-traded derivatives, the clearing corporation acts as the central counterparty, eliminating the risk of default by the original counterparty to the trade.
 
@@ -1357,7 +1451,8 @@ B) Higher transaction costs
 C) Leveraged nature of contracts
 D) Lower trading volume
 
-**Answer:** Leveraged nature of contracts
+===
+**Answer:** C) Leveraged nature of contracts
 
 **Explanation:** Derivatives require only a fraction of the contract's value as margin or premium, meaning a small price move can lead to a large percentage gain or loss on the initial investment.
 
@@ -1372,7 +1467,8 @@ B) Debt instruments
 C) Equity and other risky investments
 D) Savings accounts
 
-**Answer:** Equity and other risky investments
+===
+**Answer:** C) Equity and other risky investments
 
 **Explanation:** Less risk-averse investors are more comfortable with potential losses and are therefore more willing to invest in assets like stocks that have higher potential returns but also higher risk.
 
@@ -1387,7 +1483,8 @@ B) Number of brokers used
 C) Combined family income
 D) Daily trading volume
 
-**Answer:** Combined family income
+===
+**Answer:** C) Combined family income
 
 **Explanation:** Factors like income, age, number of dependents, and financial situation influence an individual's capacity and willingness to take investment risks.
 
@@ -1402,7 +1499,8 @@ B) IOC order
 C) Stop-loss order
 D) Limit order
 
-**Answer:** Stop-loss order
+===
+**Answer:** C) Stop-loss order
 
 **Explanation:** A Stop-loss order is designed to limit potential losses by automatically placing a trade once a specific price level is breached.
 
@@ -1417,9 +1515,26 @@ B) First come, first served
 C) Price time priority
 D) Broker size priority
 
-**Answer:** Price time priority
+===
+**Answer:** C) Price time priority
 
 **Explanation:** The trading system first matches orders based on the best price (highest bid, lowest ask), and then within the same price, it prioritizes orders based on when they were entered.
+
+---
+
+**Question 100:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15100 (premium Rs. 121) and a Put option at the same strike Rs. 15100 (premium Rs. 91). Calculate the upper and lower break-even points of this strategy.
+
+**Options:**
+
+A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+B) Upper BE: Rs. 15221 | Lower BE: Rs. 15009
+C) Upper BE: Rs. 15362 | Lower BE: Rs. 14838
+D) Upper BE: Rs. 15100 | Lower BE: Rs. 14888
+
+===
+**Answer:** A) Upper BE: Rs. 15312 | Lower BE: Rs. 14888
+
+**Explanation:** Total Premium Paid = Call Premium + Put Premium = 121 + 91 = Rs. 212. Upper Break-even = Strike + Total Premium = 15100 + 212 = Rs. 15312. Lower Break-even = Strike - Total Premium = 15100 - 212 = Rs. 14888.
 
 ---
 
