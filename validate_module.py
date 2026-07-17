@@ -1,6 +1,11 @@
 import os
 import json
 import glob
+import sys
+
+# Force stdout to use UTF-8 to prevent Windows terminal encoding errors
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 CONTENT_DIR = 'g:/mock text/content'
 

@@ -1,76 +1,51 @@
-# Contributing to PrepMaster
+# Contributing to Konda Universal Mock Test
 
-Welcome to PrepMaster! We are building a Universal Open-Source Mock Test Platform. Anyone in the world can add their own mock tests, courses, and certifications by simply contributing a folder containing Markdown files.
+Welcome! We are building a Universal Open-Source Mock Test Platform. Anyone in the world can add their own mock tests, courses, and certifications by simply contributing a folder containing Markdown files. 
 
-## How to Add a New Course
+With our new **No-Code Contribute Panel**, you can submit courses directly from the browser!
 
-Adding a course requires **zero coding knowledge**. The entire system is powered by Markdown (`.md`) text files.
-
-### 1. Fork and Clone
-Fork this repository to your GitHub account and clone it to your local machine.
-
-### 2. Copy the Template
-Navigate to the `content/` folder.
-Copy the `template` folder and rename it to your course ID (e.g., `content/cfa-level-1`).
-
-### 3. Configure Metadata
-Open the `config.json` inside your new folder and update the course details:
-```json
-{
-  "id": "cfa-level-1",
-  "title": "CFA Level I",
-  "description": "Comprehensive mock tests for CFA Level I.",
-  "author": "Your Name",
-  "version": "1.0.0"
-}
-```
-
-### 4. Register the Course
-Open `content/registry.json` and add your course to the list:
-```json
-{
-  "id": "cfa-level-1",
-  "title": "CFA Level I",
-  "description": "Comprehensive mock tests for CFA Level I.",
-  "folder": "cfa-level-1"
-}
-```
-
-### 5. Add Your Tests
-Inside your course folder, navigate to the `tests/` directory. Create Markdown files (e.g., `Test_1.md`).
-Follow this strict format:
-
-```markdown
-# Test Name
-
-**Question 1:** What is the capital of France?
-
-**Options:**
-
-A) Berlin
-B) Paris
-C) Madrid
-D) Rome
-
-**Answer:** B) Paris
-
-**Explanation:** Paris is the capital and most populous city of France.
 ---
-```
 
-### 6. Validate Your Module
-Before submitting a Pull Request, run the validation script to ensure your formatting is correct:
-```bash
-python validate_module.py
-```
-If you see `✅ Module is valid!`, you are ready to submit!
+## The 3-Step No-Code Guide
 
-### 7. Compile (Optional for Local Testing)
-To view your course locally, run the compiler:
-```bash
-python build_engine.py
-```
-Then open `index.html` in your browser.
+### 1. Prepare Your Files
+Copy our folder templates and prepare your course files:
+- **`config.json`**: Define your course ID, title, description, and author name.
+- **`tests/` folder**: Create Markdown files (e.g. `Test_1.md`) containing questions. Use the format:
+  ```markdown
+  **Question 1:** What is the capital of France?
+  A) Berlin
+  B) Paris
+  C) Madrid
+  D) Rome
+  **Answer:** B) Paris
+  **Explanation:** Paris is the capital of France.
+  ---
+  ```
+- **`notes/` folder** (Optional): Add markdown study guide notes.
 
-### 8. Submit a Pull Request
-Push your changes to your fork and submit a Pull Request to our main repository. Your course will instantly be available to thousands of students worldwide!
+### 2. Upload Your Course Folder
+- Go to the **Contribute** tab on the website.
+- Drag & drop your course folder (or select the files) directly into the dropzone.
+- The browser will validate your schema and file formats in real-time.
+
+### 3. Submit Pull Request
+- Provide a **GitHub Personal Access Token (PAT)** with `repo` write scopes.
+- Click **Submit Pull Request**. 
+- The system will automatically create a branch, commit your files, register the course in `registry.json`, and open a Pull Request against the main repository!
+
+---
+
+## For Developers (CLI Flow)
+If you prefer standard Git and command-line execution:
+1. **Fork & Clone**: Fork the repository and clone it locally.
+2. **Local Validation**: Run the Python validator script:
+   ```bash
+   python validate_module.py
+   ```
+3. **Local Compilation**: Recompile the database payload to test locally:
+   ```bash
+   python build_engine.py
+   ```
+   Open `index.html` in your browser.
+4. **Push & PR**: Commit your files and open a Pull Request on GitHub.

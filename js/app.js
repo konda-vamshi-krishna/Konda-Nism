@@ -1000,10 +1000,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Dropzone and Contribution Flow State
 let stagedFiles = [];
+let courseMetadata = null;
+let originalContributeHtml = "";
 
 function setupDropzone() {
     const dropzone = document.getElementById('dropzone');
     if (!dropzone) return;
+
+    if (!originalContributeHtml) {
+        originalContributeHtml = document.getElementById('content-contribute').innerHTML;
+    }
 
     ['dragenter', 'dragover'].forEach(eventName => {
         dropzone.addEventListener(eventName, (e) => {
@@ -1021,20 +1027,209 @@ function setupDropzone() {
         }, false);
     });
 
-    dropzone.addEventListener('drop', (e) => {
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        handleFiles(files);
+    dropzone.addEventListener('drop', async (e) => {
+        const items = e.dataTransfer.items;
+        clearStagedFiles();
+        stagedFiles = [];
+
+        document.getElementById('stagedArea').style.display = 'block';
+        document.getElementById('validationStatusArea').style.display = 'block';
+        document.getElementById('validationSpinner').style.display = 'inline-block';
+        
+        const logContainer = document.getElementById('validationLogs');
+        logContainer.innerHTML = '<div>⏳ Scanning dropped items...</div>';
+
+        try {
+            if (items && items.length > 0 && items[0].webkitGetAsEntry) {
+                for (let i = 0; i < items.length; i++) {
+                    const item = items[i].webkitGetAsEntry();
+                    if (item) {
+                        await traverseFileTree(item);
+                    }
+                }
+            } else {
+                const files = e.dataTransfer.files;
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const text = await file.text();
+                    stagedFiles.push({
+                        name: file.name,
+                        path: file.webkitRelativePath || file.name,
+                        content: text,
+                        size: file.size
+                    });
+                }
+            }
+            validateStagedFiles();
+        } catch (err) {
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading dropped items: ${err.message}</div>`;
+            document.getElementById('validationSpinner').style.display = 'none';
+        }
     });
 }
 
-function handleFileSelect(e) {
-    const files = e.target.files;
-    handleFiles(files);
+async function traverseFileTree(item, path = "") {
+    if (item.isFile) {
+        const file = await new Promise((resolve) => item.file(resolve));
+        const relativePath = path + file.name;
+        // Skip hidden files/folders (like .DS_Store)
+        if (file.name.startsWith('.')) return;
+        
+        const text = await file.text();
+        stagedFiles.push({
+            name: file.name,
+            path: relativePath,
+            content: text,
+            size: file.size
+        });
+    } else if (item.isDirectory) {
+        // Skip hidden/system directories
+        if (item.name.startsWith('.') || item.name === '__pycache__') return;
+        
+        const dirReader = item.createReader();
+        const entries = await new Promise((resolve) => {
+            dirReader.readEntries(resolve);
+        });
+        for (let i = 0; i < entries.length; i++) {
+            await traverseFileTree(entries[i], path + item.name + "/");
+        }
+    }
 }
 
-function handleFiles(files) {
-    console.log("Staging files: ", files);
+async function handleFileSelect(e) {
+    const files = e.target.files;
+    clearStagedFiles();
+    stagedFiles = [];
+
+    document.getElementById('stagedArea').style.display = 'block';
+    document.getElementById('validationStatusArea').style.display = 'block';
+    document.getElementById('validationSpinner').style.display = 'inline-block';
+    
+    const logContainer = document.getElementById('validationLogs');
+    logContainer.innerHTML = '<div>⏳ Processing selected files...</div>';
+
+    try {
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const text = await file.text();
+            stagedFiles.push({
+                name: file.name,
+                path: file.webkitRelativePath || file.name,
+                content: text,
+                size: file.size
+            });
+        }
+        validateStagedFiles();
+    } catch (err) {
+        logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading selected files: ${err.message}</div>`;
+        document.getElementById('validationSpinner').style.display = 'none';
+    }
+}
+
+function validateStagedFiles() {
+    const logContainer = document.getElementById('validationLogs');
+    logContainer.innerHTML += '<div>🔍 Validating file structure and schema...</div>';
+
+    const stagedList = document.getElementById('stagedFilesList');
+    stagedList.innerHTML = '';
+
+    stagedFiles.forEach(file => {
+        const item = document.createElement('div');
+        item.className = 'staged-file-item';
+        item.innerHTML = `
+            <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
+            <span class="file-status pending">Pending</span>
+        `;
+        stagedList.appendChild(item);
+    });
+
+    let isValid = true;
+    let configJsonFile = null;
+    courseMetadata = null;
+
+    // 1. Locate config.json
+    configJsonFile = stagedFiles.find(f => f.name === 'config.json');
+    if (!configJsonFile) {
+        logContainer.innerHTML += '<div style="color:var(--danger)">❌ Error: Missing config.json in root.</div>';
+        isValid = false;
+    } else {
+        try {
+            const config = JSON.parse(configJsonFile.content);
+            const requiredKeys = ['id', 'title', 'description', 'author'];
+            let configValid = true;
+            requiredKeys.forEach(k => {
+                if (!config[k] || String(config[k]).trim() === '') {
+                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is missing required key: "${k}".</div>`;
+                    configValid = false;
+                    isValid = false;
+                }
+            });
+            if (configValid) {
+                courseMetadata = config;
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${config.id}, Title: ${config.title}).</div>`;
+            }
+        } catch (e) {
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is not valid JSON: ${e.message}</div>`;
+            isValid = false;
+        }
+    }
+
+    // 2. Validate tests folder and markdown formatting
+    const testFiles = stagedFiles.filter(f => f.path.toLowerCase().includes('/tests/') && f.name.endsWith('.md'));
+    if (testFiles.length === 0) {
+        logContainer.innerHTML += '<div style="color:var(--warning)">⚠️ Warning: No markdown files found inside a "tests" subdirectory.</div>';
+    } else {
+        testFiles.forEach(f => {
+            let fileValid = true;
+            if (!f.content.includes('Question 1') && !f.content.includes('**Question 1:**')) {
+                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain "Question 1" marker.</div>`;
+                fileValid = false;
+                isValid = false;
+            }
+            if (!f.content.includes('**Answer:**') && !f.content.includes('Answer:')) {
+                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain "**Answer:**" marker.</div>`;
+                fileValid = false;
+                isValid = false;
+            }
+
+            if (fileValid) {
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ Test format verified for: ${f.name}</div>`;
+            }
+        });
+    }
+
+    // 3. Validate notes folder if it exists
+    const notesFiles = stagedFiles.filter(f => f.path.toLowerCase().includes('/notes/') && f.name.endsWith('.md'));
+    notesFiles.forEach(f => {
+        logContainer.innerHTML += `<div style="color:var(--success)">✅ Notes format verified for: ${f.name}</div>`;
+    });
+
+    document.getElementById('validationSpinner').style.display = 'none';
+
+    // Update statuses
+    document.querySelectorAll('.staged-file-item').forEach((item, idx) => {
+        const file = stagedFiles[idx];
+        const statusSpan = item.querySelector('.file-status');
+
+        let fileStatus = 'valid';
+        if (file.name === 'config.json') {
+            fileStatus = courseMetadata ? 'valid' : 'invalid';
+        } else if (file.path.toLowerCase().includes('/tests/') && file.name.endsWith('.md')) {
+            const logsText = logContainer.innerHTML;
+            fileStatus = logsText.includes(`❌ ${file.name}`) ? 'invalid' : 'valid';
+        }
+
+        statusSpan.className = `file-status ${fileStatus}`;
+        statusSpan.textContent = fileStatus.charAt(0).toUpperCase() + fileStatus.slice(1);
+    });
+
+    if (isValid && courseMetadata) {
+        logContainer.innerHTML += '<div style="color:var(--success); font-weight:bold; margin-top:10px;">🎉 Local validation passed! Ready to submit.</div>';
+        document.getElementById('githubSubmitArea').style.display = 'block';
+    } else {
+        logContainer.innerHTML += '<div style="color:var(--danger); font-weight:bold; margin-top:10px;">❌ Validation failed. Please review logs and re-upload.</div>';
+        document.getElementById('githubSubmitArea').style.display = 'none';
+    }
 }
 
 function clearStagedFiles() {
@@ -1043,4 +1238,238 @@ function clearStagedFiles() {
     document.getElementById('validationStatusArea').style.display = 'none';
     document.getElementById('githubSubmitArea').style.display = 'none';
 }
+
+function encodeBase64(str) {
+    return btoa(unescape(encodeURIComponent(str)));
+}
+
+async function githubRequest(path, options = {}) {
+    const pat = document.getElementById('githubPatInput').value.trim();
+    const url = `https://api.github.com${path}`;
+
+    options.headers = {
+        ...options.headers,
+        'Authorization': `token ${pat}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+    };
+
+    const response = await fetch(url, options);
+    if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `HTTP ${response.status}`);
+    }
+    return response.json();
+}
+
+async function submitContributionPR() {
+    const logContainer = document.getElementById('validationLogs');
+    const pat = document.getElementById('githubPatInput').value.trim();
+
+    if (!pat) {
+        alert("Please enter a GitHub Personal Access Token.");
+        return;
+    }
+
+    const submitBtn = document.getElementById('submitPrBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+        <span style="display: inline-block; width: 14px; height: 14px; border: 2px solid var(--primary-light); border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 6px;"></span>
+        Submitting...
+    `;
+
+    logContainer.innerHTML += '<div>🌐 Connecting to GitHub API...</div>';
+
+    const owner = 'konda-vamshi-krishna';
+    const repo = 'Konda-Nism';
+    const courseId = courseMetadata.id;
+    const branchName = `contrib-${courseId}-${Date.now()}`;
+
+    try {
+        // Step 1: Get master SHA
+        logContainer.innerHTML += '<div>🔍 Fetching latest master branch state...</div>';
+        const masterRef = await githubRequest(`/repos/${owner}/${repo}/git/ref/heads/master`);
+        const masterSha = masterRef.object.sha;
+
+        const masterCommit = await githubRequest(`/repos/${owner}/${repo}/git/commits/${masterSha}`);
+        const masterTreeSha = masterCommit.tree.sha;
+
+        // Step 2: Create new branch
+        logContainer.innerHTML += `<div>🌿 Creating contribution branch: <code>${branchName}</code>...</div>`;
+        await githubRequest(`/repos/${owner}/${repo}/git/refs`, {
+            method: 'POST',
+            body: JSON.stringify({
+                ref: `refs/heads/${branchName}`,
+                sha: masterSha
+            })
+        });
+
+        // Step 3: Fetch current content/registry.json to update it
+        logContainer.innerHTML += '<div>📋 Fetching registry.json...</div>';
+        let registryData = null;
+        let registrySha = null;
+        try {
+            const registryFile = await githubRequest(`/repos/${owner}/${repo}/contents/content/registry.json?ref=${branchName}`);
+            const decodedRegistry = decodeURIComponent(escape(atob(registryFile.content.replace(/\s/g, ''))));
+            registryData = JSON.parse(decodedRegistry);
+            registrySha = registryFile.sha;
+        } catch (e) {
+            logContainer.innerHTML += '<div style="color:var(--warning)">⚠️ Warning: Could not fetch registry.json. Creating new.</div>';
+            registryData = { courses: [] };
+        }
+
+        if (registryData && registryData.courses) {
+            const exists = registryData.courses.some(c => c.id === courseId);
+            if (!exists) {
+                registryData.courses.push({
+                    id: courseId,
+                    title: courseMetadata.title,
+                    description: courseMetadata.description,
+                    folder: courseId
+                });
+                logContainer.innerHTML += '<div>✏️ Updated registry.json with new course metadata.</div>';
+            }
+        }
+
+        // Step 4: Create Blobs for each file
+        logContainer.innerHTML += '<div>📤 Uploading files to GitHub...</div>';
+        const treeItems = [];
+
+        for (const file of stagedFiles) {
+            let subPath = file.path;
+            // Clean path to be clean relative to course folder
+            const parts = subPath.split('/');
+            const templateIdx = parts.indexOf('template');
+            const courseIdx = parts.indexOf(courseId);
+            
+            if (templateIdx !== -1) {
+                subPath = parts.slice(templateIdx + 1).join('/');
+            } else if (courseIdx !== -1) {
+                subPath = parts.slice(courseIdx + 1).join('/');
+            }
+            
+            const repoPath = `content/${courseId}/${subPath}`;
+
+            logContainer.innerHTML += `<div>📤 Creating blob for <code>${repoPath}</code>...</div>`;
+            const blob = await githubRequest(`/repos/${owner}/${repo}/git/blobs`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    content: encodeBase64(file.content),
+                    encoding: 'base64'
+                })
+            });
+
+            treeItems.push({
+                path: repoPath,
+                mode: '100644',
+                type: 'blob',
+                sha: blob.sha
+            });
+        }
+
+        // Upload updated registry.json
+        const updatedRegistryContent = JSON.stringify(registryData, null, 2);
+        const registryBlob = await githubRequest(`/repos/${owner}/${repo}/git/blobs`, {
+            method: 'POST',
+            body: JSON.stringify({
+                content: encodeBase64(updatedRegistryContent),
+                encoding: 'base64'
+            })
+        });
+        treeItems.push({
+            path: 'content/registry.json',
+            mode: '100644',
+            type: 'blob',
+            sha: registryBlob.sha
+        });
+
+        // Step 5: Create a new Tree
+        logContainer.innerHTML += '<div>🌳 Creating git tree...</div>';
+        const newTree = await githubRequest(`/repos/${owner}/${repo}/git/trees`, {
+            method: 'POST',
+            body: JSON.stringify({
+                base_tree: masterTreeSha,
+                tree: treeItems
+            })
+        });
+
+        // Step 6: Create Commit
+        logContainer.innerHTML += '<div>💾 Creating git commit...</div>';
+        const commit = await githubRequest(`/repos/${owner}/${repo}/git/commits`, {
+            method: 'POST',
+            body: JSON.stringify({
+                message: `Add ${courseMetadata.title} course module`,
+                tree: newTree.sha,
+                parents: [masterSha]
+            })
+        });
+
+        // Step 7: Update branch reference
+        logContainer.innerHTML += '<div>🔗 Updating branch head...</div>';
+        await githubRequest(`/repos/${owner}/${repo}/git/refs/heads/${branchName}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                sha: commit.sha,
+                force: true
+            })
+        });
+
+        // Step 8: Open Pull Request
+        logContainer.innerHTML += '<div>🔀 Opening Pull Request...</div>';
+        const pr = await githubRequest(`/repos/${owner}/${repo}/pulls`, {
+            method: 'POST',
+            body: JSON.stringify({
+                title: `Contribution: Add ${courseMetadata.title} course`,
+                head: branchName,
+                base: 'master',
+                body: `Automatically submitted from Konda Universal Mock Test contribution dashboard.\n\nAuthor: ${courseMetadata.author}\nDescription: ${courseMetadata.description}`
+            })
+        });
+
+        logContainer.innerHTML += `<div style="color:var(--success); font-weight:bold; font-size:1.1rem; margin-top:15px;">🎉 Pull Request created successfully!</div>`;
+
+        showPRSuccessScreen(pr.html_url);
+
+    } catch (err) {
+        console.error(err);
+        logContainer.innerHTML += `<div style="color:var(--danger); font-weight:bold; margin-top:15px;">❌ GitHub API Error: ${err.message}</div>`;
+        logContainer.innerHTML += `<div style="color:var(--text-muted); font-size:0.85rem;">Please make sure your Personal Access Token (PAT) is correct and has standard 'repo' scopes enabled.</div>`;
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 15.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 12V3"></path><path d="M12 12V3h6v4.5a2.5 2.5 0 0 0-2.5 2.5H12z"></path><path d="M12 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg>
+            Submit Pull Request
+        `;
+    }
+}
+
+function showPRSuccessScreen(prUrl) {
+    const contributeContainer = document.getElementById('content-contribute');
+    contributeContainer.innerHTML = `
+        <div class="card" style="text-align: center; padding: 40px;">
+            <div style="font-size: 64px; margin-bottom: 20px;">🎉</div>
+            <h2 style="margin-top: 0; color: var(--success);">Submission Successful!</h2>
+            <p style="font-size: 1.1rem; max-width: 500px; margin: 0 auto 24px auto;">
+                Thank you for contributing! Your course has been validated and submitted as a Pull Request to our repository.
+            </p>
+            <div style="margin-bottom: 30px;">
+                <a href="${prUrl}" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; justify-content: center; width: auto; padding: 12px 24px;">
+                    View Pull Request on GitHub
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-secondary" onclick="resetContributePage()">Contribute Another Course</button>
+            </div>
+        </div>
+    `;
+}
+
+function resetContributePage() {
+    document.getElementById('content-contribute').innerHTML = originalContributeHtml;
+    stagedFiles = [];
+    courseMetadata = null;
+    setupDropzone();
+}
+
 
