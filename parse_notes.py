@@ -1,8 +1,16 @@
 import re
 import json
+import os
 
 def parse_notes():
-    with open('g:/mock text/notes.md', 'r', encoding='utf-8') as f:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    notes_md_path = os.path.join(base_dir, 'content', 'nism-series-8', 'notes', 'notes.md')
+    
+    if not os.path.exists(notes_md_path):
+        print(f"Error: Source notes markdown not found at {notes_md_path}")
+        return [], []
+        
+    with open(notes_md_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
     # Split by the main Part headers
@@ -79,5 +87,10 @@ def parse_notes():
 
 if __name__ == '__main__':
     parts, flashcards = parse_notes()
-    with open('g:/mock text/parsed_notes.json', 'w', encoding='utf-8') as f:
-        json.dump({"parts": parts, "flashcards": flashcards}, f, indent=2)
+    if parts:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        out_path = os.path.join(base_dir, 'content', 'nism-series-8', 'parsed_notes.json')
+        with open(out_path, 'w', encoding='utf-8') as f:
+            json.dump({"parts": parts, "flashcards": flashcards}, f, indent=2)
+        print(f"Successfully generated parsed_notes.json at {out_path}")
+

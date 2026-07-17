@@ -29,6 +29,11 @@ def build_all():
         print(f"==========================================")
         
         if module == "nism-series-8":
+            # 0. Compile markdown notes
+            notes_cmd = ["python", "parse_notes.py"]
+            print(f"Running: {' '.join(notes_cmd)}")
+            subprocess.run(notes_cmd, check=True)
+
             # 1. Rebuild and sanitize markdown and initial JSON
             rebuild_cmd = ["python", "rebuild_everything.py", "--module", module]
             print(f"Running: {' '.join(rebuild_cmd)}")
