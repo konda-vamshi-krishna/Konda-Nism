@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kumt-engine-v10';
+const CACHE_NAME = 'kumt-engine-v11';
 // Cache version suffix appended to static assets for network-level proxy cache busting
-const ASSET_VER = '?v=10';
+const ASSET_VER = '?v=11';
 
 // Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [
@@ -58,8 +58,8 @@ self.addEventListener('fetch', (event) => {
           if (networkResponse.status === 200) {
             const responseClone = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
-              // Compare bodies to detect genuine updates if cached copy exists
-              if (cachedResponse) {
+              // Compare bodies to detect genuine updates if cached copy exists (JSON only)
+              if (cachedResponse && url.pathname.endsWith('.json')) {
                 Promise.all([cachedResponse.clone().text(), networkResponse.clone().text()]).then(([oldText, newText]) => {
                   if (oldText !== newText) {
                     cache.put(event.request, responseClone);

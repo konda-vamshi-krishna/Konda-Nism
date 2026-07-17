@@ -491,7 +491,7 @@
       <div class="card glass-premium" style="margin-bottom: 2rem; border-left: 4px solid var(--indigo-primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); border-left: 4px solid var(--primary);">
           <h3 style="margin-top: 0;">📚 Need an Architectural Reference?</h3>
           <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">If configuring the JSON schema bounds manually is difficult, download our fully structured <strong>SSC 10th Class Mock Suite</strong> sample block. Extract the file, inspect the file mappings, modify the contents, and upload it back.</p>
-          <button id="download-sample-btn" class="btn btn-indigo" onclick="downloadSamplePackage()" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer;" type="button">📥 Download ssc_10th_class_sample.json</button>
+          <button id="download-sample-btn" class="btn btn-indigo" onclick="downloadSamplePackage()" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer;" type="button">📥 Download ssc_10th_class_sample.zip</button>
       </div>
 
       <script>
@@ -501,27 +501,16 @@
           btn.disabled = true;
           btn.innerHTML = '📥 Downloading...';
           try {
-              const [config, tests, notes, flashcards] = await Promise.all([
-                  fetch('content/ssc-10th-class/config.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                  fetch('content/ssc-10th-class/tests.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                  fetch('content/ssc-10th-class/notes.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                  fetch('content/ssc-10th-class/flashcards.json').then(r => { if(!r.ok) throw r; return r.json(); })
-              ]);
-
-              const unifiedPayload = {
-                  "info": "Extract these objects into individual files (config.json, tests.json, notes.json, flashcards.json) inside your custom directory to bypass syntax constraints.",
-                  "course_metadata": config,
-                  "exam_matrix": tests,
-                  "study_notes": notes,
-                  "active_recall_decks": flashcards
-              };
-
-              const blob = new Blob([JSON.stringify(unifiedPayload, null, 2)], { type: 'application/json' });
+              const response = await fetch('content/ssc-10th-class/ssc_10th_class_sample.zip');
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              const blob = await response.blob();
               const dataUrl = URL.createObjectURL(blob);
               
               const downloadAnchor = document.createElement('a');
               downloadAnchor.href = dataUrl;
-              downloadAnchor.download = "ssc_10th_class_sample_package.json";
+              downloadAnchor.download = "ssc_10th_class_sample.zip";
               document.body.appendChild(downloadAnchor);
               downloadAnchor.click();
               
@@ -529,7 +518,7 @@
               downloadAnchor.remove();
           } catch (error) {
               console.error("Critical Network Interception Failure:", error);
-              alert("Infrastructure Notification: The sample baseline payload is currently being updated or re-indexed on the GitHub Pages edge CDN nodes. Please retry execution in 120 seconds.");
+              alert("Infrastructure Notification: The sample baseline zip payload is currently being updated or re-indexed. Please retry in 120 seconds.");
           } finally {
               btn.disabled = false;
               btn.innerHTML = originalText;

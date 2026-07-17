@@ -68,6 +68,28 @@ def build_all():
     print(f"==========================================")
     compile_cmd = [sys.executable, "compile_registry.py"]
     subprocess.run(compile_cmd, check=True)
+
+    # Build the sample ZIP package for ssc-10th-class dynamically
+    print(f"\n==========================================")
+    print("Compiling ssc_10th_class_sample.zip")
+    print(f"==========================================")
+    try:
+        import zipfile
+        ssc_dir = os.path.join(content_dir, 'ssc-10th-class')
+        if os.path.exists(ssc_dir):
+            zip_path = os.path.join(ssc_dir, 'ssc_10th_class_sample.zip')
+            files_to_zip = ['config.json', 'tests.json', 'notes.json', 'flashcards.json']
+            with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+                for f in files_to_zip:
+                    f_path = os.path.join(ssc_dir, f)
+                    if os.path.exists(f_path):
+                        zipf.write(f_path, arcname=f)
+            print(f"Sample zip created successfully at: {zip_path}")
+        else:
+            print("Warning: ssc-10th-class directory not found. Skipping zip generation.")
+    except Exception as e:
+        print(f"Error compiling ssc_10th_class_sample.zip: {e}")
+
     print("\n[SUCCESS] All course modules built and registry compiled successfully!")
 
 if __name__ == '__main__':
