@@ -4,10 +4,10 @@
 
 **Options:**
 
-A. Gold bars
-B. Treasury bills
-C. Bank loans
-D. Corporate bonds
+A) Gold bars
+B) Treasury bills
+C) Bank loans
+D) Corporate bonds
 
 **Answer:** Treasury bills
 
@@ -19,10 +19,10 @@ D. Corporate bonds
 
 **Options:**
 
-A. 1972
-B. 1982
-C. 1996
-D. 2000
+A) 1972
+B) 1982
+C) 1996
+D) 2000
 
 **Answer:** 1982
 
@@ -34,10 +34,10 @@ D. 2000
 
 **Options:**
 
-A. Stable and unchanging prices
-B. Lower global trade
-C. High price swings in assets
-D. Removal of technology
+A) Stable and unchanging prices
+B) Lower global trade
+C) High price swings in assets
+D) Removal of technology
 
 **Answer:** High price swings in assets
 
@@ -49,10 +49,10 @@ D. Removal of technology
 
 **Options:**
 
-A. It made trading more expensive
-B. It helped lower the costs of transactions
-C. it stopped international trading
-D. It made markets less transparent
+A) It made trading more expensive
+B) It helped lower the costs of transactions
+C) it stopped international trading
+D) It made markets less transparent
 
 **Answer:** It helped lower the costs of transactions
 
@@ -64,10 +64,10 @@ D. It made markets less transparent
 
 **Options:**
 
-A. Raghuram Rajan
-B. Dr. L. C. Gupta
-C. J.R. Varma
-D. Nirmala Sitharaman
+A) Raghuram Rajan
+B) Dr. L. C. Gupta
+C) J.R. Varma
+D) Nirmala Sitharaman
 
 **Answer:** Dr. L. C. Gupta
 
@@ -79,10 +79,10 @@ D. Nirmala Sitharaman
 
 **Options:**
 
-A. 1992
-B. 1996
-C. 1999
-D. 2005
+A) 1992
+B) 1996
+C) 1999
+D) 2005
 
 **Answer:** 1999
 
@@ -94,10 +94,10 @@ D. 2005
 
 **Options:**
 
-A. Stock options
-B. Index futures
-C. Gold futures
-D. Currency swaps
+A) Stock options
+B) Index futures
+C) Gold futures
+D) Currency swaps
 
 **Answer:** Index futures
 
@@ -109,10 +109,10 @@ D. Currency swaps
 
 **Options:**
 
-A. June 2000
-B. June 2001
-C. July 2001
-D. November 2001
+A) June 2000
+B) June 2001
+C) July 2001
+D) November 2001
 
 **Answer:** July 2001
 
@@ -124,10 +124,10 @@ D. November 2001
 
 **Options:**
 
-A. Futures contract
-B. Forward contract
-C. Index fund
-D. Mutual fund
+A) Futures contract
+B) Forward contract
+C) Index fund
+D) Mutual fund
 
 **Answer:** Forward contract
 
@@ -139,10 +139,10 @@ D. Mutual fund
 
 **Options:**
 
-A. On a public stock exchange
-B. Over-the-counter (OTC)
-C. In a grocery store
-D. Only at central banks
+A) On a public stock exchange
+B) Over-the-counter (OTC)
+C) In a grocery store
+D) Only at central banks
 
 **Answer:** Over-the-counter (OTC)
 
@@ -154,10 +154,10 @@ D. Only at central banks
 
 **Options:**
 
-A. Only the buyer
-B. Only the seller
-C. Both the buyer and the seller
-D. Neither party
+A) Only the buyer
+B) Only the seller
+C) Both the buyer and the seller
+D) Neither party
 
 **Answer:** Both the buyer and the seller
 
@@ -169,10 +169,10 @@ D. Neither party
 
 **Options:**
 
-A. High taxes
-B. Counterparty risk (Default)
-C. Fixed price risk
-D. Low margin
+A) High taxes
+B) Counterparty risk (Default)
+C) Fixed price risk
+D) Low margin
 
 **Answer:** Counterparty risk (Default)
 
@@ -184,10 +184,10 @@ D. Low margin
 
 **Options:**
 
-A. Price risk
-B. Liquidity risk
-C. Counterparty risk
-D. Systemic risk
+A) Price risk
+B) Liquidity risk
+C) Counterparty risk
+D) Systemic risk
 
 **Answer:** Counterparty risk
 
@@ -199,10 +199,10 @@ D. Systemic risk
 
 **Options:**
 
-A. Swap
-B. Option
-C. Future
-D. Warrant
+A) Swap
+B) Option
+C) Future
+D) Warrant
 
 **Answer:** Future
 
@@ -214,10 +214,10 @@ D. Warrant
 
 **Options:**
 
-A. The buyer and seller
-B. The government
-C. The Stock Exchange
-D. The Clearing Corporation
+A) The buyer and seller
+B) The government
+C) The Stock Exchange
+D) The Clearing Corporation
 
 **Answer:** The Stock Exchange
 
@@ -229,10 +229,10 @@ D. The Clearing Corporation
 
 **Options:**
 
-A. The Broker
-B. The Clearing Corporation
-C. The Bank of India
-D. SEBI
+A) The Broker
+B) The Clearing Corporation
+C) The Bank of India
+D) SEBI
 
 **Answer:** The Clearing Corporation
 
@@ -244,10 +244,10 @@ D. SEBI
 
 **Options:**
 
-A. High counterparty risk
-B. Less flexibility in terms
-C. No regulation
-D. Lack of price transparency
+A) High counterparty risk
+B) Less flexibility in terms
+C) No regulation
+D) Lack of price transparency
 
 **Answer:** Less flexibility in terms
 
@@ -259,10 +259,10 @@ D. Lack of price transparency
 
 **Options:**
 
-A. Future
-B. Option
-C. Swap
-D. Forward
+A) Future
+B) Option
+C) Swap
+D) Forward
 
 **Answer:** Swap
 
@@ -274,12 +274,12 @@ D. Forward
 
 **Options:**
 
-A. Trader
-B. Hedger
-C. Arbitrageur
-D. Speculator
+A) Trader
+B) Hedger
+C) Arbitrageur
+D) Speculator
 
-**Answer:** B. Hedger
+**Answer:** Arbitrageur
 
 **Explanation:** Hedgers use derivatives to reduce their exposure to market risks.
 
@@ -289,10 +289,10 @@ D. Speculator
 
 **Options:**
 
-A. To take high risks for big money
-B. To protect a business from losses
-C. To profit from price differences in two markets
-D. To hold stocks for 20 years
+A) To take high risks for big money
+B) To protect a business from losses
+C) To profit from price differences in two markets
+D) To hold stocks for 20 years
 
 **Answer:** To profit from price differences in two markets
 
@@ -304,10 +304,10 @@ D. To hold stocks for 20 years
 
 **Options:**
 
-A. A building where people shout orders
-B. A decentralized electronic network of dealers
-C. A government-run department
-D. A local bank branch
+A) A building where people shout orders
+B) A decentralized electronic network of dealers
+C) A government-run department
+D) A local bank branch
 
 **Answer:** A decentralized electronic network of dealers
 
@@ -319,10 +319,10 @@ D. A local bank branch
 
 **Options:**
 
-A. Price risk
-B. Credit risk
-C. Liquidity risk
-D. Legal risk
+A) Price risk
+B) Credit risk
+C) Liquidity risk
+D) Legal risk
 
 **Answer:** Liquidity risk
 
@@ -334,10 +334,10 @@ D. Legal risk
 
 **Options:**
 
-A. Market prices falling
-B. Systems failing, fraud, or human errors
-C. New taxes from the government
-D. Changes in interest rates
+A) Market prices falling
+B) Systems failing, fraud, or human errors
+C) New taxes from the government
+D) Changes in interest rates
 
 **Answer:** Systems failing, fraud, or human errors
 
@@ -349,10 +349,10 @@ D. Changes in interest rates
 
 **Options:**
 
-A. The Daily News
-B. Model Risk Disclosure Document
-C. Company Balance Sheet
-D. Bank Passbook
+A) The Daily News
+B) Model Risk Disclosure Document
+C) Company Balance Sheet
+D) Bank Passbook
 
 **Answer:** Model Risk Disclosure Document
 
@@ -364,10 +364,10 @@ D. Bank Passbook
 
 **Options:**
 
-A. Basics of Derivatives
-B. Forwards and Futures
-C. Introduction to Options
-D. Accounting and Taxation
+A) Basics of Derivatives
+B) Forwards and Futures
+C) Introduction to Options
+D) Accounting and Taxation
 
 **Answer:** Forwards and Futures
 
@@ -379,10 +379,10 @@ D. Accounting and Taxation
 
 **Options:**
 
-A. Option
-B. Index
-C. Margin
-D. Hedge
+A) Option
+B) Index
+C) Margin
+D) Hedge
 
 **Answer:** Index
 
@@ -394,10 +394,10 @@ D. Hedge
 
 **Options:**
 
-A. Peak value
-B. Ending value
-C. Base value
-D. Zero value
+A) Peak value
+B) Ending value
+C) Base value
+D) Zero value
 
 **Answer:** Base value
 
@@ -409,10 +409,10 @@ D. Zero value
 
 **Options:**
 
-A. The name of the index
-B. The percentage change
-C. The number of shares
-D. The location of the exchange
+A) The name of the index
+B) The percentage change
+C) The number of shares
+D) The location of the exchange
 
 **Answer:** The percentage change
 
@@ -424,10 +424,10 @@ D. The location of the exchange
 
 **Options:**
 
-A. Stocks with the highest price
-B. Stocks with the most volume
-C. Stocks with the highest total market value
-D. Stocks that have been listed the longest
+A) Stocks with the highest price
+B) Stocks with the most volume
+C) Stocks with the highest total market value
+D) Stocks that have been listed the longest
 
 **Answer:** Stocks with the highest total market value
 
@@ -439,10 +439,10 @@ D. Stocks that have been listed the longest
 
 **Options:**
 
-A. Profit minus Loss
-B. Total shares × Market price per share
-C. Sales divided by expenses
-D. Total assets plus liabilities
+A) Profit minus Loss
+B) Total shares × Market price per share
+C) Sales divided by expenses
+D) Total assets plus liabilities
 
 **Answer:** Total shares × Market price per share
 
@@ -454,10 +454,10 @@ D. Total assets plus liabilities
 
 **Options:**
 
-A. All banking stocks
-B. Shares that are not available for public trading
-C. Shares that are too cheap
-D. Dividends
+A) All banking stocks
+B) Shares that are not available for public trading
+C) Shares that are too cheap
+D) Dividends
 
 **Answer:** Shares that are not available for public trading
 
@@ -469,10 +469,10 @@ D. Dividends
 
 **Options:**
 
-A. Price-Weighted
-B. Equal-Weighted
-C. Free-Float Market Cap
-D. Alphabetical-Weighted
+A) Price-Weighted
+B) Equal-Weighted
+C) Free-Float Market Cap
+D) Alphabetical-Weighted
 
 **Answer:** Free-Float Market Cap
 
@@ -484,10 +484,10 @@ D. Alphabetical-Weighted
 
 **Options:**
 
-A. The one with the most shares
-B. The one with the highest price per share
-C. The newest company
-D. The most profitable company
+A) The one with the most shares
+B) The one with the highest price per share
+C) The newest company
+D) The most profitable company
 
 **Answer:** The one with the highest price per share
 
@@ -499,10 +499,10 @@ D. The most profitable company
 
 **Options:**
 
-A. Buy stocks that have gone up
-B. Sell stocks that have gone up and buy those that have fallen
-C. Do nothing at all
-D. Close the index every month
+A) Buy stocks that have gone up
+B) Sell stocks that have gone up and buy those that have fallen
+C) Do nothing at all
+D) Close the index every month
 
 **Answer:** Sell stocks that have gone up and buy those that have fallen
 
@@ -514,10 +514,10 @@ D. Close the index every month
 
 **Options:**
 
-A. Having lots of cash in the bank
-B. Being able to buy/sell large amounts without changing the price much
-C. The stock price being very high
-D. Paying dividends every year
+A) Having lots of cash in the bank
+B) Being able to buy/sell large amounts without changing the price much
+C) The stock price being very high
+D) Paying dividends every year
 
 **Answer:** Being able to buy/sell large amounts without changing the price much
 
@@ -529,10 +529,10 @@ D. Paying dividends every year
 
 **Options:**
 
-A. Impact cost
-B. Brokerage
-C. Bid-ask spread
-D. Margin
+A) Impact cost
+B) Brokerage
+C) Bid-ask spread
+D) Margin
 
 **Answer:** Bid-ask spread
 
@@ -544,10 +544,10 @@ D. Margin
 
 **Options:**
 
-A. The tax on the trade
-B. How much the price moves against you during a trade
-C. The profit made on a trade
-D. The internet speed of the exchange
+A) The tax on the trade
+B) How much the price moves against you during a trade
+C) The profit made on a trade
+D) The internet speed of the exchange
 
 **Answer:** How much the price moves against you during a trade
 
@@ -559,10 +559,10 @@ D. The internet speed of the exchange
 
 **Options:**
 
-A. SEBI officials
-B. Specialized professional agencies
-C. Retail investors
-D. Bank managers
+A) SEBI officials
+B) Specialized professional agencies
+C) Retail investors
+D) Bank managers
 
 **Answer:** Specialized professional agencies
 
@@ -574,10 +574,10 @@ D. Bank managers
 
 **Options:**
 
-A. Revision
-B. Maintenance
-C. Liquidation
-D. Speculation
+A) Revision
+B) Maintenance
+C) Liquidation
+D) Speculation
 
 **Answer:** Maintenance
 
@@ -589,8 +589,8 @@ D. Speculation
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -602,10 +602,10 @@ B. False
 
 **Options:**
 
-A. It becomes zero
-B. It decreases
-C. It increases
-D. Volatility has no effect
+A) It becomes zero
+B) It decreases
+C) It increases
+D) Volatility has no effect
 
 **Answer:** It increases
 
@@ -617,8 +617,8 @@ D. Volatility has no effect
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -630,8 +630,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -643,10 +643,10 @@ B. False
 
 **Options:**
 
-A. SEBI
-B. Clearing Corporation
-C. Stock Exchange
-D. Clearing Member himself
+A) SEBI
+B) Clearing Corporation
+C) Stock Exchange
+D) Clearing Member himself
 
 **Answer:** Clearing Member himself
 
@@ -658,10 +658,10 @@ D. Clearing Member himself
 
 **Options:**
 
-A. Sell index futures and sell those stocks
-B. Buy index futures and sell those stocks
-C. Sell index futures and buy those stocks
-D. Do nothing
+A) Sell index futures and sell those stocks
+B) Buy index futures and sell those stocks
+C) Sell index futures and buy those stocks
+D) Do nothing
 
 **Answer:** Buy index futures and sell those stocks
 
@@ -673,10 +673,10 @@ D. Do nothing
 
 **Options:**
 
-A. Market Limit
-B. Position Limit
-C. Upper Limit
-D. Outstanding Limit
+A) Market Limit
+B) Position Limit
+C) Upper Limit
+D) Outstanding Limit
 
 **Answer:** Position Limit
 
@@ -688,10 +688,10 @@ D. Outstanding Limit
 
 **Options:**
 
-A. Buy the same futures contract
-B. Sell another contract
-C. Buy a call option
-D. Enter into a forward contract
+A) Buy the same futures contract
+B) Sell another contract
+C) Buy a call option
+D) Enter into a forward contract
 
 **Answer:** Buy the same futures contract
 
@@ -703,8 +703,8 @@ D. Enter into a forward contract
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -716,10 +716,10 @@ B. False
 
 **Options:**
 
-A. To increase profit
-B. To reduce possible losses
-C. To increase speculation
-D. Only for currency markets
+A) To increase profit
+B) To reduce possible losses
+C) To increase speculation
+D) Only for currency markets
 
 **Answer:** To reduce possible losses
 
@@ -731,8 +731,8 @@ D. Only for currency markets
 
 **Options:**
 
-A. He makes a profit
-B. He makes a loss
+A) He makes a profit
+B) He makes a loss
 
 **Answer:** He makes a loss
 
@@ -744,10 +744,10 @@ B. He makes a loss
 
 **Options:**
 
-A. Stock moves less than the market
-B. Stock moves equal to the market
-C. Stock moves more than the market
-D. Stock moves opposite to the market
+A) Stock moves less than the market
+B) Stock moves equal to the market
+C) Stock moves more than the market
+D) Stock moves opposite to the market
 
 **Answer:** Stock moves more than the market
 
@@ -759,8 +759,8 @@ D. Stock moves opposite to the market
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -772,8 +772,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -785,8 +785,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -798,8 +798,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -811,8 +811,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -824,10 +824,10 @@ B. False
 
 **Options:**
 
-A. Rs. 20 lakhs
-B. Rs. 50 lakhs
-C. Rs. 100 lakhs
-D. Rs. 150 lakhs
+A) Rs. 20 lakhs
+B) Rs. 50 lakhs
+C) Rs. 100 lakhs
+D) Rs. 150 lakhs
 
 **Answer:** Rs. 50 lakhs
 
@@ -839,8 +839,8 @@ D. Rs. 150 lakhs
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -852,8 +852,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -865,10 +865,10 @@ B. False
 
 **Options:**
 
-A. By physical delivery of shares
-B. By cash settlement
-C. Either cash or delivery
-D. Exchange for commodities
+A) By physical delivery of shares
+B) By cash settlement
+C) Either cash or delivery
+D) Exchange for commodities
 
 **Answer:** By cash settlement
 
@@ -880,10 +880,10 @@ D. Exchange for commodities
 
 **Options:**
 
-A. Increases
-B. Decreases
-C. Remains constant
-D. Expires worthless
+A) Increases
+B) Decreases
+C) Remains constant
+D) Expires worthless
 
 **Answer:** Decreases
 
@@ -895,10 +895,10 @@ D. Expires worthless
 
 **Options:**
 
-A. Seller only
-B. Buyer only
-C. Both buyer and seller
-D. Neither
+A) Seller only
+B) Buyer only
+C) Both buyer and seller
+D) Neither
 
 **Answer:** Buyer only
 
@@ -910,10 +910,10 @@ D. Neither
 
 **Options:**
 
-A. Only after expiry
-B. Without other party’s consent
-C. Only if both parties agree
-D. It cannot be cancelled
+A) Only after expiry
+B) Without other party’s consent
+C) Only if both parties agree
+D) It cannot be cancelled
 
 **Answer:** Only if both parties agree
 
@@ -925,10 +925,10 @@ D. It cannot be cancelled
 
 **Options:**
 
-A. 21 contracts
-B. 14 contracts
-C. 7 contracts
-D. Exchange decides
+A) 21 contracts
+B) 14 contracts
+C) 7 contracts
+D) Exchange decides
 
 **Answer:** 7 contracts
 
@@ -940,8 +940,8 @@ D. Exchange decides
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -953,8 +953,8 @@ B. No
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -966,10 +966,10 @@ B. False
 
 **Options:**
 
-A. Volatility
-B. Underlying price
-C. Time to expiry
-D. Interest rate
+A) Volatility
+B) Underlying price
+C) Time to expiry
+D) Interest rate
 
 **Answer:** Time to expiry
 
@@ -981,8 +981,8 @@ D. Interest rate
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -994,8 +994,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1007,10 +1007,10 @@ B. False
 
 **Options:**
 
-A. True only for European options
-B. True only for American options
-C. True for all types of options
-D. False for all options
+A) True only for European options
+B) True only for American options
+C) True for all types of options
+D) False for all options
 
 **Answer:** True for all types of options
 
@@ -1022,10 +1022,10 @@ D. False for all options
 
 **Options:**
 
-A. Lower technology requirement
-B. No need for exchange
-C. More transparency in price and execution
-D. No setup cost
+A) Lower technology requirement
+B) No need for exchange
+C) More transparency in price and execution
+D) No setup cost
 
 **Answer:** More transparency in price and execution
 
@@ -1037,10 +1037,10 @@ D. No setup cost
 
 **Options:**
 
-A. Educational qualification
-B. Experience
-C. Funds deposited with Clearing Corporation
-D. Age
+A) Educational qualification
+B) Experience
+C) Funds deposited with Clearing Corporation
+D) Age
 
 **Answer:** Funds deposited with Clearing Corporation
 
@@ -1052,10 +1052,10 @@ D. Age
 
 **Options:**
 
-A. Increases
-B. Decreases
-C. No change
-D. Becomes negative
+A) Increases
+B) Decreases
+C) No change
+D) Becomes negative
 
 **Answer:** Decreases
 
@@ -1067,8 +1067,8 @@ D. Becomes negative
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1080,10 +1080,10 @@ B. False
 
 **Options:**
 
-A. Bearish
-B. Neutral
-C. Bullish
-D. Mixed
+A) Bearish
+B) Neutral
+C) Bullish
+D) Mixed
 
 **Answer:** Bullish
 
@@ -1095,10 +1095,10 @@ D. Mixed
 
 **Options:**
 
-A. Current month contract
-B. Next month contract
-C. Expiry month only
-D. Far month contract
+A) Current month contract
+B) Next month contract
+C) Expiry month only
+D) Far month contract
 
 **Answer:** Current month contract
 
@@ -1110,10 +1110,10 @@ D. Far month contract
 
 **Options:**
 
-A. Volatility
-B. Time to expiry
-C. Underlying price
-D. Interest rates
+A) Volatility
+B) Time to expiry
+C) Underlying price
+D) Interest rates
 
 **Answer:** Interest rates
 
@@ -1125,10 +1125,10 @@ D. Interest rates
 
 **Options:**
 
-A. Interest rate
-B. Volatility
-C. Difference between futures price and spot price
-D. Market price
+A) Interest rate
+B) Volatility
+C) Difference between futures price and spot price
+D) Market price
 
 **Answer:** Difference between futures price and spot price
 
@@ -1140,10 +1140,10 @@ D. Market price
 
 **Options:**
 
-A. Buying futures expecting good results
-B. Arbitrage between months
-C. Hedging portfolio
-D. Protecting against loss
+A) Buying futures expecting good results
+B) Arbitrage between months
+C) Hedging portfolio
+D) Protecting against loss
 
 **Answer:** Buying futures expecting good results
 
@@ -1155,10 +1155,10 @@ D. Protecting against loss
 
 **Options:**
 
-A. Only Market Makers
-B. Only Foreign Portfolio Investors
-C. Only Individuals
-D. All of the above
+A) Only Market Makers
+B) Only Foreign Portfolio Investors
+C) Only Individuals
+D) All of the above
 
 **Answer:** All of the above
 
@@ -1170,10 +1170,10 @@ D. All of the above
 
 **Options:**
 
-A. Higher than Ask price
-B. Lower than Ask price
-C. Equal to Ask price
-D. Random
+A) Higher than Ask price
+B) Lower than Ask price
+C) Equal to Ask price
+D) Random
 
 **Answer:** Lower than Ask price
 
@@ -1185,8 +1185,8 @@ D. Random
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1198,10 +1198,10 @@ B. False
 
 **Options:**
 
-A. Only buyer
-B. Only seller
-C. Both buyer and seller
-D. No one
+A) Only buyer
+B) Only seller
+C) Both buyer and seller
+D) No one
 
 **Answer:** Both buyer and seller
 
@@ -1213,10 +1213,10 @@ D. No one
 
 **Options:**
 
-A. Trading-cum-Clearing Member
-B. Self-Clearing Member
-C. Professional Clearing Member
-D. Custodial Participant
+A) Trading-cum-Clearing Member
+B) Self-Clearing Member
+C) Professional Clearing Member
+D) Custodial Participant
 
 **Answer:** Professional Clearing Member
 
@@ -1228,10 +1228,10 @@ D. Custodial Participant
 
 **Options:**
 
-A. 5 years
-B. 7 years
-C. 8 years
-D. 10 years
+A) 5 years
+B) 7 years
+C) 8 years
+D) 10 years
 
 **Answer:** 8 years
 
@@ -1243,10 +1243,10 @@ D. 10 years
 
 **Options:**
 
-A. Contract Note
-B. Risk Disclosure Document
-C. Verbal explanation
-D. None
+A) Contract Note
+B) Risk Disclosure Document
+C) Verbal explanation
+D) None
 
 **Answer:** Risk Disclosure Document
 
@@ -1258,10 +1258,10 @@ D. None
 
 **Options:**
 
-A. Sum of individual betas
-B. Simple average of betas
-C. Beta of largest stock
-D. Value-weighted average of betas
+A) Sum of individual betas
+B) Simple average of betas
+C) Beta of largest stock
+D) Value-weighted average of betas
 
 **Answer:** Value-weighted average of betas
 
@@ -1273,10 +1273,10 @@ D. Value-weighted average of betas
 
 **Options:**
 
-A. Very high
-B. Moderate
-C. 25% of deliveries
-D. Does not exist
+A) Very high
+B) Moderate
+C) 25% of deliveries
+D) Does not exist
 
 **Answer:** Does not exist
 
@@ -1288,10 +1288,10 @@ D. Does not exist
 
 **Options:**
 
-A. First Wednesday
-B. First Thursday
-C. Last Wednesday
-D. Last Thursday
+A) First Wednesday
+B) First Thursday
+C) Last Wednesday
+D) Last Thursday
 
 **Answer:** Last Thursday
 
@@ -1303,8 +1303,8 @@ D. Last Thursday
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1316,8 +1316,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1329,10 +1329,10 @@ B. False
 
 **Options:**
 
-A. ₹4,165,000
-B. ₹83,300
-C. ₹5,831
-D. ₹291,550
+A) ₹4,165,000
+B) ₹83,300
+C) ₹5,831
+D) ₹291,550
 
 **Answer:** ₹291,550
 
@@ -1344,8 +1344,8 @@ D. ₹291,550
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1357,8 +1357,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1370,8 +1370,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1383,10 +1383,10 @@ B. False
 
 **Options:**
 
-A. At the Money
-B. Out of the Money
-C. In the Money
-D. None of the above
+A) At the Money
+B) Out of the Money
+C) In the Money
+D) None of the above
 
 **Answer:** In the Money
 
@@ -1398,8 +1398,8 @@ D. None of the above
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1411,8 +1411,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1424,8 +1424,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1437,10 +1437,10 @@ B. False
 
 **Options:**
 
-A. Increase in price of the underlying
-B. No change in price
-C. Decrease in price
-D. Both A and B
+A) Increase in price of the underlying
+B) No change in price
+C) Decrease in price
+D) Both A and B
 
 **Answer:** Both A and B
 

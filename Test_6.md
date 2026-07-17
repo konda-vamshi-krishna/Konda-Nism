@@ -4,10 +4,10 @@
 
 **Options:**
 
-A. Lowest price
-B. Highest quantity
-C. Highest price
-D. Earliest time stamp
+A) Lowest price
+B) Highest quantity
+C) Highest price
+D) Earliest time stamp
 
 **Answer:** Highest price
 
@@ -19,10 +19,10 @@ D. Earliest time stamp
 
 **Options:**
 
-A. Highest price
-B. Highest quantity
-C. Lowest price
-D. Latest time stamp
+A) Highest price
+B) Highest quantity
+C) Lowest price
+D) Latest time stamp
 
 **Answer:** Lowest price
 
@@ -34,10 +34,10 @@ D. Latest time stamp
 
 **Options:**
 
-A. Corporate Manager
-B. Branch Manager
-C. Dealer
-D. Client
+A) Corporate Manager
+B) Branch Manager
+C) Dealer
+D) Client
 
 **Answer:** Dealer
 
@@ -49,10 +49,10 @@ D. Client
 
 **Options:**
 
-A. IOC order
-B. Limit order
-C. Stop-loss order
-D. Day order
+A) IOC order
+B) Limit order
+C) Stop-loss order
+D) Day order
 
 **Answer:** Day order
 
@@ -64,10 +64,10 @@ D. Day order
 
 **Options:**
 
-A. Day order
-B. Limit order
-C. IOC order
-D. Market order
+A) Day order
+B) Limit order
+C) IOC order
+D) Market order
 
 **Answer:** IOC order
 
@@ -79,10 +79,10 @@ D. Market order
 
 **Options:**
 
-A. Market order
-B. Stop-loss order
-C. Limit order
-D. Day order
+A) Market order
+B) Stop-loss order
+C) Limit order
+D) Day order
 
 **Answer:** Limit order
 
@@ -94,10 +94,10 @@ D. Day order
 
 **Options:**
 
-A. Limit order
-B. Market order
-C. Stop-loss order
-D. IOC order
+A) Limit order
+B) Market order
+C) Stop-loss order
+D) IOC order
 
 **Answer:** Market order
 
@@ -109,10 +109,10 @@ D. IOC order
 
 **Options:**
 
-A. Day order
-B. IOC order
-C. Stop-loss order
-D. Limit order
+A) Day order
+B) IOC order
+C) Stop-loss order
+D) Limit order
 
 **Answer:** Stop-loss order
 
@@ -124,10 +124,10 @@ D. Limit order
 
 **Options:**
 
-A. Bearish signal
-B. Bullish signal
-C. Neutral signal
-D. High volatility signal
+A) Bearish signal
+B) Bullish signal
+C) Neutral signal
+D) High volatility signal
 
 **Answer:** Bullish signal
 
@@ -139,10 +139,10 @@ D. High volatility signal
 
 **Options:**
 
-A. Bearish signal
-B. Bullish signal
-C. Neutral signal
-D. Low volatility signal
+A) Bearish signal
+B) Bullish signal
+C) Neutral signal
+D) Low volatility signal
 
 **Answer:** Bearish signal
 
@@ -154,10 +154,10 @@ D. Low volatility signal
 
 **Options:**
 
-A. Vertical Spread
-B. Diagonal Spread
-C. Horizontal Spread or Calendar Spread
-D. Butterfly Spread
+A) Vertical Spread
+B) Diagonal Spread
+C) Horizontal Spread or Calendar Spread
+D) Butterfly Spread
 
 **Answer:** Horizontal Spread or Calendar Spread
 
@@ -169,10 +169,10 @@ D. Butterfly Spread
 
 **Options:**
 
-A. Vertical Spread
-B. Horizontal Spread
-C. Diagonal Spread
-D. Straddle
+A) Vertical Spread
+B) Horizontal Spread
+C) Diagonal Spread
+D) Straddle
 
 **Answer:** Diagonal Spread
 
@@ -184,10 +184,10 @@ D. Straddle
 
 **Options:**
 
-A. Strangle
-B. Butterfly Spread
-C. Long Straddle
-D. Short Straddle
+A) Strangle
+B) Butterfly Spread
+C) Long Straddle
+D) Short Straddle
 
 **Answer:** Long Straddle
 
@@ -199,10 +199,10 @@ D. Short Straddle
 
 **Options:**
 
-A. The price of the underlying to remain stable
-B. A significant movement in the price of the underlying in either direction
-C. The price of the underlying to rise significantly
-D. The price of the underlying to fall significantly
+A) The price of the underlying to remain stable
+B) A significant movement in the price of the underlying in either direction
+C) The price of the underlying to rise significantly
+D) The price of the underlying to fall significantly
 
 **Answer:** A significant movement in the price of the underlying in either direction
 
@@ -214,10 +214,10 @@ D. The price of the underlying to fall significantly
 
 **Options:**
 
-A. Unlimited
-B. The strike price difference
-C. The sum of the premiums paid
-D. Zero
+A) Unlimited
+B) The strike price difference
+C) The sum of the premiums paid
+D) Zero
 
 **Answer:** The sum of the premiums paid
 
@@ -229,10 +229,10 @@ D. Zero
 
 **Options:**
 
-A. One
-B. Two
-C. Three
-D. Zero
+A) One
+B) Two
+C) Three
+D) Zero
 
 **Answer:** Two
 
@@ -244,10 +244,10 @@ D. Zero
 
 **Options:**
 
-A. Deep OTM
-B. ATM
-C. Deep ITM
-D. All have the same intrinsic value
+A) Deep OTM
+B) ATM
+C) Deep ITM
+D) All have the same intrinsic value
 
 **Answer:** Deep ITM
 
@@ -259,10 +259,10 @@ D. All have the same intrinsic value
 
 **Options:**
 
-A. ITM
-B. ATM and OTM
-C. Deep ITM
-D. All three have only time value
+A) ITM
+B) ATM and OTM
+C) Deep ITM
+D) All three have only time value
 
 **Answer:** ATM and OTM
 
@@ -274,10 +274,10 @@ D. All three have only time value
 
 **Options:**
 
-A. American style
-B. European style
-C. Bermudan style
-D. Asian style
+A) American style
+B) European style
+C) Bermudan style
+D) Asian style
 
 **Answer:** European style
 
@@ -289,10 +289,10 @@ D. Asian style
 
 **Options:**
 
-A. Writer
-B. Seller
-C. Holder
-D. Assignee
+A) Writer
+B) Seller
+C) Holder
+D) Assignee
 
 **Answer:** Holder
 
@@ -304,10 +304,10 @@ D. Assignee
 
 **Options:**
 
-A. Buyer
-B. Holder
-C. Exerciser
-D. Writer
+A) Buyer
+B) Holder
+C) Exerciser
+D) Writer
 
 **Answer:** Writer
 
@@ -319,10 +319,10 @@ D. Writer
 
 **Options:**
 
-A. -Rs. 40
-B. Rs. 0
-C. Rs. 40
-D. Rs. 60
+A) -Rs. 40
+B) Rs. 0
+C) Rs. 40
+D) Rs. 60
 
 **Answer:** Rs. 40
 
@@ -334,10 +334,10 @@ D. Rs. 60
 
 **Options:**
 
-A. -Rs. 20
-B. Rs. 0
-C. Rs. 20
-D. Rs. 120
+A) -Rs. 20
+B) Rs. 0
+C) Rs. 20
+D) Rs. 120
 
 **Answer:** -Rs. 20
 
@@ -349,10 +349,10 @@ D. Rs. 120
 
 **Options:**
 
-A. Cash contract
-B. Spot contract
-C. Underlying contract
-D. Derivative contract
+A) Cash contract
+B) Spot contract
+C) Underlying contract
+D) Derivative contract
 
 **Answer:** Derivative contract
 
@@ -364,10 +364,10 @@ D. Derivative contract
 
 **Options:**
 
-A. Shares
-B. Financial statements
-C. Foreign Exchange
-D. Energy resources
+A) Shares
+B) Financial statements
+C) Foreign Exchange
+D) Energy resources
 
 **Answer:** Financial statements
 
@@ -379,10 +379,10 @@ D. Energy resources
 
 **Options:**
 
-A. Real estate
-B. Art collections
-C. Financial assets
-D. Intellectual property
+A) Real estate
+B) Art collections
+C) Financial assets
+D) Intellectual property
 
 **Answer:** Financial assets
 
@@ -394,10 +394,10 @@ D. Intellectual property
 
 **Options:**
 
-A. 10th Century
-B. 12th Century
-C. 15th Century
-D. 18th Century
+A) 10th Century
+B) 12th Century
+C) 15th Century
+D) 18th Century
 
 **Answer:** 12th Century
 
@@ -409,10 +409,10 @@ D. 18th Century
 
 **Options:**
 
-A. Up to 5 years
-B. Up to 10 years
-C. Up to 15 years
-D. Up to 20 years
+A) Up to 5 years
+B) Up to 10 years
+C) Up to 15 years
+D) Up to 20 years
 
 **Answer:** Up to 20 years
 
@@ -424,10 +424,10 @@ D. Up to 20 years
 
 **Options:**
 
-A. 1580-1583
-B. 1634-1637
-C. 1701-1705
-D. 1810-1814
+A) 1580-1583
+B) 1634-1637
+C) 1701-1705
+D) 1810-1814
 
 **Answer:** 1634-1637
 
@@ -439,10 +439,10 @@ D. 1810-1814
 
 **Options:**
 
-A. Silk
-B. Tea
-C. Rice
-D. Soybeans
+A) Silk
+B) Tea
+C) Rice
+D) Soybeans
 
 **Answer:** Rice
 
@@ -454,10 +454,10 @@ D. Soybeans
 
 **Options:**
 
-A. 1800
-B. 1848
-C. 1900
-D. 1950
+A) 1800
+B) 1848
+C) 1900
+D) 1950
 
 **Answer:** 1848
 
@@ -469,10 +469,10 @@ D. 1950
 
 **Options:**
 
-A. 1855
-B. 1860
-C. 1865
-D. 1870
+A) 1855
+B) 1860
+C) 1865
+D) 1870
 
 **Answer:** 1865
 
@@ -484,10 +484,10 @@ D. 1870
 
 **Options:**
 
-A. Chicago Stock Exchange
-B. New York Mercantile Exchange
-C. Chicago Mercantile Exchange
-D. London Metal Exchange
+A) Chicago Stock Exchange
+B) New York Mercantile Exchange
+C) Chicago Mercantile Exchange
+D) London Metal Exchange
 
 **Answer:** Chicago Mercantile Exchange
 
@@ -499,10 +499,10 @@ D. London Metal Exchange
 
 **Options:**
 
-A. Interest rate futures
-B. Stock index futures
-C. Currency futures
-D. Commodity futures
+A) Interest rate futures
+B) Stock index futures
+C) Currency futures
+D) Commodity futures
 
 **Answer:** Currency futures
 
@@ -514,10 +514,10 @@ D. Commodity futures
 
 **Options:**
 
-A. Chicago Mercantile Exchange (CME)
-B. Chicago Board of Trade (CBOT)
-C. Chicago Board Options Exchange (CBOE)
-D. New York Stock Exchange (NYSE)
+A) Chicago Mercantile Exchange (CME)
+B) Chicago Board of Trade (CBOT)
+C) Chicago Board Options Exchange (CBOE)
+D) New York Stock Exchange (NYSE)
 
 **Answer:** Chicago Board Options Exchange (CBOE)
 
@@ -529,10 +529,10 @@ D. New York Stock Exchange (NYSE)
 
 **Options:**
 
-A. CME
-B. CBOT
-C. CBOE
-D. IMM
+A) CME
+B) CBOT
+C) CBOE
+D) IMM
 
 **Answer:** CBOT
 
@@ -544,10 +544,10 @@ D. IMM
 
 **Options:**
 
-A. 1979
-B. 1981
-C. 1982
-D. 1985
+A) 1979
+B) 1981
+C) 1982
+D) 1985
 
 **Answer:** 1982
 
@@ -559,944 +559,14 @@ D. 1985
 
 **Options:**
 
-A. Dow Jones and NASDAQ
-B. FTSE 100 and DAX
-C. S&P 100 and S&P 500
-D. Nikkei 225 and Hang Seng
+A) Dow Jones and NASDAQ
+B) FTSE 100 and DAX
+C) S&P 100 and S&P 500
+D) Nikkei 225 and Hang Seng
 
 **Answer:** S&P 100 and S&P 500
 
 **Explanation:** CBOE introduced options on stock indices using the S&P 100 (OEX) and S&P 500 (SPXSM) Indices in 1983.
-
----
-
-**Question 39:** [Ref. Question] An ABC Call option with a strike price of Rs. 19500 has a premium of Rs. 175 and a Delta of 0.55. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 202.5
-B. Rs. 225
-C. Rs. 150
-D. Rs. 212.5
-
-**Answer:** A. Rs. 202.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 175 + (0.55 * 50) = Rs. 202.5.
-
----
-
-**Question 40:** [Ref. Question] An ABC Call option with a strike price of Rs. 19600 has a premium of Rs. 180 and a Delta of 0.56. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 208.0
-B. Rs. 230
-C. Rs. 155
-D. Rs. 218.0
-
-**Answer:** A. Rs. 208.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 180 + (0.56 * 50) = Rs. 208.0.
-
----
-
-**Question 41:** [Ref. Question] An ABC Call option with a strike price of Rs. 19700 has a premium of Rs. 185 and a Delta of 0.57. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 213.5
-B. Rs. 235
-C. Rs. 160
-D. Rs. 223.5
-
-**Answer:** A. Rs. 213.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 185 + (0.57 * 50) = Rs. 213.5.
-
----
-
-**Question 42:** [Ref. Question] An ABC Call option with a strike price of Rs. 19800 has a premium of Rs. 190 and a Delta of 0.58. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 219.0
-B. Rs. 240
-C. Rs. 165
-D. Rs. 229.0
-
-**Answer:** A. Rs. 219.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 190 + (0.58 * 50) = Rs. 219.0.
-
----
-
-**Question 43:** [Ref. Question] An ABC Call option with a strike price of Rs. 19900 has a premium of Rs. 195 and a Delta of 0.59. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 224.5
-B. Rs. 245
-C. Rs. 170
-D. Rs. 234.5
-
-**Answer:** A. Rs. 224.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 195 + (0.59 * 50) = Rs. 224.5.
-
----
-
-**Question 44:** [Ref. Question] An ABC Call option with a strike price of Rs. 20000 has a premium of Rs. 200 and a Delta of 0.6. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 230.0
-B. Rs. 250
-C. Rs. 175
-D. Rs. 240.0
-
-**Answer:** A. Rs. 230.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 200 + (0.6 * 50) = Rs. 230.0.
-
----
-
-**Question 45:** [Ref. Question] An ABC Call option with a strike price of Rs. 20100 has a premium of Rs. 205 and a Delta of 0.61. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 235.5
-B. Rs. 255
-C. Rs. 180
-D. Rs. 245.5
-
-**Answer:** A. Rs. 235.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 205 + (0.61 * 50) = Rs. 235.5.
-
----
-
-**Question 46:** [Ref. Question] An ABC Call option with a strike price of Rs. 20200 has a premium of Rs. 210 and a Delta of 0.62. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 241.0
-B. Rs. 260
-C. Rs. 185
-D. Rs. 251.0
-
-**Answer:** A. Rs. 241.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 210 + (0.62 * 50) = Rs. 241.0.
-
----
-
-**Question 47:** [Ref. Question] An ABC Call option with a strike price of Rs. 20300 has a premium of Rs. 215 and a Delta of 0.63. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 246.5
-B. Rs. 265
-C. Rs. 190
-D. Rs. 256.5
-
-**Answer:** A. Rs. 246.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 215 + (0.63 * 50) = Rs. 246.5.
-
----
-
-**Question 48:** [Ref. Question] An ABC Call option with a strike price of Rs. 20400 has a premium of Rs. 220 and a Delta of 0.64. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 252.0
-B. Rs. 270
-C. Rs. 195
-D. Rs. 262.0
-
-**Answer:** A. Rs. 252.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 220 + (0.64 * 50) = Rs. 252.0.
-
----
-
-**Question 49:** [Ref. Question] An ABC Call option with a strike price of Rs. 20500 has a premium of Rs. 225 and a Delta of 0.65. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 257.5
-B. Rs. 275
-C. Rs. 200
-D. Rs. 267.5
-
-**Answer:** A. Rs. 257.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 225 + (0.65 * 50) = Rs. 257.5.
-
----
-
-**Question 50:** [Ref. Question] An ABC Call option with a strike price of Rs. 20600 has a premium of Rs. 230 and a Delta of 0.66. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 263.0
-B. Rs. 280
-C. Rs. 205
-D. Rs. 273.0
-
-**Answer:** A. Rs. 263.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 230 + (0.66 * 50) = Rs. 263.0.
-
----
-
-**Question 51:** [Ref. Question] An ABC Call option with a strike price of Rs. 20700 has a premium of Rs. 235 and a Delta of 0.67. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 268.5
-B. Rs. 285
-C. Rs. 210
-D. Rs. 278.5
-
-**Answer:** A. Rs. 268.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 235 + (0.67 * 50) = Rs. 268.5.
-
----
-
-**Question 52:** [Ref. Question] An ABC Call option with a strike price of Rs. 20800 has a premium of Rs. 240 and a Delta of 0.68. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 274.0
-B. Rs. 290
-C. Rs. 215
-D. Rs. 284.0
-
-**Answer:** A. Rs. 274.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 240 + (0.68 * 50) = Rs. 274.0.
-
----
-
-**Question 53:** [Ref. Question] An ABC Call option with a strike price of Rs. 20900 has a premium of Rs. 245 and a Delta of 0.69. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 279.5
-B. Rs. 295
-C. Rs. 220
-D. Rs. 289.5
-
-**Answer:** A. Rs. 279.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 245 + (0.69 * 50) = Rs. 279.5.
-
----
-
-**Question 54:** [Ref. Question] An ABC Call option with a strike price of Rs. 21000 has a premium of Rs. 250 and a Delta of 0.7. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 285.0
-B. Rs. 300
-C. Rs. 225
-D. Rs. 295.0
-
-**Answer:** A. Rs. 285.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 250 + (0.7 * 50) = Rs. 285.0.
-
----
-
-**Question 55:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15100 (premium Rs. 121) and a Put option at the same strike Rs. 15100 (premium Rs. 91). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15312 | Lower BE: Rs. 14888
-B. Upper BE: Rs. 15221 | Lower BE: Rs. 15009
-C. Upper BE: Rs. 15362 | Lower BE: Rs. 14838
-D. Upper BE: Rs. 15100 | Lower BE: Rs. 14888
-
-**Answer:** A. Upper BE: Rs. 15312 | Lower BE: Rs. 14888
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 121 + 91 = Rs. 212. Upper Break-even = Strike + Total Premium = 15100 + 212 = Rs. 15312. Lower Break-even = Strike - Total Premium = 15100 - 212 = Rs. 14888.
-
----
-
-**Question 56:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15200 (premium Rs. 122) and a Put option at the same strike Rs. 15200 (premium Rs. 92). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15414 | Lower BE: Rs. 14986
-B. Upper BE: Rs. 15322 | Lower BE: Rs. 15108
-C. Upper BE: Rs. 15464 | Lower BE: Rs. 14936
-D. Upper BE: Rs. 15200 | Lower BE: Rs. 14986
-
-**Answer:** A. Upper BE: Rs. 15414 | Lower BE: Rs. 14986
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 122 + 92 = Rs. 214. Upper Break-even = Strike + Total Premium = 15200 + 214 = Rs. 15414. Lower Break-even = Strike - Total Premium = 15200 - 214 = Rs. 14986.
-
----
-
-**Question 57:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15300 (premium Rs. 123) and a Put option at the same strike Rs. 15300 (premium Rs. 93). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15516 | Lower BE: Rs. 15084
-B. Upper BE: Rs. 15423 | Lower BE: Rs. 15207
-C. Upper BE: Rs. 15566 | Lower BE: Rs. 15034
-D. Upper BE: Rs. 15300 | Lower BE: Rs. 15084
-
-**Answer:** A. Upper BE: Rs. 15516 | Lower BE: Rs. 15084
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 123 + 93 = Rs. 216. Upper Break-even = Strike + Total Premium = 15300 + 216 = Rs. 15516. Lower Break-even = Strike - Total Premium = 15300 - 216 = Rs. 15084.
-
----
-
-**Question 58:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15400 (premium Rs. 124) and a Put option at the same strike Rs. 15400 (premium Rs. 94). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15618 | Lower BE: Rs. 15182
-B. Upper BE: Rs. 15524 | Lower BE: Rs. 15306
-C. Upper BE: Rs. 15668 | Lower BE: Rs. 15132
-D. Upper BE: Rs. 15400 | Lower BE: Rs. 15182
-
-**Answer:** A. Upper BE: Rs. 15618 | Lower BE: Rs. 15182
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 124 + 94 = Rs. 218. Upper Break-even = Strike + Total Premium = 15400 + 218 = Rs. 15618. Lower Break-even = Strike - Total Premium = 15400 - 218 = Rs. 15182.
-
----
-
-**Question 59:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15500 (premium Rs. 125) and a Put option at the same strike Rs. 15500 (premium Rs. 95). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15720 | Lower BE: Rs. 15280
-B. Upper BE: Rs. 15625 | Lower BE: Rs. 15405
-C. Upper BE: Rs. 15770 | Lower BE: Rs. 15230
-D. Upper BE: Rs. 15500 | Lower BE: Rs. 15280
-
-**Answer:** A. Upper BE: Rs. 15720 | Lower BE: Rs. 15280
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 125 + 95 = Rs. 220. Upper Break-even = Strike + Total Premium = 15500 + 220 = Rs. 15720. Lower Break-even = Strike - Total Premium = 15500 - 220 = Rs. 15280.
-
----
-
-**Question 60:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15600 (premium Rs. 126) and a Put option at the same strike Rs. 15600 (premium Rs. 96). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15822 | Lower BE: Rs. 15378
-B. Upper BE: Rs. 15726 | Lower BE: Rs. 15504
-C. Upper BE: Rs. 15872 | Lower BE: Rs. 15328
-D. Upper BE: Rs. 15600 | Lower BE: Rs. 15378
-
-**Answer:** A. Upper BE: Rs. 15822 | Lower BE: Rs. 15378
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 126 + 96 = Rs. 222. Upper Break-even = Strike + Total Premium = 15600 + 222 = Rs. 15822. Lower Break-even = Strike - Total Premium = 15600 - 222 = Rs. 15378.
-
----
-
-**Question 61:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15700 (premium Rs. 127) and a Put option at the same strike Rs. 15700 (premium Rs. 97). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 15924 | Lower BE: Rs. 15476
-B. Upper BE: Rs. 15827 | Lower BE: Rs. 15603
-C. Upper BE: Rs. 15974 | Lower BE: Rs. 15426
-D. Upper BE: Rs. 15700 | Lower BE: Rs. 15476
-
-**Answer:** A. Upper BE: Rs. 15924 | Lower BE: Rs. 15476
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 127 + 97 = Rs. 224. Upper Break-even = Strike + Total Premium = 15700 + 224 = Rs. 15924. Lower Break-even = Strike - Total Premium = 15700 - 224 = Rs. 15476.
-
----
-
-**Question 62:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15800 (premium Rs. 128) and a Put option at the same strike Rs. 15800 (premium Rs. 98). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16026 | Lower BE: Rs. 15574
-B. Upper BE: Rs. 15928 | Lower BE: Rs. 15702
-C. Upper BE: Rs. 16076 | Lower BE: Rs. 15524
-D. Upper BE: Rs. 15800 | Lower BE: Rs. 15574
-
-**Answer:** A. Upper BE: Rs. 16026 | Lower BE: Rs. 15574
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 128 + 98 = Rs. 226. Upper Break-even = Strike + Total Premium = 15800 + 226 = Rs. 16026. Lower Break-even = Strike - Total Premium = 15800 - 226 = Rs. 15574.
-
----
-
-**Question 63:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 15900 (premium Rs. 129) and a Put option at the same strike Rs. 15900 (premium Rs. 99). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16128 | Lower BE: Rs. 15672
-B. Upper BE: Rs. 16029 | Lower BE: Rs. 15801
-C. Upper BE: Rs. 16178 | Lower BE: Rs. 15622
-D. Upper BE: Rs. 15900 | Lower BE: Rs. 15672
-
-**Answer:** A. Upper BE: Rs. 16128 | Lower BE: Rs. 15672
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 129 + 99 = Rs. 228. Upper Break-even = Strike + Total Premium = 15900 + 228 = Rs. 16128. Lower Break-even = Strike - Total Premium = 15900 - 228 = Rs. 15672.
-
----
-
-**Question 64:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16000 (premium Rs. 130) and a Put option at the same strike Rs. 16000 (premium Rs. 100). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16230 | Lower BE: Rs. 15770
-B. Upper BE: Rs. 16130 | Lower BE: Rs. 15900
-C. Upper BE: Rs. 16280 | Lower BE: Rs. 15720
-D. Upper BE: Rs. 16000 | Lower BE: Rs. 15770
-
-**Answer:** A. Upper BE: Rs. 16230 | Lower BE: Rs. 15770
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 130 + 100 = Rs. 230. Upper Break-even = Strike + Total Premium = 16000 + 230 = Rs. 16230. Lower Break-even = Strike - Total Premium = 16000 - 230 = Rs. 15770.
-
----
-
-**Question 65:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16100 (premium Rs. 131) and a Put option at the same strike Rs. 16100 (premium Rs. 101). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16332 | Lower BE: Rs. 15868
-B. Upper BE: Rs. 16231 | Lower BE: Rs. 15999
-C. Upper BE: Rs. 16382 | Lower BE: Rs. 15818
-D. Upper BE: Rs. 16100 | Lower BE: Rs. 15868
-
-**Answer:** A. Upper BE: Rs. 16332 | Lower BE: Rs. 15868
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 131 + 101 = Rs. 232. Upper Break-even = Strike + Total Premium = 16100 + 232 = Rs. 16332. Lower Break-even = Strike - Total Premium = 16100 - 232 = Rs. 15868.
-
----
-
-**Question 66:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16200 (premium Rs. 132) and a Put option at the same strike Rs. 16200 (premium Rs. 102). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16434 | Lower BE: Rs. 15966
-B. Upper BE: Rs. 16332 | Lower BE: Rs. 16098
-C. Upper BE: Rs. 16484 | Lower BE: Rs. 15916
-D. Upper BE: Rs. 16200 | Lower BE: Rs. 15966
-
-**Answer:** A. Upper BE: Rs. 16434 | Lower BE: Rs. 15966
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 132 + 102 = Rs. 234. Upper Break-even = Strike + Total Premium = 16200 + 234 = Rs. 16434. Lower Break-even = Strike - Total Premium = 16200 - 234 = Rs. 15966.
-
----
-
-**Question 67:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16300 (premium Rs. 133) and a Put option at the same strike Rs. 16300 (premium Rs. 103). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16536 | Lower BE: Rs. 16064
-B. Upper BE: Rs. 16433 | Lower BE: Rs. 16197
-C. Upper BE: Rs. 16586 | Lower BE: Rs. 16014
-D. Upper BE: Rs. 16300 | Lower BE: Rs. 16064
-
-**Answer:** A. Upper BE: Rs. 16536 | Lower BE: Rs. 16064
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 133 + 103 = Rs. 236. Upper Break-even = Strike + Total Premium = 16300 + 236 = Rs. 16536. Lower Break-even = Strike - Total Premium = 16300 - 236 = Rs. 16064.
-
----
-
-**Question 68:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16400 (premium Rs. 134) and a Put option at the same strike Rs. 16400 (premium Rs. 104). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16638 | Lower BE: Rs. 16162
-B. Upper BE: Rs. 16534 | Lower BE: Rs. 16296
-C. Upper BE: Rs. 16688 | Lower BE: Rs. 16112
-D. Upper BE: Rs. 16400 | Lower BE: Rs. 16162
-
-**Answer:** A. Upper BE: Rs. 16638 | Lower BE: Rs. 16162
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 134 + 104 = Rs. 238. Upper Break-even = Strike + Total Premium = 16400 + 238 = Rs. 16638. Lower Break-even = Strike - Total Premium = 16400 - 238 = Rs. 16162.
-
----
-
-**Question 69:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16500 (premium Rs. 135) and a Put option at the same strike Rs. 16500 (premium Rs. 105). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16740 | Lower BE: Rs. 16260
-B. Upper BE: Rs. 16635 | Lower BE: Rs. 16395
-C. Upper BE: Rs. 16790 | Lower BE: Rs. 16210
-D. Upper BE: Rs. 16500 | Lower BE: Rs. 16260
-
-**Answer:** A. Upper BE: Rs. 16740 | Lower BE: Rs. 16260
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 135 + 105 = Rs. 240. Upper Break-even = Strike + Total Premium = 16500 + 240 = Rs. 16740. Lower Break-even = Strike - Total Premium = 16500 - 240 = Rs. 16260.
-
----
-
-**Question 70:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16600 (premium Rs. 136) and a Put option at the same strike Rs. 16600 (premium Rs. 106). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16842 | Lower BE: Rs. 16358
-B. Upper BE: Rs. 16736 | Lower BE: Rs. 16494
-C. Upper BE: Rs. 16892 | Lower BE: Rs. 16308
-D. Upper BE: Rs. 16600 | Lower BE: Rs. 16358
-
-**Answer:** A. Upper BE: Rs. 16842 | Lower BE: Rs. 16358
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 136 + 106 = Rs. 242. Upper Break-even = Strike + Total Premium = 16600 + 242 = Rs. 16842. Lower Break-even = Strike - Total Premium = 16600 - 242 = Rs. 16358.
-
----
-
-**Question 71:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16700 (premium Rs. 137) and a Put option at the same strike Rs. 16700 (premium Rs. 107). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 16944 | Lower BE: Rs. 16456
-B. Upper BE: Rs. 16837 | Lower BE: Rs. 16593
-C. Upper BE: Rs. 16994 | Lower BE: Rs. 16406
-D. Upper BE: Rs. 16700 | Lower BE: Rs. 16456
-
-**Answer:** A. Upper BE: Rs. 16944 | Lower BE: Rs. 16456
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 137 + 107 = Rs. 244. Upper Break-even = Strike + Total Premium = 16700 + 244 = Rs. 16944. Lower Break-even = Strike - Total Premium = 16700 - 244 = Rs. 16456.
-
----
-
-**Question 72:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16800 (premium Rs. 138) and a Put option at the same strike Rs. 16800 (premium Rs. 108). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17046 | Lower BE: Rs. 16554
-B. Upper BE: Rs. 16938 | Lower BE: Rs. 16692
-C. Upper BE: Rs. 17096 | Lower BE: Rs. 16504
-D. Upper BE: Rs. 16800 | Lower BE: Rs. 16554
-
-**Answer:** A. Upper BE: Rs. 17046 | Lower BE: Rs. 16554
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 138 + 108 = Rs. 246. Upper Break-even = Strike + Total Premium = 16800 + 246 = Rs. 17046. Lower Break-even = Strike - Total Premium = 16800 - 246 = Rs. 16554.
-
----
-
-**Question 73:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 16900 (premium Rs. 139) and a Put option at the same strike Rs. 16900 (premium Rs. 109). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17148 | Lower BE: Rs. 16652
-B. Upper BE: Rs. 17039 | Lower BE: Rs. 16791
-C. Upper BE: Rs. 17198 | Lower BE: Rs. 16602
-D. Upper BE: Rs. 16900 | Lower BE: Rs. 16652
-
-**Answer:** A. Upper BE: Rs. 17148 | Lower BE: Rs. 16652
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 139 + 109 = Rs. 248. Upper Break-even = Strike + Total Premium = 16900 + 248 = Rs. 17148. Lower Break-even = Strike - Total Premium = 16900 - 248 = Rs. 16652.
-
----
-
-**Question 74:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17000 (premium Rs. 140) and a Put option at the same strike Rs. 17000 (premium Rs. 110). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17250 | Lower BE: Rs. 16750
-B. Upper BE: Rs. 17140 | Lower BE: Rs. 16890
-C. Upper BE: Rs. 17300 | Lower BE: Rs. 16700
-D. Upper BE: Rs. 17000 | Lower BE: Rs. 16750
-
-**Answer:** A. Upper BE: Rs. 17250 | Lower BE: Rs. 16750
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 140 + 110 = Rs. 250. Upper Break-even = Strike + Total Premium = 17000 + 250 = Rs. 17250. Lower Break-even = Strike - Total Premium = 17000 - 250 = Rs. 16750.
-
----
-
-**Question 75:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17100 (premium Rs. 141) and a Put option at the same strike Rs. 17100 (premium Rs. 111). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17352 | Lower BE: Rs. 16848
-B. Upper BE: Rs. 17241 | Lower BE: Rs. 16989
-C. Upper BE: Rs. 17402 | Lower BE: Rs. 16798
-D. Upper BE: Rs. 17100 | Lower BE: Rs. 16848
-
-**Answer:** A. Upper BE: Rs. 17352 | Lower BE: Rs. 16848
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 141 + 111 = Rs. 252. Upper Break-even = Strike + Total Premium = 17100 + 252 = Rs. 17352. Lower Break-even = Strike - Total Premium = 17100 - 252 = Rs. 16848.
-
----
-
-**Question 76:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17200 (premium Rs. 142) and a Put option at the same strike Rs. 17200 (premium Rs. 112). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17454 | Lower BE: Rs. 16946
-B. Upper BE: Rs. 17342 | Lower BE: Rs. 17088
-C. Upper BE: Rs. 17504 | Lower BE: Rs. 16896
-D. Upper BE: Rs. 17200 | Lower BE: Rs. 16946
-
-**Answer:** A. Upper BE: Rs. 17454 | Lower BE: Rs. 16946
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 142 + 112 = Rs. 254. Upper Break-even = Strike + Total Premium = 17200 + 254 = Rs. 17454. Lower Break-even = Strike - Total Premium = 17200 - 254 = Rs. 16946.
-
----
-
-**Question 77:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17300 (premium Rs. 143) and a Put option at the same strike Rs. 17300 (premium Rs. 113). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17556 | Lower BE: Rs. 17044
-B. Upper BE: Rs. 17443 | Lower BE: Rs. 17187
-C. Upper BE: Rs. 17606 | Lower BE: Rs. 16994
-D. Upper BE: Rs. 17300 | Lower BE: Rs. 17044
-
-**Answer:** A. Upper BE: Rs. 17556 | Lower BE: Rs. 17044
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 143 + 113 = Rs. 256. Upper Break-even = Strike + Total Premium = 17300 + 256 = Rs. 17556. Lower Break-even = Strike - Total Premium = 17300 - 256 = Rs. 17044.
-
----
-
-**Question 78:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17400 (premium Rs. 144) and a Put option at the same strike Rs. 17400 (premium Rs. 114). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17658 | Lower BE: Rs. 17142
-B. Upper BE: Rs. 17544 | Lower BE: Rs. 17286
-C. Upper BE: Rs. 17708 | Lower BE: Rs. 17092
-D. Upper BE: Rs. 17400 | Lower BE: Rs. 17142
-
-**Answer:** A. Upper BE: Rs. 17658 | Lower BE: Rs. 17142
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 144 + 114 = Rs. 258. Upper Break-even = Strike + Total Premium = 17400 + 258 = Rs. 17658. Lower Break-even = Strike - Total Premium = 17400 - 258 = Rs. 17142.
-
----
-
-**Question 79:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17500 (premium Rs. 145) and a Put option at the same strike Rs. 17500 (premium Rs. 115). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17760 | Lower BE: Rs. 17240
-B. Upper BE: Rs. 17645 | Lower BE: Rs. 17385
-C. Upper BE: Rs. 17810 | Lower BE: Rs. 17190
-D. Upper BE: Rs. 17500 | Lower BE: Rs. 17240
-
-**Answer:** A. Upper BE: Rs. 17760 | Lower BE: Rs. 17240
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 145 + 115 = Rs. 260. Upper Break-even = Strike + Total Premium = 17500 + 260 = Rs. 17760. Lower Break-even = Strike - Total Premium = 17500 - 260 = Rs. 17240.
-
----
-
-**Question 80:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17600 (premium Rs. 146) and a Put option at the same strike Rs. 17600 (premium Rs. 116). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17862 | Lower BE: Rs. 17338
-B. Upper BE: Rs. 17746 | Lower BE: Rs. 17484
-C. Upper BE: Rs. 17912 | Lower BE: Rs. 17288
-D. Upper BE: Rs. 17600 | Lower BE: Rs. 17338
-
-**Answer:** A. Upper BE: Rs. 17862 | Lower BE: Rs. 17338
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 146 + 116 = Rs. 262. Upper Break-even = Strike + Total Premium = 17600 + 262 = Rs. 17862. Lower Break-even = Strike - Total Premium = 17600 - 262 = Rs. 17338.
-
----
-
-**Question 81:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17700 (premium Rs. 147) and a Put option at the same strike Rs. 17700 (premium Rs. 117). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 17964 | Lower BE: Rs. 17436
-B. Upper BE: Rs. 17847 | Lower BE: Rs. 17583
-C. Upper BE: Rs. 18014 | Lower BE: Rs. 17386
-D. Upper BE: Rs. 17700 | Lower BE: Rs. 17436
-
-**Answer:** A. Upper BE: Rs. 17964 | Lower BE: Rs. 17436
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 147 + 117 = Rs. 264. Upper Break-even = Strike + Total Premium = 17700 + 264 = Rs. 17964. Lower Break-even = Strike - Total Premium = 17700 - 264 = Rs. 17436.
-
----
-
-**Question 82:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17800 (premium Rs. 148) and a Put option at the same strike Rs. 17800 (premium Rs. 118). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 18066 | Lower BE: Rs. 17534
-B. Upper BE: Rs. 17948 | Lower BE: Rs. 17682
-C. Upper BE: Rs. 18116 | Lower BE: Rs. 17484
-D. Upper BE: Rs. 17800 | Lower BE: Rs. 17534
-
-**Answer:** A. Upper BE: Rs. 18066 | Lower BE: Rs. 17534
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 148 + 118 = Rs. 266. Upper Break-even = Strike + Total Premium = 17800 + 266 = Rs. 18066. Lower Break-even = Strike - Total Premium = 17800 - 266 = Rs. 17534.
-
----
-
-**Question 83:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17900 (premium Rs. 149) and a Put option at the same strike Rs. 17900 (premium Rs. 119). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 18168 | Lower BE: Rs. 17632
-B. Upper BE: Rs. 18049 | Lower BE: Rs. 17781
-C. Upper BE: Rs. 18218 | Lower BE: Rs. 17582
-D. Upper BE: Rs. 17900 | Lower BE: Rs. 17632
-
-**Answer:** A. Upper BE: Rs. 18168 | Lower BE: Rs. 17632
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 149 + 119 = Rs. 268. Upper Break-even = Strike + Total Premium = 17900 + 268 = Rs. 18168. Lower Break-even = Strike - Total Premium = 17900 - 268 = Rs. 17632.
-
----
-
-**Question 84:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 18000 (premium Rs. 150) and a Put option at the same strike Rs. 18000 (premium Rs. 120). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 18270 | Lower BE: Rs. 17730
-B. Upper BE: Rs. 18150 | Lower BE: Rs. 17880
-C. Upper BE: Rs. 18320 | Lower BE: Rs. 17680
-D. Upper BE: Rs. 18000 | Lower BE: Rs. 17730
-
-**Answer:** A. Upper BE: Rs. 18270 | Lower BE: Rs. 17730
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 150 + 120 = Rs. 270. Upper Break-even = Strike + Total Premium = 18000 + 270 = Rs. 18270. Lower Break-even = Strike - Total Premium = 18000 - 270 = Rs. 17730.
-
----
-
-**Question 85:** [Ref. Question] Which of the following is responsible for guaranteeing the financial settlement of all trades executed on the equity derivatives segment of an exchange?
-
-**Options:**
-
-A. The Clearing Corporation
-B. SEBI
-C. The Reserve Bank of India (RBI)
-D. The Board of Directors of the Stock Exchange
-
-**Answer:** A. The Clearing Corporation
-
-**Explanation:** The Clearing Corporation acts as a central counterparty (CCP) and guarantees the settlement of all trades by novating the contracts.
-
----
-
-**Question 86:** [Ref. Question] What is the consequence of placing an order on the exchange system at a price outside the operating range?
-
-**Options:**
-
-A. The order goes into a price freeze and requires exchange approval
-B. The order is automatically cancelled
-C. The order is executed at the market price
-D. The trader's account is suspended
-
-**Answer:** A. The order goes into a price freeze and requires exchange approval
-
-**Explanation:** Orders outside the operating range trigger a price freeze and require verification by the exchange before being allowed into the system.
-
----
-
-**Question 87:** [Ref. Question] Which of the following is correct regarding the accounting of equity derivatives by corporate companies?
-
-**Options:**
-
-A. Open interest positions must be marked-to-market and recognized in the balance sheet
-B. Options premium paid is directly debited to the Share Capital account
-C. Derivatives are always kept as off-balance sheet items and never reported
-D. Only profits are recognized, losses are ignored
-
-**Answer:** A. Open interest positions must be marked-to-market and recognized in the balance sheet
-
-**Explanation:** According to Indian accounting standards, derivative contracts are financial instruments and must be recognized on the balance sheet at fair value.
-
----
-
-**Question 88:** [Ref. Question] As per current SEBI guidelines, what is the maximum position limit for a mutual fund house in an index futures contract?
-
-**Options:**
-
-A. Higher of Rs. 500 crores or 15% of the total open interest of the market
-B. Flat 5% of the market open interest
-C. Rs. 100 crores
-D. Mutual funds are not allowed to take positions in index futures
-
-**Answer:** A. Higher of Rs. 500 crores or 15% of the total open interest of the market
-
-**Explanation:** SEBI prescribes position limits for mutual funds as a whole, which is higher of Rs. 500 crores or 15% of the total open interest of the index.
-
----
-
-**Question 89:** [Ref. Question] In option trading, what does the term 'implied volatility' (IV) represent?
-
-**Options:**
-
-A. The market's expectation of the future volatility of the underlying asset as reflected in the option price
-B. The historical standard deviation of the asset's price returns
-C. The tracking error of the index option
-D. The speed at which delta decays
-
-**Answer:** A. The market's expectation of the future volatility of the underlying asset as reflected in the option price
-
-**Explanation:** Implied volatility is the volatility value that, when plugged into an option pricing model (like Black-Scholes), matches the current market price of the option.
-
----
-
-**Question 90:** [Ref. Question] Advanced Concept Question Pool 65: Which of the following best describes the margin term 'Value at Risk' (VaR)?
-
-**Options:**
-
-A. A statistical measure of the maximum potential loss on a portfolio over a specific time horizon at a given confidence level
-B. The absolute minimum cash margin a broker can accept
-C. The total loss incurred on a default
-D. The standard deviation of the risk-free rate
-
-**Answer:** A. A statistical measure of the maximum potential loss on a portfolio over a specific time horizon at a given confidence level
-
-**Explanation:** Value at Risk (VaR) measures the potential loss in value of a risky asset or portfolio over a defined period for a given confidence interval (typically 99% for exchange margins).
-
----
-
-**Question 91:** Which of the following margins is collected on a gross basis across all clients of a trading member?
-
-**Options:**
-
-A. Initial Margin
-B. Extreme Loss Margin
-C. Mark-to-Market Margin
-D. Both A and B
-
-**Answer:** Both A and B
-
-**Explanation:** Initial margin and extreme loss margin are collected on a gross basis at the client level, while MTM can be netted across positions of the same client.
-
----
-
-**Question 92:** In the Black-Scholes model, which of the following parameters is NOT directly observable in the market?
-
-**Options:**
-
-A. Spot price
-B. Strike price
-C. Time to expiration
-D. Volatility
-
-**Answer:** Volatility
-
-**Explanation:** While spot, strike, interest rates, and time to expiry are known, volatility must be estimated or implied from option prices.
-
----
-
-**Question 93:** An investor buys a stock at Rs. 500 and simultaneously buys a Put option of strike Rs. 480 for a premium of Rs. 15. What is the maximum loss the investor can suffer?
-
-**Options:**
-
-A. Rs. 500
-B. Rs. 35
-C. Rs. 20
-D. Rs. 15
-
-**Answer:** Rs. 35
-
-**Explanation:** The investor's downside is protected at 480. Maximum loss = Purchase Price (500) - Strike (480) + Premium Paid (15) = 20 + 15 = Rs. 35.
-
----
-
-**Question 94:** What does the term 'Gamma' indicate in options trading?
-
-**Options:**
-
-A. Sensitivity of option premium to time decay
-B. Rate of change of Delta with respect to the underlying asset's price
-C. Sensitivity to interest rates
-D. Change in option premium for a 1% change in volatility
-
-**Answer:** Rate of change of Delta with respect to the underlying asset's price
-
-**Explanation:** Gamma measures how much the delta of an option changes when the underlying asset's price changes by 1 unit.
-
----
-
-**Question 95:** Which derivative strategy involves buying a call option and selling a call option with a higher strike price, both having the same expiration date?
-
-**Options:**
-
-A. Bull Put Spread
-B. Bull Call Spread
-C. Bear Call Spread
-D. Bear Put Spread
-
-**Answer:** Bull Call Spread
-
-**Explanation:** A bull call spread is created by buying a lower strike call and selling a higher strike call to lower the overall cost of the position.
-
----
-
-**Question 96:** The daily settlement price of a futures contract is generally determined by:
-
-**Options:**
-
-A. The closing price of the underlying asset in the cash market
-B. The opening price of the futures contract
-C. The volume-weighted average price of the futures contract in the last 30 minutes of trading
-D. The highest price of the day
-
-**Answer:** The volume-weighted average price of the futures contract in the last 30 minutes of trading
-
-**Explanation:** Exchanges typically use the VWAP of the last 30 minutes of trading to determine the daily settlement price for MTM purposes.
-
----
-
-**Question 97:** If the calendar spread is created by buying a far month contract and selling a near month contract, the trader is likely expecting:
-
-**Options:**
-
-A. Volatility to decrease
-B. The basis to narrow
-C. The near month contract to decay faster than the far month contract
-D. The market to crash
-
-**Answer:** The near month contract to decay faster than the far month contract
-
-**Explanation:** Time value decays faster for near-term options. A calendar spread benefits from the accelerated time decay of the short, near-term option.
-
----
-
-**Question 98:** What is a 'synthetic long futures' position?
-
-**Options:**
-
-A. Buying a Call and selling a Put with the same strike and expiry
-B. Buying a Put and selling a Call with the same strike and expiry
-C. Buying a Call and buying a Put with the same strike
-D. Buying the stock and selling a Call
-
-**Answer:** Buying a Call and selling a Put with the same strike and expiry
-
-**Explanation:** Buying an ATM Call and selling an ATM Put creates a payoff profile identical to a long futures position.
-
----
-
-**Question 99:** The process of replacing an expiring derivative contract with a new contract in a later month is known as:
-
-**Options:**
-
-A. Arbitrage
-B. Hedging
-C. Rollover
-D. Margin call
-
-**Answer:** Rollover
-
-**Explanation:** Rolling over a position involves closing out the near-month contract and simultaneously opening a position in a further-out month.
-
----
-
-**Question 100:** According to SEBI regulations, client-level position limits in index derivatives are:
-
-**Options:**
-
-A. Not applicable; limits only apply to brokers
-B. Restricted to 5% of the total open interest
-C. Fixed at Rs. 500 Crores
-D. Higher of Rs. 500 Crores or 15% of the total open interest in the market
-
-**Answer:** Restricted to 5% of the total open interest
-
-**Explanation:** For individual clients, the position limit is generally 5% of the total open interest in the market for index derivatives, whereas mutual funds/FPIs have the "higher of 500Cr or 15%" limit.
 
 ---
 

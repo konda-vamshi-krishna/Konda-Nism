@@ -215,6 +215,56 @@
   .stat-val { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
   .stat-lbl { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
 
+  /* Test Selection Grid (Dashboard) */
+  .test-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  
+  .test-thumb-btn {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .test-thumb-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .test-thumb-btn.selected {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .test-thumb-btn .thumb-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .test-thumb-btn .thumb-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .test-thumb-btn.status-completed .thumb-status { color: var(--success); }
+  .test-thumb-btn.status-progress .thumb-status { color: var(--warning); }
+  .test-thumb-btn.status-unattempted .thumb-status { color: var(--text-muted); }
+
   /* Test Simulator Layout */
   .sim-layout {
     display: flex;

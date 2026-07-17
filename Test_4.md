@@ -4,10 +4,10 @@
 
 **Options:**
 
-A. It can still be traded for two more days
-B. It can be traded in the cash market
-C. It cannot be traded
-D. It converts into equity shares
+A) It can still be traded for two more days
+B) It can be traded in the cash market
+C) It cannot be traded
+D) It converts into equity shares
 
 **Answer:** It cannot be traded
 
@@ -19,8 +19,8 @@ D. It converts into equity shares
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -32,10 +32,10 @@ B. False
 
 **Options:**
 
-A. Strike price is higher than spot price
-B. Strike price is equal to spot price
-C. Strike price is lower than spot price
-D. None of the above
+A) Strike price is higher than spot price
+B) Strike price is equal to spot price
+C) Strike price is lower than spot price
+D) None of the above
 
 **Answer:** Strike price is lower than spot price
 
@@ -47,10 +47,10 @@ D. None of the above
 
 **Options:**
 
-A. Buy the underlying asset at a fixed price
-B. Sell the underlying asset at a fixed price
-C. Buy at market price only
-D. Sell at market price only
+A) Buy the underlying asset at a fixed price
+B) Sell the underlying asset at a fixed price
+C) Buy at market price only
+D) Sell at market price only
 
 **Answer:** Buy the underlying asset at a fixed price
 
@@ -62,10 +62,10 @@ D. Sell at market price only
 
 **Options:**
 
-A. Strike price is higher than spot price
-B. Strike price is equal to spot price
-C. Strike price is lower than spot price
-D. None of the above
+A) Strike price is higher than spot price
+B) Strike price is equal to spot price
+C) Strike price is lower than spot price
+D) None of the above
 
 **Answer:** Strike price is lower than spot price
 
@@ -77,10 +77,10 @@ D. None of the above
 
 **Options:**
 
-A. Trading volumes
-B. Price movements
-C. Open positions
-D. All of the above
+A) Trading volumes
+B) Price movements
+C) Open positions
+D) All of the above
 
 **Answer:** All of the above
 
@@ -92,8 +92,8 @@ D. All of the above
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -105,10 +105,10 @@ B. False
 
 **Options:**
 
-A. Monitoring capital adequacy
-B. Reviewing trading member positions
-C. Collecting margins
-D. All of the above
+A) Monitoring capital adequacy
+B) Reviewing trading member positions
+C) Collecting margins
+D) All of the above
 
 **Answer:** All of the above
 
@@ -120,10 +120,10 @@ D. All of the above
 
 **Options:**
 
-A. To profit from falling prices
-B. To earn extra income from shares already owned
-C. To hedge using futures contracts
-D. To speculate on volatility
+A) To profit from falling prices
+B) To earn extra income from shares already owned
+C) To hedge using futures contracts
+D) To speculate on volatility
 
 **Answer:** To earn extra income from shares already owned
 
@@ -135,10 +135,10 @@ D. To speculate on volatility
 
 **Options:**
 
-A. Butterfly strategy
-B. Short straddle
-C. Long straddle
-D. Calendar spread
+A) Butterfly strategy
+B) Short straddle
+C) Long straddle
+D) Calendar spread
 
 **Answer:** Long straddle
 
@@ -150,10 +150,10 @@ D. Calendar spread
 
 **Options:**
 
-A. To support government policies
-B. To control market direction
-C. To prevent excessive influence by large traders
-D. All of the above
+A) To support government policies
+B) To control market direction
+C) To prevent excessive influence by large traders
+D) All of the above
 
 **Answer:** To prevent excessive influence by large traders
 
@@ -165,10 +165,10 @@ D. All of the above
 
 **Options:**
 
-A. On the first trading day after last Thursday in March
-B. On the first trading day after last Friday in March
-C. On the first trading day after last Thursday in January
-D. On the first trading day after last Friday in January
+A) On the first trading day after last Thursday in March
+B) On the first trading day after last Friday in March
+C) On the first trading day after last Thursday in January
+D) On the first trading day after last Friday in January
 
 **Answer:** On the first trading day after last Thursday in March
 
@@ -180,10 +180,10 @@ D. On the first trading day after last Friday in January
 
 **Options:**
 
-A. Rs 5 lakhs
-B. Rs 10 lakhs
-C. Rs 15 lakhs
-D. Rs 20 lakhs
+A) Rs 5 lakhs
+B) Rs 10 lakhs
+C) Rs 15 lakhs
+D) Rs 20 lakhs
 
 **Answer:** Rs 10 lakhs
 
@@ -195,8 +195,8 @@ D. Rs 20 lakhs
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -208,10 +208,10 @@ B. False
 
 **Options:**
 
-A. Stock Trading Tax
-B. Stock Transaction Tax
-C. Securities Transaction Tax
-D. Securities Trading Tax
+A) Stock Trading Tax
+B) Stock Transaction Tax
+C) Securities Transaction Tax
+D) Securities Trading Tax
 
 **Answer:** Securities Transaction Tax
 
@@ -223,10 +223,10 @@ D. Securities Trading Tax
 
 **Options:**
 
-A. Ideal market conditions
-B. Best possible scenario
-C. Volatility
-D. Zero percent risk
+A) Ideal market conditions
+B) Best possible scenario
+C) Volatility
+D) Zero percent risk
 
 **Answer:** Volatility
 
@@ -238,8 +238,8 @@ D. Zero percent risk
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -251,10 +251,10 @@ B. False
 
 **Options:**
 
-A. Obligation to buy the asset
-B. Right to buy the asset
-C. Right to sell the asset
-D. Obligation to sell the asset
+A) Obligation to buy the asset
+B) Right to buy the asset
+C) Right to sell the asset
+D) Obligation to sell the asset
 
 **Answer:** Right to sell the asset
 
@@ -266,10 +266,10 @@ D. Obligation to sell the asset
 
 **Options:**
 
-A. Margin House
-B. SEBI
-C. Clearing Corporation
-D. Clearing Banks
+A) Margin House
+B) SEBI
+C) Clearing Corporation
+D) Clearing Banks
 
 **Answer:** Clearing Corporation
 
@@ -281,10 +281,10 @@ D. Clearing Banks
 
 **Options:**
 
-A. Rs 25,000
-B. Rs 2,65,000
-C. Rs 40,000
-D. Unlimited
+A) Rs 25,000
+B) Rs 2,65,000
+C) Rs 40,000
+D) Unlimited
 
 **Answer:** Rs 40,000
 
@@ -296,10 +296,10 @@ D. Unlimited
 
 **Options:**
 
-A. Straddle
-B. Covered call
-C. Calendar spread
-D. Protective put
+A) Straddle
+B) Covered call
+C) Calendar spread
+D) Protective put
 
 **Answer:** Protective put
 
@@ -311,10 +311,10 @@ D. Protective put
 
 **Options:**
 
-A. Beta
-B. Delta
-C. Rho
-D. Gamma
+A) Beta
+B) Delta
+C) Rho
+D) Gamma
 
 **Answer:** Rho
 
@@ -326,10 +326,10 @@ D. Gamma
 
 **Options:**
 
-A. Contango
-B. Reverse system
-C. Backwardation
-D. Impact cost
+A) Contango
+B) Reverse system
+C) Backwardation
+D) Impact cost
 
 **Answer:** Backwardation
 
@@ -341,10 +341,10 @@ D. Impact cost
 
 **Options:**
 
-A. Bad deliveries
-B. Doubtful debts
-C. Unlisted securities
-D. All of the above
+A) Bad deliveries
+B) Doubtful debts
+C) Unlisted securities
+D) All of the above
 
 **Answer:** All of the above
 
@@ -356,10 +356,10 @@ D. All of the above
 
 **Options:**
 
-A. In the money
-B. Out of the money
-C. At the money
-D. Deep in the money
+A) In the money
+B) Out of the money
+C) At the money
+D) Deep in the money
 
 **Answer:** At the money
 
@@ -371,10 +371,10 @@ D. Deep in the money
 
 **Options:**
 
-A. At the money option
-B. Out of the money option
-C. In the money option
-D. Delta option
+A) At the money option
+B) Out of the money option
+C) In the money option
+D) Delta option
 
 **Answer:** In the money option
 
@@ -386,8 +386,8 @@ D. Delta option
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -399,10 +399,10 @@ B. False
 
 **Options:**
 
-A. Portfolio value + Beta
-B. Portfolio value ÷ Beta
-C. Portfolio value × Beta
-D. Portfolio value − Beta
+A) Portfolio value + Beta
+B) Portfolio value ÷ Beta
+C) Portfolio value × Beta
+D) Portfolio value − Beta
 
 **Answer:** Portfolio value × Beta
 
@@ -414,10 +414,10 @@ D. Portfolio value − Beta
 
 **Options:**
 
-A. Rs 14,000
-B. Rs 28,000
-C. Rs 20,000
-D. Rs 27,500
+A) Rs 14,000
+B) Rs 28,000
+C) Rs 20,000
+D) Rs 27,500
 
 **Answer:** Rs 28,000
 
@@ -429,10 +429,10 @@ D. Rs 27,500
 
 **Options:**
 
-A. 90%
-B. 95%
-C. 96.5%
-D. 99%
+A) 90%
+B) 95%
+C) 96.5%
+D) 99%
 
 **Answer:** 95%
 
@@ -444,10 +444,10 @@ D. 99%
 
 **Options:**
 
-A. Bullish
-B. Bearish
-C. Long-term only
-D. No opinion
+A) Bullish
+B) Bearish
+C) Long-term only
+D) No opinion
 
 **Answer:** Bearish
 
@@ -459,10 +459,10 @@ D. No opinion
 
 **Options:**
 
-A. Buy another CALL
-B. Sell the same CALL
-C. Buy a PUT
-D. Hold till expiry only
+A) Buy another CALL
+B) Sell the same CALL
+C) Buy a PUT
+D) Hold till expiry only
 
 **Answer:** Sell the same CALL
 
@@ -474,10 +474,10 @@ D. Hold till expiry only
 
 **Options:**
 
-A. Bullish
-B. Bearish
-C. Mixed
-D. Long-term only
+A) Bullish
+B) Bearish
+C) Mixed
+D) Long-term only
 
 **Answer:** Bullish
 
@@ -489,10 +489,10 @@ D. Long-term only
 
 **Options:**
 
-A. Down
-B. Up
-C. Sideways only
-D. No movement
+A) Down
+B) Up
+C) Sideways only
+D) No movement
 
 **Answer:** Up
 
@@ -504,10 +504,10 @@ D. No movement
 
 **Options:**
 
-A. American Put Option
-B. American Call Option
-C. European Put Option
-D. European Call Option
+A) American Put Option
+B) American Call Option
+C) European Put Option
+D) European Call Option
 
 **Answer:** American Call Option
 
@@ -519,10 +519,10 @@ D. European Call Option
 
 **Options:**
 
-A. At the money
-B. Out of the money
-C. In the money
-D. None of the above
+A) At the money
+B) Out of the money
+C) In the money
+D) None of the above
 
 **Answer:** In the money
 
@@ -534,8 +534,8 @@ D. None of the above
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -547,8 +547,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -560,8 +560,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -573,10 +573,10 @@ B. False
 
 **Options:**
 
-A. Sensitivity of option price to interest rate changes
-B. Sensitivity to volatility
-C. Sensitivity to time decay
-D. Sensitivity to underlying price
+A) Sensitivity of option price to interest rate changes
+B) Sensitivity to volatility
+C) Sensitivity to time decay
+D) Sensitivity to underlying price
 
 **Answer:** Sensitivity of option price to interest rate changes
 
@@ -588,8 +588,8 @@ D. Sensitivity to underlying price
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -601,8 +601,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -614,10 +614,10 @@ B. False
 
 **Options:**
 
-A. Weekly basis
-B. Monthly basis
-C. Daily basis
-D. Hourly basis
+A) Weekly basis
+B) Monthly basis
+C) Daily basis
+D) Hourly basis
 
 **Answer:** Daily basis
 
@@ -629,10 +629,10 @@ D. Hourly basis
 
 **Options:**
 
-A. Buy futures now and sell later
-B. Wait until futures and spot prices become equal
-C. Sell futures now and buy later at lower price
-D. Do nothing
+A) Buy futures now and sell later
+B) Wait until futures and spot prices become equal
+C) Sell futures now and buy later at lower price
+D) Do nothing
 
 **Answer:** Sell futures now and buy later at lower price
 
@@ -644,8 +644,8 @@ D. Do nothing
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -657,10 +657,10 @@ B. False
 
 **Options:**
 
-A. Only intrinsic value
-B. Only time value
-C. Intrinsic value and time value
-D. Call and put value combined
+A) Only intrinsic value
+B) Only time value
+C) Intrinsic value and time value
+D) Call and put value combined
 
 **Answer:** Intrinsic value and time value
 
@@ -672,10 +672,10 @@ D. Call and put value combined
 
 **Options:**
 
-A. Rises
-B. Falls
-C. Remains unchanged
-D. Becomes zero
+A) Rises
+B) Falls
+C) Remains unchanged
+D) Becomes zero
 
 **Answer:** Falls
 
@@ -687,10 +687,10 @@ D. Becomes zero
 
 **Options:**
 
-A. Only buyer
-B. Only seller
-C. Both buyer and seller
-D. Clearing bank only
+A) Only buyer
+B) Only seller
+C) Both buyer and seller
+D) Clearing bank only
 
 **Answer:** Both buyer and seller
 
@@ -702,10 +702,10 @@ D. Clearing bank only
 
 **Options:**
 
-A. Buying a call option
-B. Selling the same futures contract
-C. Buying a put option
-D. Selling a different month futures contract
+A) Buying a call option
+B) Selling the same futures contract
+C) Buying a put option
+D) Selling a different month futures contract
 
 **Answer:** Selling the same futures contract
 
@@ -717,10 +717,10 @@ D. Selling a different month futures contract
 
 **Options:**
 
-A. Not exercise
-B. Exercise the option
-C. Wait for next month
-D. Ignore the position
+A) Not exercise
+B) Exercise the option
+C) Wait for next month
+D) Ignore the position
 
 **Answer:** Exercise the option
 
@@ -732,8 +732,8 @@ D. Ignore the position
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -745,12 +745,12 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
-**Explanation:** The minimum net worth requirement for a derivatives clearing member is Rs 3 crores, not Rs 4 crores. *(Note: Under recent SEBI amendments, Rs 3 Crores specifically applies to a Self-Clearing Member (SCM), while a general Clearing Member requires Rs 10 Crores. In either case, the statement remains false.)*
+**Explanation:** The minimum net worth requirement for a derivatives clearing member is Rs 3 crores, not Rs 4 crores.
 
 ---
 
@@ -758,10 +758,10 @@ B. False
 
 **Options:**
 
-A. At the money option
-B. Out of the money option
-C. In the money option
-D. Deep in the money option
+A) At the money option
+B) Out of the money option
+C) In the money option
+D) Deep in the money option
 
 **Answer:** At the money option
 
@@ -773,10 +773,10 @@ D. Deep in the money option
 
 **Options:**
 
-A. Arbitrageurs
-B. Speculators
-C. Hedgers
-D. None of the above
+A) Arbitrageurs
+B) Speculators
+C) Hedgers
+D) None of the above
 
 **Answer:** Speculators
 
@@ -788,10 +788,10 @@ D. None of the above
 
 **Options:**
 
-A. Limited to premium paid
-B. Equal to strike price
-C. Unlimited
-D. Fixed amount
+A) Limited to premium paid
+B) Equal to strike price
+C) Unlimited
+D) Fixed amount
 
 **Answer:** Unlimited
 
@@ -803,10 +803,10 @@ D. Fixed amount
 
 **Options:**
 
-A. Positive intrinsic value
-B. Zero intrinsic value
-C. Negative intrinsic value
-D. Unlimited intrinsic value
+A) Positive intrinsic value
+B) Zero intrinsic value
+C) Negative intrinsic value
+D) Unlimited intrinsic value
 
 **Answer:** Zero intrinsic value
 
@@ -818,10 +818,10 @@ D. Unlimited intrinsic value
 
 **Options:**
 
-A. 5
-B. 4
-C. 3
-D. 2
+A) 5
+B) 4
+C) 3
+D) 2
 
 **Answer:** 2
 
@@ -833,8 +833,8 @@ D. 2
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -846,10 +846,10 @@ B. False
 
 **Options:**
 
-A. Unlimited
-B. Rs 37
-C. Rs 297
-D. Rs 223
+A) Unlimited
+B) Rs 37
+C) Rs 297
+D) Rs 223
 
 **Answer:** Rs 37
 
@@ -861,10 +861,10 @@ D. Rs 223
 
 **Options:**
 
-A. Buy an asset
-B. Sell an asset
-C. Vote in a meeting
-D. Fixed dividends
+A) Buy an asset
+B) Sell an asset
+C) Vote in a meeting
+D) Fixed dividends
 
 **Answer:** Sell an asset
 
@@ -876,10 +876,10 @@ D. Fixed dividends
 
 **Options:**
 
-A. Only in America
-B. Only on the last day
-C. Any time before or on the expiry date
-D. Only after it expires
+A) Only in America
+B) Only on the last day
+C) Any time before or on the expiry date
+D) Only after it expires
 
 **Answer:** Any time before or on the expiry date
 
@@ -891,10 +891,10 @@ D. Only after it expires
 
 **Options:**
 
-A. Only in Europe
-B. Only on the expiry date
-C. Any time during the month
-D. Only on weekends
+A) Only in Europe
+B) Only on the expiry date
+C) Any time during the month
+D) Only on weekends
 
 **Answer:** Only on the expiry date
 
@@ -906,10 +906,10 @@ D. Only on weekends
 
 **Options:**
 
-A. American
-B. European
-C. Asian
-D. Binary
+A) American
+B) European
+C) Asian
+D) Binary
 
 **Answer:** European
 
@@ -921,10 +921,10 @@ D. Binary
 
 **Options:**
 
-A. When market price is lower than strike price
-B. When market price is higher than strike price
-C. When premium is zero
-D. When the stock is delisted
+A) When market price is lower than strike price
+B) When market price is higher than strike price
+C) When premium is zero
+D) When the stock is delisted
 
 **Answer:** When market price is higher than strike price
 
@@ -936,10 +936,10 @@ D. When the stock is delisted
 
 **Options:**
 
-A. When market price is lower than strike price
-B. When market price is higher than strike price
-C. When the market is closed
-D. When dividends are paid
+A) When market price is lower than strike price
+B) When market price is higher than strike price
+C) When the market is closed
+D) When dividends are paid
 
 **Answer:** When market price is lower than strike price
 
@@ -951,10 +951,10 @@ D. When dividends are paid
 
 **Options:**
 
-A. Double the market price
-B. Half the market price
-C. Equal to the market price
-D. Zero
+A) Double the market price
+B) Half the market price
+C) Equal to the market price
+D) Zero
 
 **Answer:** Equal to the market price
 
@@ -966,10 +966,10 @@ D. Zero
 
 **Options:**
 
-A. Out-of-the-Money (OTM)
-B. At-the-Money (ATM)
-C. In-the-Money (ITM)
-D. All of them
+A) Out-of-the-Money (OTM)
+B) At-the-Money (ATM)
+C) In-the-Money (ITM)
+D) All of them
 
 **Answer:** In-the-Money (ITM)
 
@@ -981,10 +981,10 @@ D. All of them
 
 **Options:**
 
-A. -100
-B. Zero
-C. The premium amount
-D. Infinite
+A) -100
+B) Zero
+C) The premium amount
+D) Infinite
 
 **Answer:** Zero
 
@@ -996,10 +996,10 @@ D. Infinite
 
 **Options:**
 
-A. Market Price + Strike Price
-B. Total Premium minus Intrinsic Value
-C. Expiry Date minus Start Date
-D. Interest Rate × Time
+A) Market Price + Strike Price
+B) Total Premium minus Intrinsic Value
+C) Expiry Date minus Start Date
+D) Interest Rate × Time
 
 **Answer:** Total Premium minus Intrinsic Value
 
@@ -1011,10 +1011,10 @@ D. Interest Rate × Time
 
 **Options:**
 
-A. Unlimited
-B. The premium paid
-C. The strike price
-D. Zero
+A) Unlimited
+B) The premium paid
+C) The strike price
+D) Zero
 
 **Answer:** The premium paid
 
@@ -1026,10 +1026,10 @@ D. Zero
 
 **Options:**
 
-A. The premium received
-B. Potentially unlimited
-C. Zero
-D. Rs. 100
+A) The premium received
+B) Potentially unlimited
+C) Zero
+D) Rs. 100
 
 **Answer:** Potentially unlimited
 
@@ -1041,10 +1041,10 @@ D. Rs. 100
 
 **Options:**
 
-A. 95
-B. 100
-C. 105
-D. 110
+A) 95
+B) 100
+C) 105
+D) 110
 
 **Answer:** 105
 
@@ -1056,10 +1056,10 @@ D. 110
 
 **Options:**
 
-A. 95
-B. 100
-C. 105
-D. 110
+A) 95
+B) 100
+C) 105
+D) 110
 
 **Answer:** 95
 
@@ -1071,10 +1071,10 @@ D. 110
 
 **Options:**
 
-A. Yes, every day
-B. No, they pay the full premium upfront
-C. Only if the market crashes
-D. Only on Fridays
+A) Yes, every day
+B) No, they pay the full premium upfront
+C) Only if the market crashes
+D) Only on Fridays
 
 **Answer:** No, they pay the full premium upfront
 
@@ -1086,10 +1086,10 @@ D. Only on Fridays
 
 **Options:**
 
-A. Hedging
-B. Leverage
-C. Arbitrage
-D. Compounding
+A) Hedging
+B) Leverage
+C) Arbitrage
+D) Compounding
 
 **Answer:** Leverage
 
@@ -1101,10 +1101,10 @@ D. Compounding
 
 **Options:**
 
-A. It makes it cheaper
-B. It makes it more expensive
-C. It has no effect
-D. It makes it zero
+A) It makes it cheaper
+B) It makes it more expensive
+C) It has no effect
+D) It makes it zero
 
 **Answer:** It makes it more expensive
 
@@ -1116,10 +1116,10 @@ D. It makes it zero
 
 **Options:**
 
-A. Delta
-B. Gamma
-C. Theta
-D. Vega
+A) Delta
+B) Gamma
+C) Theta
+D) Vega
 
 **Answer:** Delta
 
@@ -1131,10 +1131,10 @@ D. Vega
 
 **Options:**
 
-A. Alpha
-B. Beta
-C. Gamma
-D. Rho
+A) Alpha
+B) Beta
+C) Gamma
+D) Rho
 
 **Answer:** Gamma
 
@@ -1146,10 +1146,10 @@ D. Rho
 
 **Options:**
 
-A. Delta
-B. Gamma
-C. Theta
-D. Vega
+A) Delta
+B) Gamma
+C) Theta
+D) Vega
 
 **Answer:** Vega
 
@@ -1161,10 +1161,10 @@ D. Vega
 
 **Options:**
 
-A. Delta
-B. Gamma
-C. Rho
-D. Sigma
+A) Delta
+B) Gamma
+C) Rho
+D) Sigma
 
 **Answer:** Rho
 
@@ -1176,10 +1176,10 @@ D. Sigma
 
 **Options:**
 
-A. Binomial Model
-B. Black-Scholes Model
-C. Pythagoras Theorem
-D. Newton’s Law
+A) Binomial Model
+B) Black-Scholes Model
+C) Pythagoras Theorem
+D) Newton’s Law
 
 **Answer:** Black-Scholes Model
 
@@ -1191,10 +1191,10 @@ D. Newton’s Law
 
 **Options:**
 
-A. The volatility from last year
-B. The market's guess of future volatility, based on current option prices
-C. A fixed number from SEBI
-D. The speed of the broker
+A) The volatility from last year
+B) The market's guess of future volatility, based on current option prices
+C) A fixed number from SEBI
+D) The speed of the broker
 
 **Answer:** The market's guess of future volatility, based on current option prices
 
@@ -1206,10 +1206,10 @@ D. The speed of the broker
 
 **Options:**
 
-A. Cheap
-B. Expensive
-C. Not available
-D. Free
+A) Cheap
+B) Expensive
+C) Not available
+D) Free
 
 **Answer:** Expensive
 
@@ -1221,10 +1221,10 @@ D. Free
 
 **Options:**
 
-A. Different stocks
-B. Same expiry but different strike prices
-C. Same strike price but different expiries
-D. Different currencies
+A) Different stocks
+B) Same expiry but different strike prices
+C) Same strike price but different expiries
+D) Different currencies
 
 **Answer:** Same expiry but different strike prices
 
@@ -1236,10 +1236,10 @@ D. Different currencies
 
 **Options:**
 
-A. Bull Call Spread
-B. Bear Put Spread
-C. Straddle
-D. Strangle
+A) Bull Call Spread
+B) Bear Put Spread
+C) Straddle
+D) Strangle
 
 **Answer:** Bull Call Spread
 
@@ -1251,10 +1251,10 @@ D. Strangle
 
 **Options:**
 
-A. Bull Call Spread
-B. Bear Put Spread
-C. Straddle
-D. Strangle
+A) Bull Call Spread
+B) Bear Put Spread
+C) Straddle
+D) Strangle
 
 **Answer:** Bear Put Spread
 
@@ -1266,10 +1266,10 @@ D. Strangle
 
 **Options:**
 
-A. Strangle
-B. Straddle
-C. Butterfly
-D. Collar
+A) Strangle
+B) Straddle
+C) Butterfly
+D) Collar
 
 **Answer:** Straddle
 
@@ -1281,10 +1281,10 @@ D. Collar
 
 **Options:**
 
-A. Straddle
-B. Strangle
-C. Covered Call
-D. Protective Put
+A) Straddle
+B) Strangle
+C) Covered Call
+D) Protective Put
 
 **Answer:** Strangle
 
@@ -1296,10 +1296,10 @@ D. Protective Put
 
 **Options:**
 
-A. Buying a call and a put
-B. Owning the stock and selling a call against it
-C. Selling all your stocks
-D. Buying an insurance policy
+A) Buying a call and a put
+B) Owning the stock and selling a call against it
+C) Selling all your stocks
+D) Buying an insurance policy
 
 **Answer:** Owning the stock and selling a call against it
 
@@ -1311,10 +1311,10 @@ D. Buying an insurance policy
 
 **Options:**
 
-A. A high-risk gamble
-B. An insurance policy for your stocks
-C. A bank loan
-D. A lottery ticket
+A) A high-risk gamble
+B) An insurance policy for your stocks
+C) A bank loan
+D) A lottery ticket
 
 **Answer:** An insurance policy for your stocks
 
@@ -1326,10 +1326,10 @@ D. A lottery ticket
 
 **Options:**
 
-A. A rule that puts must always be cheaper than calls
-B. A mathematical balance between calls, puts, and the stock price
-C. A law passed by the government
-D. The number of buyers versus sellers
+A) A rule that puts must always be cheaper than calls
+B) A mathematical balance between calls, puts, and the stock price
+C) A law passed by the government
+D) The number of buyers versus sellers
 
 **Answer:** A mathematical balance between calls, puts, and the stock price
 
@@ -1341,10 +1341,10 @@ D. The number of buyers versus sellers
 
 **Options:**
 
-A. Bullish trend
-B. Bearish trend
-C. Market crash
-D. Holiday
+A) Bullish trend
+B) Bearish trend
+C) Market crash
+D) Holiday
 
 **Answer:** Bullish trend
 
@@ -1356,10 +1356,10 @@ D. Holiday
 
 **Options:**
 
-A. Shouting on a floor (Open Outcry)
-B. Electronic/Screen-based system
-C. Private phone calls only
-D. Paper certificates
+A) Shouting on a floor (Open Outcry)
+B) Electronic/Screen-based system
+C) Private phone calls only
+D) Paper certificates
 
 **Answer:** Electronic/Screen-based system
 
@@ -1371,104 +1371,14 @@ D. Paper certificates
 
 **Options:**
 
-A. Any person with a bank account
-B. Only Trading Members (Brokers)
-C. Only the government
-D. Students
+A) Any person with a bank account
+B) Only Trading Members (Brokers)
+C) Only the government
+D) Students
 
 **Answer:** Only Trading Members (Brokers)
 
 **Explanation:** Only registered Trading Members can access the exchange's trading system.
-
----
-
-**Question 95:** [Ref. Question] An ABC Call option with a strike price of Rs. 18800 has a premium of Rs. 140 and a Delta of 0.48. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 164.0
-B. Rs. 190
-C. Rs. 115
-D. Rs. 174.0
-
-**Answer:** A. Rs. 164.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 140 + (0.48 * 50) = Rs. 164.0.
-
----
-
-**Question 96:** [Ref. Question] An ABC Call option with a strike price of Rs. 18900 has a premium of Rs. 145 and a Delta of 0.49. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 169.5
-B. Rs. 195
-C. Rs. 120
-D. Rs. 179.5
-
-**Answer:** A. Rs. 169.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 145 + (0.49 * 50) = Rs. 169.5.
-
----
-
-**Question 97:** [Ref. Question] An ABC Call option with a strike price of Rs. 19000 has a premium of Rs. 150 and a Delta of 0.5. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 175.0
-B. Rs. 200
-C. Rs. 125
-D. Rs. 185.0
-
-**Answer:** A. Rs. 175.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 150 + (0.5 * 50) = Rs. 175.0.
-
----
-
-**Question 98:** [Ref. Question] An ABC Call option with a strike price of Rs. 19100 has a premium of Rs. 155 and a Delta of 0.51. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 180.5
-B. Rs. 205
-C. Rs. 130
-D. Rs. 190.5
-
-**Answer:** A. Rs. 180.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 155 + (0.51 * 50) = Rs. 180.5.
-
----
-
-**Question 99:** [Ref. Question] An ABC Call option with a strike price of Rs. 19200 has a premium of Rs. 160 and a Delta of 0.52. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 186.0
-B. Rs. 210
-C. Rs. 135
-D. Rs. 196.0
-
-**Answer:** A. Rs. 186.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 160 + (0.52 * 50) = Rs. 186.0.
-
----
-
-**Question 100:** [Ref. Question] An ABC Call option with a strike price of Rs. 19300 has a premium of Rs. 165 and a Delta of 0.53. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 191.5
-B. Rs. 215
-C. Rs. 140
-D. Rs. 201.5
-
-**Answer:** A. Rs. 191.5
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 165 + (0.53 * 50) = Rs. 191.5.
 
 ---
 

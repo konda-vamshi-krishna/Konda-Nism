@@ -127,7 +127,9 @@
           <h2 style="margin-top:0;">Launch Mock Test</h2>
           <div style="margin-bottom: 20px;">
             <label style="font-weight:600; display:block; margin-bottom:8px;">Select Test:</label>
-            <select id="simTestSelect" onchange="updateStartTitle(this.value)"></select>
+            <div id="testSelectionGrid" class="test-selection-grid">
+              <!-- Tests will be injected here via app.js -->
+            </div>
           </div>
 
           <div style="margin-bottom: 24px;">
@@ -146,13 +148,24 @@
             </div>
           </div>
 
-          <button class="btn btn-primary" onclick="initiateNewTest()" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 14px 0;">
-            Start Test
+          <button class="btn btn-primary" id="startTestBtn" onclick="initiateNewTest()" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 14px 0;" disabled>
+            Select a Test to Start
           </button>
         </div>
       </div>
 
       <div class="right-col">
+        <div class="card">
+          <h3 style="margin-top:0;">Official Study Materials</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Download the official NISM Series VIII Equity Derivatives workbook.</p>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="NISM-Series-8_%20Equity%20Derivatives%20Workbook.pdf" download class="btn btn-primary" style="justify-content: center; text-decoration: none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download NISM Workbook (PDF)
+            </a>
+          </div>
+        </div>
+        
         <div class="card">
           <h3 style="margin-top:0;">Quick Navigation</h3>
           <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -251,6 +264,14 @@
     <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto 24px auto;">
       <h2 style="margin-top: 0;">Revision Flashcards</h2>
       <p>Click the card to flip and reveal the answer. Use flashcards for active recall revision.</p>
+      
+      <div style="margin-top: 16px;">
+        <label for="fcDeckSelect" style="font-weight: 600; margin-right: 8px;">Select Deck:</label>
+        <select id="fcDeckSelect" onchange="loadFlashcardDeck(this.value)" style="padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
+          <option value="all">All Flashcards</option>
+          <!-- Additional options will be injected by app.js -->
+        </select>
+      </div>
     </div>
 
     <div class="fc-container">

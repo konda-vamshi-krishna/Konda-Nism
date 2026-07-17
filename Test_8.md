@@ -4,10 +4,10 @@
 
 **Options:**
 
-A. Buy and sell stock together
-B. Buy one-month futures and sell another month futures
-C. Buy stock and short futures
-D. Sell spot and buy call
+A) Buy and sell stock together
+B) Buy one-month futures and sell another month futures
+C) Buy stock and short futures
+D) Sell spot and buy call
 
 **Answer:** Buy one-month futures and sell another month futures
 
@@ -19,10 +19,10 @@ D. Sell spot and buy call
 
 **Options:**
 
-A. Debt instrument
-B. Derivative product
-C. Cash market product
-D. Money market instrument
+A) Debt instrument
+B) Derivative product
+C) Cash market product
+D) Money market instrument
 
 **Answer:** Derivative product
 
@@ -34,10 +34,10 @@ D. Money market instrument
 
 **Options:**
 
-A. Mortgage
-B. Arbitrage
-C. Hedging
-D. Speculation
+A) Mortgage
+B) Arbitrage
+C) Hedging
+D) Speculation
 
 **Answer:** Arbitrage
 
@@ -49,10 +49,10 @@ D. Speculation
 
 **Options:**
 
-A. Trading
-B. Hedging
-C. Arbitraging
-D. All of the above
+A) Trading
+B) Hedging
+C) Arbitraging
+D) All of the above
 
 **Answer:** All of the above
 
@@ -64,10 +64,10 @@ D. All of the above
 
 **Options:**
 
-A. Inadequate disaster planning
-B. Too much of management control
-C. Income tax regulations
-D. Government policies
+A) Inadequate disaster planning
+B) Too much of management control
+C) Income tax regulations
+D) Government policies
 
 **Answer:** Inadequate disaster planning
 
@@ -79,8 +79,8 @@ D. Government policies
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -92,10 +92,10 @@ B. False
 
 **Options:**
 
-A. Securities Transaction Tax
-B. Impact cost
-C. SEBI charges
-D. Brokerage
+A) Securities Transaction Tax
+B) Impact cost
+C) SEBI charges
+D) Brokerage
 
 **Answer:** Impact cost
 
@@ -107,10 +107,10 @@ D. Brokerage
 
 **Options:**
 
-A. 16,600
-B. 15,600
-C. -15,600
-D. -16,600
+A) 16,600
+B) 15,600
+C) -15,600
+D) -16,600
 
 **Answer:** 15,600
 
@@ -122,10 +122,10 @@ D. -16,600
 
 **Options:**
 
-A. Selling 1 June XYZ futures contract at 3600
-B. Buying 1 June XYZ futures contract at 3600
-C. Buying 1 June XYZ futures contract at 3200
-D. Selling 1 June XYZ futures contract at 3200
+A) Selling 1 June XYZ futures contract at 3600
+B) Buying 1 June XYZ futures contract at 3600
+C) Buying 1 June XYZ futures contract at 3200
+D) Selling 1 June XYZ futures contract at 3200
 
 **Answer:** Buying 1 June XYZ futures contract at 3200
 
@@ -137,10 +137,10 @@ D. Selling 1 June XYZ futures contract at 3200
 
 **Options:**
 
-A. Same margin as sum of two independent legs of futures contract
-B. Lower margin than sum of two independent legs of futures contract
-C. Higher margin than sum of two independent legs of futures contract
-D. No margin need to be paid for calendar spread positions
+A) Same margin as sum of two independent legs of futures contract
+B) Lower margin than sum of two independent legs of futures contract
+C) Higher margin than sum of two independent legs of futures contract
+D) No margin need to be paid for calendar spread positions
 
 **Answer:** Lower margin than sum of two independent legs of futures contract
 
@@ -152,10 +152,10 @@ D. No margin need to be paid for calendar spread positions
 
 **Options:**
 
-A. Only the buyer
-B. Only the seller
-C. Both the buyer and the seller
-D. The clearing corporation
+A) Only the buyer
+B) Only the seller
+C) Both the buyer and the seller
+D) The clearing corporation
 
 **Answer:** Both the buyer and the seller
 
@@ -167,8 +167,8 @@ D. The clearing corporation
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -180,10 +180,10 @@ B. False
 
 **Options:**
 
-A. True only for European options
-B. True only for American options
-C. True for all options
-D. False for all options
+A) True only for European options
+B) True only for American options
+C) True for all options
+D) False for all options
 
 **Answer:** True for all options
 
@@ -195,10 +195,10 @@ D. False for all options
 
 **Options:**
 
-A. 196
-B. 206
-C. 0
-D. 49
+A) 196
+B) 206
+C) 0
+D) 49
 
 **Answer:** 196
 
@@ -210,10 +210,10 @@ D. 49
 
 **Options:**
 
-A. 19
-B. 26
-C. 45
-D. 0
+A) 19
+B) 26
+C) 45
+D) 0
 
 **Answer:** 26
 
@@ -225,8 +225,8 @@ D. 0
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -238,10 +238,10 @@ B. False
 
 **Options:**
 
-A. An option with a negative intrinsic value
-B. An option which cannot be profitably exercised by the holder immediately
-C. An option with a positive intrinsic value
-D. An option with zero-time value
+A) An option with a negative intrinsic value
+B) An option which cannot be profitably exercised by the holder immediately
+C) An option with a positive intrinsic value
+D) An option with zero-time value
 
 **Answer:** An option with a positive intrinsic value
 
@@ -253,10 +253,10 @@ D. An option with zero-time value
 
 **Options:**
 
-A. Bullish spread
-B. Bearish spread
-C. Butterfly spread
-D. Calendar spread
+A) Bullish spread
+B) Bearish spread
+C) Butterfly spread
+D) Calendar spread
 
 **Answer:** Bullish spread
 
@@ -268,10 +268,10 @@ D. Calendar spread
 
 **Options:**
 
-A. Short straddle
-B. Short strangle
-C. Covered call
-D. Protective put
+A) Short straddle
+B) Short strangle
+C) Covered call
+D) Protective put
 
 **Answer:** Protective put
 
@@ -283,10 +283,10 @@ D. Protective put
 
 **Options:**
 
-A. Futures and options on the same stock
-B. Call options on the same stock with the same maturity but different strike prices
-C. Put and call options on the same stock but different strike prices and different maturity
-D. Call and put options on the same stock with the same strike prices and same maturity
+A) Futures and options on the same stock
+B) Call options on the same stock with the same maturity but different strike prices
+C) Put and call options on the same stock but different strike prices and different maturity
+D) Call and put options on the same stock with the same strike prices and same maturity
 
 **Answer:** Call and put options on the same stock with the same strike prices and same maturity
 
@@ -298,10 +298,10 @@ D. Call and put options on the same stock with the same strike prices and same m
 
 **Options:**
 
-A. A rising futures price along with falling open interest
-B. A falling futures price along with rising open interest
-C. A rising futures price along with rising open interest
-D. A falling futures price along with falling open interest
+A) A rising futures price along with falling open interest
+B) A falling futures price along with rising open interest
+C) A rising futures price along with rising open interest
+D) A falling futures price along with falling open interest
 
 **Answer:** A rising futures price along with rising open interest
 
@@ -313,8 +313,8 @@ D. A falling futures price along with falling open interest
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -326,10 +326,10 @@ B. False
 
 **Options:**
 
-A. Place a limit sell order for 100 shares of XYZ at Rs 770 per share
-B. Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
-C. Place a limit buy order for 100 shares of XYZ at Rs 790 per share
-D. Place a limit buy order for 100 shares of XYZ at Rs 770 per share
+A) Place a limit sell order for 100 shares of XYZ at Rs 770 per share
+B) Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
+C) Place a limit buy order for 100 shares of XYZ at Rs 790 per share
+D) Place a limit buy order for 100 shares of XYZ at Rs 770 per share
 
 **Answer:** Place a stop loss sell order for 100 shares of XYZ at Rs 770 per share
 
@@ -341,10 +341,10 @@ D. Place a limit buy order for 100 shares of XYZ at Rs 770 per share
 
 **Options:**
 
-A. 2,70,000
-B. 5,02,050
-C. 2,32,050
-D. 4,10,000
+A) 2,70,000
+B) 5,02,050
+C) 2,32,050
+D) 4,10,000
 
 **Answer:** 5,02,050
 
@@ -356,10 +356,10 @@ D. 4,10,000
 
 **Options:**
 
-A. 800
-B. 1700
-C. 900
-D. 100
+A) 800
+B) 1700
+C) 900
+D) 100
 
 **Answer:** 1700
 
@@ -371,8 +371,8 @@ D. 100
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -384,10 +384,10 @@ B. False
 
 **Options:**
 
-A. On a weekly basis
-B. Every 2 days
-C. Every 3 days
-D. On a daily basis
+A) On a weekly basis
+B) Every 2 days
+C) Every 3 days
+D) On a daily basis
 
 **Answer:** On a daily basis
 
@@ -399,8 +399,8 @@ D. On a daily basis
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -412,10 +412,10 @@ B. False
 
 **Options:**
 
-A. To guarantee settlement of bonafide transactions of the members of the exchange
-B. To inculcate confidence in the minds of market participants
-C. To protect the interest of the investors in securities
-D. All of the above
+A) To guarantee settlement of bonafide transactions of the members of the exchange
+B) To inculcate confidence in the minds of market participants
+C) To protect the interest of the investors in securities
+D) All of the above
 
 **Answer:** All of the above
 
@@ -427,10 +427,10 @@ D. All of the above
 
 **Options:**
 
-A. The stock broker fails to pay fees
-B. The stock broker violates the conditions of registration
-C. The stock broker is suspended by the stock exchange
-D. In any of the above situations
+A) The stock broker fails to pay fees
+B) The stock broker violates the conditions of registration
+C) The stock broker is suspended by the stock exchange
+D) In any of the above situations
 
 **Answer:** In any of the above situations
 
@@ -442,10 +442,10 @@ D. In any of the above situations
 
 **Options:**
 
-A. Another solvent member
-B. The Exchange
-C. A suspense account
-D. Error account
+A) Another solvent member
+B) The Exchange
+C) A suspense account
+D) Error account
 
 **Answer:** Another solvent member
 
@@ -457,10 +457,10 @@ D. Error account
 
 **Options:**
 
-A. Speculative income under the head 'profits and gains of business or profession'
-B. Short term capital gains under the head 'capital gains'
-C. Non-speculative income under the head 'income from other sources'
-D. Non-speculative income under the head 'profits and gains of business or profession'
+A) Speculative income under the head 'profits and gains of business or profession'
+B) Short term capital gains under the head 'capital gains'
+C) Non-speculative income under the head 'income from other sources'
+D) Non-speculative income under the head 'profits and gains of business or profession'
 
 **Answer:** Non-speculative income under the head 'profits and gains of business or profession'
 
@@ -472,10 +472,10 @@ D. Non-speculative income under the head 'profits and gains of business or profe
 
 **Options:**
 
-A. Long-term capital gains
-B. Short term capital gain
-C. Speculative gains
-D. Income from other Sources
+A) Long-term capital gains
+B) Short term capital gain
+C) Speculative gains
+D) Income from other Sources
 
 **Answer:** Short term capital gain
 
@@ -487,8 +487,8 @@ D. Income from other Sources
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -500,10 +500,10 @@ B. False
 
 **Options:**
 
-A. Clients of Special Categories
-B. High Networth Clients
-C. Institutional Clients
-D. High Risk Clients
+A) Clients of Special Categories
+B) High Networth Clients
+C) Institutional Clients
+D) High Risk Clients
 
 **Answer:** Clients of Special Categories
 
@@ -515,10 +515,10 @@ D. High Risk Clients
 
 **Options:**
 
-A. PAN number
-B. Unique client code
-C. ISIN code
-D. Demat account number
+A) PAN number
+B) Unique client code
+C) ISIN code
+D) Demat account number
 
 **Answer:** Unique client code
 
@@ -530,10 +530,10 @@ D. Demat account number
 
 **Options:**
 
-A. Securities and Exchange Board of India
-B. Central Vigilance Commission
-C. Reserve Bank of India
-D. Financial Intelligence Unit - India
+A) Securities and Exchange Board of India
+B) Central Vigilance Commission
+C) Reserve Bank of India
+D) Financial Intelligence Unit - India
 
 **Answer:** Financial Intelligence Unit - India
 
@@ -545,10 +545,10 @@ D. Financial Intelligence Unit - India
 
 **Options:**
 
-A. Exchange's Margin Reporting System
-B. Collateral Reporting System of Clearing Corporation
-C. SEBI's web-based complaints redressal system
-D. Customer Due Diligence and e-KYC system
+A) Exchange's Margin Reporting System
+B) Collateral Reporting System of Clearing Corporation
+C) SEBI's web-based complaints redressal system
+D) Customer Due Diligence and e-KYC system
 
 **Answer:** SEBI's web-based complaints redressal system
 
@@ -560,10 +560,10 @@ D. Customer Due Diligence and e-KYC system
 
 **Options:**
 
-A. Only buyers
-B. Only sellers
-C. Neither buyers nor sellers
-D. Only arbitrageurs
+A) Only buyers
+B) Only sellers
+C) Neither buyers nor sellers
+D) Only arbitrageurs
 
 **Answer:** Neither buyers nor sellers
 
@@ -575,10 +575,10 @@ D. Only arbitrageurs
 
 **Options:**
 
-A. Volatility is low
-B. Volatility is high
-C. Market is stable
-D. None of the above
+A) Volatility is low
+B) Volatility is high
+C) Market is stable
+D) None of the above
 
 **Answer:** Volatility is high
 
@@ -590,10 +590,10 @@ D. None of the above
 
 **Options:**
 
-A. Delta
-B. Theta
-C. Rho
-D. Vega
+A) Delta
+B) Theta
+C) Rho
+D) Vega
 
 **Answer:** Vega
 
@@ -605,8 +605,8 @@ D. Vega
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -618,10 +618,10 @@ B. False
 
 **Options:**
 
-A. Unsystematic Risk
-B. Systematic Risk
-C. Credit Risk
-D. Operational Risk
+A) Unsystematic Risk
+B) Systematic Risk
+C) Credit Risk
+D) Operational Risk
 
 **Answer:** Systematic Risk
 
@@ -633,8 +633,8 @@ D. Operational Risk
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** No
 
@@ -646,10 +646,10 @@ B. No
 
 **Options:**
 
-A. It incurs loss
-B. No impact
-C. It becomes profitable
-D. It becomes risky
+A) It incurs loss
+B) No impact
+C) It becomes profitable
+D) It becomes risky
 
 **Answer:** It becomes profitable
 
@@ -661,8 +661,8 @@ D. It becomes risky
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -674,10 +674,10 @@ B. False
 
 **Options:**
 
-A. Near 1
-B. Near -1
-C. Near 0
-D. Near 2
+A) Near 1
+B) Near -1
+C) Near 0
+D) Near 2
 
 **Answer:** Near 0
 
@@ -689,10 +689,10 @@ D. Near 2
 
 **Options:**
 
-A. Checking portfolio manually
-B. Broker asking for funds
-C. Daily revaluation of open positions
-D. Fixing final settlement price
+A) Checking portfolio manually
+B) Broker asking for funds
+C) Daily revaluation of open positions
+D) Fixing final settlement price
 
 **Answer:** Daily revaluation of open positions
 
@@ -704,10 +704,10 @@ D. Fixing final settlement price
 
 **Options:**
 
-A. Margin at Risk
-B. Price at Risk
-C. Volume at Risk
-D. Value at Risk
+A) Margin at Risk
+B) Price at Risk
+C) Volume at Risk
+D) Value at Risk
 
 **Answer:** Value at Risk
 
@@ -719,10 +719,10 @@ D. Value at Risk
 
 **Options:**
 
-A. Place stop loss at Rs 990
-B. Place stop loss at Rs 970
-C. Place limit buy at Rs 990
-D. Place limit sell at Rs 970
+A) Place stop loss at Rs 990
+B) Place stop loss at Rs 970
+C) Place limit buy at Rs 990
+D) Place limit sell at Rs 970
 
 **Answer:** Place stop loss at Rs 970
 
@@ -734,8 +734,8 @@ D. Place limit sell at Rs 970
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -747,10 +747,10 @@ B. False
 
 **Options:**
 
-A. Rs 12,000 Profit
-B. Rs 12,00,000 Profit
-C. Rs 12,000 Loss
-D. Rs 10,000 Profit
+A) Rs 12,000 Profit
+B) Rs 12,00,000 Profit
+C) Rs 12,000 Loss
+D) Rs 10,000 Profit
 
 **Answer:** Rs 12,000 Profit
 
@@ -762,10 +762,10 @@ D. Rs 10,000 Profit
 
 **Options:**
 
-A. Must also be cash segment member
-B. Must join cash segment within 2 years
-C. Provides trading facility to clients
-D. Has no trading rights
+A) Must also be cash segment member
+B) Must join cash segment within 2 years
+C) Provides trading facility to clients
+D) Has no trading rights
 
 **Answer:** Has no trading rights
 
@@ -777,8 +777,8 @@ D. Has no trading rights
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -790,10 +790,10 @@ B. False
 
 **Options:**
 
-A. Land dispute between client and broker
-B. Matter already under arbitration
-C. Notional loss claim
-D. Unauthorized trade in client account
+A) Land dispute between client and broker
+B) Matter already under arbitration
+C) Notional loss claim
+D) Unauthorized trade in client account
 
 **Answer:** Unauthorized trade in client account
 
@@ -805,10 +805,10 @@ D. Unauthorized trade in client account
 
 **Options:**
 
-A. State Bank of India
-B. Euroclear
-C. SEBI Approved Clearing Corporation
-D. Interbank Clearing House
+A) State Bank of India
+B) Euroclear
+C) SEBI Approved Clearing Corporation
+D) Interbank Clearing House
 
 **Answer:** SEBI Approved Clearing Corporation
 
@@ -820,8 +820,8 @@ D. Interbank Clearing House
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -833,8 +833,8 @@ B. False
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -846,8 +846,8 @@ B. No
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -859,8 +859,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -872,10 +872,10 @@ B. False
 
 **Options:**
 
-A. Expense
-B. Income
-C. Loan
-D. Amortization
+A) Expense
+B) Income
+C) Loan
+D) Amortization
 
 **Answer:** Income
 
@@ -887,8 +887,8 @@ D. Amortization
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -900,10 +900,10 @@ B. False
 
 **Options:**
 
-A. Index Options
-B. Individual Stock Options
-C. Individual Stock Futures
-D. All of the above
+A) Index Options
+B) Individual Stock Options
+C) Individual Stock Futures
+D) All of the above
 
 **Answer:** All of the above
 
@@ -915,8 +915,8 @@ D. All of the above
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -928,8 +928,8 @@ B. No
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -941,10 +941,10 @@ B. No
 
 **Options:**
 
-A. 1
-B. 2
-C. 3
-D. 4
+A) 1
+B) 2
+C) 3
+D) 4
 
 **Answer:** 3
 
@@ -956,8 +956,8 @@ D. 4
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -969,10 +969,10 @@ B. False
 
 **Options:**
 
-A. Obligation only
-B. Right only
-C. Both right and obligation
-D. Neither right nor obligation
+A) Obligation only
+B) Right only
+C) Both right and obligation
+D) Neither right nor obligation
 
 **Answer:** Right only
 
@@ -984,8 +984,8 @@ D. Neither right nor obligation
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -997,10 +997,10 @@ B. False
 
 **Options:**
 
-A. Can be attached
-B. Cannot be attached
-C. Depends on Clearing Corporation
-D. None of the above
+A) Can be attached
+B) Cannot be attached
+C) Depends on Clearing Corporation
+D) None of the above
 
 **Answer:** Cannot be attached
 
@@ -1012,10 +1012,10 @@ D. None of the above
 
 **Options:**
 
-A. It increases
-B. It decreases
-C. It remains unchanged
-D. Cannot be predicted
+A) It increases
+B) It decreases
+C) It remains unchanged
+D) Cannot be predicted
 
 **Answer:** It remains unchanged
 
@@ -1027,10 +1027,10 @@ D. Cannot be predicted
 
 **Options:**
 
-A. Option Buyer
-B. Option Seller
-C. Both equally
-D. Neither
+A) Option Buyer
+B) Option Seller
+C) Both equally
+D) Neither
 
 **Answer:** Option Seller
 
@@ -1042,10 +1042,10 @@ D. Neither
 
 **Options:**
 
-A. Buyer has obligation to sell
-B. Seller has right to buy
-C. Buyer has right but not obligation to sell
-D. Buyer has no right
+A) Buyer has obligation to sell
+B) Seller has right to buy
+C) Buyer has right but not obligation to sell
+D) Buyer has no right
 
 **Answer:** Buyer has right but not obligation to sell
 
@@ -1057,10 +1057,10 @@ D. Buyer has no right
 
 **Options:**
 
-A. He makes profit
-B. He makes loss
-C. Profit or loss uncertain
-D. No effect
+A) He makes profit
+B) He makes loss
+C) Profit or loss uncertain
+D) No effect
 
 **Answer:** He makes profit
 
@@ -1072,10 +1072,10 @@ D. No effect
 
 **Options:**
 
-A. Ignored
-B. Fully charged to P&L immediately
-C. Amortized over life of contract
-D. Not recorded
+A) Ignored
+B) Fully charged to P&L immediately
+C) Amortized over life of contract
+D) Not recorded
 
 **Answer:** Amortized over life of contract
 
@@ -1087,10 +1087,10 @@ D. Not recorded
 
 **Options:**
 
-A. Speculators to Hedgers
-B. Arbitrageurs to Hedgers
-C. Hedgers to Speculators
-D. Speculators to Arbitrageurs
+A) Speculators to Hedgers
+B) Arbitrageurs to Hedgers
+C) Hedgers to Speculators
+D) Speculators to Arbitrageurs
 
 **Answer:** Hedgers to Speculators
 
@@ -1098,18 +1098,18 @@ D. Speculators to Arbitrageurs
 
 ---
 
-**Question 77:** Which of the following is considered as the maximum loss limit for an option buyer?
+**Question 77:** Which is an example of a calendar spread?
 
 **Options:**
 
-A. Unlimited
-B. Strike Price minus Premium
-C. Premium paid
-D. Spot Price plus Premium
+A) Buy and sell stock together
+B) Buy one-month futures and sell another month futures
+C) Buy stock and short futures
+D) Sell spot and buy call
 
-**Answer:** Premium paid
+**Answer:** Buy one-month futures and sell another month futures
 
-**Explanation:** The maximum loss for an option buyer is limited strictly to the premium paid to acquire the option contract.
+**Explanation:** Calendar spread involves buying and selling futures contracts of different expiry months.
 
 ---
 
@@ -1117,10 +1117,10 @@ D. Spot Price plus Premium
 
 **Options:**
 
-A. Must own underlying
-B. Must own 25% of underlying
-C. Must own 50% of underlying
-D. Need not own underlying
+A) Must own underlying
+B) Must own 25% of underlying
+C) Must own 50% of underlying
+D) Need not own underlying
 
 **Answer:** Need not own underlying
 
@@ -1132,10 +1132,10 @@ D. Need not own underlying
 
 **Options:**
 
-A. Transfer of risk to those with higher risk appetite
-B. Reallocation of risk among participants
-C. Both A and B
-D. None of the above
+A) Transfer of risk to those with higher risk appetite
+B) Reallocation of risk among participants
+C) Both A and B
+D) None of the above
 
 **Answer:** Both A and B
 
@@ -1147,10 +1147,10 @@ D. None of the above
 
 **Options:**
 
-A. Options are not symmetrical in rights and obligations
-B. Buyer has right, seller has obligation
-C. Options have non-linear payoff
-D. Options have linear payoff
+A) Options are not symmetrical in rights and obligations
+B) Buyer has right, seller has obligation
+C) Options have non-linear payoff
+D) Options have linear payoff
 
 **Answer:** Options have linear payoff
 
@@ -1158,18 +1158,18 @@ D. Options have linear payoff
 
 ---
 
-**Question 81:** What does Market Wide Position Limit (MWPL) signify in the equity derivatives segment?
+**Question 81:** ‘SCORES’ is the name of ______.
 
 **Options:**
 
-A. Maximum number of contracts an individual client can hold
-B. Total number of shares outstanding in the cash market
-C. Maximum open interest allowed across all members and clients for a specific underlying
-D. The daily volume limit for a specific stock
+A) Securities Collateral Record System
+B) Exchange Risk Management System
+C) SEBI’s Online Complaint Redressal System
+D) Suspicious Transaction Reporting System
 
-**Answer:** Maximum open interest allowed across all members and clients for a specific underlying
+**Answer:** SEBI’s Online Complaint Redressal System
 
-**Explanation:** MWPL represents the maximum open interest allowed for a particular underlying stock across all brokers and clients combined, generally set at 20% of the non-promoter holding.
+**Explanation:** SCORES (SEBI Complaints Redress System) is SEBI’s web-based system for investor grievance redressal.
 
 ---
 
@@ -1177,10 +1177,10 @@ D. The daily volume limit for a specific stock
 
 **Options:**
 
-A. Take 5% more exposure
-B. Reverse only
-C. Open new positions
-D. Not open new positions
+A) Take 5% more exposure
+B) Reverse only
+C) Open new positions
+D) Not open new positions
 
 **Answer:** Not open new positions
 
@@ -1192,10 +1192,10 @@ D. Not open new positions
 
 **Options:**
 
-A. Long position
-B. Short position
-C. Optional position
-D. Naked position
+A) Long position
+B) Short position
+C) Optional position
+D) Naked position
 
 **Answer:** Naked position
 
@@ -1207,10 +1207,10 @@ D. Naked position
 
 **Options:**
 
-A. Initial margin not paid
-B. Daily settlement dues not paid
-C. Both A and B
-D. None of the above
+A) Initial margin not paid
+B) Daily settlement dues not paid
+C) Both A and B
+D) None of the above
 
 **Answer:** Both A and B
 
@@ -1222,10 +1222,10 @@ D. None of the above
 
 **Options:**
 
-A. One-month Nifty Futures
-B. One-month USDINR Option
-C. Three-month Forward Contract
-D. One-month Government Bond Futures
+A) One-month Nifty Futures
+B) One-month USDINR Option
+C) Three-month Forward Contract
+D) One-month Government Bond Futures
 
 **Answer:** Three-month Forward Contract
 
@@ -1237,10 +1237,10 @@ D. One-month Government Bond Futures
 
 **Options:**
 
-A. Increase
-B. Decrease
-C. Remain same
-D. Double
+A) Increase
+B) Decrease
+C) Remain same
+D) Double
 
 **Answer:** Decrease
 
@@ -1252,10 +1252,10 @@ D. Double
 
 **Options:**
 
-A. On or before expiry
-B. Only on expiry date
-C. One day before expiry
-D. Anytime
+A) On or before expiry
+B) Only on expiry date
+C) One day before expiry
+D) Anytime
 
 **Answer:** Only on expiry date
 
@@ -1263,18 +1263,18 @@ D. Anytime
 
 ---
 
-**Question 88:** Under the physical settlement framework for equity derivatives, what is the obligation of a seller of a Call option that expires In-The-Money (ITM)?
+**Question 88:** In futures trading, margin is paid by ______.
 
 **Options:**
 
-A. Receive the underlying shares
-B. Deliver the underlying shares
-C. Pay only the cash difference
-D. Roll over the position to the next month
+A) Buyer only
+B) Seller only
+C) Both buyer and seller
+D) Clearing Corporation
 
-**Answer:** Deliver the underlying shares
+**Answer:** Both buyer and seller
 
-**Explanation:** Under physical settlement, a Call option seller who is assigned must deliver the underlying shares to the buyer at the predetermined strike price.
+**Explanation:** In futures contracts, both buyer and seller must deposit initial margin. In options, only seller pays margin while buyer pays premium.
 
 ---
 
@@ -1282,10 +1282,10 @@ D. Roll over the position to the next month
 
 **Options:**
 
-A. Direct loan
-B. Derivative contract
-C. Cash deposit
-D. Physical asset
+A) Direct loan
+B) Derivative contract
+C) Cash deposit
+D) Physical asset
 
 **Answer:** Derivative contract
 
@@ -1297,10 +1297,10 @@ D. Physical asset
 
 **Options:**
 
-A. Company shares
-B. Gold and silver
-C. A company's secret strategy meeting
-D. Foreign currency
+A) Company shares
+B) Gold and silver
+C) A company's secret strategy meeting
+D) Foreign currency
 
 **Answer:** A company's secret strategy meeting
 
@@ -1312,10 +1312,10 @@ D. Foreign currency
 
 **Options:**
 
-A. 10th Century
-B. 12th Century
-C. 15th Century
-D. 19th Century
+A) 10th Century
+B) 12th Century
+C) 15th Century
+D) 19th Century
 
 **Answer:** 12th Century
 
@@ -1327,10 +1327,10 @@ D. 19th Century
 
 **Options:**
 
-A. 2 years
-B. 5 years
-C. 10 years
-D. 20 years
+A) 2 years
+B) 5 years
+C) 10 years
+D) 20 years
 
 **Answer:** 20 years
 
@@ -1342,10 +1342,10 @@ D. 20 years
 
 **Options:**
 
-A. Rose Fever
-B. Tulip Mania
-C. The Dutch Gold Rush
-D. The Grain Crisis
+A) Rose Fever
+B) Tulip Mania
+C) The Dutch Gold Rush
+D) The Grain Crisis
 
 **Answer:** Tulip Mania
 
@@ -1357,10 +1357,10 @@ D. The Grain Crisis
 
 **Options:**
 
-A. Chicago, USA
-B. London, UK
-C. Dojima, Japan
-D. Mumbai, India
+A) Chicago, USA
+B) London, UK
+C) Dojima, Japan
+D) Mumbai, India
 
 **Answer:** Dojima, Japan
 
@@ -1372,10 +1372,10 @@ D. Mumbai, India
 
 **Options:**
 
-A. New York Stock Exchange
-B. London Metal Exchange
-C. Chicago Board of Trade (CBOT)
-D. National Stock Exchange (NSE)
+A) New York Stock Exchange
+B) London Metal Exchange
+C) Chicago Board of Trade (CBOT)
+D) National Stock Exchange (NSE)
 
 **Answer:** Chicago Board of Trade (CBOT)
 
@@ -1387,10 +1387,10 @@ D. National Stock Exchange (NSE)
 
 **Options:**
 
-A. 1848
-B. 1865
-C. 1919
-D. 1972
+A) 1848
+B) 1865
+C) 1919
+D) 1972
 
 **Answer:** 1865
 
@@ -1402,10 +1402,10 @@ D. 1972
 
 **Options:**
 
-A. NASDAQ
-B. Chicago Mercantile Exchange (CME)
-C. Dow Jones
-D. World Bank
+A) NASDAQ
+B) Chicago Mercantile Exchange (CME)
+C) Dow Jones
+D) World Bank
 
 **Answer:** Chicago Mercantile Exchange (CME)
 
@@ -1417,10 +1417,10 @@ D. World Bank
 
 **Options:**
 
-A. Corn futures
-B. Oil futures
-C. Currency futures
-D. Interest rate futures
+A) Corn futures
+B) Oil futures
+C) Currency futures
+D) Interest rate futures
 
 **Answer:** Currency futures
 
@@ -1432,29 +1432,14 @@ D. Interest rate futures
 
 **Options:**
 
-A. CBOT
-B. SEBI
-C. CBOE
-D. NYSE
+A) CBOT
+B) SEBI
+C) CBOE
+D) NYSE
 
 **Answer:** CBOE
 
 **Explanation:** The Chicago Board Options Exchange (CBOE) was the first to offer listed options trading.
-
----
-
-**Question 100:** [Ref. Question] A trader creates a Long Straddle by buying a Call option at strike Rs. 17900 (premium Rs. 149) and a Put option at the same strike Rs. 17900 (premium Rs. 119). Calculate the upper and lower break-even points of this strategy.
-
-**Options:**
-
-A. Upper BE: Rs. 18168 | Lower BE: Rs. 17632
-B. Upper BE: Rs. 18049 | Lower BE: Rs. 17781
-C. Upper BE: Rs. 18218 | Lower BE: Rs. 17582
-D. Upper BE: Rs. 17900 | Lower BE: Rs. 17632
-
-**Answer:** A. Upper BE: Rs. 18168 | Lower BE: Rs. 17632
-
-**Explanation:** Total Premium Paid = Call Premium + Put Premium = 149 + 119 = Rs. 268. Upper Break-even = Strike + Total Premium = 17900 + 268 = Rs. 18168. Lower Break-even = Strike - Total Premium = 17900 - 268 = Rs. 17632.
 
 ---
 

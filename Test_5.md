@@ -4,10 +4,10 @@
 
 **Options:**
 
-A. Long Trading
-B. Arbitrage
-C. Speculation
-D. Jobbing
+A) Long Trading
+B) Arbitrage
+C) Speculation
+D) Jobbing
 
 **Answer:** Arbitrage
 
@@ -19,10 +19,10 @@ D. Jobbing
 
 **Options:**
 
-A. June
-B. July
-C. August
-D. Same for all
+A) June
+B) July
+C) August
+D) Same for all
 
 **Answer:** June
 
@@ -34,8 +34,8 @@ D. Same for all
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -47,8 +47,8 @@ B. False
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** No
 
@@ -60,10 +60,10 @@ B. No
 
 **Options:**
 
-A. Only institutional investors
-B. Only the buyer
-C. Only the seller
-D. Both buyer and seller
+A) Only institutional investors
+B) Only the buyer
+C) Only the seller
+D) Both buyer and seller
 
 **Answer:** Both buyer and seller
 
@@ -75,10 +75,10 @@ D. Both buyer and seller
 
 **Options:**
 
-A. Rs. 3,48,075
-B. Rs. 4,05,000
-C. Rs. 5,87,500
-D. Rs. 7,53,075
+A) Rs. 3,48,075
+B) Rs. 4,05,000
+C) Rs. 5,87,500
+D) Rs. 7,53,075
 
 **Answer:** Rs. 7,53,075
 
@@ -90,10 +90,10 @@ D. Rs. 7,53,075
 
 **Options:**
 
-A. Lower
-B. Higher
-C. No effect
-D. Fixed
+A) Lower
+B) Higher
+C) No effect
+D) Fixed
 
 **Answer:** Higher
 
@@ -105,10 +105,10 @@ D. Fixed
 
 **Options:**
 
-A. Make profit
-B. Make loss
-C. Break even
-D. Face no impact
+A) Make profit
+B) Make loss
+C) Break even
+D) Face no impact
 
 **Answer:** Make loss
 
@@ -120,10 +120,10 @@ D. Face no impact
 
 **Options:**
 
-A. Increase trading volume
-B. Cover potential future losses
-C. Provide bonus to exchange
-D. Reduce brokerage charges
+A) Increase trading volume
+B) Cover potential future losses
+C) Provide bonus to exchange
+D) Reduce brokerage charges
 
 **Answer:** Cover potential future losses
 
@@ -135,10 +135,10 @@ D. Reduce brokerage charges
 
 **Options:**
 
-A. Unlimited amount
-B. Strike price
-C. Premium paid
-D. Spot price
+A) Unlimited amount
+B) Strike price
+C) Premium paid
+D) Spot price
 
 **Answer:** Premium paid
 
@@ -150,10 +150,10 @@ D. Spot price
 
 **Options:**
 
-A. Yes
-B. No
-C. Only for retail clients
-D. Only for brokers
+A) Yes
+B) No
+C) Only for retail clients
+D) Only for brokers
 
 **Answer:** No
 
@@ -165,8 +165,8 @@ D. Only for brokers
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -178,8 +178,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -191,10 +191,10 @@ B. False
 
 **Options:**
 
-A. Help speculation
-B. Help trading
-C. Help hedging
-D. Help arbitrage only
+A) Help speculation
+B) Help trading
+C) Help hedging
+D) Help arbitrage only
 
 **Answer:** Help hedging
 
@@ -206,10 +206,10 @@ D. Help arbitrage only
 
 **Options:**
 
-A. Fixed Assets
-B. Bad Debts
-C. Current Assets
-D. Current Liabilities
+A) Fixed Assets
+B) Bad Debts
+C) Current Assets
+D) Current Liabilities
 
 **Answer:** Current Assets
 
@@ -221,10 +221,10 @@ D. Current Liabilities
 
 **Options:**
 
-A. Call option
-B. Sell call option
-C. Buy put option
-D. Sell put option
+A) Call option
+B) Sell call option
+C) Buy put option
+D) Sell put option
 
 **Answer:** Call option
 
@@ -236,10 +236,10 @@ D. Sell put option
 
 **Options:**
 
-A. Rs. 251,550
-B. Rs. 459,450
-C. Rs. 640,000
-D. Rs. 374,900
+A) Rs. 251,550
+B) Rs. 459,450
+C) Rs. 640,000
+D) Rs. 374,900
 
 **Answer:** Rs. 459,450
 
@@ -251,10 +251,10 @@ D. Rs. 374,900
 
 **Options:**
 
-A. Bought at 1900
-B. Bought at 1700
-C. Sold at 1900
-D. Sold at 1700
+A) Bought at 1900
+B) Bought at 1700
+C) Sold at 1900
+D) Sold at 1700
 
 **Answer:** Bought at 1700
 
@@ -266,10 +266,10 @@ D. Sold at 1700
 
 **Options:**
 
-A. European Put
-B. American Put
-C. American Call
-D. European Call
+A) European Put
+B) American Put
+C) American Call
+D) European Call
 
 **Answer:** American Call
 
@@ -281,10 +281,10 @@ D. European Call
 
 **Options:**
 
-A. Less than specified quantity
-B. More than specified quantity
-C. Only specified quantity
-D. Any quantity
+A) Less than specified quantity
+B) More than specified quantity
+C) Only specified quantity
+D) Any quantity
 
 **Answer:** Only specified quantity
 
@@ -296,10 +296,10 @@ D. Any quantity
 
 **Options:**
 
-A. 425
-B. 482
-C. 476
-D. 437
+A) 425
+B) 482
+C) 476
+D) 437
 
 **Answer:** 476
 
@@ -311,10 +311,10 @@ D. 437
 
 **Options:**
 
-A. Sell stock futures and sell index futures
-B. Sell stock futures and buy index futures
-C. Buy stock futures and sell index futures
-D. Do nothing
+A) Sell stock futures and sell index futures
+B) Sell stock futures and buy index futures
+C) Buy stock futures and sell index futures
+D) Do nothing
 
 **Answer:** Sell stock futures and buy index futures
 
@@ -326,10 +326,10 @@ D. Do nothing
 
 **Options:**
 
-A. Arbitrage
-B. Hedging
-C. Leverage
-D. Speculation
+A) Arbitrage
+B) Hedging
+C) Leverage
+D) Speculation
 
 **Answer:** Leverage
 
@@ -341,10 +341,10 @@ D. Speculation
 
 **Options:**
 
-A. Settlement problems
-B. Counterparty risk
-C. Lack of central authority
-D. All of the above
+A) Settlement problems
+B) Counterparty risk
+C) Lack of central authority
+D) All of the above
 
 **Answer:** All of the above
 
@@ -356,8 +356,8 @@ D. All of the above
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -369,8 +369,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -382,10 +382,10 @@ B. False
 
 **Options:**
 
-A. Notional loss claims
-B. Private commercial dealings
-C. Trades not executed on exchange
-D. Excess brokerage charged
+A) Notional loss claims
+B) Private commercial dealings
+C) Trades not executed on exchange
+D) Excess brokerage charged
 
 **Answer:** Excess brokerage charged
 
@@ -397,10 +397,10 @@ D. Excess brokerage charged
 
 **Options:**
 
-A. Exercise the option
-B. Not exercise the option
-C. Exercise partially
-D. Depends on mood
+A) Exercise the option
+B) Not exercise the option
+C) Exercise partially
+D) Depends on mood
 
 **Answer:** Not exercise the option
 
@@ -412,8 +412,8 @@ D. Depends on mood
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -425,10 +425,10 @@ B. False
 
 **Options:**
 
-A. Rs. 12
-B. Rs. 188
-C. Rs. 200
-D. Unlimited
+A) Rs. 12
+B) Rs. 188
+C) Rs. 200
+D) Unlimited
 
 **Answer:** Unlimited
 
@@ -440,10 +440,10 @@ D. Unlimited
 
 **Options:**
 
-A. Purchase of equity shares only
-B. Sale of derivatives only
-C. Purchase of derivatives only
-D. Both purchase of equity shares and sale of derivatives
+A) Purchase of equity shares only
+B) Sale of derivatives only
+C) Purchase of derivatives only
+D) Both purchase of equity shares and sale of derivatives
 
 **Answer:** Both purchase of equity shares and sale of derivatives
 
@@ -455,10 +455,10 @@ D. Both purchase of equity shares and sale of derivatives
 
 **Options:**
 
-A. Stock broker
-B. SEBI
-C. Stock exchange
-D. Parties involved
+A) Stock broker
+B) SEBI
+C) Stock exchange
+D) Parties involved
 
 **Answer:** Stock exchange
 
@@ -470,8 +470,8 @@ D. Parties involved
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -483,10 +483,10 @@ B. False
 
 **Options:**
 
-A. Swaps
-B. Forward contracts
-C. Futures contracts
-D. Options contracts
+A) Swaps
+B) Forward contracts
+C) Futures contracts
+D) Options contracts
 
 **Answer:** Futures contracts
 
@@ -498,10 +498,10 @@ D. Options contracts
 
 **Options:**
 
-A. Long position
-B. Hedged position
-C. Naked position
-D. Closed position
+A) Long position
+B) Hedged position
+C) Naked position
+D) Closed position
 
 **Answer:** Naked position
 
@@ -513,10 +513,10 @@ D. Closed position
 
 **Options:**
 
-A. Trade
-B. Speculate
-C. Manage risk
-D. Arbitrage only
+A) Trade
+B) Speculate
+C) Manage risk
+D) Arbitrage only
 
 **Answer:** Manage risk
 
@@ -528,8 +528,8 @@ D. Arbitrage only
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -541,10 +541,10 @@ B. False
 
 **Options:**
 
-A. Obligation only
-B. Right only
-C. Both right and obligation
-D. No right
+A) Obligation only
+B) Right only
+C) Both right and obligation
+D) No right
 
 **Answer:** Right only
 
@@ -556,8 +556,8 @@ D. No right
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -569,10 +569,10 @@ B. False
 
 **Options:**
 
-A. Price uncertainty
-B. Standardization
-C. Cash settlement
-D. Exchange trading
+A) Price uncertainty
+B) Standardization
+C) Cash settlement
+D) Exchange trading
 
 **Answer:** Cash settlement
 
@@ -584,10 +584,10 @@ D. Exchange trading
 
 **Options:**
 
-A. Last Friday of January
-B. Last Friday of February
-C. Last Friday of March
-D. Last Friday of April
+A) Last Friday of January
+B) Last Friday of February
+C) Last Friday of March
+D) Last Friday of April
 
 **Answer:** Last Friday of January
 
@@ -599,10 +599,10 @@ D. Last Friday of April
 
 **Options:**
 
-A. Natural disasters
-B. Power failure
-C. Inadequate contingency planning
-D. All of the above
+A) Natural disasters
+B) Power failure
+C) Inadequate contingency planning
+D) All of the above
 
 **Answer:** Inadequate contingency planning
 
@@ -614,8 +614,8 @@ D. All of the above
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -627,8 +627,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -640,10 +640,10 @@ B. False
 
 **Options:**
 
-A. 75
-B. 50
-C. 25
-D. 125
+A) 75
+B) 50
+C) 25
+D) 125
 
 **Answer:** 25
 
@@ -655,8 +655,8 @@ D. 125
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -668,8 +668,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -681,8 +681,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -694,10 +694,10 @@ B. False
 
 **Options:**
 
-A. Market volatility
-B. Underlying price
-C. Risk-free interest rate
-D. Liquidity
+A) Market volatility
+B) Underlying price
+C) Risk-free interest rate
+D) Liquidity
 
 **Answer:** Risk-free interest rate
 
@@ -709,10 +709,10 @@ D. Liquidity
 
 **Options:**
 
-A. Price buyer is willing to pay
-B. Price seller is willing to sell at
-C. Average market price
-D. Settlement price
+A) Price buyer is willing to pay
+B) Price seller is willing to sell at
+C) Average market price
+D) Settlement price
 
 **Answer:** Price seller is willing to sell at
 
@@ -724,10 +724,10 @@ D. Settlement price
 
 **Options:**
 
-A. All listed stocks
-B. High price stocks only
-C. Selected stocks meeting exchange criteria
-D. Stocks listed on all exchanges
+A) All listed stocks
+B) High price stocks only
+C) Selected stocks meeting exchange criteria
+D) Stocks listed on all exchanges
 
 **Answer:** Selected stocks meeting exchange criteria
 
@@ -739,8 +739,8 @@ D. Stocks listed on all exchanges
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -752,8 +752,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -765,10 +765,10 @@ B. False
 
 **Options:**
 
-A. Calendar spread
-B. Protective put
-C. Straddle
-D. Aggressive put
+A) Calendar spread
+B) Protective put
+C) Straddle
+D) Aggressive put
 
 **Answer:** Protective put
 
@@ -780,8 +780,8 @@ D. Aggressive put
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -793,10 +793,10 @@ B. False
 
 **Options:**
 
-A. Increase put premium
-B. Decrease put premium
-C. Have no effect
-D. Expire option automatically
+A) Increase put premium
+B) Decrease put premium
+C) Have no effect
+D) Expire option automatically
 
 **Answer:** Decrease put premium
 
@@ -808,10 +808,10 @@ D. Expire option automatically
 
 **Options:**
 
-A. Long position
-B. Square-off position
-C. Short position
-D. Hedge position
+A) Long position
+B) Square-off position
+C) Short position
+D) Hedge position
 
 **Answer:** Short position
 
@@ -823,10 +823,10 @@ D. Hedge position
 
 **Options:**
 
-A. Netted to 2 contracts
-B. Grossed to 22 contracts
-C. Maximum of 12
-D. Decided by exchange
+A) Netted to 2 contracts
+B) Grossed to 22 contracts
+C) Maximum of 12
+D) Decided by exchange
 
 **Answer:** Grossed to 22 contracts
 
@@ -838,10 +838,10 @@ D. Decided by exchange
 
 **Options:**
 
-A. Be exercised
-B. Expire worthless
-C. Always profit
-D. Be compulsory exercised
+A) Be exercised
+B) Expire worthless
+C) Always profit
+D) Be compulsory exercised
 
 **Answer:** Expire worthless
 
@@ -853,8 +853,8 @@ D. Be compulsory exercised
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -866,8 +866,8 @@ B. No
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -879,8 +879,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -892,10 +892,10 @@ B. False
 
 **Options:**
 
-A. Rs. 25,000 profit
-B. Rs. 9,000 profit
-C. Rs. 9,000 loss
-D. Rs. 25,000 loss
+A) Rs. 25,000 profit
+B) Rs. 9,000 profit
+C) Rs. 9,000 loss
+D) Rs. 25,000 loss
 
 **Answer:** Rs. 9,000 loss
 
@@ -907,10 +907,10 @@ D. Rs. 25,000 loss
 
 **Options:**
 
-A. Rs. 50
-B. Rs. 100
-C. Rs. 10
-D. Rs. 2.5
+A) Rs. 50
+B) Rs. 100
+C) Rs. 10
+D) Rs. 2.5
 
 **Answer:** Rs. 10
 
@@ -922,10 +922,10 @@ D. Rs. 2.5
 
 **Options:**
 
-A. Not marked to market
-B. Marked to market periodically
-C. Marked only yearly
-D. Marked at exchange decision
+A) Not marked to market
+B) Marked to market periodically
+C) Marked only yearly
+D) Marked at exchange decision
 
 **Answer:** Marked to market periodically
 
@@ -937,10 +937,10 @@ D. Marked at exchange decision
 
 **Options:**
 
-A. Month when trade is done
-B. Expiry month of futures contract
-C. Month of listing
-D. Beginning month
+A) Month when trade is done
+B) Expiry month of futures contract
+C) Month of listing
+D) Beginning month
 
 **Answer:** Expiry month of futures contract
 
@@ -952,10 +952,10 @@ D. Beginning month
 
 **Options:**
 
-A. Average last 5 days movement
-B. Fixed percentage
-C. Black-Scholes Model
-D. Value at Risk (VaR) method
+A) Average last 5 days movement
+B) Fixed percentage
+C) Black-Scholes Model
+D) Value at Risk (VaR) method
 
 **Answer:** Value at Risk (VaR) method
 
@@ -967,8 +967,8 @@ D. Value at Risk (VaR) method
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -980,8 +980,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -993,8 +993,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1006,8 +1006,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1019,8 +1019,8 @@ B. False
 
 **Options:**
 
-A. Yes
-B. No
+A) Yes
+B) No
 
 **Answer:** Yes
 
@@ -1032,10 +1032,10 @@ B. No
 
 **Options:**
 
-A. Systematic Risk
-B. Unsystematic Risk
-C. Arbitrage Risk
-D. Interest Rate Risk
+A) Systematic Risk
+B) Unsystematic Risk
+C) Arbitrage Risk
+D) Interest Rate Risk
 
 **Answer:** Unsystematic Risk
 
@@ -1047,10 +1047,10 @@ D. Interest Rate Risk
 
 **Options:**
 
-A. Trading members
-B. Clearing members
-C. Both
-D. Brokers only
+A) Trading members
+B) Clearing members
+C) Both
+D) Brokers only
 
 **Answer:** Clearing members
 
@@ -1062,10 +1062,10 @@ D. Brokers only
 
 **Options:**
 
-A. Strike price is lower than market price
-B. Strike price equals market price
-C. Strike price is higher than market price
-D. Strike price is zero
+A) Strike price is lower than market price
+B) Strike price equals market price
+C) Strike price is higher than market price
+D) Strike price is zero
 
 **Answer:** Strike price is higher than market price
 
@@ -1077,10 +1077,10 @@ D. Strike price is zero
 
 **Options:**
 
-A. Volatility
-B. Interest rate
-C. Time to expiry
-D. Spot price
+A) Volatility
+B) Interest rate
+C) Time to expiry
+D) Spot price
 
 **Answer:** Spot price
 
@@ -1092,10 +1092,10 @@ D. Spot price
 
 **Options:**
 
-A. Strike price is higher than market price
-B. Strike price equals market price
-C. Strike price is lower than market price
-D. Strike price is zero
+A) Strike price is higher than market price
+B) Strike price equals market price
+C) Strike price is lower than market price
+D) Strike price is zero
 
 **Answer:** Strike price is lower than market price
 
@@ -1107,8 +1107,8 @@ D. Strike price is zero
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1120,10 +1120,10 @@ B. False
 
 **Options:**
 
-A. Rs. 8,300
-B. Rs. 11,700
-C. Rs. 11,700 loss
-D. Rs. 8,300 loss
+A) Rs. 8,300
+B) Rs. 11,700
+C) Rs. 11,700 loss
+D) Rs. 8,300 loss
 
 **Answer:** Rs. 11,700
 
@@ -1135,10 +1135,10 @@ D. Rs. 8,300 loss
 
 **Options:**
 
-A. He buys October futures at lower price
-B. He sells another September futures at lower price
-C. He squares off by buying September futures at lower price
-D. He sells October futures at lower price
+A) He buys October futures at lower price
+B) He sells another September futures at lower price
+C) He squares off by buying September futures at lower price
+D) He sells October futures at lower price
 
 **Answer:** He squares off by buying September futures at lower price
 
@@ -1150,10 +1150,10 @@ D. He sells October futures at lower price
 
 **Options:**
 
-A. Index derivatives
-B. Exchange Traded Funds (ETFs)
-C. Index funds
-D. Private equity funds
+A) Index derivatives
+B) Exchange Traded Funds (ETFs)
+C) Index funds
+D) Private equity funds
 
 **Answer:** Private equity funds
 
@@ -1165,8 +1165,8 @@ D. Private equity funds
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1178,8 +1178,8 @@ B. False
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** True
 
@@ -1191,10 +1191,10 @@ B. False
 
 **Options:**
 
-A. Forward contracts
-B. Swap contracts
-C. Futures contracts
-D. Equity cash market
+A) Forward contracts
+B) Swap contracts
+C) Futures contracts
+D) Equity cash market
 
 **Answer:** Futures contracts
 
@@ -1206,10 +1206,10 @@ D. Equity cash market
 
 **Options:**
 
-A. Rs. 10
-B. Rs. 20
-C. Rs. 24
-D. Rs. 130
+A) Rs. 10
+B) Rs. 20
+C) Rs. 24
+D) Rs. 130
 
 **Answer:** Rs. 10
 
@@ -1221,10 +1221,10 @@ D. Rs. 130
 
 **Options:**
 
-A. Control government policies
-B. Encourage big investors
-C. Direct market movement
-D. Prevent market manipulation by large participants
+A) Control government policies
+B) Encourage big investors
+C) Direct market movement
+D) Prevent market manipulation by large participants
 
 **Answer:** Prevent market manipulation by large participants
 
@@ -1236,10 +1236,10 @@ D. Prevent market manipulation by large participants
 
 **Options:**
 
-A. Decreases
-B. Increases
-C. Remains unchanged
-D. Both B and C
+A) Decreases
+B) Increases
+C) Remains unchanged
+D) Both B and C
 
 **Answer:** Both B and C
 
@@ -1251,8 +1251,8 @@ D. Both B and C
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1264,10 +1264,10 @@ B. False
 
 **Options:**
 
-A. Bear spread
-B. Bull spread
-C. Butterfly spread
-D. Calendar spread
+A) Bear spread
+B) Bull spread
+C) Butterfly spread
+D) Calendar spread
 
 **Answer:** Bull spread
 
@@ -1279,10 +1279,10 @@ D. Calendar spread
 
 **Options:**
 
-A. High liquidity
-B. High volatility
-C. High leverage
-D. High regulation
+A) High liquidity
+B) High volatility
+C) High leverage
+D) High regulation
 
 **Answer:** High leverage
 
@@ -1294,8 +1294,8 @@ D. High regulation
 
 **Options:**
 
-A. True
-B. False
+A) True
+B) False
 
 **Answer:** False
 
@@ -1307,10 +1307,10 @@ B. False
 
 **Options:**
 
-A. Power of Attorney
-B. Client Agreement
-C. Risk Disclosure Document
-D. Account Opening Form
+A) Power of Attorney
+B) Client Agreement
+C) Risk Disclosure Document
+D) Account Opening Form
 
 **Answer:** Risk Disclosure Document
 
@@ -1322,10 +1322,10 @@ D. Account Opening Form
 
 **Options:**
 
-A. Interest rate risk
-B. Currency risk
-C. Counterparty risk
-D. Political risk
+A) Interest rate risk
+B) Currency risk
+C) Counterparty risk
+D) Political risk
 
 **Answer:** Counterparty risk
 
@@ -1337,10 +1337,10 @@ D. Political risk
 
 **Options:**
 
-A. Market risk
-B. Liquidity risk
-C. Counterparty risk
-D. Operational risk
+A) Market risk
+B) Liquidity risk
+C) Counterparty risk
+D) Operational risk
 
 **Answer:** Counterparty risk
 
@@ -1352,10 +1352,10 @@ D. Operational risk
 
 **Options:**
 
-A. Shorter expiry dates
-B. Higher transaction costs
-C. Leveraged nature of contracts
-D. Lower trading volume
+A) Shorter expiry dates
+B) Higher transaction costs
+C) Leveraged nature of contracts
+D) Lower trading volume
 
 **Answer:** Leveraged nature of contracts
 
@@ -1367,10 +1367,10 @@ D. Lower trading volume
 
 **Options:**
 
-A. Fixed Income Instruments
-B. Debt instruments
-C. Equity and other risky investments
-D. Savings accounts
+A) Fixed Income Instruments
+B) Debt instruments
+C) Equity and other risky investments
+D) Savings accounts
 
 **Answer:** Equity and other risky investments
 
@@ -1382,10 +1382,10 @@ D. Savings accounts
 
 **Options:**
 
-A. Past investment performance
-B. Number of brokers used
-C. Combined family income
-D. Daily trading volume
+A) Past investment performance
+B) Number of brokers used
+C) Combined family income
+D) Daily trading volume
 
 **Answer:** Combined family income
 
@@ -1397,10 +1397,10 @@ D. Daily trading volume
 
 **Options:**
 
-A. Day order
-B. IOC order
-C. Stop-loss order
-D. Limit order
+A) Day order
+B) IOC order
+C) Stop-loss order
+D) Limit order
 
 **Answer:** Stop-loss order
 
@@ -1412,29 +1412,14 @@ D. Limit order
 
 **Options:**
 
-A. Random selection
-B. First come, first served
-C. Price time priority
-D. Broker size priority
+A) Random selection
+B) First come, first served
+C) Price time priority
+D) Broker size priority
 
 **Answer:** Price time priority
 
 **Explanation:** The trading system first matches orders based on the best price (highest bid, lowest ask), and then within the same price, it prioritizes orders based on when they were entered.
-
----
-
-**Question 100:** [Ref. Question] An ABC Call option with a strike price of Rs. 19400 has a premium of Rs. 170 and a Delta of 0.54. If the price of ABC stock increases by Rs. 50, what will be the new approximate premium of the Call option, holding other factors constant?
-
-**Options:**
-
-A. Rs. 197.0
-B. Rs. 220
-C. Rs. 145
-D. Rs. 207.0
-
-**Answer:** A. Rs. 197.0
-
-**Explanation:** New Premium = Old Premium + (Delta * Change in Underlying Price) = 170 + (0.54 * 50) = Rs. 197.0.
 
 ---
 

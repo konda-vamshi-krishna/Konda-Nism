@@ -5,11 +5,10 @@ let notesData = window.NISM_DATA.notesData;
 // Initialize app directly (no fetch needed)
 function initializeApp() {
     try {
-        if(document.getElementById('simTestSelect')) {
-            setupTestSelectors();
-            loadLocalStorage();
-            renderFlashcard();
-        }
+        setupTestSelectors();
+        setupFlashcardDecks();
+        loadLocalStorage();
+        renderFlashcard();
     } catch (error) {
         console.error('Error initializing app:', error);
     }
@@ -68,8 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
       updateAnalyticsUI();
   }
 
+  let selectedTestForLaunch = null;
+
   function initiateNewTest() {
-      const selected = document.getElementById('simTestSelect').value;
+      if (!selectedTestForLaunch) return;
+      const selected = selectedTestForLaunch;
       const selectedMode = document.querySelector('input[name="testMode"]:checked').value;
       
       currentActiveTest = selected;
@@ -282,7 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const expPanel = document.getElementById('activeExpPanel');
       if (isSubmitted || (testMode === 'practice' && answers[currentQ])) {
           expPanel.style.display = 'block';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+            <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Review Related Flashcard
+            </button>`;
           expPanel.innerHTML = `
               <div class="notranslate">${expHtml}</div>
               <div class="translate-box" translate="yes">${expHtml}</div>
@@ -310,7 +316,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const q = testData[currentActiveTest][currentQ];
           const expPanel = document.getElementById('activeExpPanel');
           expPanel.style.display = 'block';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+            <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Review Related Flashcard
+            </button>`;
           expPanel.innerHTML = `
               <div class="notranslate">${expHtml}</div>
               <div class="translate-box" translate="yes">${expHtml}</div>
@@ -597,18 +607,61 @@ document.addEventListener('DOMContentLoaded', () => {
       return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
-  // Initialize dropdowns and contents
+  // Initialize test grid selection
   function setupTestSelectors() {
-      const simTestSelect = document.getElementById('simTestSelect');
-      simTestSelect.innerHTML = '';
+      const gridContainer = document.getElementById('testSelectionGrid');
+      if (!gridContainer) return;
+      gridContainer.innerHTML = '';
+      
+      const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
+      const startBtn = document.getElementById('startTestBtn');
+      
+      let firstTest = null;
       for (let testName in testData) {
-          let opt = document.createElement('option');
-          opt.value = testName;
-          opt.textContent = testName;
-          simTestSelect.appendChild(opt);
+          if (!firstTest) firstTest = testName;
+          
+          let btn = document.createElement('div');
+          btn.className = 'test-thumb-btn status-unattempted';
+          
+          // Check history
+          const testHistory = history.filter(h => h.testName === testName);
+          let statusText = 'Not Attempted';
+          if (testHistory.length > 0) {
+              btn.className = 'test-thumb-btn status-completed';
+              statusText = `Completed: ${testHistory[testHistory.length-1].percent}%`;
+          }
+          
+          // Check in-progress
+          const activeTest = localStorage.getItem('nism_active_test');
+          if (activeTest) {
+              const active = JSON.parse(activeTest);
+              if (active.testName === testName) {
+                  btn.className = 'test-thumb-btn status-progress';
+                  statusText = 'In Progress';
+              }
+          }
+
+          btn.innerHTML = `
+            <div class="thumb-title">${testName}</div>
+            <div class="thumb-status">${statusText}</div>
+          `;
+          
+          btn.onclick = function() {
+              // Deselect all
+              document.querySelectorAll('.test-thumb-btn').forEach(b => b.classList.remove('selected'));
+              btn.classList.add('selected');
+              selectedTestForLaunch = testName;
+              startBtn.textContent = 'Start ' + testName;
+              startBtn.disabled = false;
+          };
+          
+          gridContainer.appendChild(btn);
       }
-      if (Object.keys(testData).length > 0) {
-          updateStartTitle(Object.keys(testData)[0]);
+      
+      if (firstTest) {
+          // Select first by default
+          const firstBtn = gridContainer.querySelector('.test-thumb-btn');
+          if (firstBtn) firstBtn.click();
       }
   }
 
@@ -644,6 +697,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       currentFcIndex = 0;
       renderFlashcard();
+  }
+  
+  function setupFlashcardDecks() {
+      const select = document.getElementById('fcDeckSelect');
+      if (!select) return;
+      
+      const tests = new Set();
+      notesData.flashcards.forEach(fc => {
+          if (fc.testName) tests.add(fc.testName);
+      });
+      
+      tests.forEach(t => {
+          const count = notesData.flashcards.filter(fc => fc.testName === t).length;
+          const opt = document.createElement('option');
+          opt.value = t;
+          opt.textContent = `${t} (${count} cards)`;
+          select.appendChild(opt);
+      });
+  }
+
+  function loadFlashcardDeck(deckValue) {
+      if (deckValue === 'all') {
+          flashcardsList = [...notesData.flashcards];
+      } else {
+          flashcardsList = notesData.flashcards.filter(fc => fc.testName === deckValue);
+      }
+      currentFcIndex = 0;
+      renderFlashcard();
+  }
+
+  function jumpToFlashcard(testName, qIndex) {
+      const fcIndex = notesData.flashcards.findIndex(fc => fc.testName === testName && fc.questionIndex === qIndex);
+      if (fcIndex !== -1) {
+          const select = document.getElementById('fcDeckSelect');
+          if (select) {
+              select.value = 'all';
+              loadFlashcardDeck('all');
+          }
+          currentFcIndex = fcIndex;
+          switchTab('flashcards');
+          renderFlashcard();
+      }
   }
 
   
