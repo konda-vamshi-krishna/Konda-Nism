@@ -1,8 +1,0 @@
-Course Module test-new-subject Audit Report
-==========================================
-Total Questions Audited: 1000
-Mismatched/Missing Answer Indexes: 0
-Malformed Options: 0
-Auto-corrected count: 0
-
-Detail logs:

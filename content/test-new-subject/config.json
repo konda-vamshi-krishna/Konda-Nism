@@ -1,7 +1,0 @@
-{
-  "id": "test-new-subject",
-  "title": "Architecture Verification Test",
-  "description": "An isolated, clean-room module designed to cross-check E2E pipeline compatibility.",
-  "author": "External Contributor Sim",
-  "version": "1.0.0"
-}

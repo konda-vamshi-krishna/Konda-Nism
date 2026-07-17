@@ -390,6 +390,84 @@
         Contribute a Course Module
       </h2>
       
+      <!-- Contribution Guide Panel -->
+      <div class="contribution-guide-section" style="margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px;">
+        <h3 style="margin-top: 0; color: var(--primary);">Course Data Architecture Blueprint</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+          Create a directory using lowercase alphanumeric characters and hyphens only (e.g., <code>my-custom-course</code>). Inside this directory, place exactly four files matching the blueprints below:
+        </p>
+
+        <!-- Blueprints Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
+          <!-- 1. config.json -->
+          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">1. <code>config.json</code> (Identity Metadata)</h4>
+            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+  "id": "my-custom-course",
+  "title": "Clear Title (e.g., AWS Cloud Practitioner)",
+  "description": "A single-sentence course summary.",
+  "author": "Your Full Name",
+  "version": "1.0.0"
+}</pre>
+          </div>
+
+          <!-- 2. tests.json -->
+          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">2. <code>tests.json</code> (Exam Payload)</h4>
+            <p style="margin: 0 0 8px 0; font-size: 0.8rem; color: var(--text-muted);">
+              Grading maps to a zero-indexed integer (<code>answer_idx</code>: 0 to 3).
+            </p>
+            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+  "test_1": [
+    {
+      "id": "q_unique_prefix_001",
+      "question": "Question text without option letters.",
+      "options": [
+        "Choice 0",
+        "Choice 1",
+        "Choice 2",
+        "Choice 3"
+      ],
+      "answer_idx": 1,
+      "explanation": "Detail why Choice 1 is correct."
+    }
+  ]
+}</pre>
+          </div>
+
+          <!-- 3. flashcards.json -->
+          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">3. <code>flashcards.json</code> (Active Recall)</h4>
+            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">[
+  {
+    "id": "fc_unique_prefix_001",
+    "front": "Question visible on card front.",
+    "back": "Answer revealed when flipped."
+  }
+]</pre>
+          </div>
+
+          <!-- 4. notes.json -->
+          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">4. <code>notes.json</code> (Study Material)</h4>
+            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+  "chapters": [
+    {
+      "chapter_idx": 1,
+      "title": "Chapter One Title",
+      "sections": [
+        {
+          "heading": "Section Subheading Name",
+          "body": "Raw paragraphs of educational text."
+        }
+      ]
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </div>
+      
       <!-- 3-Step No-Code Guide -->
       <div class="guide-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 24px 0; padding: 16px; background: var(--bg-color); border-radius: 12px; border: 1px solid var(--border-color);">
         <div class="step-card">

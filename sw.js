@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kumt-engine-v2';
+const CACHE_NAME = 'kumt-engine-v3';
 
 // Relative URLs for caching during install phase
 const STATIC_SHELL_URLS = [
