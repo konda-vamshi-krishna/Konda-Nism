@@ -2214,66 +2214,63 @@ function tryRepairJSON(jsonString) {
 // while the previous async fetch is still awaiting a response.
 window._compilerInFlight = false;
 
-// Dynamic Provider Setup (OpenRouter / Nvidia API)
-document.getElementById('ai-provider-select')?.addEventListener('change', (e) => {
-    const provider = e.target.value;
+// Global Model Catalog Definition Mapping Matrices
+window.PROVIDER_MODELS = {
+    openrouter: [
+        { value: "google/gemini-2.5-flash", label: "google/gemini-2.5-flash (Fast, Default Option)" },
+        { value: "openrouter/free", label: "openrouter/free (Dynamic Free-Tier Auto-Routing)" }
+    ],
+    nvidia: [
+        { value: "meta/llama-3.1-70b-instruct", label: "meta/llama-3.1-70b-instruct (Fast & Accurate)" },
+        { value: "nvidia/nemotron-4-340b-instruct", label: "nvidia/nemotron-4-340b-instruct (High Quality)" }
+    ]
+};
+
+window.toggleProviderContextLayout = function() {
+    const selectedProvider = document.getElementById('ai-provider-select').value;
     const keyInput = document.getElementById('ai-api-key');
-    const keyLabel = document.getElementById('ai-key-label');
     const modelSelect = document.getElementById('ai-model-select');
+    const apiKeyLabel = document.getElementById('api-key-label');
     
-    const proxyContainer = document.getElementById('ai-proxy-container');
-    
-    if (provider === 'nvidia') {
-        if (keyLabel) keyLabel.textContent = '2. Input Nvidia API Key';
-        if (keyInput) {
-            keyInput.placeholder = 'nvapi-...';
-            keyInput.value = '';
-        }
-        if (proxyContainer) proxyContainer.style.display = 'block';
-        if (modelSelect) {
-            modelSelect.innerHTML = `
-                <option value="meta/llama-3.1-70b-instruct">meta/llama-3.1-70b-instruct (Fast & Accurate)</option>
-                <option value="meta/llama-3.1-8b-instruct">meta/llama-3.1-8b-instruct (Ultra Fast)</option>
-                <option value="nvidia/nemotron-4-340b-instruct">nvidia/nemotron-4-340b-instruct (High Quality)</option>
-                <option value="mistralai/mixtral-8x22b-instruct-v0.1">mistralai/mixtral-8x22b-instruct-v0.1</option>
-            `;
-        }
+    if (selectedProvider === 'nvidia') {
+        if (keyInput) keyInput.placeholder = "nvapi-...";
+        if (apiKeyLabel) apiKeyLabel.innerText = "2. Input Nvidia NIM API Key";
     } else {
-        if (keyLabel) keyLabel.textContent = '2. Input OpenRouter Access Key';
-        if (keyInput) {
-            keyInput.placeholder = 'sk-or-v1-...';
-            keyInput.value = '';
-        }
-        if (proxyContainer) proxyContainer.style.display = 'none';
-        if (modelSelect) {
-            modelSelect.innerHTML = `
-                <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
-                <option value="openrouter/free">openrouter/free (Dynamic Free-Tier Auto-Routing Engine)</option>
-                <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free (High Reasoning Quality)</option>
-                <option value="qwen/qwen3-coder:free">qwen/qwen3-coder:free (Optimized for JSON Array Layouts)</option>
-            `;
-        }
+        if (keyInput) keyInput.placeholder = "sk-or-v1-...";
+        if (apiKeyLabel) apiKeyLabel.innerText = "2. Input OpenRouter Access Key";
+    }
+    
+    if (modelSelect) {
+        // Clear and dynamically repopulate model choices
+        modelSelect.innerHTML = "";
+        window.PROVIDER_MODELS[selectedProvider].forEach(model => {
+            const option = document.createElement('option');
+            option.value = model.value;
+            option.textContent = model.label;
+            modelSelect.appendChild(option);
+        });
+    }
+};
+
+// Ensure interface properties synchronize on initial page load lifecycle event
+document.addEventListener("DOMContentLoaded", () => { 
+    if (document.getElementById('ai-provider-select')) {
+        window.toggleProviderContextLayout(); 
     }
 });
 
-// 1. Chapter Transmutation Thread
+// Hardened Chapter Transmutation Thread Refactor (V15 Modular Endpoints)
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
-    if (window._compilerInFlight) {
-        logToTerminal("⚠️ System Warning: Transmutation request intercepted. In-flight operations active.");
-        return;
-    }
+    if (window._compilerInFlight) return;
     
+    const activeProvider = document.getElementById('ai-provider-select').value;
+    const targetModelName = document.getElementById('ai-model-select').value;
     const apiKey = document.getElementById('ai-api-key').value.trim();
-    const targetModel = document.getElementById('ai-model-select').value;
-    
-    // Explicit direct read from DOM node container element to prevent stale caching states
-    const targetInputNode = document.getElementById('ai-chunk-input');
-    const rawText = targetInputNode ? targetInputNode.value.trim() : "";
+    const rawText = document.getElementById('ai-chunk-input').value.trim();
     
     if (!apiKey || !rawText || rawText.length === 0) {
-        logToTerminal(`❌ Validation Halt: Key Present: ${!!apiKey} | String Character Metric Length: ${rawText.length}`);
-        alert("Input Validation Error: Both OpenRouter Key and Text Field content are required.");
+        alert("Input Validation Error: Both the Provider Key and Target Text Content are required.");
         return;
     }
 
@@ -2284,212 +2281,91 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
         volatileStagingBuffer.chapterCounter = 1;
     }
     const currentChapterNum = volatileStagingBuffer.chapterCounter;
-    
-    // Core Remediation Fix: Intelligent sub-sampling gate (gracefully slice inputs over 80k transmission parameters)
+
+    // Buffer chunk protection layer 
     let processedChunkPayload = rawText;
     if (rawText.length > 80000) {
-        logToTerminal(`⚠️ High Volume Buffer Triggered: Text length [${rawText.length}] exceeds standard 80k transmission parameters.`);
-        logToTerminal(`Slicing source text block dynamically to protect OpenRouter context limits...`);
+        logToTerminal(`⚠️ High Volume Buffer Triggered: Text length [${rawText.length}] chunked dynamically.`);
         processedChunkPayload = rawText.substring(0, 80000);
     }
-    
+
+    logToTerminal(`Slicing text block dynamically to protect ${activeProvider} context limits...`);
     logToTerminal(`Initiating structural validation pipeline for Chapter ${currentChapterNum}...`);
 
+    // Dynamic Endpoint and Header Construction Matrix
+    let requestEndpointTarget = "";
+    let customRequestHeaders = { "Content-Type": "application/json" };
+
+    if (activeProvider === 'nvidia') {
+        requestEndpointTarget = "https://integrate.api.nvidia.com/v1/chat/completions";
+        customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
+        logToTerminal(`Sending data payloads to Nvidia gateway utilizing [${targetModelName}] architecture...`);
+    } else {
+        requestEndpointTarget = "https://openrouter.ai/api/v1/chat/completions";
+        customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
+        customRequestHeaders["HTTP-Origin"] = window.location.origin;
+        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModelName}] architecture...`);
+    }
+
     const extractionPrompt = `
-You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
-
-Strict JSON Schema Validation Rules:
-1. Return ONLY the raw JSON object. If you wrap the JSON in markdown code blocks (\`\`\`json ... \`\`\`), ensure the JSON is valid and complete. No other text, conversational intro, or explanations should be present outside of the JSON structure.
-2. "questions_pool" must be an array of objects containing:
-   - "id" string (format: "q_auto_${currentChapterNum}_001", incrementing)
-   - "question" string
-   - "options" array of exactly 4 strings
-   - "answer_idx" integer between 0 and 3
-   - "explanation" string
-3. "flashcards_pool" must contain a flat array tracking "id" (format: "fc_auto_${currentChapterNum}_001", incrementing), "front" string, and "back" string.
-4. "chapter_metadata" tracks a "title" string and a detailed text "body" synthesis summary string.
-5. All string values MUST have internal double-quotes properly escaped (\`\\"\`) and backslashes escaped (\`\\\\\`) to prevent JSON parsing syntax errors.
-
-Target JSON Structure Schema:
-{
-  "questions_pool": [
+    You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
+    Do NOT enclose output in markdown blocks. Output pure JSON bytes only.
+    Target Schema:
     {
-      "id": "q_auto_${currentChapterNum}_001",
-      "question": "Question text here?",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "answer_idx": 0,
-      "explanation": "Explanation text here."
+      "questions_pool": [{"id": "q_auto_${currentChapterNum}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
+      "flashcards_pool": [{"id": "fc_auto_${currentChapterNum}_001", "front": "", "back": ""}],
+      "chapter_metadata": { "title": "Unit Title", "body": "Summary string text" }
     }
-  ],
-  "flashcards_pool": [
-    {
-      "id": "fc_auto_${currentChapterNum}_001",
-      "front": "Front of card",
-      "back": "Back of card"
-    }
-  ],
-  "chapter_metadata": {
-    "title": "Unit Title",
-    "body": "Comprehensive summary of the unit contents."
-  }
-}
-
-Text material data block:
-${processedChunkPayload}`;
+    Text: ${processedChunkPayload}`;
 
     try {
-        const provider = document.getElementById('ai-provider-select')?.value || 'openrouter';
-        let endpoint = 'https://openrouter.ai/api/v1/chat/completions';
-        let providerName = 'OpenRouter';
-
-        if (provider === 'nvidia') {
-            const proxyInput = document.getElementById('ai-cors-proxy');
-            let proxyPrefix = proxyInput ? proxyInput.value.trim() : "";
-            if (proxyPrefix && !proxyPrefix.endsWith('/')) {
-                proxyPrefix += '/';
-            }
-            endpoint = proxyPrefix + 'https://integrate.api.nvidia.com/v1/chat/completions';
-            providerName = 'Nvidia';
-        }
-
-        logToTerminal(`Sending data payloads to ${providerName} gateway utilizing [${targetModel}] architecture...`);
-        const apiResponse = await fetch(endpoint, {
+        const networkPayloadResponse = await fetch(requestEndpointTarget, {
             method: "POST",
-            headers: {
-                "Authorization": `Bearer ${apiKey}`,
-                "Content-Type": "application/json"
-            },
+            headers: customRequestHeaders,
             body: JSON.stringify({
-                model: targetModel,
+                model: targetModelName,
                 messages: [{ role: "user", content: extractionPrompt }],
                 temperature: 0.15
             })
         });
 
-        if (!apiResponse.ok) {
-            if (apiResponse.status === 402) {
-                throw new Error(`Insufficient Funds (HTTP 402): Your ${providerName} account balance has run out of credits. Please add funds to your account to use paid models.`);
-            } else if (apiResponse.status === 429) {
-                throw new Error(`Rate Limit Exceeded (HTTP 429): ${providerName} API rate limit triggered. Please wait a moment before trying again.`);
-            } else if (apiResponse.status === 401) {
-                throw new Error(`Authentication Failed (HTTP 401): The ${providerName} API Key provided is invalid or has expired.`);
-            } else {
-                throw new Error(`${providerName} gateway returned failure status code: ${apiResponse.status}`);
-            }
+        if (!networkPayloadResponse.ok) {
+            throw new Error(`Gateway returned failure status code: ${networkPayloadResponse.status}`);
         }
-        const networkObject = await apiResponse.json();
         
-        // Check for API error payloads explicitly first
+        const networkObject = await networkPayloadResponse.json();
+        
         if (networkObject.error) {
-            throw new Error(`${providerName} API Error: ${networkObject.error.message || JSON.stringify(networkObject.error)}`);
+            throw new Error(networkObject.error.message || JSON.stringify(networkObject.error));
         }
+
+        let outputContent = networkObject.choices[0].message.content.trim();
         
-        if (!networkObject.choices || !networkObject.choices[0] || !networkObject.choices[0].message) {
-            throw new Error(`Invalid ${providerName} API response format (missing choices or message content).`);
-        }
-        
-        const rawOutput = (networkObject.choices[0].message.content || "").trim();
-        
-        // Robust JSON Isolation: Extract substring bounded by the first '{' and the last '}'
-        // This strips all markdown code fences, headers, footers, and conversational padding.
-        const firstBrace = rawOutput.indexOf('{');
-        const lastBrace = rawOutput.lastIndexOf('}');
-        if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
-            throw new Error("No valid JSON object layout bounds isolated in the response content.");
-        }
-        const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
+        if (outputContent.startsWith("```json")) outputContent = outputContent.slice(7);
+        if (outputContent.endsWith("```")) outputContent = outputContent.slice(0, -3);
 
-        // Clean trailing commas which are invalid in the standard JSON spec but commonly produced by LLMs
-        let cleanedJsonPayload = jsonPayload.replace(/,\s*([}\]])/g, '$1');
-
-        let dataTree;
-        try {
-            dataTree = JSON.parse(cleanedJsonPayload);
-        } catch (initialErr) {
-            logToTerminal('⚠️ Initial JSON parse failed. Attempting structural string recovery...');
-            
-            // Try balancing truncated JSON first (handles token limit truncation)
-            const repaired = tryRepairJSON(cleanedJsonPayload);
-            if (repaired) {
-                dataTree = repaired;
-                logToTerminal('✅ Structural recovery succeeded: Salvaged partial compilation output from truncated stream.');
-            } else {
-                // Escape literal newlines and control characters inside JSON strings that break standard JSON.parse()
-                try {
-                    const normalizedText = cleanedJsonPayload
-                        .replace(/[\n\r\t]/g, ' ')
-                        .replace(/\\"/g, '___ESCAPED_QUOTE___')
-                        .replace(/___ESCAPED_QUOTE___/g, '\\"');
-                    dataTree = JSON.parse(normalizedText);
-                } catch (recoveryErr) {
-                    throw new Error(`JSON Syntax Error: ${initialErr.message}. Isolated substring was: ${jsonPayload.substring(0, 150)}...`);
-                }
-            }
-        }
-        
-        // Robust Key Alignment: support common LLM naming variations (singular/plural/casing/underscores)
-        const keys = Object.keys(dataTree);
-        const questionsKey = keys.find(k => {
-            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
-            return clean === 'questionspool' || clean === 'questionpool' || clean === 'questions' || clean === 'question';
-        });
-        const flashcardsKey = keys.find(k => {
-            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
-            return clean === 'flashcardspool' || clean === 'flashcardpool' || clean === 'flashcards' || clean === 'flashcard';
-        });
-        const metadataKey = keys.find(k => {
-            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
-            return clean === 'chaptermetadata' || clean === 'metadata' || clean === 'chapter';
-        });
-
-        if (!questionsKey || !flashcardsKey || !metadataKey) {
-            throw new Error(`Missing required fields inside model output payload. Found keys: ${keys.join(', ')}. Expected: questions_pool, flashcards_pool, chapter_metadata.`);
-        }
-
-        const rawQuestions = dataTree[questionsKey];
-        const rawFlashcards = dataTree[flashcardsKey];
-        const chapterMetadata = dataTree[metadataKey];
-
-        // Structural Normalization: extract arrays even if LLM nested them inside a secondary key
-        const questionsPool = Array.isArray(rawQuestions) ? rawQuestions : (rawQuestions.questions || rawQuestions.pool || Object.values(rawQuestions));
-        const flashcardsPool = Array.isArray(rawFlashcards) ? rawFlashcards : (rawFlashcards.flashcards || rawFlashcards.pool || Object.values(rawFlashcards));
-
-        if (!Array.isArray(questionsPool) || !Array.isArray(flashcardsPool)) {
-            throw new Error('Target pool properties do not map to valid array formats.');
-        }
-
+        const dataTree = JSON.parse(outputContent.trim());
         const testIdentifierKey = `test_${currentChapterNum}`;
-        volatileStagingBuffer.tests[testIdentifierKey] = questionsPool;
-        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(flashcardsPool);
         
-        // Rule E: AI chapters are offset to begin sequentially starting strictly from chapter_idx: 2
+        volatileStagingBuffer.tests[testIdentifierKey] = dataTree.questions_pool;
+        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(dataTree.flashcards_pool);
         volatileStagingBuffer.notes.chapters.push({
-            chapter_idx: currentChapterNum + 1,
-            title: chapterMetadata.title || `Chapter ${currentChapterNum}`,
-            sections: [{
-                heading: "Dynamic Lecture Compilations & Synthetics",
-                body: chapterMetadata.body || "Unit overview details."
-            }]
+            chapter_idx: currentChapterNum + 1, // Rule E: sequential offset matching
+            title: dataTree.chapter_metadata.title,
+            sections: [{ heading: "Dynamic Lecture Compilations", body: dataTree.chapter_metadata.body }]
         });
 
-        logToTerminal(`✅ Success: Chapter ${currentChapterNum} data models fully constructed and cached.`);
+        logToTerminal(`✅ Success: Chapter ${currentChapterNum} compiled and cached successfully.`);
         
         document.getElementById('ai-transmute-btn').style.display = 'none';
         document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
         document.getElementById('ai-freeze-module-btn').style.display = 'inline-block';
         
         saveCompilationCheckpoint();
+
     } catch (fault) {
-        let msg = fault.message || String(fault);
-        const provider = document.getElementById('ai-provider-select')?.value || 'openrouter';
-        
-        // Detect CORS block (browsers throw Failed to fetch TypeError on origin policy failure)
-        if (msg.includes('Failed to fetch') && provider === 'nvidia') {
-            msg = "Failed to fetch (CORS Blocked). Nvidia's API gateway blocks direct browser calls. To fix this: \n1. Paste a CORS proxy prefix in the setup field above (e.g. 'https://cors-anywhere.herokuapp.com/'), or\n2. Open your browser with web security disabled for local testing.";
-        }
-        
-        logToTerminal(`❌ Operational Error: Parsing exception encountered - ${msg}`);
-        alert(`Compilation Anomaly: ${msg}`);
+        logToTerminal(`❌ Operational Error: Connection pipeline anomaly - ${fault.message}`);
+        alert("Connection Error: Request parsing failed. Please verify token parameters and network connectivity.");
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;

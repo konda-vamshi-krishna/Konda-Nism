@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kumt-engine-v14';
+const CACHE_NAME = 'kumt-engine-v15';
 // Cache version suffix appended to static assets for network-level proxy cache busting
-const ASSET_VER = '?v=14';
+const ASSET_VER = '?v=15';
 
 // Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [
@@ -45,9 +45,9 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
 
-  // BUG-04 FIX: Explicitly exclude all API traffic from caching strategies.
-  // Bypass OpenRouter, Nvidia gateway, and local proxy ports.
-  if (url.hostname === 'openrouter.ai' || url.hostname === 'integrate.api.nvidia.com' || url.port === '8010') return;
+  // BUG-04 FIX: Explicitly exclude all API traffic to openrouter.ai and integrate.api.nvidia.com
+  // from any caching strategy. Hard-pass API endpoints.
+  if (url.hostname === 'openrouter.ai' || url.hostname === 'integrate.api.nvidia.com') return;
 
   // Strategy A: Cache-First for Immutable Static Core Assets
   // ponytail: BUG-07 — scoped to same-origin only → upgrade path is a full allowlist per-host

@@ -637,47 +637,25 @@
         </div>
 
         <!-- Section 1: API Configuration Elements -->
-        <div class="form-row" style="display: grid; grid-template-columns: 1.2fr 2fr 2.5fr; gap: 1rem; margin-bottom: 1rem;">
+        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div>
-                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Select API Provider</label>
-                <select id="ai-provider-select" class="form-control" style="width: 100%;">
-                    <option value="openrouter">OpenRouter API</option>
-                    <option value="nvidia">Nvidia NIM API</option>
+                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Select Active Intelligence Provider</label>
+                <select id="ai-provider-select" class="form-control" style="width: 100%;" onchange="toggleProviderContextLayout();">
+                    <option value="openrouter">OpenRouter API Gateway (Zero-Cost Focus Options)</option>
+                    <option value="nvidia">Nvidia NIM API Mesh (High-Throughput Performance)</option>
                 </select>
             </div>
             <div>
-                <label id="ai-key-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">2. Input OpenRouter Access Key</label>
+                <label id="api-key-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">2. Input Provider Credential Token</label>
                 <input type="password" id="ai-api-key" class="form-control" placeholder="sk-or-v1-..." style="width: 100%;" />
-            </div>
-            <div>
-                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">3. Select Model Architecture</label>
-                <select id="ai-model-select" class="form-control" style="width: 100%;">
-                    <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
-                    <option value="openrouter/free">openrouter/free (Dynamic Free-Tier Auto-Routing Engine)</option>
-                    <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free (High Reasoning Quality)</option>
-                    <option value="qwen/qwen3-coder:free">qwen/qwen3-coder:free (Optimized for JSON Array Layouts)</option>
-                </select>
             </div>
         </div>
 
-        <!-- Section 1b: Optional CORS Proxy for Nvidia direct browser calls -->
-        <div id="ai-proxy-container" style="display: none; margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
-            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">Nvidia CORS Proxy Bypass (Required for Browsers)</label>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                Nvidia blocks direct browser calls. For a 100% reliable local fix, open a terminal and run:<br />
-                <code style="display:block; margin: 4px 0; padding: 6px; background: rgba(0,0,0,0.3); border-radius: 4px; color: var(--accent);">npx local-cors-proxy --proxyUrl https://integrate.api.nvidia.com --port 8010 --proxyPartial ""</code>
-                Then click the <strong>"⚙️ Use Local Proxy"</strong> button to route requests.
-            </p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-                <input type="text" id="ai-cors-proxy" class="form-control" placeholder="e.g. http://localhost:8010/" style="flex-grow: 1;" />
-                <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; white-space: nowrap;" onclick="document.getElementById('ai-cors-proxy').value='http://localhost:8010/';">
-                    ⚙️ Use Local Proxy
-                </button>
-                <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; white-space: nowrap;" onclick="document.getElementById('ai-cors-proxy').value='';">
-                    ❌ Clear (Direct)
-                </button>
-            </div>
+        <div class="form-row" style="margin-bottom: 1.5rem;">
+            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">3. Select Target Model Architecture</label>
+            <select id="ai-model-select" class="form-control" style="width: 100%;"></select>
         </div>
+
 
 
 
