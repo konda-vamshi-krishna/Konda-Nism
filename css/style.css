@@ -766,3 +766,73 @@ body {
         padding-top: 20px;
     }
 }
+
+/* Custom Translator UI */
+.custom-translate-wrapper {
+    position: relative;
+    margin-right: 15px;
+}
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.nav-btn:hover {
+    background: var(--card-bg);
+}
+.translate-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.translate-dropdown.show {
+    display: block;
+}
+#langSearch {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-main);
+    margin-bottom: 10px;
+    outline: none;
+}
+.lang-section-title {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 10px 0 5px 0;
+    letter-spacing: 0.5px;
+}
+.lang-opt {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+.lang-opt:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+.all-langs-list {
+    margin-top: 5px;
+}
