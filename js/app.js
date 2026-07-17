@@ -639,16 +639,16 @@ function populateAllLangs() {
     if(!list) return;
     let html = '';
     for(let code in allLanguages) {
-        html += \<div class="lang-opt" data-name="\" onclick="setLang('\')">\</div>\;
+        html += `<div class="lang-opt" data-name="${allLanguages[code].toLowerCase()}" onclick="setLang('${code}')" style="display:none;">${allLanguages[code]}</div>`;
     }
     list.innerHTML = html;
 }
 
 function filterLangs() {
-    const q = document.getElementById('langSearch').value.toLowerCase();
+    const q = document.getElementById('langSearch').value.toLowerCase().trim();
     const opts = document.querySelectorAll('#allLangsList .lang-opt');
     opts.forEach(opt => {
-        if(opt.getAttribute('data-name').includes(q)) {
+        if(q.length > 0 && opt.getAttribute('data-name').includes(q)) {
             opt.style.display = 'block';
         } else {
             opt.style.display = 'none';
