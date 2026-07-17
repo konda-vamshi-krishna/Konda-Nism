@@ -1,129 +1,141 @@
-# Graph Report - .  (2026-07-17)
+# Graph Report - g:/mock text  (2026-07-18)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 46 files · ~326,735 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 136 nodes · 209 edges · 27 communities (24 shown, 3 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.5)
+- 178 nodes · 274 edges · 34 communities (30 shown, 4 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
-## Graph Freshness
-- Built from commit: `4cba93b4`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
-
 ## Community Hubs (Navigation)
-- marked.min.js
-- app.js
-- parseInline
-- startSimulator
-- renderActiveQuestion
-- inlineTokens
-- parseMarkdown
-- renderFlashcard
-- A
-- table
-- complete_all_tests.py
-- updateAnalyticsUI
-- listitem
-- parse_tests.py
-- parse
+- marked.min.js Core Compiler
+- app.js State Management
+- marked.min.js Inline Tokenizer Elements
+- app.js Test Simulator Engine
+- app.js Dashboard & Lifecycle
+- app.js Simulator UI & Drawer
+- app.js Course Uploader & Files Drag-Drop
+- marked.min.js Lexer Controls
+- app.js Markdown Preprocessor & Lexer Wrapper
+- app.js Flashcard Component
+- build_engine.py Module Exporter
+- marked.min.js HTML Block Elements
+- app.js GitHub Contribution API Client
+- marked.min.js Table Elements
+- complete_all_tests.py Question Padding
+- marked.min.js List Elements
+- parse_tests.py Legacy Test Parser
+- rebuild_everything.py Course Rebuilder
+- sw.js PWA Service Worker & Cache Controller
 
 ## God Nodes (most connected - your core abstractions)
 1. `parseInline()` - 10 edges
 2. `renderActiveQuestion()` - 10 edges
-3. `R()` - 8 edges
-4. `parseMarkdown()` - 8 edges
-5. `startSimulator()` - 8 edges
-6. `link()` - 7 edges
-7. `renderFlashcard()` - 7 edges
-8. `A()` - 6 edges
-9. `initializeApp()` - 5 edges
-10. `saveActiveTestState()` - 5 edges
+3. `getStorageKey()` - 9 edges
+4. `R()` - 8 edges
+5. `parseMarkdown()` - 8 edges
+6. `startSimulator()` - 8 edges
+7. `link()` - 7 edges
+8. `saveActiveTestState()` - 7 edges
+9. `A()` - 6 edges
+10. `switchTab()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `code()` --calls--> `R()`  [EXTRACTED]
-  js/marked.min.js → js/marked.min.js  _Bridges community 2 → community 8_
+  js/marked.min.js → js/marked.min.js  _Bridges community 2 → community 11_
 - `listitem()` --calls--> `R()`  [EXTRACTED]
-  js/marked.min.js → js/marked.min.js  _Bridges community 2 → community 12_
+  js/marked.min.js → js/marked.min.js  _Bridges community 2 → community 15_
 - `link()` --calls--> `me()`  [EXTRACTED]
-  js/marked.min.js → js/marked.min.js  _Bridges community 5 → community 2_
+  js/marked.min.js → js/marked.min.js  _Bridges community 7 → community 2_
 - `parseMarkdown()` --calls--> `onError()`  [EXTRACTED]
-  js/marked.min.js → js/marked.min.js  _Bridges community 6 → community 2_
-- `initializeApp()` --calls--> `renderFlashcard()`  [EXTRACTED]
-  js/app.js → js/app.js  _Bridges community 1 → community 7_
+  js/marked.min.js → js/marked.min.js  _Bridges community 8 → community 2_
+- `selectSimOption()` --calls--> `saveActiveTestState()`  [EXTRACTED]
+  js/app.js → js/app.js  _Bridges community 3 → community 5_
 
 ## Import Cycles
 - None detected.
 
-## Communities (27 total, 3 thin omitted)
+## Communities (34 total, 4 thin omitted)
 
-### Community 0 - "marked.min.js"
+### Community 0 - "marked.min.js Core Compiler"
+Cohesion: 0.09
+Nodes (6): constructor(), fences(), parse(), parser(), rt(), use()
+
+### Community 1 - "app.js State Management"
 Cohesion: 0.10
-Nodes (4): constructor(), fences(), rt(), use()
+Nodes (11): allLanguages, answers, flashcardsList, globalData, ignoredFiles, notesData, renderChapterHtml(), renderNotes() (+3 more)
 
-### Community 1 - "app.js"
-Cohesion: 0.14
-Nodes (9): allLanguages, answers, applySavedLanguage(), flashcardsList, initializeApp(), loadLocalStorage(), setupFlashcardDecks(), setupTestSelectors() (+1 more)
-
-### Community 2 - "parseInline"
+### Community 2 - "marked.min.js Inline Tokenizer Elements"
 Cohesion: 0.19
 Nodes (14): br(), codespan(), de(), del(), em(), html(), image(), link() (+6 more)
 
-### Community 3 - "startSimulator"
-Cohesion: 0.24
-Nodes (10): formatTime(), initiateNewTest(), mdToHtml(), renderNotes(), resumeActiveTest(), saveActiveTestState(), selectSimOption(), simSubmit() (+2 more)
+### Community 3 - "app.js Test Simulator Engine"
+Cohesion: 0.27
+Nodes (13): formatTime(), getStorageKey(), initiateNewTest(), loadLocalStorage(), removeBookmark(), resumeActiveTest(), saveActiveTestState(), setupTestSelectors() (+5 more)
 
-### Community 4 - "renderActiveQuestion"
-Cohesion: 0.32
-Nodes (8): buildActiveGrid(), closeDrawer(), closeResults(), renderActiveQuestion(), selectSimOptionUI(), simNext(), simPrev(), updateGridStyles()
+### Community 4 - "app.js Dashboard & Lifecycle"
+Cohesion: 0.20
+Nodes (10): applySavedLanguage(), backToCourses(), CourseScope, initializeApp(), refreshDashboardRegistry(), removeShimmerLoadingState(), renderCourseGrid(), selectCourse() (+2 more)
 
-### Community 5 - "inlineTokens"
+### Community 5 - "app.js Simulator UI & Drawer"
+Cohesion: 0.28
+Nodes (9): buildActiveGrid(), closeDrawer(), closeResults(), renderActiveQuestion(), selectSimOption(), selectSimOptionUI(), simNext(), simPrev() (+1 more)
+
+### Community 6 - "app.js Course Uploader & Files Drag-Drop"
+Cohesion: 0.43
+Nodes (7): ALLOWED_CORE_FILES, clearStagedFiles(), handleFileSelect(), resetContributePage(), setupDropzone(), traverseFileTree(), validateStagedFiles()
+
+### Community 7 - "marked.min.js Lexer Controls"
 Cohesion: 0.29
 Nodes (7): blockTokens(), inlineTokens(), lex(), lexer(), lexInline(), me(), reflink()
 
-### Community 6 - "parseMarkdown"
+### Community 8 - "app.js Markdown Preprocessor & Lexer Wrapper"
 Cohesion: 0.29
 Nodes (7): parseMarkdown(), postprocess(), preprocess(), processAllTokens(), provideLexer(), provideParser(), walkTokens()
 
-### Community 7 - "renderFlashcard"
+### Community 9 - "app.js Flashcard Component"
 Cohesion: 0.40
 Nodes (6): jumpToFlashcard(), loadFlashcardDeck(), nextCard(), prevCard(), renderFlashcard(), shuffleCards()
 
-### Community 8 - "A"
+### Community 10 - "build_engine.py Module Exporter"
+Cohesion: 0.70
+Nodes (4): generate_flashcards(), main(), parse_notes_file(), parse_test_file()
+
+### Community 11 - "marked.min.js HTML Block Elements"
 Cohesion: 0.40
 Nodes (5): A(), blockquote(), code(), heading(), hr()
 
-### Community 9 - "table"
+### Community 12 - "app.js GitHub Contribution API Client"
+Cohesion: 0.50
+Nodes (4): encodeBase64(), githubRequest(), showPRSuccessScreen(), submitContributionPR()
+
+### Community 13 - "marked.min.js Table Elements"
 Cohesion: 0.50
 Nodes (4): table(), tablecell(), tablerow(), Y()
 
-### Community 11 - "updateAnalyticsUI"
-Cohesion: 0.67
-Nodes (3): removeBookmark(), toggleBookmarkActiveQuestion(), updateAnalyticsUI()
-
-### Community 12 - "listitem"
+### Community 15 - "marked.min.js List Elements"
 Cohesion: 0.67
 Nodes (3): checkbox(), list(), listitem()
 
 ## Knowledge Gaps
-- **4 isolated node(s):** `answers`, `starredQuestions`, `flashcardsList`, `allLanguages`
+- **11 isolated node(s):** `globalData`, `testData`, `notesData`, `answers`, `starredQuestions` (+6 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `parseInline()` connect `parseInline` to `marked.min.js`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `renderActiveQuestion()` connect `renderActiveQuestion` to `updateAnalyticsUI`, `app.js`, `startSimulator`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `parseMarkdown()` connect `parseMarkdown` to `marked.min.js`, `parseInline`?**
+- **Why does `parseInline()` connect `marked.min.js Inline Tokenizer Elements` to `marked.min.js Core Compiler`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `answers`, `starredQuestions`, `flashcardsList` to the rest of the system?**
-  _4 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `marked.min.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.09956709956709957 - nodes in this community are weakly interconnected._
-- **Should `app.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
+- **Why does `renderActiveQuestion()` connect `app.js Simulator UI & Drawer` to `app.js State Management`, `app.js Test Simulator Engine`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `parseMarkdown()` connect `app.js Markdown Preprocessor & Lexer Wrapper` to `marked.min.js Core Compiler`, `marked.min.js Inline Tokenizer Elements`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **What connects `globalData`, `testData`, `notesData` to the rest of the system?**
+  _11 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `marked.min.js Core Compiler` be split into smaller, more focused modules?**
+  _Cohesion score 0.09420289855072464 - nodes in this community are weakly interconnected._
+- **Should `app.js State Management` be split into smaller, more focused modules?**
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._

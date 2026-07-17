@@ -1,6 +1,7 @@
 import os
 import subprocess
 import json
+import sys
 
 def build_all():
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -32,32 +33,32 @@ def build_all():
         
         if module == "nism-series-8":
             # 0. Compile markdown notes
-            notes_cmd = ["python", "parse_notes.py"]
+            notes_cmd = [sys.executable, "parse_notes.py"]
             print(f"Running: {' '.join(notes_cmd)}")
             subprocess.run(notes_cmd, check=True)
 
             # 1. Rebuild and sanitize markdown and initial JSON
-            rebuild_cmd = ["python", "rebuild_everything.py", "--module", module]
+            rebuild_cmd = [sys.executable, "rebuild_everything.py", "--module", module]
             print(f"Running: {' '.join(rebuild_cmd)}")
             subprocess.run(rebuild_cmd, check=True)
             
             # 2. Pad mock tests to 100 questions
-            pad_cmd = ["python", "complete_all_tests.py", "--module", module]
+            pad_cmd = [sys.executable, "complete_all_tests.py", "--module", module]
             print(f"Running: {' '.join(pad_cmd)}")
             subprocess.run(pad_cmd, check=True)
             
             # 3. Audit question data and correct schemas
-            audit_cmd = ["python", "audit_tests.py", "--module", module]
+            audit_cmd = [sys.executable, "audit_tests.py", "--module", module]
             print(f"Running: {' '.join(audit_cmd)}")
             subprocess.run(audit_cmd, check=True)
             
             # 4. Run semantic finance checks
-            semantic_cmd = ["python", "semantic_audit.py", "--module", module]
+            semantic_cmd = [sys.executable, "semantic_audit.py", "--module", module]
             print(f"Running: {' '.join(semantic_cmd)}")
             subprocess.run(semantic_cmd, check=True)
         else:
             # For general non-finance or static contributor modules, only audit/correct IDs/answers
-            audit_cmd = ["python", "audit_tests.py", "--module", module]
+            audit_cmd = [sys.executable, "audit_tests.py", "--module", module]
             print(f"Running: {' '.join(audit_cmd)}")
             subprocess.run(audit_cmd, check=True)
 
@@ -65,7 +66,7 @@ def build_all():
     print(f"\n==========================================")
     print("Compiling Central Registry")
     print(f"==========================================")
-    compile_cmd = ["python", "compile_registry.py"]
+    compile_cmd = [sys.executable, "compile_registry.py"]
     subprocess.run(compile_cmd, check=True)
     print("\n[SUCCESS] All course modules built and registry compiled successfully!")
 

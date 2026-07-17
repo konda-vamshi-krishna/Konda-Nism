@@ -390,7 +390,14 @@ function refreshDashboardRegistry() {
       // Starred questions
       const savedStars = localStorage.getItem(getStorageKey('starred_questions'));
       if (savedStars) {
-          starredQuestions = JSON.parse(savedStars);
+          try {
+              starredQuestions = JSON.parse(savedStars);
+              if (!Array.isArray(starredQuestions)) starredQuestions = [];
+          } catch (e) {
+              console.error("Failed to parse starred questions:", e);
+              starredQuestions = [];
+              localStorage.removeItem(getStorageKey('starred_questions'));
+          }
       } else {
           starredQuestions = [];
       }
@@ -398,14 +405,21 @@ function refreshDashboardRegistry() {
       // Active in-progress test
       const activeTest = localStorage.getItem(getStorageKey('active_test'));
       if (activeTest) {
-          const active = JSON.parse(activeTest);
-          const resumeDetails = document.getElementById('resumeDetails');
-          const resumeSection = document.getElementById('resumeSection');
-          if (resumeSection && resumeDetails && testData[active.testName]) {
-              resumeSection.style.display = 'block';
-              resumeDetails.textContent = `${active.testName} (${active.mode === 'exam' ? 'Exam' : 'Practice'}) - Question ${active.currentQ + 1} of ${testData[active.testName].length} answered.`;
-          } else if (resumeSection) {
-              resumeSection.style.display = 'none';
+          try {
+              const active = JSON.parse(activeTest);
+              const resumeDetails = document.getElementById('resumeDetails');
+              const resumeSection = document.getElementById('resumeSection');
+              if (resumeSection && resumeDetails && active && active.testName && testData[active.testName]) {
+                  resumeSection.style.display = 'block';
+                  resumeDetails.textContent = `${active.testName} (${active.mode === 'exam' ? 'Exam' : 'Practice'}) - Question ${active.currentQ + 1} of ${testData[active.testName].length} answered.`;
+              } else if (resumeSection) {
+                  resumeSection.style.display = 'none';
+              }
+          } catch (e) {
+              console.error("Failed to parse active test state:", e);
+              const resumeSection = document.getElementById('resumeSection');
+              if (resumeSection) resumeSection.style.display = 'none';
+              localStorage.removeItem(getStorageKey('active_test'));
           }
       } else {
           const resumeSection = document.getElementById('resumeSection');
@@ -422,6 +436,10 @@ function refreshDashboardRegistry() {
   function initiateNewTest() {
       if (!selectedTestForLaunch) return;
       const selected = selectedTestForLaunch;
+      if (!testData[selected] || testData[selected].length === 0) {
+          alert("Error: The selected test contains no questions or is not loaded.");
+          return;
+      }
       const selectedMode = document.querySelector('input[name="testMode"]:checked').value;
       
       currentActiveTest = selected;
@@ -443,16 +461,26 @@ function refreshDashboardRegistry() {
       const activeTest = localStorage.getItem(getStorageKey('active_test'));
       if (!activeTest) return;
       
-      const active = JSON.parse(activeTest);
-      currentActiveTest = active.testName;
-      testMode = active.mode;
-      answers = active.answers;
-      currentQ = active.currentQ;
-      timeRemaining = active.timeRemaining;
-      isSubmitted = active.isSubmitted;
-      
-      switchTab('simulator');
-      startSimulator(true);
+      try {
+          const active = JSON.parse(activeTest);
+          if (!active || !active.testName || !testData[active.testName]) {
+              // Stale state or different course selected
+              localStorage.removeItem(getStorageKey('active_test'));
+              return;
+          }
+          currentActiveTest = active.testName;
+          testMode = active.mode;
+          answers = active.answers || {};
+          currentQ = active.currentQ || 0;
+          timeRemaining = active.timeRemaining || (120 * 60);
+          isSubmitted = active.isSubmitted || false;
+          
+          switchTab('simulator');
+          startSimulator(true);
+      } catch (e) {
+          console.error("Failed to parse active test state:", e);
+          localStorage.removeItem(getStorageKey('active_test'));
+      }
   }
 
   function saveActiveTestState() {
