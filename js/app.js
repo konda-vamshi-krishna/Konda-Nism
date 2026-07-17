@@ -2206,20 +2206,44 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     const extractionPrompt = `
 You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
 
-Strict Execution Constraints:
-1. Do NOT enclose the response output within markdown syntax blocks (do not use \`\`\`json). Output pure stringified JSON bytes only.
-2. "questions_pool" must be an array of objects containing a unique "id" string, a "question" string, a 4-choice string array titled "options", a zero-indexed integer "answer_idx" (0-3), and a comprehensive "explanation" string.
-3. "flashcards_pool" must contain a flat array tracking "id", "front", and "back" strings.
+Strict JSON Schema Validation Rules:
+1. Return ONLY the raw JSON object. If you wrap the JSON in markdown code blocks (\`\`\`json ... \`\`\`), ensure the JSON is valid and complete. No other text, conversational intro, or explanations should be present outside of the JSON structure.
+2. "questions_pool" must be an array of objects containing:
+   - "id" string (format: "q_auto_${currentChapterNum}_001", incrementing)
+   - "question" string
+   - "options" array of exactly 4 strings
+   - "answer_idx" integer between 0 and 3
+   - "explanation" string
+3. "flashcards_pool" must contain a flat array tracking "id" (format: "fc_auto_${currentChapterNum}_001", incrementing), "front" string, and "back" string.
 4. "chapter_metadata" tracks a "title" string and a detailed text "body" synthesis summary string.
+5. All string values MUST have internal double-quotes properly escaped (\`\\"\`) and backslashes escaped (\`\\\\\`) to prevent JSON parsing syntax errors.
 
 Target JSON Structure Schema:
 {
-  "questions_pool": [{"id": "q_auto_${currentChapterNum}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
-  "flashcards_pool": [{"id": "fc_auto_${currentChapterNum}_001", "front": "", "back": ""}],
-  "chapter_metadata": { "title": "Unit Title", "body": "Summary string text" }
+  "questions_pool": [
+    {
+      "id": "q_auto_${currentChapterNum}_001",
+      "question": "Question text here?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answer_idx": 0,
+      "explanation": "Explanation text here."
+    }
+  ],
+  "flashcards_pool": [
+    {
+      "id": "fc_auto_${currentChapterNum}_001",
+      "front": "Front of card",
+      "back": "Back of card"
+    }
+  ],
+  "chapter_metadata": {
+    "title": "Unit Title",
+    "body": "Comprehensive summary of the unit contents."
+  }
 }
 
-Text material data block: ${processedChunkPayload}`;
+Text material data block:
+${processedChunkPayload}`;
 
     try {
         logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModel}] architecture...`);
@@ -2239,11 +2263,18 @@ Text material data block: ${processedChunkPayload}`;
         if (!apiResponse.ok) throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
         const networkObject = await apiResponse.json();
         
-        let outputContent = networkObject.choices[0].message.content.trim();
-        // Defensive clean pass to remove markdown fencing noise
-        outputContent = outputContent.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
+        const rawOutput = (networkObject.choices[0].message.content || "").trim();
+        
+        // Robust JSON Isolation: Extract substring bounded by the first '{' and the last '}'
+        // This strips all markdown code fences, headers, footers, and conversational padding.
+        const firstBrace = rawOutput.indexOf('{');
+        const lastBrace = rawOutput.lastIndexOf('}');
+        if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
+            throw new Error("No valid JSON object layout bounds isolated in the response content.");
+        }
+        const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
 
-        const dataTree = JSON.parse(outputContent);
+        const dataTree = JSON.parse(jsonPayload);
         
         if (!dataTree.questions_pool || !dataTree.flashcards_pool || !dataTree.chapter_metadata) {
             throw new Error("Missing required fields inside model output payload.");
