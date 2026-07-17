@@ -3,6 +3,11 @@ name: Validate Course Module
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: write
 
 jobs:
   validate:
@@ -11,6 +16,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # Fetch all history so git push works cleanly
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -26,6 +33,7 @@ jobs:
         python build_all.py
 
     - name: Commit and Push Compiled Changes
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
