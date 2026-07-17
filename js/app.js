@@ -1220,8 +1220,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Dropzone and Contribution Flow State
 let stagedFiles = [];
+let ignoredFiles = [];
 let courseMetadata = null;
 let originalContributeHtml = "";
+
+const ALLOWED_CORE_FILES = ['config.json', 'tests.json', 'notes.json', 'flashcards.json'];
 
 function setupDropzone() {
     const dropzone = document.getElementById('dropzone');
@@ -1251,6 +1254,7 @@ function setupDropzone() {
         const items = e.dataTransfer.items;
         clearStagedFiles();
         stagedFiles = [];
+        ignoredFiles = [];
 
         document.getElementById('stagedArea').style.display = 'block';
         document.getElementById('validationStatusArea').style.display = 'block';
@@ -1271,13 +1275,17 @@ function setupDropzone() {
                 const files = e.dataTransfer.files;
                 for (let i = 0; i < files.length; i++) {
                     const file = files[i];
-                    const text = await file.text();
-                    stagedFiles.push({
-                        name: file.name,
-                        path: file.webkitRelativePath || file.name,
-                        content: text,
-                        size: file.size
-                    });
+                    if (ALLOWED_CORE_FILES.includes(file.name.toLowerCase())) {
+                        const text = await file.text();
+                        stagedFiles.push({
+                            name: file.name,
+                            path: file.webkitRelativePath || file.name,
+                            content: text,
+                            size: file.size
+                        });
+                    } else if (!file.name.startsWith('.')) {
+                        ignoredFiles.push(file.name);
+                    }
                 }
             }
             validateStagedFiles();
@@ -1295,13 +1303,17 @@ async function traverseFileTree(item, path = "") {
         // Skip hidden files/folders (like .DS_Store)
         if (file.name.startsWith('.')) return;
         
-        const text = await file.text();
-        stagedFiles.push({
-            name: file.name,
-            path: relativePath,
-            content: text,
-            size: file.size
-        });
+        if (ALLOWED_CORE_FILES.includes(file.name.toLowerCase())) {
+            const text = await file.text();
+            stagedFiles.push({
+                name: file.name,
+                path: relativePath,
+                content: text,
+                size: file.size
+            });
+        } else {
+            ignoredFiles.push(relativePath);
+        }
     } else if (item.isDirectory) {
         // Skip hidden/system directories
         if (item.name.startsWith('.') || item.name === '__pycache__') return;
@@ -1320,6 +1332,7 @@ async function handleFileSelect(e) {
     const files = e.target.files;
     clearStagedFiles();
     stagedFiles = [];
+    ignoredFiles = [];
 
     document.getElementById('stagedArea').style.display = 'block';
     document.getElementById('validationStatusArea').style.display = 'block';
@@ -1331,13 +1344,17 @@ async function handleFileSelect(e) {
     try {
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
-            const text = await file.text();
-            stagedFiles.push({
-                name: file.name,
-                path: file.webkitRelativePath || file.name,
-                content: text,
-                size: file.size
-            });
+            if (ALLOWED_CORE_FILES.includes(file.name.toLowerCase())) {
+                const text = await file.text();
+                stagedFiles.push({
+                    name: file.name,
+                    path: file.webkitRelativePath || file.name,
+                    content: text,
+                    size: file.size
+                });
+            } else if (!file.name.startsWith('.')) {
+                ignoredFiles.push(file.name);
+            }
         }
         validateStagedFiles();
     } catch (err) {
@@ -1575,6 +1592,10 @@ function validateStagedFiles() {
         }
     });
 
+    if (ignoredFiles.length > 0) {
+        logContainer.innerHTML += `<div style="color:var(--warning)">⚠️ Warning: Ignored ${ignoredFiles.length} non-course file(s) (e.g. ${ignoredFiles.slice(0, 3).join(', ')}). Only config.json, tests.json, notes.json, and flashcards.json are supported.</div>`;
+    }
+
     document.getElementById('validationSpinner').style.display = 'none';
 
     if (isValid && courseMetadata) {
@@ -1588,6 +1609,7 @@ function validateStagedFiles() {
 
 function clearStagedFiles() {
     stagedFiles = [];
+    ignoredFiles = [];
     document.getElementById('stagedArea').style.display = 'none';
     document.getElementById('validationStatusArea').style.display = 'none';
     document.getElementById('githubSubmitArea').style.display = 'none';
@@ -1695,19 +1717,7 @@ async function submitContributionPR() {
         const treeItems = [];
 
         for (const file of stagedFiles) {
-            let subPath = file.path;
-            // Clean path to be clean relative to course folder
-            const parts = subPath.split('/');
-            const templateIdx = parts.indexOf('template');
-            const courseIdx = parts.indexOf(courseId);
-            
-            if (templateIdx !== -1) {
-                subPath = parts.slice(templateIdx + 1).join('/');
-            } else if (courseIdx !== -1) {
-                subPath = parts.slice(courseIdx + 1).join('/');
-            }
-            
-            const repoPath = `content/${courseId}/${subPath}`;
+            const repoPath = `content/${courseId}/${file.name}`;
 
             logContainer.innerHTML += `<div>📤 Creating blob for <code>${repoPath}</code>...</div>`;
             const blob = await githubRequest(`/repos/${owner}/${repo}/git/blobs`, {
