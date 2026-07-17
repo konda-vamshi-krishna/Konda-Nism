@@ -1,18 +1,10 @@
 // Global variables for data
-let testData = null;
-let notesData = null;
+let testData = window.NISM_DATA.testData;
+let notesData = window.NISM_DATA.notesData;
 
-// Initialize app after fetching data
-async function initializeApp() {
+// Initialize app directly (no fetch needed)
+function initializeApp() {
     try {
-        const response = await fetch('data/data.json');
-        if (!response.ok) throw new Error('Failed to load data');
-        const data = await response.json();
-        
-        testData = data.testData;
-        notesData = data.notesData;
-        
-        // Only run setup functions if data is loaded
         if(document.getElementById('simTestSelect')) {
             setupTestSelectors();
             loadLocalStorage();
@@ -20,7 +12,6 @@ async function initializeApp() {
         }
     } catch (error) {
         console.error('Error initializing app:', error);
-        alert('Failed to load application data. If you are opening this file locally (file://), your browser might block fetch requests due to CORS. Please use a local server or host it on GitHub Pages.');
     }
 }
 

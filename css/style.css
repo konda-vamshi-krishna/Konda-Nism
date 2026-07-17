@@ -360,7 +360,7 @@
   .btn-secondary { background: var(--border-color); color: var(--text-main); }
   .btn-secondary:hover { background: var(--text-muted); color: #fff; }
   .btn-success { background: var(--success); color: #fff; }
-  .btn-success:hover { background: var(--success-hover); }
+  .btn-success:hover { background: #059669; }
 
   .bookmark-btn {
     background: transparent;
