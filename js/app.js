@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
       document.getElementById('activeQText').innerHTML = `
           <div class="notranslate">${q.question}</div>
-          <div class="translate-box">${q.question}</div>
+          <div class="translate-box" translate="yes">${q.question}</div>
       `;
       
       // Update Grid active classes
@@ -249,14 +249,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   div.classList.add('wrong');
               }
           } else {
-              div.onclick = () => selectSimOption(text, opt);
+              div.onclick = function() { selectSimOptionUI(this, text, opt); };
           }
           
           div.innerHTML = `
               <div class="opt-badge notranslate">${letter}</div>
               <div class="opt-text-container">
                   <div class="notranslate">${text}</div>
-                  <div class="translate-box">${text}</div>
+                  <div class="translate-box" translate="yes">${text}</div>
               </div>
           `;
           optionsArea.appendChild(div);
@@ -278,13 +278,40 @@ document.addEventListener('DOMContentLoaded', () => {
           const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
           expPanel.innerHTML = `
               <div class="notranslate">${expHtml}</div>
-              <div class="translate-box">${expHtml}</div>
+              <div class="translate-box" translate="yes">${expHtml}</div>
           `;
       } else {
           expPanel.style.display = 'none';
       }
   }
 
+  function selectSimOptionUI(element, text, rawOpt) {
+      answers[currentQ] = rawOpt;
+      saveActiveTestState();
+      
+      // Update UI classes without destroying DOM to preserve translation
+      const optionsArea = document.getElementById('activeOptionsArea');
+      Array.from(optionsArea.children).forEach(child => {
+          child.classList.remove('selected');
+      });
+      element.classList.add('selected');
+      
+      updateGridStyles();
+      
+      // If practice mode, show explanation without full re-render
+      if (testMode === 'practice') {
+          const q = testData[currentActiveTest][currentQ];
+          const expPanel = document.getElementById('activeExpPanel');
+          expPanel.style.display = 'block';
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${q.answer}<br><br>${q.explanation || 'To be reviewed.'}`;
+          expPanel.innerHTML = `
+              <div class="notranslate">${expHtml}</div>
+              <div class="translate-box" translate="yes">${expHtml}</div>
+          `;
+      }
+  }
+
+  // Legacy fallback
   function selectSimOption(text, rawOpt) {
       answers[currentQ] = rawOpt;
       saveActiveTestState();
@@ -423,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
               bodyContainer.innerHTML = `
                   <div class="notes-wrapper">
                       <div class="notes-half notranslate">${htmlContent}</div>
-                      <div class="notes-half translate-box">${htmlContent}</div>
+                      <div class="notes-half translate-box" translate="yes">${htmlContent}</div>
                   </div>
               `;
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -436,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bodyContainer.innerHTML = `
           <div class="notes-wrapper">
               <div class="notes-half notranslate">${initHtmlContent}</div>
-              <div class="notes-half translate-box">${initHtmlContent}</div>
+              <div class="notes-half translate-box" translate="yes">${initHtmlContent}</div>
           </div>
       `;
   }
@@ -583,8 +610,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box">${card.front}</div>`;
-          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box">${card.back}</div>`;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box" translate="yes">${card.front}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box" translate="yes">${card.back}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
