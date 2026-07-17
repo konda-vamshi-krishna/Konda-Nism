@@ -2159,6 +2159,56 @@ function clearCompilationCheckpoint() {
 
 document.getElementById('ai-restore-btn')?.addEventListener('click', restoreCompilationSession);
 
+// Robust JSON recovery helper to balance brackets and braces from truncated/cut-off output streams
+function tryRepairJSON(jsonString) {
+    let str = jsonString.trim();
+    let lastIndex = str.length;
+    while (true) {
+        const nextCut = str.lastIndexOf('}', lastIndex - 1);
+        if (nextCut === -1) break;
+        
+        let partial = str.substring(0, nextCut + 1);
+        
+        // Count unescaped open/close braces and brackets to balance them
+        let openBraces = 0, closeBraces = 0;
+        let openBrackets = 0, closeBrackets = 0;
+        let inString = false;
+        
+        for (let i = 0; i < partial.length; i++) {
+            const char = partial[i];
+            if (char === '"' && (i === 0 || partial[i - 1] !== '\\')) {
+                inString = !inString;
+            }
+            if (!inString) {
+                if (char === '{') openBraces++;
+                if (char === '}') closeBraces++;
+                if (char === '[') openBrackets++;
+                if (char === ']') closeBrackets++;
+            }
+        }
+        
+        let suffix = '';
+        if (openBrackets > closeBrackets) {
+            suffix += ']';
+        }
+        if (openBraces > closeBraces) {
+            suffix += '}';
+        }
+        
+        try {
+            const parsed = JSON.parse(partial + suffix);
+            // Ensure the result is an object containing at least one pool key or is non-empty
+            if (parsed && typeof parsed === 'object') {
+                return parsed;
+            }
+        } catch (e) {
+            // Loop back and try the next previous closing brace
+            lastIndex = nextCut;
+        }
+    }
+    return null;
+}
+
 // BUG-01 FIX: Dedicated in-flight flag prevents concurrent API calls from
 // corrupting chapterCounter if user rapidly re-clicks the compile button
 // while the previous async fetch is still awaiting a response.
@@ -2260,7 +2310,17 @@ ${processedChunkPayload}`;
             })
         });
 
-        if (!apiResponse.ok) throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
+        if (!apiResponse.ok) {
+            if (apiResponse.status === 402) {
+                throw new Error("Insufficient Funds (HTTP 402): Your OpenRouter account balance has run out of credits. Please add funds to your OpenRouter account to use paid models.");
+            } else if (apiResponse.status === 429) {
+                throw new Error("Rate Limit Exceeded (HTTP 429): OpenRouter free-tier limit triggered. Please wait a moment before trying again, or configure a paid model tier.");
+            } else if (apiResponse.status === 401) {
+                throw new Error("Authentication Failed (HTTP 401): The OpenRouter API Key provided is invalid or has expired.");
+            } else {
+                throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
+            }
+        }
         const networkObject = await apiResponse.json();
         
         // Check for OpenRouter API error payloads explicitly first
@@ -2291,15 +2351,23 @@ ${processedChunkPayload}`;
             dataTree = JSON.parse(cleanedJsonPayload);
         } catch (initialErr) {
             logToTerminal('⚠️ Initial JSON parse failed. Attempting structural string recovery...');
-            // Escape literal newlines and control characters inside JSON strings that break standard JSON.parse()
-            try {
-                const normalizedText = cleanedJsonPayload
-                    .replace(/[\n\r\t]/g, ' ')
-                    .replace(/\\"/g, '___ESCAPED_QUOTE___')
-                    .replace(/___ESCAPED_QUOTE___/g, '\\"');
-                dataTree = JSON.parse(normalizedText);
-            } catch (recoveryErr) {
-                throw new Error(`JSON Syntax Error: ${initialErr.message}. Isolated substring was: ${jsonPayload.substring(0, 150)}...`);
+            
+            // Try balancing truncated JSON first (handles token limit truncation)
+            const repaired = tryRepairJSON(cleanedJsonPayload);
+            if (repaired) {
+                dataTree = repaired;
+                logToTerminal('✅ Structural recovery succeeded: Salvaged partial compilation output from truncated stream.');
+            } else {
+                // Escape literal newlines and control characters inside JSON strings that break standard JSON.parse()
+                try {
+                    const normalizedText = cleanedJsonPayload
+                        .replace(/[\n\r\t]/g, ' ')
+                        .replace(/\\"/g, '___ESCAPED_QUOTE___')
+                        .replace(/___ESCAPED_QUOTE___/g, '\\"');
+                    dataTree = JSON.parse(normalizedText);
+                } catch (recoveryErr) {
+                    throw new Error(`JSON Syntax Error: ${initialErr.message}. Isolated substring was: ${jsonPayload.substring(0, 150)}...`);
+                }
             }
         }
         
