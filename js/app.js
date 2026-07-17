@@ -2265,7 +2265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Hardened Compact Segmented Engine Core (V18 Balancing Pass)
+// Hardened Compact Segmented Engine Core (V19 Resilient Balancing Pass)
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
     if (window._compilerInFlight) return;
@@ -2276,38 +2276,32 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     const rawText = document.getElementById('ai-chunk-input').value.trim();
     
     if (!apiKey || !rawText || rawText.length === 0) {
-        alert("Input Validation Error: Valid token credentials and source text content are required.");
+        alert("Input Validation Error: Both the verification token and source text content are required.");
         return;
     }
 
     window._compilerInFlight = true;
     document.getElementById('ai-transmute-btn').disabled = true;
 
-    // Core Fix 1: Reduce chunk boundaries to 15,000 characters to shorten inference windows below 20 seconds
-    const MAX_CHUNK_SIZE = 15000;
+    // Core Fix 1: Micro-chunk boundaries optimized down to 10,000 characters to reduce generation latency below 12 seconds
+    const MAX_CHUNK_SIZE = 10000;
     const textSegments = [];
     for (let offset = 0; offset < rawText.length; offset += MAX_CHUNK_SIZE) {
         textSegments.push(rawText.substring(offset, offset + MAX_CHUNK_SIZE));
     }
 
-    logToTerminal(`📦 Load Balancer Active: Optimized source text matrix into ${textSegments.length} hyper-focused micro-units.`);
+    logToTerminal(`📦 Load Regulator Active: Segmented source text matrices into ${textSegments.length} hyper-focused micro-units.`);
     
     if (volatileStagingBuffer.chapterCounter === 0) {
         volatileStagingBuffer.chapterCounter = 1;
     }
 
-    // Core Fix 2: Dynamic Failover Endpoint Array Matrix
-    const proxyEndpoints = [
-        "https://corsproxy.io/?",
-        "https://api.allorigins.win/raw?url="
-    ];
-    
-    let activeProxyIndex = 0;
     let requestEndpointTarget = "";
     let customRequestHeaders = { "Content-Type": "application/json" };
 
+    // Core Fix 2: Secure Endpoint Routing Matrix
     if (activeProvider === 'nvidia') {
-        requestEndpointTarget = proxyEndpoints[activeProxyIndex] + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
+        requestEndpointTarget = "https://corsproxy.io/?" + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
     } else {
         requestEndpointTarget = "https://openrouter.ai/api/v1/chat/completions";
@@ -2318,46 +2312,26 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     try {
         for (let index = 0; index < textSegments.length; index++) {
             const currentSubChapterIdx = volatileStagingBuffer.chapterCounter;
-            logToTerminal(`🔄 Extracting Segment [${index + 1}/${textSegments.length}] for Chapter Block ${currentSubChapterIdx}...`);
+            logToTerminal(`🔄 Compiling Unit Segment [${index + 1}/${textSegments.length}] for Chapter Block ${currentSubChapterIdx}...`);
 
-            // Core Fix 3: Compressed Engineering Prompt - Removes output token generation bloat to accelerate streaming
-            const extractionPrompt = `Parse the following text into a raw JSON object with 3 properties: "questions_pool", "flashcards_pool", "chapter_metadata". No markdown, no triple backticks. 
-            Output pure JSON matching this exact minified structure:
-            {"questions_pool":[{"id":"q_${currentSubChapterIdx}_${index}_${Date.now()}","question":"","options":["","","",""],"answer_idx":0,"explanation":""}],"flashcards_pool":[{"id":"fc_${currentSubChapterIdx}_${index}","front":"","back":""}],"chapter_metadata":{"title":"Short Title","body":"Concise synthesis text"}}
-            Source Text Block: ${textSegments[index]}`;
+            // Core Fix 3: Minified, Compressed Prompt Layout Structure to speed up inference processing
+            const extractionPrompt = `Parse into a raw JSON object with 3 properties: "questions_pool", "flashcards_pool", "chapter_metadata". No markdown, no triple backticks.
+            Output format: {"questions_pool":[{"id":"q_${currentSubChapterIdx}_${index}_${Date.now()}","question":"","options":["","","",""],"answer_idx":0,"explanation":""}],"flashcards_pool":[{"id":"fc_${currentSubChapterIdx}_${index}","front":"","back":""}],"chapter_metadata":{"title":"Short Title","body":"Concise synthesis text"}}
+            Text segment block data: ${textSegments[index]}`;
 
-            let networkPayloadResponse;
+            const networkPayloadResponse = await fetch(requestEndpointTarget, {
+                method: "POST",
+                headers: customRequestHeaders,
+                body: JSON.stringify({
+                    model: targetModelName,
+                    messages: [{ role: "user", content: extractionPrompt }],
+                    temperature: 0.1
+                })
+            });
 
-            // Automated Fallback Routing Execution Loop
-            try {
-                networkPayloadResponse = await fetch(requestEndpointTarget, {
-                    method: "POST",
-                    headers: customRequestHeaders,
-                    body: JSON.stringify({
-                        model: targetModelName,
-                        messages: [{ role: "user", content: extractionPrompt }],
-                        temperature: 0.1
-                    })
-                });
-            } catch (networkFetchError) {
-                // If the primary edge route encounters a proxy block, immediately switch to the backup failover vector
-                if (activeProvider === 'nvidia') {
-                    activeProxyIndex = 1;
-                    requestEndpointTarget = proxyEndpoints[activeProxyIndex] + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
-                    logToTerminal("⚠️ Network Block Detected: Engaged secondary failover routing path...");
-                    
-                    networkPayloadResponse = await fetch(requestEndpointTarget, {
-                        method: "POST",
-                        headers: customRequestHeaders,
-                        body: JSON.stringify({
-                            model: targetModelName,
-                            messages: [{ role: "user", content: extractionPrompt }],
-                            temperature: 0.1
-                        })
-                    });
-                } else {
-                    throw networkFetchError;
-                }
+            // Core Fix 4: Defensive Response Code Auditing Gates
+            if (networkPayloadResponse.status === 403) {
+                throw new Error("API Scope Exception: Target account credential is missing required Public API Endpoint authorization scopes.");
             }
 
             if (!networkPayloadResponse.ok) {
@@ -2365,11 +2339,6 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
             }
             
             const networkObject = await networkPayloadResponse.json();
-            
-            if (networkObject.error) {
-                throw new Error(networkObject.error.message || JSON.stringify(networkObject.error));
-            }
-            
             let outputContent = networkObject.choices[0].message.content.trim();
             
             if (outputContent.startsWith("```json")) outputContent = outputContent.slice(7);
@@ -2380,12 +2349,11 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
             try {
                 dataTree = JSON.parse(sanitizedOutput);
             } catch (initialErr) {
-                logToTerminal('⚠️ Initial JSON parse failed. Attempting structural string recovery...');
-                const repaired = tryRepairJSON(sanitizedOutput);
-                if (repaired) {
-                    dataTree = repaired;
-                    logToTerminal('✅ Structural recovery succeeded: Salvaged partial compilation output from truncated stream.');
-                } else {
+                logToTerminal('⚠️ Initial JSON parse failed. Attempting structural recovery routine...');
+                if (typeof tryRepairJSON === 'function') {
+                    dataTree = tryRepairJSON(sanitizedOutput);
+                }
+                if (!dataTree) {
                     try {
                         const normalizedText = sanitizedOutput
                             .replace(/[\n\r\t]/g, ' ')
@@ -2393,18 +2361,16 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
                             .replace(/___ESCAPED_QUOTE___/g, '\\"');
                         dataTree = JSON.parse(normalizedText);
                     } catch (recoveryErr) {
-                        throw new Error(`JSON Syntax Error: ${initialErr.message}`);
+                        throw new Error("JSON Parsing Constraint: Response payload structure structurally invalid.");
                     }
                 }
             }
 
             const testIdentifierKey = `test_${currentSubChapterIdx}`;
-            
             if (!volatileStagingBuffer.tests[testIdentifierKey]) {
                 volatileStagingBuffer.tests[testIdentifierKey] = [];
             }
             
-            // Normalize questions pool values
             const questionsPool = dataTree.questions_pool || [];
             const flashcardsPool = dataTree.flashcards_pool || [];
             const metadata = dataTree.chapter_metadata || { title: "Unit Segment Title", body: "Summary string text" };
@@ -2418,20 +2384,25 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
                 sections: [{ heading: "Segmented Compilations", body: metadata.body }]
             });
 
-            logToTerminal(`✅ Component [${index + 1}/${textSegments.length}] structurally integrated into staging memory slots.`);
+            logToTerminal(`✅ Component [${index + 1}/${textSegments.length}] integrated structurally into staging memory slots.`);
         }
 
-        logToTerminal(`🎉 System Matrix Fully Operational: Complete textbook module processed cleanly without context timeouts.`);
+        logToTerminal(`🎉 System Matrix Fully Operational: Complete textbook module processed cleanly.`);
         
         document.getElementById('ai-transmute-btn').style.display = 'none';
         document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
         document.getElementById('ai-freeze-module-btn').style.display = 'inline-block';
         
-        saveCompilationCheckpoint();
+        if (typeof saveCompilationCheckpoint === 'function') saveCompilationCheckpoint();
 
     } catch (fault) {
-        logToTerminal(`❌ Processing Engine Termination: ${fault.message}`);
-        alert("Transaction Drop Vector: Connection terminated by edge limits. The secondary endpoint loop has logged the fault parameters.");
+        logToTerminal(`❌ Ingestion Loop Intercepted: ${fault.message}`);
+        alert(`Compilation Interception: ${fault.message}`);
+    } finally {
+        window._compilerInFlight = false;
+        document.getElementById('ai-transmute-btn').disabled = false;
+    }
+});dpoint loop has logged the fault parameters.");
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
