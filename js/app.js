@@ -499,6 +499,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Analytics UI Refresher
+  window.resetAllProgress = function() {
+      if (confirm("Are you sure you want to reset all your mock test progress and saved data? This cannot be undone.")) {
+          localStorage.removeItem('nism_test_history');
+          localStorage.removeItem('nism_active_test');
+          localStorage.removeItem('nism_starred_questions');
+          testHistory = [];
+          starredQuestions = [];
+          const resumeSection = document.getElementById('resumeSection');
+          if (resumeSection) resumeSection.style.display = 'none';
+          updateAnalyticsUI();
+          setupTestSelectors();
+          alert("All progress has been reset.");
+      }
+  };
+
   function updateAnalyticsUI() {
       const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
       
