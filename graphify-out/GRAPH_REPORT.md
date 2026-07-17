@@ -1,7 +1,7 @@
 # Graph Report - g:/mock text  (2026-07-18)
 
 ## Corpus Check
-- 1 files · ~331,708 words
+- 2 files · ~331,740 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -136,7 +136,7 @@ Cohesion: 0.67
 Nodes (3): checkbox(), list(), listitem()
 
 ## Knowledge Gaps
-- **13 isolated node(s):** `STATIC_SHELL_URLS`, `STATIC_SHELL_MATCHES`, `Dashboard & Module Navigation Bar`, `globalData`, `testData` (+8 more)
+- **13 isolated node(s):** `Dashboard & Module Navigation Bar`, `globalData`, `testData`, `notesData`, `answers` (+8 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -147,7 +147,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `Interactive Course Contribution Workspace` connect `LMS Interface View Layouts` to `App Settings & Translate Language Controls`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **What connects `STATIC_SHELL_URLS`, `STATIC_SHELL_MATCHES`, `Dashboard & Module Navigation Bar` to the rest of the system?**
+- **What connects `Dashboard & Module Navigation Bar`, `globalData`, `testData` to the rest of the system?**
   _13 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `App Settings & Translate Language Controls` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._

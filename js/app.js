@@ -351,6 +351,15 @@ if ('serviceWorker' in navigator) {
             .catch(err => console.error('Service Worker registration failed:', err));
     });
 
+    // Automatically reload the page when a new Service Worker takes over (force-upgrades user caches)
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+        }
+    });
+
     // Listen for background update dispatch flags from the Service Worker
     navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data && event.data.type === 'CONTENT_UPDATED') {
