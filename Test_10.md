@@ -150,33 +150,33 @@ D) Intrinsic Value: Rs. 1940 | Profit: Rs. 70
 
 ---
 
-**Question 11:** A stock's spot price is Rs. 820. The 30-day stock futures contract trades at Rs. 828. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?
+**Question 11:** A stock's spot price is Rs. 820. The 30-day stock futures contract trades at Rs. 822. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?
 
 **Options:**
 
-A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. 3.96 (Buy Spot, Sell Futures)
+A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)
 B) Fair Price: Rs. 824.04 | No Arbitrage Opportunity
-C) Fair Price: Rs. 834.04 | Arbitrage Profit: Rs. 7.96
-D) Fair Price: Rs. 820 | Arbitrage Profit: Rs. 8
+C) Fair Price: Rs. 834.04 | Arbitrage Profit: Rs. -7.04
+D) Fair Price: Rs. 820 | Arbitrage Profit: Rs. 2
 
-**Answer:** A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. 3.96 (Buy Spot, Sell Futures)
+**Answer:** A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)
 
-**Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 820 * (1 + 0.06 * 30/365) = Rs. 824.04. Since market futures price (828) > fair price (824.04), you can buy spot and short futures to lock in a risk-free profit of Rs. 3.96.
+**Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 820 * (1 + 0.06 * 30/365) = Rs. 824.04. Since market futures price (822) > fair price (824.04), you can buy spot and short futures to lock in a risk-free profit of Rs. -2.04.
 
 ---
 
-**Question 12:** A stock's spot price is Rs. 840. The 30-day stock futures contract trades at Rs. 850. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?
+**Question 12:** A stock's spot price is Rs. 840. The 30-day stock futures contract trades at Rs. 844. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?
 
 **Options:**
 
-A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. 5.86 (Buy Spot, Sell Futures)
+A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)
 B) Fair Price: Rs. 844.14 | No Arbitrage Opportunity
-C) Fair Price: Rs. 854.14 | Arbitrage Profit: Rs. -4.14
-D) Fair Price: Rs. 840 | Arbitrage Profit: Rs. 10
+C) Fair Price: Rs. 854.14 | Arbitrage Profit: Rs. -5.14
+D) Fair Price: Rs. 840 | Arbitrage Profit: Rs. 4
 
-**Answer:** A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. 5.86 (Buy Spot, Sell Futures)
+**Answer:** A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)
 
-**Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 840 * (1 + 0.06 * 30/365) = Rs. 844.14. Since market futures price (850) > fair price (844.14), you can buy spot and short futures to lock in a risk-free profit of Rs. 5.86.
+**Explanation:** Theoretical Fair Futures Price = Spot * (1 + r * t) = 840 * (1 + 0.06 * 30/365) = Rs. 844.14. Since market futures price (844) > fair price (844.14), you can buy spot and short futures to lock in a risk-free profit of Rs. -0.14.
 
 ---
 
@@ -600,903 +600,903 @@ D. Lifetime
 
 ---
 
-**Question 41:** A Call option has a strike price of Rs. 970. If the underlying spot price at expiry is Rs. 1000, what is the intrinsic value of the option?
+**Question 41:** Advanced Concept Question 41: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1000 - 970 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 42:** A Call option has a strike price of Rs. 1020. If the underlying spot price at expiry is Rs. 1050, what is the intrinsic value of the option?
+**Question 42:** Advanced Concept Question 42: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1050 - 1020 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 43:** A Call option has a strike price of Rs. 1070. If the underlying spot price at expiry is Rs. 1100, what is the intrinsic value of the option?
+**Question 43:** Advanced Concept Question 43: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1100 - 1070 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 44:** A Call option has a strike price of Rs. 1120. If the underlying spot price at expiry is Rs. 1150, what is the intrinsic value of the option?
+**Question 44:** Advanced Concept Question 44: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1150 - 1120 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 45:** A Call option has a strike price of Rs. 1170. If the underlying spot price at expiry is Rs. 1200, what is the intrinsic value of the option?
+**Question 45:** Advanced Concept Question 45: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1200 - 1170 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 46:** A Call option has a strike price of Rs. 1220. If the underlying spot price at expiry is Rs. 1250, what is the intrinsic value of the option?
+**Question 46:** Advanced Concept Question 46: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1250 - 1220 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 47:** A Call option has a strike price of Rs. 1270. If the underlying spot price at expiry is Rs. 1300, what is the intrinsic value of the option?
+**Question 47:** Advanced Concept Question 47: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1300 - 1270 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 48:** A Call option has a strike price of Rs. 1320. If the underlying spot price at expiry is Rs. 1350, what is the intrinsic value of the option?
+**Question 48:** Advanced Concept Question 48: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1350 - 1320 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 49:** A Call option has a strike price of Rs. 1370. If the underlying spot price at expiry is Rs. 1400, what is the intrinsic value of the option?
+**Question 49:** Advanced Concept Question 49: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1400 - 1370 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 50:** A Call option has a strike price of Rs. 1420. If the underlying spot price at expiry is Rs. 1450, what is the intrinsic value of the option?
+**Question 50:** Advanced Concept Question 50: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 0
-C. Rs. 40
-D. Rs. 25
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Call Option = Max(0, Spot - Strike) = 1450 - 1420 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 51:** A Put option has a strike price of Rs. 2040. If the underlying spot price at expiry is Rs. 2000, what is the intrinsic value of the option?
+**Question 51:** Advanced Concept Question 51: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2040 - 2000 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 52:** A Put option has a strike price of Rs. 2090. If the underlying spot price at expiry is Rs. 2050, what is the intrinsic value of the option?
+**Question 52:** Advanced Concept Question 52: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2090 - 2050 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 53:** A Put option has a strike price of Rs. 2140. If the underlying spot price at expiry is Rs. 2100, what is the intrinsic value of the option?
+**Question 53:** Advanced Concept Question 53: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2140 - 2100 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 54:** A Put option has a strike price of Rs. 2190. If the underlying spot price at expiry is Rs. 2150, what is the intrinsic value of the option?
+**Question 54:** Advanced Concept Question 54: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2190 - 2150 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 55:** A Put option has a strike price of Rs. 2240. If the underlying spot price at expiry is Rs. 2200, what is the intrinsic value of the option?
+**Question 55:** Advanced Concept Question 55: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2240 - 2200 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 56:** A Put option has a strike price of Rs. 2290. If the underlying spot price at expiry is Rs. 2250, what is the intrinsic value of the option?
+**Question 56:** Advanced Concept Question 56: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2290 - 2250 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 57:** A Put option has a strike price of Rs. 2340. If the underlying spot price at expiry is Rs. 2300, what is the intrinsic value of the option?
+**Question 57:** Advanced Concept Question 57: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2340 - 2300 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 58:** A Put option has a strike price of Rs. 2390. If the underlying spot price at expiry is Rs. 2350, what is the intrinsic value of the option?
+**Question 58:** Advanced Concept Question 58: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2390 - 2350 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 59:** A Put option has a strike price of Rs. 2440. If the underlying spot price at expiry is Rs. 2400, what is the intrinsic value of the option?
+**Question 59:** Advanced Concept Question 59: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2440 - 2400 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 60:** A Put option has a strike price of Rs. 2490. If the underlying spot price at expiry is Rs. 2450, what is the intrinsic value of the option?
+**Question 60:** Advanced Concept Question 60: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 40
-B. Rs. 0
-C. Rs. 55
-D. Rs. 30
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 40
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value of a Put Option = Max(0, Strike - Spot) = 2490 - 2450 = Rs. 40.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 61:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3000 for a premium of Rs. 80 and buying a Call at strike Rs. 3100 for a premium of Rs. 30. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 61:** Advanced Concept Question 61: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3050
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3060
-C. Max Profit: Rs. 80 | Max Loss: Rs. 100 | BE: Rs. 3000
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3050
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3050
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 80 - 30 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3000 + 50 = Rs. 3050.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 62:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3100 for a premium of Rs. 81 and buying a Call at strike Rs. 3200 for a premium of Rs. 31. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 62:** Advanced Concept Question 62: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3150
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3160
-C. Max Profit: Rs. 81 | Max Loss: Rs. 100 | BE: Rs. 3100
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3150
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3150
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 81 - 31 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3100 + 50 = Rs. 3150.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 63:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3200 for a premium of Rs. 82 and buying a Call at strike Rs. 3300 for a premium of Rs. 32. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 63:** Advanced Concept Question 63: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3250
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3260
-C. Max Profit: Rs. 82 | Max Loss: Rs. 100 | BE: Rs. 3200
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3250
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3250
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 82 - 32 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3200 + 50 = Rs. 3250.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 64:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3300 for a premium of Rs. 83 and buying a Call at strike Rs. 3400 for a premium of Rs. 33. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 64:** Advanced Concept Question 64: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3350
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3360
-C. Max Profit: Rs. 83 | Max Loss: Rs. 100 | BE: Rs. 3300
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3350
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3350
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 83 - 33 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3300 + 50 = Rs. 3350.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 65:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3400 for a premium of Rs. 84 and buying a Call at strike Rs. 3500 for a premium of Rs. 34. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 65:** Advanced Concept Question 65: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3450
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3460
-C. Max Profit: Rs. 84 | Max Loss: Rs. 100 | BE: Rs. 3400
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3450
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3450
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 84 - 34 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3400 + 50 = Rs. 3450.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 66:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3500 for a premium of Rs. 85 and buying a Call at strike Rs. 3600 for a premium of Rs. 35. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 66:** Advanced Concept Question 66: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3550
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3560
-C. Max Profit: Rs. 85 | Max Loss: Rs. 100 | BE: Rs. 3500
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3550
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3550
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 85 - 35 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3500 + 50 = Rs. 3550.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 67:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3600 for a premium of Rs. 86 and buying a Call at strike Rs. 3700 for a premium of Rs. 36. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 67:** Advanced Concept Question 67: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3650
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3660
-C. Max Profit: Rs. 86 | Max Loss: Rs. 100 | BE: Rs. 3600
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3650
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3650
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 86 - 36 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3600 + 50 = Rs. 3650.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 68:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3700 for a premium of Rs. 87 and buying a Call at strike Rs. 3800 for a premium of Rs. 37. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 68:** Advanced Concept Question 68: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3750
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3760
-C. Max Profit: Rs. 87 | Max Loss: Rs. 100 | BE: Rs. 3700
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3750
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3750
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 87 - 37 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3700 + 50 = Rs. 3750.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 69:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3800 for a premium of Rs. 88 and buying a Call at strike Rs. 3900 for a premium of Rs. 38. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 69:** Advanced Concept Question 69: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3850
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3860
-C. Max Profit: Rs. 88 | Max Loss: Rs. 100 | BE: Rs. 3800
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3850
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3850
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 88 - 38 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3800 + 50 = Rs. 3850.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 70:** A trader executes a Bear Call Spread by selling a Call at strike Rs. 3900 for a premium of Rs. 89 and buying a Call at strike Rs. 4000 for a premium of Rs. 39. Calculate the maximum profit, maximum loss, and break-even point.
+**Question 70:** Advanced Concept Question 70: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3950
-B. Max Profit: Rs. 55 | Max Loss: Rs. 45 | BE: Rs. 3960
-C. Max Profit: Rs. 89 | Max Loss: Rs. 100 | BE: Rs. 3900
-D. Max Profit: Rs. 50 | Max Loss: Unlimited | BE: Rs. 3950
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Profit: Rs. 50 | Max Loss: Rs. 50 | BE: Rs. 3950
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net Credit (Max Profit) = 89 - 39 = Rs. 50. Max Loss = (Difference in strikes) - Net Credit = 100 - 50 = Rs. 50. Break-even = Lower Strike + Net Credit = 3900 + 50 = Rs. 3950.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 71:** A stock futures contract has a spot price of Rs. 4000 and a lot size of 50. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 71:** Advanced Concept Question 71: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30000
-B. Rs. 31500
-C. Rs. 27000
-D. Rs. 24000
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30000
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4000 * 50 = Rs. 200000. Total Margin = 15% of 200000 = Rs. 30000.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 72:** A stock futures contract has a spot price of Rs. 4100 and a lot size of 75. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 72:** Advanced Concept Question 72: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 46125
-B. Rs. 47625
-C. Rs. 41512
-D. Rs. 36900
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 46125
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4100 * 75 = Rs. 307500. Total Margin = 15% of 307500 = Rs. 46125.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 73:** A stock futures contract has a spot price of Rs. 4200 and a lot size of 100. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 73:** Advanced Concept Question 73: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 63000
-B. Rs. 64500
-C. Rs. 56700
-D. Rs. 50400
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 63000
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4200 * 100 = Rs. 420000. Total Margin = 15% of 420000 = Rs. 63000.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 74:** A stock futures contract has a spot price of Rs. 4300 and a lot size of 125. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 74:** Advanced Concept Question 74: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 80625
-B. Rs. 82125
-C. Rs. 72562
-D. Rs. 64500
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 80625
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4300 * 125 = Rs. 537500. Total Margin = 15% of 537500 = Rs. 80625.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 75:** A stock futures contract has a spot price of Rs. 4400 and a lot size of 150. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 75:** Advanced Concept Question 75: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 99000
-B. Rs. 100500
-C. Rs. 89100
-D. Rs. 79200
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 99000
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4400 * 150 = Rs. 660000. Total Margin = 15% of 660000 = Rs. 99000.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 76:** A stock futures contract has a spot price of Rs. 4500 and a lot size of 175. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 76:** Advanced Concept Question 76: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 118125
-B. Rs. 119625
-C. Rs. 106312
-D. Rs. 94500
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 118125
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4500 * 175 = Rs. 787500. Total Margin = 15% of 787500 = Rs. 118125.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 77:** A stock futures contract has a spot price of Rs. 4600 and a lot size of 200. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 77:** Advanced Concept Question 77: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 138000
-B. Rs. 139500
-C. Rs. 124200
-D. Rs. 110400
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 138000
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4600 * 200 = Rs. 920000. Total Margin = 15% of 920000 = Rs. 138000.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 78:** A stock futures contract has a spot price of Rs. 4700 and a lot size of 225. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 78:** Advanced Concept Question 78: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 158625
-B. Rs. 160125
-C. Rs. 142762
-D. Rs. 126900
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 158625
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4700 * 225 = Rs. 1057500. Total Margin = 15% of 1057500 = Rs. 158625.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 79:** A stock futures contract has a spot price of Rs. 4800 and a lot size of 250. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 79:** Advanced Concept Question 79: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 180000
-B. Rs. 181500
-C. Rs. 162000
-D. Rs. 144000
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 180000
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4800 * 250 = Rs. 1200000. Total Margin = 15% of 1200000 = Rs. 180000.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 80:** A stock futures contract has a spot price of Rs. 4900 and a lot size of 275. The exchange mandates a SPAN margin of 12% and an exposure margin of 3%. Calculate the total initial margin required per lot.
+**Question 80:** Advanced Concept Question 80: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 202125
-B. Rs. 203625
-C. Rs. 181912
-D. Rs. 161700
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 202125
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Total Margin % = SPAN (12%) + Exposure (3%) = 15%. Contract Value = 4900 * 275 = Rs. 1347500. Total Margin = 15% of 1347500 = Rs. 202125.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 81:** A Call option with a strike price of Rs. 4950 is trading at a premium of Rs. 80. The current spot price of the underlying asset is Rs. 5000. What is the time value of this option?
+**Question 81:** Advanced Concept Question 81: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 30
-B. Rs. 50
-C. Rs. 80
-D. Rs. 40
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 30
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5000 - 4950 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 80 - 50 = Rs. 30.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 82:** A Call option with a strike price of Rs. 5050 is trading at a premium of Rs. 81. The current spot price of the underlying asset is Rs. 5100. What is the time value of this option?
+**Question 82:** Advanced Concept Question 82: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 31
-B. Rs. 50
-C. Rs. 81
-D. Rs. 41
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 31
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5100 - 5050 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 81 - 50 = Rs. 31.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 83:** A Call option with a strike price of Rs. 5150 is trading at a premium of Rs. 82. The current spot price of the underlying asset is Rs. 5200. What is the time value of this option?
+**Question 83:** Advanced Concept Question 83: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 32
-B. Rs. 50
-C. Rs. 82
-D. Rs. 42
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 32
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5200 - 5150 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 82 - 50 = Rs. 32.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 84:** A Call option with a strike price of Rs. 5250 is trading at a premium of Rs. 83. The current spot price of the underlying asset is Rs. 5300. What is the time value of this option?
+**Question 84:** Advanced Concept Question 84: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 33
-B. Rs. 50
-C. Rs. 83
-D. Rs. 43
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 33
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5300 - 5250 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 83 - 50 = Rs. 33.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 85:** A Call option with a strike price of Rs. 5350 is trading at a premium of Rs. 84. The current spot price of the underlying asset is Rs. 5400. What is the time value of this option?
+**Question 85:** Advanced Concept Question 85: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 34
-B. Rs. 50
-C. Rs. 84
-D. Rs. 44
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 34
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5400 - 5350 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 84 - 50 = Rs. 34.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 86:** A Call option with a strike price of Rs. 5450 is trading at a premium of Rs. 85. The current spot price of the underlying asset is Rs. 5500. What is the time value of this option?
+**Question 86:** Advanced Concept Question 86: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 35
-B. Rs. 50
-C. Rs. 85
-D. Rs. 45
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 35
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5500 - 5450 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 85 - 50 = Rs. 35.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 87:** A Call option with a strike price of Rs. 5550 is trading at a premium of Rs. 86. The current spot price of the underlying asset is Rs. 5600. What is the time value of this option?
+**Question 87:** Advanced Concept Question 87: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 36
-B. Rs. 50
-C. Rs. 86
-D. Rs. 46
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 36
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5600 - 5550 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 86 - 50 = Rs. 36.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 88:** A Call option with a strike price of Rs. 5650 is trading at a premium of Rs. 87. The current spot price of the underlying asset is Rs. 5700. What is the time value of this option?
+**Question 88:** Advanced Concept Question 88: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 37
-B. Rs. 50
-C. Rs. 87
-D. Rs. 47
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 37
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5700 - 5650 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 87 - 50 = Rs. 37.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 89:** A Call option with a strike price of Rs. 5750 is trading at a premium of Rs. 88. The current spot price of the underlying asset is Rs. 5800. What is the time value of this option?
+**Question 89:** Advanced Concept Question 89: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 38
-B. Rs. 50
-C. Rs. 88
-D. Rs. 48
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 38
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5800 - 5750 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 88 - 50 = Rs. 38.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 90:** A Call option with a strike price of Rs. 5850 is trading at a premium of Rs. 89. The current spot price of the underlying asset is Rs. 5900. What is the time value of this option?
+**Question 90:** Advanced Concept Question 90: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Rs. 39
-B. Rs. 50
-C. Rs. 89
-D. Rs. 49
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Rs. 39
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Intrinsic Value = Spot - Strike = 5900 - 5850 = Rs. 50. Option Premium = Intrinsic Value + Time Value. Therefore, Time Value = Premium - Intrinsic Value = 89 - 50 = Rs. 39.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 91:** A trader creates a Protective Put by buying a stock at Rs. 6000 and buying a Put option at strike Rs. 5980 for a premium of Rs. 35. Calculate the maximum loss and the break-even point for this strategy.
+**Question 91:** Advanced Concept Question 91: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 55 | Break-even: Rs. 6035
-B. Max Loss: Rs. 65 | Break-even: Rs. 6030
-C. Max Loss: Rs. 50 | Break-even: Rs. 6045
-D. Max Loss: Rs. 35 | Break-even: Rs. 6000
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 55 | Break-even: Rs. 6035
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6000) + Put Premium (35) = Rs. 6035. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 5980. Max loss = Net cost (6035) - 5980 = Rs. 55.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 92:** A trader creates a Protective Put by buying a stock at Rs. 6050 and buying a Put option at strike Rs. 6030 for a premium of Rs. 36. Calculate the maximum loss and the break-even point for this strategy.
+**Question 92:** Advanced Concept Question 92: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 56 | Break-even: Rs. 6086
-B. Max Loss: Rs. 66 | Break-even: Rs. 6081
-C. Max Loss: Rs. 51 | Break-even: Rs. 6096
-D. Max Loss: Rs. 36 | Break-even: Rs. 6050
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 56 | Break-even: Rs. 6086
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6050) + Put Premium (36) = Rs. 6086. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6030. Max loss = Net cost (6086) - 6030 = Rs. 56.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 93:** A trader creates a Protective Put by buying a stock at Rs. 6100 and buying a Put option at strike Rs. 6080 for a premium of Rs. 37. Calculate the maximum loss and the break-even point for this strategy.
+**Question 93:** Advanced Concept Question 93: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 57 | Break-even: Rs. 6137
-B. Max Loss: Rs. 67 | Break-even: Rs. 6132
-C. Max Loss: Rs. 52 | Break-even: Rs. 6147
-D. Max Loss: Rs. 37 | Break-even: Rs. 6100
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 57 | Break-even: Rs. 6137
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6100) + Put Premium (37) = Rs. 6137. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6080. Max loss = Net cost (6137) - 6080 = Rs. 57.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 94:** A trader creates a Protective Put by buying a stock at Rs. 6150 and buying a Put option at strike Rs. 6130 for a premium of Rs. 38. Calculate the maximum loss and the break-even point for this strategy.
+**Question 94:** Advanced Concept Question 94: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 58 | Break-even: Rs. 6188
-B. Max Loss: Rs. 68 | Break-even: Rs. 6183
-C. Max Loss: Rs. 53 | Break-even: Rs. 6198
-D. Max Loss: Rs. 38 | Break-even: Rs. 6150
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 58 | Break-even: Rs. 6188
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6150) + Put Premium (38) = Rs. 6188. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6130. Max loss = Net cost (6188) - 6130 = Rs. 58.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 95:** A trader creates a Protective Put by buying a stock at Rs. 6200 and buying a Put option at strike Rs. 6180 for a premium of Rs. 39. Calculate the maximum loss and the break-even point for this strategy.
+**Question 95:** Advanced Concept Question 95: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 59 | Break-even: Rs. 6239
-B. Max Loss: Rs. 69 | Break-even: Rs. 6234
-C. Max Loss: Rs. 54 | Break-even: Rs. 6249
-D. Max Loss: Rs. 39 | Break-even: Rs. 6200
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 59 | Break-even: Rs. 6239
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6200) + Put Premium (39) = Rs. 6239. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6180. Max loss = Net cost (6239) - 6180 = Rs. 59.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 96:** A trader creates a Protective Put by buying a stock at Rs. 6250 and buying a Put option at strike Rs. 6230 for a premium of Rs. 40. Calculate the maximum loss and the break-even point for this strategy.
+**Question 96:** Advanced Concept Question 96: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 60 | Break-even: Rs. 6290
-B. Max Loss: Rs. 70 | Break-even: Rs. 6285
-C. Max Loss: Rs. 55 | Break-even: Rs. 6300
-D. Max Loss: Rs. 40 | Break-even: Rs. 6250
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 60 | Break-even: Rs. 6290
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6250) + Put Premium (40) = Rs. 6290. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6230. Max loss = Net cost (6290) - 6230 = Rs. 60.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 97:** A trader creates a Protective Put by buying a stock at Rs. 6300 and buying a Put option at strike Rs. 6280 for a premium of Rs. 41. Calculate the maximum loss and the break-even point for this strategy.
+**Question 97:** Advanced Concept Question 97: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 61 | Break-even: Rs. 6341
-B. Max Loss: Rs. 71 | Break-even: Rs. 6336
-C. Max Loss: Rs. 56 | Break-even: Rs. 6351
-D. Max Loss: Rs. 41 | Break-even: Rs. 6300
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 61 | Break-even: Rs. 6341
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6300) + Put Premium (41) = Rs. 6341. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6280. Max loss = Net cost (6341) - 6280 = Rs. 61.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 98:** A trader creates a Protective Put by buying a stock at Rs. 6350 and buying a Put option at strike Rs. 6330 for a premium of Rs. 42. Calculate the maximum loss and the break-even point for this strategy.
+**Question 98:** Advanced Concept Question 98: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 62 | Break-even: Rs. 6392
-B. Max Loss: Rs. 72 | Break-even: Rs. 6387
-C. Max Loss: Rs. 57 | Break-even: Rs. 6402
-D. Max Loss: Rs. 42 | Break-even: Rs. 6350
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 62 | Break-even: Rs. 6392
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6350) + Put Premium (42) = Rs. 6392. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6330. Max loss = Net cost (6392) - 6330 = Rs. 62.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 99:** A trader creates a Protective Put by buying a stock at Rs. 6400 and buying a Put option at strike Rs. 6380 for a premium of Rs. 43. Calculate the maximum loss and the break-even point for this strategy.
+**Question 99:** Advanced Concept Question 99: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 63 | Break-even: Rs. 6443
-B. Max Loss: Rs. 73 | Break-even: Rs. 6438
-C. Max Loss: Rs. 58 | Break-even: Rs. 6453
-D. Max Loss: Rs. 43 | Break-even: Rs. 6400
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 63 | Break-even: Rs. 6443
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6400) + Put Premium (43) = Rs. 6443. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6380. Max loss = Net cost (6443) - 6380 = Rs. 63.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 
-**Question 100:** A trader creates a Protective Put by buying a stock at Rs. 6450 and buying a Put option at strike Rs. 6430 for a premium of Rs. 44. Calculate the maximum loss and the break-even point for this strategy.
+**Question 100:** Advanced Concept Question 100: If implied volatility increases, how does it affect Call and Put option premiums?
 
 **Options:**
 
-A. Max Loss: Rs. 64 | Break-even: Rs. 6494
-B. Max Loss: Rs. 74 | Break-even: Rs. 6489
-C. Max Loss: Rs. 59 | Break-even: Rs. 6504
-D. Max Loss: Rs. 44 | Break-even: Rs. 6450
+A. Both Call and Put premiums increase
+B. Call premiums increase, Put premiums decrease
+C. Call premiums decrease, Put premiums increase
+D. Both Call and Put premiums decrease
 
-**Answer:** Max Loss: Rs. 64 | Break-even: Rs. 6494
+**Answer:** Both Call and Put premiums increase
 
-**Explanation:** Net cost of the strategy is the stock price (6450) + Put Premium (44) = Rs. 6494. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 6430. Max loss = Net cost (6494) - 6430 = Rs. 64.
+**Explanation:** Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.
 
 ---
 

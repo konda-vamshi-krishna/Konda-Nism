@@ -6812,6 +6812,2210 @@ window.NISM_DATA = {
       "answer": "CBOE",
       "explanation": "The Chicago Board Options Exchange (CBOE) was the first to offer listed options trading."
     }
+  ],
+  "Test 9": [
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 7,000,000 with a beta of 0.9. The Nifty Index is currently trading at 18200. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 7 contracts",
+        "B) 9 contracts",
+        "C) 4 contracts",
+        "D) 12 contracts"
+      ],
+      "answer": "7 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (7000000 * 0.9) / (18200 * 50) = 7 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 9,000,000 with a beta of 1.0. The Nifty Index is currently trading at 18400. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 10 contracts",
+        "B) 12 contracts",
+        "C) 7 contracts",
+        "D) 15 contracts"
+      ],
+      "answer": "10 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (9000000 * 1.0) / (18400 * 50) = 10 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 11,000,000 with a beta of 1.1. The Nifty Index is currently trading at 18600. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 13 contracts",
+        "B) 15 contracts",
+        "C) 10 contracts",
+        "D) 18 contracts"
+      ],
+      "answer": "13 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (11000000 * 1.1) / (18600 * 50) = 13 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 13,000,000 with a beta of 1.2. The Nifty Index is currently trading at 18800. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 17 contracts",
+        "B) 19 contracts",
+        "C) 14 contracts",
+        "D) 22 contracts"
+      ],
+      "answer": "17 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (13000000 * 1.2) / (18800 * 50) = 17 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 15,000,000 with a beta of 1.3. The Nifty Index is currently trading at 19000. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 21 contracts",
+        "B) 23 contracts",
+        "C) 18 contracts",
+        "D) 26 contracts"
+      ],
+      "answer": "21 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (15000000 * 1.3) / (19000 * 50) = 21 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 17,000,000 with a beta of 1.4. The Nifty Index is currently trading at 19200. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 25 contracts",
+        "B) 27 contracts",
+        "C) 22 contracts",
+        "D) 30 contracts"
+      ],
+      "answer": "25 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (17000000 * 1.4) / (19200 * 50) = 25 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 19,000,000 with a beta of 1.5. The Nifty Index is currently trading at 19400. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 29 contracts",
+        "B) 31 contracts",
+        "C) 26 contracts",
+        "D) 34 contracts"
+      ],
+      "answer": "29 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (19000000 * 1.5) / (19400 * 50) = 29 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 21,000,000 with a beta of 1.6. The Nifty Index is currently trading at 19600. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 34 contracts",
+        "B) 36 contracts",
+        "C) 31 contracts",
+        "D) 39 contracts"
+      ],
+      "answer": "34 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (21000000 * 1.6) / (19600 * 50) = 34 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 23,000,000 with a beta of 1.7. The Nifty Index is currently trading at 19800. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 39 contracts",
+        "B) 41 contracts",
+        "C) 36 contracts",
+        "D) 44 contracts"
+      ],
+      "answer": "39 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (23000000 * 1.7) / (19800 * 50) = 39 contracts."
+    },
+    {
+      "question": "An investor holds an equity portfolio valued at Rs. 25,000,000 with a beta of 1.8. The Nifty Index is currently trading at 20000. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "options": [
+        "A) 45 contracts",
+        "B) 47 contracts",
+        "C) 42 contracts",
+        "D) 50 contracts"
+      ],
+      "answer": "45 contracts",
+      "explanation": "Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (25000000 * 1.8) / (20000 * 50) = 45 contracts."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 550, the risk-free interest rate is 6.5% per annum, the time to expiration is 35 days, and the expected dividend to be paid before expiry is Rs. 2.50 per share.",
+      "options": [
+        "A) Rs. 550.93",
+        "B) Rs. 560.93",
+        "C) Rs. 535.93",
+        "D) Rs. 553.43"
+      ],
+      "answer": "Rs. 550.93",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 550 * 0.0650 * 35/365 = Rs. 3.43. Fair Price = 550 + 3.43 - 2.50 = Rs. 550.93."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 600, the risk-free interest rate is 7.0% per annum, the time to expiration is 40 days, and the expected dividend to be paid before expiry is Rs. 3.00 per share.",
+      "options": [
+        "A) Rs. 601.6",
+        "B) Rs. 611.6",
+        "C) Rs. 586.6",
+        "D) Rs. 604.6"
+      ],
+      "answer": "Rs. 601.6",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 600 * 0.0700 * 40/365 = Rs. 4.60. Fair Price = 600 + 4.60 - 3.00 = Rs. 601.6."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 650, the risk-free interest rate is 7.5% per annum, the time to expiration is 45 days, and the expected dividend to be paid before expiry is Rs. 3.50 per share.",
+      "options": [
+        "A) Rs. 652.51",
+        "B) Rs. 662.51",
+        "C) Rs. 637.51",
+        "D) Rs. 656.01"
+      ],
+      "answer": "Rs. 652.51",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 650 * 0.0750 * 45/365 = Rs. 6.01. Fair Price = 650 + 6.01 - 3.50 = Rs. 652.51."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 700, the risk-free interest rate is 8.0% per annum, the time to expiration is 50 days, and the expected dividend to be paid before expiry is Rs. 4.00 per share.",
+      "options": [
+        "A) Rs. 703.67",
+        "B) Rs. 713.67",
+        "C) Rs. 688.67",
+        "D) Rs. 707.67"
+      ],
+      "answer": "Rs. 703.67",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 700 * 0.0800 * 50/365 = Rs. 7.67. Fair Price = 700 + 7.67 - 4.00 = Rs. 703.67."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 750, the risk-free interest rate is 8.5% per annum, the time to expiration is 55 days, and the expected dividend to be paid before expiry is Rs. 4.50 per share.",
+      "options": [
+        "A) Rs. 755.11",
+        "B) Rs. 765.11",
+        "C) Rs. 740.11",
+        "D) Rs. 759.61"
+      ],
+      "answer": "Rs. 755.11",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 750 * 0.0850 * 55/365 = Rs. 9.61. Fair Price = 750 + 9.61 - 4.50 = Rs. 755.11."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 800, the risk-free interest rate is 9.0% per annum, the time to expiration is 60 days, and the expected dividend to be paid before expiry is Rs. 5.00 per share.",
+      "options": [
+        "A) Rs. 806.84",
+        "B) Rs. 816.84",
+        "C) Rs. 791.84",
+        "D) Rs. 811.84"
+      ],
+      "answer": "Rs. 806.84",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 800 * 0.0900 * 60/365 = Rs. 11.84. Fair Price = 800 + 11.84 - 5.00 = Rs. 806.84."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 850, the risk-free interest rate is 9.5% per annum, the time to expiration is 65 days, and the expected dividend to be paid before expiry is Rs. 5.50 per share.",
+      "options": [
+        "A) Rs. 858.88",
+        "B) Rs. 868.88",
+        "C) Rs. 843.88",
+        "D) Rs. 864.38"
+      ],
+      "answer": "Rs. 858.88",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 850 * 0.0950 * 65/365 = Rs. 14.38. Fair Price = 850 + 14.38 - 5.50 = Rs. 858.88."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 900, the risk-free interest rate is 10.0% per annum, the time to expiration is 70 days, and the expected dividend to be paid before expiry is Rs. 6.00 per share.",
+      "options": [
+        "A) Rs. 911.26",
+        "B) Rs. 921.26",
+        "C) Rs. 896.26",
+        "D) Rs. 917.26"
+      ],
+      "answer": "Rs. 911.26",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 900 * 0.1000 * 70/365 = Rs. 17.26. Fair Price = 900 + 17.26 - 6.00 = Rs. 911.26."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 950, the risk-free interest rate is 10.5% per annum, the time to expiration is 75 days, and the expected dividend to be paid before expiry is Rs. 6.50 per share.",
+      "options": [
+        "A) Rs. 964.0",
+        "B) Rs. 974.0",
+        "C) Rs. 949.0",
+        "D) Rs. 970.5"
+      ],
+      "answer": "Rs. 964.0",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 950 * 0.1050 * 75/365 = Rs. 20.50. Fair Price = 950 + 20.50 - 6.50 = Rs. 964.0."
+    },
+    {
+      "question": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 1000, the risk-free interest rate is 11.0% per annum, the time to expiration is 80 days, and the expected dividend to be paid before expiry is Rs. 7.00 per share.",
+      "options": [
+        "A) Rs. 1017.11",
+        "B) Rs. 1027.11",
+        "C) Rs. 1002.11",
+        "D) Rs. 1024.11"
+      ],
+      "answer": "Rs. 1017.11",
+      "explanation": "Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 1000 * 0.1100 * 80/365 = Rs. 24.11. Fair Price = 1000 + 24.11 - 7.00 = Rs. 1017.11."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,100. The closing price on Day 1 is Rs. 14,960 and the closing price on Day 2 is Rs. 15,195. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -7,000 | Day 2: Rs. +11,750",
+        "B) Day 1: Rs. -7,500 | Day 2: Rs. +12,750",
+        "C) Day 1: Rs. +7,000 | Day 2: Rs. -11,750",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +4,750"
+      ],
+      "answer": "A) Day 1: Rs. -7,000 | Day 2: Rs. +11,750",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (14960 - 15100) * 50 = Rs. -7,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15195 - 14960) * 50 = Rs. 11,750."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,200. The closing price on Day 1 is Rs. 15,070 and the closing price on Day 2 is Rs. 15,290. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -6,500 | Day 2: Rs. +11,000",
+        "B) Day 1: Rs. -7,000 | Day 2: Rs. +12,000",
+        "C) Day 1: Rs. +6,500 | Day 2: Rs. -11,000",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +4,500"
+      ],
+      "answer": "A) Day 1: Rs. -6,500 | Day 2: Rs. +11,000",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15070 - 15200) * 50 = Rs. -6,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15290 - 15070) * 50 = Rs. 11,000."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,300. The closing price on Day 1 is Rs. 15,180 and the closing price on Day 2 is Rs. 15,385. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -6,000 | Day 2: Rs. +10,250",
+        "B) Day 1: Rs. -6,500 | Day 2: Rs. +11,250",
+        "C) Day 1: Rs. +6,000 | Day 2: Rs. -10,250",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +4,250"
+      ],
+      "answer": "A) Day 1: Rs. -6,000 | Day 2: Rs. +10,250",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15180 - 15300) * 50 = Rs. -6,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15385 - 15180) * 50 = Rs. 10,250."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,400. The closing price on Day 1 is Rs. 15,290 and the closing price on Day 2 is Rs. 15,480. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -5,500 | Day 2: Rs. +9,500",
+        "B) Day 1: Rs. -6,000 | Day 2: Rs. +10,500",
+        "C) Day 1: Rs. +5,500 | Day 2: Rs. -9,500",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +4,000"
+      ],
+      "answer": "A) Day 1: Rs. -5,500 | Day 2: Rs. +9,500",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15290 - 15400) * 50 = Rs. -5,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15480 - 15290) * 50 = Rs. 9,500."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,500. The closing price on Day 1 is Rs. 15,400 and the closing price on Day 2 is Rs. 15,575. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -5,000 | Day 2: Rs. +8,750",
+        "B) Day 1: Rs. -5,500 | Day 2: Rs. +9,750",
+        "C) Day 1: Rs. +5,000 | Day 2: Rs. -8,750",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +3,750"
+      ],
+      "answer": "A) Day 1: Rs. -5,000 | Day 2: Rs. +8,750",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15400 - 15500) * 50 = Rs. -5,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15575 - 15400) * 50 = Rs. 8,750."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,600. The closing price on Day 1 is Rs. 15,510 and the closing price on Day 2 is Rs. 15,670. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -4,500 | Day 2: Rs. +8,000",
+        "B) Day 1: Rs. -5,000 | Day 2: Rs. +9,000",
+        "C) Day 1: Rs. +4,500 | Day 2: Rs. -8,000",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +3,500"
+      ],
+      "answer": "A) Day 1: Rs. -4,500 | Day 2: Rs. +8,000",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15510 - 15600) * 50 = Rs. -4,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15670 - 15510) * 50 = Rs. 8,000."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,700. The closing price on Day 1 is Rs. 15,620 and the closing price on Day 2 is Rs. 15,765. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -4,000 | Day 2: Rs. +7,250",
+        "B) Day 1: Rs. -4,500 | Day 2: Rs. +8,250",
+        "C) Day 1: Rs. +4,000 | Day 2: Rs. -7,250",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +3,250"
+      ],
+      "answer": "A) Day 1: Rs. -4,000 | Day 2: Rs. +7,250",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15620 - 15700) * 50 = Rs. -4,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15765 - 15620) * 50 = Rs. 7,250."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,800. The closing price on Day 1 is Rs. 15,730 and the closing price on Day 2 is Rs. 15,860. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -3,500 | Day 2: Rs. +6,500",
+        "B) Day 1: Rs. -4,000 | Day 2: Rs. +7,500",
+        "C) Day 1: Rs. +3,500 | Day 2: Rs. -6,500",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +3,000"
+      ],
+      "answer": "A) Day 1: Rs. -3,500 | Day 2: Rs. +6,500",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15730 - 15800) * 50 = Rs. -3,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15860 - 15730) * 50 = Rs. 6,500."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,900. The closing price on Day 1 is Rs. 15,840 and the closing price on Day 2 is Rs. 15,955. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -3,000 | Day 2: Rs. +5,750",
+        "B) Day 1: Rs. -3,500 | Day 2: Rs. +6,750",
+        "C) Day 1: Rs. +3,000 | Day 2: Rs. -5,750",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +2,750"
+      ],
+      "answer": "A) Day 1: Rs. -3,000 | Day 2: Rs. +5,750",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15840 - 15900) * 50 = Rs. -3,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15955 - 15840) * 50 = Rs. 5,750."
+    },
+    {
+      "question": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 16,000. The closing price on Day 1 is Rs. 15,950 and the closing price on Day 2 is Rs. 16,050. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "options": [
+        "A) Day 1: Rs. -2,500 | Day 2: Rs. +5,000",
+        "B) Day 1: Rs. -3,000 | Day 2: Rs. +6,000",
+        "C) Day 1: Rs. +2,500 | Day 2: Rs. -5,000",
+        "D) Day 1: Rs. 0 | Day 2: Rs. +2,500"
+      ],
+      "answer": "A) Day 1: Rs. -2,500 | Day 2: Rs. +5,000",
+      "explanation": "MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15950 - 16000) * 50 = Rs. -2,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (16050 - 15950) * 50 = Rs. 5,000."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17200 for a premium of Rs. 210 and selling a Call Option at strike Rs. 17600 for a premium of Rs. 85. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 125 | Max Profit: Rs. 275 | Break-even: Rs. 17325",
+        "B) Max Loss: Rs. 210 | Max Profit: Rs. 400 | Break-even: Rs. 17200",
+        "C) Max Loss: Rs. 125 | Max Profit: Unlimited | Break-even: Rs. 17600",
+        "D) Max Loss: Rs. 85 | Max Profit: Rs. 325 | Break-even: Rs. 17305"
+      ],
+      "answer": "A) Max Loss: Rs. 125 | Max Profit: Rs. 275 | Break-even: Rs. 17325",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 210 - 85 = Rs. 125. Max Profit = (Difference in Strike Prices) - Net Debit = (17600 - 17200) - 125 = Rs. 275. Break-even = Lower Strike + Net Debit = 17200 + 125 = Rs. 17325."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17400 for a premium of Rs. 220 and selling a Call Option at strike Rs. 17800 for a premium of Rs. 90. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 130 | Max Profit: Rs. 270 | Break-even: Rs. 17530",
+        "B) Max Loss: Rs. 220 | Max Profit: Rs. 400 | Break-even: Rs. 17400",
+        "C) Max Loss: Rs. 130 | Max Profit: Unlimited | Break-even: Rs. 17800",
+        "D) Max Loss: Rs. 90 | Max Profit: Rs. 320 | Break-even: Rs. 17510"
+      ],
+      "answer": "A) Max Loss: Rs. 130 | Max Profit: Rs. 270 | Break-even: Rs. 17530",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 220 - 90 = Rs. 130. Max Profit = (Difference in Strike Prices) - Net Debit = (17800 - 17400) - 130 = Rs. 270. Break-even = Lower Strike + Net Debit = 17400 + 130 = Rs. 17530."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17600 for a premium of Rs. 230 and selling a Call Option at strike Rs. 18000 for a premium of Rs. 95. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 135 | Max Profit: Rs. 265 | Break-even: Rs. 17735",
+        "B) Max Loss: Rs. 230 | Max Profit: Rs. 400 | Break-even: Rs. 17600",
+        "C) Max Loss: Rs. 135 | Max Profit: Unlimited | Break-even: Rs. 18000",
+        "D) Max Loss: Rs. 95 | Max Profit: Rs. 315 | Break-even: Rs. 17715"
+      ],
+      "answer": "A) Max Loss: Rs. 135 | Max Profit: Rs. 265 | Break-even: Rs. 17735",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 230 - 95 = Rs. 135. Max Profit = (Difference in Strike Prices) - Net Debit = (18000 - 17600) - 135 = Rs. 265. Break-even = Lower Strike + Net Debit = 17600 + 135 = Rs. 17735."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17800 for a premium of Rs. 240 and selling a Call Option at strike Rs. 18200 for a premium of Rs. 100. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 140 | Max Profit: Rs. 260 | Break-even: Rs. 17940",
+        "B) Max Loss: Rs. 240 | Max Profit: Rs. 400 | Break-even: Rs. 17800",
+        "C) Max Loss: Rs. 140 | Max Profit: Unlimited | Break-even: Rs. 18200",
+        "D) Max Loss: Rs. 100 | Max Profit: Rs. 310 | Break-even: Rs. 17920"
+      ],
+      "answer": "A) Max Loss: Rs. 140 | Max Profit: Rs. 260 | Break-even: Rs. 17940",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 240 - 100 = Rs. 140. Max Profit = (Difference in Strike Prices) - Net Debit = (18200 - 17800) - 140 = Rs. 260. Break-even = Lower Strike + Net Debit = 17800 + 140 = Rs. 17940."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18000 for a premium of Rs. 250 and selling a Call Option at strike Rs. 18400 for a premium of Rs. 105. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 145 | Max Profit: Rs. 255 | Break-even: Rs. 18145",
+        "B) Max Loss: Rs. 250 | Max Profit: Rs. 400 | Break-even: Rs. 18000",
+        "C) Max Loss: Rs. 145 | Max Profit: Unlimited | Break-even: Rs. 18400",
+        "D) Max Loss: Rs. 105 | Max Profit: Rs. 305 | Break-even: Rs. 18125"
+      ],
+      "answer": "A) Max Loss: Rs. 145 | Max Profit: Rs. 255 | Break-even: Rs. 18145",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 250 - 105 = Rs. 145. Max Profit = (Difference in Strike Prices) - Net Debit = (18400 - 18000) - 145 = Rs. 255. Break-even = Lower Strike + Net Debit = 18000 + 145 = Rs. 18145."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18200 for a premium of Rs. 260 and selling a Call Option at strike Rs. 18600 for a premium of Rs. 110. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 150 | Max Profit: Rs. 250 | Break-even: Rs. 18350",
+        "B) Max Loss: Rs. 260 | Max Profit: Rs. 400 | Break-even: Rs. 18200",
+        "C) Max Loss: Rs. 150 | Max Profit: Unlimited | Break-even: Rs. 18600",
+        "D) Max Loss: Rs. 110 | Max Profit: Rs. 300 | Break-even: Rs. 18330"
+      ],
+      "answer": "A) Max Loss: Rs. 150 | Max Profit: Rs. 250 | Break-even: Rs. 18350",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 260 - 110 = Rs. 150. Max Profit = (Difference in Strike Prices) - Net Debit = (18600 - 18200) - 150 = Rs. 250. Break-even = Lower Strike + Net Debit = 18200 + 150 = Rs. 18350."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18400 for a premium of Rs. 270 and selling a Call Option at strike Rs. 18800 for a premium of Rs. 115. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 155 | Max Profit: Rs. 245 | Break-even: Rs. 18555",
+        "B) Max Loss: Rs. 270 | Max Profit: Rs. 400 | Break-even: Rs. 18400",
+        "C) Max Loss: Rs. 155 | Max Profit: Unlimited | Break-even: Rs. 18800",
+        "D) Max Loss: Rs. 115 | Max Profit: Rs. 295 | Break-even: Rs. 18535"
+      ],
+      "answer": "A) Max Loss: Rs. 155 | Max Profit: Rs. 245 | Break-even: Rs. 18555",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 270 - 115 = Rs. 155. Max Profit = (Difference in Strike Prices) - Net Debit = (18800 - 18400) - 155 = Rs. 245. Break-even = Lower Strike + Net Debit = 18400 + 155 = Rs. 18555."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18600 for a premium of Rs. 280 and selling a Call Option at strike Rs. 19000 for a premium of Rs. 120. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 160 | Max Profit: Rs. 240 | Break-even: Rs. 18760",
+        "B) Max Loss: Rs. 280 | Max Profit: Rs. 400 | Break-even: Rs. 18600",
+        "C) Max Loss: Rs. 160 | Max Profit: Unlimited | Break-even: Rs. 19000",
+        "D) Max Loss: Rs. 120 | Max Profit: Rs. 290 | Break-even: Rs. 18740"
+      ],
+      "answer": "A) Max Loss: Rs. 160 | Max Profit: Rs. 240 | Break-even: Rs. 18760",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 280 - 120 = Rs. 160. Max Profit = (Difference in Strike Prices) - Net Debit = (19000 - 18600) - 160 = Rs. 240. Break-even = Lower Strike + Net Debit = 18600 + 160 = Rs. 18760."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18800 for a premium of Rs. 290 and selling a Call Option at strike Rs. 19200 for a premium of Rs. 125. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 165 | Max Profit: Rs. 235 | Break-even: Rs. 18965",
+        "B) Max Loss: Rs. 290 | Max Profit: Rs. 400 | Break-even: Rs. 18800",
+        "C) Max Loss: Rs. 165 | Max Profit: Unlimited | Break-even: Rs. 19200",
+        "D) Max Loss: Rs. 125 | Max Profit: Rs. 285 | Break-even: Rs. 18945"
+      ],
+      "answer": "A) Max Loss: Rs. 165 | Max Profit: Rs. 235 | Break-even: Rs. 18965",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 290 - 125 = Rs. 165. Max Profit = (Difference in Strike Prices) - Net Debit = (19200 - 18800) - 165 = Rs. 235. Break-even = Lower Strike + Net Debit = 18800 + 165 = Rs. 18965."
+    },
+    {
+      "question": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 19000 for a premium of Rs. 300 and selling a Call Option at strike Rs. 19400 for a premium of Rs. 130. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "options": [
+        "A) Max Loss: Rs. 170 | Max Profit: Rs. 230 | Break-even: Rs. 19170",
+        "B) Max Loss: Rs. 300 | Max Profit: Rs. 400 | Break-even: Rs. 19000",
+        "C) Max Loss: Rs. 170 | Max Profit: Unlimited | Break-even: Rs. 19400",
+        "D) Max Loss: Rs. 130 | Max Profit: Rs. 280 | Break-even: Rs. 19150"
+      ],
+      "answer": "A) Max Loss: Rs. 170 | Max Profit: Rs. 230 | Break-even: Rs. 19170",
+      "explanation": "Net Cost (Max Loss) = Premium Paid - Premium Received = 300 - 130 = Rs. 170. Max Profit = (Difference in Strike Prices) - Net Debit = (19400 - 19000) - 170 = Rs. 230. Break-even = Lower Strike + Net Debit = 19000 + 170 = Rs. 19170."
+    },
+    {
+      "question": "Which of the following describes the 'Standardized Portfolio Analysis of Risk' (SPAN) margin system?",
+      "options": [
+        "A. It calculates margins based on the worst-case scenario loss of the portfolio across a set of scenarios",
+        "B. It only considers the historical variance of individual stocks",
+        "C. It is used to calculate exposure margins only",
+        "D. It is settled on a T+2 basis"
+      ],
+      "answer": "It calculates margins based on the worst-case scenario loss of the portfolio across a set of scenarios",
+      "explanation": "SPAN is a portfolio-based margin system that evaluates the risk of a portfolio as a whole by simulating 16 risk scenarios based on changes in underlying price and volatility."
+    },
+    {
+      "question": "What happens to the Delta of an Out-of-the-Money (OTM) Call option as the expiry approaches, assuming other factors remain constant?",
+      "options": [
+        "A. It approaches 0",
+        "B. It approaches 1",
+        "C. It approaches 0.5",
+        "D. It remains constant"
+      ],
+      "answer": "It approaches 0",
+      "explanation": "As expiry approaches, the probability of an OTM option becoming in-the-money decreases. Therefore, its sensitivity to underlying price movement (Delta) drops towards 0."
+    },
+    {
+      "question": "Which Option Greek is used to measure the sensitivity of Delta to the change in the price of the underlying asset?",
+      "options": [
+        "A. Gamma",
+        "B. Vega",
+        "C. Theta",
+        "D. Rho"
+      ],
+      "answer": "Gamma",
+      "explanation": "Gamma is the rate of change of Delta per unit change in the underlying asset's price. It is the second-order derivative of the option price with respect to the underlying price."
+    },
+    {
+      "question": "In a liquid derivatives market, which of the following is true regarding impact cost?",
+      "options": [
+        "A. Lower impact cost indicates higher liquidity",
+        "B. Higher impact cost indicates higher liquidity",
+        "C. Impact cost is a transaction fee paid to the clearing bank",
+        "D. Impact cost remains constant throughout the day"
+      ],
+      "answer": "Lower impact cost indicates higher liquidity",
+      "explanation": "Impact cost represents the slippage or execution penalty of an order. A lower impact cost means the order can be executed with minimal price disruption, reflecting high liquidity."
+    },
+    {
+      "question": "An option trader is net long on Vega. Which of the following market conditions will benefit this trader?",
+      "options": [
+        "A. An increase in implied volatility",
+        "B. A decrease in implied volatility",
+        "C. Asset price remaining completely flat",
+        "D. Passage of time"
+      ],
+      "answer": "An increase in implied volatility",
+      "explanation": "Vega measures the sensitivity of option premium to implied volatility. Option buyers (long Vega) benefit when implied volatility increases, as it inflates option values."
+    },
+    {
+      "question": "Under the current SEBI guidelines, how is the Initial Margin for index options calculated?",
+      "options": [
+        "A. SPAN margin based on 99% Value at Risk (VaR) over a 1-day horizon",
+        "B. Flat 5% of the total contract value",
+        "C. Fixed Rs. 1,00,000 per lot",
+        "D. Determined solely by the broker's discretion"
+      ],
+      "answer": "SPAN margin based on 99% Value at Risk (VaR) over a 1-day horizon",
+      "explanation": "SPAN margin is calculated based on VaR with a 99% confidence level over a 1-day time horizon to cover worst-case potential losses."
+    },
+    {
+      "question": "What is the primary role of a 'Professional Clearing Member' (PCM) in the Indian derivatives segment?",
+      "options": [
+        "A. To clear and settle trades of associate trading members and clients, without executing trades himself",
+        "B. To trade on proprietary account on the exchange floor",
+        "C. To set exposure limits for all stock exchanges in India",
+        "D. To act as a direct regulator under SEBI"
+      ],
+      "answer": "To clear and settle trades of associate trading members and clients, without executing trades himself",
+      "explanation": "A PCM is a clearing member who is not a trading member. They typically include banks or custodians who only clear and settle trades for other market participants."
+    },
+    {
+      "question": "Under Section 43(5) of the Income Tax Act, transactions in equity derivatives on recognized stock exchanges are classified as:",
+      "options": [
+        "A. Non-speculative business income",
+        "B. Speculative business income",
+        "C. Short-term capital gains only",
+        "D. Exempt income"
+      ],
+      "answer": "Non-speculative business income",
+      "explanation": "Transactions in equity derivatives executed on recognized stock exchanges are treated as non-speculative business transactions under Section 43(5) of the Income Tax Act."
+    },
+    {
+      "question": "If a stock splits 1:2 (every 1 share becomes 2 shares), how does the exchange adjust the option contract strike price and lot size?",
+      "options": [
+        "A. Strike price is halved, and lot size is doubled",
+        "B. Strike price is doubled, and lot size is halved",
+        "C. Strike price remains the same, lot size is doubled",
+        "D. Lot size remains the same, strike price is halved"
+      ],
+      "answer": "Strike price is halved, and lot size is doubled",
+      "explanation": "To maintain the same contract value and moneyness, the strike price is divided by the split factor (halved), and the lot size is multiplied by the split factor (doubled)."
+    },
+    {
+      "question": "Which of the following committees was formed by SEBI in 1996 to develop the regulatory framework for derivatives in India?",
+      "options": [
+        "A. Dr. L.C. Gupta Committee",
+        "B. Prof. J.R. Verma Committee",
+        "C. Prof. M. Damodaran Committee",
+        "D. U.K. Sinha Committee"
+      ],
+      "answer": "Dr. L.C. Gupta Committee",
+      "explanation": "SEBI set up the Dr. L.C. Gupta Committee in 1996 to formulate a regulatory framework for index futures and derivatives trading in India."
+    },
+    {
+      "question": "Advanced Concept Question 51: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 52: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 53: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 54: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 55: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 56: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 57: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 58: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 59: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 60: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 61: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 62: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 63: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 64: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 65: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 66: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 67: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 68: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 69: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 70: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 71: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 72: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 73: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 74: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 75: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 76: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 77: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 78: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 79: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 80: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 81: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 82: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 83: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 84: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 85: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 86: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 87: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 88: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 89: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 90: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 91: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 92: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 93: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 94: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 95: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 96: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 97: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 98: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 99: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    },
+    {
+      "question": "Advanced Concept Question 100: Which of the following is true for a calendar spread position in futures contracts?",
+      "options": [
+        "A. It involves buying a near-month contract and selling a far-month contract of the same underlying",
+        "B. It carries the exact same risk as holding a naked long futures position",
+        "C. It does not require any margin payment",
+        "D. It is settled on a T+2 rolling settlement basis"
+      ],
+      "answer": "It involves buying a near-month contract and selling a far-month contract of the same underlying",
+      "explanation": "A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin."
+    }
+  ],
+  "Test 10": [
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1100 for a premium of Rs. 42. At expiry, the underlying spot price is Rs. 980. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 78",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -78",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 42",
+        "D) Intrinsic Value: Rs. 1058 | Profit: Rs. 88"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 78",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1100 - 980 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 42 = Rs. 78 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1200 for a premium of Rs. 44. At expiry, the underlying spot price is Rs. 1080. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 76",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -76",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 44",
+        "D) Intrinsic Value: Rs. 1156 | Profit: Rs. 86"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 76",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1200 - 1080 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 44 = Rs. 76 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1300 for a premium of Rs. 46. At expiry, the underlying spot price is Rs. 1180. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 74",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -74",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 46",
+        "D) Intrinsic Value: Rs. 1254 | Profit: Rs. 84"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 74",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1300 - 1180 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 46 = Rs. 74 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1400 for a premium of Rs. 48. At expiry, the underlying spot price is Rs. 1280. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 72",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -72",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 48",
+        "D) Intrinsic Value: Rs. 1352 | Profit: Rs. 82"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 72",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1400 - 1280 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 48 = Rs. 72 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1500 for a premium of Rs. 50. At expiry, the underlying spot price is Rs. 1380. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 70",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -70",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 50",
+        "D) Intrinsic Value: Rs. 1450 | Profit: Rs. 80"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 70",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1500 - 1380 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 50 = Rs. 70 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1600 for a premium of Rs. 52. At expiry, the underlying spot price is Rs. 1480. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 68",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -68",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 52",
+        "D) Intrinsic Value: Rs. 1548 | Profit: Rs. 78"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 68",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1600 - 1480 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 52 = Rs. 68 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1700 for a premium of Rs. 54. At expiry, the underlying spot price is Rs. 1580. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 66",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -66",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 54",
+        "D) Intrinsic Value: Rs. 1646 | Profit: Rs. 76"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 66",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1700 - 1580 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 54 = Rs. 66 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1800 for a premium of Rs. 56. At expiry, the underlying spot price is Rs. 1680. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 64",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -64",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 56",
+        "D) Intrinsic Value: Rs. 1744 | Profit: Rs. 74"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 64",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1800 - 1680 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 56 = Rs. 64 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 1900 for a premium of Rs. 58. At expiry, the underlying spot price is Rs. 1780. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 62",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -62",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 58",
+        "D) Intrinsic Value: Rs. 1842 | Profit: Rs. 72"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 62",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 1900 - 1780 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 58 = Rs. 62 per unit."
+    },
+    {
+      "question": "An investor purchases a Put Option with a strike price of Rs. 2000 for a premium of Rs. 60. At expiry, the underlying spot price is Rs. 1880. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "options": [
+        "A) Intrinsic Value: Rs. 120 | Profit: Rs. 60",
+        "B) Intrinsic Value: Rs. 120 | Loss: Rs. -60",
+        "C) Intrinsic Value: Rs. 0 | Loss: Rs. 60",
+        "D) Intrinsic Value: Rs. 1940 | Profit: Rs. 70"
+      ],
+      "answer": "A) Intrinsic Value: Rs. 120 | Profit: Rs. 60",
+      "explanation": "Intrinsic Value of Put = Max(0, Strike - Spot) = 2000 - 1880 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 60 = Rs. 60 per unit."
+    },
+    {
+      "question": "A stock's spot price is Rs. 820. The 30-day stock futures contract trades at Rs. 822. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 824.04 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 834.04 | Arbitrage Profit: Rs. -7.04",
+        "D) Fair Price: Rs. 820 | Arbitrage Profit: Rs. 2"
+      ],
+      "answer": "A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 820 * (1 + 0.06 * 30/365) = Rs. 824.04. Since market futures price (822) > fair price (824.04), you can buy spot and short futures to lock in a risk-free profit of Rs. -2.04."
+    },
+    {
+      "question": "A stock's spot price is Rs. 840. The 30-day stock futures contract trades at Rs. 844. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 844.14 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 854.14 | Arbitrage Profit: Rs. -5.14",
+        "D) Fair Price: Rs. 840 | Arbitrage Profit: Rs. 4"
+      ],
+      "answer": "A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 840 * (1 + 0.06 * 30/365) = Rs. 844.14. Since market futures price (844) > fair price (844.14), you can buy spot and short futures to lock in a risk-free profit of Rs. -0.14."
+    },
+    {
+      "question": "A stock's spot price is Rs. 860. The 30-day stock futures contract trades at Rs. 866. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 864.24 | Arbitrage Profit: Rs. 1.76 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 864.24 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 874.24 | Arbitrage Profit: Rs. -3.24",
+        "D) Fair Price: Rs. 860 | Arbitrage Profit: Rs. 6"
+      ],
+      "answer": "A) Fair Price: Rs. 864.24 | Arbitrage Profit: Rs. 1.76 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 860 * (1 + 0.06 * 30/365) = Rs. 864.24. Since market futures price (866) > fair price (864.24), you can buy spot and short futures to lock in a risk-free profit of Rs. 1.76."
+    },
+    {
+      "question": "A stock's spot price is Rs. 880. The 30-day stock futures contract trades at Rs. 888. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 884.34 | Arbitrage Profit: Rs. 3.66 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 884.34 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 894.34 | Arbitrage Profit: Rs. -1.34",
+        "D) Fair Price: Rs. 880 | Arbitrage Profit: Rs. 8"
+      ],
+      "answer": "A) Fair Price: Rs. 884.34 | Arbitrage Profit: Rs. 3.66 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 880 * (1 + 0.06 * 30/365) = Rs. 884.34. Since market futures price (888) > fair price (884.34), you can buy spot and short futures to lock in a risk-free profit of Rs. 3.66."
+    },
+    {
+      "question": "A stock's spot price is Rs. 900. The 30-day stock futures contract trades at Rs. 910. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 904.44 | Arbitrage Profit: Rs. 5.56 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 904.44 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 914.44 | Arbitrage Profit: Rs. 0.56",
+        "D) Fair Price: Rs. 900 | Arbitrage Profit: Rs. 10"
+      ],
+      "answer": "A) Fair Price: Rs. 904.44 | Arbitrage Profit: Rs. 5.56 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 900 * (1 + 0.06 * 30/365) = Rs. 904.44. Since market futures price (910) > fair price (904.44), you can buy spot and short futures to lock in a risk-free profit of Rs. 5.56."
+    },
+    {
+      "question": "A stock's spot price is Rs. 920. The 30-day stock futures contract trades at Rs. 932. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 924.54 | Arbitrage Profit: Rs. 7.46 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 924.54 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 934.54 | Arbitrage Profit: Rs. 2.46",
+        "D) Fair Price: Rs. 920 | Arbitrage Profit: Rs. 12"
+      ],
+      "answer": "A) Fair Price: Rs. 924.54 | Arbitrage Profit: Rs. 7.46 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 920 * (1 + 0.06 * 30/365) = Rs. 924.54. Since market futures price (932) > fair price (924.54), you can buy spot and short futures to lock in a risk-free profit of Rs. 7.46."
+    },
+    {
+      "question": "A stock's spot price is Rs. 940. The 30-day stock futures contract trades at Rs. 954. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 944.64 | Arbitrage Profit: Rs. 9.36 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 944.64 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 954.64 | Arbitrage Profit: Rs. 4.36",
+        "D) Fair Price: Rs. 940 | Arbitrage Profit: Rs. 14"
+      ],
+      "answer": "A) Fair Price: Rs. 944.64 | Arbitrage Profit: Rs. 9.36 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 940 * (1 + 0.06 * 30/365) = Rs. 944.64. Since market futures price (954) > fair price (944.64), you can buy spot and short futures to lock in a risk-free profit of Rs. 9.36."
+    },
+    {
+      "question": "A stock's spot price is Rs. 960. The 30-day stock futures contract trades at Rs. 976. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 964.73 | Arbitrage Profit: Rs. 11.27 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 964.73 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 974.73 | Arbitrage Profit: Rs. 6.27",
+        "D) Fair Price: Rs. 960 | Arbitrage Profit: Rs. 16"
+      ],
+      "answer": "A) Fair Price: Rs. 964.73 | Arbitrage Profit: Rs. 11.27 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 960 * (1 + 0.06 * 30/365) = Rs. 964.73. Since market futures price (976) > fair price (964.73), you can buy spot and short futures to lock in a risk-free profit of Rs. 11.27."
+    },
+    {
+      "question": "A stock's spot price is Rs. 980. The 30-day stock futures contract trades at Rs. 998. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 984.83 | Arbitrage Profit: Rs. 13.17 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 984.83 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 994.83 | Arbitrage Profit: Rs. 8.17",
+        "D) Fair Price: Rs. 980 | Arbitrage Profit: Rs. 18"
+      ],
+      "answer": "A) Fair Price: Rs. 984.83 | Arbitrage Profit: Rs. 13.17 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 980 * (1 + 0.06 * 30/365) = Rs. 984.83. Since market futures price (998) > fair price (984.83), you can buy spot and short futures to lock in a risk-free profit of Rs. 13.17."
+    },
+    {
+      "question": "A stock's spot price is Rs. 1000. The 30-day stock futures contract trades at Rs. 1020. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "options": [
+        "A) Fair Price: Rs. 1004.93 | Arbitrage Profit: Rs. 15.07 (Buy Spot, Sell Futures)",
+        "B) Fair Price: Rs. 1004.93 | No Arbitrage Opportunity",
+        "C) Fair Price: Rs. 1014.93 | Arbitrage Profit: Rs. 10.07",
+        "D) Fair Price: Rs. 1000 | Arbitrage Profit: Rs. 20"
+      ],
+      "answer": "A) Fair Price: Rs. 1004.93 | Arbitrage Profit: Rs. 15.07 (Buy Spot, Sell Futures)",
+      "explanation": "Theoretical Fair Futures Price = Spot * (1 + r * t) = 1000 * (1 + 0.06 * 30/365) = Rs. 1004.93. Since market futures price (1020) > fair price (1004.93), you can buy spot and short futures to lock in a risk-free profit of Rs. 15.07."
+    },
+    {
+      "question": "A portfolio manager holds 10,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.42. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 23,810 Call options",
+        "B) Buy 23,810 Call options",
+        "C) Sell 4,200 Call options",
+        "D) Buy 4,200 Call options"
+      ],
+      "answer": "A) Sell 23,810 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 10000 * 1 = 10000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 10000 / 0.42 = 23,810 calls."
+    },
+    {
+      "question": "A portfolio manager holds 20,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.44. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 45,455 Call options",
+        "B) Buy 45,455 Call options",
+        "C) Sell 8,800 Call options",
+        "D) Buy 8,800 Call options"
+      ],
+      "answer": "A) Sell 45,455 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 20000 * 1 = 20000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 20000 / 0.44 = 45,455 calls."
+    },
+    {
+      "question": "A portfolio manager holds 30,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.46. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 65,217 Call options",
+        "B) Buy 65,217 Call options",
+        "C) Sell 13,800 Call options",
+        "D) Buy 13,800 Call options"
+      ],
+      "answer": "A) Sell 65,217 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 30000 * 1 = 30000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 30000 / 0.46 = 65,217 calls."
+    },
+    {
+      "question": "A portfolio manager holds 40,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.48. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 83,333 Call options",
+        "B) Buy 83,333 Call options",
+        "C) Sell 19,200 Call options",
+        "D) Buy 19,200 Call options"
+      ],
+      "answer": "A) Sell 83,333 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 40000 * 1 = 40000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 40000 / 0.48 = 83,333 calls."
+    },
+    {
+      "question": "A portfolio manager holds 50,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.50. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 100,000 Call options",
+        "B) Buy 100,000 Call options",
+        "C) Sell 25,000 Call options",
+        "D) Buy 25,000 Call options"
+      ],
+      "answer": "A) Sell 100,000 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 50000 * 1 = 50000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 50000 / 0.50 = 100,000 calls."
+    },
+    {
+      "question": "A portfolio manager holds 60,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.52. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 115,385 Call options",
+        "B) Buy 115,385 Call options",
+        "C) Sell 31,200 Call options",
+        "D) Buy 31,200 Call options"
+      ],
+      "answer": "A) Sell 115,385 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 60000 * 1 = 60000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 60000 / 0.52 = 115,385 calls."
+    },
+    {
+      "question": "A portfolio manager holds 70,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.54. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 129,630 Call options",
+        "B) Buy 129,630 Call options",
+        "C) Sell 37,800 Call options",
+        "D) Buy 37,800 Call options"
+      ],
+      "answer": "A) Sell 129,630 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 70000 * 1 = 70000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 70000 / 0.54 = 129,630 calls."
+    },
+    {
+      "question": "A portfolio manager holds 80,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.56. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 142,857 Call options",
+        "B) Buy 142,857 Call options",
+        "C) Sell 44,800 Call options",
+        "D) Buy 44,800 Call options"
+      ],
+      "answer": "A) Sell 142,857 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 80000 * 1 = 80000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 80000 / 0.56 = 142,857 calls."
+    },
+    {
+      "question": "A portfolio manager holds 90,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.58. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 155,172 Call options",
+        "B) Buy 155,172 Call options",
+        "C) Sell 52,200 Call options",
+        "D) Buy 52,200 Call options"
+      ],
+      "answer": "A) Sell 155,172 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 90000 * 1 = 90000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 90000 / 0.58 = 155,172 calls."
+    },
+    {
+      "question": "A portfolio manager holds 100,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.60. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "options": [
+        "A) Sell 166,667 Call options",
+        "B) Buy 166,667 Call options",
+        "C) Sell 60,000 Call options",
+        "D) Buy 60,000 Call options"
+      ],
+      "answer": "A) Sell 166,667 Call options",
+      "explanation": "To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 100000 * 1 = 100000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 100000 / 0.60 = 166,667 calls."
+    },
+    {
+      "question": "Which of the following measures the rate of decay of an option's premium over time?",
+      "options": [
+        "A. Theta",
+        "B. Delta",
+        "C. Gamma",
+        "D. Vega"
+      ],
+      "answer": "Theta",
+      "explanation": "Theta measures the rate of change of the option premium with the passage of time (time decay). Theta is negative for option buyers and positive for option writers."
+    },
+    {
+      "question": "Under what condition will the intrinsic value of a Put option be positive?",
+      "options": [
+        "A. Strike Price > Spot Price",
+        "B. Spot Price > Strike Price",
+        "C. Strike Price = Spot Price",
+        "D. Volatility is very high"
+      ],
+      "answer": "Strike Price > Spot Price",
+      "explanation": "A Put option gives the right to sell. It has intrinsic value (is In-the-Money) only when the strike price at which you can sell is higher than the current spot market price."
+    },
+    {
+      "question": "Which of the following constitutes 'Unsystematic Risk' in the securities market?",
+      "options": [
+        "A. A labor strike in a specific company's manufacturing plant",
+        "B. An increase in the central bank's repo rate",
+        "C. High inflation across the economy",
+        "D. Changes in global crude oil prices"
+      ],
+      "answer": "A labor strike in a specific company's manufacturing plant",
+      "explanation": "Unsystematic risk is company-specific or industry-specific risk. It can be diversified away by holding a broad portfolio. Macroeconomic factors represent systematic risk."
+    },
+    {
+      "question": "What is the settlement schedule for Mark-to-Market (MTM) margins in the equity derivatives segment in India?",
+      "options": [
+        "A. T+1 day",
+        "B. T+2 days",
+        "C. Real-time online settlement",
+        "D. At contract expiry"
+      ],
+      "answer": "T+1 day",
+      "explanation": "MTM profits and losses are computed at the end of each trading session and settled on a T+1 working day basis through clearing banks."
+    },
+    {
+      "question": "How are corporate actions like cash dividends adjusted in stock options contracts if the dividend is extraordinary (exceeding 2% of the market value)?",
+      "options": [
+        "A. The strike price is reduced by the dividend amount",
+        "B. The option contract is terminated immediately",
+        "C. The lot size is increased",
+        "D. No adjustments are made for cash dividends"
+      ],
+      "answer": "The strike price is reduced by the dividend amount",
+      "explanation": "For extraordinary dividends (exceeding 2% of the stock price), the strike price of the options contract is adjusted downwards by the dividend amount on the ex-dividend date."
+    },
+    {
+      "question": "Which pricing model is widely used for pricing European style index options?",
+      "options": [
+        "A. Black-Scholes-Merton Model",
+        "B. Binomial Pricing Model",
+        "C. Cash and Carry Model",
+        "D. Expectancy Model"
+      ],
+      "answer": "Black-Scholes-Merton Model",
+      "explanation": "The Black-Scholes-Merton model is the standard mathematical model used for pricing European-style options, where exercise is only possible at expiry."
+    },
+    {
+      "question": "What is the maximum exposure margin rate applicable on stock futures contracts in India as per SEBI regulations?",
+      "options": [
+        "A. 3% of the contract value or 1.5 times the standard deviation, whichever is higher",
+        "B. Flat 10% of the contract value",
+        "C. Equal to the SPAN margin rate",
+        "D. Determined by the broker at the end of the day"
+      ],
+      "answer": "3% of the contract value or 1.5 times the standard deviation, whichever is higher",
+      "explanation": "For individual stock futures, exposure margin is higher of 5% (or 3% for index futures) or 1.5 times the standard deviation of stock returns."
+    },
+    {
+      "question": "In the case of a client default in the derivatives segment, who carries the final financial liability to the Clearing Corporation?",
+      "options": [
+        "A. The Clearing Member",
+        "B. The Trading Member",
+        "C. SEBI",
+        "D. The Investor Protection Fund"
+      ],
+      "answer": "The Clearing Member",
+      "explanation": "The Clearing Member is directly responsible to the Clearing Corporation for settling all trades cleared through him, regardless of client default."
+    },
+    {
+      "question": "Which Greek represents the sensitivity of an option's premium to changes in interest rates?",
+      "options": [
+        "A. Rho",
+        "B. Vega",
+        "C. Theta",
+        "D. Delta"
+      ],
+      "answer": "Rho",
+      "explanation": "Rho measures the sensitivity of an option's value to changes in the risk-free interest rate."
+    },
+    {
+      "question": "What is the maximum validity period of a NISM Series VIII Equity Derivatives certification?",
+      "options": [
+        "A. 3 years",
+        "B. 5 years",
+        "C. 1 year",
+        "D. Lifetime"
+      ],
+      "answer": "3 years",
+      "explanation": "A NISM certification is valid for a period of 3 years from the date of passing the examination."
+    },
+    {
+      "question": "Advanced Concept Question 41: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 42: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 43: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 44: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 45: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 46: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 47: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 48: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 49: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 50: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 51: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 52: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 53: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 54: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 55: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 56: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 57: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 58: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 59: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 60: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 61: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 62: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 63: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 64: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 65: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 66: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 67: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 68: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 69: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 70: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 71: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 72: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 73: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 74: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 75: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 76: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 77: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 78: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 79: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 80: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 81: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 82: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 83: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 84: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 85: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 86: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 87: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 88: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 89: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 90: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 91: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 92: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 93: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 94: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 95: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 96: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 97: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 98: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 99: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    },
+    {
+      "question": "Advanced Concept Question 100: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "options": [
+        "A. Both Call and Put premiums increase",
+        "B. Call premiums increase, Put premiums decrease",
+        "C. Call premiums decrease, Put premiums increase",
+        "D. Both Call and Put premiums decrease"
+      ],
+      "answer": "Both Call and Put premiums increase",
+      "explanation": "Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options."
+    }
   ]
 },
   "notesData": {
@@ -10907,6 +13111,1206 @@ window.NISM_DATA = {
       "back": "<strong>CBOE</strong><br><br>The Chicago Board Options Exchange (CBOE) was the first to offer listed options trading.",
       "testName": "Test 8",
       "questionIndex": 98
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 7,000,000 with a beta of 0.9. The Nifty Index is currently trading at 18200. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>7 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (7000000 * 0.9) / (18200 * 50) = 7 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 0
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 9,000,000 with a beta of 1.0. The Nifty Index is currently trading at 18400. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>10 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (9000000 * 1.0) / (18400 * 50) = 10 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 1
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 11,000,000 with a beta of 1.1. The Nifty Index is currently trading at 18600. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>13 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (11000000 * 1.1) / (18600 * 50) = 13 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 2
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 13,000,000 with a beta of 1.2. The Nifty Index is currently trading at 18800. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>17 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (13000000 * 1.2) / (18800 * 50) = 17 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 3
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 15,000,000 with a beta of 1.3. The Nifty Index is currently trading at 19000. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>21 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (15000000 * 1.3) / (19000 * 50) = 21 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 4
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 17,000,000 with a beta of 1.4. The Nifty Index is currently trading at 19200. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>25 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (17000000 * 1.4) / (19200 * 50) = 25 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 5
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 19,000,000 with a beta of 1.5. The Nifty Index is currently trading at 19400. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>29 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (19000000 * 1.5) / (19400 * 50) = 29 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 6
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 21,000,000 with a beta of 1.6. The Nifty Index is currently trading at 19600. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>34 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (21000000 * 1.6) / (19600 * 50) = 34 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 7
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 23,000,000 with a beta of 1.7. The Nifty Index is currently trading at 19800. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>39 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (23000000 * 1.7) / (19800 * 50) = 39 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 8
+    },
+    {
+      "front": "An investor holds an equity portfolio valued at Rs. 25,000,000 with a beta of 1.8. The Nifty Index is currently trading at 20000. If the lot size of Nifty futures is 50, how many contracts of Nifty futures must the investor short to hedge the portfolio against systematic risk?",
+      "back": "<strong>45 contracts</strong><br><br>Number of contracts = (Portfolio Value * Beta) / (Nifty Futures Price * Lot Size) = (25000000 * 1.8) / (20000 * 50) = 45 contracts.",
+      "testName": "Test 9",
+      "questionIndex": 9
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 550, the risk-free interest rate is 6.5% per annum, the time to expiration is 35 days, and the expected dividend to be paid before expiry is Rs. 2.50 per share.",
+      "back": "<strong>Rs. 550.93</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 550 * 0.0650 * 35/365 = Rs. 3.43. Fair Price = 550 + 3.43 - 2.50 = Rs. 550.93.",
+      "testName": "Test 9",
+      "questionIndex": 10
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 600, the risk-free interest rate is 7.0% per annum, the time to expiration is 40 days, and the expected dividend to be paid before expiry is Rs. 3.00 per share.",
+      "back": "<strong>Rs. 601.6</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 600 * 0.0700 * 40/365 = Rs. 4.60. Fair Price = 600 + 4.60 - 3.00 = Rs. 601.6.",
+      "testName": "Test 9",
+      "questionIndex": 11
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 650, the risk-free interest rate is 7.5% per annum, the time to expiration is 45 days, and the expected dividend to be paid before expiry is Rs. 3.50 per share.",
+      "back": "<strong>Rs. 652.51</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 650 * 0.0750 * 45/365 = Rs. 6.01. Fair Price = 650 + 6.01 - 3.50 = Rs. 652.51.",
+      "testName": "Test 9",
+      "questionIndex": 12
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 700, the risk-free interest rate is 8.0% per annum, the time to expiration is 50 days, and the expected dividend to be paid before expiry is Rs. 4.00 per share.",
+      "back": "<strong>Rs. 703.67</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 700 * 0.0800 * 50/365 = Rs. 7.67. Fair Price = 700 + 7.67 - 4.00 = Rs. 703.67.",
+      "testName": "Test 9",
+      "questionIndex": 13
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 750, the risk-free interest rate is 8.5% per annum, the time to expiration is 55 days, and the expected dividend to be paid before expiry is Rs. 4.50 per share.",
+      "back": "<strong>Rs. 755.11</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 750 * 0.0850 * 55/365 = Rs. 9.61. Fair Price = 750 + 9.61 - 4.50 = Rs. 755.11.",
+      "testName": "Test 9",
+      "questionIndex": 14
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 800, the risk-free interest rate is 9.0% per annum, the time to expiration is 60 days, and the expected dividend to be paid before expiry is Rs. 5.00 per share.",
+      "back": "<strong>Rs. 806.84</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 800 * 0.0900 * 60/365 = Rs. 11.84. Fair Price = 800 + 11.84 - 5.00 = Rs. 806.84.",
+      "testName": "Test 9",
+      "questionIndex": 15
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 850, the risk-free interest rate is 9.5% per annum, the time to expiration is 65 days, and the expected dividend to be paid before expiry is Rs. 5.50 per share.",
+      "back": "<strong>Rs. 858.88</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 850 * 0.0950 * 65/365 = Rs. 14.38. Fair Price = 850 + 14.38 - 5.50 = Rs. 858.88.",
+      "testName": "Test 9",
+      "questionIndex": 16
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 900, the risk-free interest rate is 10.0% per annum, the time to expiration is 70 days, and the expected dividend to be paid before expiry is Rs. 6.00 per share.",
+      "back": "<strong>Rs. 911.26</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 900 * 0.1000 * 70/365 = Rs. 17.26. Fair Price = 900 + 17.26 - 6.00 = Rs. 911.26.",
+      "testName": "Test 9",
+      "questionIndex": 17
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 950, the risk-free interest rate is 10.5% per annum, the time to expiration is 75 days, and the expected dividend to be paid before expiry is Rs. 6.50 per share.",
+      "back": "<strong>Rs. 964.0</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 950 * 0.1050 * 75/365 = Rs. 20.50. Fair Price = 950 + 20.50 - 6.50 = Rs. 964.0.",
+      "testName": "Test 9",
+      "questionIndex": 18
+    },
+    {
+      "front": "Calculate the fair value of a stock futures contract if the spot price of the stock is Rs. 1000, the risk-free interest rate is 11.0% per annum, the time to expiration is 80 days, and the expected dividend to be paid before expiry is Rs. 7.00 per share.",
+      "back": "<strong>Rs. 1017.11</strong><br><br>Fair Value = Spot Price + Interest Cost - Dividend. Interest Cost = Rs. 1000 * 0.1100 * 80/365 = Rs. 24.11. Fair Price = 1000 + 24.11 - 7.00 = Rs. 1017.11.",
+      "testName": "Test 9",
+      "questionIndex": 19
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,100. The closing price on Day 1 is Rs. 14,960 and the closing price on Day 2 is Rs. 15,195. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -7,000 | Day 2: Rs. +11,750</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (14960 - 15100) * 50 = Rs. -7,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15195 - 14960) * 50 = Rs. 11,750.",
+      "testName": "Test 9",
+      "questionIndex": 20
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,200. The closing price on Day 1 is Rs. 15,070 and the closing price on Day 2 is Rs. 15,290. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -6,500 | Day 2: Rs. +11,000</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15070 - 15200) * 50 = Rs. -6,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15290 - 15070) * 50 = Rs. 11,000.",
+      "testName": "Test 9",
+      "questionIndex": 21
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,300. The closing price on Day 1 is Rs. 15,180 and the closing price on Day 2 is Rs. 15,385. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -6,000 | Day 2: Rs. +10,250</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15180 - 15300) * 50 = Rs. -6,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15385 - 15180) * 50 = Rs. 10,250.",
+      "testName": "Test 9",
+      "questionIndex": 22
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,400. The closing price on Day 1 is Rs. 15,290 and the closing price on Day 2 is Rs. 15,480. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -5,500 | Day 2: Rs. +9,500</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15290 - 15400) * 50 = Rs. -5,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15480 - 15290) * 50 = Rs. 9,500.",
+      "testName": "Test 9",
+      "questionIndex": 23
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,500. The closing price on Day 1 is Rs. 15,400 and the closing price on Day 2 is Rs. 15,575. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -5,000 | Day 2: Rs. +8,750</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15400 - 15500) * 50 = Rs. -5,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15575 - 15400) * 50 = Rs. 8,750.",
+      "testName": "Test 9",
+      "questionIndex": 24
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,600. The closing price on Day 1 is Rs. 15,510 and the closing price on Day 2 is Rs. 15,670. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -4,500 | Day 2: Rs. +8,000</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15510 - 15600) * 50 = Rs. -4,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15670 - 15510) * 50 = Rs. 8,000.",
+      "testName": "Test 9",
+      "questionIndex": 25
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,700. The closing price on Day 1 is Rs. 15,620 and the closing price on Day 2 is Rs. 15,765. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -4,000 | Day 2: Rs. +7,250</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15620 - 15700) * 50 = Rs. -4,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15765 - 15620) * 50 = Rs. 7,250.",
+      "testName": "Test 9",
+      "questionIndex": 26
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,800. The closing price on Day 1 is Rs. 15,730 and the closing price on Day 2 is Rs. 15,860. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -3,500 | Day 2: Rs. +6,500</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15730 - 15800) * 50 = Rs. -3,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15860 - 15730) * 50 = Rs. 6,500.",
+      "testName": "Test 9",
+      "questionIndex": 27
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 15,900. The closing price on Day 1 is Rs. 15,840 and the closing price on Day 2 is Rs. 15,955. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -3,000 | Day 2: Rs. +5,750</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15840 - 15900) * 50 = Rs. -3,000. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (15955 - 15840) * 50 = Rs. 5,750.",
+      "testName": "Test 9",
+      "questionIndex": 28
+    },
+    {
+      "front": "A trader buys 1 contract of Nifty futures (lot size 50) at Rs. 16,000. The closing price on Day 1 is Rs. 15,950 and the closing price on Day 2 is Rs. 16,050. What is the Mark-to-Market (MTM) margin impact on Day 1 and Day 2?",
+      "back": "<strong>A) Day 1: Rs. -2,500 | Day 2: Rs. +5,000</strong><br><br>MTM Day 1 = (Day 1 Close - Buy Price) * Lot Size = (15950 - 16000) * 50 = Rs. -2,500. MTM Day 2 = (Day 2 Close - Day 1 Close) * Lot Size = (16050 - 15950) * 50 = Rs. 5,000.",
+      "testName": "Test 9",
+      "questionIndex": 29
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17200 for a premium of Rs. 210 and selling a Call Option at strike Rs. 17600 for a premium of Rs. 85. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 125 | Max Profit: Rs. 275 | Break-even: Rs. 17325</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 210 - 85 = Rs. 125. Max Profit = (Difference in Strike Prices) - Net Debit = (17600 - 17200) - 125 = Rs. 275. Break-even = Lower Strike + Net Debit = 17200 + 125 = Rs. 17325.",
+      "testName": "Test 9",
+      "questionIndex": 30
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17400 for a premium of Rs. 220 and selling a Call Option at strike Rs. 17800 for a premium of Rs. 90. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 130 | Max Profit: Rs. 270 | Break-even: Rs. 17530</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 220 - 90 = Rs. 130. Max Profit = (Difference in Strike Prices) - Net Debit = (17800 - 17400) - 130 = Rs. 270. Break-even = Lower Strike + Net Debit = 17400 + 130 = Rs. 17530.",
+      "testName": "Test 9",
+      "questionIndex": 31
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17600 for a premium of Rs. 230 and selling a Call Option at strike Rs. 18000 for a premium of Rs. 95. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 135 | Max Profit: Rs. 265 | Break-even: Rs. 17735</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 230 - 95 = Rs. 135. Max Profit = (Difference in Strike Prices) - Net Debit = (18000 - 17600) - 135 = Rs. 265. Break-even = Lower Strike + Net Debit = 17600 + 135 = Rs. 17735.",
+      "testName": "Test 9",
+      "questionIndex": 32
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 17800 for a premium of Rs. 240 and selling a Call Option at strike Rs. 18200 for a premium of Rs. 100. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 140 | Max Profit: Rs. 260 | Break-even: Rs. 17940</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 240 - 100 = Rs. 140. Max Profit = (Difference in Strike Prices) - Net Debit = (18200 - 17800) - 140 = Rs. 260. Break-even = Lower Strike + Net Debit = 17800 + 140 = Rs. 17940.",
+      "testName": "Test 9",
+      "questionIndex": 33
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18000 for a premium of Rs. 250 and selling a Call Option at strike Rs. 18400 for a premium of Rs. 105. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 145 | Max Profit: Rs. 255 | Break-even: Rs. 18145</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 250 - 105 = Rs. 145. Max Profit = (Difference in Strike Prices) - Net Debit = (18400 - 18000) - 145 = Rs. 255. Break-even = Lower Strike + Net Debit = 18000 + 145 = Rs. 18145.",
+      "testName": "Test 9",
+      "questionIndex": 34
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18200 for a premium of Rs. 260 and selling a Call Option at strike Rs. 18600 for a premium of Rs. 110. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 150 | Max Profit: Rs. 250 | Break-even: Rs. 18350</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 260 - 110 = Rs. 150. Max Profit = (Difference in Strike Prices) - Net Debit = (18600 - 18200) - 150 = Rs. 250. Break-even = Lower Strike + Net Debit = 18200 + 150 = Rs. 18350.",
+      "testName": "Test 9",
+      "questionIndex": 35
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18400 for a premium of Rs. 270 and selling a Call Option at strike Rs. 18800 for a premium of Rs. 115. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 155 | Max Profit: Rs. 245 | Break-even: Rs. 18555</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 270 - 115 = Rs. 155. Max Profit = (Difference in Strike Prices) - Net Debit = (18800 - 18400) - 155 = Rs. 245. Break-even = Lower Strike + Net Debit = 18400 + 155 = Rs. 18555.",
+      "testName": "Test 9",
+      "questionIndex": 36
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18600 for a premium of Rs. 280 and selling a Call Option at strike Rs. 19000 for a premium of Rs. 120. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 160 | Max Profit: Rs. 240 | Break-even: Rs. 18760</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 280 - 120 = Rs. 160. Max Profit = (Difference in Strike Prices) - Net Debit = (19000 - 18600) - 160 = Rs. 240. Break-even = Lower Strike + Net Debit = 18600 + 160 = Rs. 18760.",
+      "testName": "Test 9",
+      "questionIndex": 37
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 18800 for a premium of Rs. 290 and selling a Call Option at strike Rs. 19200 for a premium of Rs. 125. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 165 | Max Profit: Rs. 235 | Break-even: Rs. 18965</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 290 - 125 = Rs. 165. Max Profit = (Difference in Strike Prices) - Net Debit = (19200 - 18800) - 165 = Rs. 235. Break-even = Lower Strike + Net Debit = 18800 + 165 = Rs. 18965.",
+      "testName": "Test 9",
+      "questionIndex": 38
+    },
+    {
+      "front": "An investor constructs a Bull Call Spread by buying a Call Option at strike Rs. 19000 for a premium of Rs. 300 and selling a Call Option at strike Rs. 19400 for a premium of Rs. 130. Calculate the maximum loss, maximum profit, and the break-even point for this strategy.",
+      "back": "<strong>A) Max Loss: Rs. 170 | Max Profit: Rs. 230 | Break-even: Rs. 19170</strong><br><br>Net Cost (Max Loss) = Premium Paid - Premium Received = 300 - 130 = Rs. 170. Max Profit = (Difference in Strike Prices) - Net Debit = (19400 - 19000) - 170 = Rs. 230. Break-even = Lower Strike + Net Debit = 19000 + 170 = Rs. 19170.",
+      "testName": "Test 9",
+      "questionIndex": 39
+    },
+    {
+      "front": "Which of the following describes the 'Standardized Portfolio Analysis of Risk' (SPAN) margin system?",
+      "back": "<strong>It calculates margins based on the worst-case scenario loss of the portfolio across a set of scenarios</strong><br><br>SPAN is a portfolio-based margin system that evaluates the risk of a portfolio as a whole by simulating 16 risk scenarios based on changes in underlying price and volatility.",
+      "testName": "Test 9",
+      "questionIndex": 40
+    },
+    {
+      "front": "What happens to the Delta of an Out-of-the-Money (OTM) Call option as the expiry approaches, assuming other factors remain constant?",
+      "back": "<strong>It approaches 0</strong><br><br>As expiry approaches, the probability of an OTM option becoming in-the-money decreases. Therefore, its sensitivity to underlying price movement (Delta) drops towards 0.",
+      "testName": "Test 9",
+      "questionIndex": 41
+    },
+    {
+      "front": "Which Option Greek is used to measure the sensitivity of Delta to the change in the price of the underlying asset?",
+      "back": "<strong>Gamma</strong><br><br>Gamma is the rate of change of Delta per unit change in the underlying asset's price. It is the second-order derivative of the option price with respect to the underlying price.",
+      "testName": "Test 9",
+      "questionIndex": 42
+    },
+    {
+      "front": "In a liquid derivatives market, which of the following is true regarding impact cost?",
+      "back": "<strong>Lower impact cost indicates higher liquidity</strong><br><br>Impact cost represents the slippage or execution penalty of an order. A lower impact cost means the order can be executed with minimal price disruption, reflecting high liquidity.",
+      "testName": "Test 9",
+      "questionIndex": 43
+    },
+    {
+      "front": "An option trader is net long on Vega. Which of the following market conditions will benefit this trader?",
+      "back": "<strong>An increase in implied volatility</strong><br><br>Vega measures the sensitivity of option premium to implied volatility. Option buyers (long Vega) benefit when implied volatility increases, as it inflates option values.",
+      "testName": "Test 9",
+      "questionIndex": 44
+    },
+    {
+      "front": "Under the current SEBI guidelines, how is the Initial Margin for index options calculated?",
+      "back": "<strong>SPAN margin based on 99% Value at Risk (VaR) over a 1-day horizon</strong><br><br>SPAN margin is calculated based on VaR with a 99% confidence level over a 1-day time horizon to cover worst-case potential losses.",
+      "testName": "Test 9",
+      "questionIndex": 45
+    },
+    {
+      "front": "What is the primary role of a 'Professional Clearing Member' (PCM) in the Indian derivatives segment?",
+      "back": "<strong>To clear and settle trades of associate trading members and clients, without executing trades himself</strong><br><br>A PCM is a clearing member who is not a trading member. They typically include banks or custodians who only clear and settle trades for other market participants.",
+      "testName": "Test 9",
+      "questionIndex": 46
+    },
+    {
+      "front": "Under Section 43(5) of the Income Tax Act, transactions in equity derivatives on recognized stock exchanges are classified as:",
+      "back": "<strong>Non-speculative business income</strong><br><br>Transactions in equity derivatives executed on recognized stock exchanges are treated as non-speculative business transactions under Section 43(5) of the Income Tax Act.",
+      "testName": "Test 9",
+      "questionIndex": 47
+    },
+    {
+      "front": "If a stock splits 1:2 (every 1 share becomes 2 shares), how does the exchange adjust the option contract strike price and lot size?",
+      "back": "<strong>Strike price is halved, and lot size is doubled</strong><br><br>To maintain the same contract value and moneyness, the strike price is divided by the split factor (halved), and the lot size is multiplied by the split factor (doubled).",
+      "testName": "Test 9",
+      "questionIndex": 48
+    },
+    {
+      "front": "Which of the following committees was formed by SEBI in 1996 to develop the regulatory framework for derivatives in India?",
+      "back": "<strong>Dr. L.C. Gupta Committee</strong><br><br>SEBI set up the Dr. L.C. Gupta Committee in 1996 to formulate a regulatory framework for index futures and derivatives trading in India.",
+      "testName": "Test 9",
+      "questionIndex": 49
+    },
+    {
+      "front": "Advanced Concept Question 51: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 50
+    },
+    {
+      "front": "Advanced Concept Question 52: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 51
+    },
+    {
+      "front": "Advanced Concept Question 53: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 52
+    },
+    {
+      "front": "Advanced Concept Question 54: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 53
+    },
+    {
+      "front": "Advanced Concept Question 55: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 54
+    },
+    {
+      "front": "Advanced Concept Question 56: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 55
+    },
+    {
+      "front": "Advanced Concept Question 57: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 56
+    },
+    {
+      "front": "Advanced Concept Question 58: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 57
+    },
+    {
+      "front": "Advanced Concept Question 59: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 58
+    },
+    {
+      "front": "Advanced Concept Question 60: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 59
+    },
+    {
+      "front": "Advanced Concept Question 61: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 60
+    },
+    {
+      "front": "Advanced Concept Question 62: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 61
+    },
+    {
+      "front": "Advanced Concept Question 63: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 62
+    },
+    {
+      "front": "Advanced Concept Question 64: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 63
+    },
+    {
+      "front": "Advanced Concept Question 65: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 64
+    },
+    {
+      "front": "Advanced Concept Question 66: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 65
+    },
+    {
+      "front": "Advanced Concept Question 67: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 66
+    },
+    {
+      "front": "Advanced Concept Question 68: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 67
+    },
+    {
+      "front": "Advanced Concept Question 69: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 68
+    },
+    {
+      "front": "Advanced Concept Question 70: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 69
+    },
+    {
+      "front": "Advanced Concept Question 71: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 70
+    },
+    {
+      "front": "Advanced Concept Question 72: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 71
+    },
+    {
+      "front": "Advanced Concept Question 73: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 72
+    },
+    {
+      "front": "Advanced Concept Question 74: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 73
+    },
+    {
+      "front": "Advanced Concept Question 75: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 74
+    },
+    {
+      "front": "Advanced Concept Question 76: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 75
+    },
+    {
+      "front": "Advanced Concept Question 77: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 76
+    },
+    {
+      "front": "Advanced Concept Question 78: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 77
+    },
+    {
+      "front": "Advanced Concept Question 79: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 78
+    },
+    {
+      "front": "Advanced Concept Question 80: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 79
+    },
+    {
+      "front": "Advanced Concept Question 81: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 80
+    },
+    {
+      "front": "Advanced Concept Question 82: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 81
+    },
+    {
+      "front": "Advanced Concept Question 83: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 82
+    },
+    {
+      "front": "Advanced Concept Question 84: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 83
+    },
+    {
+      "front": "Advanced Concept Question 85: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 84
+    },
+    {
+      "front": "Advanced Concept Question 86: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 85
+    },
+    {
+      "front": "Advanced Concept Question 87: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 86
+    },
+    {
+      "front": "Advanced Concept Question 88: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 87
+    },
+    {
+      "front": "Advanced Concept Question 89: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 88
+    },
+    {
+      "front": "Advanced Concept Question 90: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 89
+    },
+    {
+      "front": "Advanced Concept Question 91: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 90
+    },
+    {
+      "front": "Advanced Concept Question 92: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 91
+    },
+    {
+      "front": "Advanced Concept Question 93: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 92
+    },
+    {
+      "front": "Advanced Concept Question 94: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 93
+    },
+    {
+      "front": "Advanced Concept Question 95: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 94
+    },
+    {
+      "front": "Advanced Concept Question 96: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 95
+    },
+    {
+      "front": "Advanced Concept Question 97: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 96
+    },
+    {
+      "front": "Advanced Concept Question 98: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 97
+    },
+    {
+      "front": "Advanced Concept Question 99: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 98
+    },
+    {
+      "front": "Advanced Concept Question 100: Which of the following is true for a calendar spread position in futures contracts?",
+      "back": "<strong>It involves buying a near-month contract and selling a far-month contract of the same underlying</strong><br><br>A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.",
+      "testName": "Test 9",
+      "questionIndex": 99
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1100 for a premium of Rs. 42. At expiry, the underlying spot price is Rs. 980. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 78</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1100 - 980 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 42 = Rs. 78 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 0
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1200 for a premium of Rs. 44. At expiry, the underlying spot price is Rs. 1080. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 76</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1200 - 1080 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 44 = Rs. 76 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 1
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1300 for a premium of Rs. 46. At expiry, the underlying spot price is Rs. 1180. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 74</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1300 - 1180 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 46 = Rs. 74 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 2
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1400 for a premium of Rs. 48. At expiry, the underlying spot price is Rs. 1280. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 72</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1400 - 1280 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 48 = Rs. 72 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 3
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1500 for a premium of Rs. 50. At expiry, the underlying spot price is Rs. 1380. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 70</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1500 - 1380 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 50 = Rs. 70 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 4
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1600 for a premium of Rs. 52. At expiry, the underlying spot price is Rs. 1480. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 68</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1600 - 1480 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 52 = Rs. 68 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 5
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1700 for a premium of Rs. 54. At expiry, the underlying spot price is Rs. 1580. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 66</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1700 - 1580 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 54 = Rs. 66 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 6
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1800 for a premium of Rs. 56. At expiry, the underlying spot price is Rs. 1680. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 64</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1800 - 1680 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 56 = Rs. 64 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 7
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 1900 for a premium of Rs. 58. At expiry, the underlying spot price is Rs. 1780. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 62</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 1900 - 1780 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 58 = Rs. 62 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 8
+    },
+    {
+      "front": "An investor purchases a Put Option with a strike price of Rs. 2000 for a premium of Rs. 60. At expiry, the underlying spot price is Rs. 1880. Calculate the intrinsic value of the option and the net profit or loss per unit for the buyer.",
+      "back": "<strong>A) Intrinsic Value: Rs. 120 | Profit: Rs. 60</strong><br><br>Intrinsic Value of Put = Max(0, Strike - Spot) = 2000 - 1880 = Rs. 120. Net Profit/Loss = Intrinsic Value - Premium Paid = 120 - 60 = Rs. 60 per unit.",
+      "testName": "Test 10",
+      "questionIndex": 9
+    },
+    {
+      "front": "A stock's spot price is Rs. 820. The 30-day stock futures contract trades at Rs. 822. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 824.04 | Arbitrage Profit: Rs. -2.04 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 820 * (1 + 0.06 * 30/365) = Rs. 824.04. Since market futures price (822) > fair price (824.04), you can buy spot and short futures to lock in a risk-free profit of Rs. -2.04.",
+      "testName": "Test 10",
+      "questionIndex": 10
+    },
+    {
+      "front": "A stock's spot price is Rs. 840. The 30-day stock futures contract trades at Rs. 844. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 844.14 | Arbitrage Profit: Rs. -0.14 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 840 * (1 + 0.06 * 30/365) = Rs. 844.14. Since market futures price (844) > fair price (844.14), you can buy spot and short futures to lock in a risk-free profit of Rs. -0.14.",
+      "testName": "Test 10",
+      "questionIndex": 11
+    },
+    {
+      "front": "A stock's spot price is Rs. 860. The 30-day stock futures contract trades at Rs. 866. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 864.24 | Arbitrage Profit: Rs. 1.76 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 860 * (1 + 0.06 * 30/365) = Rs. 864.24. Since market futures price (866) > fair price (864.24), you can buy spot and short futures to lock in a risk-free profit of Rs. 1.76.",
+      "testName": "Test 10",
+      "questionIndex": 12
+    },
+    {
+      "front": "A stock's spot price is Rs. 880. The 30-day stock futures contract trades at Rs. 888. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 884.34 | Arbitrage Profit: Rs. 3.66 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 880 * (1 + 0.06 * 30/365) = Rs. 884.34. Since market futures price (888) > fair price (884.34), you can buy spot and short futures to lock in a risk-free profit of Rs. 3.66.",
+      "testName": "Test 10",
+      "questionIndex": 13
+    },
+    {
+      "front": "A stock's spot price is Rs. 900. The 30-day stock futures contract trades at Rs. 910. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 904.44 | Arbitrage Profit: Rs. 5.56 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 900 * (1 + 0.06 * 30/365) = Rs. 904.44. Since market futures price (910) > fair price (904.44), you can buy spot and short futures to lock in a risk-free profit of Rs. 5.56.",
+      "testName": "Test 10",
+      "questionIndex": 14
+    },
+    {
+      "front": "A stock's spot price is Rs. 920. The 30-day stock futures contract trades at Rs. 932. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 924.54 | Arbitrage Profit: Rs. 7.46 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 920 * (1 + 0.06 * 30/365) = Rs. 924.54. Since market futures price (932) > fair price (924.54), you can buy spot and short futures to lock in a risk-free profit of Rs. 7.46.",
+      "testName": "Test 10",
+      "questionIndex": 15
+    },
+    {
+      "front": "A stock's spot price is Rs. 940. The 30-day stock futures contract trades at Rs. 954. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 944.64 | Arbitrage Profit: Rs. 9.36 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 940 * (1 + 0.06 * 30/365) = Rs. 944.64. Since market futures price (954) > fair price (944.64), you can buy spot and short futures to lock in a risk-free profit of Rs. 9.36.",
+      "testName": "Test 10",
+      "questionIndex": 16
+    },
+    {
+      "front": "A stock's spot price is Rs. 960. The 30-day stock futures contract trades at Rs. 976. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 964.73 | Arbitrage Profit: Rs. 11.27 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 960 * (1 + 0.06 * 30/365) = Rs. 964.73. Since market futures price (976) > fair price (964.73), you can buy spot and short futures to lock in a risk-free profit of Rs. 11.27.",
+      "testName": "Test 10",
+      "questionIndex": 17
+    },
+    {
+      "front": "A stock's spot price is Rs. 980. The 30-day stock futures contract trades at Rs. 998. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 984.83 | Arbitrage Profit: Rs. 13.17 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 980 * (1 + 0.06 * 30/365) = Rs. 984.83. Since market futures price (998) > fair price (984.83), you can buy spot and short futures to lock in a risk-free profit of Rs. 13.17.",
+      "testName": "Test 10",
+      "questionIndex": 18
+    },
+    {
+      "front": "A stock's spot price is Rs. 1000. The 30-day stock futures contract trades at Rs. 1020. If the risk-free rate is 6%, calculate the theoretical fair price. Is there an arbitrage opportunity, and what is the potential profit per unit if you do a cash-and-carry arbitrage?",
+      "back": "<strong>A) Fair Price: Rs. 1004.93 | Arbitrage Profit: Rs. 15.07 (Buy Spot, Sell Futures)</strong><br><br>Theoretical Fair Futures Price = Spot * (1 + r * t) = 1000 * (1 + 0.06 * 30/365) = Rs. 1004.93. Since market futures price (1020) > fair price (1004.93), you can buy spot and short futures to lock in a risk-free profit of Rs. 15.07.",
+      "testName": "Test 10",
+      "questionIndex": 19
+    },
+    {
+      "front": "A portfolio manager holds 10,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.42. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 23,810 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 10000 * 1 = 10000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 10000 / 0.42 = 23,810 calls.",
+      "testName": "Test 10",
+      "questionIndex": 20
+    },
+    {
+      "front": "A portfolio manager holds 20,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.44. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 45,455 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 20000 * 1 = 20000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 20000 / 0.44 = 45,455 calls.",
+      "testName": "Test 10",
+      "questionIndex": 21
+    },
+    {
+      "front": "A portfolio manager holds 30,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.46. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 65,217 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 30000 * 1 = 30000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 30000 / 0.46 = 65,217 calls.",
+      "testName": "Test 10",
+      "questionIndex": 22
+    },
+    {
+      "front": "A portfolio manager holds 40,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.48. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 83,333 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 40000 * 1 = 40000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 40000 / 0.48 = 83,333 calls.",
+      "testName": "Test 10",
+      "questionIndex": 23
+    },
+    {
+      "front": "A portfolio manager holds 50,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.50. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 100,000 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 50000 * 1 = 50000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 50000 / 0.50 = 100,000 calls.",
+      "testName": "Test 10",
+      "questionIndex": 24
+    },
+    {
+      "front": "A portfolio manager holds 60,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.52. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 115,385 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 60000 * 1 = 60000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 60000 / 0.52 = 115,385 calls.",
+      "testName": "Test 10",
+      "questionIndex": 25
+    },
+    {
+      "front": "A portfolio manager holds 70,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.54. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 129,630 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 70000 * 1 = 70000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 70000 / 0.54 = 129,630 calls.",
+      "testName": "Test 10",
+      "questionIndex": 26
+    },
+    {
+      "front": "A portfolio manager holds 80,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.56. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 142,857 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 80000 * 1 = 80000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 80000 / 0.56 = 142,857 calls.",
+      "testName": "Test 10",
+      "questionIndex": 27
+    },
+    {
+      "front": "A portfolio manager holds 90,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.58. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 155,172 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 90000 * 1 = 90000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 90000 / 0.58 = 155,172 calls.",
+      "testName": "Test 10",
+      "questionIndex": 28
+    },
+    {
+      "front": "A portfolio manager holds 100,000 shares of ABC Ltd. He wants to construct a Delta Neutral portfolio using Call options on ABC Ltd. which have a Delta of 0.60. How many Call options must he write (sell) to make the portfolio delta neutral?",
+      "back": "<strong>A) Sell 166,667 Call options</strong><br><br>To achieve delta neutrality, Portfolio Delta + Options Delta = 0. Shares have delta = +1. Delta of portfolio = 100000 * 1 = 100000. Written options have negative delta. Number of options to sell = Portfolio Delta / Option Delta = 100000 / 0.60 = 166,667 calls.",
+      "testName": "Test 10",
+      "questionIndex": 29
+    },
+    {
+      "front": "Which of the following measures the rate of decay of an option's premium over time?",
+      "back": "<strong>Theta</strong><br><br>Theta measures the rate of change of the option premium with the passage of time (time decay). Theta is negative for option buyers and positive for option writers.",
+      "testName": "Test 10",
+      "questionIndex": 30
+    },
+    {
+      "front": "Under what condition will the intrinsic value of a Put option be positive?",
+      "back": "<strong>Strike Price > Spot Price</strong><br><br>A Put option gives the right to sell. It has intrinsic value (is In-the-Money) only when the strike price at which you can sell is higher than the current spot market price.",
+      "testName": "Test 10",
+      "questionIndex": 31
+    },
+    {
+      "front": "Which of the following constitutes 'Unsystematic Risk' in the securities market?",
+      "back": "<strong>A labor strike in a specific company's manufacturing plant</strong><br><br>Unsystematic risk is company-specific or industry-specific risk. It can be diversified away by holding a broad portfolio. Macroeconomic factors represent systematic risk.",
+      "testName": "Test 10",
+      "questionIndex": 32
+    },
+    {
+      "front": "What is the settlement schedule for Mark-to-Market (MTM) margins in the equity derivatives segment in India?",
+      "back": "<strong>T+1 day</strong><br><br>MTM profits and losses are computed at the end of each trading session and settled on a T+1 working day basis through clearing banks.",
+      "testName": "Test 10",
+      "questionIndex": 33
+    },
+    {
+      "front": "How are corporate actions like cash dividends adjusted in stock options contracts if the dividend is extraordinary (exceeding 2% of the market value)?",
+      "back": "<strong>The strike price is reduced by the dividend amount</strong><br><br>For extraordinary dividends (exceeding 2% of the stock price), the strike price of the options contract is adjusted downwards by the dividend amount on the ex-dividend date.",
+      "testName": "Test 10",
+      "questionIndex": 34
+    },
+    {
+      "front": "Which pricing model is widely used for pricing European style index options?",
+      "back": "<strong>Black-Scholes-Merton Model</strong><br><br>The Black-Scholes-Merton model is the standard mathematical model used for pricing European-style options, where exercise is only possible at expiry.",
+      "testName": "Test 10",
+      "questionIndex": 35
+    },
+    {
+      "front": "What is the maximum exposure margin rate applicable on stock futures contracts in India as per SEBI regulations?",
+      "back": "<strong>3% of the contract value or 1.5 times the standard deviation, whichever is higher</strong><br><br>For individual stock futures, exposure margin is higher of 5% (or 3% for index futures) or 1.5 times the standard deviation of stock returns.",
+      "testName": "Test 10",
+      "questionIndex": 36
+    },
+    {
+      "front": "In the case of a client default in the derivatives segment, who carries the final financial liability to the Clearing Corporation?",
+      "back": "<strong>The Clearing Member</strong><br><br>The Clearing Member is directly responsible to the Clearing Corporation for settling all trades cleared through him, regardless of client default.",
+      "testName": "Test 10",
+      "questionIndex": 37
+    },
+    {
+      "front": "Which Greek represents the sensitivity of an option's premium to changes in interest rates?",
+      "back": "<strong>Rho</strong><br><br>Rho measures the sensitivity of an option's value to changes in the risk-free interest rate.",
+      "testName": "Test 10",
+      "questionIndex": 38
+    },
+    {
+      "front": "What is the maximum validity period of a NISM Series VIII Equity Derivatives certification?",
+      "back": "<strong>3 years</strong><br><br>A NISM certification is valid for a period of 3 years from the date of passing the examination.",
+      "testName": "Test 10",
+      "questionIndex": 39
+    },
+    {
+      "front": "Advanced Concept Question 41: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 40
+    },
+    {
+      "front": "Advanced Concept Question 42: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 41
+    },
+    {
+      "front": "Advanced Concept Question 43: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 42
+    },
+    {
+      "front": "Advanced Concept Question 44: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 43
+    },
+    {
+      "front": "Advanced Concept Question 45: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 44
+    },
+    {
+      "front": "Advanced Concept Question 46: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 45
+    },
+    {
+      "front": "Advanced Concept Question 47: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 46
+    },
+    {
+      "front": "Advanced Concept Question 48: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 47
+    },
+    {
+      "front": "Advanced Concept Question 49: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 48
+    },
+    {
+      "front": "Advanced Concept Question 50: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 49
+    },
+    {
+      "front": "Advanced Concept Question 51: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 50
+    },
+    {
+      "front": "Advanced Concept Question 52: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 51
+    },
+    {
+      "front": "Advanced Concept Question 53: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 52
+    },
+    {
+      "front": "Advanced Concept Question 54: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 53
+    },
+    {
+      "front": "Advanced Concept Question 55: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 54
+    },
+    {
+      "front": "Advanced Concept Question 56: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 55
+    },
+    {
+      "front": "Advanced Concept Question 57: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 56
+    },
+    {
+      "front": "Advanced Concept Question 58: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 57
+    },
+    {
+      "front": "Advanced Concept Question 59: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 58
+    },
+    {
+      "front": "Advanced Concept Question 60: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 59
+    },
+    {
+      "front": "Advanced Concept Question 61: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 60
+    },
+    {
+      "front": "Advanced Concept Question 62: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 61
+    },
+    {
+      "front": "Advanced Concept Question 63: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 62
+    },
+    {
+      "front": "Advanced Concept Question 64: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 63
+    },
+    {
+      "front": "Advanced Concept Question 65: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 64
+    },
+    {
+      "front": "Advanced Concept Question 66: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 65
+    },
+    {
+      "front": "Advanced Concept Question 67: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 66
+    },
+    {
+      "front": "Advanced Concept Question 68: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 67
+    },
+    {
+      "front": "Advanced Concept Question 69: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 68
+    },
+    {
+      "front": "Advanced Concept Question 70: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 69
+    },
+    {
+      "front": "Advanced Concept Question 71: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 70
+    },
+    {
+      "front": "Advanced Concept Question 72: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 71
+    },
+    {
+      "front": "Advanced Concept Question 73: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 72
+    },
+    {
+      "front": "Advanced Concept Question 74: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 73
+    },
+    {
+      "front": "Advanced Concept Question 75: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 74
+    },
+    {
+      "front": "Advanced Concept Question 76: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 75
+    },
+    {
+      "front": "Advanced Concept Question 77: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 76
+    },
+    {
+      "front": "Advanced Concept Question 78: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 77
+    },
+    {
+      "front": "Advanced Concept Question 79: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 78
+    },
+    {
+      "front": "Advanced Concept Question 80: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 79
+    },
+    {
+      "front": "Advanced Concept Question 81: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 80
+    },
+    {
+      "front": "Advanced Concept Question 82: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 81
+    },
+    {
+      "front": "Advanced Concept Question 83: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 82
+    },
+    {
+      "front": "Advanced Concept Question 84: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 83
+    },
+    {
+      "front": "Advanced Concept Question 85: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 84
+    },
+    {
+      "front": "Advanced Concept Question 86: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 85
+    },
+    {
+      "front": "Advanced Concept Question 87: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 86
+    },
+    {
+      "front": "Advanced Concept Question 88: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 87
+    },
+    {
+      "front": "Advanced Concept Question 89: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 88
+    },
+    {
+      "front": "Advanced Concept Question 90: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 89
+    },
+    {
+      "front": "Advanced Concept Question 91: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 90
+    },
+    {
+      "front": "Advanced Concept Question 92: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 91
+    },
+    {
+      "front": "Advanced Concept Question 93: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 92
+    },
+    {
+      "front": "Advanced Concept Question 94: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 93
+    },
+    {
+      "front": "Advanced Concept Question 95: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 94
+    },
+    {
+      "front": "Advanced Concept Question 96: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 95
+    },
+    {
+      "front": "Advanced Concept Question 97: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 96
+    },
+    {
+      "front": "Advanced Concept Question 98: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 97
+    },
+    {
+      "front": "Advanced Concept Question 99: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 98
+    },
+    {
+      "front": "Advanced Concept Question 100: If implied volatility increases, how does it affect Call and Put option premiums?",
+      "back": "<strong>Both Call and Put premiums increase</strong><br><br>Vega is positive for both long calls and long puts. Higher volatility indicates a higher probability of price swings, raising the value of both options.",
+      "testName": "Test 10",
+      "questionIndex": 99
     }
   ]
 }

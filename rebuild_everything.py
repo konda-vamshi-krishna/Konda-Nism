@@ -58,9 +58,39 @@ def clean_data():
         
         test_counter += 1
         
+    # Generate Advanced Tests (Test 9 and 10)
+    try:
+        import generate_advanced_tests
+        t9, t10 = generate_advanced_tests.generate_questions()
+        new_data["Test 9"] = t9
+        new_data["Test 10"] = t10
+        
+        # Write to Markdown
+        for t_name, questions, file_idx in [("Test 9", t9, 9), ("Test 10", t10, 10)]:
+            md_filename = f"g:/mock text/Test_{file_idx}.md"
+            with open(md_filename, 'w', encoding='utf-8') as f:
+                f.write(f"# NISM Series VIII Equity Derivatives - Mock {t_name}\n\n")
+                for i, q in enumerate(questions):
+                    f.write(f"**Question {i+1}:** {q['question']}\n\n")
+                    f.write("**Options:**\n\n")
+                    for opt in q['options']:
+                        f.write(f"{opt}\n")
+                    f.write(f"\n**Answer:** {q['answer']}\n\n")
+                    f.write(f"**Explanation:** {q['explanation']}\n\n")
+                    f.write("---\n\n")
+    except Exception as e:
+        print("Could not generate advanced tests:", e)
+
     # Write back clean JSON
     with open('g:/mock text/parsed_data_clean.json', 'w', encoding='utf-8') as f:
         json.dump(new_data, f, indent=2)
+        
+    # Generate flashcards from the fully clean JSON
+    try:
+        import generate_flashcards
+        generate_flashcards.generate_flashcards()
+    except Exception as e:
+        print("Could not generate flashcards:", e)
         
     # Read notes data
     try:

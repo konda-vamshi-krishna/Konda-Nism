@@ -750,753 +750,753 @@ D. U.K. Sinha Committee
 
 ---
 
-**Question 51:** A trader creates a Protective Put by buying a stock at Rs. 1000 and buying a Put option at strike Rs. 980 for a premium of Rs. 15. Calculate the maximum loss and the break-even point for this strategy.
+**Question 51:** Advanced Concept Question 51: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 35 | Break-even: Rs. 1015
-B. Max Loss: Rs. 45 | Break-even: Rs. 1010
-C. Max Loss: Rs. 30 | Break-even: Rs. 1025
-D. Max Loss: Rs. 15 | Break-even: Rs. 1000
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 35 | Break-even: Rs. 1015
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1000) + Put Premium (15) = Rs. 1015. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 980. Max loss = Net cost (1015) - 980 = Rs. 35.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 52:** A trader creates a Protective Put by buying a stock at Rs. 1050 and buying a Put option at strike Rs. 1030 for a premium of Rs. 16. Calculate the maximum loss and the break-even point for this strategy.
+**Question 52:** Advanced Concept Question 52: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 36 | Break-even: Rs. 1066
-B. Max Loss: Rs. 46 | Break-even: Rs. 1061
-C. Max Loss: Rs. 31 | Break-even: Rs. 1076
-D. Max Loss: Rs. 16 | Break-even: Rs. 1050
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 36 | Break-even: Rs. 1066
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1050) + Put Premium (16) = Rs. 1066. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1030. Max loss = Net cost (1066) - 1030 = Rs. 36.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 53:** A trader creates a Protective Put by buying a stock at Rs. 1100 and buying a Put option at strike Rs. 1080 for a premium of Rs. 17. Calculate the maximum loss and the break-even point for this strategy.
+**Question 53:** Advanced Concept Question 53: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 37 | Break-even: Rs. 1117
-B. Max Loss: Rs. 47 | Break-even: Rs. 1112
-C. Max Loss: Rs. 32 | Break-even: Rs. 1127
-D. Max Loss: Rs. 17 | Break-even: Rs. 1100
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 37 | Break-even: Rs. 1117
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1100) + Put Premium (17) = Rs. 1117. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1080. Max loss = Net cost (1117) - 1080 = Rs. 37.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 54:** A trader creates a Protective Put by buying a stock at Rs. 1150 and buying a Put option at strike Rs. 1130 for a premium of Rs. 18. Calculate the maximum loss and the break-even point for this strategy.
+**Question 54:** Advanced Concept Question 54: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 38 | Break-even: Rs. 1168
-B. Max Loss: Rs. 48 | Break-even: Rs. 1163
-C. Max Loss: Rs. 33 | Break-even: Rs. 1178
-D. Max Loss: Rs. 18 | Break-even: Rs. 1150
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 38 | Break-even: Rs. 1168
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1150) + Put Premium (18) = Rs. 1168. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1130. Max loss = Net cost (1168) - 1130 = Rs. 38.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 55:** A trader creates a Protective Put by buying a stock at Rs. 1200 and buying a Put option at strike Rs. 1180 for a premium of Rs. 19. Calculate the maximum loss and the break-even point for this strategy.
+**Question 55:** Advanced Concept Question 55: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 39 | Break-even: Rs. 1219
-B. Max Loss: Rs. 49 | Break-even: Rs. 1214
-C. Max Loss: Rs. 34 | Break-even: Rs. 1229
-D. Max Loss: Rs. 19 | Break-even: Rs. 1200
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 39 | Break-even: Rs. 1219
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1200) + Put Premium (19) = Rs. 1219. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1180. Max loss = Net cost (1219) - 1180 = Rs. 39.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 56:** A trader creates a Protective Put by buying a stock at Rs. 1250 and buying a Put option at strike Rs. 1230 for a premium of Rs. 20. Calculate the maximum loss and the break-even point for this strategy.
+**Question 56:** Advanced Concept Question 56: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 40 | Break-even: Rs. 1270
-B. Max Loss: Rs. 50 | Break-even: Rs. 1265
-C. Max Loss: Rs. 35 | Break-even: Rs. 1280
-D. Max Loss: Rs. 20 | Break-even: Rs. 1250
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 40 | Break-even: Rs. 1270
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1250) + Put Premium (20) = Rs. 1270. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1230. Max loss = Net cost (1270) - 1230 = Rs. 40.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 57:** A trader creates a Protective Put by buying a stock at Rs. 1300 and buying a Put option at strike Rs. 1280 for a premium of Rs. 21. Calculate the maximum loss and the break-even point for this strategy.
+**Question 57:** Advanced Concept Question 57: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 41 | Break-even: Rs. 1321
-B. Max Loss: Rs. 51 | Break-even: Rs. 1316
-C. Max Loss: Rs. 36 | Break-even: Rs. 1331
-D. Max Loss: Rs. 21 | Break-even: Rs. 1300
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 41 | Break-even: Rs. 1321
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1300) + Put Premium (21) = Rs. 1321. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1280. Max loss = Net cost (1321) - 1280 = Rs. 41.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 58:** A trader creates a Protective Put by buying a stock at Rs. 1350 and buying a Put option at strike Rs. 1330 for a premium of Rs. 22. Calculate the maximum loss and the break-even point for this strategy.
+**Question 58:** Advanced Concept Question 58: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 42 | Break-even: Rs. 1372
-B. Max Loss: Rs. 52 | Break-even: Rs. 1367
-C. Max Loss: Rs. 37 | Break-even: Rs. 1382
-D. Max Loss: Rs. 22 | Break-even: Rs. 1350
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 42 | Break-even: Rs. 1372
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1350) + Put Premium (22) = Rs. 1372. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1330. Max loss = Net cost (1372) - 1330 = Rs. 42.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 59:** A trader creates a Protective Put by buying a stock at Rs. 1400 and buying a Put option at strike Rs. 1380 for a premium of Rs. 23. Calculate the maximum loss and the break-even point for this strategy.
+**Question 59:** Advanced Concept Question 59: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 43 | Break-even: Rs. 1423
-B. Max Loss: Rs. 53 | Break-even: Rs. 1418
-C. Max Loss: Rs. 38 | Break-even: Rs. 1433
-D. Max Loss: Rs. 23 | Break-even: Rs. 1400
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 43 | Break-even: Rs. 1423
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1400) + Put Premium (23) = Rs. 1423. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1380. Max loss = Net cost (1423) - 1380 = Rs. 43.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 60:** A trader creates a Protective Put by buying a stock at Rs. 1450 and buying a Put option at strike Rs. 1430 for a premium of Rs. 24. Calculate the maximum loss and the break-even point for this strategy.
+**Question 60:** Advanced Concept Question 60: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Loss: Rs. 44 | Break-even: Rs. 1474
-B. Max Loss: Rs. 54 | Break-even: Rs. 1469
-C. Max Loss: Rs. 39 | Break-even: Rs. 1484
-D. Max Loss: Rs. 24 | Break-even: Rs. 1450
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Loss: Rs. 44 | Break-even: Rs. 1474
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Net cost of the strategy is the stock price (1450) + Put Premium (24) = Rs. 1474. This is the break-even. The worst case is stock falls below strike, where the put is exercised. Effective selling price = 1430. Max loss = Net cost (1474) - 1430 = Rs. 44.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 61:** A trader creates a Covered Call by buying a stock at Rs. 2000 and selling a Call option at strike Rs. 2040 for a premium of Rs. 25. Calculate the maximum profit and the break-even point for this strategy.
+**Question 61:** Advanced Concept Question 61: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 65 | Break-even: Rs. 1975
-B. Max Profit: Rs. 70 | Break-even: Rs. 1985
-C. Max Profit: Rs. 55 | Break-even: Rs. 1970
-D. Max Profit: Rs. 25 | Break-even: Rs. 2000
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 65 | Break-even: Rs. 1975
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2040) - Purchase Price (2000) + Premium Received (25) = Rs. 65. Break-even = Purchase Price (2000) - Premium Received (25) = Rs. 1975.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 62:** A trader creates a Covered Call by buying a stock at Rs. 2050 and selling a Call option at strike Rs. 2090 for a premium of Rs. 26. Calculate the maximum profit and the break-even point for this strategy.
+**Question 62:** Advanced Concept Question 62: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 66 | Break-even: Rs. 2024
-B. Max Profit: Rs. 71 | Break-even: Rs. 2034
-C. Max Profit: Rs. 56 | Break-even: Rs. 2019
-D. Max Profit: Rs. 26 | Break-even: Rs. 2050
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 66 | Break-even: Rs. 2024
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2090) - Purchase Price (2050) + Premium Received (26) = Rs. 66. Break-even = Purchase Price (2050) - Premium Received (26) = Rs. 2024.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 63:** A trader creates a Covered Call by buying a stock at Rs. 2100 and selling a Call option at strike Rs. 2140 for a premium of Rs. 27. Calculate the maximum profit and the break-even point for this strategy.
+**Question 63:** Advanced Concept Question 63: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 67 | Break-even: Rs. 2073
-B. Max Profit: Rs. 72 | Break-even: Rs. 2083
-C. Max Profit: Rs. 57 | Break-even: Rs. 2068
-D. Max Profit: Rs. 27 | Break-even: Rs. 2100
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 67 | Break-even: Rs. 2073
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2140) - Purchase Price (2100) + Premium Received (27) = Rs. 67. Break-even = Purchase Price (2100) - Premium Received (27) = Rs. 2073.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 64:** A trader creates a Covered Call by buying a stock at Rs. 2150 and selling a Call option at strike Rs. 2190 for a premium of Rs. 28. Calculate the maximum profit and the break-even point for this strategy.
+**Question 64:** Advanced Concept Question 64: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 68 | Break-even: Rs. 2122
-B. Max Profit: Rs. 73 | Break-even: Rs. 2132
-C. Max Profit: Rs. 58 | Break-even: Rs. 2117
-D. Max Profit: Rs. 28 | Break-even: Rs. 2150
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 68 | Break-even: Rs. 2122
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2190) - Purchase Price (2150) + Premium Received (28) = Rs. 68. Break-even = Purchase Price (2150) - Premium Received (28) = Rs. 2122.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 65:** A trader creates a Covered Call by buying a stock at Rs. 2200 and selling a Call option at strike Rs. 2240 for a premium of Rs. 29. Calculate the maximum profit and the break-even point for this strategy.
+**Question 65:** Advanced Concept Question 65: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 69 | Break-even: Rs. 2171
-B. Max Profit: Rs. 74 | Break-even: Rs. 2181
-C. Max Profit: Rs. 59 | Break-even: Rs. 2166
-D. Max Profit: Rs. 29 | Break-even: Rs. 2200
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 69 | Break-even: Rs. 2171
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2240) - Purchase Price (2200) + Premium Received (29) = Rs. 69. Break-even = Purchase Price (2200) - Premium Received (29) = Rs. 2171.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 66:** A trader creates a Covered Call by buying a stock at Rs. 2250 and selling a Call option at strike Rs. 2290 for a premium of Rs. 30. Calculate the maximum profit and the break-even point for this strategy.
+**Question 66:** Advanced Concept Question 66: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 70 | Break-even: Rs. 2220
-B. Max Profit: Rs. 75 | Break-even: Rs. 2230
-C. Max Profit: Rs. 60 | Break-even: Rs. 2215
-D. Max Profit: Rs. 30 | Break-even: Rs. 2250
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 70 | Break-even: Rs. 2220
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2290) - Purchase Price (2250) + Premium Received (30) = Rs. 70. Break-even = Purchase Price (2250) - Premium Received (30) = Rs. 2220.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 67:** A trader creates a Covered Call by buying a stock at Rs. 2300 and selling a Call option at strike Rs. 2340 for a premium of Rs. 31. Calculate the maximum profit and the break-even point for this strategy.
+**Question 67:** Advanced Concept Question 67: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 71 | Break-even: Rs. 2269
-B. Max Profit: Rs. 76 | Break-even: Rs. 2279
-C. Max Profit: Rs. 61 | Break-even: Rs. 2264
-D. Max Profit: Rs. 31 | Break-even: Rs. 2300
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 71 | Break-even: Rs. 2269
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2340) - Purchase Price (2300) + Premium Received (31) = Rs. 71. Break-even = Purchase Price (2300) - Premium Received (31) = Rs. 2269.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 68:** A trader creates a Covered Call by buying a stock at Rs. 2350 and selling a Call option at strike Rs. 2390 for a premium of Rs. 32. Calculate the maximum profit and the break-even point for this strategy.
+**Question 68:** Advanced Concept Question 68: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 72 | Break-even: Rs. 2318
-B. Max Profit: Rs. 77 | Break-even: Rs. 2328
-C. Max Profit: Rs. 62 | Break-even: Rs. 2313
-D. Max Profit: Rs. 32 | Break-even: Rs. 2350
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 72 | Break-even: Rs. 2318
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2390) - Purchase Price (2350) + Premium Received (32) = Rs. 72. Break-even = Purchase Price (2350) - Premium Received (32) = Rs. 2318.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 69:** A trader creates a Covered Call by buying a stock at Rs. 2400 and selling a Call option at strike Rs. 2440 for a premium of Rs. 33. Calculate the maximum profit and the break-even point for this strategy.
+**Question 69:** Advanced Concept Question 69: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 73 | Break-even: Rs. 2367
-B. Max Profit: Rs. 78 | Break-even: Rs. 2377
-C. Max Profit: Rs. 63 | Break-even: Rs. 2362
-D. Max Profit: Rs. 33 | Break-even: Rs. 2400
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 73 | Break-even: Rs. 2367
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2440) - Purchase Price (2400) + Premium Received (33) = Rs. 73. Break-even = Purchase Price (2400) - Premium Received (33) = Rs. 2367.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 70:** A trader creates a Covered Call by buying a stock at Rs. 2450 and selling a Call option at strike Rs. 2490 for a premium of Rs. 34. Calculate the maximum profit and the break-even point for this strategy.
+**Question 70:** Advanced Concept Question 70: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Max Profit: Rs. 74 | Break-even: Rs. 2416
-B. Max Profit: Rs. 79 | Break-even: Rs. 2426
-C. Max Profit: Rs. 64 | Break-even: Rs. 2411
-D. Max Profit: Rs. 34 | Break-even: Rs. 2450
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Max Profit: Rs. 74 | Break-even: Rs. 2416
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Max profit occurs if the stock is at or above the strike. Max Profit = Strike (2490) - Purchase Price (2450) + Premium Received (34) = Rs. 74. Break-even = Purchase Price (2450) - Premium Received (34) = Rs. 2416.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 71:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3200 for a premium of Rs. 40 and buying a Put option at strike Rs. 3000 for a premium of Rs. 35. Calculate the upper and lower break-even points of this strategy.
+**Question 71:** Advanced Concept Question 71: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3275 | Lower BE: Rs. 2925
-B. Upper BE: Rs. 3290 | Lower BE: Rs. 2910
-C. Upper BE: Rs. 3265 | Lower BE: Rs. 2935
-D. Upper BE: Rs. 3200 | Lower BE: Rs. 3000
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3275 | Lower BE: Rs. 2925
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 40 + 35 = Rs. 75. Upper BE = Call Strike (3200) + Total Premium (75) = Rs. 3275. Lower BE = Put Strike (3000) - Total Premium (75) = Rs. 2925.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 72:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3300 for a premium of Rs. 41 and buying a Put option at strike Rs. 3100 for a premium of Rs. 36. Calculate the upper and lower break-even points of this strategy.
+**Question 72:** Advanced Concept Question 72: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3377 | Lower BE: Rs. 3023
-B. Upper BE: Rs. 3392 | Lower BE: Rs. 3008
-C. Upper BE: Rs. 3367 | Lower BE: Rs. 3033
-D. Upper BE: Rs. 3300 | Lower BE: Rs. 3100
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3377 | Lower BE: Rs. 3023
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 41 + 36 = Rs. 77. Upper BE = Call Strike (3300) + Total Premium (77) = Rs. 3377. Lower BE = Put Strike (3100) - Total Premium (77) = Rs. 3023.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 73:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3400 for a premium of Rs. 42 and buying a Put option at strike Rs. 3200 for a premium of Rs. 37. Calculate the upper and lower break-even points of this strategy.
+**Question 73:** Advanced Concept Question 73: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3479 | Lower BE: Rs. 3121
-B. Upper BE: Rs. 3494 | Lower BE: Rs. 3106
-C. Upper BE: Rs. 3469 | Lower BE: Rs. 3131
-D. Upper BE: Rs. 3400 | Lower BE: Rs. 3200
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3479 | Lower BE: Rs. 3121
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 42 + 37 = Rs. 79. Upper BE = Call Strike (3400) + Total Premium (79) = Rs. 3479. Lower BE = Put Strike (3200) - Total Premium (79) = Rs. 3121.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 74:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3500 for a premium of Rs. 43 and buying a Put option at strike Rs. 3300 for a premium of Rs. 38. Calculate the upper and lower break-even points of this strategy.
+**Question 74:** Advanced Concept Question 74: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3581 | Lower BE: Rs. 3219
-B. Upper BE: Rs. 3596 | Lower BE: Rs. 3204
-C. Upper BE: Rs. 3571 | Lower BE: Rs. 3229
-D. Upper BE: Rs. 3500 | Lower BE: Rs. 3300
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3581 | Lower BE: Rs. 3219
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 43 + 38 = Rs. 81. Upper BE = Call Strike (3500) + Total Premium (81) = Rs. 3581. Lower BE = Put Strike (3300) - Total Premium (81) = Rs. 3219.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 75:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3600 for a premium of Rs. 44 and buying a Put option at strike Rs. 3400 for a premium of Rs. 39. Calculate the upper and lower break-even points of this strategy.
+**Question 75:** Advanced Concept Question 75: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3683 | Lower BE: Rs. 3317
-B. Upper BE: Rs. 3698 | Lower BE: Rs. 3302
-C. Upper BE: Rs. 3673 | Lower BE: Rs. 3327
-D. Upper BE: Rs. 3600 | Lower BE: Rs. 3400
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3683 | Lower BE: Rs. 3317
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 44 + 39 = Rs. 83. Upper BE = Call Strike (3600) + Total Premium (83) = Rs. 3683. Lower BE = Put Strike (3400) - Total Premium (83) = Rs. 3317.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 76:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3700 for a premium of Rs. 45 and buying a Put option at strike Rs. 3500 for a premium of Rs. 40. Calculate the upper and lower break-even points of this strategy.
+**Question 76:** Advanced Concept Question 76: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3785 | Lower BE: Rs. 3415
-B. Upper BE: Rs. 3800 | Lower BE: Rs. 3400
-C. Upper BE: Rs. 3775 | Lower BE: Rs. 3425
-D. Upper BE: Rs. 3700 | Lower BE: Rs. 3500
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3785 | Lower BE: Rs. 3415
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 45 + 40 = Rs. 85. Upper BE = Call Strike (3700) + Total Premium (85) = Rs. 3785. Lower BE = Put Strike (3500) - Total Premium (85) = Rs. 3415.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 77:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3800 for a premium of Rs. 46 and buying a Put option at strike Rs. 3600 for a premium of Rs. 41. Calculate the upper and lower break-even points of this strategy.
+**Question 77:** Advanced Concept Question 77: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3887 | Lower BE: Rs. 3513
-B. Upper BE: Rs. 3902 | Lower BE: Rs. 3498
-C. Upper BE: Rs. 3877 | Lower BE: Rs. 3523
-D. Upper BE: Rs. 3800 | Lower BE: Rs. 3600
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3887 | Lower BE: Rs. 3513
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 46 + 41 = Rs. 87. Upper BE = Call Strike (3800) + Total Premium (87) = Rs. 3887. Lower BE = Put Strike (3600) - Total Premium (87) = Rs. 3513.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 78:** A trader creates a Long Strangle by buying a Call option at strike Rs. 3900 for a premium of Rs. 47 and buying a Put option at strike Rs. 3700 for a premium of Rs. 42. Calculate the upper and lower break-even points of this strategy.
+**Question 78:** Advanced Concept Question 78: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 3989 | Lower BE: Rs. 3611
-B. Upper BE: Rs. 4004 | Lower BE: Rs. 3596
-C. Upper BE: Rs. 3979 | Lower BE: Rs. 3621
-D. Upper BE: Rs. 3900 | Lower BE: Rs. 3700
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 3989 | Lower BE: Rs. 3611
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 47 + 42 = Rs. 89. Upper BE = Call Strike (3900) + Total Premium (89) = Rs. 3989. Lower BE = Put Strike (3700) - Total Premium (89) = Rs. 3611.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 79:** A trader creates a Long Strangle by buying a Call option at strike Rs. 4000 for a premium of Rs. 48 and buying a Put option at strike Rs. 3800 for a premium of Rs. 43. Calculate the upper and lower break-even points of this strategy.
+**Question 79:** Advanced Concept Question 79: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4091 | Lower BE: Rs. 3709
-B. Upper BE: Rs. 4106 | Lower BE: Rs. 3694
-C. Upper BE: Rs. 4081 | Lower BE: Rs. 3719
-D. Upper BE: Rs. 4000 | Lower BE: Rs. 3800
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4091 | Lower BE: Rs. 3709
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 48 + 43 = Rs. 91. Upper BE = Call Strike (4000) + Total Premium (91) = Rs. 4091. Lower BE = Put Strike (3800) - Total Premium (91) = Rs. 3709.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 80:** A trader creates a Long Strangle by buying a Call option at strike Rs. 4100 for a premium of Rs. 49 and buying a Put option at strike Rs. 3900 for a premium of Rs. 44. Calculate the upper and lower break-even points of this strategy.
+**Question 80:** Advanced Concept Question 80: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4193 | Lower BE: Rs. 3807
-B. Upper BE: Rs. 4208 | Lower BE: Rs. 3792
-C. Upper BE: Rs. 4183 | Lower BE: Rs. 3817
-D. Upper BE: Rs. 4100 | Lower BE: Rs. 3900
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4193 | Lower BE: Rs. 3807
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Paid = 49 + 44 = Rs. 93. Upper BE = Call Strike (4100) + Total Premium (93) = Rs. 4193. Lower BE = Put Strike (3900) - Total Premium (93) = Rs. 3807.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 81:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4000 for a premium of Rs. 80 and selling a Put option at the same strike Rs. 4000 for a premium of Rs. 70. Calculate the upper and lower break-even points of this strategy.
+**Question 81:** Advanced Concept Question 81: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4150 | Lower BE: Rs. 3850
-B. Upper BE: Rs. 4175 | Lower BE: Rs. 3825
-C. Upper BE: Rs. 4130 | Lower BE: Rs. 3870
-D. Upper BE: Rs. 4000 | Lower BE: Rs. 3840
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4150 | Lower BE: Rs. 3850
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 80 + 70 = Rs. 150. Upper BE = Strike (4000) + Total Premium (150) = Rs. 4150. Lower BE = Strike (4000) - Total Premium (150) = Rs. 3850.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 82:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4100 for a premium of Rs. 81 and selling a Put option at the same strike Rs. 4100 for a premium of Rs. 71. Calculate the upper and lower break-even points of this strategy.
+**Question 82:** Advanced Concept Question 82: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4252 | Lower BE: Rs. 3948
-B. Upper BE: Rs. 4277 | Lower BE: Rs. 3923
-C. Upper BE: Rs. 4232 | Lower BE: Rs. 3968
-D. Upper BE: Rs. 4100 | Lower BE: Rs. 3938
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4252 | Lower BE: Rs. 3948
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 81 + 71 = Rs. 152. Upper BE = Strike (4100) + Total Premium (152) = Rs. 4252. Lower BE = Strike (4100) - Total Premium (152) = Rs. 3948.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 83:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4200 for a premium of Rs. 82 and selling a Put option at the same strike Rs. 4200 for a premium of Rs. 72. Calculate the upper and lower break-even points of this strategy.
+**Question 83:** Advanced Concept Question 83: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4354 | Lower BE: Rs. 4046
-B. Upper BE: Rs. 4379 | Lower BE: Rs. 4021
-C. Upper BE: Rs. 4334 | Lower BE: Rs. 4066
-D. Upper BE: Rs. 4200 | Lower BE: Rs. 4036
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4354 | Lower BE: Rs. 4046
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 82 + 72 = Rs. 154. Upper BE = Strike (4200) + Total Premium (154) = Rs. 4354. Lower BE = Strike (4200) - Total Premium (154) = Rs. 4046.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 84:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4300 for a premium of Rs. 83 and selling a Put option at the same strike Rs. 4300 for a premium of Rs. 73. Calculate the upper and lower break-even points of this strategy.
+**Question 84:** Advanced Concept Question 84: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4456 | Lower BE: Rs. 4144
-B. Upper BE: Rs. 4481 | Lower BE: Rs. 4119
-C. Upper BE: Rs. 4436 | Lower BE: Rs. 4164
-D. Upper BE: Rs. 4300 | Lower BE: Rs. 4134
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4456 | Lower BE: Rs. 4144
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 83 + 73 = Rs. 156. Upper BE = Strike (4300) + Total Premium (156) = Rs. 4456. Lower BE = Strike (4300) - Total Premium (156) = Rs. 4144.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 85:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4400 for a premium of Rs. 84 and selling a Put option at the same strike Rs. 4400 for a premium of Rs. 74. Calculate the upper and lower break-even points of this strategy.
+**Question 85:** Advanced Concept Question 85: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4558 | Lower BE: Rs. 4242
-B. Upper BE: Rs. 4583 | Lower BE: Rs. 4217
-C. Upper BE: Rs. 4538 | Lower BE: Rs. 4262
-D. Upper BE: Rs. 4400 | Lower BE: Rs. 4232
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4558 | Lower BE: Rs. 4242
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 84 + 74 = Rs. 158. Upper BE = Strike (4400) + Total Premium (158) = Rs. 4558. Lower BE = Strike (4400) - Total Premium (158) = Rs. 4242.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 86:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4500 for a premium of Rs. 85 and selling a Put option at the same strike Rs. 4500 for a premium of Rs. 75. Calculate the upper and lower break-even points of this strategy.
+**Question 86:** Advanced Concept Question 86: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4660 | Lower BE: Rs. 4340
-B. Upper BE: Rs. 4685 | Lower BE: Rs. 4315
-C. Upper BE: Rs. 4640 | Lower BE: Rs. 4360
-D. Upper BE: Rs. 4500 | Lower BE: Rs. 4330
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4660 | Lower BE: Rs. 4340
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 85 + 75 = Rs. 160. Upper BE = Strike (4500) + Total Premium (160) = Rs. 4660. Lower BE = Strike (4500) - Total Premium (160) = Rs. 4340.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 87:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4600 for a premium of Rs. 86 and selling a Put option at the same strike Rs. 4600 for a premium of Rs. 76. Calculate the upper and lower break-even points of this strategy.
+**Question 87:** Advanced Concept Question 87: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4762 | Lower BE: Rs. 4438
-B. Upper BE: Rs. 4787 | Lower BE: Rs. 4413
-C. Upper BE: Rs. 4742 | Lower BE: Rs. 4458
-D. Upper BE: Rs. 4600 | Lower BE: Rs. 4428
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4762 | Lower BE: Rs. 4438
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 86 + 76 = Rs. 162. Upper BE = Strike (4600) + Total Premium (162) = Rs. 4762. Lower BE = Strike (4600) - Total Premium (162) = Rs. 4438.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 88:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4700 for a premium of Rs. 87 and selling a Put option at the same strike Rs. 4700 for a premium of Rs. 77. Calculate the upper and lower break-even points of this strategy.
+**Question 88:** Advanced Concept Question 88: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4864 | Lower BE: Rs. 4536
-B. Upper BE: Rs. 4889 | Lower BE: Rs. 4511
-C. Upper BE: Rs. 4844 | Lower BE: Rs. 4556
-D. Upper BE: Rs. 4700 | Lower BE: Rs. 4526
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4864 | Lower BE: Rs. 4536
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 87 + 77 = Rs. 164. Upper BE = Strike (4700) + Total Premium (164) = Rs. 4864. Lower BE = Strike (4700) - Total Premium (164) = Rs. 4536.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 89:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4800 for a premium of Rs. 88 and selling a Put option at the same strike Rs. 4800 for a premium of Rs. 78. Calculate the upper and lower break-even points of this strategy.
+**Question 89:** Advanced Concept Question 89: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 4966 | Lower BE: Rs. 4634
-B. Upper BE: Rs. 4991 | Lower BE: Rs. 4609
-C. Upper BE: Rs. 4946 | Lower BE: Rs. 4654
-D. Upper BE: Rs. 4800 | Lower BE: Rs. 4624
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 4966 | Lower BE: Rs. 4634
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 88 + 78 = Rs. 166. Upper BE = Strike (4800) + Total Premium (166) = Rs. 4966. Lower BE = Strike (4800) - Total Premium (166) = Rs. 4634.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 90:** A trader creates a Short Straddle by selling a Call option at strike Rs. 4900 for a premium of Rs. 89 and selling a Put option at the same strike Rs. 4900 for a premium of Rs. 79. Calculate the upper and lower break-even points of this strategy.
+**Question 90:** Advanced Concept Question 90: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5068 | Lower BE: Rs. 4732
-B. Upper BE: Rs. 5093 | Lower BE: Rs. 4707
-C. Upper BE: Rs. 5048 | Lower BE: Rs. 4752
-D. Upper BE: Rs. 4900 | Lower BE: Rs. 4722
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5068 | Lower BE: Rs. 4732
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 89 + 79 = Rs. 168. Upper BE = Strike (4900) + Total Premium (168) = Rs. 5068. Lower BE = Strike (4900) - Total Premium (168) = Rs. 4732.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 91:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5300 for a premium of Rs. 60 and selling a Put option at strike Rs. 5000 for a premium of Rs. 50. Calculate the upper and lower break-even points of this strategy.
+**Question 91:** Advanced Concept Question 91: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5410 | Lower BE: Rs. 4890
-B. Upper BE: Rs. 5420 | Lower BE: Rs. 4880
-C. Upper BE: Rs. 5405 | Lower BE: Rs. 4895
-D. Upper BE: Rs. 5300 | Lower BE: Rs. 5000
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5410 | Lower BE: Rs. 4890
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 60 + 50 = Rs. 110. Upper BE = Call Strike (5300) + Total Premium (110) = Rs. 5410. Lower BE = Put Strike (5000) - Total Premium (110) = Rs. 4890.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 92:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5400 for a premium of Rs. 61 and selling a Put option at strike Rs. 5100 for a premium of Rs. 51. Calculate the upper and lower break-even points of this strategy.
+**Question 92:** Advanced Concept Question 92: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5512 | Lower BE: Rs. 4988
-B. Upper BE: Rs. 5522 | Lower BE: Rs. 4978
-C. Upper BE: Rs. 5507 | Lower BE: Rs. 4993
-D. Upper BE: Rs. 5400 | Lower BE: Rs. 5100
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5512 | Lower BE: Rs. 4988
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 61 + 51 = Rs. 112. Upper BE = Call Strike (5400) + Total Premium (112) = Rs. 5512. Lower BE = Put Strike (5100) - Total Premium (112) = Rs. 4988.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 93:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5500 for a premium of Rs. 62 and selling a Put option at strike Rs. 5200 for a premium of Rs. 52. Calculate the upper and lower break-even points of this strategy.
+**Question 93:** Advanced Concept Question 93: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5614 | Lower BE: Rs. 5086
-B. Upper BE: Rs. 5624 | Lower BE: Rs. 5076
-C. Upper BE: Rs. 5609 | Lower BE: Rs. 5091
-D. Upper BE: Rs. 5500 | Lower BE: Rs. 5200
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5614 | Lower BE: Rs. 5086
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 62 + 52 = Rs. 114. Upper BE = Call Strike (5500) + Total Premium (114) = Rs. 5614. Lower BE = Put Strike (5200) - Total Premium (114) = Rs. 5086.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 94:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5600 for a premium of Rs. 63 and selling a Put option at strike Rs. 5300 for a premium of Rs. 53. Calculate the upper and lower break-even points of this strategy.
+**Question 94:** Advanced Concept Question 94: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5716 | Lower BE: Rs. 5184
-B. Upper BE: Rs. 5726 | Lower BE: Rs. 5174
-C. Upper BE: Rs. 5711 | Lower BE: Rs. 5189
-D. Upper BE: Rs. 5600 | Lower BE: Rs. 5300
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5716 | Lower BE: Rs. 5184
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 63 + 53 = Rs. 116. Upper BE = Call Strike (5600) + Total Premium (116) = Rs. 5716. Lower BE = Put Strike (5300) - Total Premium (116) = Rs. 5184.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 95:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5700 for a premium of Rs. 64 and selling a Put option at strike Rs. 5400 for a premium of Rs. 54. Calculate the upper and lower break-even points of this strategy.
+**Question 95:** Advanced Concept Question 95: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5818 | Lower BE: Rs. 5282
-B. Upper BE: Rs. 5828 | Lower BE: Rs. 5272
-C. Upper BE: Rs. 5813 | Lower BE: Rs. 5287
-D. Upper BE: Rs. 5700 | Lower BE: Rs. 5400
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5818 | Lower BE: Rs. 5282
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 64 + 54 = Rs. 118. Upper BE = Call Strike (5700) + Total Premium (118) = Rs. 5818. Lower BE = Put Strike (5400) - Total Premium (118) = Rs. 5282.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 96:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5800 for a premium of Rs. 65 and selling a Put option at strike Rs. 5500 for a premium of Rs. 55. Calculate the upper and lower break-even points of this strategy.
+**Question 96:** Advanced Concept Question 96: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 5920 | Lower BE: Rs. 5380
-B. Upper BE: Rs. 5930 | Lower BE: Rs. 5370
-C. Upper BE: Rs. 5915 | Lower BE: Rs. 5385
-D. Upper BE: Rs. 5800 | Lower BE: Rs. 5500
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 5920 | Lower BE: Rs. 5380
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 65 + 55 = Rs. 120. Upper BE = Call Strike (5800) + Total Premium (120) = Rs. 5920. Lower BE = Put Strike (5500) - Total Premium (120) = Rs. 5380.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 97:** A trader creates a Short Strangle by selling a Call option at strike Rs. 5900 for a premium of Rs. 66 and selling a Put option at strike Rs. 5600 for a premium of Rs. 56. Calculate the upper and lower break-even points of this strategy.
+**Question 97:** Advanced Concept Question 97: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 6022 | Lower BE: Rs. 5478
-B. Upper BE: Rs. 6032 | Lower BE: Rs. 5468
-C. Upper BE: Rs. 6017 | Lower BE: Rs. 5483
-D. Upper BE: Rs. 5900 | Lower BE: Rs. 5600
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 6022 | Lower BE: Rs. 5478
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 66 + 56 = Rs. 122. Upper BE = Call Strike (5900) + Total Premium (122) = Rs. 6022. Lower BE = Put Strike (5600) - Total Premium (122) = Rs. 5478.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 98:** A trader creates a Short Strangle by selling a Call option at strike Rs. 6000 for a premium of Rs. 67 and selling a Put option at strike Rs. 5700 for a premium of Rs. 57. Calculate the upper and lower break-even points of this strategy.
+**Question 98:** Advanced Concept Question 98: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 6124 | Lower BE: Rs. 5576
-B. Upper BE: Rs. 6134 | Lower BE: Rs. 5566
-C. Upper BE: Rs. 6119 | Lower BE: Rs. 5581
-D. Upper BE: Rs. 6000 | Lower BE: Rs. 5700
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 6124 | Lower BE: Rs. 5576
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 67 + 57 = Rs. 124. Upper BE = Call Strike (6000) + Total Premium (124) = Rs. 6124. Lower BE = Put Strike (5700) - Total Premium (124) = Rs. 5576.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 99:** A trader creates a Short Strangle by selling a Call option at strike Rs. 6100 for a premium of Rs. 68 and selling a Put option at strike Rs. 5800 for a premium of Rs. 58. Calculate the upper and lower break-even points of this strategy.
+**Question 99:** Advanced Concept Question 99: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 6226 | Lower BE: Rs. 5674
-B. Upper BE: Rs. 6236 | Lower BE: Rs. 5664
-C. Upper BE: Rs. 6221 | Lower BE: Rs. 5679
-D. Upper BE: Rs. 6100 | Lower BE: Rs. 5800
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 6226 | Lower BE: Rs. 5674
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 68 + 58 = Rs. 126. Upper BE = Call Strike (6100) + Total Premium (126) = Rs. 6226. Lower BE = Put Strike (5800) - Total Premium (126) = Rs. 5674.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 
-**Question 100:** A trader creates a Short Strangle by selling a Call option at strike Rs. 6200 for a premium of Rs. 69 and selling a Put option at strike Rs. 5900 for a premium of Rs. 59. Calculate the upper and lower break-even points of this strategy.
+**Question 100:** Advanced Concept Question 100: Which of the following is true for a calendar spread position in futures contracts?
 
 **Options:**
 
-A. Upper BE: Rs. 6328 | Lower BE: Rs. 5772
-B. Upper BE: Rs. 6338 | Lower BE: Rs. 5762
-C. Upper BE: Rs. 6323 | Lower BE: Rs. 5777
-D. Upper BE: Rs. 6200 | Lower BE: Rs. 5900
+A. It involves buying a near-month contract and selling a far-month contract of the same underlying
+B. It carries the exact same risk as holding a naked long futures position
+C. It does not require any margin payment
+D. It is settled on a T+2 rolling settlement basis
 
-**Answer:** Upper BE: Rs. 6328 | Lower BE: Rs. 5772
+**Answer:** It involves buying a near-month contract and selling a far-month contract of the same underlying
 
-**Explanation:** Total Premium Received = 69 + 59 = Rs. 128. Upper BE = Call Strike (6200) + Total Premium (128) = Rs. 6328. Lower BE = Put Strike (5900) - Total Premium (128) = Rs. 5772.
+**Explanation:** A calendar spread involves taking simultaneous opposite positions in contracts of different expiries on the same underlying, reducing price risk and requiring lower margin.
 
 ---
 

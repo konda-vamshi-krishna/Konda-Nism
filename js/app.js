@@ -621,12 +621,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize test grid selection
   function setupTestSelectors() {
       const gridContainer = document.getElementById('testSelectionGrid');
-      if (!gridContainer) return;
+      const startBtn = document.getElementById('startTestBtn');
+      const totalCountSpan = document.getElementById('totalTestCount');
+      
+      if (!gridContainer || !startBtn) return;
+      
+      const tests = Object.keys(testData);
+      
+      if (totalCountSpan) {
+          totalCountSpan.textContent = tests.length;
+      }
+      
       gridContainer.innerHTML = '';
       
       const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
-      const startBtn = document.getElementById('startTestBtn');
-      
       let firstTest = null;
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
