@@ -663,9 +663,15 @@
         <!-- Section 1b: Optional CORS Proxy for Nvidia direct browser calls -->
         <div id="ai-proxy-container" style="display: none; margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
             <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">Nvidia CORS Proxy Bypass (Optional)</label>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">Nvidia API gateways block direct browser calls due to CORS. Enter a CORS proxy prefix to bypass this restriction (e.g. <code>https://cors-anywhere.herokuapp.com/</code>), or leave empty if using a browser with disabled web security.</p>
-            <input type="text" id="ai-cors-proxy" class="form-control" placeholder="e.g. https://cors-anywhere.herokuapp.com/" style="width: 100%;" />
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">Nvidia API gateways block direct browser calls due to CORS. Enter a CORS proxy prefix to bypass this restriction, or click the button below to auto-populate a free public proxy.</p>
+            <div style="display: flex; gap: 0.5rem;">
+                <input type="text" id="ai-cors-proxy" class="form-control" placeholder="e.g. https://thingproxy.freeboard.io/fetch/" style="flex-grow: 1;" />
+                <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; white-space: nowrap;" onclick="document.getElementById('ai-cors-proxy').value='https://thingproxy.freeboard.io/fetch/';">
+                    ⚙️ Use Free Proxy
+                </button>
+            </div>
         </div>
+
 
 
         <!-- Section 2: Federated Multi-Link Resource Matrix -->
