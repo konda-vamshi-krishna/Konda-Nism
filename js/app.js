@@ -37,17 +37,39 @@ function renderCourseGrid() {
     if (!gridContainer) return;
     gridContainer.innerHTML = '';
     
+    document.getElementById('courseContentArea').style.display = 'none';
+    document.getElementById('courseStatsStrip').style.display = 'none';
+    gridContainer.style.display = 'grid';
+    
     globalData.registry.forEach(course => {
         const btn = document.createElement('button');
         btn.className = 'test-btn not-attempted';
         btn.style.textAlign = 'left';
+        btn.style.padding = '20px';
+        btn.style.display = 'flex';
+        btn.style.flexDirection = 'column';
+        btn.style.gap = '8px';
         btn.innerHTML = `
-            <div class="test-title">${course.title}</div>
-            <div class="test-status" style="font-size:0.8rem; opacity:0.8;">${course.description}</div>
+            <div style="font-size:24px; margin-bottom: 8px;">📚</div>
+            <div class="test-title" style="font-size: 1.1rem; font-weight: bold;">${course.title}</div>
+            <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
         gridContainer.appendChild(btn);
     });
+}
+
+function backToCourses() {
+    currentCourseId = null;
+    testData = {};
+    notesData = { notes: [], flashcards: [] };
+    
+    document.getElementById('courseContentArea').style.display = 'none';
+    document.getElementById('courseStatsStrip').style.display = 'none';
+    const gridContainer = document.getElementById('courseSelectionGrid');
+    gridContainer.style.display = 'grid';
+    // Add a simple fade animation class if needed
+    gridContainer.style.animation = 'fadeIn 0.4s ease-out';
 }
 
 function selectCourse(courseId) {
@@ -65,6 +87,7 @@ function selectCourse(courseId) {
     currentFcIndex = 0;
     
     // UI Transitions
+    document.getElementById('courseSelectionGrid').style.display = 'none';
     document.getElementById('courseContentArea').style.display = 'block';
     document.getElementById('courseStatsStrip').style.display = 'flex';
     
@@ -693,14 +716,16 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!firstTest) firstTest = testName;
           
           let btn = document.createElement('div');
-          btn.className = 'test-thumb-btn status-unattempted';
+          btn.className = 'test-btn not-attempted';
           
           // Check history
           const testHistory = history.filter(h => h.testName === testName);
           let statusText = 'Not Attempted';
+          let statusIcon = '📝';
           if (testHistory.length > 0) {
-              btn.className = 'test-thumb-btn status-completed';
+              btn.className = 'test-btn completed';
               statusText = `Completed: ${testHistory[testHistory.length-1].percent}%`;
+              statusIcon = '✅';
           }
           
           // Check in-progress
@@ -708,19 +733,21 @@ document.addEventListener('DOMContentLoaded', () => {
           if (activeTest) {
               const active = JSON.parse(activeTest);
               if (active.testName === testName) {
-                  btn.className = 'test-thumb-btn status-progress';
+                  btn.className = 'test-btn in-progress';
                   statusText = 'In Progress';
+                  statusIcon = '⏳';
               }
           }
 
           btn.innerHTML = `
-            <div class="thumb-title">${testName}</div>
-            <div class="thumb-status">${statusText}</div>
+            <div style="font-size:24px; margin-bottom: 4px;">${statusIcon}</div>
+            <div class="thumb-title" style="font-weight:bold;">${testName}</div>
+            <div class="thumb-status" style="font-size:0.8rem; opacity:0.8;">${statusText}</div>
           `;
           
           btn.onclick = function() {
               // Deselect all
-              document.querySelectorAll('.test-thumb-btn').forEach(b => b.classList.remove('selected'));
+              document.querySelectorAll('.test-selection-grid .test-btn').forEach(b => b.classList.remove('selected'));
               btn.classList.add('selected');
               selectedTestForLaunch = testName;
               startBtn.textContent = 'Start ' + testName;
@@ -731,8 +758,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       if (firstTest) {
-          // Select first by default
-          const firstBtn = gridContainer.querySelector('.test-thumb-btn');
+          // Auto-select first test
+          const firstBtn = gridContainer.querySelector('.test-btn');
           if (firstBtn) firstBtn.click();
       }
   }

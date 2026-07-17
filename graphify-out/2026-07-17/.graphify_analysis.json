@@ -15,6 +15,8 @@
       "js_marked_min_lheading",
       "js_marked_min_n",
       "js_marked_min_paragraph",
+      "js_marked_min_parse",
+      "js_marked_min_parser",
       "js_marked_min_rt",
       "js_marked_min_rules",
       "js_marked_min_setoptions",
@@ -33,13 +35,13 @@
       "js_app_flashcardslist",
       "js_app_flipcard",
       "js_app_initializeapp",
-      "js_app_loadlocalstorage",
+      "js_app_notesdata",
       "js_app_opendrawer",
       "js_app_populatealllangs",
+      "js_app_rendercoursegrid",
       "js_app_setlang",
-      "js_app_setupflashcarddecks",
-      "js_app_setuptestselectors",
       "js_app_starredquestions",
+      "js_app_testdata",
       "js_app_toggletheme",
       "js_app_toggletranslatedropdown",
       "js_app_updatestarttitle"
@@ -61,28 +63,38 @@
       "js_marked_min_v"
     ],
     "3": [
+      "js_app_buildactivegrid",
+      "js_app_closedrawer",
+      "js_app_closeresults",
+      "js_app_renderactivequestion",
+      "js_app_selectsimoption",
+      "js_app_selectsimoptionui",
+      "js_app_simnext",
+      "js_app_simprev",
+      "js_app_updategridstyles"
+    ],
+    "4": [
+      "js_app_getstoragekey",
+      "js_app_loadlocalstorage",
+      "js_app_removebookmark",
+      "js_app_selectcourse",
+      "js_app_setupflashcarddecks",
+      "js_app_setuptestselectors",
+      "js_app_simsubmit",
+      "js_app_togglebookmarkactivequestion",
+      "js_app_updateanalyticsui"
+    ],
+    "5": [
       "js_app_formattime",
       "js_app_initiatenewtest",
       "js_app_mdtohtml",
       "js_app_rendernotes",
       "js_app_resumeactivetest",
       "js_app_saveactiveteststate",
-      "js_app_selectsimoption",
-      "js_app_simsubmit",
       "js_app_startsimulator",
       "js_app_switchtab"
     ],
-    "4": [
-      "js_app_buildactivegrid",
-      "js_app_closedrawer",
-      "js_app_closeresults",
-      "js_app_renderactivequestion",
-      "js_app_selectsimoptionui",
-      "js_app_simnext",
-      "js_app_simprev",
-      "js_app_updategridstyles"
-    ],
-    "5": [
+    "6": [
       "js_marked_min_blocktokens",
       "js_marked_min_inlinetokens",
       "js_marked_min_lex",
@@ -91,7 +103,7 @@
       "js_marked_min_me",
       "js_marked_min_reflink"
     ],
-    "6": [
+    "7": [
       "js_marked_min_parsemarkdown",
       "js_marked_min_postprocess",
       "js_marked_min_preprocess",
@@ -100,7 +112,7 @@
       "js_marked_min_provideparser",
       "js_marked_min_walktokens"
     ],
-    "7": [
+    "8": [
       "js_app_jumptoflashcard",
       "js_app_loadflashcarddeck",
       "js_app_nextcard",
@@ -108,66 +120,64 @@
       "js_app_renderflashcard",
       "js_app_shufflecards"
     ],
-    "8": [
+    "9": [
+      "build_engine",
+      "build_engine_generate_flashcards",
+      "build_engine_main",
+      "build_engine_parse_notes_file",
+      "build_engine_parse_test_file"
+    ],
+    "10": [
       "js_marked_min_a",
       "js_marked_min_blockquote",
       "js_marked_min_code",
       "js_marked_min_heading",
       "js_marked_min_hr"
     ],
-    "9": [
+    "11": [
       "js_marked_min_table",
       "js_marked_min_tablecell",
       "js_marked_min_tablerow",
       "js_marked_min_y"
     ],
-    "10": [
+    "12": [
       "complete_all_tests",
       "complete_all_tests_complete_tests",
       "complete_all_tests_get_fill_pool"
     ],
-    "11": [
-      "js_app_removebookmark",
-      "js_app_togglebookmarkactivequestion",
-      "js_app_updateanalyticsui"
-    ],
-    "12": [
+    "13": [
       "js_marked_min_checkbox",
       "js_marked_min_list",
       "js_marked_min_listitem"
     ],
-    "13": [
+    "14": [
       "parse_tests",
       "parse_tests_main",
       "parse_tests_parse_file"
     ],
-    "14": [
+    "15": [
       "apply_audit_fixes",
       "apply_audit_fixes_apply_test1_corrections"
     ],
-    "15": [
+    "16": [
       "audit_tests",
       "audit_tests_audit_and_correct_tests"
     ],
-    "16": [
+    "17": [
       "correct_test_1",
       "correct_test_1_correct_test_1_errors"
     ],
-    "17": [
+    "18": [
       "fix_typos",
       "fix_typos_fix_test_typos"
     ],
-    "18": [
+    "19": [
       "generate_advanced_tests",
       "generate_advanced_tests_generate_questions"
     ],
-    "19": [
+    "20": [
       "generate_flashcards",
       "generate_flashcards_generate_flashcards"
-    ],
-    "20": [
-      "js_marked_min_parse",
-      "js_marked_min_parser"
     ],
     "21": [
       "parse_notes",
@@ -182,30 +192,37 @@
       "semantic_audit_semantic_finance_audit"
     ],
     "24": [
-      "build_html"
+      "validate_module",
+      "validate_module_validate_module"
     ],
     "25": [
-      "data_data"
+      "build_html"
     ],
     "26": [
+      "data_data"
+    ],
+    "27": [
+      "refactor_app_js"
+    ],
+    "28": [
       "scratch_ast"
     ]
   },
   "cohesion": {
-    "0": 0.09956709956709957,
-    "1": 0.13725490196078433,
+    "0": 0.09420289855072464,
+    "1": 0.12418300653594772,
     "2": 0.18681318681318682,
-    "3": 0.24444444444444444,
-    "4": 0.32142857142857145,
-    "5": 0.2857142857142857,
+    "3": 0.2777777777777778,
+    "4": 0.3611111111111111,
+    "5": 0.32142857142857145,
     "6": 0.2857142857142857,
-    "7": 0.4,
+    "7": 0.2857142857142857,
     "8": 0.4,
-    "9": 0.5,
-    "10": 1.0,
-    "11": 0.6666666666666666,
-    "12": 0.6666666666666666,
-    "13": 1.0,
+    "9": 0.7,
+    "10": 0.4,
+    "11": 0.5,
+    "12": 1.0,
+    "13": 0.6666666666666666,
     "14": 1.0,
     "15": 1.0,
     "16": 1.0,
@@ -218,7 +235,9 @@
     "23": 1.0,
     "24": 1.0,
     "25": 1.0,
-    "26": 1.0
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0
   },
   "gods": [
     {
@@ -230,6 +249,11 @@
       "id": "js_app_renderactivequestion",
       "label": "renderActiveQuestion()",
       "degree": 10
+    },
+    {
+      "id": "js_app_getstoragekey",
+      "label": "getStorageKey()",
+      "degree": 9
     },
     {
       "id": "js_marked_min_r",
@@ -262,14 +286,9 @@
       "degree": 6
     },
     {
-      "id": "js_app_initializeapp",
-      "label": "initializeApp()",
-      "degree": 5
-    },
-    {
-      "id": "js_app_saveactiveteststate",
-      "label": "saveActiveTestState()",
-      "degree": 5
+      "id": "js_app_selectcourse",
+      "label": "selectCourse()",
+      "degree": 6
     }
   ],
   "surprises": [
@@ -282,7 +301,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 2 → community 8"
+      "note": "Bridges community 2 \u2192 community 10"
     },
     {
       "source": "listitem()",
@@ -293,7 +312,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 2 → community 12"
+      "note": "Bridges community 2 \u2192 community 13"
     },
     {
       "source": "link()",
@@ -304,7 +323,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 5 → community 2"
+      "note": "Bridges community 6 \u2192 community 2"
     },
     {
       "source": "parseMarkdown()",
@@ -315,50 +334,22 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 6 → community 2"
+      "note": "Bridges community 7 \u2192 community 2"
     },
     {
-      "source": "initializeApp()",
-      "target": "renderFlashcard()",
+      "source": "resumeActiveTest()",
+      "target": "getStorageKey()",
       "source_files": [
         "js/app.js",
         "js/app.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 1 → community 7"
+      "note": "Bridges community 4 \u2192 community 5"
     }
   ],
-  "questions": [
-    {
-      "type": "bridge_node",
-      "question": "Why does `parseInline()` connect `parseInline` to `marked.min.js`?",
-      "why": "High betweenness centrality (0.002) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `renderActiveQuestion()` connect `renderActiveQuestion` to `updateAnalyticsUI`, `app.js`, `startSimulator`?",
-      "why": "High betweenness centrality (0.002) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `parseMarkdown()` connect `parseMarkdown` to `marked.min.js`, `parseInline`?",
-      "why": "High betweenness centrality (0.001) - this node is a cross-community bridge."
-    },
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `answers`, `starredQuestions`, `flashcardsList` to the rest of the system?",
-      "why": "4 weakly-connected nodes found - possible documentation gaps or missing edges."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `marked.min.js` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.09956709956709957 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `app.js` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected."
-    }
-  ]
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
 }

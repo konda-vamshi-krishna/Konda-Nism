@@ -1,13 +1,14 @@
 :root {
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
+    --bg-color: #f8fafc; /* Slate 50 */
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(255, 255, 255, 0.5);
+    --text-main: #0f172a; /* Slate 900 */
+    --text-muted: #64748b; /* Slate 500 */
+    --border-color: #e2e8f0; /* Slate 200 */
     
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --primary-light: #eff6ff;
+    --primary: #4f46e5; /* Indigo 600 */
+    --primary-hover: #4338ca; /* Indigo 700 */
+    --primary-light: #e0e7ff; /* Indigo 100 */
     
     --success: #10b981;
     --success-light: #ecfdf5;
@@ -16,45 +17,51 @@
     --warning: #f59e0b;
     --warning-light: #fffbeb;
     
-    --option-selected-bg: #eff6ff;
-    --option-selected-border: #3b82f6;
+    --option-selected-bg: #e0e7ff;
+    --option-selected-border: #4f46e5;
     
-    --nav-active: #3b82f6;
+    --nav-active: #4f46e5;
     
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --glass-blur: blur(12px);
   }
 
   [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --border-color: #334155;
+    --bg-color: #0f172a; /* Slate 900 */
+    --card-bg: rgba(30, 41, 59, 0.85); /* Slate 800 with opacity */
+    --card-border: rgba(255, 255, 255, 0.05);
+    --text-main: #f8fafc; /* Slate 50 */
+    --text-muted: #94a3b8; /* Slate 400 */
+    --border-color: #334155; /* Slate 700 */
     
-    --primary-light: #1e3a8a;
+    --primary: #6366f1; /* Indigo 500 */
+    --primary-light: #3730a3; /* Indigo 800 */
     --success-light: #064e3b;
     --danger-light: #7f1d1d;
     --warning-light: #78350f;
     
-    --option-selected-bg: #1e3a8a;
-    --option-selected-border: #3b82f6;
+    --option-selected-bg: #312e81; /* Indigo 900 */
+    --option-selected-border: #6366f1; /* Indigo 500 */
     
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
   }
   
   body { 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
     background-color: var(--bg-color); 
+    background-image: radial-gradient(circle at top right, rgba(79, 70, 229, 0.05), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.05), transparent 40%);
+    background-attachment: fixed;
     color: var(--text-main); 
     margin: 0; 
     padding: 0; 
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-    padding-bottom: 70px; /* Space for mobile nav */
+    transition: background-color 0.4s ease, color 0.4s ease;
+    padding-bottom: 70px;
   }
 
   @media (min-width: 768px) {
@@ -84,7 +91,7 @@
     gap: 8px;
     text-decoration: none;
   }
-  .navbar-brand span { color: #10b981; }
+  .navbar-brand span { color: var(--primary); }
   
   .nav-controls {
     display: flex;
@@ -215,40 +222,43 @@
   .stat-val { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
   .stat-lbl { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
 
-  /* Test Selection Grid (Dashboard) */
-  .test-selection-grid {
+  /* Universal Grid Cards (Pro Max Style) */
+  .grid-container, .test-selection-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 12px;
-    max-height: 200px;
-    overflow-y: auto;
-    padding-right: 4px;
+    gap: 16px;
   }
   
-  .test-thumb-btn {
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
+  .test-btn, .test-thumb-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .test-thumb-btn:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    align-items: flex-start;
+    gap: 8px;
     box-shadow: var(--shadow-sm);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    color: var(--text-main);
   }
 
-  .test-thumb-btn.selected {
-    background: var(--primary-light);
+  .test-btn:hover, .test-thumb-btn:hover {
     border-color: var(--primary);
-    color: var(--primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .test-btn.completed { border-left: 4px solid var(--success); }
+  .test-btn.in-progress { border-left: 4px solid var(--warning); }
+
+  .test-btn.selected {
+    background: var(--option-selected-bg);
+    border-color: var(--option-selected-border);
+    box-shadow: 0 0 0 2px var(--primary-light);
   }
 
   .test-thumb-btn .thumb-title {
@@ -934,3 +944,5 @@ body.translation-active .notes-wrapper {
         flex-direction: column !important;
     }
 }
+@ k e y f r a m e s   f a d e I n   {   f r o m   {   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 1 0 p x ) ;   }   t o   {   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;   }   }  
+ 
