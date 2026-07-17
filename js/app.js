@@ -623,11 +623,17 @@ function setLang(langCode) {
     const select = document.querySelector('.goog-te-combo');
     if (select) {
         select.value = langCode;
-        select.dispatchEvent(new Event('change'));
+        select.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
     } else {
         console.error("Google Translate widget not found.");
     }
     document.getElementById('translateDropdown').classList.remove('show');
+    
+    if (langCode === 'en' || langCode === '') {
+        document.body.classList.remove('translation-active');
+    } else {
+        document.body.classList.add('translation-active');
+    }
 }
 
 const allLanguages = {
