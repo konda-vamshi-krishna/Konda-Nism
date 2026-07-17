@@ -820,9 +820,12 @@ function refreshDashboardRegistry() {
       }
 
       if (tabId !== 'contribute') {
+          // Fix A: DOM Leakage — flush value AND hide the collapsible textarea
+          // to reclaim V8 heap memory when the compiler view loses focus
           const aiInput = document.getElementById('ai-chunk-input');
           if (aiInput) {
               aiInput.value = '';
+              aiInput.style.display = 'none';
           }
       }
 
@@ -2337,4 +2340,98 @@ if (document.readyState === 'interactive' || document.readyState === 'complete')
     checkCompilationCheckpoint();
 }
 
+// ==========================================
+// EDGE-SIDE CLIENT TEXT INGESTION ENGINE (V7)
+// FileReader Web API — ₹0 serverless ingestion
+// ==========================================
 
+function ingestFileIntoWorkspace(file) {
+    if (!file) return;
+
+    logToTerminal(`File Intercepted by Edge Parser: [${file.name}] - Size: ${(file.size / 1024).toFixed(2)} KB`);
+
+    // Guardrail: Enforce absolute 5MB memory safe-buffer boundary
+    if (file.size > 5 * 1024 * 1024) {
+        alert('Infrastructure Boundary Intercept: Source files are limited to 5MB to guarantee mobile viewport stability.');
+        return;
+    }
+
+    const browserFileReader = new FileReader();
+
+    browserFileReader.onload = function (e) {
+        try {
+            const rawExtractedText = e.target.result;
+
+            // UT-013: Catch empty/zero-byte file payloads gracefully
+            if (!rawExtractedText || rawExtractedText.trim().length === 0) {
+                throw new Error('Zero byte volume discovered inside text block object stream.');
+            }
+
+            logToTerminal(`Successfully parsed ${rawExtractedText.length.toLocaleString()} character string components. Syncing to volatile staging array memory...`);
+
+            // UT-012: Overwrite cleans the workspace fully — no residual buffer remainders
+            const workingTextarea = document.getElementById('ai-chunk-input');
+            workingTextarea.value = rawExtractedText;
+            workingTextarea.style.display = 'block';
+
+            logToTerminal("✅ Data stream localized cleanly. Review text above, then click 'Compile & Save Current Chapter' to proceed.");
+        } catch (fault) {
+            logToTerminal(`❌ Ingestion Intercept Failure: ${fault.message}`);
+        }
+    };
+
+    browserFileReader.onerror = function () {
+        logToTerminal('❌ Core OS Sandbox Error: Web API blocked access to file bytes path context.');
+    };
+
+    // Read target bytes directly into client volatile RAM as pure string segments
+    browserFileReader.readAsText(file);
+}
+
+// Click-to-browse: delegate click to hidden file input
+document.getElementById('ai-file-dropzone')?.addEventListener('click', () => {
+    document.getElementById('ai-file-picker').click();
+});
+
+// File picker change — fired when user selects via browse dialog
+document.getElementById('ai-file-picker')?.addEventListener('change', (event) => {
+    const activeFile = event.target.files[0];
+    // UT-012: Reset the picker value so the same file can be re-selected after a swap
+    event.target.value = '';
+    ingestFileIntoWorkspace(activeFile);
+});
+
+// Fix B: dragover — MUST preventDefault() to stop the browser from hijacking the drop
+document.getElementById('ai-file-dropzone')?.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.currentTarget.style.background = 'rgba(99,102,241,0.12)';
+    e.currentTarget.style.borderColor = 'var(--indigo-light)';
+});
+
+document.getElementById('ai-file-dropzone')?.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    e.currentTarget.style.background = 'rgba(255,255,255,0.01)';
+    e.currentTarget.style.borderColor = 'var(--indigo-primary)';
+});
+
+// Fix B: drop — MUST preventDefault() to prevent browser opening file in new tab
+document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.currentTarget.style.background = 'rgba(255,255,255,0.01)';
+    e.currentTarget.style.borderColor = 'var(--indigo-primary)';
+
+    const droppedFile = e.dataTransfer.files[0];
+    if (!droppedFile) return;
+
+    // Validate file type client-side
+    const allowedExtensions = ['.txt', '.md'];
+    const ext = droppedFile.name.substring(droppedFile.name.lastIndexOf('.')).toLowerCase();
+    if (!allowedExtensions.includes(ext)) {
+        logToTerminal(`❌ File type rejected: [${droppedFile.name}] — only .txt and .md documents are accepted.`);
+        return;
+    }
+
+    ingestFileIntoWorkspace(droppedFile);
+});

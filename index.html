@@ -671,8 +671,17 @@
 
         <!-- Section 3: Extraction Workspace -->
         <div style="margin-bottom: 1.5rem;">
-            <label id="chapter-input-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">4. Chapter 1 Raw Text Input Workspace (Supports up to 100,000 words)</label>
-            <textarea id="ai-chunk-input" class="form-control" rows="12" placeholder="Paste the text contents of the current chapter here..." style="width: 100%; font-family: monospace; font-size: 0.85rem; resize: vertical;"></textarea>
+            <label id="chapter-input-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">4. Course Material Intake (Upload TXT / MD File or Paste Text)</label>
+
+            <!-- Hardened Intake Ingestion Layer Container -->
+            <div id="ai-file-dropzone" style="border: 2px dashed var(--indigo-primary); border-radius: 8px; padding: 2rem; text-align: center; background: rgba(255,255,255,0.01); cursor: pointer; transition: all 0.2s ease;">
+                <span style="color: var(--text-main); display: block; margin-bottom: 0.5rem;">📁 Drag &amp; Drop Document Files Here or Click to Browse</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem; display: block;">Supports plain text (.txt) and Markdown (.md) documents. Max 5MB.</span>
+                <input type="file" id="ai-file-picker" accept=".txt,.md" style="display: none;" />
+            </div>
+
+            <!-- Collapsible Text Workspace Panel — populated after file parse, hidden until then -->
+            <textarea id="ai-chunk-input" class="form-control" rows="8" style="width: 100%; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; display: none; resize: vertical;" placeholder="Parsed text contents appear here. You can also paste text directly..."></textarea>
         </div>
 
         <!-- Section 4: Process Step Actions -->
