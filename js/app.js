@@ -1233,47 +1233,6 @@ function filterLangs() {
 window.addEventListener('DOMContentLoaded', () => {
     populateAllLangs();
     setupDropzone();
-
-    // Dynamic Asset Hydration & Download Event Vector
-    document.getElementById('download-sample-btn')?.addEventListener('click', async (event) => {
-        event.preventDefault();
-        try {
-            // Parallel stream fetch of the target testing artifacts from repo content folder
-            const [config, tests, notes, flashcards] = await Promise.all([
-                fetch('content/ssc-10th-class/config.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                fetch('content/ssc-10th-class/tests.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                fetch('content/ssc-10th-class/notes.json').then(r => { if(!r.ok) throw r; return r.json(); }),
-                fetch('content/ssc-10th-class/flashcards.json').then(r => { if(!r.ok) throw r; return r.json(); })
-            ]);
-
-            // Synthesize data structures into a unified, clean-room reference payload
-            const unifiedPayload = {
-                "info": "Extract these objects into individual files (config.json, tests.json, notes.json, flashcards.json) inside your custom directory to bypass syntax constraints.",
-                "course_metadata": config,
-                "exam_matrix": tests,
-                "study_notes": notes,
-                "active_recall_decks": flashcards
-            };
-
-            // Serialize and build the download vehicle via structural browser blobs
-            const blob = new Blob([JSON.stringify(unifiedPayload, null, 2)], { type: 'application/json' });
-            const dataUrl = URL.createObjectURL(blob);
-            
-            const downloadAnchor = document.createElement('a');
-            downloadAnchor.href = dataUrl;
-            downloadAnchor.download = "ssc_10th_class_sample_package.json";
-            document.body.appendChild(downloadAnchor);
-            downloadAnchor.click();
-            
-            // Clean up allocation footprints instantly
-            URL.revokeObjectURL(dataUrl);
-            downloadAnchor.remove();
-            
-        } catch (error) {
-            console.error("Critical Network Interception Failure:", error);
-            alert("Infrastructure Notification: The sample baseline payload is currently being updated or re-indexed on the GitHub Pages edge CDN nodes. Please retry execution in 120 seconds.");
-        }
-    });
 });
 
 // Dropzone and Contribution Flow State
