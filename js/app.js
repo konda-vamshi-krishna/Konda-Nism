@@ -1348,7 +1348,7 @@ async function handleFileSelect(e) {
 
 function validateStagedFiles() {
     const logContainer = document.getElementById('validationLogs');
-    logContainer.innerHTML += '<div>🔍 Validating file structure and schema...</div>';
+    logContainer.innerHTML = '<div>🔍 Validating file structure and schema...</div>';
 
     const stagedList = document.getElementById('stagedFilesList');
     stagedList.innerHTML = '';
@@ -1358,7 +1358,7 @@ function validateStagedFiles() {
         item.className = 'staged-file-item';
         item.innerHTML = `
             <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
-            <span class="file-status pending">Pending</span>
+            <span class="file-status pending" id="status-${file.name.replace('.', '-')}">Pending</span>
         `;
         stagedList.appendChild(item);
     });
@@ -1367,16 +1367,29 @@ function validateStagedFiles() {
     let configJsonFile = null;
     courseMetadata = null;
 
-    // 1. Locate config.json
+    const fileStatuses = {};
+
+    // Helper to update individual file status in UI
+    const updateFileStatus = (fileName, status) => {
+        fileStatuses[fileName] = status;
+        const statusSpan = document.getElementById(`status-${fileName.replace('.', '-')}`);
+        if (statusSpan) {
+            statusSpan.className = `file-status ${status}`;
+            statusSpan.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+        }
+    };
+
+    // 1. Locate and Validate config.json
     configJsonFile = stagedFiles.find(f => f.name === 'config.json');
     if (!configJsonFile) {
-        logContainer.innerHTML += '<div style="color:var(--danger)">❌ Error: Missing config.json in root.</div>';
+        logContainer.innerHTML += '<div style="color:var(--danger)">❌ Error: Missing mandatory config.json.</div>';
         isValid = false;
     } else {
         try {
             const config = JSON.parse(configJsonFile.content);
             const requiredKeys = ['id', 'title', 'description', 'author', 'version'];
             let configValid = true;
+
             requiredKeys.forEach(k => {
                 if (!config[k] || String(config[k]).trim() === '') {
                     logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is missing required key: "${k}".</div>`;
@@ -1384,71 +1397,185 @@ function validateStagedFiles() {
                     isValid = false;
                 }
             });
+
+            if (configValid) {
+                // Validate folder/ID slug rules (lowercase alphanumeric + hyphens)
+                const slugPattern = /^[a-z0-9-]+$/;
+                if (!slugPattern.test(config.id)) {
+                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json "id" must be lowercase slugified (alphanumeric and hyphens only, e.g. "my-course-slug"). Found: "${config.id}"</div>`;
+                    configValid = false;
+                    isValid = false;
+                }
+            }
+
             if (configValid) {
                 courseMetadata = config;
                 logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${config.id}, Version: ${config.version}).</div>`;
+                updateFileStatus('config.json', 'valid');
+            } else {
+                updateFileStatus('config.json', 'invalid');
             }
         } catch (e) {
             logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is not valid JSON: ${e.message}</div>`;
             isValid = false;
+            updateFileStatus('config.json', 'invalid');
         }
     }
 
-    // 2. Validate tests folder and markdown formatting
-    const testFiles = stagedFiles.filter(f => f.path.toLowerCase().includes('/tests/') && f.name.endsWith('.md'));
-    if (testFiles.length === 0) {
-        logContainer.innerHTML += '<div style="color:var(--warning)">⚠️ Warning: No markdown files found inside a "tests" subdirectory.</div>';
-    } else {
-        testFiles.forEach(f => {
-            let fileValid = true;
-            
-            // Normalize carriage returns (\r\n) to standard UNIX line endings (\n)
-            const normalizedContent = f.content.replace(/\r\n/g, '\n');
-            
-            // Perform robust count validation of Question block markers vs Answer markers
-            const qMatches = [...normalizedContent.matchAll(/^\*\*Question\s+\d+:\*\*/gim)];
-            const aMatches = [...normalizedContent.matchAll(/^===\s*\n?\*\*Answer:\*\*\s*[A-D]/gim)];
+    // 2. Locate and Validate tests.json
+    const testsJsonFile = stagedFiles.find(f => f.name === 'tests.json');
+    if (testsJsonFile) {
+        try {
+            const testsData = JSON.parse(testsJsonFile.content);
+            let testsValid = true;
 
-            if (qMatches.length === 0) {
-                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} does not contain any "Question X:" markers.</div>`;
-                fileValid = false;
+            if (typeof testsData !== 'object' || Array.isArray(testsData)) {
+                logContainer.innerHTML += '<div style="color:var(--danger)">❌ tests.json must be a JSON object mapping test keys to arrays.</div>';
+                testsValid = false;
                 isValid = false;
-            } else if (qMatches.length !== aMatches.length) {
-                logContainer.innerHTML += `<div style="color:var(--danger)">❌ ${f.name} has a mismatch: found ${qMatches.length} questions but ${aMatches.length} "**Answer:**" markers. Each question must have a corresponding "**Answer:**" block on a fresh line.</div>`;
-                fileValid = false;
-                isValid = false;
+            } else {
+                for (const testKey in testsData) {
+                    if (!testKey.startsWith('test_') || isNaN(testKey.substring(5))) {
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json contains invalid key "${testKey}". Expected format: "test_1", "test_2".</div>`;
+                        testsValid = false;
+                        isValid = false;
+                    }
+
+                    const questions = testsData[testKey];
+                    if (!Array.isArray(questions)) {
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ test key "${testKey}" must map to an array of questions.</div>`;
+                        testsValid = false;
+                        isValid = false;
+                        continue;
+                    }
+
+                    questions.forEach((q, idx) => {
+                        const reqKeys = ['id', 'question', 'options', 'answer_idx', 'explanation'];
+                        reqKeys.forEach(rk => {
+                            if (q[rk] === undefined) {
+                                logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${idx + 1} in "${testKey}" is missing required key "${rk}".</div>`;
+                                testsValid = false;
+                                isValid = false;
+                            }
+                        });
+
+                        if (q.options && !Array.isArray(q.options)) {
+                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${q.id || idx + 1} options must be a JSON array.</div>`;
+                            testsValid = false;
+                            isValid = false;
+                        } else if (q.options) {
+                            if (q.answer_idx !== undefined) {
+                                const idxInt = parseInt(q.answer_idx);
+                                if (isNaN(idxInt) || idxInt < 0 || idxInt >= q.options.length) {
+                                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${q.id || idx + 1} answer_idx (${q.answer_idx}) is out of bounds for options length ${q.options.length}.</div>`;
+                                    testsValid = false;
+                                    isValid = false;
+                                }
+                            }
+                        }
+                    });
+                }
             }
 
-            if (fileValid) {
-                logContainer.innerHTML += `<div style="color:var(--success)">✅ Test format verified for: ${f.name} (Found ${qMatches.length} questions).</div>`;
+            if (testsValid) {
+                const testKeysCount = Object.keys(testsData).length;
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ tests.json is valid (Found ${testKeysCount} tests).</div>`;
+                updateFileStatus('tests.json', 'valid');
+            } else {
+                updateFileStatus('tests.json', 'invalid');
             }
-        });
+        } catch (e) {
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json is not valid JSON: ${e.message}</div>`;
+            isValid = false;
+            updateFileStatus('tests.json', 'invalid');
+        }
     }
 
-    // 3. Validate notes folder if it exists
-    const notesFiles = stagedFiles.filter(f => f.path.toLowerCase().includes('/notes/') && f.name.endsWith('.md'));
-    notesFiles.forEach(f => {
-        logContainer.innerHTML += `<div style="color:var(--success)">✅ Notes format verified for: ${f.name}</div>`;
+    // 3. Locate and Validate notes.json
+    const notesJsonFile = stagedFiles.find(f => f.name === 'notes.json');
+    if (notesJsonFile) {
+        try {
+            const notesData = JSON.parse(notesJsonFile.content);
+            let notesValid = true;
+
+            if (typeof notesData !== 'object' || Array.isArray(notesData) || !Array.isArray(notesData.chapters)) {
+                logContainer.innerHTML += '<div style="color:var(--danger)">❌ notes.json root must contain a "chapters" array.</div>';
+                notesValid = false;
+                isValid = false;
+            } else {
+                notesData.chapters.forEach((chap, idx) => {
+                    if (chap.chapter_idx === undefined || !chap.title || !Array.isArray(chap.sections)) {
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ Chapter at index ${idx} is missing chapter_idx, title, or sections array.</div>`;
+                        notesValid = false;
+                        isValid = false;
+                        return;
+                    }
+
+                    chap.sections.forEach((sec, sIdx) => {
+                        if (sec.heading === undefined || sec.body === undefined) {
+                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Section at index ${sIdx} in chapter "${chap.title}" is missing heading or body.</div>`;
+                            notesValid = false;
+                            isValid = false;
+                        }
+                    });
+                });
+            }
+
+            if (notesValid) {
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ notes.json is valid (Found ${notesData.chapters.length} chapters).</div>`;
+                updateFileStatus('notes.json', 'valid');
+            } else {
+                updateFileStatus('notes.json', 'invalid');
+            }
+        } catch (e) {
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ notes.json is not valid JSON: ${e.message}</div>`;
+            isValid = false;
+            updateFileStatus('notes.json', 'invalid');
+        }
+    }
+
+    // 4. Locate and Validate flashcards.json
+    const flashcardsJsonFile = stagedFiles.find(f => f.name === 'flashcards.json');
+    if (flashcardsJsonFile) {
+        try {
+            const flashcardsData = JSON.parse(flashcardsJsonFile.content);
+            let fcValid = true;
+
+            if (!Array.isArray(flashcardsData)) {
+                logContainer.innerHTML += '<div style="color:var(--danger)">❌ flashcards.json root must be a JSON array.</div>';
+                fcValid = false;
+                isValid = false;
+            } else {
+                flashcardsData.forEach((fc, idx) => {
+                    if (!fc.id || !fc.front || !fc.back) {
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ Flashcard at index ${idx} is missing id, front, or back fields.</div>`;
+                        fcValid = false;
+                        isValid = false;
+                    }
+                });
+            }
+
+            if (fcValid) {
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ flashcards.json is valid (Found ${flashcardsData.length} cards).</div>`;
+                updateFileStatus('flashcards.json', 'valid');
+            } else {
+                updateFileStatus('flashcards.json', 'invalid');
+            }
+        } catch (e) {
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ flashcards.json is not valid JSON: ${e.message}</div>`;
+            isValid = false;
+            updateFileStatus('flashcards.json', 'invalid');
+        }
+    }
+
+    // Mark remaining files as valid/pending
+    stagedFiles.forEach(file => {
+        if (!fileStatuses[file.name]) {
+            updateFileStatus(file.name, 'valid');
+        }
     });
 
     document.getElementById('validationSpinner').style.display = 'none';
-
-    // Update statuses
-    document.querySelectorAll('.staged-file-item').forEach((item, idx) => {
-        const file = stagedFiles[idx];
-        const statusSpan = item.querySelector('.file-status');
-
-        let fileStatus = 'valid';
-        if (file.name === 'config.json') {
-            fileStatus = courseMetadata ? 'valid' : 'invalid';
-        } else if (file.path.toLowerCase().includes('/tests/') && file.name.endsWith('.md')) {
-            const logsText = logContainer.innerHTML;
-            fileStatus = logsText.includes(`❌ ${file.name}`) ? 'invalid' : 'valid';
-        }
-
-        statusSpan.className = `file-status ${fileStatus}`;
-        statusSpan.textContent = fileStatus.charAt(0).toUpperCase() + fileStatus.slice(1);
-    });
 
     if (isValid && courseMetadata) {
         logContainer.innerHTML += '<div style="color:var(--success); font-weight:bold; margin-top:10px;">🎉 Local validation passed! Ready to submit.</div>';

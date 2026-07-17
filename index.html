@@ -492,7 +492,7 @@
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="margin-bottom: 12px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
         <p style="font-weight: 600; margin: 0 0 4px 0;">Drag & drop course folder or files here</p>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">or click to browse from your computer (select multiple files)</p>
-        <input type="file" id="fileInput" multiple webkitdirectory directory style="display: none;" onchange="handleFileSelect(event)">
+        <input type="file" id="fileInput" multiple accept=".json" style="display: none;" onchange="handleFileSelect(event)">
       </div>
 
       <!-- Staged Files list -->
