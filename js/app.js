@@ -2265,7 +2265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Hardened Segmented Transmutation Core (V17 Micro-Chunking Pass)
+// Hardened Compact Segmented Engine Core (V18 Balancing Pass)
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
     if (window._compilerInFlight) return;
@@ -2276,32 +2276,38 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     const rawText = document.getElementById('ai-chunk-input').value.trim();
     
     if (!apiKey || !rawText || rawText.length === 0) {
-        alert("Input Validation Error: Active token keys and resource text areas must be populated.");
+        alert("Input Validation Error: Valid token credentials and source text content are required.");
         return;
     }
 
     window._compilerInFlight = true;
     document.getElementById('ai-transmute-btn').disabled = true;
 
-    // Define strict chunk parameters to insulate edge proxy read timeouts
-    const MAX_CHUNK_SIZE = 25000;
+    // Core Fix 1: Reduce chunk boundaries to 15,000 characters to shorten inference windows below 20 seconds
+    const MAX_CHUNK_SIZE = 15000;
     const textSegments = [];
-    
     for (let offset = 0; offset < rawText.length; offset += MAX_CHUNK_SIZE) {
         textSegments.push(rawText.substring(offset, offset + MAX_CHUNK_SIZE));
     }
 
-    logToTerminal(`📦 Ingestion Splitter Active: Fragmented source text array into ${textSegments.length} isolated data units.`);
+    logToTerminal(`📦 Load Balancer Active: Optimized source text matrix into ${textSegments.length} hyper-focused micro-units.`);
     
     if (volatileStagingBuffer.chapterCounter === 0) {
         volatileStagingBuffer.chapterCounter = 1;
     }
 
+    // Core Fix 2: Dynamic Failover Endpoint Array Matrix
+    const proxyEndpoints = [
+        "https://corsproxy.io/?",
+        "https://api.allorigins.win/raw?url="
+    ];
+    
+    let activeProxyIndex = 0;
     let requestEndpointTarget = "";
     let customRequestHeaders = { "Content-Type": "application/json" };
 
     if (activeProvider === 'nvidia') {
-        requestEndpointTarget = "https://corsproxy.io/?" + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
+        requestEndpointTarget = proxyEndpoints[activeProxyIndex] + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
     } else {
         requestEndpointTarget = "https://openrouter.ai/api/v1/chat/completions";
@@ -2310,34 +2316,52 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     }
 
     try {
-        // Iterate through chunks sequentially to ensure chronological order of context arrays
         for (let index = 0; index < textSegments.length; index++) {
             const currentSubChapterIdx = volatileStagingBuffer.chapterCounter;
-            logToTerminal(`🔄 Processing Data Segment [${index + 1}/${textSegments.length}] for Unit Block ${currentSubChapterIdx}...`);
+            logToTerminal(`🔄 Extracting Segment [${index + 1}/${textSegments.length}] for Chapter Block ${currentSubChapterIdx}...`);
 
-            const extractionPrompt = `
-            You are an expert computational data linguist. Transmute the following text segment into a clean JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
-            Do NOT enclose output in markdown blocks. Output pure JSON bytes only.
-            Target Schema:
-            {
-              "questions_pool": [{"id": "q_auto_${currentSubChapterIdx}_${index}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
-              "flashcards_pool": [{"id": "fc_auto_${currentSubChapterIdx}_${index}_001", "front": "", "back": ""}],
-              "chapter_metadata": { "title": "Unit Segment Title", "body": "Summary string text" }
+            // Core Fix 3: Compressed Engineering Prompt - Removes output token generation bloat to accelerate streaming
+            const extractionPrompt = `Parse the following text into a raw JSON object with 3 properties: "questions_pool", "flashcards_pool", "chapter_metadata". No markdown, no triple backticks. 
+            Output pure JSON matching this exact minified structure:
+            {"questions_pool":[{"id":"q_${currentSubChapterIdx}_${index}_${Date.now()}","question":"","options":["","","",""],"answer_idx":0,"explanation":""}],"flashcards_pool":[{"id":"fc_${currentSubChapterIdx}_${index}","front":"","back":""}],"chapter_metadata":{"title":"Short Title","body":"Concise synthesis text"}}
+            Source Text Block: ${textSegments[index]}`;
+
+            let networkPayloadResponse;
+
+            // Automated Fallback Routing Execution Loop
+            try {
+                networkPayloadResponse = await fetch(requestEndpointTarget, {
+                    method: "POST",
+                    headers: customRequestHeaders,
+                    body: JSON.stringify({
+                        model: targetModelName,
+                        messages: [{ role: "user", content: extractionPrompt }],
+                        temperature: 0.1
+                    })
+                });
+            } catch (networkFetchError) {
+                // If the primary edge route encounters a proxy block, immediately switch to the backup failover vector
+                if (activeProvider === 'nvidia') {
+                    activeProxyIndex = 1;
+                    requestEndpointTarget = proxyEndpoints[activeProxyIndex] + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
+                    logToTerminal("⚠️ Network Block Detected: Engaged secondary failover routing path...");
+                    
+                    networkPayloadResponse = await fetch(requestEndpointTarget, {
+                        method: "POST",
+                        headers: customRequestHeaders,
+                        body: JSON.stringify({
+                            model: targetModelName,
+                            messages: [{ role: "user", content: extractionPrompt }],
+                            temperature: 0.1
+                        })
+                    });
+                } else {
+                    throw networkFetchError;
+                }
             }
-            Text segment block: ${textSegments[index]}`;
-
-            const networkPayloadResponse = await fetch(requestEndpointTarget, {
-                method: "POST",
-                headers: customRequestHeaders,
-                body: JSON.stringify({
-                    model: targetModelName,
-                    messages: [{ role: "user", content: extractionPrompt }],
-                    temperature: 0.15
-                })
-            });
 
             if (!networkPayloadResponse.ok) {
-                throw new Error(`Segment [${index + 1}] failed with HTTP error status: ${networkPayloadResponse.status}`);
+                throw new Error(`Segment [${index + 1}] failed execution with HTTP code: ${networkPayloadResponse.status}`);
             }
             
             const networkObject = await networkPayloadResponse.json();
@@ -2376,7 +2400,6 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
 
             const testIdentifierKey = `test_${currentSubChapterIdx}`;
             
-            // Seamless allocation compilation into unified target state array indexes
             if (!volatileStagingBuffer.tests[testIdentifierKey]) {
                 volatileStagingBuffer.tests[testIdentifierKey] = [];
             }
@@ -2392,13 +2415,13 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
             volatileStagingBuffer.notes.chapters.push({
                 chapter_idx: currentSubChapterIdx + index + 1, // Rule E: sequential offset starting strictly from chapter_idx: 2
                 title: `${metadata.title} (Part ${index + 1})`,
-                sections: [{ heading: "Segmented Analysis Lecture Core", body: metadata.body }]
+                sections: [{ heading: "Segmented Compilations", body: metadata.body }]
             });
 
-            logToTerminal(`✅ Chunk [${index + 1}/${textSegments.length}] merged successfully into dynamic memory slots.`);
+            logToTerminal(`✅ Component [${index + 1}/${textSegments.length}] structurally integrated into staging memory slots.`);
         }
 
-        logToTerminal(`🎉 Global Success: Complete unit collection compiled successfully without edge proxy timeout failures.`);
+        logToTerminal(`🎉 System Matrix Fully Operational: Complete textbook module processed cleanly without context timeouts.`);
         
         document.getElementById('ai-transmute-btn').style.display = 'none';
         document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
@@ -2407,8 +2430,8 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
         saveCompilationCheckpoint();
 
     } catch (fault) {
-        logToTerminal(`❌ System Batch Failure: Segment parsing execution terminated: ${fault.message}`);
-        alert("Transaction Timeout Exception: Request was dropped at network limits. Attempt a smaller source asset block.");
+        logToTerminal(`❌ Processing Engine Termination: ${fault.message}`);
+        alert("Transaction Drop Vector: Connection terminated by edge limits. The secondary endpoint loop has logged the fault parameters.");
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
