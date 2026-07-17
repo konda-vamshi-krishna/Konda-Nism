@@ -51,8 +51,10 @@ self.addEventListener('fetch', (event) => {
   if (url.hostname === 'openrouter.ai') return;
 
   // Strategy A: Cache-First for Immutable Static Core Assets
+  // ponytail: BUG-07 — scoped to same-origin only → upgrade path is a full allowlist per-host
   const isStaticShell = STATIC_SHELL_MATCHES.some(path => url.pathname.endsWith(path));
-  if (isStaticShell || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
+  if ((isStaticShell || url.pathname.endsWith('.css') || url.pathname.endsWith('.js'))
+      && url.origin === self.location.origin) {
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
     );

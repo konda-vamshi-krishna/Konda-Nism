@@ -1981,6 +1981,23 @@ function mergeDroppedFileIntoBuffer(name, contentText) {
             logToTerminal("🔄 Merged custom tests.json exams into compiler buffer.");
         } else if (name === 'notes.json') {
             if (parsed && Array.isArray(parsed.chapters)) {
+                // BUG-06 FIX: Validate external_links schema before absorbing into volatileStagingBuffer.
+                // Mirrors validate_module.py Rule D — catches empty label/url and bad protocols
+                // at ingestion time instead of silently storing corrupt state in localStorage.
+                // ponytail: frontend-only guard → upgrade path is a shared schema module (ESM)
+                for (const chap of parsed.chapters) {
+                    for (const sec of (chap.sections || [])) {
+                        for (const link of (sec.external_links || [])) {
+                            if (!link || typeof link !== 'object') throw new Error(`Malformed link entry in chapter "${chap.title || chap.chapter_idx}".`);
+                            const lbl = String(link.label || '').trim();
+                            const lurl = String(link.url || '').trim();
+                            if (!lbl) throw new Error(`Schema Violation [Rule D]: Empty link label in chapter "${chap.title || chap.chapter_idx}".`);
+                            if (!lurl) throw new Error(`Schema Violation [Rule D]: Empty link url in chapter "${chap.title || chap.chapter_idx}".`);
+                            if (!lurl.startsWith('http://') && !lurl.startsWith('https://'))
+                                throw new Error(`Protocol Violation [Rule D]: URL must start with http(s)://: ${lurl}`);
+                        }
+                    }
+                }
                 const existingChapters = volatileStagingBuffer.notes.chapters;
                 parsed.chapters.forEach(newChap => {
                     const idx = existingChapters.findIndex(c => c.chapter_idx === newChap.chapter_idx);
@@ -2265,6 +2282,7 @@ Text material data block: ${normalizedTextSample}`;
 // 2. Next Chapter Instantiation Vector
 document.getElementById('ai-next-chapter-btn')?.addEventListener('click', () => {
     if (volatileStagingBuffer.isLocked) return;
+    if (_compilerInFlight) return; // ponytail: BUG-05 — prevent chapterCounter skew during inflight compile → remove when full chapter-lock UX is implemented
     
     volatileStagingBuffer.chapterCounter++;
     const nextChapterNum = volatileStagingBuffer.chapterCounter;
