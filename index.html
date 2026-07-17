@@ -662,15 +662,23 @@
 
         <!-- Section 1b: Optional CORS Proxy for Nvidia direct browser calls -->
         <div id="ai-proxy-container" style="display: none; margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
-            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">Nvidia CORS Proxy Bypass (Optional)</label>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">Nvidia API gateways block direct browser calls due to CORS. Enter a CORS proxy prefix to bypass this restriction, or click the button below to auto-populate a free public proxy.</p>
-            <div style="display: flex; gap: 0.5rem;">
-                <input type="text" id="ai-cors-proxy" class="form-control" value="https://thingproxy.freeboard.io/fetch/" placeholder="e.g. https://thingproxy.freeboard.io/fetch/" style="flex-grow: 1;" />
+            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">Nvidia CORS Proxy Bypass (Required for Browsers)</label>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                Nvidia blocks direct browser calls. For a 100% reliable local fix, open a terminal and run:<br />
+                <code style="display:block; margin: 4px 0; padding: 6px; background: rgba(0,0,0,0.3); border-radius: 4px; color: var(--accent);">npx local-cors-proxy --proxyUrl https://integrate.api.nvidia.com --port 8010 --proxyPartial ""</code>
+                Then click the <strong>"⚙️ Use Local Proxy"</strong> button to route requests.
+            </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                <input type="text" id="ai-cors-proxy" class="form-control" placeholder="e.g. http://localhost:8010/" style="flex-grow: 1;" />
+                <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; white-space: nowrap;" onclick="document.getElementById('ai-cors-proxy').value='http://localhost:8010/';">
+                    ⚙️ Use Local Proxy
+                </button>
                 <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; white-space: nowrap;" onclick="document.getElementById('ai-cors-proxy').value='';">
-                    ❌ Clear Proxy
+                    ❌ Clear (Direct)
                 </button>
             </div>
         </div>
+
 
 
 
