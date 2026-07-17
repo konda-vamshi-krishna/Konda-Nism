@@ -5,6 +5,12 @@
       "title": "NISM Series VIII - Equity Derivatives",
       "description": "Prepare for the official NISM Equity Derivatives Certification.",
       "folder": "nism-series-8"
+    },
+    {
+      "id": "test-new-subject",
+      "title": "Architecture Verification Test",
+      "description": "An isolated, clean-room module designed to cross-check E2E pipeline compatibility.",
+      "folder": "test-new-subject"
     }
   ]
 }
