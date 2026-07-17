@@ -98,7 +98,7 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
     <span>Stats</span>
   </button>
-  <button class="mobile-tab-btn" id="m-tab-contribute" onclick="switchTab('contribute')">
+  <button class="mobile-tab-btn" id="m-tab-contribute" onclick="switchTab('contribute')" style="display:flex;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
     <span>Add</span>
   </button>
@@ -112,7 +112,7 @@
       <div class="left-col">
         <div class="card welcome-card">
           <h1>Konda Universal Mock Test</h1>
-          <p>Welcome! Select a course from the global registry to begin practicing. <a href="CONTRIBUTING.md" target="_blank" style="color:var(--primary); font-weight:bold; margin-left:10px;">[+] Contribute a Course</a></p>
+          <p>Welcome! Select a course from the global registry to begin practicing. <button onclick="switchTab('contribute')" style="background:none; border:none; color:var(--primary); font-weight:bold; margin-left:10px; cursor:pointer; font-size:inherit; padding:0;">[+] Contribute a Course</button></p>
           
           <div id="courseSelectionGrid" class="grid-container" style="margin: 20px 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
             <!-- Courses populated here -->
