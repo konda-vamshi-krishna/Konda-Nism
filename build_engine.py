@@ -63,18 +63,37 @@ def parse_notes_file(filepath):
         content = f.read()
     
     notes = []
-    parts = re.split(r'^#\s+', content, flags=re.MULTILINE)
-    for part in parts[1:]:
-        lines = part.strip().split('\n')
-        if not lines: continue
-        title = lines[0].strip()
-        body = '\n'.join(lines[1:]).strip()
-        # Convert markdown to simple HTML for notes (just basic P tags)
-        body_html = ''.join([f'<p>{p.strip()}</p>' for p in body.split('\n\n') if p.strip()])
-        notes.append({
-            "title": title,
-            "content": body_html
-        })
+    # If the file uses Part headers (legacy notes.md format)
+    parts_matches = list(re.finditer(r'^(Part \d+:\s*(.*?))$', content, re.MULTILINE))
+    if parts_matches:
+        for i, match in enumerate(parts_matches):
+            start_idx = match.start()
+            end_idx = parts_matches[i+1].start() if i + 1 < len(parts_matches) else len(content)
+            
+            part_title = match.group(1).strip()
+            part_content = content[start_idx:end_idx].strip()
+            
+            # Clean up headers/footers
+            part_content = re.sub(r'← Back to.*', '', part_content)
+            part_content = re.sub(r'This is Part \d+ of the NISM.*', '', part_content)
+            part_content = part_content.strip()
+            
+            notes.append({
+                "title": part_title,
+                "content": part_content
+            })
+    else:
+        # Standard Markdown "# " headings
+        parts = re.split(r'^#\s+', content, flags=re.MULTILINE)
+        for part in parts[1:]:
+            lines = part.strip().split('\n')
+            if not lines: continue
+            title = lines[0].strip()
+            body = '\n'.join(lines[1:]).strip()
+            notes.append({
+                "title": title,
+                "content": body
+            })
     return notes
 
 def generate_flashcards(test_data):
