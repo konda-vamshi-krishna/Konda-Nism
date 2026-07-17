@@ -277,7 +277,7 @@ async function selectCourse(courseId) {
         }
 
         const folder = course.folder;
-        const [config, tests, notes, flashcards] = await Promise.all([
+        let [config, tests, notes, flashcards] = await Promise.all([
             fetch(`content/${folder}/config.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
@@ -295,6 +295,23 @@ async function selectCourse(courseId) {
                 return r.json();
             })
         ]);
+
+        // Defensive self-healing check: If notes are empty, bypass browser/SW cache and force network reload
+        if ((!notes || !notes.chapters || notes.chapters.length === 0) && courseId === 'nism-series-8') {
+            console.warn("Cached notes.json is empty. Bypassing cache to force reload.");
+            try {
+                const freshNotes = await fetch(`content/${folder}/notes.json?cb=${Date.now()}`, { signal }).then(r => {
+                    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                    return r.json();
+                });
+                if (freshNotes && freshNotes.chapters && freshNotes.chapters.length > 0) {
+                    notes = freshNotes;
+                    console.log("Successfully self-healed empty notes from live network.");
+                }
+            } catch (err) {
+                console.error("Self-healing notes fetch failed:", err);
+            }
+        }
 
         globalData.courses[courseId] = {
             metadata: config,
