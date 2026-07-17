@@ -2,17 +2,124 @@
 let globalData = window.MOCK_DATA;
 let currentCourseId = null;
 let testData = {};
-let notesData = { notes: [], flashcards: [] };
+let notesData = { parts: [], flashcards: [] };
 
 function getStorageKey(baseKey) {
     if (!currentCourseId) return `prepmaster_global_${baseKey}`;
     return `prepmaster_${currentCourseId}_${baseKey}`;
 }
 
+// Course Scope Wrapper for strict state management
+const CourseScope = {
+    courseId: null,
+    testData: {},
+    notesData: { parts: [], flashcards: [] },
+
+    isActive() {
+        return this.courseId !== null;
+    },
+
+    enter(courseId) {
+        const courseData = globalData.courses[courseId];
+        if (!courseData) {
+            console.error(`Course ${courseId} not found in registry.`);
+            return false;
+        }
+
+        this.courseId = courseId;
+        this.testData = courseData.tests || {};
+        this.notesData = {
+            parts: courseData.notes || [],
+            flashcards: courseData.flashcards || []
+        };
+
+        // Expose to global variables for compatibility with legacy core logic
+        currentCourseId = this.courseId;
+        testData = this.testData;
+        notesData = this.notesData;
+
+        flashcardsList = [...this.notesData.flashcards];
+        currentFcIndex = 0;
+
+        // UI transitions
+        document.getElementById('courseSelectionGrid').style.display = 'none';
+        document.getElementById('courseContentArea').style.display = 'block';
+        document.getElementById('courseStatsStrip').style.display = 'flex';
+
+        // Setup components
+        setupTestSelectors();
+        setupFlashcardDecks();
+        loadLocalStorage();
+        renderFlashcard();
+
+        // Update scoped UI tabs
+        updateScopeUI(true);
+
+        // Scroll down to tests
+        document.getElementById('courseContentArea').scrollIntoView({ behavior: 'smooth' });
+        return true;
+    },
+
+    exit() {
+        this.courseId = null;
+        this.testData = {};
+        this.notesData = { parts: [], flashcards: [] };
+
+        currentCourseId = null;
+        testData = {};
+        notesData = { parts: [], flashcards: [] };
+        
+        flashcardsList = [];
+        currentFcIndex = 0;
+
+        // UI transitions
+        document.getElementById('courseContentArea').style.display = 'none';
+        document.getElementById('courseStatsStrip').style.display = 'none';
+        
+        const gridContainer = document.getElementById('courseSelectionGrid');
+        if (gridContainer) {
+            gridContainer.style.display = 'grid';
+            gridContainer.style.animation = 'fadeIn 0.4s ease-out';
+        }
+
+        // Update scoped UI tabs
+        updateScopeUI(false);
+        switchTab('dashboard');
+    }
+};
+
+function updateScopeUI(isInsideCourse) {
+    const courseTabs = ['simulator', 'notes', 'flashcards', 'analytics'];
+    courseTabs.forEach(tab => {
+        const desktopBtn = document.getElementById('tab-' + tab);
+        const mobileBtn = document.getElementById('m-tab-' + tab);
+        if (desktopBtn) {
+            desktopBtn.style.display = isInsideCourse ? 'flex' : 'none';
+        }
+        if (mobileBtn) {
+            mobileBtn.style.display = isInsideCourse ? 'flex' : 'none';
+        }
+    });
+    
+    // Toggle right column (Quick Navigation) in dashboard grid
+    const rightCol = document.querySelector('.dashboard-grid .right-col');
+    if (rightCol) {
+        rightCol.style.display = isInsideCourse ? 'block' : 'none';
+    }
+    
+    // Adjust layout based on scope
+    const dashboardGrid = document.querySelector('.dashboard-grid');
+    if (dashboardGrid) {
+        dashboardGrid.style.gridTemplateColumns = isInsideCourse ? '1fr 300px' : '1fr';
+    }
+}
+
 // Initialize app directly (no fetch needed)
 function initializeApp() {
     try {
         renderCourseGrid();
+        updateScopeUI(false); // Hide tabs initially
+        
         // apply global settings (theme, lang)
         const savedLang = localStorage.getItem('prepmaster_lang');
         if (savedLang && savedLang !== 'en') {
@@ -60,44 +167,11 @@ function renderCourseGrid() {
 }
 
 function backToCourses() {
-    currentCourseId = null;
-    testData = {};
-    notesData = { notes: [], flashcards: [] };
-    
-    document.getElementById('courseContentArea').style.display = 'none';
-    document.getElementById('courseStatsStrip').style.display = 'none';
-    const gridContainer = document.getElementById('courseSelectionGrid');
-    gridContainer.style.display = 'grid';
-    // Add a simple fade animation class if needed
-    gridContainer.style.animation = 'fadeIn 0.4s ease-out';
+    CourseScope.exit();
 }
 
 function selectCourse(courseId) {
-    currentCourseId = courseId;
-    const courseData = globalData.courses[courseId];
-    if (!courseData) return;
-    
-    testData = courseData.tests || {};
-    notesData = {
-        notes: courseData.notes || [],
-        flashcards: courseData.flashcards || []
-    };
-    
-    flashcardsList = [...notesData.flashcards];
-    currentFcIndex = 0;
-    
-    // UI Transitions
-    document.getElementById('courseSelectionGrid').style.display = 'none';
-    document.getElementById('courseContentArea').style.display = 'block';
-    document.getElementById('courseStatsStrip').style.display = 'flex';
-    
-    setupTestSelectors();
-    setupFlashcardDecks();
-    loadLocalStorage();
-    renderFlashcard();
-    
-    // Scroll down to tests
-    document.getElementById('courseContentArea').scrollIntoView({ behavior: 'smooth' });
+    CourseScope.enter(courseId);
 }
 
 
@@ -508,6 +582,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Navigation Tabs Switch
   function switchTab(tabId) {
+      if (tabId !== 'dashboard' && !currentCourseId) {
+          console.warn(`Attempted to switch to ${tabId} without active course scope.`);
+          return;
+      }
+      
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.mobile-tab-btn').forEach(el => el.classList.remove('active'));

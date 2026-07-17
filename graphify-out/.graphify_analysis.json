@@ -30,18 +30,25 @@
       "js_app",
       "js_app_alllanguages",
       "js_app_answers",
+      "js_app_applysavedlanguage",
       "js_app_backtocourses",
+      "js_app_coursescope",
       "js_app_filterlangs",
       "js_app_flashcardslist",
       "js_app_flipcard",
+      "js_app_initializeapp",
       "js_app_notesdata",
       "js_app_opendrawer",
       "js_app_populatealllangs",
+      "js_app_rendercoursegrid",
+      "js_app_selectcourse",
       "js_app_setlang",
+      "js_app_setupflashcarddecks",
       "js_app_starredquestions",
       "js_app_testdata",
       "js_app_toggletheme",
       "js_app_toggletranslatedropdown",
+      "js_app_updatescopeui",
       "js_app_updatestarttitle"
     ],
     "2": [
@@ -82,6 +89,15 @@
       "js_app_updategridstyles"
     ],
     "5": [
+      "js_app_getstoragekey",
+      "js_app_loadlocalstorage",
+      "js_app_removebookmark",
+      "js_app_setuptestselectors",
+      "js_app_simsubmit",
+      "js_app_togglebookmarkactivequestion",
+      "js_app_updateanalyticsui"
+    ],
+    "6": [
       "js_marked_min_blocktokens",
       "js_marked_min_inlinetokens",
       "js_marked_min_lex",
@@ -90,7 +106,7 @@
       "js_marked_min_me",
       "js_marked_min_reflink"
     ],
-    "6": [
+    "7": [
       "js_marked_min_parsemarkdown",
       "js_marked_min_postprocess",
       "js_marked_min_preprocess",
@@ -99,23 +115,7 @@
       "js_marked_min_provideparser",
       "js_marked_min_walktokens"
     ],
-    "7": [
-      "js_app_applysavedlanguage",
-      "js_app_initializeapp",
-      "js_app_rendercoursegrid",
-      "js_app_selectcourse",
-      "js_app_setupflashcarddecks",
-      "js_app_setuptestselectors"
-    ],
     "8": [
-      "js_app_getstoragekey",
-      "js_app_loadlocalstorage",
-      "js_app_removebookmark",
-      "js_app_simsubmit",
-      "js_app_togglebookmarkactivequestion",
-      "js_app_updateanalyticsui"
-    ],
-    "9": [
       "js_app_jumptoflashcard",
       "js_app_loadflashcarddeck",
       "js_app_nextcard",
@@ -123,110 +123,110 @@
       "js_app_renderflashcard",
       "js_app_shufflecards"
     ],
-    "10": [
+    "9": [
       "build_engine",
       "build_engine_generate_flashcards",
       "build_engine_main",
       "build_engine_parse_notes_file",
       "build_engine_parse_test_file"
     ],
-    "11": [
+    "10": [
       "js_marked_min_a",
       "js_marked_min_blockquote",
       "js_marked_min_code",
       "js_marked_min_heading",
       "js_marked_min_hr"
     ],
-    "12": [
+    "11": [
       "js_marked_min_table",
       "js_marked_min_tablecell",
       "js_marked_min_tablerow",
       "js_marked_min_y"
     ],
-    "13": [
+    "12": [
       "complete_all_tests",
       "complete_all_tests_complete_tests",
       "complete_all_tests_get_fill_pool"
     ],
-    "14": [
+    "13": [
       "js_marked_min_checkbox",
       "js_marked_min_list",
       "js_marked_min_listitem"
     ],
-    "15": [
+    "14": [
       "parse_tests",
       "parse_tests_main",
       "parse_tests_parse_file"
     ],
-    "16": [
+    "15": [
       "apply_audit_fixes",
       "apply_audit_fixes_apply_test1_corrections"
     ],
-    "17": [
+    "16": [
       "audit_tests",
       "audit_tests_audit_and_correct_tests"
     ],
-    "18": [
+    "17": [
       "correct_test_1",
       "correct_test_1_correct_test_1_errors"
     ],
-    "19": [
+    "18": [
       "fix_typos",
       "fix_typos_fix_test_typos"
     ],
-    "20": [
+    "19": [
       "generate_advanced_tests",
       "generate_advanced_tests_generate_questions"
     ],
-    "21": [
+    "20": [
       "generate_flashcards",
       "generate_flashcards_generate_flashcards"
     ],
-    "22": [
+    "21": [
       "parse_notes",
       "parse_notes_parse_notes"
     ],
-    "23": [
+    "22": [
       "rebuild_everything",
       "rebuild_everything_clean_data"
     ],
-    "24": [
+    "23": [
       "semantic_audit",
       "semantic_audit_semantic_finance_audit"
     ],
-    "25": [
+    "24": [
       "validate_module",
       "validate_module_validate_module"
     ],
-    "26": [
+    "25": [
       "build_html"
     ],
-    "27": [
+    "26": [
       "data_data"
     ],
-    "28": [
+    "27": [
       "refactor_app_js"
     ],
-    "29": [
+    "28": [
       "scratch_ast"
     ]
   },
   "cohesion": {
     "0": 0.09420289855072464,
-    "1": 0.125,
+    "1": 0.11067193675889328,
     "2": 0.18681318681318682,
     "3": 0.2777777777777778,
     "4": 0.32142857142857145,
-    "5": 0.2857142857142857,
+    "5": 0.47619047619047616,
     "6": 0.2857142857142857,
-    "7": 0.3333333333333333,
-    "8": 0.6,
-    "9": 0.4,
-    "10": 0.7,
-    "11": 0.4,
-    "12": 0.5,
-    "13": 1.0,
-    "14": 0.6666666666666666,
+    "7": 0.2857142857142857,
+    "8": 0.4,
+    "9": 0.7,
+    "10": 0.4,
+    "11": 0.5,
+    "12": 1.0,
+    "13": 0.6666666666666666,
+    "14": 1.0,
     "15": 1.0,
     "16": 1.0,
     "17": 1.0,
@@ -240,8 +240,7 @@
     "25": 1.0,
     "26": 1.0,
     "27": 1.0,
-    "28": 1.0,
-    "29": 1.0
+    "28": 1.0
   },
   "gods": [
     {
@@ -280,18 +279,18 @@
       "degree": 7
     },
     {
-      "id": "js_app_renderflashcard",
-      "label": "renderFlashcard()",
-      "degree": 7
-    },
-    {
       "id": "js_marked_min_a",
       "label": "A()",
       "degree": 6
     },
     {
-      "id": "js_app_selectcourse",
-      "label": "selectCourse()",
+      "id": "js_app_saveactiveteststate",
+      "label": "saveActiveTestState()",
+      "degree": 6
+    },
+    {
+      "id": "js_app_updateanalyticsui",
+      "label": "updateAnalyticsUI()",
       "degree": 6
     }
   ],
@@ -305,7 +304,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 2 \u2192 community 11"
+      "note": "Bridges community 2 \u2192 community 10"
     },
     {
       "source": "listitem()",
@@ -316,7 +315,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 2 \u2192 community 14"
+      "note": "Bridges community 2 \u2192 community 13"
     },
     {
       "source": "link()",
@@ -327,7 +326,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 5 \u2192 community 2"
+      "note": "Bridges community 6 \u2192 community 2"
     },
     {
       "source": "parseMarkdown()",
@@ -338,7 +337,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 6 \u2192 community 2"
+      "note": "Bridges community 7 \u2192 community 2"
     },
     {
       "source": "resumeActiveTest()",
@@ -349,7 +348,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "note": "Bridges community 8 \u2192 community 3"
+      "note": "Bridges community 5 \u2192 community 3"
     }
   ],
   "tokens": {
