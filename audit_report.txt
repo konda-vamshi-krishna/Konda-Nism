@@ -1,4 +1,4 @@
-Total Questions Audited: 100
+Total Questions Audited: 1000
 Mismatched Answers: 0
 Malformed Options: 0
 Auto-corrected: 0
