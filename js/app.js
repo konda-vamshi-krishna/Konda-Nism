@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load configuration and data from LocalStorage
   function loadLocalStorage() {
+      // Saved Language
+      const savedLang = localStorage.getItem('nism_lang');
+      if (savedLang && savedLang !== 'en') {
+          document.body.classList.add('translation-active');
+          applySavedLanguage(savedLang);
+      }
+
       // Starred questions
       const savedStars = localStorage.getItem('nism_starred_questions');
       if (savedStars) {
@@ -646,6 +653,16 @@ function toggleTranslateDropdown() {
     document.getElementById('translateDropdown').classList.toggle('show');
 }
 
+function applySavedLanguage(langCode) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
+    } else {
+        setTimeout(() => applySavedLanguage(langCode), 500);
+    }
+}
+
 function setLang(langCode) {
     const select = document.querySelector('.goog-te-combo');
     if (select) {
@@ -655,6 +672,8 @@ function setLang(langCode) {
         console.error("Google Translate widget not found.");
     }
     document.getElementById('translateDropdown').classList.remove('show');
+    
+    localStorage.setItem('nism_lang', langCode);
     
     if (langCode === 'en' || langCode === '') {
         document.body.classList.remove('translation-active');
