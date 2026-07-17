@@ -637,7 +637,7 @@
         </div>
 
         <!-- Section 1: API Configuration Elements -->
-        <div class="form-row" style="display: grid; grid-template-columns: 1.2fr 2fr 2.5fr; gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="form-row" style="display: grid; grid-template-columns: 1.2fr 2fr 2.5fr; gap: 1rem; margin-bottom: 1rem;">
             <div>
                 <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Select API Provider</label>
                 <select id="ai-provider-select" class="form-control" style="width: 100%;">
@@ -659,6 +659,14 @@
                 </select>
             </div>
         </div>
+
+        <!-- Section 1b: Optional CORS Proxy for Nvidia direct browser calls -->
+        <div id="ai-proxy-container" style="display: none; margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">Nvidia CORS Proxy Bypass (Optional)</label>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">Nvidia API gateways block direct browser calls due to CORS. Enter a CORS proxy prefix to bypass this restriction (e.g. <code>https://cors-anywhere.herokuapp.com/</code>), or leave empty if using a browser with disabled web security.</p>
+            <input type="text" id="ai-cors-proxy" class="form-control" placeholder="e.g. https://cors-anywhere.herokuapp.com/" style="width: 100%;" />
+        </div>
+
 
         <!-- Section 2: Federated Multi-Link Resource Matrix -->
         <div style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">

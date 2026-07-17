@@ -2221,12 +2221,15 @@ document.getElementById('ai-provider-select')?.addEventListener('change', (e) =>
     const keyLabel = document.getElementById('ai-key-label');
     const modelSelect = document.getElementById('ai-model-select');
     
+    const proxyContainer = document.getElementById('ai-proxy-container');
+    
     if (provider === 'nvidia') {
         if (keyLabel) keyLabel.textContent = '2. Input Nvidia API Key';
         if (keyInput) {
             keyInput.placeholder = 'nvapi-...';
             keyInput.value = '';
         }
+        if (proxyContainer) proxyContainer.style.display = 'block';
         if (modelSelect) {
             modelSelect.innerHTML = `
                 <option value="meta/llama-3.1-70b-instruct">meta/llama-3.1-70b-instruct (Fast & Accurate)</option>
@@ -2241,6 +2244,7 @@ document.getElementById('ai-provider-select')?.addEventListener('change', (e) =>
             keyInput.placeholder = 'sk-or-v1-...';
             keyInput.value = '';
         }
+        if (proxyContainer) proxyContainer.style.display = 'none';
         if (modelSelect) {
             modelSelect.innerHTML = `
                 <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
@@ -2339,7 +2343,12 @@ ${processedChunkPayload}`;
         let providerName = 'OpenRouter';
 
         if (provider === 'nvidia') {
-            endpoint = 'https://integrate.api.nvidia.com/v1/chat/completions';
+            const proxyInput = document.getElementById('ai-cors-proxy');
+            let proxyPrefix = proxyInput ? proxyInput.value.trim() : "";
+            if (proxyPrefix && !proxyPrefix.endsWith('/')) {
+                proxyPrefix += '/';
+            }
+            endpoint = proxyPrefix + 'https://integrate.api.nvidia.com/v1/chat/completions';
             providerName = 'Nvidia';
         }
 
@@ -2471,8 +2480,16 @@ ${processedChunkPayload}`;
         
         saveCompilationCheckpoint();
     } catch (fault) {
-        logToTerminal(`❌ Operational Error: Parsing exception encountered - ${fault.message}`);
-        alert(`Compilation Anomaly: ${fault.message}`);
+        let msg = fault.message || String(fault);
+        const provider = document.getElementById('ai-provider-select')?.value || 'openrouter';
+        
+        // Detect CORS block (browsers throw Failed to fetch TypeError on origin policy failure)
+        if (msg.includes('Failed to fetch') && provider === 'nvidia') {
+            msg = "Failed to fetch (CORS Blocked). Nvidia's API gateway blocks direct browser calls. To fix this: \n1. Paste a CORS proxy prefix in the setup field above (e.g. 'https://cors-anywhere.herokuapp.com/'), or\n2. Open your browser with web security disabled for local testing.";
+        }
+        
+        logToTerminal(`❌ Operational Error: Parsing exception encountered - ${msg}`);
+        alert(`Compilation Anomaly: ${msg}`);
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
