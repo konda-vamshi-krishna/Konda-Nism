@@ -9,10 +9,10 @@
       "source_file": "apply_audit_fixes.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 15,
+      "community": 14,
       "norm_label": "apply_audit_fixes.py",
-      "community_name": "apply_audit_fixes.py",
-      "id": "apply_audit_fixes"
+      "id": "apply_audit_fixes",
+      "community_name": "apply_audit_fixes.py"
     },
     {
       "label": "apply_test1_corrections()",
@@ -20,10 +20,10 @@
       "source_file": "apply_audit_fixes.py",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 15,
+      "community": 14,
       "norm_label": "apply_test1_corrections()",
-      "community_name": "apply_audit_fixes.py",
-      "id": "apply_audit_fixes_apply_test1_corrections"
+      "id": "apply_audit_fixes_apply_test1_corrections",
+      "community_name": "apply_audit_fixes.py"
     },
     {
       "label": "audit_tests.py",
@@ -31,10 +31,10 @@
       "source_file": "audit_tests.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 16,
+      "community": 15,
       "norm_label": "audit_tests.py",
-      "community_name": "audit_tests.py",
-      "id": "audit_tests"
+      "id": "audit_tests",
+      "community_name": "audit_tests.py"
     },
     {
       "label": "audit_and_correct_tests()",
@@ -42,10 +42,10 @@
       "source_file": "audit_tests.py",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 16,
+      "community": 15,
       "norm_label": "audit_and_correct_tests()",
-      "community_name": "audit_tests.py",
-      "id": "audit_tests_audit_and_correct_tests"
+      "id": "audit_tests_audit_and_correct_tests",
+      "community_name": "audit_tests.py"
     },
     {
       "label": "build_html.py",
@@ -53,10 +53,10 @@
       "source_file": "build_html.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 25,
+      "community": 24,
       "norm_label": "build_html.py",
-      "community_name": "build_html.py",
-      "id": "build_html"
+      "id": "build_html",
+      "community_name": "build_html.py"
     },
     {
       "label": "complete_all_tests.py",
@@ -64,10 +64,10 @@
       "source_file": "complete_all_tests.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 12,
+      "community": 10,
       "norm_label": "complete_all_tests.py",
-      "community_name": "complete_all_tests.py",
-      "id": "complete_all_tests"
+      "id": "complete_all_tests",
+      "community_name": "complete_all_tests.py"
     },
     {
       "label": "get_fill_pool()",
@@ -75,10 +75,10 @@
       "source_file": "complete_all_tests.py",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 12,
+      "community": 10,
       "norm_label": "get_fill_pool()",
-      "community_name": "complete_all_tests.py",
-      "id": "complete_all_tests_get_fill_pool"
+      "id": "complete_all_tests_get_fill_pool",
+      "community_name": "complete_all_tests.py"
     },
     {
       "label": "complete_tests()",
@@ -86,10 +86,10 @@
       "source_file": "complete_all_tests.py",
       "source_location": "L132",
       "_origin": "ast",
-      "community": 12,
+      "community": 10,
       "norm_label": "complete_tests()",
-      "community_name": "complete_all_tests.py",
-      "id": "complete_all_tests_complete_tests"
+      "id": "complete_all_tests_complete_tests",
+      "community_name": "complete_all_tests.py"
     },
     {
       "label": "correct_test_1.py",
@@ -97,10 +97,10 @@
       "source_file": "correct_test_1.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 16,
       "norm_label": "correct_test_1.py",
-      "community_name": "correct_test_1.py",
-      "id": "correct_test_1"
+      "id": "correct_test_1",
+      "community_name": "correct_test_1.py"
     },
     {
       "label": "correct_test_1_errors()",
@@ -108,10 +108,10 @@
       "source_file": "correct_test_1.py",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 17,
+      "community": 16,
       "norm_label": "correct_test_1_errors()",
-      "community_name": "correct_test_1.py",
-      "id": "correct_test_1_correct_test_1_errors"
+      "id": "correct_test_1_correct_test_1_errors",
+      "community_name": "correct_test_1.py"
     },
     {
       "label": "fix_typos.py",
@@ -119,10 +119,10 @@
       "source_file": "fix_typos.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 17,
       "norm_label": "fix_typos.py",
-      "community_name": "fix_typos.py",
-      "id": "fix_typos"
+      "id": "fix_typos",
+      "community_name": "fix_typos.py"
     },
     {
       "label": "fix_test_typos()",
@@ -130,10 +130,10 @@
       "source_file": "fix_typos.py",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 18,
+      "community": 17,
       "norm_label": "fix_test_typos()",
-      "community_name": "fix_typos.py",
-      "id": "fix_typos_fix_test_typos"
+      "id": "fix_typos_fix_test_typos",
+      "community_name": "fix_typos.py"
     },
     {
       "label": "generate_advanced_tests.py",
@@ -141,10 +141,10 @@
       "source_file": "generate_advanced_tests.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 19,
+      "community": 18,
       "norm_label": "generate_advanced_tests.py",
-      "community_name": "generate_advanced_tests.py",
-      "id": "generate_advanced_tests"
+      "id": "generate_advanced_tests",
+      "community_name": "generate_advanced_tests.py"
     },
     {
       "label": "generate_questions()",
@@ -152,10 +152,10 @@
       "source_file": "generate_advanced_tests.py",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 19,
+      "community": 18,
       "norm_label": "generate_questions()",
-      "community_name": "generate_advanced_tests.py",
-      "id": "generate_advanced_tests_generate_questions"
+      "id": "generate_advanced_tests_generate_questions",
+      "community_name": "generate_advanced_tests.py"
     },
     {
       "label": "marked.min.js",
@@ -165,8 +165,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "marked.min.js",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min"
+      "id": "js_marked_min",
+      "community_name": "marked.min.js"
     },
     {
       "label": "z()",
@@ -176,8 +176,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "z()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_z"
+      "id": "js_marked_min_z",
+      "community_name": "marked.min.js"
     },
     {
       "label": "N()",
@@ -187,8 +187,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "n()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_n"
+      "id": "js_marked_min_n",
+      "community_name": "marked.min.js"
     },
     {
       "label": "h()",
@@ -198,8 +198,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "h()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_h"
+      "id": "js_marked_min_h",
+      "community_name": "marked.min.js"
     },
     {
       "label": "R()",
@@ -209,8 +209,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "r()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_r"
+      "id": "js_marked_min_r",
+      "community_name": "parseInline"
     },
     {
       "label": "V()",
@@ -220,8 +220,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "v()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_v"
+      "id": "js_marked_min_v",
+      "community_name": "parseInline"
     },
     {
       "label": "Y()",
@@ -229,10 +229,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 11,
+      "community": 9,
       "norm_label": "y()",
-      "community_name": "table",
-      "id": "js_marked_min_y"
+      "id": "js_marked_min_y",
+      "community_name": "table"
     },
     {
       "label": "A()",
@@ -240,10 +240,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 10,
+      "community": 8,
       "norm_label": "a()",
-      "community_name": "A",
-      "id": "js_marked_min_a"
+      "id": "js_marked_min_a",
+      "community_name": "A"
     },
     {
       "label": "de()",
@@ -253,8 +253,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "de()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_de"
+      "id": "js_marked_min_de",
+      "community_name": "parseInline"
     },
     {
       "label": "me()",
@@ -262,10 +262,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "me()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_me"
+      "id": "js_marked_min_me",
+      "community_name": "inlineTokens"
     },
     {
       "label": "rt()",
@@ -275,8 +275,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "rt()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_rt"
+      "id": "js_marked_min_rt",
+      "community_name": "marked.min.js"
     },
     {
       "label": "constructor()",
@@ -286,8 +286,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "constructor()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_constructor"
+      "id": "js_marked_min_constructor",
+      "community_name": "marked.min.js"
     },
     {
       "label": "space()",
@@ -297,8 +297,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "space()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_space"
+      "id": "js_marked_min_space",
+      "community_name": "marked.min.js"
     },
     {
       "label": "code()",
@@ -306,10 +306,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 10,
+      "community": 8,
       "norm_label": "code()",
-      "community_name": "A",
-      "id": "js_marked_min_code"
+      "id": "js_marked_min_code",
+      "community_name": "A"
     },
     {
       "label": "fences()",
@@ -319,8 +319,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "fences()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_fences"
+      "id": "js_marked_min_fences",
+      "community_name": "marked.min.js"
     },
     {
       "label": "heading()",
@@ -328,10 +328,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 8,
       "norm_label": "heading()",
-      "community_name": "A",
-      "id": "js_marked_min_heading"
+      "id": "js_marked_min_heading",
+      "community_name": "A"
     },
     {
       "label": "hr()",
@@ -339,10 +339,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 8,
       "norm_label": "hr()",
-      "community_name": "A",
-      "id": "js_marked_min_hr"
+      "id": "js_marked_min_hr",
+      "community_name": "A"
     },
     {
       "label": "blockquote()",
@@ -350,10 +350,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 10,
+      "community": 8,
       "norm_label": "blockquote()",
-      "community_name": "A",
-      "id": "js_marked_min_blockquote"
+      "id": "js_marked_min_blockquote",
+      "community_name": "A"
     },
     {
       "label": "list()",
@@ -361,10 +361,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 13,
+      "community": 12,
       "norm_label": "list()",
-      "community_name": "listitem",
-      "id": "js_marked_min_list"
+      "id": "js_marked_min_list",
+      "community_name": "listitem"
     },
     {
       "label": "html()",
@@ -374,8 +374,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "html()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_html"
+      "id": "js_marked_min_html",
+      "community_name": "parseInline"
     },
     {
       "label": "def()",
@@ -385,8 +385,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "def()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_def"
+      "id": "js_marked_min_def",
+      "community_name": "marked.min.js"
     },
     {
       "label": "table()",
@@ -394,10 +394,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 11,
+      "community": 9,
       "norm_label": "table()",
-      "community_name": "table",
-      "id": "js_marked_min_table"
+      "id": "js_marked_min_table",
+      "community_name": "table"
     },
     {
       "label": "lheading()",
@@ -407,8 +407,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "lheading()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_lheading"
+      "id": "js_marked_min_lheading",
+      "community_name": "marked.min.js"
     },
     {
       "label": "paragraph()",
@@ -418,8 +418,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "paragraph()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_paragraph"
+      "id": "js_marked_min_paragraph",
+      "community_name": "marked.min.js"
     },
     {
       "label": "text()",
@@ -429,8 +429,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "text()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_text"
+      "id": "js_marked_min_text",
+      "community_name": "parseInline"
     },
     {
       "label": "escape()",
@@ -440,8 +440,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "escape()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_escape"
+      "id": "js_marked_min_escape",
+      "community_name": "marked.min.js"
     },
     {
       "label": "tag()",
@@ -451,8 +451,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "tag()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_tag"
+      "id": "js_marked_min_tag",
+      "community_name": "marked.min.js"
     },
     {
       "label": "link()",
@@ -462,8 +462,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "link()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_link"
+      "id": "js_marked_min_link",
+      "community_name": "parseInline"
     },
     {
       "label": "reflink()",
@@ -471,10 +471,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "reflink()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_reflink"
+      "id": "js_marked_min_reflink",
+      "community_name": "inlineTokens"
     },
     {
       "label": "emStrong()",
@@ -484,8 +484,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "emstrong()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_emstrong"
+      "id": "js_marked_min_emstrong",
+      "community_name": "marked.min.js"
     },
     {
       "label": "codespan()",
@@ -495,8 +495,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "codespan()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_codespan"
+      "id": "js_marked_min_codespan",
+      "community_name": "parseInline"
     },
     {
       "label": "br()",
@@ -506,8 +506,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "br()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_br"
+      "id": "js_marked_min_br",
+      "community_name": "parseInline"
     },
     {
       "label": "del()",
@@ -517,8 +517,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "del()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_del"
+      "id": "js_marked_min_del",
+      "community_name": "parseInline"
     },
     {
       "label": "autolink()",
@@ -528,8 +528,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "autolink()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_autolink"
+      "id": "js_marked_min_autolink",
+      "community_name": "marked.min.js"
     },
     {
       "label": "url()",
@@ -539,8 +539,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "url()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_url"
+      "id": "js_marked_min_url",
+      "community_name": "marked.min.js"
     },
     {
       "label": "inlineText()",
@@ -550,8 +550,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "inlinetext()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_inlinetext"
+      "id": "js_marked_min_inlinetext",
+      "community_name": "marked.min.js"
     },
     {
       "label": "rules()",
@@ -561,8 +561,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "rules()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_rules"
+      "id": "js_marked_min_rules",
+      "community_name": "marked.min.js"
     },
     {
       "label": "lex()",
@@ -570,10 +570,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "lex()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_lex"
+      "id": "js_marked_min_lex",
+      "community_name": "inlineTokens"
     },
     {
       "label": "lexInline()",
@@ -581,10 +581,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "lexinline()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_lexinline"
+      "id": "js_marked_min_lexinline",
+      "community_name": "inlineTokens"
     },
     {
       "label": "blockTokens()",
@@ -592,10 +592,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "blocktokens()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_blocktokens"
+      "id": "js_marked_min_blocktokens",
+      "community_name": "inlineTokens"
     },
     {
       "label": "inline()",
@@ -605,8 +605,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "inline()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_inline"
+      "id": "js_marked_min_inline",
+      "community_name": "marked.min.js"
     },
     {
       "label": "inlineTokens()",
@@ -614,10 +614,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "inlinetokens()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_inlinetokens"
+      "id": "js_marked_min_inlinetokens",
+      "community_name": "inlineTokens"
     },
     {
       "label": "listitem()",
@@ -625,10 +625,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 13,
+      "community": 12,
       "norm_label": "listitem()",
-      "community_name": "listitem",
-      "id": "js_marked_min_listitem"
+      "id": "js_marked_min_listitem",
+      "community_name": "listitem"
     },
     {
       "label": "checkbox()",
@@ -636,10 +636,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 13,
+      "community": 12,
       "norm_label": "checkbox()",
-      "community_name": "listitem",
-      "id": "js_marked_min_checkbox"
+      "id": "js_marked_min_checkbox",
+      "community_name": "listitem"
     },
     {
       "label": "tablerow()",
@@ -647,10 +647,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 11,
+      "community": 9,
       "norm_label": "tablerow()",
-      "community_name": "table",
-      "id": "js_marked_min_tablerow"
+      "id": "js_marked_min_tablerow",
+      "community_name": "table"
     },
     {
       "label": "tablecell()",
@@ -658,10 +658,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L64",
       "_origin": "ast",
-      "community": 11,
+      "community": 9,
       "norm_label": "tablecell()",
-      "community_name": "table",
-      "id": "js_marked_min_tablecell"
+      "id": "js_marked_min_tablecell",
+      "community_name": "table"
     },
     {
       "label": "strong()",
@@ -671,8 +671,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "strong()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_strong"
+      "id": "js_marked_min_strong",
+      "community_name": "parseInline"
     },
     {
       "label": "em()",
@@ -682,8 +682,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "em()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_em"
+      "id": "js_marked_min_em",
+      "community_name": "parseInline"
     },
     {
       "label": "image()",
@@ -693,8 +693,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "image()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_image"
+      "id": "js_marked_min_image",
+      "community_name": "parseInline"
     },
     {
       "label": "parse()",
@@ -702,10 +702,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 0,
+      "community": 20,
       "norm_label": "parse()",
-      "community_name": "parse",
-      "id": "js_marked_min_parse"
+      "id": "js_marked_min_parse",
+      "community_name": "parse"
     },
     {
       "label": "parseInline()",
@@ -715,8 +715,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "parseinline()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_parseinline"
+      "id": "js_marked_min_parseinline",
+      "community_name": "parseInline"
     },
     {
       "label": "preprocess()",
@@ -724,10 +724,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "preprocess()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_preprocess"
+      "id": "js_marked_min_preprocess",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "postprocess()",
@@ -735,10 +735,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "postprocess()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_postprocess"
+      "id": "js_marked_min_postprocess",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "processAllTokens()",
@@ -746,10 +746,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "processalltokens()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_processalltokens"
+      "id": "js_marked_min_processalltokens",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "provideLexer()",
@@ -757,10 +757,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "providelexer()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_providelexer"
+      "id": "js_marked_min_providelexer",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "provideParser()",
@@ -768,10 +768,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "provideparser()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_provideparser"
+      "id": "js_marked_min_provideparser",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "walkTokens()",
@@ -779,10 +779,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "walktokens()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_walktokens"
+      "id": "js_marked_min_walktokens",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "use()",
@@ -792,8 +792,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "use()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_use"
+      "id": "js_marked_min_use",
+      "community_name": "marked.min.js"
     },
     {
       "label": "setOptions()",
@@ -803,8 +803,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "setoptions()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_setoptions"
+      "id": "js_marked_min_setoptions",
+      "community_name": "marked.min.js"
     },
     {
       "label": "lexer()",
@@ -812,10 +812,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 5,
       "norm_label": "lexer()",
-      "community_name": "inlineTokens",
-      "id": "js_marked_min_lexer"
+      "id": "js_marked_min_lexer",
+      "community_name": "inlineTokens"
     },
     {
       "label": "parser()",
@@ -823,10 +823,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 0,
+      "community": 20,
       "norm_label": "parser()",
-      "community_name": "parse",
-      "id": "js_marked_min_parser"
+      "id": "js_marked_min_parser",
+      "community_name": "parse"
     },
     {
       "label": "parseMarkdown()",
@@ -834,10 +834,10 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 7,
+      "community": 6,
       "norm_label": "parsemarkdown()",
-      "community_name": "parseMarkdown",
-      "id": "js_marked_min_parsemarkdown"
+      "id": "js_marked_min_parsemarkdown",
+      "community_name": "parseMarkdown"
     },
     {
       "label": "onError()",
@@ -847,8 +847,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "onerror()",
-      "community_name": "parseInline",
-      "id": "js_marked_min_onerror"
+      "id": "js_marked_min_onerror",
+      "community_name": "parseInline"
     },
     {
       "label": "k()",
@@ -858,8 +858,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "k()",
-      "community_name": "marked.min.js",
-      "id": "js_marked_min_k"
+      "id": "js_marked_min_k",
+      "community_name": "marked.min.js"
     },
     {
       "label": "parse_notes.py",
@@ -869,8 +869,8 @@
       "_origin": "ast",
       "community": 21,
       "norm_label": "parse_notes.py",
-      "community_name": "parse_notes.py",
-      "id": "parse_notes"
+      "id": "parse_notes",
+      "community_name": "parse_notes.py"
     },
     {
       "label": "parse_notes()",
@@ -880,8 +880,8 @@
       "_origin": "ast",
       "community": 21,
       "norm_label": "parse_notes()",
-      "community_name": "parse_notes.py",
-      "id": "parse_notes_parse_notes"
+      "id": "parse_notes_parse_notes",
+      "community_name": "parse_notes.py"
     },
     {
       "label": "parse_tests.py",
@@ -889,10 +889,10 @@
       "source_file": "parse_tests.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 13,
       "norm_label": "parse_tests.py",
-      "community_name": "parse_tests.py",
-      "id": "parse_tests"
+      "id": "parse_tests",
+      "community_name": "parse_tests.py"
     },
     {
       "label": "parse_file()",
@@ -900,10 +900,10 @@
       "source_file": "parse_tests.py",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 14,
+      "community": 13,
       "norm_label": "parse_file()",
-      "community_name": "parse_tests.py",
-      "id": "parse_tests_parse_file"
+      "id": "parse_tests_parse_file",
+      "community_name": "parse_tests.py"
     },
     {
       "label": "main()",
@@ -911,10 +911,10 @@
       "source_file": "parse_tests.py",
       "source_location": "L98",
       "_origin": "ast",
-      "community": 14,
+      "community": 13,
       "norm_label": "main()",
-      "community_name": "parse_tests.py",
-      "id": "parse_tests_main"
+      "id": "parse_tests_main",
+      "community_name": "parse_tests.py"
     },
     {
       "label": "scratch_ast.py",
@@ -922,10 +922,10 @@
       "source_file": "scratch_ast.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 28,
+      "community": 26,
       "norm_label": "scratch_ast.py",
-      "community_name": "scratch_ast.py",
-      "id": "scratch_ast"
+      "id": "scratch_ast",
+      "community_name": "scratch_ast.py"
     },
     {
       "label": "semantic_audit.py",
@@ -935,8 +935,8 @@
       "_origin": "ast",
       "community": 23,
       "norm_label": "semantic_audit.py",
-      "community_name": "semantic_audit.py",
-      "id": "semantic_audit"
+      "id": "semantic_audit",
+      "community_name": "semantic_audit.py"
     },
     {
       "label": "semantic_finance_audit()",
@@ -946,80 +946,8 @@
       "_origin": "ast",
       "community": 23,
       "norm_label": "semantic_finance_audit()",
-      "community_name": "semantic_audit.py",
-      "id": "semantic_audit_semantic_finance_audit"
-    },
-    {
-      "label": "generate_flashcards.py",
-      "file_type": "code",
-      "source_file": "generate_flashcards.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "generate_flashcards.py",
-      "community_name": "generate_flashcards.py",
-      "id": "generate_flashcards"
-    },
-    {
-      "label": "generate_flashcards()",
-      "file_type": "code",
-      "source_file": "generate_flashcards.py",
-      "source_location": "L4",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "generate_flashcards()",
-      "community_name": "generate_flashcards.py",
-      "id": "generate_flashcards_generate_flashcards"
-    },
-    {
-      "label": "build_engine.py",
-      "file_type": "code",
-      "source_file": "build_engine.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "build_engine",
-      "community": 9,
-      "norm_label": "build_engine.py"
-    },
-    {
-      "label": "parse_test_file()",
-      "file_type": "code",
-      "source_file": "build_engine.py",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "build_engine_parse_test_file",
-      "community": 9,
-      "norm_label": "parse_test_file()"
-    },
-    {
-      "label": "parse_notes_file()",
-      "file_type": "code",
-      "source_file": "build_engine.py",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "build_engine_parse_notes_file",
-      "community": 9,
-      "norm_label": "parse_notes_file()"
-    },
-    {
-      "label": "generate_flashcards()",
-      "file_type": "code",
-      "source_file": "build_engine.py",
-      "source_location": "L80",
-      "_origin": "ast",
-      "id": "build_engine_generate_flashcards",
-      "community": 9,
-      "norm_label": "generate_flashcards()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "build_engine.py",
-      "source_location": "L99",
-      "_origin": "ast",
-      "id": "build_engine_main",
-      "community": 9,
-      "norm_label": "main()"
+      "id": "semantic_audit_semantic_finance_audit",
+      "community_name": "semantic_audit.py"
     },
     {
       "label": "data.js",
@@ -1027,9 +955,32 @@
       "source_file": "data/data.js",
       "source_location": "L1",
       "_origin": "ast",
+      "community": 25,
+      "norm_label": "data.js",
       "id": "data_data",
-      "community": 26,
-      "norm_label": "data.js"
+      "community_name": "data.js"
+    },
+    {
+      "label": "generate_flashcards.py",
+      "file_type": "code",
+      "source_file": "generate_flashcards.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "generate_flashcards.py",
+      "id": "generate_flashcards",
+      "community_name": "generate_flashcards.py"
+    },
+    {
+      "label": "generate_flashcards()",
+      "file_type": "code",
+      "source_file": "generate_flashcards.py",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "generate_flashcards()",
+      "id": "generate_flashcards_generate_flashcards",
+      "community_name": "generate_flashcards.py"
     },
     {
       "label": "app.js",
@@ -1037,499 +988,494 @@
       "source_file": "js/app.js",
       "source_location": "L1",
       "_origin": "ast",
+      "community": 1,
+      "norm_label": "app.js",
       "id": "js_app",
-      "community": 1,
-      "norm_label": "app.js"
-    },
-    {
-      "label": "testData",
-      "file_type": "code",
-      "source_file": "js/app.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "js_app_testdata",
-      "community": 1,
-      "norm_label": "testdata"
-    },
-    {
-      "label": "notesData",
-      "file_type": "code",
-      "source_file": "js/app.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "js_app_notesdata",
-      "community": 1,
-      "norm_label": "notesdata"
-    },
-    {
-      "label": "getStorageKey()",
-      "file_type": "code",
-      "source_file": "js/app.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "js_app_getstoragekey",
-      "community": 4,
-      "norm_label": "getstoragekey()"
+      "community_name": "app.js"
     },
     {
       "label": "initializeApp()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L13",
+      "source_location": "L6",
       "_origin": "ast",
+      "community": 1,
+      "norm_label": "initializeapp()",
       "id": "js_app_initializeapp",
-      "community": 1,
-      "norm_label": "initializeapp()"
-    },
-    {
-      "label": "renderCourseGrid()",
-      "file_type": "code",
-      "source_file": "js/app.js",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "js_app_rendercoursegrid",
-      "community": 1,
-      "norm_label": "rendercoursegrid()"
-    },
-    {
-      "label": "selectCourse()",
-      "file_type": "code",
-      "source_file": "js/app.js",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "js_app_selectcourse",
-      "community": 4,
-      "norm_label": "selectcourse()"
+      "community_name": "app.js"
     },
     {
       "label": "answers",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L89",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "js_app_answers",
       "community": 1,
-      "norm_label": "answers"
+      "norm_label": "answers",
+      "id": "js_app_answers",
+      "community_name": "app.js"
     },
     {
       "label": "starredQuestions",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L94",
+      "source_location": "L30",
       "_origin": "ast",
-      "id": "js_app_starredquestions",
       "community": 1,
-      "norm_label": "starredquestions"
+      "norm_label": "starredquestions",
+      "id": "js_app_starredquestions",
+      "community_name": "app.js"
     },
     {
       "label": "flashcardsList",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L97",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "js_app_flashcardslist",
       "community": 1,
-      "norm_label": "flashcardslist"
+      "norm_label": "flashcardslist",
+      "id": "js_app_flashcardslist",
+      "community_name": "app.js"
     },
     {
       "label": "loadLocalStorage()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L101",
+      "source_location": "L37",
       "_origin": "ast",
+      "community": 1,
+      "norm_label": "loadlocalstorage()",
       "id": "js_app_loadlocalstorage",
-      "community": 4,
-      "norm_label": "loadlocalstorage()"
+      "community_name": "app.js"
     },
     {
       "label": "initiateNewTest()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L125",
+      "source_location": "L72",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "initiatenewtest()",
       "id": "js_app_initiatenewtest",
-      "community": 5,
-      "norm_label": "initiatenewtest()"
+      "community_name": "startSimulator"
     },
     {
       "label": "resumeActiveTest()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L145",
+      "source_location": "L92",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "resumeactivetest()",
       "id": "js_app_resumeactivetest",
-      "community": 5,
-      "norm_label": "resumeactivetest()"
+      "community_name": "startSimulator"
     },
     {
       "label": "saveActiveTestState()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L161",
+      "source_location": "L108",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "saveactiveteststate()",
       "id": "js_app_saveactiveteststate",
-      "community": 5,
-      "norm_label": "saveactiveteststate()"
+      "community_name": "startSimulator"
     },
     {
       "label": "startSimulator()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L176",
+      "source_location": "L123",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "startsimulator()",
       "id": "js_app_startsimulator",
-      "community": 5,
-      "norm_label": "startsimulator()"
+      "community_name": "startSimulator"
     },
     {
       "label": "buildActiveGrid()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L217",
+      "source_location": "L164",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "buildactivegrid()",
       "id": "js_app_buildactivegrid",
-      "community": 3,
-      "norm_label": "buildactivegrid()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "updateGridStyles()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L237",
+      "source_location": "L184",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "updategridstyles()",
       "id": "js_app_updategridstyles",
-      "community": 3,
-      "norm_label": "updategridstyles()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "renderActiveQuestion()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L279",
+      "source_location": "L226",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "renderactivequestion()",
       "id": "js_app_renderactivequestion",
-      "community": 3,
-      "norm_label": "renderactivequestion()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "selectSimOptionUI()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L354",
+      "source_location": "L301",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "selectsimoptionui()",
       "id": "js_app_selectsimoptionui",
-      "community": 3,
-      "norm_label": "selectsimoptionui()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "selectSimOption()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L385",
+      "source_location": "L332",
       "_origin": "ast",
-      "id": "js_app_selectsimoption",
       "community": 3,
-      "norm_label": "selectsimoption()"
+      "norm_label": "selectsimoption()",
+      "id": "js_app_selectsimoption",
+      "community_name": "startSimulator"
     },
     {
       "label": "simPrev()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L391",
+      "source_location": "L338",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "simprev()",
       "id": "js_app_simprev",
-      "community": 3,
-      "norm_label": "simprev()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "simNext()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L398",
+      "source_location": "L345",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "simnext()",
       "id": "js_app_simnext",
-      "community": 3,
-      "norm_label": "simnext()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "simSubmit()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L405",
+      "source_location": "L352",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "simsubmit()",
       "id": "js_app_simsubmit",
-      "community": 4,
-      "norm_label": "simsubmit()"
+      "community_name": "startSimulator"
     },
     {
       "label": "closeResults()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L462",
+      "source_location": "L409",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "closeresults()",
       "id": "js_app_closeresults",
-      "community": 3,
-      "norm_label": "closeresults()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "toggleBookmarkActiveQuestion()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L468",
+      "source_location": "L415",
       "_origin": "ast",
+      "community": 11,
+      "norm_label": "togglebookmarkactivequestion()",
       "id": "js_app_togglebookmarkactivequestion",
-      "community": 4,
-      "norm_label": "togglebookmarkactivequestion()"
+      "community_name": "updateAnalyticsUI"
     },
     {
       "label": "switchTab()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L487",
+      "source_location": "L434",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "switchtab()",
       "id": "js_app_switchtab",
-      "community": 5,
-      "norm_label": "switchtab()"
+      "community_name": "startSimulator"
     },
     {
       "label": "renderNotes()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L507",
+      "source_location": "L454",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "rendernotes()",
       "id": "js_app_rendernotes",
-      "community": 5,
-      "norm_label": "rendernotes()"
+      "community_name": "startSimulator"
     },
     {
       "label": "mdToHtml()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L542",
+      "source_location": "L489",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "mdtohtml()",
       "id": "js_app_mdtohtml",
-      "community": 5,
-      "norm_label": "mdtohtml()"
+      "community_name": "startSimulator"
     },
     {
       "label": "flipCard()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L550",
+      "source_location": "L497",
       "_origin": "ast",
-      "id": "js_app_flipcard",
       "community": 1,
-      "norm_label": "flipcard()"
+      "norm_label": "flipcard()",
+      "id": "js_app_flipcard",
+      "community_name": "app.js"
     },
     {
       "label": "updateAnalyticsUI()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L566",
+      "source_location": "L502",
       "_origin": "ast",
+      "community": 11,
+      "norm_label": "updateanalyticsui()",
       "id": "js_app_updateanalyticsui",
-      "community": 4,
-      "norm_label": "updateanalyticsui()"
+      "community_name": "updateAnalyticsUI"
     },
     {
       "label": "removeBookmark()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L626",
+      "source_location": "L562",
       "_origin": "ast",
+      "community": 11,
+      "norm_label": "removebookmark()",
       "id": "js_app_removebookmark",
-      "community": 4,
-      "norm_label": "removebookmark()"
+      "community_name": "updateAnalyticsUI"
     },
     {
       "label": "toggleTheme()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L633",
+      "source_location": "L569",
       "_origin": "ast",
-      "id": "js_app_toggletheme",
       "community": 1,
-      "norm_label": "toggletheme()"
+      "norm_label": "toggletheme()",
+      "id": "js_app_toggletheme",
+      "community_name": "app.js"
     },
     {
       "label": "openDrawer()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L652",
+      "source_location": "L588",
       "_origin": "ast",
-      "id": "js_app_opendrawer",
       "community": 1,
-      "norm_label": "opendrawer()"
+      "norm_label": "opendrawer()",
+      "id": "js_app_opendrawer",
+      "community_name": "app.js"
     },
     {
       "label": "closeDrawer()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L657",
+      "source_location": "L593",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "closedrawer()",
       "id": "js_app_closedrawer",
-      "community": 3,
-      "norm_label": "closedrawer()"
+      "community_name": "renderActiveQuestion"
     },
     {
       "label": "updateStartTitle()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L663",
+      "source_location": "L599",
       "_origin": "ast",
-      "id": "js_app_updatestarttitle",
       "community": 1,
-      "norm_label": "updatestarttitle()"
+      "norm_label": "updatestarttitle()",
+      "id": "js_app_updatestarttitle",
+      "community_name": "app.js"
     },
     {
       "label": "formatTime()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L667",
+      "source_location": "L603",
       "_origin": "ast",
+      "community": 3,
+      "norm_label": "formattime()",
       "id": "js_app_formattime",
-      "community": 5,
-      "norm_label": "formattime()"
+      "community_name": "startSimulator"
     },
     {
       "label": "setupTestSelectors()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L675",
+      "source_location": "L611",
       "_origin": "ast",
+      "community": 1,
+      "norm_label": "setuptestselectors()",
       "id": "js_app_setuptestselectors",
-      "community": 4,
-      "norm_label": "setuptestselectors()"
+      "community_name": "app.js"
     },
     {
       "label": "renderFlashcard()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L740",
+      "source_location": "L668",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "renderflashcard()",
       "id": "js_app_renderflashcard",
-      "community": 8,
-      "norm_label": "renderflashcard()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "nextCard()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L751",
+      "source_location": "L679",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "nextcard()",
       "id": "js_app_nextcard",
-      "community": 8,
-      "norm_label": "nextcard()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "prevCard()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L758",
+      "source_location": "L686",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "prevcard()",
       "id": "js_app_prevcard",
-      "community": 8,
-      "norm_label": "prevcard()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "shuffleCards()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L765",
+      "source_location": "L693",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "shufflecards()",
       "id": "js_app_shufflecards",
-      "community": 8,
-      "norm_label": "shufflecards()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "setupFlashcardDecks()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L774",
+      "source_location": "L702",
       "_origin": "ast",
+      "community": 1,
+      "norm_label": "setupflashcarddecks()",
       "id": "js_app_setupflashcarddecks",
-      "community": 4,
-      "norm_label": "setupflashcarddecks()"
+      "community_name": "app.js"
     },
     {
       "label": "loadFlashcardDeck()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L792",
+      "source_location": "L720",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "loadflashcarddeck()",
       "id": "js_app_loadflashcarddeck",
-      "community": 8,
-      "norm_label": "loadflashcarddeck()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "jumpToFlashcard()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L802",
+      "source_location": "L730",
       "_origin": "ast",
+      "community": 7,
+      "norm_label": "jumptoflashcard()",
       "id": "js_app_jumptoflashcard",
-      "community": 8,
-      "norm_label": "jumptoflashcard()"
+      "community_name": "renderFlashcard"
     },
     {
       "label": "toggleTranslateDropdown()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L819",
+      "source_location": "L747",
       "_origin": "ast",
-      "id": "js_app_toggletranslatedropdown",
       "community": 1,
-      "norm_label": "toggletranslatedropdown()"
+      "norm_label": "toggletranslatedropdown()",
+      "id": "js_app_toggletranslatedropdown",
+      "community_name": "app.js"
     },
     {
       "label": "applySavedLanguage()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L823",
+      "source_location": "L751",
       "_origin": "ast",
-      "id": "js_app_applysavedlanguage",
       "community": 1,
-      "norm_label": "applysavedlanguage()"
+      "norm_label": "applysavedlanguage()",
+      "id": "js_app_applysavedlanguage",
+      "community_name": "app.js"
     },
     {
       "label": "setLang()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L833",
+      "source_location": "L761",
       "_origin": "ast",
-      "id": "js_app_setlang",
       "community": 1,
-      "norm_label": "setlang()"
+      "norm_label": "setlang()",
+      "id": "js_app_setlang",
+      "community_name": "app.js"
     },
     {
       "label": "allLanguages",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L852",
+      "source_location": "L780",
       "_origin": "ast",
-      "id": "js_app_alllanguages",
       "community": 1,
-      "norm_label": "alllanguages"
+      "norm_label": "alllanguages",
+      "id": "js_app_alllanguages",
+      "community_name": "app.js"
     },
     {
       "label": "populateAllLangs()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L856",
+      "source_location": "L784",
       "_origin": "ast",
-      "id": "js_app_populatealllangs",
       "community": 1,
-      "norm_label": "populatealllangs()"
+      "norm_label": "populatealllangs()",
+      "id": "js_app_populatealllangs",
+      "community_name": "app.js"
     },
     {
       "label": "filterLangs()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L866",
+      "source_location": "L794",
       "_origin": "ast",
-      "id": "js_app_filterlangs",
       "community": 1,
-      "norm_label": "filterlangs()"
+      "norm_label": "filterlangs()",
+      "id": "js_app_filterlangs",
+      "community_name": "app.js"
     },
     {
       "label": "rebuild_everything.py",
@@ -1537,9 +1483,10 @@
       "source_file": "rebuild_everything.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "rebuild_everything",
       "community": 22,
-      "norm_label": "rebuild_everything.py"
+      "norm_label": "rebuild_everything.py",
+      "id": "rebuild_everything",
+      "community_name": "rebuild_everything.py"
     },
     {
       "label": "clean_data()",
@@ -1547,39 +1494,10 @@
       "source_file": "rebuild_everything.py",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "rebuild_everything_clean_data",
       "community": 22,
-      "norm_label": "clean_data()"
-    },
-    {
-      "label": "refactor_app_js.py",
-      "file_type": "code",
-      "source_file": "refactor_app_js.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "refactor_app_js",
-      "community": 27,
-      "norm_label": "refactor_app_js.py"
-    },
-    {
-      "label": "validate_module.py",
-      "file_type": "code",
-      "source_file": "validate_module.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "validate_module",
-      "community": 24,
-      "norm_label": "validate_module.py"
-    },
-    {
-      "label": "validate_module()",
-      "file_type": "code",
-      "source_file": "validate_module.py",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "validate_module_validate_module",
-      "community": 24,
-      "norm_label": "validate_module()"
+      "norm_label": "clean_data()",
+      "id": "rebuild_everything_clean_data",
+      "community_name": "rebuild_everything.py"
     }
   ],
   "links": [
@@ -2986,245 +2904,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L80",
+      "source_file": "js/app.js",
+      "source_location": "L780",
       "weight": 1.0,
-      "source": "build_engine",
-      "target": "build_engine_generate_flashcards",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L99",
-      "weight": 1.0,
-      "source": "build_engine",
-      "target": "build_engine_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "build_engine",
-      "target": "build_engine_parse_notes_file",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "build_engine",
-      "target": "build_engine_parse_test_file",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L133",
-      "weight": 1.0,
-      "source": "build_engine_main",
-      "target": "build_engine_parse_test_file",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L143",
-      "weight": 1.0,
-      "source": "build_engine_main",
-      "target": "build_engine_parse_notes_file",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "build_engine.py",
-      "source_location": "L146",
-      "weight": 1.0,
-      "source": "build_engine_main",
-      "target": "build_engine_generate_flashcards",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_alllanguages"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L852",
+      "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_alllanguages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_answers",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L823",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_applysavedlanguage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L217",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_buildactivegrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L657",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_closedrawer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L462",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_closeresults",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L866",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_filterlangs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_flashcardslist",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L550",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_flipcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L667",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_formattime",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_initializeapp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L125",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_initiatenewtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L802",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_jumptoflashcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L792",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_loadflashcarddeck",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L101",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_loadlocalstorage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L542",
-      "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_mdtohtml",
-      "confidence_score": 1.0
+      "target": "js_app_answers"
     },
     {
       "relation": "contains",
@@ -3232,320 +2927,519 @@
       "source_file": "js/app.js",
       "source_location": "L751",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_nextcard",
-      "confidence_score": 1.0
+      "target": "js_app_applysavedlanguage"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L5",
+      "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_notesdata",
-      "confidence_score": 1.0
+      "target": "js_app_buildactivegrid"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L652",
+      "source_location": "L593",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_opendrawer",
-      "confidence_score": 1.0
+      "target": "js_app_closedrawer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L409",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_closeresults"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L794",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_filterlangs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_flashcardslist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L497",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_flipcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L603",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_formattime"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_initializeapp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_initiatenewtest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L730",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_jumptoflashcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L720",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_loadflashcarddeck"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_loadlocalstorage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L489",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_mdtohtml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L679",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_nextcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L588",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app",
+      "target": "js_app_opendrawer"
     },
     {
       "relation": "indirect_call",
       "confidence": "INFERRED",
       "source_file": "js/app.js",
-      "source_location": "L890",
+      "source_location": "L818",
       "weight": 1.0,
       "context": "argument",
+      "confidence_score": 0.5,
       "source": "js_app",
-      "target": "js_app_populatealllangs",
-      "confidence_score": 0.5
+      "target": "js_app_populatealllangs"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L758",
+      "source_location": "L686",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_prevcard",
-      "confidence_score": 1.0
+      "target": "js_app_prevcard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L626",
+      "source_location": "L562",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_removebookmark",
-      "confidence_score": 1.0
+      "target": "js_app_removebookmark"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L279",
+      "source_location": "L226",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L35",
+      "source_location": "L668",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_rendercoursegrid",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L740",
+      "source_location": "L454",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_rendernotes"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L507",
+      "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_rendernotes",
-      "confidence_score": 1.0
+      "target": "js_app_resumeactivetest"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L145",
+      "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_resumeactivetest",
-      "confidence_score": 1.0
+      "target": "js_app_saveactiveteststate"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L161",
+      "source_location": "L332",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_saveactiveteststate",
-      "confidence_score": 1.0
+      "target": "js_app_selectsimoption"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L53",
+      "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_selectcourse",
-      "confidence_score": 1.0
+      "target": "js_app_selectsimoptionui"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L385",
+      "source_location": "L761",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_selectsimoption",
-      "confidence_score": 1.0
+      "target": "js_app_setlang"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L354",
+      "source_location": "L702",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_selectsimoptionui",
-      "confidence_score": 1.0
+      "target": "js_app_setupflashcarddecks"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L833",
+      "source_location": "L611",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_setlang",
-      "confidence_score": 1.0
+      "target": "js_app_setuptestselectors"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L774",
+      "source_location": "L693",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_setupflashcarddecks",
-      "confidence_score": 1.0
+      "target": "js_app_shufflecards"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L675",
+      "source_location": "L345",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_setuptestselectors",
-      "confidence_score": 1.0
+      "target": "js_app_simnext"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L765",
+      "source_location": "L338",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_shufflecards",
-      "confidence_score": 1.0
+      "target": "js_app_simprev"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L398",
+      "source_location": "L352",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_simnext",
-      "confidence_score": 1.0
+      "target": "js_app_simsubmit"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L391",
+      "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_simprev",
-      "confidence_score": 1.0
+      "target": "js_app_starredquestions"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L405",
+      "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_simsubmit",
-      "confidence_score": 1.0
+      "target": "js_app_startsimulator"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L94",
+      "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_starredquestions",
-      "confidence_score": 1.0
+      "target": "js_app_switchtab"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L176",
+      "source_location": "L415",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_startsimulator",
-      "confidence_score": 1.0
+      "target": "js_app_togglebookmarkactivequestion"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L487",
+      "source_location": "L569",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_switchtab",
-      "confidence_score": 1.0
+      "target": "js_app_toggletheme"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L4",
+      "source_location": "L747",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_testdata",
-      "confidence_score": 1.0
+      "target": "js_app_toggletranslatedropdown"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L468",
+      "source_location": "L502",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_togglebookmarkactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_updateanalyticsui"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L633",
+      "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_toggletheme",
-      "confidence_score": 1.0
+      "target": "js_app_updategridstyles"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L819",
+      "source_location": "L599",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app",
-      "target": "js_app_toggletranslatedropdown",
-      "confidence_score": 1.0
+      "target": "js_app_updatestarttitle"
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L566",
+      "source_location": "L10",
       "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_updateanalyticsui",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "js_app_initializeapp",
+      "target": "js_app_loadlocalstorage"
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L237",
+      "source_location": "L11",
       "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_updategridstyles",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "js_app_initializeapp",
+      "target": "js_app_renderflashcard"
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L663",
+      "source_location": "L9",
       "weight": 1.0,
-      "source": "js_app",
-      "target": "js_app_updatestarttitle",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "js_app_initializeapp",
+      "target": "js_app_setupflashcarddecks"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_initializeapp",
+      "target": "js_app_setuptestselectors"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_loadlocalstorage",
+      "target": "js_app_applysavedlanguage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_loadlocalstorage",
+      "target": "js_app_updateanalyticsui"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_initiatenewtest",
+      "target": "js_app_saveactiveteststate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_initiatenewtest",
+      "target": "js_app_startsimulator"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_app_initiatenewtest",
+      "target": "js_app_switchtab"
     },
     {
       "relation": "calls",
@@ -3554,559 +3448,350 @@
       "source_file": "js/app.js",
       "source_location": "L105",
       "weight": 1.0,
-      "source": "js_app_loadlocalstorage",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L628",
-      "weight": 1.0,
-      "source": "js_app_removebookmark",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L146",
-      "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_resumeactivetest",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
+      "target": "js_app_startsimulator"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L163",
+      "source_location": "L104",
       "weight": 1.0,
-      "source": "js_app_saveactiveteststate",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L690",
-      "weight": 1.0,
-      "source": "js_app_setuptestselectors",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L438",
-      "weight": 1.0,
-      "source": "js_app_simsubmit",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L481",
-      "weight": 1.0,
-      "source": "js_app_togglebookmarkactivequestion",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L567",
-      "weight": 1.0,
-      "source": "js_app_updateanalyticsui",
-      "target": "js_app_getstoragekey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "js_app_initializeapp",
-      "target": "js_app_applysavedlanguage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "js_app_initializeapp",
-      "target": "js_app_rendercoursegrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "js_app_rendercoursegrid",
-      "target": "js_app_selectcourse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L73",
-      "weight": 1.0,
-      "source": "js_app_selectcourse",
-      "target": "js_app_loadlocalstorage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L74",
-      "weight": 1.0,
-      "source": "js_app_selectcourse",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L72",
-      "weight": 1.0,
-      "source": "js_app_selectcourse",
-      "target": "js_app_setupflashcarddecks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "js_app_selectcourse",
-      "target": "js_app_setuptestselectors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L120",
-      "weight": 1.0,
-      "source": "js_app_loadlocalstorage",
-      "target": "js_app_updateanalyticsui",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L138",
-      "weight": 1.0,
-      "source": "js_app_initiatenewtest",
-      "target": "js_app_saveactiveteststate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L142",
-      "weight": 1.0,
-      "source": "js_app_initiatenewtest",
-      "target": "js_app_startsimulator",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L141",
-      "weight": 1.0,
-      "source": "js_app_initiatenewtest",
-      "target": "js_app_switchtab",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L158",
-      "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_resumeactivetest",
-      "target": "js_app_startsimulator",
-      "confidence_score": 1.0
+      "target": "js_app_switchtab"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L157",
+      "source_location": "L334",
       "weight": 1.0,
-      "source": "js_app_resumeactivetest",
-      "target": "js_app_switchtab",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "js/app.js",
-      "source_location": "L387",
-      "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_selectsimoption",
-      "target": "js_app_saveactiveteststate",
-      "confidence_score": 1.0
+      "target": "js_app_saveactiveteststate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L356",
+      "source_location": "L303",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_selectsimoptionui",
-      "target": "js_app_saveactiveteststate",
-      "confidence_score": 1.0
+      "target": "js_app_saveactiveteststate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L197",
+      "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_startsimulator",
-      "target": "js_app_saveactiveteststate",
-      "confidence_score": 1.0
+      "target": "js_app_saveactiveteststate"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L213",
+      "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_startsimulator",
-      "target": "js_app_buildactivegrid",
-      "confidence_score": 1.0
+      "target": "js_app_buildactivegrid"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L187",
+      "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_startsimulator",
-      "target": "js_app_formattime",
-      "confidence_score": 1.0
+      "target": "js_app_formattime"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L214",
+      "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_startsimulator",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L206",
+      "source_location": "L153",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_startsimulator",
-      "target": "js_app_simsubmit",
-      "confidence_score": 1.0
+      "target": "js_app_simsubmit"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L227",
+      "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_buildactivegrid",
-      "target": "js_app_closedrawer",
-      "confidence_score": 1.0
+      "target": "js_app_closedrawer"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L227",
+      "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_buildactivegrid",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L234",
+      "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_buildactivegrid",
-      "target": "js_app_updategridstyles",
-      "confidence_score": 1.0
+      "target": "js_app_updategridstyles"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L288",
+      "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_renderactivequestion",
-      "target": "js_app_updategridstyles",
-      "confidence_score": 1.0
+      "target": "js_app_updategridstyles"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L365",
+      "source_location": "L312",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_selectsimoptionui",
-      "target": "js_app_updategridstyles",
-      "confidence_score": 1.0
+      "target": "js_app_updategridstyles"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L465",
+      "source_location": "L412",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_closeresults",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L314",
+      "source_location": "L261",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_renderactivequestion",
-      "target": "js_app_selectsimoptionui",
-      "confidence_score": 1.0
+      "target": "js_app_selectsimoptionui"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L388",
+      "source_location": "L335",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_selectsimoption",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L401",
+      "source_location": "L348",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_simnext",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L394",
+      "source_location": "L341",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_simprev",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L482",
+      "source_location": "L429",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_togglebookmarkactivequestion",
-      "target": "js_app_renderactivequestion",
-      "confidence_score": 1.0
+      "target": "js_app_renderactivequestion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L459",
+      "source_location": "L406",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_simsubmit",
-      "target": "js_app_updateanalyticsui",
-      "confidence_score": 1.0
+      "target": "js_app_updateanalyticsui"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L483",
+      "source_location": "L430",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_togglebookmarkactivequestion",
-      "target": "js_app_updateanalyticsui",
-      "confidence_score": 1.0
+      "target": "js_app_updateanalyticsui"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L811",
+      "source_location": "L739",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_jumptoflashcard",
-      "target": "js_app_switchtab",
-      "confidence_score": 1.0
+      "target": "js_app_switchtab"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L501",
+      "source_location": "L448",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_switchtab",
-      "target": "js_app_rendernotes",
-      "confidence_score": 1.0
+      "target": "js_app_rendernotes"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L519",
+      "source_location": "L466",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_rendernotes",
-      "target": "js_app_mdtohtml",
-      "confidence_score": 1.0
+      "target": "js_app_mdtohtml"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L629",
+      "source_location": "L565",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_removebookmark",
-      "target": "js_app_updateanalyticsui",
-      "confidence_score": 1.0
+      "target": "js_app_updateanalyticsui"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L812",
+      "source_location": "L740",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_jumptoflashcard",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L799",
+      "source_location": "L727",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_loadflashcarddeck",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L754",
+      "source_location": "L682",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_nextcard",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L761",
+      "source_location": "L689",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_prevcard",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L771",
+      "source_location": "L699",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_shufflecards",
-      "target": "js_app_renderflashcard",
-      "confidence_score": 1.0
+      "target": "js_app_renderflashcard"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L808",
+      "source_location": "L736",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_jumptoflashcard",
-      "target": "js_app_loadflashcarddeck",
-      "confidence_score": 1.0
+      "target": "js_app_loadflashcarddeck"
     },
     {
       "relation": "contains",
@@ -4114,21 +3799,11 @@
       "source_file": "rebuild_everything.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rebuild_everything",
-      "target": "rebuild_everything_clean_data",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "validate_module.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "validate_module",
-      "target": "validate_module_validate_module",
-      "confidence_score": 1.0
+      "target": "rebuild_everything_clean_data"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d3597ceba70f7da6944f30e0b921c756465e7a53"
+  "built_at_commit": "4cba93b421e3f704c85534f9442ff187a1c483aa"
 }

@@ -1,0 +1,7 @@
+{
+  "id": "my-course-id",
+  "title": "My Custom Course Title",
+  "description": "A description of the course.",
+  "author": "Your Name",
+  "version": "1.0.0"
+}

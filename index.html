@@ -102,10 +102,14 @@
     <div class="dashboard-grid">
       <div class="left-col">
         <div class="card welcome-card">
-          <h1>Welcome, Candidate!</h1>
-          <p>Prepare for the <strong>NISM Series VIII Equity Derivatives Certification</strong> completely offline. Test yourself with <span id="totalTestCount">8</span> complete mock tests and review 7 modules of study notes.</p>
+          <h1>PrepMaster: Universal Mock Test Simulator</h1>
+          <p>Welcome! Select a course from the global registry to begin practicing. <a href="CONTRIBUTING.md" target="_blank" style="color:var(--primary); font-weight:bold; margin-left:10px;">[+] Contribute a Course</a></p>
           
-          <div class="stats-strip">
+          <div id="courseSelectionGrid" class="grid-container" style="margin: 20px 0;">
+            <!-- Courses populated here -->
+          </div>
+
+          <div id="courseStatsStrip" class="stats-strip" style="display:none;">
             <div class="stat-item">
               <div class="stat-val" id="statAttempts">0</div>
               <div class="stat-lbl">Tests Attempted</div>
@@ -116,13 +120,26 @@
             </div>
           </div>
           
+          <div id="courseContentArea" style="display:none; margin-top: 24px;">
+            <div class="test-section-header">
+              <h2>Select a Test</h2>
+            </div>
+            
+            <div class="test-selection-grid" id="testSelectionGrid">
+              <!-- Grid populated by JS -->
+            </div>
+            
+            <div class="actions">
+              <button class="btn btn-primary" id="startTestBtn" style="display:none;" onclick="startTest()">Launch Mock Test</button>
+            </div>
+          </div>
+          
           <div style="margin-top: 16px; text-align: right;">
             <button class="btn btn-secondary" onclick="resetAllProgress()" style="font-size: 0.8rem; padding: 6px 12px; background: rgba(239, 68, 68, 0.1); color: #ef4444; border-color: rgba(239, 68, 68, 0.2);">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px; vertical-align: text-bottom;"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
               Reset All Progress
             </button>
           </div>
-
           <div id="resumeSection" style="display:none; background: var(--primary-light); border: 1px solid var(--primary); padding: 16px; border-radius: 8px; margin-bottom: 24px;">
              <h4 style="margin: 0 0 8px 0; color: var(--primary);">In-Progress Test Found!</h4>
              <p style="margin: 0 0 16px 0; font-size: 0.9rem;" id="resumeDetails"></p>

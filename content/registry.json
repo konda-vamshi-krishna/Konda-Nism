@@ -1,0 +1,10 @@
+{
+  "courses": [
+    {
+      "id": "nism-series-8",
+      "title": "NISM Series VIII - Equity Derivatives",
+      "description": "Prepare for the official NISM Equity Derivatives Certification.",
+      "folder": "nism-series-8"
+    }
+  ]
+}

@@ -1,18 +1,82 @@
 // Global variables for data
-let testData = window.NISM_DATA.testData;
-let notesData = window.NISM_DATA.notesData;
+let globalData = window.MOCK_DATA;
+let currentCourseId = null;
+let testData = {};
+let notesData = { notes: [], flashcards: [] };
+
+function getStorageKey(baseKey) {
+    if (!currentCourseId) return `prepmaster_global_${baseKey}`;
+    return `prepmaster_${currentCourseId}_${baseKey}`;
+}
 
 // Initialize app directly (no fetch needed)
 function initializeApp() {
     try {
-        setupTestSelectors();
-        setupFlashcardDecks();
-        loadLocalStorage();
-        renderFlashcard();
+        renderCourseGrid();
+        // apply global settings (theme, lang)
+        const savedLang = localStorage.getItem('prepmaster_lang');
+        if (savedLang && savedLang !== 'en') {
+            document.body.classList.add('translation-active');
+            applySavedLanguage(savedLang);
+        }
+        const savedTheme = localStorage.getItem('prepmaster_theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            const moon = document.querySelector('.moon-icon');
+            const sun = document.querySelector('.sun-icon');
+            if (moon) moon.style.display = 'none';
+            if (sun) sun.style.display = 'block';
+        }
     } catch (error) {
         console.error('Error initializing app:', error);
     }
 }
+
+function renderCourseGrid() {
+    const gridContainer = document.getElementById('courseSelectionGrid');
+    if (!gridContainer) return;
+    gridContainer.innerHTML = '';
+    
+    globalData.registry.forEach(course => {
+        const btn = document.createElement('button');
+        btn.className = 'test-btn not-attempted';
+        btn.style.textAlign = 'left';
+        btn.innerHTML = `
+            <div class="test-title">${course.title}</div>
+            <div class="test-status" style="font-size:0.8rem; opacity:0.8;">${course.description}</div>
+        `;
+        btn.onclick = () => selectCourse(course.id);
+        gridContainer.appendChild(btn);
+    });
+}
+
+function selectCourse(courseId) {
+    currentCourseId = courseId;
+    const courseData = globalData.courses[courseId];
+    if (!courseData) return;
+    
+    testData = courseData.tests || {};
+    notesData = {
+        notes: courseData.notes || [],
+        flashcards: courseData.flashcards || []
+    };
+    
+    flashcardsList = [...notesData.flashcards];
+    currentFcIndex = 0;
+    
+    // UI Transitions
+    document.getElementById('courseContentArea').style.display = 'block';
+    document.getElementById('courseStatsStrip').style.display = 'flex';
+    
+    setupTestSelectors();
+    setupFlashcardDecks();
+    loadLocalStorage();
+    renderFlashcard();
+    
+    // Scroll down to tests
+    document.getElementById('courseContentArea').scrollIntoView({ behavior: 'smooth' });
+}
+
 
 // Ensure DOM is fully loaded before fetching and attaching events
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,29 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load configuration and data from LocalStorage
   function loadLocalStorage() {
-      // Saved Language
-      const savedLang = localStorage.getItem('nism_lang');
-      if (savedLang && savedLang !== 'en') {
-          document.body.classList.add('translation-active');
-          applySavedLanguage(savedLang);
-      }
+
 
       // Starred questions
-      const savedStars = localStorage.getItem('nism_starred_questions');
+      const savedStars = localStorage.getItem(getStorageKey('starred_questions'));
       if (savedStars) {
           starredQuestions = JSON.parse(savedStars);
       }
       
-      // Theme setting
-      const savedTheme = localStorage.getItem('nism_theme');
-      if (savedTheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.querySelector('.moon-icon').style.display = 'none';
-          document.querySelector('.sun-icon').style.display = 'block';
-      }
+
       
       // Active in-progress test
-      const activeTest = localStorage.getItem('nism_active_test');
+      const activeTest = localStorage.getItem(getStorageKey('active_test'));
       if (activeTest) {
           const active = JSON.parse(activeTest);
           document.getElementById('resumeSection').style.display = 'block';
@@ -90,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function resumeActiveTest() {
-      const activeTest = localStorage.getItem('nism_active_test');
+      const activeTest = localStorage.getItem(getStorageKey('active_test'));
       if (!activeTest) return;
       
       const active = JSON.parse(activeTest);
@@ -107,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function saveActiveTestState() {
       if (!currentActiveTest || isSubmitted) {
-          localStorage.removeItem('nism_active_test');
+          localStorage.removeItem(getStorageKey('active_test'));
           return;
       }
-      localStorage.setItem('nism_active_test', JSON.stringify({
+      localStorage.setItem(getStorageKey('active_test'), JSON.stringify({
           testName: currentActiveTest,
           mode: testMode,
           answers: answers,
@@ -382,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       // Save to history
-      const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
+      const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       history.unshift({
           testName: currentActiveTest,
           mode: testMode,
@@ -390,10 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
           score: `${correct}/${questions.length}`,
           percent: Math.round((correct / questions.length) * 100)
       });
-      localStorage.setItem('nism_test_history', JSON.stringify(history));
+      localStorage.setItem(getStorageKey('test_history'), JSON.stringify(history));
       
       // Remove active test from localstorage
-      localStorage.removeItem('nism_active_test');
+      localStorage.removeItem(getStorageKey('active_test'));
       document.getElementById('resumeSection').style.display = 'none';
       
       // Render results modal
@@ -425,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
               answer: q.answer
           });
       }
-      localStorage.setItem('nism_starred_questions', JSON.stringify(starredQuestions));
+      localStorage.setItem(getStorageKey('starred_questions'), JSON.stringify(starredQuestions));
       renderActiveQuestion();
       updateAnalyticsUI();
   }
@@ -501,17 +554,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Analytics UI Refresher
   window.resetAllProgress = function() {
       if (confirm("Are you sure you want to reset all your mock test progress and saved data? This cannot be undone.")) {
-          localStorage.removeItem('nism_test_history');
-          localStorage.removeItem('nism_active_test');
-          localStorage.removeItem('nism_starred_questions');
-          localStorage.removeItem('nism_lang');
+          localStorage.removeItem(getStorageKey('test_history'));
+          localStorage.removeItem(getStorageKey('active_test'));
+          localStorage.removeItem(getStorageKey('starred_questions'));
+          localStorage.removeItem('prepmaster_lang');
           alert("All progress has been reset. The application will now reload.");
           window.location.reload();
       }
   };
 
   function updateAnalyticsUI() {
-      const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
+      const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       
       // Update statistics
       document.getElementById('statAttempts').textContent = history.length;
@@ -572,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function removeBookmark(idx) {
       starredQuestions.splice(idx, 1);
-      localStorage.setItem('nism_starred_questions', JSON.stringify(starredQuestions));
+      localStorage.setItem(getStorageKey('starred_questions'), JSON.stringify(starredQuestions));
       updateAnalyticsUI();
   }
 
@@ -584,12 +637,12 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (currentTheme === 'dark') {
           document.documentElement.removeAttribute('data-theme');
-          localStorage.setItem('nism_theme', 'light');
+          localStorage.setItem('prepmaster_theme', 'light');
           sun.style.display = 'none';
           moon.style.display = 'block';
       } else {
           document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('nism_theme', 'dark');
+          localStorage.setItem('prepmaster_theme', 'dark');
           sun.style.display = 'block';
           moon.style.display = 'none';
       }
@@ -634,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       gridContainer.innerHTML = '';
       
-      const history = JSON.parse(localStorage.getItem('nism_test_history') || '[]');
+      const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       let firstTest = null;
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
@@ -651,7 +704,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           
           // Check in-progress
-          const activeTest = localStorage.getItem('nism_active_test');
+          const activeTest = localStorage.getItem(getStorageKey('active_test'));
           if (activeTest) {
               const active = JSON.parse(activeTest);
               if (active.testName === testName) {
@@ -787,7 +840,7 @@ function setLang(langCode) {
     }
     document.getElementById('translateDropdown').classList.remove('show');
     
-    localStorage.setItem('nism_lang', langCode);
+    localStorage.setItem('prepmaster_lang', langCode);
     
     if (langCode === 'en' || langCode === '') {
         document.body.classList.remove('translation-active');
