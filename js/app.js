@@ -647,12 +647,25 @@ function populateAllLangs() {
 function filterLangs() {
     const q = document.getElementById('langSearch').value.toLowerCase().trim();
     const opts = document.querySelectorAll('#allLangsList .lang-opt');
-    opts.forEach(opt => {
-        if(q.length > 0 && opt.getAttribute('data-name').includes(q)) {
-            opt.style.display = 'block';
-        } else {
+    const quickPicks = document.querySelector('.quick-langs');
+    const titles = document.querySelectorAll('.lang-section-title');
+    
+    if (q.length > 0) {
+        if(quickPicks) quickPicks.style.display = 'none';
+        if(titles.length > 0) titles[0].style.display = 'none';
+        opts.forEach(opt => {
+            if(opt.getAttribute('data-name').includes(q)) {
+                opt.style.display = 'block';
+            } else {
+                opt.style.display = 'none';
+            }
+        });
+    } else {
+        if(quickPicks) quickPicks.style.display = 'block';
+        if(titles.length > 0) titles[0].style.display = 'block';
+        opts.forEach(opt => {
             opt.style.display = 'none';
-        }
-    });
+        });
+    }
 }
 window.addEventListener('DOMContentLoaded', populateAllLangs);
