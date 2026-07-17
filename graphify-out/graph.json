@@ -31,7 +31,7 @@
       "source_file": "build_html.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 32,
+      "community": 30,
       "norm_label": "build_html.py",
       "community_name": "build_html.py",
       "id": "build_html"
@@ -174,7 +174,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "norm_label": "y()",
       "community_name": "table",
       "id": "js_marked_min_y"
@@ -185,7 +185,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 10,
+      "community": 13,
       "norm_label": "a()",
       "community_name": "A",
       "id": "js_marked_min_a"
@@ -207,7 +207,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "me()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_me"
@@ -251,7 +251,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 10,
+      "community": 13,
       "norm_label": "code()",
       "community_name": "A",
       "id": "js_marked_min_code"
@@ -273,7 +273,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 13,
       "norm_label": "heading()",
       "community_name": "A",
       "id": "js_marked_min_heading"
@@ -284,7 +284,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 13,
       "norm_label": "hr()",
       "community_name": "A",
       "id": "js_marked_min_hr"
@@ -295,7 +295,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 10,
+      "community": 13,
       "norm_label": "blockquote()",
       "community_name": "A",
       "id": "js_marked_min_blockquote"
@@ -339,7 +339,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "norm_label": "table()",
       "community_name": "table",
       "id": "js_marked_min_table"
@@ -416,7 +416,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "reflink()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_reflink"
@@ -515,7 +515,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "lex()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_lex"
@@ -526,7 +526,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "lexinline()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_lexinline"
@@ -537,7 +537,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "blocktokens()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_blocktokens"
@@ -559,7 +559,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "inlinetokens()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_inlinetokens"
@@ -592,7 +592,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "norm_label": "tablerow()",
       "community_name": "table",
       "id": "js_marked_min_tablerow"
@@ -603,7 +603,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L64",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "norm_label": "tablecell()",
       "community_name": "table",
       "id": "js_marked_min_tablecell"
@@ -669,7 +669,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "preprocess()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_preprocess"
@@ -680,7 +680,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "postprocess()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_postprocess"
@@ -691,7 +691,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "processalltokens()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_processalltokens"
@@ -702,7 +702,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "providelexer()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_providelexer"
@@ -713,7 +713,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "provideparser()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_provideparser"
@@ -724,7 +724,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "walktokens()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_walktokens"
@@ -757,7 +757,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "lexer()",
       "community_name": "inlineTokens",
       "id": "js_marked_min_lexer"
@@ -779,7 +779,7 @@
       "source_file": "js/marked.min.js",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 6,
+      "community": 9,
       "norm_label": "parsemarkdown()",
       "community_name": "parseMarkdown",
       "id": "js_marked_min_parsemarkdown"
@@ -845,7 +845,7 @@
       "source_file": "scratch_ast.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 35,
+      "community": 33,
       "norm_label": "scratch_ast.py",
       "community_name": "scratch_ast.py",
       "id": "scratch_ast"
@@ -856,7 +856,7 @@
       "source_file": "refactor_app_js.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 34,
+      "community": 32,
       "norm_label": "refactor_app_js.py",
       "id": "refactor_app_js"
     },
@@ -866,7 +866,7 @@
       "source_file": "build_engine.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
+      "community": 12,
       "norm_label": "build_engine.py",
       "id": "build_engine"
     },
@@ -876,7 +876,7 @@
       "source_file": "build_engine.py",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 9,
+      "community": 12,
       "norm_label": "parse_test_file()",
       "id": "build_engine_parse_test_file"
     },
@@ -886,7 +886,7 @@
       "source_file": "build_engine.py",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 9,
+      "community": 12,
       "norm_label": "parse_notes_file()",
       "id": "build_engine_parse_notes_file"
     },
@@ -896,7 +896,7 @@
       "source_file": "build_engine.py",
       "source_location": "L99",
       "_origin": "ast",
-      "community": 9,
+      "community": 12,
       "norm_label": "generate_flashcards()",
       "id": "build_engine_generate_flashcards"
     },
@@ -906,7 +906,7 @@
       "source_file": "build_engine.py",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 9,
+      "community": 12,
       "norm_label": "main()",
       "id": "build_engine_main"
     },
@@ -986,7 +986,7 @@
       "source_file": "data/data.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 33,
+      "community": 31,
       "norm_label": "data.js",
       "id": "data_data"
     },
@@ -1016,7 +1016,7 @@
       "source_file": "parse_notes.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 30,
+      "community": 28,
       "norm_label": "parse_notes.py",
       "id": "parse_notes"
     },
@@ -1026,7 +1026,7 @@
       "source_file": "parse_notes.py",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 30,
+      "community": 28,
       "norm_label": "parse_notes()",
       "id": "parse_notes_parse_notes"
     },
@@ -1066,7 +1066,7 @@
       "source_file": "semantic_audit.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 31,
+      "community": 29,
       "norm_label": "semantic_audit.py",
       "id": "semantic_audit"
     },
@@ -1076,7 +1076,7 @@
       "source_file": "semantic_audit.py",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 31,
+      "community": 29,
       "norm_label": "semantic_finance_audit()",
       "id": "semantic_audit_semantic_finance_audit"
     },
@@ -1086,9 +1086,9 @@
       "source_file": "build_all.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "build_all",
       "community": 22,
-      "norm_label": "build_all.py"
+      "norm_label": "build_all.py",
+      "id": "build_all"
     },
     {
       "label": "build_all()",
@@ -1096,9 +1096,9 @@
       "source_file": "build_all.py",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "build_all_build_all",
       "community": 22,
-      "norm_label": "build_all()"
+      "norm_label": "build_all()",
+      "id": "build_all_build_all"
     },
     {
       "label": "app.js",
@@ -1107,7 +1107,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "js_app",
-      "community": 2,
+      "community": 0,
       "norm_label": "app.js"
     },
     {
@@ -1117,7 +1117,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "js_app_globaldata",
-      "community": 2,
+      "community": 0,
       "norm_label": "globaldata"
     },
     {
@@ -1127,7 +1127,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "js_app_testdata",
-      "community": 2,
+      "community": 0,
       "norm_label": "testdata"
     },
     {
@@ -1137,7 +1137,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "js_app_notesdata",
-      "community": 2,
+      "community": 0,
       "norm_label": "notesdata"
     },
     {
@@ -1147,7 +1147,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "js_app_getstoragekey",
-      "community": 0,
+      "community": 7,
       "norm_label": "getstoragekey()"
     },
     {
@@ -1157,7 +1157,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "js_app_showshimmerloadingstate",
-      "community": 7,
+      "community": 4,
       "norm_label": "showshimmerloadingstate()"
     },
     {
@@ -1167,7 +1167,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "js_app_removeshimmerloadingstate",
-      "community": 7,
+      "community": 4,
       "norm_label": "removeshimmerloadingstate()"
     },
     {
@@ -1177,7 +1177,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "js_app_coursescope",
-      "community": 7,
+      "community": 4,
       "norm_label": "coursescope"
     },
     {
@@ -1187,7 +1187,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "js_app_updatescopeui",
-      "community": 11,
+      "community": 4,
       "norm_label": "updatescopeui()"
     },
     {
@@ -1197,7 +1197,7 @@
       "source_location": "L184",
       "_origin": "ast",
       "id": "js_app_initializeapp",
-      "community": 11,
+      "community": 4,
       "norm_label": "initializeapp()"
     },
     {
@@ -1207,7 +1207,7 @@
       "source_location": "L226",
       "_origin": "ast",
       "id": "js_app_rendercoursegrid",
-      "community": 7,
+      "community": 4,
       "norm_label": "rendercoursegrid()"
     },
     {
@@ -1217,7 +1217,7 @@
       "source_location": "L253",
       "_origin": "ast",
       "id": "js_app_backtocourses",
-      "community": 7,
+      "community": 4,
       "norm_label": "backtocourses()"
     },
     {
@@ -1227,7 +1227,7 @@
       "source_location": "L258",
       "_origin": "ast",
       "id": "js_app_selectcourse",
-      "community": 7,
+      "community": 4,
       "norm_label": "selectcourse()"
     },
     {
@@ -1237,7 +1237,7 @@
       "source_location": "L370",
       "_origin": "ast",
       "id": "js_app_refreshdashboardregistry",
-      "community": 11,
+      "community": 4,
       "norm_label": "refreshdashboardregistry()"
     },
     {
@@ -1247,7 +1247,7 @@
       "source_location": "L377",
       "_origin": "ast",
       "id": "js_app_answers",
-      "community": 2,
+      "community": 0,
       "norm_label": "answers"
     },
     {
@@ -1257,7 +1257,7 @@
       "source_location": "L382",
       "_origin": "ast",
       "id": "js_app_starredquestions",
-      "community": 2,
+      "community": 0,
       "norm_label": "starredquestions"
     },
     {
@@ -1267,7 +1267,7 @@
       "source_location": "L385",
       "_origin": "ast",
       "id": "js_app_flashcardslist",
-      "community": 2,
+      "community": 0,
       "norm_label": "flashcardslist"
     },
     {
@@ -1277,7 +1277,7 @@
       "source_location": "L389",
       "_origin": "ast",
       "id": "js_app_loadlocalstorage",
-      "community": 0,
+      "community": 7,
       "norm_label": "loadlocalstorage()"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_location": "L436",
       "_origin": "ast",
       "id": "js_app_initiatenewtest",
-      "community": 0,
+      "community": 6,
       "norm_label": "initiatenewtest()"
     },
     {
@@ -1297,7 +1297,7 @@
       "source_location": "L460",
       "_origin": "ast",
       "id": "js_app_resumeactivetest",
-      "community": 0,
+      "community": 6,
       "norm_label": "resumeactivetest()"
     },
     {
@@ -1307,7 +1307,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "js_app_saveactiveteststate",
-      "community": 0,
+      "community": 6,
       "norm_label": "saveactiveteststate()"
     },
     {
@@ -1317,7 +1317,7 @@
       "source_location": "L501",
       "_origin": "ast",
       "id": "js_app_startsimulator",
-      "community": 0,
+      "community": 6,
       "norm_label": "startsimulator()"
     },
     {
@@ -1327,7 +1327,7 @@
       "source_location": "L543",
       "_origin": "ast",
       "id": "js_app_buildactivegrid",
-      "community": 0,
+      "community": 5,
       "norm_label": "buildactivegrid()"
     },
     {
@@ -1337,7 +1337,7 @@
       "source_location": "L563",
       "_origin": "ast",
       "id": "js_app_updategridstyles",
-      "community": 0,
+      "community": 5,
       "norm_label": "updategridstyles()"
     },
     {
@@ -1347,7 +1347,7 @@
       "source_location": "L603",
       "_origin": "ast",
       "id": "js_app_renderactivequestion",
-      "community": 0,
+      "community": 5,
       "norm_label": "renderactivequestion()"
     },
     {
@@ -1357,7 +1357,7 @@
       "source_location": "L683",
       "_origin": "ast",
       "id": "js_app_selectsimoptionui",
-      "community": 0,
+      "community": 5,
       "norm_label": "selectsimoptionui()"
     },
     {
@@ -1367,7 +1367,7 @@
       "source_location": "L715",
       "_origin": "ast",
       "id": "js_app_selectsimoption",
-      "community": 0,
+      "community": 5,
       "norm_label": "selectsimoption()"
     },
     {
@@ -1377,7 +1377,7 @@
       "source_location": "L721",
       "_origin": "ast",
       "id": "js_app_simprev",
-      "community": 0,
+      "community": 5,
       "norm_label": "simprev()"
     },
     {
@@ -1387,7 +1387,7 @@
       "source_location": "L728",
       "_origin": "ast",
       "id": "js_app_simnext",
-      "community": 0,
+      "community": 5,
       "norm_label": "simnext()"
     },
     {
@@ -1397,7 +1397,7 @@
       "source_location": "L735",
       "_origin": "ast",
       "id": "js_app_simsubmit",
-      "community": 0,
+      "community": 7,
       "norm_label": "simsubmit()"
     },
     {
@@ -1407,7 +1407,7 @@
       "source_location": "L789",
       "_origin": "ast",
       "id": "js_app_closeresults",
-      "community": 0,
+      "community": 5,
       "norm_label": "closeresults()"
     },
     {
@@ -1417,7 +1417,7 @@
       "source_location": "L795",
       "_origin": "ast",
       "id": "js_app_togglebookmarkactivequestion",
-      "community": 0,
+      "community": 7,
       "norm_label": "togglebookmarkactivequestion()"
     },
     {
@@ -1427,7 +1427,7 @@
       "source_location": "L814",
       "_origin": "ast",
       "id": "js_app_switchtab",
-      "community": 0,
+      "community": 6,
       "norm_label": "switchtab()"
     },
     {
@@ -1437,7 +1437,7 @@
       "source_location": "L853",
       "_origin": "ast",
       "id": "js_app_rendernotes",
-      "community": 0,
+      "community": 6,
       "norm_label": "rendernotes()"
     },
     {
@@ -1447,7 +1447,7 @@
       "source_location": "L891",
       "_origin": "ast",
       "id": "js_app_renderchapterhtml",
-      "community": 0,
+      "community": 6,
       "norm_label": "renderchapterhtml()"
     },
     {
@@ -1457,7 +1457,7 @@
       "source_location": "L916",
       "_origin": "ast",
       "id": "js_app_mdtohtml",
-      "community": 2,
+      "community": 0,
       "norm_label": "mdtohtml()"
     },
     {
@@ -1467,7 +1467,7 @@
       "source_location": "L924",
       "_origin": "ast",
       "id": "js_app_flipcard",
-      "community": 2,
+      "community": 0,
       "norm_label": "flipcard()"
     },
     {
@@ -1477,7 +1477,7 @@
       "source_location": "L940",
       "_origin": "ast",
       "id": "js_app_updateanalyticsui",
-      "community": 0,
+      "community": 7,
       "norm_label": "updateanalyticsui()"
     },
     {
@@ -1487,7 +1487,7 @@
       "source_location": "L1000",
       "_origin": "ast",
       "id": "js_app_removebookmark",
-      "community": 0,
+      "community": 7,
       "norm_label": "removebookmark()"
     },
     {
@@ -1497,7 +1497,7 @@
       "source_location": "L1007",
       "_origin": "ast",
       "id": "js_app_toggletheme",
-      "community": 2,
+      "community": 0,
       "norm_label": "toggletheme()"
     },
     {
@@ -1507,7 +1507,7 @@
       "source_location": "L1026",
       "_origin": "ast",
       "id": "js_app_opendrawer",
-      "community": 2,
+      "community": 0,
       "norm_label": "opendrawer()"
     },
     {
@@ -1517,7 +1517,7 @@
       "source_location": "L1031",
       "_origin": "ast",
       "id": "js_app_closedrawer",
-      "community": 0,
+      "community": 5,
       "norm_label": "closedrawer()"
     },
     {
@@ -1527,7 +1527,7 @@
       "source_location": "L1037",
       "_origin": "ast",
       "id": "js_app_updatestarttitle",
-      "community": 2,
+      "community": 0,
       "norm_label": "updatestarttitle()"
     },
     {
@@ -1537,7 +1537,7 @@
       "source_location": "L1041",
       "_origin": "ast",
       "id": "js_app_formattime",
-      "community": 0,
+      "community": 6,
       "norm_label": "formattime()"
     },
     {
@@ -1547,7 +1547,7 @@
       "source_location": "L1049",
       "_origin": "ast",
       "id": "js_app_setuptestselectors",
-      "community": 0,
+      "community": 7,
       "norm_label": "setuptestselectors()"
     },
     {
@@ -1557,7 +1557,7 @@
       "source_location": "L1118",
       "_origin": "ast",
       "id": "js_app_renderflashcard",
-      "community": 8,
+      "community": 10,
       "norm_label": "renderflashcard()"
     },
     {
@@ -1567,7 +1567,7 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "js_app_nextcard",
-      "community": 8,
+      "community": 10,
       "norm_label": "nextcard()"
     },
     {
@@ -1577,7 +1577,7 @@
       "source_location": "L1136",
       "_origin": "ast",
       "id": "js_app_prevcard",
-      "community": 8,
+      "community": 10,
       "norm_label": "prevcard()"
     },
     {
@@ -1587,7 +1587,7 @@
       "source_location": "L1143",
       "_origin": "ast",
       "id": "js_app_shufflecards",
-      "community": 8,
+      "community": 10,
       "norm_label": "shufflecards()"
     },
     {
@@ -1597,7 +1597,7 @@
       "source_location": "L1152",
       "_origin": "ast",
       "id": "js_app_setupflashcarddecks",
-      "community": 2,
+      "community": 0,
       "norm_label": "setupflashcarddecks()"
     },
     {
@@ -1607,7 +1607,7 @@
       "source_location": "L1170",
       "_origin": "ast",
       "id": "js_app_loadflashcarddeck",
-      "community": 8,
+      "community": 10,
       "norm_label": "loadflashcarddeck()"
     },
     {
@@ -1617,7 +1617,7 @@
       "source_location": "L1180",
       "_origin": "ast",
       "id": "js_app_jumptoflashcard",
-      "community": 8,
+      "community": 10,
       "norm_label": "jumptoflashcard()"
     },
     {
@@ -1627,7 +1627,7 @@
       "source_location": "L1197",
       "_origin": "ast",
       "id": "js_app_toggletranslatedropdown",
-      "community": 2,
+      "community": 0,
       "norm_label": "toggletranslatedropdown()"
     },
     {
@@ -1637,7 +1637,7 @@
       "source_location": "L1201",
       "_origin": "ast",
       "id": "js_app_applysavedlanguage",
-      "community": 11,
+      "community": 4,
       "norm_label": "applysavedlanguage()"
     },
     {
@@ -1647,7 +1647,7 @@
       "source_location": "L1211",
       "_origin": "ast",
       "id": "js_app_setlang",
-      "community": 2,
+      "community": 0,
       "norm_label": "setlang()"
     },
     {
@@ -1657,7 +1657,7 @@
       "source_location": "L1230",
       "_origin": "ast",
       "id": "js_app_alllanguages",
-      "community": 2,
+      "community": 0,
       "norm_label": "alllanguages"
     },
     {
@@ -1667,7 +1667,7 @@
       "source_location": "L1234",
       "_origin": "ast",
       "id": "js_app_populatealllangs",
-      "community": 2,
+      "community": 0,
       "norm_label": "populatealllangs()"
     },
     {
@@ -1677,7 +1677,7 @@
       "source_location": "L1244",
       "_origin": "ast",
       "id": "js_app_filterlangs",
-      "community": 2,
+      "community": 0,
       "norm_label": "filterlangs()"
     },
     {
@@ -1687,7 +1687,7 @@
       "source_location": "L1274",
       "_origin": "ast",
       "id": "js_app_stagedfiles",
-      "community": 2,
+      "community": 0,
       "norm_label": "stagedfiles"
     },
     {
@@ -1697,7 +1697,7 @@
       "source_location": "L1275",
       "_origin": "ast",
       "id": "js_app_ignoredfiles",
-      "community": 2,
+      "community": 0,
       "norm_label": "ignoredfiles"
     },
     {
@@ -1707,7 +1707,7 @@
       "source_location": "L1279",
       "_origin": "ast",
       "id": "js_app_allowed_core_files",
-      "community": 4,
+      "community": 2,
       "norm_label": "allowed_core_files"
     },
     {
@@ -1717,7 +1717,7 @@
       "source_location": "L1281",
       "_origin": "ast",
       "id": "js_app_setupdropzone",
-      "community": 4,
+      "community": 2,
       "norm_label": "setupdropzone()"
     },
     {
@@ -1727,7 +1727,7 @@
       "source_location": "L1357",
       "_origin": "ast",
       "id": "js_app_traversefiletree",
-      "community": 4,
+      "community": 2,
       "norm_label": "traversefiletree()"
     },
     {
@@ -1737,7 +1737,7 @@
       "source_location": "L1393",
       "_origin": "ast",
       "id": "js_app_handlefileselect",
-      "community": 4,
+      "community": 2,
       "norm_label": "handlefileselect()"
     },
     {
@@ -1747,7 +1747,7 @@
       "source_location": "L1434",
       "_origin": "ast",
       "id": "js_app_validatestagedfiles",
-      "community": 4,
+      "community": 2,
       "norm_label": "validatestagedfiles()"
     },
     {
@@ -1757,7 +1757,7 @@
       "source_location": "L1678",
       "_origin": "ast",
       "id": "js_app_clearstagedfiles",
-      "community": 4,
+      "community": 2,
       "norm_label": "clearstagedfiles()"
     },
     {
@@ -1767,7 +1767,7 @@
       "source_location": "L1686",
       "_origin": "ast",
       "id": "js_app_encodebase64",
-      "community": 12,
+      "community": 0,
       "norm_label": "encodebase64()"
     },
     {
@@ -1777,7 +1777,7 @@
       "source_location": "L1690",
       "_origin": "ast",
       "id": "js_app_githubrequest",
-      "community": 12,
+      "community": 0,
       "norm_label": "githubrequest()"
     },
     {
@@ -1787,7 +1787,7 @@
       "source_location": "L1711",
       "_origin": "ast",
       "id": "js_app_submitcontributionpr",
-      "community": 12,
+      "community": 0,
       "norm_label": "submitcontributionpr()"
     },
     {
@@ -1797,7 +1797,7 @@
       "source_location": "L1899",
       "_origin": "ast",
       "id": "js_app_showprsuccessscreen",
-      "community": 12,
+      "community": 0,
       "norm_label": "showprsuccessscreen()"
     },
     {
@@ -1807,7 +1807,7 @@
       "source_location": "L1921",
       "_origin": "ast",
       "id": "js_app_resetcontributepage",
-      "community": 28,
+      "community": 2,
       "norm_label": "resetcontributepage()"
     },
     {
@@ -1817,54 +1817,54 @@
       "source_location": "L1933",
       "_origin": "ast",
       "id": "js_app_volatilestagingbuffer",
-      "community": 2,
+      "community": 0,
       "norm_label": "volatilestagingbuffer"
     },
     {
       "label": "isCompilerActive()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L1941",
+      "source_location": "L1944",
       "_origin": "ast",
       "id": "js_app_iscompileractive",
-      "community": 4,
+      "community": 2,
       "norm_label": "iscompileractive()"
     },
     {
       "label": "logToTerminal()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L1945",
+      "source_location": "L1948",
       "_origin": "ast",
       "id": "js_app_logtoterminal",
-      "community": 29,
+      "community": 2,
       "norm_label": "logtoterminal()"
     },
     {
       "label": "mergeDroppedFileIntoBuffer()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L1953",
+      "source_location": "L1956",
       "_origin": "ast",
       "id": "js_app_mergedroppedfileintobuffer",
-      "community": 4,
+      "community": 2,
       "norm_label": "mergedroppedfileintobuffer()"
     },
     {
       "label": "syncStagedFilesFromBuffer()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L2005",
+      "source_location": "L2021",
       "_origin": "ast",
       "id": "js_app_syncstagedfilesfrombuffer",
-      "community": 4,
+      "community": 2,
       "norm_label": "syncstagedfilesfrombuffer()"
     },
     {
       "label": "saveCompilationCheckpoint()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L2016",
+      "source_location": "L2032",
       "_origin": "ast",
       "id": "js_app_savecompilationcheckpoint",
       "community": 2,
@@ -1874,21 +1874,31 @@
       "label": "checkCompilationCheckpoint()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L2024",
+      "source_location": "L2044",
       "_origin": "ast",
       "id": "js_app_checkcompilationcheckpoint",
-      "community": 28,
+      "community": 2,
       "norm_label": "checkcompilationcheckpoint()"
     },
     {
       "label": "restoreCompilationSession()",
       "file_type": "code",
       "source_file": "js/app.js",
-      "source_location": "L2045",
+      "source_location": "L2077",
       "_origin": "ast",
       "id": "js_app_restorecompilationsession",
-      "community": 29,
+      "community": 2,
       "norm_label": "restorecompilationsession()"
+    },
+    {
+      "label": "clearCompilationCheckpoint()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L2108",
+      "_origin": "ast",
+      "id": "js_app_clearcompilationcheckpoint",
+      "community": 0,
+      "norm_label": "clearcompilationcheckpoint()"
     },
     {
       "label": "sw.js",
@@ -1927,38 +1937,58 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validate_module",
-      "community": 14,
+      "community": 11,
       "norm_label": "validate_module.py"
     },
     {
       "label": "validate_external_resource_pointers()",
       "file_type": "code",
       "source_file": "validate_module.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "validate_module_validate_external_resource_pointers",
-      "community": 14,
+      "community": 11,
       "norm_label": "validate_external_resource_pointers()"
+    },
+    {
+      "label": "validate_chapter_indices()",
+      "file_type": "code",
+      "source_file": "validate_module.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "validate_module_validate_chapter_indices",
+      "community": 11,
+      "norm_label": "validate_chapter_indices()"
     },
     {
       "label": "validate_module()",
       "file_type": "code",
       "source_file": "validate_module.py",
-      "source_location": "L45",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "validate_module_validate_module",
-      "community": 14,
+      "community": 11,
       "norm_label": "validate_module()"
     },
     {
-      "label": "Ensures that all federated cloud storage references follow secure, well-formed U",
+      "label": "Validates that decentralized multi-source library arrays follow strict security",
       "file_type": "rationale",
       "source_file": "validate_module.py",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "validate_module_rationale_13",
-      "community": 14,
-      "norm_label": "ensures that all federated cloud storage references follow secure, well-formed u"
+      "id": "validate_module_rationale_14",
+      "community": 11,
+      "norm_label": "validates that decentralized multi-source library arrays follow strict security"
+    },
+    {
+      "label": "Rule G: Asserts sequential chapter_idx mapping starting strictly at 1 with no ga",
+      "file_type": "rationale",
+      "source_file": "validate_module.py",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "validate_module_rationale_48",
+      "community": 11,
+      "norm_label": "rule g: asserts sequential chapter_idx mapping starting strictly at 1 with no ga"
     }
   ],
   "links": [
@@ -3488,9 +3518,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "build_all",
-      "target": "build_all_build_all",
-      "confidence_score": 1.0
+      "target": "build_all_build_all"
     },
     {
       "relation": "contains",
@@ -3562,13 +3592,24 @@
       "relation": "indirect_call",
       "confidence": "INFERRED",
       "source_file": "js/app.js",
-      "source_location": "L2260",
+      "source_location": "L2335",
       "weight": 1.0,
       "_origin": "ast",
       "context": "argument",
       "source": "js_app",
       "target": "js_app_checkcompilationcheckpoint",
       "confidence_score": 0.5
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L2108",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "js_app",
+      "target": "js_app_clearcompilationcheckpoint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3750,7 +3791,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L1941",
+      "source_location": "L1944",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app",
@@ -3794,7 +3835,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L1945",
+      "source_location": "L1948",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app",
@@ -3816,7 +3857,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L1953",
+      "source_location": "L1956",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app",
@@ -3981,7 +4022,7 @@
       "relation": "indirect_call",
       "confidence": "INFERRED",
       "source_file": "js/app.js",
-      "source_location": "L2077",
+      "source_location": "L2118",
       "weight": 1.0,
       "_origin": "ast",
       "context": "argument",
@@ -4015,7 +4056,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L2016",
+      "source_location": "L2032",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app",
@@ -4224,7 +4265,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L2005",
+      "source_location": "L2021",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app",
@@ -5233,7 +5274,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L1961",
+      "source_location": "L1965",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app_mergedroppedfileintobuffer",
@@ -5245,7 +5286,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L2050",
+      "source_location": "L2085",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app_restorecompilationsession",
@@ -5257,7 +5298,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "js/app.js",
-      "source_location": "L1998",
+      "source_location": "L2015",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "js_app_mergedroppedfileintobuffer",
+      "target": "js_app_savecompilationcheckpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L2013",
       "weight": 1.0,
       "_origin": "ast",
       "source": "js_app_mergedroppedfileintobuffer",
@@ -5290,7 +5343,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validate_module.py",
-      "source_location": "L12",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "validate_module",
+      "target": "validate_module_validate_chapter_indices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validate_module.py",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "validate_module",
@@ -5301,7 +5365,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validate_module.py",
-      "source_location": "L45",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "validate_module",
@@ -5312,10 +5376,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "validate_module.py",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "validate_module_rationale_13",
+      "source": "validate_module_rationale_14",
       "target": "validate_module_validate_external_resource_pointers",
       "confidence_score": 1.0
     },
@@ -5324,14 +5388,37 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "validate_module.py",
-      "source_location": "L129",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
       "source": "validate_module_validate_module",
       "target": "validate_module_validate_external_resource_pointers",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validate_module.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "validate_module_rationale_48",
+      "target": "validate_module_validate_chapter_indices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validate_module.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "validate_module_validate_module",
+      "target": "validate_module_validate_chapter_indices",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f5820d3dffa28b8d99ef4408aca33fde8b4749f3"
+  "built_at_commit": "249e6d323fe434f9648b93a945c9f21b71ebbeec"
 }

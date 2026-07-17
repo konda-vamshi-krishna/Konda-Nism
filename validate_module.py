@@ -1,6 +1,7 @@
 import os
 import json
 import sys
+import re
 
 # Force stdout to use UTF-8 to prevent Windows terminal encoding errors
 if hasattr(sys.stdout, 'reconfigure'):
@@ -9,37 +10,64 @@ if hasattr(sys.stdout, 'reconfigure'):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 
-def validate_external_resource_pointers(notes_data_payload):
-    """Ensures that all federated cloud storage references follow secure, well-formed URL formatting rules,
-    strictly prohibiting quotes, backslashes, or script sequences to defend against XSS.
+def validate_external_resource_pointers(notes_payload_data):
     """
-    if "chapters" not in notes_data_payload:
+    Validates that decentralized multi-source library arrays follow strict security rules.
+    Blocks quotes, backslashes, and HTML script tags to stop XSS vulnerabilities.
+    """
+    if not isinstance(notes_payload_data, dict) or "chapters" not in notes_payload_data:
         return True
-        
-    for chapter in notes_data_payload["chapters"]:
+
+    # Rule D: High-precision security verification pattern
+    malicious_pattern = re.compile(r"[\'\"\\\\]|<script", re.IGNORECASE)
+
+    for chapter in notes_payload_data.get("chapters", []):
         for section in chapter.get("sections", []):
             if "external_links" in section:
-                ext_links = section["external_links"]
-                if not isinstance(ext_links, list):
-                    raise ValueError("Structural Anomaly: external_links must occupy a rigid flat list array.")
-                for link in ext_links:
-                    if "label" not in link or "url" not in link:
-                        raise KeyError("Schema Violation: Every resource link item must declare exact 'label' and 'url' string keys.")
+                link_list = section["external_links"]
+                if not isinstance(link_list, list):
+                    raise ValueError("Structural Error: 'external_links' must be an array list format.")
+                
+                for entry in link_list:
+                    if not isinstance(entry, dict):
+                        raise ValueError("Schema Exception: Individual link nodes must occupy exact dictionary configurations.")
+                    if "label" not in entry or "url" not in entry:
+                        raise KeyError("Missing Key: Link items must contain explicit 'label' and 'url' metadata properties.")
                     
-                    url = link["url"]
-                    if not isinstance(url, str) or not isinstance(link["label"], str):
-                        raise TypeError("Schema Violation: link URL and label must be string values.")
+                    url_string = str(entry["url"]).strip()
                     
-                    if not url.startswith(("http://", "https://")):
-                        raise ValueError(f"Security Alert: Target protocol pathway is insecure or malformed: {url}")
+                    if not url_string.startswith(("http://", "https://")):
+                        raise ValueError(f"Protocol Violation: Direct URL target must mount a secure address pathway: {url_string}")
                     
-                    # Rule D: Check for quotes, backslashes, or HTML script blocks
-                    if '"' in url or "'" in url or '\\' in url:
-                        raise ValueError(f"Security Alert: Malicious characters (quotes or backslashes) detected in URL pathway: {url}")
-                    
-                    lower_url = url.lower()
-                    if "<script" in lower_url or "javascript:" in lower_url:
-                        raise ValueError(f"Security Alert: Potential script injection sequence detected in URL: {url}")
+                    if malicious_pattern.search(url_string):
+                        raise ValueError(f"🚨 Security Alert [Rule D]: XSS or escaping syntax injection vector blocked inside link URL: {url_string}")
+                        
+    return True
+
+def validate_chapter_indices(notes_payload_data):
+    """
+    Rule G: Asserts sequential chapter_idx mapping starting strictly at 1 with no gaps.
+    """
+    if not isinstance(notes_payload_data, dict) or "chapters" not in notes_payload_data:
+        return True
+        
+    chapters = notes_payload_data["chapters"]
+    if not isinstance(chapters, list):
+        raise ValueError("Structural Error: 'chapters' must be a list array.")
+        
+    indices = []
+    for chap in chapters:
+        if "chapter_idx" not in chap:
+            raise KeyError("Schema Violation: Chapter item is missing 'chapter_idx'.")
+        idx = chap["chapter_idx"]
+        if not isinstance(idx, int):
+            raise TypeError(f"Schema Violation: chapter_idx must be an integer, got: {type(idx)}")
+        indices.append(idx)
+        
+    expected = list(range(1, len(indices) + 1))
+    if indices != expected:
+        raise ValueError(f"🚨 Structural Anomaly [Rule G]: Chapter indices are non-sequential or do not start strictly at 1. Expected: {expected}, Got: {indices}")
+        
     return True
 
 def validate_module(course_folder):
@@ -127,8 +155,9 @@ def validate_module(course_folder):
 
     try:
         validate_external_resource_pointers(notes_data)
+        validate_chapter_indices(notes_data)
     except Exception as e:
-        print(f"❌ Error: notes.json external links validation failed. {e}")
+        print(f"❌ Error: notes.json validation checks failed. {e}")
         return False
 
     chapters = notes_data["chapters"]

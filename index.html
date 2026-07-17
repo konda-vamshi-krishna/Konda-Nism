@@ -383,41 +383,61 @@
   </div>
 
   <!-- ================= CONTRIBUTE TAB ================= -->
+  <!-- ================= CONTRIBUTE TAB ================= -->
   <div class="tab-content" id="content-contribute">
-    <div class="card">
-      <h2 style="margin-top: 0; display: flex; align-items: center; gap: 8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M12 5v14M5 12h14"></path></svg>
-        Contribute a Course Module
-      </h2>
-      
-      <!-- Contribution Guide Panel -->
-      <div class="contribution-guide-section" style="margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px;">
-        <h3 style="margin-top: 0; color: var(--primary);">Course Data Architecture Blueprint</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
-          Create a directory using lowercase alphanumeric characters and hyphens only (e.g., <code>my-custom-course</code>). Inside this directory, place exactly four files matching the blueprints below:
+    
+    <!-- User Choice Gateway: Developer Flow vs AI Flow -->
+    <div id="contribution-gateway" class="card glass-premium" style="text-align: center; padding: 3rem 2rem; margin-bottom: 2rem;">
+        <h2 style="color: var(--text-main); margin-bottom: 1rem;">Choose Your Course Creation Path</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Contribute interactive mock tests, certifications, and study notes to the global zero-cost library. Select the method that fits your technical background.
         </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('standard-uploader-zone').style.display='block'; document.getElementById('ai-wizard-container').style.display='none';">
+                🛠️ I Am a Developer (Manual JSON Upload)
+            </button>
+            <button type="button" class="btn btn-indigo" onclick="document.getElementById('ai-wizard-container').style.display='block'; document.getElementById('standard-uploader-zone').style.display='none';">
+                🧠 Not a Developer? Make Your Course with AI
+            </button>
+        </div>
+    </div>
 
-        <!-- Blueprints Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
-          <!-- 1. config.json -->
-          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
-            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">1. <code>config.json</code> (Identity Metadata)</h4>
-            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+    <!-- Legacy Dropzone Area (Initially hidden or split via gateway toggle) -->
+    <div id="standard-uploader-zone" style="display: none; margin-bottom: 2rem;">
+      <div class="card">
+        <h2 style="margin-top: 0; display: flex; align-items: center; gap: 8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M12 5v14M5 12h14"></path></svg>
+          Contribute a Course Module
+        </h2>
+        
+        <!-- Contribution Guide Panel -->
+        <div class="contribution-guide-section" style="margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px;">
+          <h3 style="margin-top: 0; color: var(--primary);">Course Data Architecture Blueprint</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+            Create a directory using lowercase alphanumeric characters and hyphens only (e.g., <code>my-custom-course</code>). Inside this directory, place exactly four files matching the blueprints below:
+          </p>
+
+          <!-- Blueprints Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
+            <!-- 1. config.json -->
+            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text-main);">1. <code>config.json</code> (Identity Metadata)</h4>
+              <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
   "id": "my-custom-course",
   "title": "Clear Title (e.g., AWS Cloud Practitioner)",
   "description": "A single-sentence course summary.",
   "author": "Your Full Name",
   "version": "1.0.0"
 }</pre>
-          </div>
+            </div>
 
-          <!-- 2. tests.json -->
-          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
-            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">2. <code>tests.json</code> (Exam Payload)</h4>
-            <p style="margin: 0 0 8px 0; font-size: 0.8rem; color: var(--text-muted);">
-              Grading maps to a zero-indexed integer (<code>answer_idx</code>: 0 to 3).
-            </p>
-            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+            <!-- 2. tests.json -->
+            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text-main);">2. <code>tests.json</code> (Exam Payload)</h4>
+              <p style="margin: 0 0 8px 0; font-size: 0.8rem; color: var(--text-muted);">
+                Grading maps to a zero-indexed integer (<code>answer_idx</code>: 0 to 3).
+              </p>
+              <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
   "test_1": [
     {
       "id": "q_unique_prefix_001",
@@ -433,24 +453,24 @@
     }
   ]
 }</pre>
-          </div>
+            </div>
 
-          <!-- 3. flashcards.json -->
-          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
-            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">3. <code>flashcards.json</code> (Active Recall)</h4>
-            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">[
+            <!-- 3. flashcards.json -->
+            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text-main);">3. <code>flashcards.json</code> (Active Recall)</h4>
+              <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">[
   {
     "id": "fc_unique_prefix_001",
     "front": "Question visible on card front.",
     "back": "Answer revealed when flipped."
   }
 ]</pre>
-          </div>
+            </div>
 
-          <!-- 4. notes.json -->
-          <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
-            <h4 style="margin: 0 0 8px 0; color: var(--text-main);">4. <code>notes.json</code> (Study Material)</h4>
-            <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
+            <!-- 4. notes.json -->
+            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; display: flex; flex-direction: column;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text-main);">4. <code>notes.json</code> (Study Material)</h4>
+              <pre style="margin: 0; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; color: var(--text-main); flex-grow: 1;">{
   "chapters": [
     {
       "chapter_idx": 1,
@@ -464,195 +484,226 @@
     }
   ]
 }</pre>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <!-- 3-Step No-Code Guide -->
-      <div class="guide-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 24px 0; padding: 16px; background: var(--bg-color); border-radius: 12px; border: 1px solid var(--border-color);">
-        <div class="step-card">
-          <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">1</div>
-          <h4 style="margin: 4px 0;">Structure JSON Data</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Prepare a folder with <code>config.json</code>, <code>tests.json</code>, <code>flashcards.json</code>, and <code>notes.json</code> under pure-JSON schemas.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">2</div>
-          <h4 style="margin: 4px 0;">Drag & Drop Validation</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Drop your course folder into the dropzone below. Browser JavaScript checks formatting boundaries instantly.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">3</div>
-          <h4 style="margin: 4px 0;">GitHub PR Submission</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Provide your GitHub PAT. The engine automatically calls the GitHub API to fork, branch, and submit a Pull Request.</p>
-        </div>
-      </div>
-
-      <!-- Component A: Client-Side Content Reference Vector -->
-      <div class="card glass-premium" style="margin-bottom: 2rem; border-left: 4px solid var(--indigo-primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); border-left: 4px solid var(--primary);">
-          <h3 style="margin-top: 0;">📚 Need an Architectural Reference?</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">If configuring the JSON schema bounds manually is difficult, download our fully structured <strong>SSC 10th Class Mock Suite</strong> sample block. Extract the file, inspect the file mappings, modify the contents, and upload it back.</p>
-          <button id="download-sample-btn" class="btn btn-indigo" onclick="downloadSamplePackage()" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer;" type="button">📥 Download ssc_10th_class_sample.zip</button>
-      </div>
-
-      <script>
-      async function downloadSamplePackage() {
-          const btn = document.getElementById('download-sample-btn');
-          const originalText = btn.innerHTML;
-          btn.disabled = true;
-          btn.innerHTML = '📥 Downloading...';
-          try {
-              const response = await fetch('content/ssc-10th-class/ssc_10th_class_sample.zip');
-              if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              const blob = await response.blob();
-              const dataUrl = URL.createObjectURL(blob);
-              
-              const downloadAnchor = document.createElement('a');
-              downloadAnchor.href = dataUrl;
-              downloadAnchor.download = "ssc_10th_class_sample.zip";
-              document.body.appendChild(downloadAnchor);
-              downloadAnchor.click();
-              
-              URL.revokeObjectURL(dataUrl);
-              downloadAnchor.remove();
-          } catch (error) {
-              console.error("Critical Network Interception Failure:", error);
-              alert("Infrastructure Notification: The sample baseline zip payload is currently being updated or re-indexed. Please retry in 120 seconds.");
-          } finally {
-              btn.disabled = false;
-              btn.innerHTML = originalText;
-          }
-      }
-      </script>
-
-      <!-- Dropzone -->
-      <div id="dropzone" class="dropzone" onclick="document.getElementById('fileInput').click()" style="border: 2px dashed var(--border-color); border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: var(--bg-color);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="margin-bottom: 12px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
-        <p style="font-weight: 600; margin: 0 0 4px 0;">Drag & drop course folder or files here</p>
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">or click to browse from your computer (select multiple files)</p>
-        <input type="file" id="fileInput" multiple accept=".json" style="display: none;" onchange="handleFileSelect(event)">
-      </div>
-
-      <!-- Staged Files list -->
-      <div id="stagedArea" style="display: none; margin-top: 24px;">
-        <h3 style="margin-top: 0;">Staged Files</h3>
-        <div id="stagedFilesList" style="max-height: 200px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; background: var(--bg-color);"></div>
         
-        <div style="margin-top: 16px; text-align: right;">
-          <button class="btn btn-secondary" onclick="clearStagedFiles()">Clear Files</button>
-        </div>
-      </div>
-
-      <!-- Validation Status Panel -->
-      <div id="validationStatusArea" style="display: none; margin-top: 24px; padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
-        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;">
-          <span id="validationSpinner" style="display: none; width: 18px; height: 18px; border: 2px solid var(--primary-light); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite;"></span>
-          Validation Status
-        </h3>
-        <div id="validationLogs" style="font-family: monospace; font-size: 0.9rem; max-height: 200px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding: 8px; background: rgba(0,0,0,0.03); border-radius: 8px;"></div>
-      </div>
-
-      <!-- Submit Pull Request Panel -->
-      <div id="githubSubmitArea" style="display: none; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 24px;">
-        <h3 style="margin-top: 0;">Submit to GitHub</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-          To open a Pull Request, we need a GitHub Personal Access Token with <code>repo</code> write scopes.
-          <a href="https://github.com/settings/tokens/new?scopes=public_repo&description=KUMT%20Course%20Contribution" target="_blank" style="color: var(--primary); font-weight: 600; margin-left: 4px;">Generate Token</a>
-        </p>
-
-        <div style="margin-bottom: 20px; max-width: 400px;">
-          <label for="githubPatInput" style="font-weight: 600; display: block; margin-bottom: 8px;">GitHub Personal Access Token (PAT):</label>
-          <input type="password" id="githubPatInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace;">
+        <!-- 3-Step No-Code Guide -->
+        <div class="guide-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 24px 0; padding: 16px; background: var(--bg-color); border-radius: 12px; border: 1px solid var(--border-color);">
+          <div class="step-card">
+            <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">1</div>
+            <h4 style="margin: 4px 0;">Structure JSON Data</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Prepare a folder with <code>config.json</code>, <code>tests.json</code>, <code>flashcards.json</code>, and <code>notes.json</code> under pure-JSON schemas.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">2</div>
+            <h4 style="margin: 4px 0;">Drag & Drop Validation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Drop your course folder into the dropzone below. Browser JavaScript checks formatting boundaries instantly.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:bold; margin-bottom:8px;">3</div>
+            <h4 style="margin: 4px 0;">GitHub PR Submission</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 4px 0;">Provide your GitHub PAT. The engine automatically calls the GitHub API to fork, branch, and submit a Pull Request.</p>
+          </div>
         </div>
 
-        <!-- Component B: Inline Token Permission Guidance Panel -->
-        <div class="token-instructions glass-warning" style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1.25rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid var(--border-color); background: rgba(255, 193, 7, 0.05);">
-            <h4 style="color: var(--warning-text); margin-top: 0; margin-bottom: 0.5rem;">🔒 Critical Step: How to Generate Your GitHub Access Token</h4>
-            <p style="margin: 0; color: var(--text-muted);">Your token remains volatile in client RAM and is never stored. It is used exclusively to dispatch the Pull Request. Follow these exact parameters:</p>
-            <ol style="padding-left: 1.2rem; line-height: 1.6; margin-top: 0.5rem; color: var(--text-muted);">
-                <li>Click the <strong>"Generate Token"</strong> configuration redirect link above.</li>
-                <li>Authenticate your identity context with your personal GitHub account.</li>
-                <li>In the <strong>Note</strong> configuration field, enter: <code>KUMT-Course-Contribution</code>.</li>
-                <li>Set the <strong>Expiration</strong> boundary to <code>7 Days</code> to maintain high security hygiene.</li>
-                <li>Under <strong>Select Scopes</strong>, check the box for <strong><code>public_repo</code></strong> (or <code>repo</code> for private organizational structures). <em>Leave all other checkboxes completely blank.</em></li>
-                <li>Scroll to the absolute lower boundary of the portal and click the green <strong>"Generate token"</strong> action button.</li>
-                <li>Copy the output string token (prefixed with <code>ghp_</code>) and paste it directly into our interface field above.</li>
-            </ol>
+        <!-- Component A: Client-Side Content Reference Vector -->
+        <div class="card glass-premium" style="margin-bottom: 2rem; border-left: 4px solid var(--indigo-primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); border-left: 4px solid var(--primary);">
+            <h3 style="margin-top: 0;">📚 Need an Architectural Reference?</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">If configuring the JSON schema bounds manually is difficult, download our fully structured <strong>SSC 10th Class Mock Suite</strong> sample block. Extract the file, inspect the file mappings, modify the contents, and upload it back.</p>
+            <button id="download-sample-btn" class="btn btn-indigo" onclick="downloadSamplePackage()" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer;" type="button">📥 Download ssc_10th_class_sample.zip</button>
         </div>
 
-        <button class="btn btn-primary" id="submitPrBtn" onclick="submitContributionPR()" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 15.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 12V3"></path><path d="M12 12V3h6v4.5a2.5 2.5 0 0 0-2.5 2.5H12z"></path><path d="M12 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg>
-          Submit Pull Request
-        </button>
-      </div>
+        <script>
+        async function downloadSamplePackage() {
+            const btn = document.getElementById('download-sample-btn');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '📥 Downloading...';
+            try {
+                const response = await fetch('content/ssc-10th-class/ssc_10th_class_sample.zip');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const blob = await response.blob();
+                const dataUrl = URL.createObjectURL(blob);
+                
+                const downloadAnchor = document.createElement('a');
+                downloadAnchor.href = dataUrl;
+                downloadAnchor.download = "ssc_10th_class_sample.zip";
+                document.body.appendChild(downloadAnchor);
+                downloadAnchor.click();
+                
+                URL.revokeObjectURL(dataUrl);
+                downloadAnchor.remove();
+            } catch (error) {
+                console.error("Critical Network Interception Failure:", error);
+                alert("Infrastructure Notification: The sample baseline zip payload is currently being updated or re-indexed. Please retry in 120 seconds.");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+        </script>
 
+        <!-- Dropzone -->
+        <div id="dropzone" class="dropzone" onclick="document.getElementById('fileInput').click()" style="border: 2px dashed var(--border-color); border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: var(--bg-color);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="margin-bottom: 12px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
+          <p style="font-weight: 600; margin: 0 0 4px 0;">Drag & drop course folder or files here</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">or click to browse from your computer (select multiple files)</p>
+          <input type="file" id="fileInput" multiple accept=".json" style="display: none;" onchange="handleFileSelect(event)">
+        </div>
+
+        <!-- Staged Files list -->
+        <div id="stagedArea" style="display: none; margin-top: 24px;">
+          <h3 style="margin-top: 0;">Staged Files</h3>
+          <div id="stagedFilesList" style="max-height: 200px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; background: var(--bg-color);"></div>
+          
+          <div style="margin-top: 16px; text-align: right;">
+            <button class="btn btn-secondary" onclick="clearStagedFiles()">Clear Files</button>
+          </div>
+        </div>
+
+        <!-- Validation Status Panel -->
+        <div id="validationStatusArea" style="display: none; margin-top: 24px; padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;">
+            <span id="validationSpinner" style="display: none; width: 18px; height: 18px; border: 2px solid var(--primary-light); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite;"></span>
+            Validation Status
+          </h3>
+          <div id="validationLogs" style="font-family: monospace; font-size: 0.9rem; max-height: 200px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding: 8px; background: rgba(0,0,0,0.03); border-radius: 8px;"></div>
+        </div>
+
+        <!-- Submit Pull Request Panel -->
+        <div id="githubSubmitArea" style="display: none; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 24px;">
+          <h3 style="margin-top: 0;">Submit to GitHub</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+            To open a Pull Request, we need a GitHub Personal Access Token with <code>repo</code> write scopes.
+            <a href="https://github.com/settings/tokens/new?scopes=public_repo&description=KUMT%20Course%20Contribution" target="_blank" style="color: var(--primary); font-weight: 600; margin-left: 4px;">Generate Token</a>
+          </p>
+
+          <div style="margin-bottom: 20px; max-width: 400px;">
+            <label for="githubPatInput" style="font-weight: 600; display: block; margin-bottom: 8px;">GitHub Personal Access Token (PAT):</label>
+            <input type="password" id="githubPatInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace;">
+          </div>
+
+          <!-- Component B: Inline Token Permission Guidance Panel -->
+          <div class="token-instructions glass-warning" style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1.25rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid var(--border-color); background: rgba(255, 193, 7, 0.05);">
+              <h4 style="color: var(--warning-text); margin-top: 0; margin-bottom: 0.5rem;">🔒 Critical Step: How to Generate Your GitHub Access Token</h4>
+              <p style="margin: 0; color: var(--text-muted);">Your token remains volatile in client RAM and is never stored. It is used exclusively to dispatch the Pull Request. Follow these exact parameters:</p>
+              <ol style="padding-left: 1.2rem; line-height: 1.6; margin-top: 0.5rem; color: var(--text-muted);">
+                  <li>Click the <strong>"Generate Token"</strong> configuration redirect link above.</li>
+                  <li>Authenticate your identity context with your personal GitHub account.</li>
+                  <li>In the <strong>Note</strong> configuration field, enter: <code>KUMT-Course-Contribution</code>.</li>
+                  <li>Set the <strong>Expiration</strong> boundary to <code>7 Days</code> to maintain high security hygiene.</li>
+                  <li>Under <strong>Select Scopes</strong>, check the box for <strong><code>public_repo</code></strong> (or <code>repo</code> for private organizational structures). <em>Leave all other checkboxes completely blank.</em></li>
+                  <li>Scroll to the absolute lower boundary of the portal and click the green <strong>"Generate token"</strong> action button.</li>
+                  <li>Copy the output string token (prefixed with <code>ghp_</code>) and paste it directly into our interface field above.</li>
+              </ol>
+          </div>
+
+          <button class="btn btn-primary" id="submitPrBtn" onclick="submitContributionPR()" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 15.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 12V3"></path><path d="M12 12V3h6v4.5a2.5 2.5 0 0 0-2.5 2.5H12z"></path><path d="M12 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg>
+            Submit Pull Request
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- Inject inside the unified global #content-contribute structural wrapper -->
-    <div id="ai-wizard-container" class="card glass-premium" style="margin-top: 2rem; border-top: 4px solid var(--primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color);">
-        <h2 style="color: var(--text-main); font-size: 1.5rem; margin-top: 0; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
-            🤖 Edge-Native AI Course Compiler
-        </h2>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5;">
-            Generate fully structured course modules from raw learning text without writing JSON syntax.
+    <!-- Hardened Edge-Native AI Course Compiler Wizard View -->
+    <div id="ai-wizard-container" class="card glass-premium" style="display: none; border-top: 4px solid var(--indigo-primary); margin-bottom: 2rem;">
+        <h2 style="color: var(--text-main); font-size: 1.6rem; margin-bottom: 0.5rem;">🧠 Intelligent AI Course Compiler Terminal</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Follow our structural step guide to turn long-form textbook materials into an interactive app module with zero manual coding.
         </p>
 
-        <!-- Restoration Session Alert Panel (Rule A) -->
-        <div id="ai-restore-panel" style="display: none; margin-bottom: 1.5rem; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--primary); background: rgba(79, 70, 229, 0.05); align-items: center; justify-content: space-between; gap: 1rem;">
-            <span style="font-size: 0.9rem; color: var(--text-main); display: inline-flex; align-items: center; gap: 6px;">
+        <!-- Restoration Session Alert Panel (Rule A & Rule F) -->
+        <div id="ai-restore-panel" style="display: none; margin-bottom: 1.5rem; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--primary); background: rgba(79, 70, 229, 0.05); align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <span id="ai-restore-meta" style="font-size: 0.9rem; color: var(--text-main); display: inline-flex; align-items: center; gap: 6px;">
                 💾 An active, unsubmitted AI compilation session was detected.
             </span>
             <button id="ai-restore-btn" class="btn btn-indigo" style="padding: 6px 12px; font-size: 0.8rem; font-weight: 600; cursor: pointer;" type="button">Restore Session</button>
         </div>
 
-        <!-- Section 1: API Configuration -->
-        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+        <!-- Step-by-Step Explicit Instruction Banner -->
+        <div class="glass-warning" style="padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.5;">
+            <strong>📋 How to Compile Your Course Module:</strong>
+            <ul style="margin-top: 0.25rem; padding-left: 1.2rem;">
+                <li><strong>Step 1:</strong> Paste your personal OpenRouter Token key and select an available free model tier.</li>
+                <li><strong>Step 2:</strong> Add any external download resource addresses (Google Drive paths or web links) to embed into the study notes library.</li>
+                <li><strong>Step 3:</strong> Paste the text content for your first unit into the box and click <em>"⚡ Compile & Save Current Chapter"</em>.</li>
+                <li><strong>Step 4:</strong> To add more course modules, click <em>"➕ Add Another Chapter"</em> to clear the staging textarea and increment the unit index safely.</li>
+                <li><strong>Step 5:</strong> When all chapters are successfully cached, click <em>"🔒 Finalize Course Module"</em> to freeze the workspace array, then click <em>"🚀 Dispatch Course Pull Request"</em>.</li>
+            </ul>
+        </div>
+
+        <!-- Section 1: API Configuration Elements -->
+        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div>
-                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">OpenRouter API Key</label>
-                <input type="password" id="ai-api-key" class="form-control" placeholder="sk-or-v1-..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace;" />
+                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Input OpenRouter Access Key</label>
+                <input type="password" id="ai-api-key" class="form-control" placeholder="sk-or-v1-..." style="width: 100%;" />
             </div>
             <div>
-                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">Target Model Vector</label>
-                <select id="ai-model-select" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);">
-                    <option value="google/gemini-2.5-flash">Gemini 2.5 Flash (Fast & Highly Recommended)</option>
-                    <option value="meta-llama/llama-3-70b-instruct:free">Llama 3 70B Instruct (Free Tier)</option>
+                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">2. Select Free-Tier Model Architecture</label>
+                <select id="ai-model-select" class="form-control" style="width: 100%;">
+                    <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
+                    <option value="openrouter/free">openrouter/free (Dynamic Free-Tier Auto-Routing Engine)</option>
+                    <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free (High Reasoning Quality)</option>
+                    <option value="qwen/qwen3-coder:free">qwen/qwen3-coder:free (Optimized for JSON Array Layouts)</option>
                 </select>
             </div>
         </div>
 
-        <!-- Section 2: Resource Pointers -->
-        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-            <div>
-                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">External Textbook Download Link (Google Drive / Direct URL)</label>
-                <input type="url" id="ai-textbook-url" class="form-control" placeholder="https://drive.google.com/..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);" />
+        <!-- Section 2: Federated Multi-Link Resource Matrix -->
+        <div style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+            <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.25rem;">3. Decentralized Course Library Setup (Optional)</label>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1rem;">Add downloadable reference materials (Google Drive PDFs, textbook links, or reference workbooks).</p>
+            
+            <div id="ai-dynamic-link-container" style="display: grid; gap: 0.75rem; margin-bottom: 1rem;">
+                <div class="link-entry-node" style="display: grid; grid-template-columns: 1fr 2fr; gap: 0.5rem;">
+                    <input type="text" class="form-control link-label-input" placeholder="Resource Title (e.g. SSC Math Textbook)" />
+                    <input type="url" class="form-control link-url-input" placeholder="https://drive.google.com/file/d/..." />
+                </div>
             </div>
-            <div>
-                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">External Workbook Download Link (Optional)</label>
-                <input type="url" id="ai-workbook-url" class="form-control" placeholder="https://..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);" />
-            </div>
+            <button type="button" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="addNewResourceLinkRow();">
+                ➕ Add Another Resource Link
+            </button>
         </div>
 
-        <!-- Section 3: Chapter Raw Text input -->
+        <!-- Section 3: Extraction Workspace -->
         <div style="margin-bottom: 1.5rem;">
-            <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">Chapter Text Extraction Chunk</label>
-            <textarea id="ai-chunk-input" class="form-control" rows="10" placeholder="Paste a single chapter's raw text content here (Maximum 20,000 characters per conversion run)..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace; font-size: 0.85rem; resize: vertical; line-height: 1.4;"></textarea>
+            <label id="chapter-input-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">4. Chapter 1 Raw Text Input Workspace (Supports up to 100,000 words)</label>
+            <textarea id="ai-chunk-input" class="form-control" rows="12" placeholder="Paste the text contents of the current chapter here..." style="width: 100%; font-family: monospace; font-size: 0.85rem; resize: vertical;"></textarea>
         </div>
 
-        <!-- Actions & Console Logs -->
-        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
-            <button id="ai-transmute-btn" class="btn btn-indigo" type="button" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; background: var(--primary); color: #fff;">
-                ⚡ Compile Current Chapter
-            </button>
-            <button id="ai-finalize-pr-btn" class="btn btn-success" type="button" disabled style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; background: var(--success); color: #fff;">
-                🚀 Dispatch Course Pull Request
-            </button>
+        <!-- Section 4: Process Step Actions -->
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <button id="ai-transmute-btn" class="btn btn-indigo" type="button">⚡ Compile & Save Current Chapter</button>
+            <button id="ai-next-chapter-btn" class="btn btn-secondary" type="button" style="display: none;">➕ Add Another Chapter</button>
+            <button id="ai-freeze-module-btn" class="btn btn-warning" type="button" style="display: none;">🔒 Finalize Course Module</button>
+            <button id="ai-finalize-pr-btn" class="btn btn-success" type="button" style="display: none;">🚀 Dispatch Course Pull Request</button>
         </div>
 
-        <div id="ai-terminal-console" style="background: #000; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.8rem; color: #a3e635; height: 150px; overflow-y: auto; border: 1px solid var(--border-color); line-height: 1.5;">
-            [SYSTEM READY]: Awaiting token authorization and textbook text serialization sequences...
+        <!-- Real-Time Logging Engine Console View -->
+        <div id="ai-terminal-console" style="background: rgba(0,0,0,0.5); border-radius: 6px; padding: 1rem; font-family: monospace; font-size: 0.8rem; color: #a3e635; height: 160px; overflow-y: auto; border: 1px solid rgba(255,255,255,0.1); line-height: 1.4;">
+            [SYSTEM READY]: Awaiting API key validation and textbook chunk serialization...
         </div>
     </div>
+  </div>
+
+  <script>
+  // Inline layout helper to append dynamic resource fields cleanly
+  function addNewResourceLinkRow() {
+      const container = document.getElementById('ai-dynamic-link-container');
+      const newRow = document.createElement('div');
+      newRow.className = 'link-entry-node';
+      newRow.style.cssText = 'display: grid; grid-template-columns: 1fr 2fr; gap: 0.5rem;';
+      newRow.innerHTML = `
+          <input type="text" class="form-control link-label-input" placeholder="Resource Title Name" />
+          <input type="url" class="form-control link-url-input" placeholder="https://..." />
+      `;
+      container.appendChild(newRow);
+  }
+  </script>
   </div>
 
 </div>

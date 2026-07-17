@@ -1935,7 +1935,10 @@ let volatileStagingBuffer = {
     tests: {},
     flashcards: [],
     notes: { chapters: [] },
-    chapterCounter: 0
+    chapterCounter: 0,
+    isLocked: false,
+    timestamp: 0,
+    courseSlug: ""
 };
 
 function isCompilerActive() {
@@ -1958,6 +1961,7 @@ function mergeDroppedFileIntoBuffer(name, contentText) {
                 ...(volatileStagingBuffer.config || {}),
                 ...parsed
             };
+            volatileStagingBuffer.courseSlug = parsed.id || "";
             logToTerminal("🔄 Merged custom config.json properties into compiler buffer.");
         } else if (name === 'tests.json') {
             volatileStagingBuffer.tests = {
@@ -1977,6 +1981,17 @@ function mergeDroppedFileIntoBuffer(name, contentText) {
                     }
                 });
                 existingChapters.sort((a, b) => a.chapter_idx - b.chapter_idx);
+                
+                // Recalibrate chapter Counter based on the maximum AI chapter index (idx - 1)
+                let maxAIIdx = 0;
+                existingChapters.forEach(c => {
+                    if (c.chapter_idx > 1) {
+                        maxAIIdx = Math.max(maxAIIdx, c.chapter_idx - 1);
+                    }
+                });
+                if (maxAIIdx > 0) {
+                    volatileStagingBuffer.chapterCounter = maxAIIdx;
+                }
                 logToTerminal("🔄 Merged custom notes.json chapters into compiler buffer.");
             }
         } else if (name === 'flashcards.json') {
@@ -1997,6 +2012,7 @@ function mergeDroppedFileIntoBuffer(name, contentText) {
         // Re-synchronize the staged files tree for submission
         syncStagedFilesFromBuffer();
         logToTerminal(`✅ File ${name} successfully merged into compiler memory.`);
+        saveCompilationCheckpoint();
     } catch (e) {
         logToTerminal(`⚠️ Failed to merge dropped file ${name}: ${e.message}`);
     }
@@ -2012,10 +2028,14 @@ function syncStagedFilesFromBuffer() {
     courseMetadata = volatileStagingBuffer.config;
 }
 
-// Rule A: Checkpoint Sequence
+// Rule F: Scoped localStorage Cache Isolation
 function saveCompilationCheckpoint() {
     try {
-        localStorage.setItem('kumt_compiler_checkpoint', JSON.stringify(volatileStagingBuffer));
+        const slug = volatileStagingBuffer.courseSlug || 'temp_session';
+        const storageKey = `kumt_ai_staging_${slug}`;
+        volatileStagingBuffer.timestamp = Date.now();
+        volatileStagingBuffer.courseSlug = slug;
+        localStorage.setItem(storageKey, JSON.stringify(volatileStagingBuffer));
     } catch (e) {
         console.error("Failed to save compilation checkpoint:", e);
     }
@@ -2023,17 +2043,29 @@ function saveCompilationCheckpoint() {
 
 function checkCompilationCheckpoint() {
     try {
-        const saved = localStorage.getItem('kumt_compiler_checkpoint');
-        const panel = document.getElementById('ai-restore-panel');
-        if (saved) {
-            const parsed = JSON.parse(saved);
-            if (parsed && parsed.chapterCounter > 0) {
-                if (panel) {
-                    panel.style.display = 'flex';
+        let savedKey = null;
+        let savedData = null;
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('kumt_ai_staging_')) {
+                const val = localStorage.getItem(key);
+                const parsed = JSON.parse(val);
+                if (parsed && parsed.chapterCounter > 0) {
+                    savedKey = key;
+                    savedData = parsed;
+                    break;
                 }
-            } else if (panel) {
-                panel.style.display = 'none';
             }
+        }
+
+        const panel = document.getElementById('ai-restore-panel');
+        const metaSpan = document.getElementById('ai-restore-meta');
+        if (savedData && panel && metaSpan) {
+            const dateStr = new Date(savedData.timestamp).toLocaleString();
+            const slugDisplay = savedData.courseSlug || 'temp_session';
+            metaSpan.innerHTML = `💾 Active compilation session detected: <strong>${slugDisplay}</strong> (compiled ${savedData.chapterCounter} unit(s), saved ${dateStr})`;
+            panel.style.display = 'flex';
+            document.getElementById('ai-restore-btn').dataset.key = savedKey;
         } else if (panel) {
             panel.style.display = 'none';
         }
@@ -2044,25 +2076,25 @@ function checkCompilationCheckpoint() {
 
 function restoreCompilationSession() {
     try {
-        const saved = localStorage.getItem('kumt_compiler_checkpoint');
+        const btn = document.getElementById('ai-restore-btn');
+        const targetKey = btn ? btn.dataset.key : null;
+        if (!targetKey) return;
+        const saved = localStorage.getItem(targetKey);
         if (saved) {
             volatileStagingBuffer = JSON.parse(saved);
-            logToTerminal(`💾 Restored active compilation session: Chapter count is ${volatileStagingBuffer.chapterCounter}.`);
-            document.getElementById('ai-finalize-pr-btn')?.removeAttribute('disabled');
+            logToTerminal(`💾 Restored active compilation session for course: '${volatileStagingBuffer.courseSlug}'. Compiled chapter count is ${volatileStagingBuffer.chapterCounter}.`);
             
-            // Sync textbooks if present
-            if (volatileStagingBuffer.notes && volatileStagingBuffer.notes.chapters) {
-                const chap0 = volatileStagingBuffer.notes.chapters.find(c => c.chapter_idx === 0);
-                if (chap0 && chap0.sections && chap0.sections[0] && chap0.sections[0].external_links) {
-                    const links = chap0.sections[0].external_links;
-                    links.forEach(l => {
-                        if (l.label.includes("Textbook")) {
-                            document.getElementById('ai-textbook-url').value = l.url;
-                        } else if (l.label.includes("Workbook")) {
-                            document.getElementById('ai-workbook-url').value = l.url;
-                        }
-                    });
-                }
+            // Render proper buttons based on states
+            if (volatileStagingBuffer.chapterCounter > 0) {
+                document.getElementById('ai-transmute-btn').style.display = 'none';
+                document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
+                document.getElementById('ai-freeze-module-btn').style.display = 'inline-block';
+            }
+            
+            if (volatileStagingBuffer.isLocked) {
+                document.getElementById('ai-next-chapter-btn').style.display = 'none';
+                document.getElementById('ai-freeze-module-btn').style.display = 'none';
+                document.getElementById('ai-finalize-pr-btn').style.display = 'inline-block';
             }
             
             const panel = document.getElementById('ai-restore-panel');
@@ -2073,48 +2105,66 @@ function restoreCompilationSession() {
     }
 }
 
-// Bind restoration click directly
+function clearCompilationCheckpoint() {
+    try {
+        const slug = volatileStagingBuffer.courseSlug || 'temp_session';
+        localStorage.removeItem(`kumt_ai_staging_${slug}`);
+        localStorage.removeItem(`kumt_ai_staging_temp_session`);
+    } catch (e) {
+        console.error("Failed to clear checkpoint:", e);
+    }
+}
+
 document.getElementById('ai-restore-btn')?.addEventListener('click', restoreCompilationSession);
 
-// Transmute listener
+// 1. Chapter Transmutation Thread
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
-    const apiKeyRaw = document.getElementById('ai-api-key').value;
-    const apiKey = apiKeyRaw ? apiKeyRaw.trim() : '';
+    if (volatileStagingBuffer.isLocked) return;
+    
+    const apiKey = document.getElementById('ai-api-key').value.trim();
     const targetModel = document.getElementById('ai-model-select').value;
     const rawText = document.getElementById('ai-chunk-input').value.trim();
     
     if (!apiKey || !rawText) {
-        alert("Verification Exception: OpenRouter API key and Text Content cannot be blank.");
+        alert("Input Validation Error: Both OpenRouter Key and Text Field content are required.");
         return;
     }
 
-    volatileStagingBuffer.chapterCounter++;
-    const currentIdx = volatileStagingBuffer.chapterCounter;
-    logToTerminal(`Initializing compilation block for Chapter ${currentIdx}...`);
+    if (volatileStagingBuffer.chapterCounter === 0) {
+        volatileStagingBuffer.chapterCounter = 1;
+    }
+    const currentChapterNum = volatileStagingBuffer.chapterCounter;
+    
+    logToTerminal(`Initiating structural validation pipeline for Chapter ${currentChapterNum}...`);
+    
+    // Sub-chunk tracking to protect API payload execution boundaries (Handles up to 100,000 words safely)
+    let normalizedTextSample = rawText;
+    if (rawText.length > 80000) {
+        logToTerminal("⚠️ Warning: Word count volume exceeds high-throughput bounds. Sub-sampling data block to protect V8 heap allocations...");
+        normalizedTextSample = rawText.substring(0, 80000);
+    }
 
-    // Strict prompt schema structure
-    const promptInstructions = `
-You are an elite, deterministic Data Schema Compiler. Transmute the following raw source text into a perfectly formed JSON payload containing exactly three sub-properties: "exam_questions", "active_recall_cards", and "chapter_metadata".
+    const extractionPrompt = `
+You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
 
-Strict constraints:
-1. Do NOT include any markdown formatting wrappers (like \`\`\`json). Output raw string bytes only.
-2. "exam_questions" must be an array of objects. Each object must have a globally unique "id", a "question" string stripped of option prefixes, an "options" array of exactly 4 choices, a zero-indexed integer "answer_idx" (0-3), and an "explanation" string.
-3. "active_recall_cards" must be an array of objects mapping "id", "front", and "back" keys.
-4. "chapter_metadata" must contain a "title" string and a "body" summary string.
+Strict Execution Constraints:
+1. Do NOT enclose the response output within markdown syntax blocks (do not use \`\`\`json). Output pure stringified JSON bytes only.
+2. "questions_pool" must be an array of objects containing a unique "id" string, a "question" string, a 4-choice string array titled "options", a zero-indexed integer "answer_idx" (0-3), and a comprehensive "explanation" string.
+3. "flashcards_pool" must contain a flat array tracking "id", "front", and "back" strings.
+4. "chapter_metadata" tracks a "title" string and a detailed text "body" synthesis summary string.
 
-JSON Schema Template Target:
+Target JSON Structure Schema:
 {
-  "exam_questions": [{"id": "q_slug_${currentIdx}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
-  "active_recall_cards": [{"id": "fc_slug_${currentIdx}_001", "front": "", "back": ""}],
-  "chapter_metadata": { "title": "Chapter Name", "body": "Summary text description" }
+  "questions_pool": [{"id": "q_auto_${currentChapterNum}_001", "question": "", "options": ["","","",""], "answer_idx": 0, "explanation": ""}],
+  "flashcards_pool": [{"id": "fc_auto_${currentChapterNum}_001", "front": "", "back": ""}],
+  "chapter_metadata": { "title": "Unit Title", "body": "Summary string text" }
 }
 
-Source Text to parse:
-${rawText}`;
+Text material data block: ${normalizedTextSample}`;
 
     try {
-        logToTerminal("Dispatching asynchronous context request payload to OpenRouter gateway...");
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModel}] architecture...`);
+        const apiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${apiKey}`,
@@ -2122,62 +2172,114 @@ ${rawText}`;
             },
             body: JSON.stringify({
                 model: targetModel,
-                messages: [{ role: "user", content: promptInstructions }],
-                temperature: 0.1
+                messages: [{ role: "user", content: extractionPrompt }],
+                temperature: 0.15
             })
         });
 
-        if (!response.ok) throw new Error(`HTTP network error code: ${response.status}`);
-        const apiData = await response.json();
+        if (!apiResponse.ok) throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
+        const networkObject = await apiResponse.json();
         
-        let cleanJsonString = apiData.choices[0].message.content.trim();
-        
-        // Character cleaning methods to purge markdown formatting blocks
-        cleanJsonString = cleanJsonString.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
+        let outputContent = networkObject.choices[0].message.content.trim();
+        // Defensive clean pass to remove markdown fencing noise
+        outputContent = outputContent.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
 
-        const structuredPayload = JSON.parse(cleanJsonString);
+        const dataTree = JSON.parse(outputContent);
         
-        // Validation Checks
-        if (!structuredPayload.exam_questions || !structuredPayload.active_recall_cards || !structuredPayload.chapter_metadata) {
-            throw new Error("Missing required root schema components.");
+        if (!dataTree.questions_pool || !dataTree.flashcards_pool || !dataTree.chapter_metadata) {
+            throw new Error("Missing required fields inside model output payload.");
         }
 
-        const testKey = `test_${currentIdx}`;
-        volatileStagingBuffer.tests[testKey] = structuredPayload.exam_questions;
-        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(structuredPayload.active_recall_cards);
+        const testIdentifierKey = `test_${currentChapterNum}`;
+        volatileStagingBuffer.tests[testIdentifierKey] = dataTree.questions_pool;
+        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(dataTree.flashcards_pool);
         
+        // Rule E: AI chapters are offset to begin sequentially starting strictly from chapter_idx: 2
         volatileStagingBuffer.notes.chapters.push({
-            chapter_idx: currentIdx,
-            title: structuredPayload.chapter_metadata.title || `Chapter ${currentIdx}`,
+            chapter_idx: currentChapterNum + 1,
+            title: dataTree.chapter_metadata.title || `Chapter ${currentChapterNum}`,
             sections: [{
-                heading: "Chapter Overview & Concept Breakdown",
-                body: structuredPayload.chapter_metadata.body || "Overview details."
+                heading: "Dynamic Lecture Compilations & Synthetics",
+                body: dataTree.chapter_metadata.body || "Unit overview details."
             }]
         });
 
-        logToTerminal(`✅ Success: Chapter ${currentIdx} successfully compiled and cached.`);
-        document.getElementById('ai-finalize-pr-btn')?.removeAttribute('disabled');
-        document.getElementById('ai-chunk-input').value = ""; // Clear input to free heap memory
+        logToTerminal(`✅ Success: Chapter ${currentChapterNum} data models fully constructed and cached.`);
         
-        // Checkpoint save
+        document.getElementById('ai-transmute-btn').style.display = 'none';
+        document.getElementById('ai-next-chapter-btn').style.display = 'inline-block';
+        document.getElementById('ai-freeze-module-btn').style.display = 'inline-block';
+        
         saveCompilationCheckpoint();
-    } catch (error) {
-        // Rollback counter if failure
-        volatileStagingBuffer.chapterCounter--;
-        logToTerminal(`❌ Systemic Compilation Failure: ${error.message}`);
-        alert("Parser Anomaly: The AI output deviated from the required array bounds or JSON validation failed. Check terminal logging tracks.");
+    } catch (fault) {
+        logToTerminal(`❌ Operational Error: Parsing exception encountered - ${fault.message}`);
+        alert("Compilation Anomaly: The payload format returned by the model deviated from the strict schema validation rules.");
     }
 });
 
-// Finalize listener
-document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async () => {
-    const githubPat = document.getElementById('githubPatInput')?.value.trim();
+// 2. Next Chapter Instantiation Vector
+document.getElementById('ai-next-chapter-btn')?.addEventListener('click', () => {
+    if (volatileStagingBuffer.isLocked) return;
     
-    if (!githubPat) {
-        alert("Validation Exception: GitHub PAT token in the 'Submit to GitHub' input field is required.");
-        return;
-    }
+    volatileStagingBuffer.chapterCounter++;
+    const nextChapterNum = volatileStagingBuffer.chapterCounter;
+    
+    document.getElementById('ai-chunk-input').value = "";
+    document.getElementById('chapter-input-label').innerText = `4. Chapter ${nextChapterNum} Raw Text Input Workspace (Supports up to 100,000 words)`;
+    
+    document.getElementById('ai-transmute-btn').style.display = 'inline-block';
+    document.getElementById('ai-next-chapter-btn').style.display = 'none';
+    document.getElementById('ai-freeze-module-btn').style.display = 'none';
+    
+    logToTerminal(`Ready for chapter compilation sequence input. Workspace incremented to Unit ${nextChapterNum}.`);
+});
 
+// 3. Finalize Module State Lock Action
+document.getElementById('ai-freeze-module-btn')?.addEventListener('click', () => {
+    volatileStagingBuffer.isLocked = true;
+    logToTerminal("🔒 System Action: Course workspace state frozen. Commencing compilation packaging loops...");
+
+    const externalResourceLinks = [];
+    const labelNodes = document.querySelectorAll('.link-label-input');
+    const urlNodes = document.querySelectorAll('.link-url-input');
+
+    labelNodes.forEach((node, idx) => {
+        const textLabel = node.value.trim();
+        const addressUrl = urlNodes[idx]?.value.trim();
+        if (textLabel && addressUrl) {
+            externalResourceLinks.push({ label: textLabel, url: addressUrl });
+        }
+    });
+
+    // Rule E: Reference Links are injected strictly at chapter_idx: 1
+    volatileStagingBuffer.notes.chapters = volatileStagingBuffer.notes.chapters.filter(c => c.chapter_idx !== 1);
+    volatileStagingBuffer.notes.chapters.unshift({
+        chapter_idx: 1,
+        title: "Decentralized Reference Library",
+        sections: [{
+            heading: "Associated Study Core Resources",
+            body: externalResourceLinks.length > 0 
+                ? "Access external documents provided by the course creator package below." 
+                : "No external download resource links were attached during module compile phases.",
+            external_links: externalResourceLinks
+        }]
+    });
+    
+    // Sort chapters to make sure index order is correct
+    volatileStagingBuffer.notes.chapters.sort((a, b) => a.chapter_idx - b.chapter_idx);
+
+    logToTerminal(`Successfully aggregated decentralized library link pointers into chapter_idx 1.`);
+
+    document.getElementById('ai-next-chapter-btn').style.display = 'none';
+    document.getElementById('ai-freeze-module-btn').style.display = 'none';
+    document.getElementById('ai-finalize-pr-btn').style.display = 'inline-block';
+    
+    saveCompilationCheckpoint();
+    logToTerminal("Module architecture compilation complete. Ready for final GitHub PR dispatch execution.");
+});
+
+// 4. Submit Pull Request finalized dispatch listener
+document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async () => {
     const courseTitle = prompt("Enter Unique Course ID Slug (lowercase and hyphens only, e.g., ssc-10th-math):");
     if (!courseTitle) {
         alert("Validation Exception: Course Title ID is mandatory.");
@@ -2190,31 +2292,8 @@ document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async (
         return;
     }
 
-    logToTerminal("Assembling final resource anchor blocks...");
-    const textbookUrl = document.getElementById('ai-textbook-url').value.trim();
-    const workbookUrl = document.getElementById('ai-workbook-url').value.trim();
+    volatileStagingBuffer.courseSlug = sanitizedCourseId;
 
-    // Remove existing chapter 0 if present to avoid duplicates
-    volatileStagingBuffer.notes.chapters = volatileStagingBuffer.notes.chapters.filter(c => c.chapter_idx !== 0);
-
-    // Inject federated resource download links right into notes chapter index 0
-    if (textbookUrl || workbookUrl) {
-        const referenceLinks = [];
-        if (textbookUrl) referenceLinks.push({ label: "Primary Textbook Resource (External)", url: textbookUrl });
-        if (workbookUrl) referenceLinks.push({ label: "Supplementary Workbook Resource (External)", url: workbookUrl });
-        
-        volatileStagingBuffer.notes.chapters.unshift({
-            chapter_idx: 0,
-            title: "Decentralized Course Library",
-            sections: [{
-                heading: "Download Reference Materials",
-                body: "Access the external file vectors provided by the core content creator package.",
-                external_links: referenceLinks
-            }]
-        });
-    }
-
-    // Build the dynamic config block metadata on the fly
     volatileStagingBuffer.config = {
         id: sanitizedCourseId,
         title: sanitizedCourseId.replace(/-/g, ' ').toUpperCase(),
@@ -2225,9 +2304,6 @@ document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async (
 
     // Synchronize buffer into staging files array
     syncStagedFilesFromBuffer();
-    
-    // Auto-fill PAT input in DOM
-    document.getElementById('githubPatInput').value = githubPat;
     
     // Reveal Staged Files Area & Status Logs
     document.getElementById('stagedArea').style.display = 'block';
@@ -2242,8 +2318,7 @@ document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async (
     document.getElementById('validationStatusArea').scrollIntoView({ behavior: 'smooth' });
     logToTerminal(`🚀 Course files assembled. Click 'Submit Pull Request' below to dispatch!`);
     
-    // Clear compiler checkpoint from localStorage now that PR staging is ready
-    localStorage.removeItem('kumt_compiler_checkpoint');
+    clearCompilationCheckpoint();
 });
 
 // Rule B: Page Visibility listener
