@@ -588,6 +588,71 @@
       </div>
 
     </div>
+
+    <!-- Inject inside the unified global #content-contribute structural wrapper -->
+    <div id="ai-wizard-container" class="card glass-premium" style="margin-top: 2rem; border-top: 4px solid var(--primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color);">
+        <h2 style="color: var(--text-main); font-size: 1.5rem; margin-top: 0; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+            🤖 Edge-Native AI Course Compiler
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5;">
+            Generate fully structured course modules from raw learning text without writing JSON syntax.
+        </p>
+
+        <!-- Restoration Session Alert Panel (Rule A) -->
+        <div id="ai-restore-panel" style="display: none; margin-bottom: 1.5rem; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--primary); background: rgba(79, 70, 229, 0.05); align-items: center; justify-content: space-between; gap: 1rem;">
+            <span style="font-size: 0.9rem; color: var(--text-main); display: inline-flex; align-items: center; gap: 6px;">
+                💾 An active, unsubmitted AI compilation session was detected.
+            </span>
+            <button id="ai-restore-btn" class="btn btn-indigo" style="padding: 6px 12px; font-size: 0.8rem; font-weight: 600; cursor: pointer;" type="button">Restore Session</button>
+        </div>
+
+        <!-- Section 1: API Configuration -->
+        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div>
+                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">OpenRouter API Key</label>
+                <input type="password" id="ai-api-key" class="form-control" placeholder="sk-or-v1-..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace;" />
+            </div>
+            <div>
+                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">Target Model Vector</label>
+                <select id="ai-model-select" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);">
+                    <option value="google/gemini-2.5-flash">Gemini 2.5 Flash (Fast & Highly Recommended)</option>
+                    <option value="meta-llama/llama-3-70b-instruct:free">Llama 3 70B Instruct (Free Tier)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section 2: Resource Pointers -->
+        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div>
+                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">External Textbook Download Link (Google Drive / Direct URL)</label>
+                <input type="url" id="ai-textbook-url" class="form-control" placeholder="https://drive.google.com/..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);" />
+            </div>
+            <div>
+                <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">External Workbook Download Link (Optional)</label>
+                <input type="url" id="ai-workbook-url" class="form-control" placeholder="https://..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main);" />
+            </div>
+        </div>
+
+        <!-- Section 3: Chapter Raw Text input -->
+        <div style="margin-bottom: 1.5rem;">
+            <label class="form-label" style="color: var(--text-main); display: block; margin-bottom: 0.5rem; font-weight: 600;">Chapter Text Extraction Chunk</label>
+            <textarea id="ai-chunk-input" class="form-control" rows="10" placeholder="Paste a single chapter's raw text content here (Maximum 20,000 characters per conversion run)..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace; font-size: 0.85rem; resize: vertical; line-height: 1.4;"></textarea>
+        </div>
+
+        <!-- Actions & Console Logs -->
+        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <button id="ai-transmute-btn" class="btn btn-indigo" type="button" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; background: var(--primary); color: #fff;">
+                ⚡ Compile Current Chapter
+            </button>
+            <button id="ai-finalize-pr-btn" class="btn btn-success" type="button" disabled style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; background: var(--success); color: #fff;">
+                🚀 Dispatch Course Pull Request
+            </button>
+        </div>
+
+        <div id="ai-terminal-console" style="background: #000; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.8rem; color: #a3e635; height: 150px; overflow-y: auto; border: 1px solid var(--border-color); line-height: 1.5;">
+            [SYSTEM READY]: Awaiting token authorization and textbook text serialization sequences...
+        </div>
+    </div>
   </div>
 
 </div>

@@ -9,6 +9,39 @@ if hasattr(sys.stdout, 'reconfigure'):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 
+def validate_external_resource_pointers(notes_data_payload):
+    """Ensures that all federated cloud storage references follow secure, well-formed URL formatting rules,
+    strictly prohibiting quotes, backslashes, or script sequences to defend against XSS.
+    """
+    if "chapters" not in notes_data_payload:
+        return True
+        
+    for chapter in notes_data_payload["chapters"]:
+        for section in chapter.get("sections", []):
+            if "external_links" in section:
+                ext_links = section["external_links"]
+                if not isinstance(ext_links, list):
+                    raise ValueError("Structural Anomaly: external_links must occupy a rigid flat list array.")
+                for link in ext_links:
+                    if "label" not in link or "url" not in link:
+                        raise KeyError("Schema Violation: Every resource link item must declare exact 'label' and 'url' string keys.")
+                    
+                    url = link["url"]
+                    if not isinstance(url, str) or not isinstance(link["label"], str):
+                        raise TypeError("Schema Violation: link URL and label must be string values.")
+                    
+                    if not url.startswith(("http://", "https://")):
+                        raise ValueError(f"Security Alert: Target protocol pathway is insecure or malformed: {url}")
+                    
+                    # Rule D: Check for quotes, backslashes, or HTML script blocks
+                    if '"' in url or "'" in url or '\\' in url:
+                        raise ValueError(f"Security Alert: Malicious characters (quotes or backslashes) detected in URL pathway: {url}")
+                    
+                    lower_url = url.lower()
+                    if "<script" in lower_url or "javascript:" in lower_url:
+                        raise ValueError(f"Security Alert: Potential script injection sequence detected in URL: {url}")
+    return True
+
 def validate_module(course_folder):
     course_path = os.path.join(CONTENT_DIR, course_folder)
     print(f"Validating module: {course_folder}")
@@ -90,6 +123,12 @@ def validate_module(course_folder):
 
     if not isinstance(notes_data, dict) or "chapters" not in notes_data:
         print("❌ Error: notes.json root must contain a 'chapters' key.")
+        return False
+
+    try:
+        validate_external_resource_pointers(notes_data)
+    except Exception as e:
+        print(f"❌ Error: notes.json external links validation failed. {e}")
         return False
 
     chapters = notes_data["chapters"]
