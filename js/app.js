@@ -2214,6 +2214,44 @@ function tryRepairJSON(jsonString) {
 // while the previous async fetch is still awaiting a response.
 window._compilerInFlight = false;
 
+// Dynamic Provider Setup (OpenRouter / Nvidia API)
+document.getElementById('ai-provider-select')?.addEventListener('change', (e) => {
+    const provider = e.target.value;
+    const keyInput = document.getElementById('ai-api-key');
+    const keyLabel = document.getElementById('ai-key-label');
+    const modelSelect = document.getElementById('ai-model-select');
+    
+    if (provider === 'nvidia') {
+        if (keyLabel) keyLabel.textContent = '2. Input Nvidia API Key';
+        if (keyInput) {
+            keyInput.placeholder = 'nvapi-...';
+            keyInput.value = '';
+        }
+        if (modelSelect) {
+            modelSelect.innerHTML = `
+                <option value="meta/llama-3.1-70b-instruct">meta/llama-3.1-70b-instruct (Fast & Accurate)</option>
+                <option value="meta/llama-3.1-8b-instruct">meta/llama-3.1-8b-instruct (Ultra Fast)</option>
+                <option value="nvidia/nemotron-4-340b-instruct">nvidia/nemotron-4-340b-instruct (High Quality)</option>
+                <option value="mistralai/mixtral-8x22b-instruct-v0.1">mistralai/mixtral-8x22b-instruct-v0.1</option>
+            `;
+        }
+    } else {
+        if (keyLabel) keyLabel.textContent = '2. Input OpenRouter Access Key';
+        if (keyInput) {
+            keyInput.placeholder = 'sk-or-v1-...';
+            keyInput.value = '';
+        }
+        if (modelSelect) {
+            modelSelect.innerHTML = `
+                <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
+                <option value="openrouter/free">openrouter/free (Dynamic Free-Tier Auto-Routing Engine)</option>
+                <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free (High Reasoning Quality)</option>
+                <option value="qwen/qwen3-coder:free">qwen/qwen3-coder:free (Optimized for JSON Array Layouts)</option>
+            `;
+        }
+    }
+});
+
 // 1. Chapter Transmutation Thread
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
@@ -2296,8 +2334,17 @@ Text material data block:
 ${processedChunkPayload}`;
 
     try {
-        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModel}] architecture...`);
-        const apiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        const provider = document.getElementById('ai-provider-select')?.value || 'openrouter';
+        let endpoint = 'https://openrouter.ai/api/v1/chat/completions';
+        let providerName = 'OpenRouter';
+
+        if (provider === 'nvidia') {
+            endpoint = 'https://integrate.api.nvidia.com/v1/chat/completions';
+            providerName = 'Nvidia';
+        }
+
+        logToTerminal(`Sending data payloads to ${providerName} gateway utilizing [${targetModel}] architecture...`);
+        const apiResponse = await fetch(endpoint, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${apiKey}`,
@@ -2312,24 +2359,24 @@ ${processedChunkPayload}`;
 
         if (!apiResponse.ok) {
             if (apiResponse.status === 402) {
-                throw new Error("Insufficient Funds (HTTP 402): Your OpenRouter account balance has run out of credits. Please add funds to your OpenRouter account to use paid models.");
+                throw new Error(`Insufficient Funds (HTTP 402): Your ${providerName} account balance has run out of credits. Please add funds to your account to use paid models.`);
             } else if (apiResponse.status === 429) {
-                throw new Error("Rate Limit Exceeded (HTTP 429): OpenRouter free-tier limit triggered. Please wait a moment before trying again, or configure a paid model tier.");
+                throw new Error(`Rate Limit Exceeded (HTTP 429): ${providerName} API rate limit triggered. Please wait a moment before trying again.`);
             } else if (apiResponse.status === 401) {
-                throw new Error("Authentication Failed (HTTP 401): The OpenRouter API Key provided is invalid or has expired.");
+                throw new Error(`Authentication Failed (HTTP 401): The ${providerName} API Key provided is invalid or has expired.`);
             } else {
-                throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
+                throw new Error(`${providerName} gateway returned failure status code: ${apiResponse.status}`);
             }
         }
         const networkObject = await apiResponse.json();
         
-        // Check for OpenRouter API error payloads explicitly first
+        // Check for API error payloads explicitly first
         if (networkObject.error) {
-            throw new Error(`OpenRouter API Error: ${networkObject.error.message || JSON.stringify(networkObject.error)}`);
+            throw new Error(`${providerName} API Error: ${networkObject.error.message || JSON.stringify(networkObject.error)}`);
         }
         
         if (!networkObject.choices || !networkObject.choices[0] || !networkObject.choices[0].message) {
-            throw new Error("Invalid API response format (missing choices or message content).");
+            throw new Error(`Invalid ${providerName} API response format (missing choices or message content).`);
         }
         
         const rawOutput = (networkObject.choices[0].message.content || "").trim();

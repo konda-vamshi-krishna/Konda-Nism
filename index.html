@@ -637,13 +637,20 @@
         </div>
 
         <!-- Section 1: API Configuration Elements -->
-        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="form-row" style="display: grid; grid-template-columns: 1.2fr 2fr 2.5fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div>
-                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Input OpenRouter Access Key</label>
+                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">1. Select API Provider</label>
+                <select id="ai-provider-select" class="form-control" style="width: 100%;">
+                    <option value="openrouter">OpenRouter API</option>
+                    <option value="nvidia">Nvidia NIM API</option>
+                </select>
+            </div>
+            <div>
+                <label id="ai-key-label" class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">2. Input OpenRouter Access Key</label>
                 <input type="password" id="ai-api-key" class="form-control" placeholder="sk-or-v1-..." style="width: 100%;" />
             </div>
             <div>
-                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">2. Select Free-Tier Model Architecture</label>
+                <label class="form-label" style="color: var(--text-main); font-weight: bold; display: block; margin-bottom: 0.5rem;">3. Select Model Architecture</label>
                 <select id="ai-model-select" class="form-control" style="width: 100%;">
                     <option value="google/gemini-2.5-flash">google/gemini-2.5-flash (Fast, Default Standard Option)</option>
                     <option value="openrouter/free">openrouter/free (Dynamic Free-Tier Auto-Routing Engine)</option>
