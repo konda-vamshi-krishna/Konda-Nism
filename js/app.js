@@ -4,18 +4,6 @@ let globalData = {
     activeSimulationInProgress: false,
     pendingCacheRefresh: false
 };
-const BASE_PATH = (() => {
-    const hostname = window.location.hostname;
-    // 1. If executing locally, on loopback, or on local file://, use relative root pathing
-    if (hostname === 'localhost' || hostname === '127.0.0.1' || !hostname.includes('github.io')) {
-        return '';
-    }
-    // 2. Extract the exact repository sub-path from the production GitHub Pages URL
-    const pathSegments = window.location.pathname.split('/');
-    const repoName = pathSegments[1] || '';
-    return repoName ? `/${repoName}` : '';
-})();
-
 let currentCourseId = null;
 let testData = {};
 let notesData = { parts: [], flashcards: [] };
@@ -197,9 +185,9 @@ async function initializeApp() {
     try {
         updateScopeUI(false); // Hide tabs initially
         
-        const response = await fetch(`${BASE_PATH}/content/registry.json`);
+        const response = await fetch('content/registry.json');
         if (!response.ok) {
-            throw new Error(`Failed to fetch ${BASE_PATH}/content/registry.json: HTTP ${response.status}`);
+            throw new Error(`Failed to fetch content/registry.json: HTTP ${response.status}`);
         }
         const registry = await response.json();
         globalData.registry = registry.courses || [];
@@ -290,19 +278,19 @@ async function selectCourse(courseId) {
 
         const folder = course.folder;
         const [config, tests, notes, flashcards] = await Promise.all([
-            fetch(`${BASE_PATH}/content/${folder}/config.json`, { signal }).then(r => {
+            fetch(`content/${folder}/config.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
-            fetch(`${BASE_PATH}/content/${folder}/tests.json`, { signal }).then(r => {
+            fetch(`content/${folder}/tests.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
-            fetch(`${BASE_PATH}/content/${folder}/notes.json`, { signal }).then(r => {
+            fetch(`content/${folder}/notes.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
-            fetch(`${BASE_PATH}/content/${folder}/flashcards.json`, { signal }).then(r => {
+            fetch(`content/${folder}/flashcards.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             })
@@ -341,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Register Service Worker for PWA Offline Isolation
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register(`${BASE_PATH}/sw.js`, { scope: `${BASE_PATH}/` })
+        navigator.serviceWorker.register('sw.js')
             .then(reg => console.log('Service Worker registered successfully:', reg.scope))
             .catch(err => console.error('Service Worker registration failed:', err));
     });

@@ -1,23 +1,26 @@
 const CACHE_NAME = 'kumt-engine-v1';
 
-// Dynamic Base Path computation for PWA Scope Alignment
-const BASE_PATH = (() => {
-  const scope = self.registration.scope;
-  const path = new URL(scope).pathname;
-  return path.endsWith('/') ? path.slice(0, -1) : path;
-})();
+// Relative URLs for caching during install phase
+const STATIC_SHELL_URLS = [
+  './',
+  'index.html',
+  'css/style.min.css',
+  'js/app.js',
+  'js/marked.min.js'
+];
 
-const STATIC_SHELL = [
-  `${BASE_PATH}/`,
-  `${BASE_PATH}/index.html`,
-  `${BASE_PATH}/css/style.min.css`,
-  `${BASE_PATH}/js/app.js`,
-  `${BASE_PATH}/js/marked.min.js`
+// Path endings to intercept during fetch phase
+const STATIC_SHELL_MATCHES = [
+  '/',
+  '/index.html',
+  '/css/style.min.css',
+  '/js/app.js',
+  '/js/marked.min.js'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_SHELL))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_SHELL_URLS))
     .then(() => self.skipWaiting())
   );
 });
@@ -34,7 +37,8 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // Strategy A: Cache-First for Immutable Static Core Assets
-  if (STATIC_SHELL.includes(url.pathname) || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
+  const isStaticShell = STATIC_SHELL_MATCHES.some(path => url.pathname.endsWith(path));
+  if (isStaticShell || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
     );
