@@ -27,25 +27,31 @@ def build_all():
         print(f"Building Course Module: {module}")
         print(f"==========================================")
         
-        # 1. Rebuild and sanitize markdown and initial JSON
-        rebuild_cmd = ["python", "rebuild_everything.py", "--module", module]
-        print(f"Running: {' '.join(rebuild_cmd)}")
-        subprocess.run(rebuild_cmd, check=True)
-        
-        # 2. Pad mock tests to 100 questions
-        pad_cmd = ["python", "complete_all_tests.py", "--module", module]
-        print(f"Running: {' '.join(pad_cmd)}")
-        subprocess.run(pad_cmd, check=True)
-        
-        # 3. Audit question data and correct schemas
-        audit_cmd = ["python", "audit_tests.py", "--module", module]
-        print(f"Running: {' '.join(audit_cmd)}")
-        subprocess.run(audit_cmd, check=True)
-        
-        # 4. Run semantic finance checks
-        semantic_cmd = ["python", "semantic_audit.py", "--module", module]
-        print(f"Running: {' '.join(semantic_cmd)}")
-        subprocess.run(semantic_cmd, check=True)
+        if module == "nism-series-8":
+            # 1. Rebuild and sanitize markdown and initial JSON
+            rebuild_cmd = ["python", "rebuild_everything.py", "--module", module]
+            print(f"Running: {' '.join(rebuild_cmd)}")
+            subprocess.run(rebuild_cmd, check=True)
+            
+            # 2. Pad mock tests to 100 questions
+            pad_cmd = ["python", "complete_all_tests.py", "--module", module]
+            print(f"Running: {' '.join(pad_cmd)}")
+            subprocess.run(pad_cmd, check=True)
+            
+            # 3. Audit question data and correct schemas
+            audit_cmd = ["python", "audit_tests.py", "--module", module]
+            print(f"Running: {' '.join(audit_cmd)}")
+            subprocess.run(audit_cmd, check=True)
+            
+            # 4. Run semantic finance checks
+            semantic_cmd = ["python", "semantic_audit.py", "--module", module]
+            print(f"Running: {' '.join(semantic_cmd)}")
+            subprocess.run(semantic_cmd, check=True)
+        else:
+            # For general non-finance or static contributor modules, only audit/correct IDs/answers
+            audit_cmd = ["python", "audit_tests.py", "--module", module]
+            print(f"Running: {' '.join(audit_cmd)}")
+            subprocess.run(audit_cmd, check=True)
 
     # Compile the central registry
     print(f"\n==========================================")
