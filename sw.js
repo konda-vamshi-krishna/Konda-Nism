@@ -1,6 +1,6 @@
-const CACHE_NAME = 'kumt-engine-v6';
+const CACHE_NAME = 'kumt-engine-v7';
 // Cache version suffix appended to static assets for network-level proxy cache busting
-const ASSET_VER = '?v=6';
+const ASSET_VER = '?v=7';
 
 // Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [

@@ -11,6 +11,8 @@ def build_all():
     for item in sorted(os.listdir(content_dir)):
         item_path = os.path.join(content_dir, item)
         if os.path.isdir(item_path):
+            if item == 'ssc-10th-class':
+                continue
             config_path = os.path.join(item_path, 'config.json')
             if os.path.exists(config_path):
                 try:

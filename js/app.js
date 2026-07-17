@@ -1216,6 +1216,47 @@ function filterLangs() {
 window.addEventListener('DOMContentLoaded', () => {
     populateAllLangs();
     setupDropzone();
+
+    // Dynamic Asset Hydration & Download Event Vector
+    document.getElementById('download-sample-btn')?.addEventListener('click', async (event) => {
+        event.preventDefault();
+        try {
+            // Parallel stream fetch of the target testing artifacts from repo content folder
+            const [config, tests, notes, flashcards] = await Promise.all([
+                fetch('content/ssc-10th-class/config.json').then(r => { if(!r.ok) throw r; return r.json(); }),
+                fetch('content/ssc-10th-class/tests.json').then(r => { if(!r.ok) throw r; return r.json(); }),
+                fetch('content/ssc-10th-class/notes.json').then(r => { if(!r.ok) throw r; return r.json(); }),
+                fetch('content/ssc-10th-class/flashcards.json').then(r => { if(!r.ok) throw r; return r.json(); })
+            ]);
+
+            // Synthesize data structures into a unified, clean-room reference payload
+            const unifiedPayload = {
+                "info": "Extract these objects into individual files (config.json, tests.json, notes.json, flashcards.json) inside your custom directory to bypass syntax constraints.",
+                "course_metadata": config,
+                "exam_matrix": tests,
+                "study_notes": notes,
+                "active_recall_decks": flashcards
+            };
+
+            // Serialize and build the download vehicle via structural browser blobs
+            const blob = new Blob([JSON.stringify(unifiedPayload, null, 2)], { type: 'application/json' });
+            const dataUrl = URL.createObjectURL(blob);
+            
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.href = dataUrl;
+            downloadAnchor.download = "ssc_10th_class_sample_package.json";
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            
+            // Clean up allocation footprints instantly
+            URL.revokeObjectURL(dataUrl);
+            downloadAnchor.remove();
+            
+        } catch (error) {
+            console.error("Critical Network Interception Failure:", error);
+            alert("Infrastructure Notification: The sample baseline payload is currently being updated or re-indexed on the GitHub Pages edge CDN nodes. Please retry execution in 120 seconds.");
+        }
+    });
 });
 
 // Dropzone and Contribution Flow State
@@ -1633,7 +1674,9 @@ async function githubRequest(path, options = {}) {
     const response = await fetch(url, options);
     if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.message || `HTTP ${response.status}`);
+        const err = new Error(errorData.message || `HTTP ${response.status}`);
+        err.status = response.status;
+        throw err;
     }
     return response.json();
 }
@@ -1802,7 +1845,21 @@ async function submitContributionPR() {
     } catch (err) {
         console.error(err);
         logContainer.innerHTML += `<div style="color:var(--danger); font-weight:bold; margin-top:15px;">❌ GitHub API Error: ${err.message}</div>`;
-        logContainer.innerHTML += `<div style="color:var(--text-muted); font-size:0.85rem;">Please make sure your Personal Access Token (PAT) is correct and has standard 'repo' scopes enabled.</div>`;
+        if (err.status === 401 || err.status === 403) {
+            logContainer.innerHTML += `
+                <div class="glass-warning" style="margin-top: 10px; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(255, 193, 7, 0.05); font-size: 0.85rem; color: var(--text-muted);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--warning-text);">🔑 Token Scope or Authentication Failure</h4>
+                    <p style="margin: 0 0 6px 0;">The GitHub API rejected the request (Status ${err.status}). This typically means:</p>
+                    <ul style="margin: 0; padding-left: 1.2rem;">
+                        <li>Your token has expired or is invalid.</li>
+                        <li>Your token is missing the required <strong><code>public_repo</code></strong> scope.</li>
+                    </ul>
+                    <p style="margin: 6px 0 0 0;">Please follow the step-by-step instructions below to generate a valid token and try again.</p>
+                </div>
+            `;
+        } else {
+            logContainer.innerHTML += `<div style="color:var(--text-muted); font-size:0.85rem;">Please make sure your Personal Access Token (PAT) is correct and has standard 'repo' scopes enabled.</div>`;
+        }
     } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `

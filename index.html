@@ -487,6 +487,13 @@
         </div>
       </div>
 
+      <!-- Component A: Client-Side Content Reference Vector -->
+      <div class="card glass-premium" style="margin-bottom: 2rem; border-left: 4px solid var(--indigo-primary); background: var(--bg-color); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); border-left: 4px solid var(--primary);">
+          <h3 style="margin-top: 0;">📚 Need an Architectural Reference?</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">If configuring the JSON schema bounds manually is difficult, download our fully structured <strong>SSC 10th Class Mock Suite</strong> sample block. Extract the file, inspect the file mappings, modify the contents, and upload it back.</p>
+          <button id="download-sample-btn" class="btn btn-indigo" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer;" type="button">📥 Download ssc_10th_class_sample.json</button>
+      </div>
+
       <!-- Dropzone -->
       <div id="dropzone" class="dropzone" onclick="document.getElementById('fileInput').click()" style="border: 2px dashed var(--border-color); border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: var(--bg-color);">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="margin-bottom: 12px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
@@ -519,12 +526,27 @@
         <h3 style="margin-top: 0;">Submit to GitHub</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
           To open a Pull Request, we need a GitHub Personal Access Token with <code>repo</code> write scopes.
-          <a href="https://github.com/settings/tokens/new?scopes=repo&description=PrepMaster%20Contribution" target="_blank" style="color: var(--primary); font-weight: 600; margin-left: 4px;">Generate Token</a>
+          <a href="https://github.com/settings/tokens/new?scopes=public_repo&description=KUMT%20Course%20Contribution" target="_blank" style="color: var(--primary); font-weight: 600; margin-left: 4px;">Generate Token</a>
         </p>
 
         <div style="margin-bottom: 20px; max-width: 400px;">
           <label for="githubPatInput" style="font-weight: 600; display: block; margin-bottom: 8px;">GitHub Personal Access Token (PAT):</label>
           <input type="password" id="githubPatInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: monospace;">
+        </div>
+
+        <!-- Component B: Inline Token Permission Guidance Panel -->
+        <div class="token-instructions glass-warning" style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1.25rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid var(--border-color); background: rgba(255, 193, 7, 0.05);">
+            <h4 style="color: var(--warning-text); margin-top: 0; margin-bottom: 0.5rem;">🔒 Critical Step: How to Generate Your GitHub Access Token</h4>
+            <p style="margin: 0; color: var(--text-muted);">Your token remains volatile in client RAM and is never stored. It is used exclusively to dispatch the Pull Request. Follow these exact parameters:</p>
+            <ol style="padding-left: 1.2rem; line-height: 1.6; margin-top: 0.5rem; color: var(--text-muted);">
+                <li>Click the <strong>"Generate Token"</strong> configuration redirect link above.</li>
+                <li>Authenticate your identity context with your personal GitHub account.</li>
+                <li>In the <strong>Note</strong> configuration field, enter: <code>KUMT-Course-Contribution</code>.</li>
+                <li>Set the <strong>Expiration</strong> boundary to <code>7 Days</code> to maintain high security hygiene.</li>
+                <li>Under <strong>Select Scopes</strong>, check the box for <strong><code>public_repo</code></strong> (or <code>repo</code> for private organizational structures). <em>Leave all other checkboxes completely blank.</em></li>
+                <li>Scroll to the absolute lower boundary of the portal and click the green <strong>"Generate token"</strong> action button.</li>
+                <li>Copy the output string token (prefixed with <code>ghp_</code>) and paste it directly into our interface field above.</li>
+            </ol>
         </div>
 
         <button class="btn btn-primary" id="submitPrBtn" onclick="submitContributionPR()" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
