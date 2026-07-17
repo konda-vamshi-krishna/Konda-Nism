@@ -1,10 +1,18 @@
 const CACHE_NAME = 'kumt-engine-v1';
+
+// Dynamic Base Path computation for PWA Scope Alignment
+const BASE_PATH = (() => {
+  const scope = self.registration.scope;
+  const path = new URL(scope).pathname;
+  return path.endsWith('/') ? path.slice(0, -1) : path;
+})();
+
 const STATIC_SHELL = [
-  '/',
-  '/index.html',
-  '/css/style.min.css',
-  '/js/app.js',
-  '/js/marked.min.js'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/css/style.min.css`,
+  `${BASE_PATH}/js/app.js`,
+  `${BASE_PATH}/js/marked.min.js`
 ];
 
 self.addEventListener('install', (event) => {
