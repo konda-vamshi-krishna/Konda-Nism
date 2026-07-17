@@ -2162,38 +2162,46 @@ document.getElementById('ai-restore-btn')?.addEventListener('click', restoreComp
 // BUG-01 FIX: Dedicated in-flight flag prevents concurrent API calls from
 // corrupting chapterCounter if user rapidly re-clicks the compile button
 // while the previous async fetch is still awaiting a response.
-let _compilerInFlight = false;
+window._compilerInFlight = false;
 
 // 1. Chapter Transmutation Thread
 document.getElementById('ai-transmute-btn')?.addEventListener('click', async () => {
     if (volatileStagingBuffer.isLocked) return;
-    if (_compilerInFlight) {
-        logToTerminal('⚠️ Compilation already in progress. Please wait for the current request to complete.');
+    if (window._compilerInFlight) {
+        logToTerminal("⚠️ System Warning: Transmutation request intercepted. In-flight operations active.");
         return;
     }
     
     const apiKey = document.getElementById('ai-api-key').value.trim();
     const targetModel = document.getElementById('ai-model-select').value;
-    const rawText = document.getElementById('ai-chunk-input').value.trim();
     
-    if (!apiKey || !rawText) {
+    // Explicit direct read from DOM node container element to prevent stale caching states
+    const targetInputNode = document.getElementById('ai-chunk-input');
+    const rawText = targetInputNode ? targetInputNode.value.trim() : "";
+    
+    if (!apiKey || !rawText || rawText.length === 0) {
+        logToTerminal(`❌ Validation Halt: Key Present: ${!!apiKey} | String Character Metric Length: ${rawText.length}`);
         alert("Input Validation Error: Both OpenRouter Key and Text Field content are required.");
         return;
     }
+
+    window._compilerInFlight = true;
+    document.getElementById('ai-transmute-btn').disabled = true;
 
     if (volatileStagingBuffer.chapterCounter === 0) {
         volatileStagingBuffer.chapterCounter = 1;
     }
     const currentChapterNum = volatileStagingBuffer.chapterCounter;
     
-    logToTerminal(`Initiating structural validation pipeline for Chapter ${currentChapterNum}...`);
-    
-    // Sub-chunk tracking to protect API payload execution boundaries (Handles up to 100,000 words safely)
-    let normalizedTextSample = rawText;
+    // Core Remediation Fix: Intelligent sub-sampling gate (gracefully slice inputs over 80k transmission parameters)
+    let processedChunkPayload = rawText;
     if (rawText.length > 80000) {
-        logToTerminal("⚠️ Warning: Word count volume exceeds high-throughput bounds. Sub-sampling data block to protect V8 heap allocations...");
-        normalizedTextSample = rawText.substring(0, 80000);
+        logToTerminal(`⚠️ High Volume Buffer Triggered: Text length [${rawText.length}] exceeds standard 80k transmission parameters.`);
+        logToTerminal(`Slicing source text block dynamically to protect OpenRouter context limits...`);
+        processedChunkPayload = rawText.substring(0, 80000);
     }
+    
+    logToTerminal(`Initiating structural validation pipeline for Chapter ${currentChapterNum}...`);
 
     const extractionPrompt = `
 You are an expert computational data linguist. Transmute the following raw textbook material into a clean, optimized JSON dictionary payload containing exactly three properties: "questions_pool", "flashcards_pool", and "chapter_metadata".
@@ -2211,14 +2219,9 @@ Target JSON Structure Schema:
   "chapter_metadata": { "title": "Unit Title", "body": "Summary string text" }
 }
 
-Text material data block: ${normalizedTextSample}`;
+Text material data block: ${processedChunkPayload}`;
 
     try {
-        _compilerInFlight = true;
-        // Disable the compile button during flight to prevent duplicate submissions
-        const transmuteBtnEl = document.getElementById('ai-transmute-btn');
-        if (transmuteBtnEl) transmuteBtnEl.disabled = true;
-
         logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModel}] architecture...`);
         const apiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
@@ -2271,18 +2274,15 @@ Text material data block: ${normalizedTextSample}`;
         logToTerminal(`❌ Operational Error: Parsing exception encountered - ${fault.message}`);
         alert("Compilation Anomaly: The payload format returned by the model deviated from the strict schema validation rules.");
     } finally {
-        // BUG-01 FIX: Always release the in-flight lock and re-enable the button,
-        // regardless of success or failure, so the UI never deadlocks
-        _compilerInFlight = false;
-        const transmuteBtnEl = document.getElementById('ai-transmute-btn');
-        if (transmuteBtnEl) transmuteBtnEl.disabled = false;
+        window._compilerInFlight = false;
+        document.getElementById('ai-transmute-btn').disabled = false;
     }
 });
 
 // 2. Next Chapter Instantiation Vector
 document.getElementById('ai-next-chapter-btn')?.addEventListener('click', () => {
     if (volatileStagingBuffer.isLocked) return;
-    if (_compilerInFlight) return; // ponytail: BUG-05 — prevent chapterCounter skew during inflight compile → remove when full chapter-lock UX is implemented
+    if (window._compilerInFlight) return; // ponytail: BUG-05 — prevent chapterCounter skew during inflight compile → remove when full chapter-lock UX is implemented
     
     volatileStagingBuffer.chapterCounter++;
     const nextChapterNum = volatileStagingBuffer.chapterCounter;
@@ -2434,7 +2434,7 @@ function lazyLoadPDFEngine(onSuccessCallback) {
     document.head.appendChild(scriptNode);
 }
 
-// 2. Spatial Heuristic Text Extraction Pipeline
+// Upgraded Spatial Text Extraction Pipeline (V10 Hardened Ingestion Fix)
 async function parseStructuralTextFromPDF(binaryBuffer) {
     // BUG-02 FIX: Destroy previous pdfDoc before allocating a new one
     // to prevent historical page thread references accumulating in V8 heap
@@ -2474,12 +2474,17 @@ async function parseStructuralTextFromPDF(binaryBuffer) {
 
         const prunedResultString = consolidatedTextPayload.trim();
         if (!prunedResultString) {
-            throw new Error('Target payload holds no renderable plain-text assets (potential static scanned image bitmap layout).');
+            throw new Error('Target payload holds no renderable plain-text assets.');
         }
 
+        // Core Remediation Fix: Target DOM Node Population + Force Event Dispatches
         const interfaceTextarea = document.getElementById('ai-chunk-input');
         interfaceTextarea.value = prunedResultString;
         interfaceTextarea.style.display = 'block';
+
+        // Dispatch native event loops to sync all internal tracking state variables across listeners
+        interfaceTextarea.dispatchEvent(new Event('input', { bubbles: true }));
+        interfaceTextarea.dispatchEvent(new Event('change', { bubbles: true }));
 
         logToTerminal(`✅ Success: Extracted ${prunedResultString.length.toLocaleString()} layout character variables. Pipeline primed for AI compilation.`);
 
@@ -2532,6 +2537,11 @@ function ingestFileIntoWorkspace(targetFile) {
             const workingTextarea = document.getElementById('ai-chunk-input');
             workingTextarea.value = rawExtractedText;
             workingTextarea.style.display = 'block';
+            
+            // Force event dispatch to sync external bindings
+            workingTextarea.dispatchEvent(new Event('input', { bubbles: true }));
+            workingTextarea.dispatchEvent(new Event('change', { bubbles: true }));
+            
             logToTerminal(`✅ Flat document loaded: ${rawExtractedText.length.toLocaleString()} characters. Ready for compilation.`);
         };
         browserFileReader.onerror = () => logToTerminal('❌ Core OS Sandbox Error: Web API blocked access to file bytes path context.');
