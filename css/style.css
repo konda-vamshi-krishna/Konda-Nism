@@ -946,6 +946,58 @@ body.translation-active .notes-wrapper {
         flex-direction: column !important;
     }
 }
-@ k e y f r a m e s   f a d e I n   {   f r o m   {   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 1 0 p x ) ;   }   t o   {   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;   }   } 
- 
- 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropzone and Contribute Tab Styles */
+.dropzone.dragover {
+  border-color: var(--primary) !important;
+  background: var(--primary-light) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.staged-file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.staged-file-item .file-status {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.staged-file-item .file-status.pending {
+  background: var(--warning-light);
+  color: #f59e0b;
+}
+
+.staged-file-item .file-status.valid {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.staged-file-item .file-status.invalid {
+  background: var(--danger-light);
+  color: var(--danger);
+}

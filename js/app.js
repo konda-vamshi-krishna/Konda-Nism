@@ -993,4 +993,54 @@ function filterLangs() {
         });
     }
 }
-window.addEventListener('DOMContentLoaded', populateAllLangs);
+window.addEventListener('DOMContentLoaded', () => {
+    populateAllLangs();
+    setupDropzone();
+});
+
+// Dropzone and Contribution Flow State
+let stagedFiles = [];
+
+function setupDropzone() {
+    const dropzone = document.getElementById('dropzone');
+    if (!dropzone) return;
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.add('dragover');
+        }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.remove('dragover');
+        }, false);
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+    });
+}
+
+function handleFileSelect(e) {
+    const files = e.target.files;
+    handleFiles(files);
+}
+
+function handleFiles(files) {
+    console.log("Staging files: ", files);
+}
+
+function clearStagedFiles() {
+    stagedFiles = [];
+    document.getElementById('stagedArea').style.display = 'none';
+    document.getElementById('validationStatusArea').style.display = 'none';
+    document.getElementById('githubSubmitArea').style.display = 'none';
+}
+
