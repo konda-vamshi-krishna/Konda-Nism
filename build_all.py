@@ -3,7 +3,8 @@ import subprocess
 import json
 
 def build_all():
-    content_dir = 'g:/mock text/content'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    content_dir = os.path.join(base_dir, 'content')
     
     # Iterate through all subdirectories in content/
     modules = []

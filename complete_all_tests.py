@@ -143,7 +143,8 @@ def complete_tests():
     parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
     args = parser.parse_args()
 
-    module_dir = os.path.join('g:/mock text/content', args.module)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    module_dir = os.path.join(base_dir, 'content', args.module)
     clean_json_path = os.path.join(module_dir, 'tests.json')
     course_prefix = args.module.replace('series-', '').replace('-', '')
 

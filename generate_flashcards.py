@@ -1,7 +1,10 @@
 import json
 import os
 
-def generate_flashcards(module_dir="g:/mock text/content/nism-series-8", module_id="nism8"):
+def generate_flashcards(module_dir=None, module_id="nism8"):
+    if module_dir is None:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        module_dir = os.path.join(base_dir, 'content', 'nism-series-8')
     data_path = os.path.join(module_dir, 'tests.json')
     out_path = os.path.join(module_dir, 'flashcards.json')
     

@@ -2,7 +2,8 @@ import os
 import json
 
 def compile_registry():
-    content_dir = 'g:/mock text/content'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    content_dir = os.path.join(base_dir, 'content')
     registry_path = os.path.join(content_dir, 'registry.json')
     
     courses = []

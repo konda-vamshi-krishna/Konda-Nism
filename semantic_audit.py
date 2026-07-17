@@ -8,7 +8,8 @@ def semantic_finance_audit():
     parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
     args = parser.parse_args()
 
-    module_dir = os.path.join('g:/mock text/content', args.module)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    module_dir = os.path.join(base_dir, 'content', args.module)
     clean_json_path = os.path.join(module_dir, 'tests.json')
 
     with open(clean_json_path, 'r', encoding='utf-8') as f:

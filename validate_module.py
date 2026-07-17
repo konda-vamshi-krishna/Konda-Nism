@@ -6,7 +6,8 @@ import sys
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-CONTENT_DIR = 'g:/mock text/content'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 
 def validate_module(course_folder):
     course_path = os.path.join(CONTENT_DIR, course_folder)

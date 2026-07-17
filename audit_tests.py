@@ -8,7 +8,8 @@ def audit_and_correct_tests():
     parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
     args = parser.parse_args()
 
-    module_dir = os.path.join('g:/mock text/content', args.module)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    module_dir = os.path.join(base_dir, 'content', args.module)
     clean_json_path = os.path.join(module_dir, 'tests.json')
     report_path = os.path.join(module_dir, 'audit_report.txt')
 
@@ -90,7 +91,7 @@ def audit_and_correct_tests():
             
     # Also write a copy to the root for ease of verification if expected there
     try:
-        with open('g:/mock text/audit_report.txt', 'w', encoding='utf-8') as root_f:
+        with open(os.path.join(base_dir, 'audit_report.txt'), 'w', encoding='utf-8') as root_f:
             root_f.write(f"Total Questions Audited: {total_questions}\nMismatched Answers: {mismatched_answers}\nMalformed Options: {malformed_options}\nAuto-corrected: {corrected_count}\n")
     except:
         pass

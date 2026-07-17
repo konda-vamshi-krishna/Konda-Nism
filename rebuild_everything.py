@@ -45,11 +45,12 @@ def clean_data():
     parser.add_argument("--module", type=str, default="nism-series-8", help="Course module folder name")
     args = parser.parse_args()
 
-    module_dir = os.path.join('g:/mock text/content', args.module)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    module_dir = os.path.join(base_dir, 'content', args.module)
     os.makedirs(module_dir, exist_ok=True)
 
     # 1. Rebuild tests data
-    with open('g:/mock text/parsed_data.json', 'r', encoding='utf-8') as f:
+    with open(os.path.join(base_dir, 'parsed_data.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     new_data = {}
@@ -144,7 +145,7 @@ def clean_data():
     # 3. Generate notes.json
     parsed_notes_path = os.path.join(module_dir, 'parsed_notes.json')
     if not os.path.exists(parsed_notes_path):
-        parsed_notes_path = 'g:/mock text/parsed_notes.json'
+        parsed_notes_path = os.path.join(base_dir, 'parsed_notes.json')
         
     if os.path.exists(parsed_notes_path):
         try:
