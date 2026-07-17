@@ -5,6 +5,12 @@
       "title": "NISM Series VIII - Equity Derivatives",
       "description": "Prepare for the official NISM Equity Derivatives Certification.",
       "folder": "nism-series-8"
+    },
+    {
+      "id": "ssc-10th-class",
+      "title": "SSC 10th Class Comprehensive Mock Suite",
+      "description": "Integrated study notes, exam simulations, and active recall pools covering Mathematics, Science, Social Studies, English, and Language Fundamentals.",
+      "folder": "ssc-10th-class"
     }
   ]
 }
