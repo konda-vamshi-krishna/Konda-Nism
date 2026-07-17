@@ -2214,17 +2214,23 @@ function tryRepairJSON(jsonString) {
 // while the previous async fetch is still awaiting a response.
 window._compilerInFlight = false;
 
-// Global Model Catalog Definition Mapping Matrices
+// Hardened Universal Model Catalog Grid Array Matrices
 window.PROVIDER_MODELS = {
     openrouter: [
-        { value: "google/gemini-2.5-flash", label: "google/gemini-2.5-flash (Fast, Default Option)" },
-        { value: "openrouter/free", label: "openrouter/free (Dynamic Free-Tier Auto-Routing)" }
+        { value: "google/gemini-2.5-flash", label: "Gemini 2.5 Flash (Fast, Recommended)" },
+        { value: "openrouter/free", label: "Dynamic Free-Tier Auto-Router (Best Available Free Node)" },
+        { value: "meta-llama/llama-3.3-70b-instruct:free", label: "Llama 3.3 70B Instruct (Free Tier High Reasoning)" },
+        { value: "qwen/qwen3-coder:free", label: "Qwen 3 Coder 32B (Free Tier JSON Optimized)" },
+        { value: "deepseek/deepseek-chat", label: "DeepSeek V3 (High Throughput Content Parsing)" }
     ],
     nvidia: [
-        { value: "meta/llama-3.1-70b-instruct", label: "meta/llama-3.1-70b-instruct (Fast & Accurate)" },
-        { value: "nvidia/nemotron-4-340b-instruct", label: "nvidia/nemotron-4-340b-instruct (High Quality)" }
+        { value: "meta/llama-3.1-70b-instruct", label: "Llama 3.1 70B Instruct (Fast & Accurate)" },
+        { value: "meta/llama-3.1-8b-instruct", label: "Llama 3.1 8B Instruct (Ultra Low Latency Edge)" },
+        { value: "nvidia/nemotron-4-340b-instruct", label: "Nemotron-4 340B Instruct (High-Fidelity Evaluation)" },
+        { value: "mistralai/mixtral-8x22b-instruct-v0.1", label: "Mixtral 8x22B Mixture of Experts (Dense Context)" }
     ]
 };
+
 
 window.toggleProviderContextLayout = function() {
     const selectedProvider = document.getElementById('ai-provider-select').value;
@@ -2297,14 +2303,15 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
     let customRequestHeaders = { "Content-Type": "application/json" };
 
     if (activeProvider === 'nvidia') {
-        requestEndpointTarget = "https://integrate.api.nvidia.com/v1/chat/completions";
+        // Utilize a reliable, high-throughput CORS bypass wrapper that does not cap heavy multi-character POST bodies
+        requestEndpointTarget = "https://corsproxy.io/?" + encodeURIComponent("https://integrate.api.nvidia.com/v1/chat/completions");
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
-        logToTerminal(`Sending data payloads to Nvidia gateway utilizing [${targetModelName}] architecture...`);
+        logToTerminal(`Sending data payloads to Nvidia gateway through Edge Proxy utilizing [${targetModelName}]...`);
     } else {
         requestEndpointTarget = "https://openrouter.ai/api/v1/chat/completions";
         customRequestHeaders["Authorization"] = `Bearer ${apiKey}`;
         customRequestHeaders["HTTP-Origin"] = window.location.origin;
-        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModelName}] architecture...`);
+        logToTerminal(`Sending data payloads to OpenRouter gateway utilizing [${targetModelName}]...`);
     }
 
     const extractionPrompt = `
