@@ -144,7 +144,7 @@ def complete_tests():
     args = parser.parse_args()
 
     module_dir = os.path.join('g:/mock text/content', args.module)
-    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+    clean_json_path = os.path.join(module_dir, 'tests.json')
     course_prefix = args.module.replace('series-', '').replace('-', '')
 
     greeks_pool, math_pricing_pool, regulatory_pool = get_categorized_pools()
@@ -213,28 +213,8 @@ def complete_tests():
     # Save back clean json
     with open(clean_json_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
-        
-    # Re-write the Markdown files for Test 1 to 8 so they contain the filled questions
-    for test_idx in range(1, 9):
-        test_key = f"test_{test_idx}"
-        questions = data[test_key]
-        md_filename = os.path.join(module_dir, 'tests', f"test_{test_idx}.md")
-        with open(md_filename, 'w', encoding='utf-8') as f:
-            f.write(f"# NISM Series VIII Equity Derivatives - Mock {test_key}\n\n")
-            for i, q in enumerate(questions):
-                f.write(f"**Question {i+1}:** {q['question']}\n\n")
-                f.write("**Options:**\n\n")
-                for idx, opt in enumerate(q['options']):
-                    letter = chr(65 + idx)
-                    f.write(f"{letter}) {opt}\n")
                 
-                correct_letter = chr(65 + q['answer_idx'])
-                correct_opt = q['options'][q['answer_idx']]
-                f.write(f"\n===\n**Answer:** {correct_letter}) {correct_opt}\n\n")
-                f.write(f"**Explanation:** {q['explanation']}\n\n")
-                f.write("---\n\n")
-                
-    print(f"All tests completed and padded to exactly 100 questions for module {args.module}. Markdown files updated.")
+    print(f"All tests completed and padded to exactly 100 questions for module {args.module}.")
 
 if __name__ == '__main__':
     complete_tests()

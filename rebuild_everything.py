@@ -1,8 +1,44 @@
 import json
 import os
-import glob
 import re
 import argparse
+
+def parse_markdown_to_sections(content_str):
+    sections = []
+    lines = content_str.split('\n')
+    current_heading = None
+    current_body_lines = []
+    
+    for line in lines:
+        stripped = line.strip()
+        # Detect headings
+        if stripped.startswith('## ') or stripped.startswith('### '):
+            if current_heading or current_body_lines:
+                sections.append({
+                    "heading": current_heading if current_heading else "",
+                    "body": '\n'.join(current_body_lines).strip()
+                })
+            current_heading = stripped.replace('#', '').strip()
+            current_body_lines = []
+        elif stripped.endswith(':') and len(stripped) < 100 and not stripped.startswith('http') and not stripped.startswith('-') and not stripped.startswith('*'):
+            # Detect bold inline headings or capitalized titles ending in colon
+            if current_heading or current_body_lines:
+                sections.append({
+                    "heading": current_heading if current_heading else "",
+                    "body": '\n'.join(current_body_lines).strip()
+                })
+            current_heading = stripped.replace('*', '').strip()
+            current_body_lines = []
+        else:
+            current_body_lines.append(line)
+            
+    if current_heading or current_body_lines:
+        sections.append({
+            "heading": current_heading if current_heading else "",
+            "body": '\n'.join(current_body_lines).strip()
+        })
+        
+    return sections
 
 def clean_data():
     parser = argparse.ArgumentParser(description="Rebuild course modules dynamically.")
@@ -10,8 +46,9 @@ def clean_data():
     args = parser.parse_args()
 
     module_dir = os.path.join('g:/mock text/content', args.module)
-    os.makedirs(os.path.join(module_dir, 'tests'), exist_ok=True)
+    os.makedirs(module_dir, exist_ok=True)
 
+    # 1. Rebuild tests data
     with open('g:/mock text/parsed_data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
@@ -21,7 +58,6 @@ def clean_data():
 
     for old_name, questions in data.items():
         new_test_name = f"test_{test_counter}"
-        
         cleaned_questions = []
         for i, q in enumerate(questions):
             q_text = re.sub(r'^(Un-attempted|Correct|Wrong)\s+', '', q['question']).strip()
@@ -61,24 +97,6 @@ def clean_data():
             })
             
         new_data[new_test_name] = cleaned_questions
-        
-        # Write to Markdown inside content module directory
-        md_filename = os.path.join(module_dir, 'tests', f"test_{test_counter}.md")
-        with open(md_filename, 'w', encoding='utf-8') as f:
-            f.write(f"# NISM Series VIII Equity Derivatives - Mock {new_test_name}\n\n")
-            for i, q in enumerate(cleaned_questions):
-                f.write(f"**Question {i+1}:** {q['question']}\n\n")
-                f.write("**Options:**\n\n")
-                for idx, opt in enumerate(q['options']):
-                    letter = chr(65 + idx)
-                    f.write(f"{letter}) {opt}\n")
-                
-                correct_letter = chr(65 + q['answer_idx'])
-                correct_opt = q['options'][q['answer_idx']]
-                f.write(f"\n===\n**Answer:** {correct_letter}) {correct_opt}\n\n")
-                f.write(f"**Explanation:** {q['explanation']}\n\n")
-                f.write("---\n\n")
-        
         test_counter += 1
         
     # Generate Advanced Tests (Test 9 and 10)
@@ -106,79 +124,54 @@ def clean_data():
                     "answer_idx": ans_idx,
                     "explanation": q.get('explanation', 'To be reviewed.')
                 })
-            
             new_data[t_name] = t_clean
-            
-            md_filename = os.path.join(module_dir, 'tests', f"test_{file_idx}.md")
-            with open(md_filename, 'w', encoding='utf-8') as f:
-                f.write(f"# NISM Series VIII Equity Derivatives - Mock {t_name}\n\n")
-                for i, q in enumerate(t_clean):
-                    f.write(f"**Question {i+1}:** {q['question']}\n\n")
-                    f.write("**Options:**\n\n")
-                    for idx, opt in enumerate(q['options']):
-                        letter = chr(65 + idx)
-                        f.write(f"{letter}) {opt}\n")
-                    
-                    correct_letter = chr(65 + q['answer_idx'])
-                    correct_opt = q['options'][q['answer_idx']]
-                    f.write(f"\n===\n**Answer:** {correct_letter}) {correct_opt}\n\n")
-                    f.write(f"**Explanation:** {q['explanation']}\n\n")
-                    f.write("---\n\n")
     except Exception as e:
         print("Could not generate advanced tests:", e)
 
-    # Write back clean JSON inside content module directory
-    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
-    with open(clean_json_path, 'w', encoding='utf-8') as f:
+    # Write tests.json
+    tests_json_path = os.path.join(module_dir, 'tests.json')
+    with open(tests_json_path, 'w', encoding='utf-8') as f:
         json.dump(new_data, f, indent=2)
-        
-    # Generate flashcards from the fully clean JSON inside content module directory
+    print(f"Generated tests.json successfully at {tests_json_path}.")
+
+    # 2. Generate flashcards.json
     try:
         import generate_flashcards
-        # Temporarily create/symlink parsed_data_clean.json to root so generate_flashcards works if it's hardcoded
-        # Or better: write a temporary copy in root and clean it up
-        with open('g:/mock text/parsed_data_clean.json', 'w', encoding='utf-8') as f:
-            json.dump(new_data, f, indent=2)
-        
-        generate_flashcards.generate_flashcards()
-        
-        # Move generated flashcards.json to content module directory
-        if os.path.exists('g:/mock text/flashcards.json'):
-            os.replace('g:/mock text/flashcards.json', os.path.join(module_dir, 'flashcards.json'))
+        generate_flashcards.generate_flashcards(module_dir=module_dir, module_id=course_prefix)
     except Exception as e:
         print("Could not generate flashcards:", e)
         
-    # Read notes data
-    notes_json_path = os.path.join(module_dir, 'parsed_notes.json')
-    try:
-        with open(notes_json_path, 'r', encoding='utf-8') as f:
-            notes_data = json.load(f)
-    except:
-        notes_data = {"notes": [], "flashcards": []}
+    # 3. Generate notes.json
+    parsed_notes_path = os.path.join(module_dir, 'parsed_notes.json')
+    if not os.path.exists(parsed_notes_path):
+        parsed_notes_path = 'g:/mock text/parsed_notes.json'
         
-    # Read generated flashcards and append
-    try:
-        flashcards_path = os.path.join(module_dir, 'flashcards.json')
-        with open(flashcards_path, 'r', encoding='utf-8') as f:
-            generated_fc = json.load(f)
-            if "flashcards" not in notes_data:
-                notes_data["flashcards"] = []
-            notes_data["flashcards"].extend(generated_fc)
-    except Exception as e:
-        print("Could not append generated flashcards to notes:", e)
+    if os.path.exists(parsed_notes_path):
+        try:
+            with open(parsed_notes_path, 'r', encoding='utf-8') as f:
+                old_notes = json.load(f)
+            parts = old_notes.get("parts", [])
+            chapters = []
+            for idx, part in enumerate(parts):
+                title = part.get("title", f"Chapter {idx+1}")
+                content = part.get("content", "")
+                sections = parse_markdown_to_sections(content)
+                chapters.append({
+                    "chapter_idx": idx + 1,
+                    "title": title,
+                    "sections": sections
+                })
+            notes_data = {"chapters": chapters}
+        except Exception as e:
+            print("Error parsing notes markdown:", e)
+            notes_data = {"chapters": []}
+    else:
+        notes_data = {"chapters": []}
         
-    # Re-write parsed_notes.json
+    notes_json_path = os.path.join(module_dir, 'notes.json')
     with open(notes_json_path, 'w', encoding='utf-8') as f:
         json.dump(notes_data, f, indent=2)
-        
-    # Clean up temporary root copy of parsed_data_clean.json
-    try:
-        if os.path.exists('g:/mock text/parsed_data_clean.json'):
-            os.remove('g:/mock text/parsed_data_clean.json')
-    except:
-        pass
-            
-    print(f"Cleaned up markdown files and updated json for module {args.module}.")
+    print(f"Generated notes.json successfully at {notes_json_path}.")
 
 if __name__ == '__main__':
     clean_data()

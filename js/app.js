@@ -67,7 +67,7 @@ const CourseScope = {
         this.courseId = courseId;
         this.testData = courseData.tests || {};
         this.notesData = {
-            parts: courseData.notes || [],
+            chapters: (courseData.notes && courseData.notes.chapters) || [],
             flashcards: courseData.flashcards || []
         };
 
@@ -102,11 +102,11 @@ const CourseScope = {
     exit() {
         this.courseId = null;
         this.testData = {};
-        this.notesData = { parts: [], flashcards: [] };
+        this.notesData = { chapters: [], flashcards: [] };
 
         currentCourseId = null;
         testData = {};
-        notesData = { parts: [], flashcards: [] };
+        notesData = { chapters: [], flashcards: [] };
         
         flashcardsList = [];
         currentFcIndex = 0;
@@ -282,11 +282,11 @@ async function selectCourse(courseId) {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
-            fetch(`content/${folder}/parsed_data_clean.json`, { signal }).then(r => {
+            fetch(`content/${folder}/tests.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
-            fetch(`content/${folder}/parsed_notes.json`, { signal }).then(r => {
+            fetch(`content/${folder}/notes.json`, { signal }).then(r => {
                 if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 return r.json();
             }),
@@ -299,8 +299,8 @@ async function selectCourse(courseId) {
         globalData.courses[courseId] = {
             metadata: config,
             tests: tests,
-            notes: notes.parts || notes,
-            flashcards: flashcards.flashcards || flashcards
+            notes: notes,
+            flashcards: flashcards
         };
 
         CourseScope.enter(courseId);
@@ -790,14 +790,16 @@ function refreshDashboardRegistry() {
       const bodyContainer = document.getElementById('notesBodyContainer');
       tocContainer.innerHTML = '';
       
-      notesData.parts.forEach((part, index) => {
+      const chapters = notesData.chapters || [];
+      
+      chapters.forEach((chapter, index) => {
           const div = document.createElement('div');
           div.className = 'toc-item' + (index === 0 ? ' active' : '');
-          div.textContent = part.title;
+          div.textContent = chapter.title;
           div.onclick = () => {
               document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
               div.classList.add('active');
-              const htmlContent = mdToHtml(part.content);
+              const htmlContent = renderChapterHtml(chapter);
               bodyContainer.innerHTML = `
                   <div class="notes-wrapper">
                       <div class="notes-half notranslate">${htmlContent}</div>
@@ -810,13 +812,39 @@ function refreshDashboardRegistry() {
       });
       
       // Load initial notes body
-      const initHtmlContent = mdToHtml(notesData.parts[0].content);
-      bodyContainer.innerHTML = `
-          <div class="notes-wrapper">
-              <div class="notes-half notranslate">${initHtmlContent}</div>
-              <div class="notes-half translate-box" translate="yes">${initHtmlContent}</div>
-          </div>
-      `;
+      if (chapters.length > 0) {
+          const initHtmlContent = renderChapterHtml(chapters[0]);
+          bodyContainer.innerHTML = `
+              <div class="notes-wrapper">
+                  <div class="notes-half notranslate">${initHtmlContent}</div>
+                  <div class="notes-half translate-box" translate="yes">${initHtmlContent}</div>
+              </div>
+          `;
+      }
+  }
+
+  function renderChapterHtml(chapter) {
+      let html = `<h2 class="chapter-title" style="margin-bottom: 20px; font-weight: 700; color: var(--text-primary);">${chapter.title}</h2>`;
+      const sections = chapter.sections || [];
+      sections.forEach(section => {
+          html += `<div class="notes-section" style="margin-bottom: 25px;">`;
+          if (section.heading) {
+              html += `<h3 class="section-heading" style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">${section.heading}</h3>`;
+          }
+          if (section.body) {
+              // Convert newlines in JSON to paragraphs and clean lists
+              const formattedBody = section.body.split('\n\n').map(p => {
+                  if (p.trim().startsWith('- ') || p.trim().startsWith('* ')) {
+                      const items = p.split('\n').map(item => `<li>${item.replace(/^[\-\*\s]+/, '')}</li>`).join('');
+                      return `<ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">${items}</ul>`;
+                  }
+                  return `<p style="line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">${p.replace(/\n/g, '<br>')}</p>`;
+              }).join('');
+              html += `<div class="section-body">${formattedBody}</div>`;
+          }
+          html += `</div>`;
+      });
+      return html;
   }
 
   // A very lightweight markdown formatter

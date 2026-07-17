@@ -9,7 +9,7 @@ def semantic_finance_audit():
     args = parser.parse_args()
 
     module_dir = os.path.join('g:/mock text/content', args.module)
-    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+    clean_json_path = os.path.join(module_dir, 'tests.json')
 
     with open(clean_json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)

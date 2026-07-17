@@ -9,7 +9,7 @@ def audit_and_correct_tests():
     args = parser.parse_args()
 
     module_dir = os.path.join('g:/mock text/content', args.module)
-    clean_json_path = os.path.join(module_dir, 'parsed_data_clean.json')
+    clean_json_path = os.path.join(module_dir, 'tests.json')
     report_path = os.path.join(module_dir, 'audit_report.txt')
 
     with open(clean_json_path, 'r', encoding='utf-8') as f:
@@ -74,7 +74,7 @@ def audit_and_correct_tests():
     if corrected_count > 0:
         with open(clean_json_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
-        print("Updated parsed_data_clean.json with corrected answers.")
+        print("Updated tests.json with corrected answers.")
         
     # Write the report inside the module directory
     with open(report_path, 'w', encoding='utf-8') as f:

@@ -1,6 +1,5 @@
 import os
 import json
-import glob
 import sys
 
 # Force stdout to use UTF-8 to prevent Windows terminal encoding errors
@@ -13,7 +12,7 @@ def validate_module(course_folder):
     course_path = os.path.join(CONTENT_DIR, course_folder)
     print(f"Validating module: {course_folder}")
     
-    # Check config.json
+    # 1. Check config.json
     config_path = os.path.join(course_path, 'config.json')
     if not os.path.exists(config_path):
         print("❌ Error: config.json missing.")
@@ -30,43 +29,114 @@ def validate_module(course_folder):
     except Exception as e:
         print(f"❌ Error: config.json is not valid JSON. {e}")
         return False
-        
-    # Check folders
-    if not os.path.exists(os.path.join(course_path, 'tests')):
-        print("❌ Error: 'tests' folder missing.")
+
+    # 2. Check tests.json (Strict JSON Boundary Assessment - Test Case UT-007)
+    tests_path = os.path.join(course_path, 'tests.json')
+    if not os.path.exists(tests_path):
+        print("❌ Error: tests.json missing.")
         return False
+
+    try:
+        with open(tests_path, 'r', encoding='utf-8') as f:
+            tests_data = json.load(f)
+    except Exception as e:
+        print(f"❌ Error: tests.json is not valid JSON. {e}")
+        return False
+
+    if not isinstance(tests_data, dict):
+        print("❌ Error: tests.json root must be a JSON object mapping test keys to arrays.")
+        return False
+
+    for test_key, questions in tests_data.items():
+        if not test_key.startswith("test_") or not test_key[5:].isdigit():
+            print(f"❌ Error: Test key '{test_key}' is not lowercase slugified. Expected format: test_<number>")
+            return False
         
-    # Check markdown tests
-    test_files = glob.glob(os.path.join(course_path, 'tests', '*.md'))
-    if not test_files:
-        print("⚠️ Warning: No markdown tests found in 'tests' folder.")
-    else:
-        import re
-        slug_pattern = re.compile(r'^test_\d+\.md$')
-        strict_ans_pattern = re.compile(r'^===\s*\n?\*\*Answer:\*\*\s*[A-D]', re.MULTILINE | re.IGNORECASE)
-        q_pattern = re.compile(r'^\*\*Question\s+\d+:\*\*', re.MULTILINE | re.IGNORECASE)
-        
-        for f in test_files:
-            basename = os.path.basename(f)
-            # Check slugification invariant
-            if not slug_pattern.match(basename):
-                print(f"❌ Error: {basename} is not lowercase slugified. Expected format: test_<number>.md")
+        if not isinstance(questions, list):
+            print(f"❌ Error: Test '{test_key}' must map to an array of questions.")
+            return False
+
+        for idx, q in enumerate(questions):
+            req_q_keys = ["id", "question", "options", "answer_idx", "explanation"]
+            for rk in req_q_keys:
+                if rk not in q:
+                    print(f"❌ Error: Question index {idx} in '{test_key}' missing required field '{rk}'.")
+                    return False
+
+            options = q["options"]
+            if not isinstance(options, list) or len(options) == 0:
+                print(f"❌ Error: Options in question {q['id']} must be a non-empty array.")
                 return False
-                
-            with open(f, 'r', encoding='utf-8') as file:
-                content = file.read().replace('\r\n', '\n')
-                
-                # Check strict question and answer frequency match
-                q_matches = q_pattern.findall(content)
-                a_matches = strict_ans_pattern.findall(content)
-                
-                if len(q_matches) == 0:
-                    print(f"❌ Error: {basename} does not contain any Question markers.")
-                    return False
-                if len(q_matches) != len(a_matches):
-                    print(f"❌ Error: {basename} has a mismatch: found {len(q_matches)} questions but {len(a_matches)} '===\\n**Answer:**' strict blocks.")
-                    return False
-                    
+
+            answer_idx = q["answer_idx"]
+            # Array Matching Boundary Check
+            if not isinstance(answer_idx, int) or answer_idx < 0 or answer_idx >= len(options):
+                print(f"❌ Error: Question {q['id']} answer_idx '{answer_idx}' is out of bounds (options length: {len(options)}).")
+                return False
+
+    # 3. Check notes.json
+    notes_path = os.path.join(course_path, 'notes.json')
+    if not os.path.exists(notes_path):
+        print("❌ Error: notes.json missing.")
+        return False
+
+    try:
+        with open(notes_path, 'r', encoding='utf-8') as f:
+            notes_data = json.load(f)
+    except Exception as e:
+        print(f"❌ Error: notes.json is not valid JSON. {e}")
+        return False
+
+    if not isinstance(notes_data, dict) or "chapters" not in notes_data:
+        print("❌ Error: notes.json root must contain a 'chapters' key.")
+        return False
+
+    chapters = notes_data["chapters"]
+    if not isinstance(chapters, list):
+        print("❌ Error: notes.json 'chapters' must be an array.")
+        return False
+
+    for idx, chap in enumerate(chapters):
+        req_c_keys = ["chapter_idx", "title", "sections"]
+        for rk in req_c_keys:
+            if rk not in chap:
+                print(f"❌ Error: Chapter index {idx} missing required field '{rk}'.")
+                return False
+        
+        sections = chap["sections"]
+        if not isinstance(sections, list):
+            print(f"❌ Error: Chapter {chap['title']} 'sections' must be an array.")
+            return False
+
+        for s_idx, sec in enumerate(sections):
+            if "heading" not in sec or "body" not in sec:
+                print(f"❌ Error: Section index {s_idx} in chapter {chap['title']} missing 'heading' or 'body'.")
+                return False
+
+    # 4. Check flashcards.json
+    flashcards_path = os.path.join(course_path, 'flashcards.json')
+    if not os.path.exists(flashcards_path):
+        print("❌ Error: flashcards.json missing.")
+        return False
+
+    try:
+        with open(flashcards_path, 'r', encoding='utf-8') as f:
+            flashcards_data = json.load(f)
+    except Exception as e:
+        print(f"❌ Error: flashcards.json is not valid JSON. {e}")
+        return False
+
+    if not isinstance(flashcards_data, list):
+        print("❌ Error: flashcards.json root must be a JSON array.")
+        return False
+
+    for idx, fc in enumerate(flashcards_data):
+        req_f_keys = ["id", "front", "back"]
+        for rk in req_f_keys:
+            if rk not in fc:
+                print(f"❌ Error: Flashcard index {idx} missing required field '{rk}'.")
+                return False
+
     print("✅ Module is valid!")
     return True
 
