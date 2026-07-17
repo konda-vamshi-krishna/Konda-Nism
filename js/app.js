@@ -2263,6 +2263,15 @@ ${processedChunkPayload}`;
         if (!apiResponse.ok) throw new Error(`Gateway returned failure status code: ${apiResponse.status}`);
         const networkObject = await apiResponse.json();
         
+        // Check for OpenRouter API error payloads explicitly first
+        if (networkObject.error) {
+            throw new Error(`OpenRouter API Error: ${networkObject.error.message || JSON.stringify(networkObject.error)}`);
+        }
+        
+        if (!networkObject.choices || !networkObject.choices[0] || !networkObject.choices[0].message) {
+            throw new Error("Invalid API response format (missing choices or message content).");
+        }
+        
         const rawOutput = (networkObject.choices[0].message.content || "").trim();
         
         // Robust JSON Isolation: Extract substring bounded by the first '{' and the last '}'
@@ -2272,7 +2281,7 @@ ${processedChunkPayload}`;
         if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
             throw new Error("No valid JSON object layout bounds isolated in the response content.");
         }
-                const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
+        const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
 
         // Clean trailing commas which are invalid in the standard JSON spec but commonly produced by LLMs
         let cleanedJsonPayload = jsonPayload.replace(/,\s*([}\]])/g, '$1');
@@ -2348,7 +2357,7 @@ ${processedChunkPayload}`;
         saveCompilationCheckpoint();
     } catch (fault) {
         logToTerminal(`❌ Operational Error: Parsing exception encountered - ${fault.message}`);
-        alert("Compilation Anomaly: The payload format returned by the model deviated from the strict schema validation rules.");
+        alert(`Compilation Anomaly: ${fault.message}`);
     } finally {
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
