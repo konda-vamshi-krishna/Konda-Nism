@@ -418,89 +418,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // A very lightweight markdown formatter
   function mdToHtml(md) {
-      let lines = md.split('\\n');
-      let html = '';
-      let inTable = false;
-      let inList = false;
-      
-      for(let i=0; i<lines.length; i++) {
-          let line = lines[i].trim();
-          
-          // Header 3
-          if (line.startsWith('###')) {
-              if (inList) { html += '</ul>'; inList = false; }
-              html += `<h3>${line.replace('###', '').trim()}</h3>`;
-              continue;
-          }
-          // Header 2
-          if (line.startsWith('##')) {
-              if (inList) { html += '</ul>'; inList = false; }
-              html += `<h2>${line.replace('##', '').trim()}</h2>`;
-              continue;
-          }
-          // Header 1
-          if (line.startsWith('#')) {
-              if (inList) { html += '</ul>'; inList = false; }
-              html += `<h1>${line.replace('#', '').trim()}</h1>`;
-              continue;
-          }
-          
-          // Handle Table
-          if (line.includes('|')) {
-              if (!inTable) {
-                  html += '<table>';
-                  inTable = true;
-              }
-              let cells = line.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1);
-              // Skip divider line like |---|---|
-              if (line.includes('---')) continue;
-              
-              html += '<tr>';
-              cells.forEach(cell => {
-                  // If it is the first row, make it a table header
-                  if (html.endsWith('<table><tr>')) {
-                      html += `<th>${cell}</th>`;
-                  } else {
-                      html += `<td>${cell}</td>`;
-                  }
-              });
-              html += '</tr>';
-              continue;
-          } else {
-              if (inTable) {
-                  html += '</table>';
-                  inTable = false;
-              }
-          }
-
-          // Handle Lists
-          if (line.startsWith('-') || line.match(/^\\d+\\./)) {
-              if (!inList) {
-                  html += '<ul>';
-                  inList = true;
-              }
-              let text = line.replace(/^-|^\\d+\\./, '').trim();
-              html += `<li>${text}</li>`;
-              continue;
-          } else {
-              if (inList) {
-                  html += '</ul>';
-                  inList = false;
-              }
-          }
-
-          if (line === '') {
-              html += '<br>';
-          } else {
-              // Standard paragraph with bold formats
-              let formattedLine = line.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>');
-              html += `<p>${formattedLine}</p>`;
-          }
+      if (typeof marked !== 'undefined') {
+          return marked.parse(md);
       }
-      
-      if (inTable) html += '</table>';
-      if (inList) html += '</ul>';
-      return html;
+      return "<p>Error: Markdown parser not loaded.</p>";
   }
 
   // Flashcards flipping and loading

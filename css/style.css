@@ -652,3 +652,77 @@
   .color-correct { color: var(--success); }
   .color-wrong { color: var(--danger); }
   .color-unanswered { color: var(--text-muted); }
+/* Markdown and Table Styles for Notes */
+.notes-body {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+.notes-body h1, .notes-body h2, .notes-body h3 {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.notes-body p {
+    margin-bottom: 1.2rem;
+}
+.notes-body ul, .notes-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+.notes-body li {
+    margin-bottom: 0.5rem;
+}
+.notes-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--card-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.notes-body th, .notes-body td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+.notes-body th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+}
+.notes-body tr:last-child td {
+    border-bottom: none;
+}
+.notes-body tr:nth-child(even) {
+    background: rgba(0,0,0,0.02);
+}
+[data-theme='dark'] .notes-body tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+
+/* Translator Widget Styles */
+.translate-widget {
+    margin-right: 15px;
+}
+.goog-te-gadget-simple {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    font-size: 0.9rem !important;
+    color: var(--text-main) !important;
+    cursor: pointer;
+}
+.goog-te-menu-value {
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+/* Hide the Google Translate branding banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important; 
+}
