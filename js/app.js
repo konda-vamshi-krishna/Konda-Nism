@@ -556,7 +556,13 @@ function refreshDashboardRegistry() {
   }
 
   function renderActiveQuestion() {
-      const q = testData[currentActiveTest][currentQ];
+      const q = testData[currentActiveTest]?.[currentQ];
+      // Null-guard: malformed or missing question object — fail gracefully
+      if (!q || !Array.isArray(q.options) || q.answer_idx === undefined) {
+          document.getElementById('activeQText').innerHTML = '<p style="color:var(--color-wrong);">Question data unavailable. Please restart this test.</p>';
+          document.getElementById('activeOptionsArea').innerHTML = '';
+          return;
+      }
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
       document.getElementById('activeQText').innerHTML = `
           <div class="notranslate">${q.question}</div>
@@ -761,7 +767,14 @@ function refreshDashboardRegistry() {
 
   // Navigation Tabs Switch
   function switchTab(tabId) {
-      if (tabId !== 'dashboard' && !currentCourseId) {
+      // Guard: if navigating away from simulator with an active timer, freeze it and persist state
+      if (tabId !== 'simulator' && timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          if (typeof saveActiveTestState === 'function') saveActiveTestState();
+      }
+
+      if (tabId !== 'dashboard' && tabId !== 'contribute' && !currentCourseId) {
           console.warn(`Attempted to switch to ${tabId} without active course scope.`);
           return;
       }

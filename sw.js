@@ -1,15 +1,17 @@
-const CACHE_NAME = 'kumt-engine-v3';
+const CACHE_NAME = 'kumt-engine-v4';
+// Cache version suffix appended to static assets for network-level proxy cache busting
+const ASSET_VER = '?v=4';
 
-// Relative URLs for caching during install phase
+// Relative URLs for caching during install phase (versioned to bust proxy/ISP caches)
 const STATIC_SHELL_URLS = [
-  './',
-  'index.html',
-  'css/style.min.css',
-  'js/app.js',
-  'js/marked.min.js'
+  './' + ASSET_VER,
+  'index.html' + ASSET_VER,
+  'css/style.min.css' + ASSET_VER,
+  'js/app.js' + ASSET_VER,
+  'js/marked.min.js' + ASSET_VER
 ];
 
-// Path endings to intercept during fetch phase
+// Path endings to intercept during fetch phase (match without version param)
 const STATIC_SHELL_MATCHES = [
   '/',
   '/index.html',
