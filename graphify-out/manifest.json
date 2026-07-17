@@ -40,9 +40,9 @@
     "semantic_hash": "371fa06145683d5912a5dd8613bedf66"
   },
   "js/app.js": {
-    "mtime": 1784321960.9305215,
-    "ast_hash": "28224755d7bee05aa67d42a1ceef5e64",
-    "semantic_hash": "28224755d7bee05aa67d42a1ceef5e64"
+    "mtime": 1784328881.8092341,
+    "ast_hash": "dc37c27f4a1f0e8c6aad15756953a847",
+    "semantic_hash": "dc37c27f4a1f0e8c6aad15756953a847"
   },
   "js/marked.min.js": {
     "mtime": 1784295582.2982373,
@@ -95,17 +95,17 @@
     "semantic_hash": "3abad223b5016b86fe3f92eb1289145e"
   },
   "content/nism-series-8/flashcards.json": {
-    "mtime": 1784321987.8253043,
+    "mtime": 1784328851.9082546,
     "ast_hash": "df74435dc086c191f751b19568d6c49e",
     "semantic_hash": "df74435dc086c191f751b19568d6c49e"
   },
   "content/nism-series-8/parsed_notes.json": {
-    "mtime": 1784321987.675929,
+    "mtime": 1784328851.7237384,
     "ast_hash": "d2462538405116e411ba60849a1d8f76",
     "semantic_hash": "d2462538405116e411ba60849a1d8f76"
   },
   "content/registry.json": {
-    "mtime": 1784321988.2808523,
+    "mtime": 1784328852.5006106,
     "ast_hash": "4fa7881b7e278dd2ef1a5cd0ec791bf2",
     "semantic_hash": "4fa7881b7e278dd2ef1a5cd0ec791bf2"
   },
@@ -120,9 +120,9 @@
     "semantic_hash": "88f8c6c5ca4f6b248bc391d8d06f4c62"
   },
   "validate_module.py": {
-    "mtime": 1784321905.3009367,
-    "ast_hash": "2bfedd8e06ca1e2851aa0c99f250e1df",
-    "semantic_hash": "2bfedd8e06ca1e2851aa0c99f250e1df"
+    "mtime": 1784324255.6887076,
+    "ast_hash": "c670ebe0aef278e5c7006235529833b1",
+    "semantic_hash": "c670ebe0aef278e5c7006235529833b1"
   },
   "build_all.py": {
     "mtime": 1784318661.352882,
@@ -135,12 +135,12 @@
     "semantic_hash": "fd91c8164fcb4422b555f28612a2dd40"
   },
   "content/nism-series-8/notes.json": {
-    "mtime": 1784321987.8368485,
+    "mtime": 1784328851.9222543,
     "ast_hash": "14805847707fc165b6bb1a703664c5b9",
     "semantic_hash": "14805847707fc165b6bb1a703664c5b9"
   },
   "content/nism-series-8/tests.json": {
-    "mtime": 1784321987.9661548,
+    "mtime": 1784328852.082574,
     "ast_hash": "a565b9eada08ee91a893438313a91903",
     "semantic_hash": "a565b9eada08ee91a893438313a91903"
   },
@@ -165,9 +165,9 @@
     "semantic_hash": "cf9d99c9a2e9375c7865f9a0dd6078d2"
   },
   "sw.js": {
-    "mtime": 1784321971.4747477,
-    "ast_hash": "277e3e7a1ab0f388f907d6563bae5e15",
-    "semantic_hash": "277e3e7a1ab0f388f907d6563bae5e15"
+    "mtime": 1784328635.1896644,
+    "ast_hash": "ce165a153951c5c0ba13263c2a2339f3",
+    "semantic_hash": "ce165a153951c5c0ba13263c2a2339f3"
   },
   ".github/workflows/validate.yml": {
     "mtime": 1784316492.2708983,
@@ -180,12 +180,12 @@
     "semantic_hash": "e69b8c72eb22cb3cf4d2c58fb6db6df3"
   },
   "audit_report.txt": {
-    "mtime": 1784321988.0809972,
+    "mtime": 1784328852.255154,
     "ast_hash": "692ed08a37573ddf6a8a9660c330a660",
     "semantic_hash": "692ed08a37573ddf6a8a9660c330a660"
   },
   "content/nism-series-8/audit_report.txt": {
-    "mtime": 1784321988.0809972,
+    "mtime": 1784328852.255154,
     "ast_hash": "e7c22f25da28ddc0ce056d901b354a80",
     "semantic_hash": "e7c22f25da28ddc0ce056d901b354a80"
   },
@@ -200,9 +200,9 @@
     "semantic_hash": "ee1a158b5a82841c4e3ac7951ac1746f"
   },
   "index.html": {
-    "mtime": 1784321936.0766845,
-    "ast_hash": "210d86e03f8299558d5159918e84f884",
-    "semantic_hash": "210d86e03f8299558d5159918e84f884"
+    "mtime": 1784327301.979161,
+    "ast_hash": "18742ef557561c292ce3dad27d3d825e",
+    "semantic_hash": "18742ef557561c292ce3dad27d3d825e"
   },
   "NISM-Series-8_ Equity Derivatives Workbook.pdf": {
     "mtime": 1784285022.6690347,

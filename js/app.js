@@ -2402,11 +2402,6 @@ document.getElementById('ai-transmute-btn')?.addEventListener('click', async () 
         window._compilerInFlight = false;
         document.getElementById('ai-transmute-btn').disabled = false;
     }
-});dpoint loop has logged the fault parameters.");
-    } finally {
-        window._compilerInFlight = false;
-        document.getElementById('ai-transmute-btn').disabled = false;
-    }
 });
 
 // 2. Next Chapter Instantiation Vector
