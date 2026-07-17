@@ -2272,25 +2272,70 @@ ${processedChunkPayload}`;
         if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
             throw new Error("No valid JSON object layout bounds isolated in the response content.");
         }
-        const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
+                const jsonPayload = rawOutput.substring(firstBrace, lastBrace + 1);
 
-        const dataTree = JSON.parse(jsonPayload);
+        // Clean trailing commas which are invalid in the standard JSON spec but commonly produced by LLMs
+        let cleanedJsonPayload = jsonPayload.replace(/,\s*([}\]])/g, '$1');
+
+        let dataTree;
+        try {
+            dataTree = JSON.parse(cleanedJsonPayload);
+        } catch (initialErr) {
+            logToTerminal('⚠️ Initial JSON parse failed. Attempting structural string recovery...');
+            // Escape literal newlines and control characters inside JSON strings that break standard JSON.parse()
+            try {
+                const normalizedText = cleanedJsonPayload
+                    .replace(/[\n\r\t]/g, ' ')
+                    .replace(/\\"/g, '___ESCAPED_QUOTE___')
+                    .replace(/___ESCAPED_QUOTE___/g, '\\"');
+                dataTree = JSON.parse(normalizedText);
+            } catch (recoveryErr) {
+                throw new Error(`JSON Syntax Error: ${initialErr.message}. Isolated substring was: ${jsonPayload.substring(0, 150)}...`);
+            }
+        }
         
-        if (!dataTree.questions_pool || !dataTree.flashcards_pool || !dataTree.chapter_metadata) {
-            throw new Error("Missing required fields inside model output payload.");
+        // Robust Key Alignment: support common LLM naming variations (singular/plural/casing/underscores)
+        const keys = Object.keys(dataTree);
+        const questionsKey = keys.find(k => {
+            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
+            return clean === 'questionspool' || clean === 'questionpool' || clean === 'questions' || clean === 'question';
+        });
+        const flashcardsKey = keys.find(k => {
+            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
+            return clean === 'flashcardspool' || clean === 'flashcardpool' || clean === 'flashcards' || clean === 'flashcard';
+        });
+        const metadataKey = keys.find(k => {
+            const clean = k.toLowerCase().replace(/[^a-z]/g, '');
+            return clean === 'chaptermetadata' || clean === 'metadata' || clean === 'chapter';
+        });
+
+        if (!questionsKey || !flashcardsKey || !metadataKey) {
+            throw new Error(`Missing required fields inside model output payload. Found keys: ${keys.join(', ')}. Expected: questions_pool, flashcards_pool, chapter_metadata.`);
+        }
+
+        const rawQuestions = dataTree[questionsKey];
+        const rawFlashcards = dataTree[flashcardsKey];
+        const chapterMetadata = dataTree[metadataKey];
+
+        // Structural Normalization: extract arrays even if LLM nested them inside a secondary key
+        const questionsPool = Array.isArray(rawQuestions) ? rawQuestions : (rawQuestions.questions || rawQuestions.pool || Object.values(rawQuestions));
+        const flashcardsPool = Array.isArray(rawFlashcards) ? rawFlashcards : (rawFlashcards.flashcards || rawFlashcards.pool || Object.values(rawFlashcards));
+
+        if (!Array.isArray(questionsPool) || !Array.isArray(flashcardsPool)) {
+            throw new Error('Target pool properties do not map to valid array formats.');
         }
 
         const testIdentifierKey = `test_${currentChapterNum}`;
-        volatileStagingBuffer.tests[testIdentifierKey] = dataTree.questions_pool;
-        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(dataTree.flashcards_pool);
+        volatileStagingBuffer.tests[testIdentifierKey] = questionsPool;
+        volatileStagingBuffer.flashcards = volatileStagingBuffer.flashcards.concat(flashcardsPool);
         
         // Rule E: AI chapters are offset to begin sequentially starting strictly from chapter_idx: 2
         volatileStagingBuffer.notes.chapters.push({
             chapter_idx: currentChapterNum + 1,
-            title: dataTree.chapter_metadata.title || `Chapter ${currentChapterNum}`,
+            title: chapterMetadata.title || `Chapter ${currentChapterNum}`,
             sections: [{
                 heading: "Dynamic Lecture Compilations & Synthetics",
-                body: dataTree.chapter_metadata.body || "Unit overview details."
+                body: chapterMetadata.body || "Unit overview details."
             }]
         });
 
