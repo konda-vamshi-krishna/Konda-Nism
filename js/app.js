@@ -1884,6 +1884,13 @@ async function submitContributionPR() {
     } catch (err) {
         console.error(err);
         logContainer.innerHTML += `<div style="color:var(--danger); font-weight:bold; margin-top:15px;">❌ GitHub API Error: ${err.message}</div>`;
+        
+        // Trigger auto-download fallback to save compiled state from being lost
+        if (document.getElementById('ai-download-json-btn')) {
+            logContainer.innerHTML += `<div style="color:var(--warning); font-weight:bold; margin-top:5px;">💾 Local Backup Rescue: Master JSON module downloaded to local storage drive.</div>`;
+            document.getElementById('ai-download-json-btn').click();
+        }
+
         if (err.status === 401 || err.status === 403) {
             logContainer.innerHTML += `
                 <div class="glass-warning" style="margin-top: 10px; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(255, 193, 7, 0.05); font-size: 0.85rem; color: var(--text-muted);">
@@ -2431,59 +2438,131 @@ document.getElementById('ai-next-chapter-btn')?.addEventListener('click', () => 
     logToTerminal(`Ready for chapter compilation sequence input. Workspace incremented to Unit ${nextChapterNum}.`);
 });
 
-// 3. Finalize Module State Lock Action
+// Global Inversion Utility for Code Manifest Panel Viewer
+window.toggleInspectorView = function() {
+    const preBlock = document.getElementById('ai-json-inspector-pre');
+    const toggleBtn = document.getElementById('ai-toggle-inspector-btn');
+    if (preBlock.style.display === 'none') {
+        preBlock.style.display = 'block';
+        toggleBtn.textContent = "👁️ Collapse View";
+    } else {
+        preBlock.style.display = 'none';
+        toggleBtn.textContent = "👁️ Expand View";
+    }
+};
+
+// Hardened Manifest Packaging Core Refactor (V20 Finalizer Pass)
 document.getElementById('ai-freeze-module-btn')?.addEventListener('click', () => {
-    volatileStagingBuffer.isLocked = true;
-    logToTerminal("🔒 System Action: Course workspace state frozen. Commencing compilation packaging loops...");
+    try {
+        logToTerminal("🔒 System Action: Commencing course packaging loop tracking matrix...");
+        
+        const externalResourceLinks = [];
+        const labelNodes = document.querySelectorAll('.link-label-input');
+        const urlNodes = document.querySelectorAll('.link-url-input');
 
-    const externalResourceLinks = [];
-    const labelNodes = document.querySelectorAll('.link-label-input');
-    const urlNodes = document.querySelectorAll('.link-url-input');
+        labelNodes.forEach((node, idx) => {
+            const textLabel = node.value.trim();
+            const addressUrl = urlNodes[idx]?.value.trim();
+            if (textLabel && addressUrl) {
+                externalResourceLinks.push({ label: textLabel, url: addressUrl });
+            }
+        });
 
-    labelNodes.forEach((node, idx) => {
-        const textLabel = node.value.trim();
-        const addressUrl = urlNodes[idx]?.value.trim();
-        if (textLabel && addressUrl) {
-            externalResourceLinks.push({ label: textLabel, url: addressUrl });
+        // Rule E: Reference Links are injected strictly at chapter_idx: 1
+        volatileStagingBuffer.notes.chapters = volatileStagingBuffer.notes.chapters.filter(c => c.chapter_idx !== 1);
+        volatileStagingBuffer.notes.chapters.unshift({
+            chapter_idx: 1,
+            title: "Decentralized Reference Library",
+            sections: [{
+                heading: "Associated Study Core Resources",
+                body: externalResourceLinks.length > 0 
+                    ? "Access external documents provided by the course creator package below." 
+                    : "No external download resource links were attached during module compile phases.",
+                external_links: externalResourceLinks
+            }]
+        });
+        
+        // Sort chapters to make sure index order is correct
+        volatileStagingBuffer.notes.chapters.sort((a, b) => a.chapter_idx - b.chapter_idx);
+
+        volatileStagingBuffer.isLocked = true;
+
+        // Build the primary unified payload matching base validation specifications
+        const finalizedOutputPackage = {
+            course_id: `course_module_${Date.now()}`,
+            schema_version: "2.0.0",
+            timestamp: new Date().toISOString(),
+            content_matrix: {
+                tests: volatileStagingBuffer.tests,
+                flashcards: volatileStagingBuffer.flashcards,
+                notes: volatileStagingBuffer.notes
+            }
+        };
+
+        // Cache the assembled text inside window scope memory for global runtime access
+        window._finalizedCoursePayload = finalizedOutputPackage;
+
+        // Stringify the complete dictionary structure using indentation for easy visualization
+        const formattedJsonString = JSON.stringify(finalizedOutputPackage, null, 2);
+        
+        // Hydrate the visual workspace element panel and render it to the viewport
+        const inspectorWrapper = document.getElementById('ai-inspection-wrapper');
+        const inspectorPre = document.getElementById('ai-json-inspector-pre');
+        
+        if (inspectorWrapper && inspectorPre) {
+            inspectorPre.textContent = formattedJsonString;
+            inspectorWrapper.style.display = 'block';
+            inspectorPre.style.display = 'block';
         }
-    });
 
-    // Rule E: Reference Links are injected strictly at chapter_idx: 1
-    volatileStagingBuffer.notes.chapters = volatileStagingBuffer.notes.chapters.filter(c => c.chapter_idx !== 1);
-    volatileStagingBuffer.notes.chapters.unshift({
-        chapter_idx: 1,
-        title: "Decentralized Reference Library",
-        sections: [{
-            heading: "Associated Study Core Resources",
-            body: externalResourceLinks.length > 0 
-                ? "Access external documents provided by the course creator package below." 
-                : "No external download resource links were attached during module compile phases.",
-            external_links: externalResourceLinks
-        }]
-    });
-    
-    // Sort chapters to make sure index order is correct
-    volatileStagingBuffer.notes.chapters.sort((a, b) => a.chapter_idx - b.chapter_idx);
+        logToTerminal("✅ Pre-Flight Manifest generated cleanly. Review structured file tracking data below.");
 
-    logToTerminal(`Successfully aggregated decentralized library link pointers into chapter_idx 1.`);
-
-    document.getElementById('ai-next-chapter-btn').style.display = 'none';
-    document.getElementById('ai-freeze-module-btn').style.display = 'none';
-    document.getElementById('ai-finalize-pr-btn').style.display = 'inline-block';
-    
-    saveCompilationCheckpoint();
-    logToTerminal("Module architecture compilation complete. Ready for final GitHub PR dispatch execution.");
+        document.getElementById('ai-next-chapter-btn').style.display = 'none';
+        document.getElementById('ai-freeze-module-btn').style.display = 'none';
+        document.getElementById('ai-finalize-pr-btn').style.display = 'inline-block';
+        
+        saveCompilationCheckpoint();
+        logToTerminal("Module architecture compilation complete. Ready for final GitHub PR dispatch execution.");
+        
+    } catch (err) {
+        logToTerminal(`❌ System Packaging Failure: ${err.message}`);
+    }
 });
 
-// 4. Submit Pull Request finalized dispatch listener
-document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async () => {
-    const courseTitle = prompt("Enter Unique Course ID Slug (lowercase and hyphens only, e.g., ssc-10th-math):");
-    if (!courseTitle) {
-        alert("Validation Exception: Course Title ID is mandatory.");
+// Hardened Native Local File Backup Downloader Button Listener
+document.getElementById('ai-download-json-btn')?.addEventListener('click', () => {
+    if (!window._finalizedCoursePayload) {
+        alert("Operation Aborted: Pre-flight manifest data arrays are currently empty.");
         return;
     }
-    
-    const sanitizedCourseId = courseTitle.toLowerCase().trim().replace(/[^a-z0-9-]/g, '-');
+    try {
+        const jsonBlobData = new Blob([JSON.stringify(window._finalizedCoursePayload, null, 2)], { type: "application/json" });
+        const temporaryDownloadAnchor = document.createElement('a');
+        temporaryDownloadAnchor.href = URL.createObjectURL(jsonBlobData);
+        temporaryDownloadAnchor.download = `course_module_build_${Date.now()}.json`;
+        document.body.appendChild(temporaryDownloadAnchor);
+        temporaryDownloadAnchor.click();
+        document.body.removeChild(temporaryDownloadAnchor);
+        logToTerminal("💾 System Success: Master JSON configuration package exported to local drive backup location.");
+    } catch (fault) {
+        logToTerminal(`❌ Export Operation Intercept Exception: ${fault.message}`);
+    }
+});
+
+// Hardened Resilient Pull Request Dispatch Core Refactor
+document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async () => {
+    if (!window._finalizedCoursePayload) {
+        alert("Validation Drop: Pre-flight manifest arrays not initialized. Click 'Freeze Module' first.");
+        return;
+    }
+
+    // Dynamic prompt parameter checks with safety fallbacks
+    let targetUnitId = prompt("Enter Unique Course ID Slug (lowercase and hyphens only, e.g. biology-neet-2026):");
+    if (!targetUnitId || targetUnitId.trim().length === 0) {
+        logToTerminal("⚠️ Transmission Canceled: Missing target namespace parameters.");
+        return;
+    }
+    const sanitizedCourseId = targetUnitId.toLowerCase().trim().replace(/[^a-z0-9-]/g, '-');
     if (!sanitizedCourseId) {
         alert("Validation Exception: Invalid Course ID Slug.");
         return;
@@ -2513,8 +2592,24 @@ document.getElementById('ai-finalize-pr-btn')?.addEventListener('click', async (
     
     // Scroll validation status into view
     document.getElementById('validationStatusArea').scrollIntoView({ behavior: 'smooth' });
-    logToTerminal(`🚀 Course files assembled. Click 'Submit Pull Request' below to dispatch!`);
     
+    // Verify presence of global deployment parameters or execute automatic serverless local data rescue fallback
+    const patInput = document.getElementById('githubPatInput');
+    const pat = patInput ? patInput.value.trim() : "";
+    
+    if (!pat) {
+        logToTerminal("⚠️ Zero-Trust Security Catch: GitHub direct API tokens are unmapped or missing in local script variables.");
+        logToTerminal("System Action: Initiating Local Drive Backup Rescue routine to protect user data components...");
+        
+        // Automatically click the local downloader button to save compiled states from being lost
+        document.getElementById('ai-download-json-btn').click();
+        
+        alert("Direct Git Dispatch Unauthenticated: Your repository environment parameters are missing secret variables. The master file has been downloaded directly to your local drive instead to prevent data loss. You can drop it into your codebase repository manually.");
+        clearCompilationCheckpoint();
+        return;
+    }
+
+    logToTerminal(`🚀 Course files assembled. Click 'Submit Pull Request' below to dispatch!`);
     clearCompilationCheckpoint();
 });
 

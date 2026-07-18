@@ -691,6 +691,21 @@
             <textarea id="ai-chunk-input" class="form-control" rows="8" style="width: 100%; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; display: none; resize: vertical;" placeholder="Extracted structural document text appears here..."></textarea>
         </div>
 
+        <!-- Hardened Code Manifest Inspector Panel (V20 Core Upgrade) -->
+        <div id="ai-inspection-wrapper" style="margin-top: 1.5rem; margin-bottom: 1.5rem; display: none;">
+            <div style="background: rgba(0,0,0,0.2); border: 1px solid var(--primary); border-radius: 8px; padding: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <h4 style="margin: 0; color: var(--text-main); font-size: 1.1rem; font-weight: bold;">📦 Compiled Course File Inspector (Pre-Flight Manifest)</h4>
+                    <div>
+                        <button id="ai-download-json-btn" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem; margin-right: 0.5rem;" type="button">💾 Download Module Backup (.json)</button>
+                        <button id="ai-toggle-inspector-btn" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem;" type="button" onclick="toggleInspectorView();">👁️ Collapse View</button>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Review the absolute structural data architecture of your generated app files below before triggering transmission dispatches.</p>
+                <pre id="ai-json-inspector-pre" style="background: rgba(0,0,0,0.4); border-radius: 6px; padding: 1rem; max-height: 350px; overflow-y: auto; font-family: monospace; font-size: 0.8rem; color: #a6e22e; border: 1px solid rgba(255,255,255,0.05); white-space: pre-wrap; word-break: break-all;"></pre>
+            </div>
+        </div>
+
         <!-- Section 4: Process Step Actions -->
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
             <button id="ai-transmute-btn" class="btn btn-indigo" type="button">⚡ Compile & Save Current Chapter</button>
