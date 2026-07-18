@@ -40,7 +40,7 @@
     "semantic_hash": "371fa06145683d5912a5dd8613bedf66"
   },
   "js/app.js": {
-    "mtime": 1784361385.1701446,
+    "mtime": 1784361483.1290345,
     "ast_hash": "3d5092edddfb85a9a1f54f689d8d12c2",
     "semantic_hash": "3d5092edddfb85a9a1f54f689d8d12c2"
   },
@@ -200,7 +200,7 @@
     "semantic_hash": "ee1a158b5a82841c4e3ac7951ac1746f"
   },
   "index.html": {
-    "mtime": 1784361363.9402397,
+    "mtime": 1784361483.1270308,
     "ast_hash": "5e7984959f29baa51eab47a8abd72169",
     "semantic_hash": "5e7984959f29baa51eab47a8abd72169"
   },
@@ -228,5 +228,10 @@
     "mtime": 1784277395.812421,
     "ast_hash": "6c5374d9e649f75192249f76eb9b6a47",
     "semantic_hash": "6c5374d9e649f75192249f76eb9b6a47"
+  },
+  "README.md": {
+    "mtime": 1784362008.1258042,
+    "ast_hash": "66aad94acdd55705155aa073744adca4",
+    "semantic_hash": "66aad94acdd55705155aa073744adca4"
   }
 }
