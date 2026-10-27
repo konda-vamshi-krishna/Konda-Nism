@@ -1253,29 +1253,45 @@ function populateAllLangs() {
     list.innerHTML = html;
 }
 
+// ⚡ Bolt: Cache DOM elements and debounce the search input to reduce main thread blocking
+// during rapid typing and prevent unnecessary querySelectors on every keystroke.
+let langSearchTimeout = null;
+let cachedLangOpts = null;
+let cachedQuickPicks = null;
+let cachedTitles = null;
+
 function filterLangs() {
     const q = document.getElementById('langSearch').value.toLowerCase().trim();
-    const opts = document.querySelectorAll('#allLangsList .lang-opt');
-    const quickPicks = document.querySelector('.quick-langs');
-    const titles = document.querySelectorAll('.lang-section-title');
     
-    if (q.length > 0) {
-        if(quickPicks) quickPicks.style.display = 'none';
-        if(titles.length > 0) titles[0].style.display = 'none';
-        opts.forEach(opt => {
-            if(opt.getAttribute('data-name').includes(q)) {
-                opt.style.display = 'block';
-            } else {
-                opt.style.display = 'none';
-            }
-        });
-    } else {
-        if(quickPicks) quickPicks.style.display = 'block';
-        if(titles.length > 0) titles[0].style.display = 'block';
-        opts.forEach(opt => {
-            opt.style.display = 'none';
-        });
+    // Lazily cache DOM elements on first use
+    if (!cachedLangOpts) {
+        cachedLangOpts = document.querySelectorAll('#allLangsList .lang-opt');
+        cachedQuickPicks = document.querySelector('.quick-langs');
+        cachedTitles = document.querySelectorAll('.lang-section-title');
     }
+
+    // Debounce execution by 150ms to prevent stuttering during rapid keystrokes
+    if (langSearchTimeout) clearTimeout(langSearchTimeout);
+
+    langSearchTimeout = setTimeout(() => {
+        if (q.length > 0) {
+            if(cachedQuickPicks) cachedQuickPicks.style.display = 'none';
+            if(cachedTitles.length > 0) cachedTitles[0].style.display = 'none';
+            cachedLangOpts.forEach(opt => {
+                if(opt.getAttribute('data-name').includes(q)) {
+                    opt.style.display = 'block';
+                } else {
+                    opt.style.display = 'none';
+                }
+            });
+        } else {
+            if(cachedQuickPicks) cachedQuickPicks.style.display = 'block';
+            if(cachedTitles.length > 0) cachedTitles[0].style.display = 'block';
+            cachedLangOpts.forEach(opt => {
+                opt.style.display = 'none';
+            });
+        }
+    }, 150);
 }
 window.addEventListener('DOMContentLoaded', () => {
     populateAllLangs();
