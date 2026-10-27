@@ -234,7 +234,7 @@
           </div>
           
           <div style="display: flex; align-items: center; gap: 12px;">
-            <button class="bookmark-btn" id="activeBookmarkBtn" onclick="toggleBookmarkActiveQuestion()" title="Bookmark Question">
+            <button class="bookmark-btn" id="activeBookmarkBtn" onclick="toggleBookmarkActiveQuestion()" title="Bookmark Question" aria-label="Bookmark Question" aria-pressed="false">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </button>
             <button class="btn btn-success" onclick="simSubmit(false)" id="simSubmitBtn">Submit Test</button>
@@ -248,7 +248,7 @@
           <span id="gridProgress">0/100</span>
         </div>
         <div class="sim-grid" id="activeGridContainer"></div>
-        <div class="mobile-drawer-btn" onclick="openDrawer()">View Questions Grid</div>
+        <button type="button" class="mobile-drawer-btn" onclick="openDrawer()" aria-expanded="false" aria-controls="mobileDrawer" style="border: none;">View Questions Grid</button>
       </div>
 
       <!-- No active test placeholder -->
@@ -741,10 +741,10 @@
 
 <!-- Drawer for Mobile Nav Grid -->
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
-<div class="drawer" id="mobileDrawer">
+<div class="drawer" id="mobileDrawer" role="dialog" aria-modal="true">
   <div class="grid-header">
     <span>Questions Grid</span>
-    <span onclick="closeDrawer()" style="cursor:pointer; padding: 4px;">✕</span>
+    <button type="button" onclick="closeDrawer()" style="cursor:pointer; padding: 4px; background: transparent; border: none; color: inherit; font-size: inherit;" aria-label="Close questions grid">✕</button>
   </div>
   <div class="sim-grid" id="mobileGridContainer"></div>
 </div>
