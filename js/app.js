@@ -554,14 +554,16 @@ function refreshDashboardRegistry() {
           const container = document.getElementById(containerId);
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+          const fragment = document.createDocumentFragment();
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment);
       };
       
       buildGrid('activeGridContainer');
@@ -570,43 +572,59 @@ function refreshDashboardRegistry() {
   }
 
   function updateGridStyles() {
-      const updateGrid = (containerId) => {
-          const numQ = testData[currentActiveTest].length;
-          let answeredCount = 0;
-          for (let i = 0; i < numQ; i++) {
-              const btn = document.getElementById(containerId + '_' + i);
-              if (!btn) continue;
-              
-              btn.className = 'grid-btn';
-              if (currentQ === i) btn.classList.add('active');
-              
-              const q = testData[currentActiveTest][i];
-              if (isSubmitted) {
-                  if (answers[i] !== undefined && answers[i] !== null) {
-                      if (parseInt(answers[i]) === q.answer_idx) {
-                          btn.classList.add('correct');
-                      } else {
-                          btn.classList.add('wrong');
-                      }
+      const numQ = testData[currentActiveTest].length;
+      let answeredCount = 0;
+
+      // Pre-calculate answers and classes for all questions once
+      const buttonClasses = new Array(numQ);
+      for (let i = 0; i < numQ; i++) {
+          let classes = 'grid-btn';
+          if (currentQ === i) classes += ' active';
+
+          const q = testData[currentActiveTest][i];
+          if (isSubmitted) {
+              if (answers[i] !== undefined && answers[i] !== null) {
+                  if (parseInt(answers[i]) === q.answer_idx) {
+                      classes += ' correct';
                   } else {
-                      btn.classList.add('unattempted');
+                      classes += ' wrong';
                   }
               } else {
-                  if (answers[i] !== undefined && answers[i] !== null) {
-                      btn.classList.add('answered');
-                      answeredCount++;
-                  }
+                  classes += ' unattempted';
+              }
+          } else {
+              if (answers[i] !== undefined && answers[i] !== null) {
+                  classes += ' answered';
+                  answeredCount++;
               }
           }
-          if (!isSubmitted) {
-              document.getElementById('gridProgress').textContent = `${answeredCount}/${numQ}`;
-          } else {
-              document.getElementById('gridProgress').textContent = 'Result Review';
+          buttonClasses[i] = classes;
+      }
+
+      const updateGrid = (containerId) => {
+          const container = document.getElementById(containerId);
+          if (!container) return;
+
+          const children = container.children;
+          // Null-guard to make sure children matches test data
+          if (children.length !== numQ) return;
+
+          for (let i = 0; i < numQ; i++) {
+              const btn = children[i];
+              if (btn.className !== buttonClasses[i]) {
+                  btn.className = buttonClasses[i];
+              }
           }
       };
       
       updateGrid('activeGridContainer');
       updateGrid('mobileGridContainer');
+
+      if (!isSubmitted) {
+          document.getElementById('gridProgress').textContent = `${answeredCount}/${numQ}`;
+      } else {
+          document.getElementById('gridProgress').textContent = 'Result Review';
+      }
   }
 
   function renderActiveQuestion() {
