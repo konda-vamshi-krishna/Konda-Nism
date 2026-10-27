@@ -666,8 +666,10 @@ function refreshDashboardRegistry() {
       const isStarred = starredQuestions.some(sq => sq.testName === currentActiveTest && sq.index === currentQ);
       if (isStarred) {
           bookmarkBtn.classList.add('active');
+          bookmarkBtn.setAttribute('aria-pressed', 'true');
       } else {
           bookmarkBtn.classList.remove('active');
+          bookmarkBtn.setAttribute('aria-pressed', 'false');
       }
       
       // Show/Hide explanations
@@ -803,9 +805,12 @@ function refreshDashboardRegistry() {
 
   function toggleBookmarkActiveQuestion() {
       const isStarredIdx = starredQuestions.findIndex(sq => sq.testName === currentActiveTest && sq.index === currentQ);
+      const bookmarkBtn = document.getElementById('activeBookmarkBtn');
       if (isStarredIdx > -1) {
           starredQuestions.splice(isStarredIdx, 1);
+          if (bookmarkBtn) bookmarkBtn.setAttribute('aria-pressed', 'false');
       } else {
+          if (bookmarkBtn) bookmarkBtn.setAttribute('aria-pressed', 'true');
           const q = testData[currentActiveTest][currentQ];
           starredQuestions.push({
               testName: currentActiveTest,
@@ -1038,12 +1043,16 @@ function refreshDashboardRegistry() {
   function openDrawer() {
       document.getElementById('drawerOverlay').style.display = 'block';
       document.getElementById('mobileDrawer').classList.add('open');
+      const drawerBtn = document.querySelector('.mobile-drawer-btn');
+      if (drawerBtn) drawerBtn.setAttribute('aria-expanded', 'true');
   }
 
   function closeDrawer() {
       document.getElementById('drawerOverlay').style.display = 'none';
       const drawer = document.getElementById('mobileDrawer');
       if (drawer) drawer.classList.remove('open');
+      const drawerBtn = document.querySelector('.mobile-drawer-btn');
+      if (drawerBtn) drawerBtn.setAttribute('aria-expanded', 'false');
   }
 
   function updateStartTitle(val) {
