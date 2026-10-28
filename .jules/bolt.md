@@ -1,0 +1,3 @@
+## 2024-10-28 - Grid DOM Manipulation Bottlenecks
+**Learning:** Found that rendering dynamic mock tests resulted in extensive layout thrashing and poor interactivity because `buildActiveGrid` was iteratively appending elements directly to the DOM for every question, and `updateGridStyles` (which fires frequently) iteratively performed `document.getElementById` searches document-wide instead of accessing `.children`.
+**Action:** Use `DocumentFragment` when generating elements in loops to batch insertions. Use localized container `.children` arrays for bulk style modifications instead of querying document-wide ID lookups for child elements.
