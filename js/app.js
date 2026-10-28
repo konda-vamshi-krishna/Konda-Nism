@@ -577,25 +577,32 @@ function refreshDashboardRegistry() {
               const btn = document.getElementById(containerId + '_' + i);
               if (!btn) continue;
               
-              btn.className = 'grid-btn';
-              if (currentQ === i) btn.classList.add('active');
+              // ⚡ Bolt Performance Optimization:
+              // Compute the expected class name first, then update DOM conditionally
+              // This eliminates O(N) forced reflows/repaints per user interaction
+              let nextClass = 'grid-btn';
+              if (currentQ === i) nextClass += ' active';
               
               const q = testData[currentActiveTest][i];
               if (isSubmitted) {
                   if (answers[i] !== undefined && answers[i] !== null) {
                       if (parseInt(answers[i]) === q.answer_idx) {
-                          btn.classList.add('correct');
+                          nextClass += ' correct';
                       } else {
-                          btn.classList.add('wrong');
+                          nextClass += ' wrong';
                       }
                   } else {
-                      btn.classList.add('unattempted');
+                      nextClass += ' unattempted';
                   }
               } else {
                   if (answers[i] !== undefined && answers[i] !== null) {
-                      btn.classList.add('answered');
+                      nextClass += ' answered';
                       answeredCount++;
                   }
+              }
+
+              if (btn.className !== nextClass) {
+                  btn.className = nextClass;
               }
           }
           if (!isSubmitted) {
