@@ -9,6 +9,13 @@ let testData = {};
 let notesData = { parts: [], flashcards: [] };
 let activeCourseController = null;
 
+function escapeHTML(str) {
+    if (str === null || str === undefined) return '';
+    return String(str).replace(/[&<>"']/g, match => {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[match];
+    });
+}
+
 function getStorageKey(baseKey) {
     if (!currentCourseId) return `prepmaster_global_${baseKey}`;
     return `prepmaster_${currentCourseId}_${baseKey}`;
@@ -242,8 +249,8 @@ function renderCourseGrid() {
         btn.style.gap = '8px';
         btn.innerHTML = `
             <div style="font-size:24px; margin-bottom: 8px;">📚</div>
-            <div class="test-title" style="font-size: 1.1rem; font-weight: bold;">${course.title}</div>
-            <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
+            <div class="test-title" style="font-size: 1.1rem; font-weight: bold;">${escapeHTML(course.title)}</div>
+            <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${escapeHTML(course.description)}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
         gridContainer.appendChild(btn);
@@ -619,8 +626,8 @@ function refreshDashboardRegistry() {
       }
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
       document.getElementById('activeQText').innerHTML = `
-          <div class="notranslate">${q.question}</div>
-          <div class="translate-box" translate="yes">${q.question}</div>
+          <div class="notranslate">${escapeHTML(q.question)}</div>
+          <div class="translate-box" translate="yes">${escapeHTML(q.question)}</div>
       `;
       
       // Update Grid active classes
@@ -654,8 +661,8 @@ function refreshDashboardRegistry() {
           div.innerHTML = `
               <div class="opt-badge notranslate">${letter}</div>
               <div class="opt-text-container">
-                  <div class="notranslate">${text}</div>
-                  <div class="translate-box" translate="yes">${text}</div>
+                  <div class="notranslate">${escapeHTML(text)}</div>
+                  <div class="translate-box" translate="yes">${escapeHTML(text)}</div>
               </div>
           `;
           optionsArea.appendChild(div);
@@ -675,7 +682,7 @@ function refreshDashboardRegistry() {
       if (isSubmitted || (testMode === 'practice' && answers[currentQ] !== undefined && answers[currentQ] !== null)) {
           expPanel.style.display = 'block';
           const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${escapeHTML(correctText)}<br><br>${escapeHTML(q.explanation) || 'To be reviewed.'}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -708,7 +715,7 @@ function refreshDashboardRegistry() {
           const expPanel = document.getElementById('activeExpPanel');
           expPanel.style.display = 'block';
           const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${escapeHTML(correctText)}<br><br>${escapeHTML(q.explanation) || 'To be reviewed.'}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -901,21 +908,21 @@ function refreshDashboardRegistry() {
   }
 
   function renderChapterHtml(chapter) {
-      let html = `<h2 class="chapter-title" style="margin-bottom: 20px; font-weight: 700; color: var(--text-primary);">${chapter.title}</h2>`;
+      let html = `<h2 class="chapter-title" style="margin-bottom: 20px; font-weight: 700; color: var(--text-primary);">${escapeHTML(chapter.title)}</h2>`;
       const sections = chapter.sections || [];
       sections.forEach(section => {
           html += `<div class="notes-section" style="margin-bottom: 25px;">`;
           if (section.heading) {
-              html += `<h3 class="section-heading" style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">${section.heading}</h3>`;
+              html += `<h3 class="section-heading" style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">${escapeHTML(section.heading)}</h3>`;
           }
           if (section.body) {
               // Convert newlines in JSON to paragraphs and clean lists
               const formattedBody = section.body.split('\n\n').map(p => {
                   if (p.trim().startsWith('- ') || p.trim().startsWith('* ')) {
-                      const items = p.split('\n').map(item => `<li>${item.replace(/^[\-\*\s]+/, '')}</li>`).join('');
+                      const items = p.split('\n').map(item => `<li>${escapeHTML(item.replace(/^[-*\s]+/, ''))}</li>`).join('');
                       return `<ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">${items}</ul>`;
                   }
-                  return `<p style="line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">${p.replace(/\n/g, '<br>')}</p>`;
+                  return `<p style="line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">${escapeHTML(p).replace(/\n/g, '<br>')}</p>`;
               }).join('');
               html += `<div class="section-body">${formattedBody}</div>`;
           }
@@ -973,11 +980,11 @@ function refreshDashboardRegistry() {
               div.className = 'history-item';
               div.innerHTML = `
                   <div class="history-info">
-                      <h4>${item.testName}</h4>
-                      <span>${item.date} • Mode: ${item.mode === 'exam' ? 'Exam' : 'Practice'}</span>
+                      <h4>${escapeHTML(item.testName)}</h4>
+                      <span>${escapeHTML(item.date)} • Mode: ${item.mode === 'exam' ? 'Exam' : 'Practice'}</span>
                   </div>
                   <div class="history-score ${item.percent >= 60 ? 'color-correct' : 'color-wrong'}">
-                      Score: ${item.score} (${item.percent}%)
+                      Score: ${escapeHTML(item.score)} (${escapeHTML(item.percent)}%)
                   </div>
               `;
               historyContainer.appendChild(div);
@@ -998,11 +1005,11 @@ function refreshDashboardRegistry() {
               div.style.alignItems = 'flex-start';
               div.innerHTML = `
                   <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                      <strong>${sq.testName} - Q${sq.index + 1}</strong>
+                      <strong>${escapeHTML(sq.testName)} - Q${escapeHTML(sq.index + 1)}</strong>
                       <span onclick="removeBookmark(${idx})" style="color: var(--danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;">Remove</span>
                   </div>
-                  <p style="margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 500;">${sq.question}</p>
-                  <p style="margin: 0; font-size: 0.9rem; color: var(--success); font-weight: 600;">Correct Answer: ${sq.answer}</p>
+                  <p style="margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 500;">${escapeHTML(sq.question)}</p>
+                  <p style="margin: 0; font-size: 0.9rem; color: var(--success); font-weight: 600;">Correct Answer: ${escapeHTML(sq.answer)}</p>
               `;
               bookmarksContainer.appendChild(div);
           });
@@ -1104,7 +1111,7 @@ function refreshDashboardRegistry() {
 
           btn.innerHTML = `
             <div style="font-size:24px; margin-bottom: 4px;">${statusIcon}</div>
-            <div class="thumb-title" style="font-weight:bold;">${testName}</div>
+            <div class="thumb-title" style="font-weight:bold;">${escapeHTML(testName)}</div>
             <div class="thumb-status" style="font-size:0.8rem; opacity:0.8;">${statusText}</div>
           `;
           
@@ -1132,8 +1139,8 @@ function refreshDashboardRegistry() {
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box" translate="yes">${card.front}</div>`;
-          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box" translate="yes">${card.back}</div>`;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${escapeHTML(card.front)}</div><div class="translate-box" translate="yes">${escapeHTML(card.front)}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${escapeHTML(card.back)}</div><div class="translate-box" translate="yes">${escapeHTML(card.back)}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
@@ -1360,7 +1367,7 @@ function setupDropzone() {
             }
             validateStagedFiles();
         } catch (err) {
-            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading dropped items: ${err.message}</div>`;
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading dropped items: ${escapeHTML(err.message)}</div>`;
             document.getElementById('validationSpinner').style.display = 'none';
         }
     });
@@ -1438,7 +1445,7 @@ async function handleFileSelect(e) {
         }
         validateStagedFiles();
     } catch (err) {
-        logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading selected files: ${err.message}</div>`;
+        logContainer.innerHTML += `<div style="color:var(--danger)">❌ Error reading selected files: ${escapeHTML(err.message)}</div>`;
         document.getElementById('validationSpinner').style.display = 'none';
     }
 }
@@ -1454,8 +1461,8 @@ function validateStagedFiles() {
         const item = document.createElement('div');
         item.className = 'staged-file-item';
         item.innerHTML = `
-            <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
-            <span class="file-status pending" id="status-${file.name.replace('.', '-')}">Pending</span>
+            <span>📄 ${escapeHTML(file.path)} (${(file.size / 1024).toFixed(1)} KB)</span>
+            <span class="file-status pending" id="status-${escapeHTML(file.name.replace('.', '-'))}">Pending</span>
         `;
         stagedList.appendChild(item);
     });
@@ -1489,7 +1496,7 @@ function validateStagedFiles() {
 
             requiredKeys.forEach(k => {
                 if (!config[k] || String(config[k]).trim() === '') {
-                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is missing required key: "${k}".</div>`;
+                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is missing required key: "${escapeHTML(k)}".</div>`;
                     configValid = false;
                     isValid = false;
                 }
@@ -1499,7 +1506,7 @@ function validateStagedFiles() {
                 // Validate folder/ID slug rules (lowercase alphanumeric + hyphens)
                 const slugPattern = /^[a-z0-9-]+$/;
                 if (!slugPattern.test(config.id)) {
-                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json "id" must be lowercase slugified (alphanumeric and hyphens only, e.g. "my-course-slug"). Found: "${config.id}"</div>`;
+                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json "id" must be lowercase slugified (alphanumeric and hyphens only, e.g. "my-course-slug"). Found: "${escapeHTML(config.id)}"</div>`;
                     configValid = false;
                     isValid = false;
                 }
@@ -1507,13 +1514,13 @@ function validateStagedFiles() {
 
             if (configValid) {
                 courseMetadata = config;
-                logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${config.id}, Version: ${config.version}).</div>`;
+                logContainer.innerHTML += `<div style="color:var(--success)">✅ config.json is valid (ID: ${escapeHTML(config.id)}, Version: ${escapeHTML(config.version)}).</div>`;
                 updateFileStatus('config.json', 'valid');
             } else {
                 updateFileStatus('config.json', 'invalid');
             }
         } catch (e) {
-            logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is not valid JSON: ${e.message}</div>`;
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ config.json is not valid JSON: ${escapeHTML(e.message)}</div>`;
             isValid = false;
             updateFileStatus('config.json', 'invalid');
         }
@@ -1533,14 +1540,14 @@ function validateStagedFiles() {
             } else {
                 for (const testKey in testsData) {
                     if (!testKey.startsWith('test_') || isNaN(testKey.substring(5))) {
-                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json contains invalid key "${testKey}". Expected format: "test_1", "test_2".</div>`;
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json contains invalid key "${escapeHTML(testKey)}". Expected format: "test_1", "test_2".</div>`;
                         testsValid = false;
                         isValid = false;
                     }
 
                     const questions = testsData[testKey];
                     if (!Array.isArray(questions)) {
-                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ test key "${testKey}" must map to an array of questions.</div>`;
+                        logContainer.innerHTML += `<div style="color:var(--danger)">❌ test key "${escapeHTML(testKey)}" must map to an array of questions.</div>`;
                         testsValid = false;
                         isValid = false;
                         continue;
@@ -1550,21 +1557,21 @@ function validateStagedFiles() {
                         const reqKeys = ['id', 'question', 'options', 'answer_idx', 'explanation'];
                         reqKeys.forEach(rk => {
                             if (q[rk] === undefined) {
-                                logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${idx + 1} in "${testKey}" is missing required key "${rk}".</div>`;
+                                logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${idx + 1} in "${escapeHTML(testKey)}" is missing required key "${rk}".</div>`;
                                 testsValid = false;
                                 isValid = false;
                             }
                         });
 
                         if (q.options && !Array.isArray(q.options)) {
-                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${q.id || idx + 1} options must be a JSON array.</div>`;
+                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${escapeHTML(q.id) || idx + 1} options must be a JSON array.</div>`;
                             testsValid = false;
                             isValid = false;
                         } else if (q.options) {
                             if (q.answer_idx !== undefined) {
                                 const idxInt = parseInt(q.answer_idx);
                                 if (isNaN(idxInt) || idxInt < 0 || idxInt >= q.options.length) {
-                                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${q.id || idx + 1} answer_idx (${q.answer_idx}) is out of bounds for options length ${q.options.length}.</div>`;
+                                    logContainer.innerHTML += `<div style="color:var(--danger)">❌ Question ${escapeHTML(q.id) || idx + 1} answer_idx (${escapeHTML(q.answer_idx)}) is out of bounds for options length ${q.options.length}.</div>`;
                                     testsValid = false;
                                     isValid = false;
                                 }
@@ -1582,7 +1589,7 @@ function validateStagedFiles() {
                 updateFileStatus('tests.json', 'invalid');
             }
         } catch (e) {
-            logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json is not valid JSON: ${e.message}</div>`;
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ tests.json is not valid JSON: ${escapeHTML(e.message)}</div>`;
             isValid = false;
             updateFileStatus('tests.json', 'invalid');
         }
@@ -1610,7 +1617,7 @@ function validateStagedFiles() {
 
                     chap.sections.forEach((sec, sIdx) => {
                         if (sec.heading === undefined || sec.body === undefined) {
-                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Section at index ${sIdx} in chapter "${chap.title}" is missing heading or body.</div>`;
+                            logContainer.innerHTML += `<div style="color:var(--danger)">❌ Section at index ${sIdx} in chapter "${escapeHTML(chap.title)}" is missing heading or body.</div>`;
                             notesValid = false;
                             isValid = false;
                         }
@@ -1625,7 +1632,7 @@ function validateStagedFiles() {
                 updateFileStatus('notes.json', 'invalid');
             }
         } catch (e) {
-            logContainer.innerHTML += `<div style="color:var(--danger)">❌ notes.json is not valid JSON: ${e.message}</div>`;
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ notes.json is not valid JSON: ${escapeHTML(e.message)}</div>`;
             isValid = false;
             updateFileStatus('notes.json', 'invalid');
         }
@@ -1659,7 +1666,7 @@ function validateStagedFiles() {
                 updateFileStatus('flashcards.json', 'invalid');
             }
         } catch (e) {
-            logContainer.innerHTML += `<div style="color:var(--danger)">❌ flashcards.json is not valid JSON: ${e.message}</div>`;
+            logContainer.innerHTML += `<div style="color:var(--danger)">❌ flashcards.json is not valid JSON: ${escapeHTML(e.message)}</div>`;
             isValid = false;
             updateFileStatus('flashcards.json', 'invalid');
         }
@@ -1673,7 +1680,7 @@ function validateStagedFiles() {
     });
 
     if (ignoredFiles.length > 0) {
-        logContainer.innerHTML += `<div style="color:var(--warning)">⚠️ Warning: Ignored ${ignoredFiles.length} non-course file(s) (e.g. ${ignoredFiles.slice(0, 3).join(', ')}). Only config.json, tests.json, notes.json, and flashcards.json are supported.</div>`;
+        logContainer.innerHTML += `<div style="color:var(--warning)">⚠️ Warning: Ignored ${ignoredFiles.length} non-course file(s) (e.g. ${escapeHTML(ignoredFiles.slice(0, 3).join(', '))}). Only config.json, tests.json, notes.json, and flashcards.json are supported.</div>`;
     }
 
     document.getElementById('validationSpinner').style.display = 'none';
@@ -1758,7 +1765,7 @@ async function submitContributionPR() {
         const masterTreeSha = masterCommit.tree.sha;
 
         // Step 2: Create new branch
-        logContainer.innerHTML += `<div>🌿 Creating contribution branch: <code>${branchName}</code>...</div>`;
+        logContainer.innerHTML += `<div>🌿 Creating contribution branch: <code>${escapeHTML(branchName)}</code>...</div>`;
         await githubRequest(`/repos/${owner}/${repo}/git/refs`, {
             method: 'POST',
             body: JSON.stringify({
@@ -1801,7 +1808,7 @@ async function submitContributionPR() {
         for (const file of stagedFiles) {
             const repoPath = `content/${courseId}/${file.name}`;
 
-            logContainer.innerHTML += `<div>📤 Creating blob for <code>${repoPath}</code>...</div>`;
+            logContainer.innerHTML += `<div>📤 Creating blob for <code>${escapeHTML(repoPath)}</code>...</div>`;
             const blob = await githubRequest(`/repos/${owner}/${repo}/git/blobs`, {
                 method: 'POST',
                 body: JSON.stringify({
@@ -1883,7 +1890,7 @@ async function submitContributionPR() {
 
     } catch (err) {
         console.error(err);
-        logContainer.innerHTML += `<div style="color:var(--danger); font-weight:bold; margin-top:15px;">❌ GitHub API Error: ${err.message}</div>`;
+        logContainer.innerHTML += `<div style="color:var(--danger); font-weight:bold; margin-top:15px;">❌ GitHub API Error: ${escapeHTML(err.message)}</div>`;
         
         // Trigger auto-download fallback to save compiled state from being lost
         if (document.getElementById('ai-download-json-btn')) {
@@ -1925,7 +1932,7 @@ function showPRSuccessScreen(prUrl) {
                 Thank you for contributing! Your course has been validated and submitted as a Pull Request to our repository.
             </p>
             <div style="margin-bottom: 30px;">
-                <a href="${prUrl}" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; justify-content: center; width: auto; padding: 12px 24px;">
+                <a href="${escapeHTML(prUrl)}" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; justify-content: center; width: auto; padding: 12px 24px;">
                     View Pull Request on GitHub
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
@@ -2057,7 +2064,7 @@ function mergeDroppedFileIntoBuffer(name, contentText) {
         logToTerminal(`✅ File ${name} successfully merged into compiler memory.`);
         saveCompilationCheckpoint();
     } catch (e) {
-        logToTerminal(`⚠️ Failed to merge dropped file ${name}: ${e.message}`);
+        logToTerminal(`⚠️ Failed to merge dropped file ${name}: ${escapeHTML(e.message)}`);
     }
 }
 
@@ -2159,7 +2166,7 @@ function restoreCompilationSession() {
             if (panel) panel.style.display = 'none';
         }
     } catch (e) {
-        logToTerminal(`❌ Restoration failure: ${e.message}`);
+        logToTerminal(`❌ Restoration failure: ${escapeHTML(e.message)}`);
     }
 }
 
@@ -2525,7 +2532,7 @@ document.getElementById('ai-freeze-module-btn')?.addEventListener('click', () =>
         logToTerminal("Module architecture compilation complete. Ready for final GitHub PR dispatch execution.");
         
     } catch (err) {
-        logToTerminal(`❌ System Packaging Failure: ${err.message}`);
+        logToTerminal(`❌ System Packaging Failure: ${escapeHTML(err.message)}`);
     }
 });
 
