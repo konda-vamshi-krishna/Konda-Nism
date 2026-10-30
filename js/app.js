@@ -9,6 +9,18 @@ let testData = {};
 let notesData = { parts: [], flashcards: [] };
 let activeCourseController = null;
 
+
+function escapeHTML(str) {
+    if (typeof str !== 'string') return str;
+    return str.replace(/[&<>'"]/g, tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+    }[tag]));
+}
+
 function getStorageKey(baseKey) {
     if (!currentCourseId) return `prepmaster_global_${baseKey}`;
     return `prepmaster_${currentCourseId}_${baseKey}`;
@@ -1454,8 +1466,8 @@ function validateStagedFiles() {
         const item = document.createElement('div');
         item.className = 'staged-file-item';
         item.innerHTML = `
-            <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
-            <span class="file-status pending" id="status-${file.name.replace('.', '-')}">Pending</span>
+            <span>📄 ${escapeHTML(file.path)} (${(file.size / 1024).toFixed(1)} KB)</span>
+            <span class="file-status pending" id="status-${escapeHTML(file.name).replace('.', '-')}">Pending</span>
         `;
         stagedList.appendChild(item);
     });
@@ -1801,7 +1813,7 @@ async function submitContributionPR() {
         for (const file of stagedFiles) {
             const repoPath = `content/${courseId}/${file.name}`;
 
-            logContainer.innerHTML += `<div>📤 Creating blob for <code>${repoPath}</code>...</div>`;
+            logContainer.innerHTML += `<div>📤 Creating blob for <code>${escapeHTML(repoPath)}</code>...</div>`;
             const blob = await githubRequest(`/repos/${owner}/${repo}/git/blobs`, {
                 method: 'POST',
                 body: JSON.stringify({
