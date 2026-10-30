@@ -552,16 +552,21 @@ function refreshDashboardRegistry() {
   function buildActiveGrid() {
       const buildGrid = (containerId) => {
           const container = document.getElementById(containerId);
+          if (!container) return;
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+
+          // ⚡ Bolt: Use DocumentFragment for batch DOM insertions to minimize reflows
+          const fragment = document.createDocumentFragment();
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment);
       };
       
       buildGrid('activeGridContainer');
@@ -571,11 +576,18 @@ function refreshDashboardRegistry() {
 
   function updateGridStyles() {
       const updateGrid = (containerId) => {
+          const container = document.getElementById(containerId);
+          if (!container) return;
+
           const numQ = testData[currentActiveTest].length;
           let answeredCount = 0;
+
+          // ⚡ Bolt: Cache container.children to avoid O(n) DOM lookups (document.getElementById) in loop
+          const buttons = container.children;
+
           for (let i = 0; i < numQ; i++) {
-              const btn = document.getElementById(containerId + '_' + i);
-              if (!btn) continue;
+              if (i >= buttons.length) break;
+              const btn = buttons[i];
               
               btn.className = 'grid-btn';
               if (currentQ === i) btn.classList.add('active');
