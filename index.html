@@ -278,7 +278,7 @@
   <div class="tab-content" id="content-flashcards">
     <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto 24px auto;">
       <h2 style="margin-top: 0;">Revision Flashcards</h2>
-      <p>Click the card to flip and reveal the answer. Use flashcards for active recall revision.</p>
+      <p>Click or press Space/Enter to flip. Use ←/→ arrow keys to navigate. Use flashcards for active recall revision.</p>
       
       <div style="margin-top: 16px;">
         <label for="fcDeckSelect" style="font-weight: 600; margin-right: 8px;">Select Deck:</label>
@@ -290,7 +290,7 @@
     </div>
 
     <div class="fc-container">
-      <div class="fc-card" onclick="flipCard(this)" id="flashcardElement">
+      <div class="fc-card" onclick="flipCard(this)" id="flashcardElement" tabindex="0" role="button" aria-label="Flip flashcard" onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault(); flipCard(this);}">
         <div class="fc-inner">
           <div class="fc-front">
             <h3 id="fcFrontCategory">Fact #1</h3>

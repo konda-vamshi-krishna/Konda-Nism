@@ -1,0 +1,3 @@
+## 2025-01-20 - Keyboard Accessibility for Study Tools
+**Learning:** Intensive study tools like flashcards are frequently used by power users who prefer keyboard navigation for speed. Missing keyboard shortcuts (Space/Enter to flip, Arrow keys to navigate) forces mouse usage and limits accessibility. In single-page applications, adding global keyboard handlers scoped to active tabs improves flow significantly.
+**Action:** When implementing study interfaces or repetitive interaction components, always pair mouse click actions with semantic keyboard shortcuts and focus states.
