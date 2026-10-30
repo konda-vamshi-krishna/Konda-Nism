@@ -1161,6 +1161,18 @@ function refreshDashboardRegistry() {
       renderFlashcard();
   }
   
+  // Keyboard navigation for flashcards
+  document.addEventListener('keydown', function(event) {
+      const fcTab = document.getElementById('content-flashcards');
+      if (fcTab && fcTab.classList.contains('active')) {
+          if (event.key === 'ArrowRight') {
+              nextCard();
+          } else if (event.key === 'ArrowLeft') {
+              prevCard();
+          }
+      }
+  });
+
   function setupFlashcardDecks() {
       const select = document.getElementById('fcDeckSelect');
       if (!select) return;
