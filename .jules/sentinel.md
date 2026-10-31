@@ -1,0 +1,4 @@
+## 2025-05-18 - Fix XSS in file upload
+**Vulnerability:** A High Priority Cross-Site Scripting (XSS) vulnerability was found in the file upload interface where `file.path` and `file.name` from dropped/selected files were inserted directly into `innerHTML` strings without any sanitization in `js/app.js` (`validateStagedFiles`).
+**Learning:** `innerHTML` interpolation strings with user-provided data directly creates critical XSS execution vectors (e.g. by crafting a filename like `<script>alert(1)</script>`). Since this is a Vanilla JS codebase, standard framework protections against XSS do not apply natively.
+**Prevention:** Always sanitize dynamic strings originating from user input (like filenames, file paths, JSON texts) by wrapping them with `escapeHTML()` before injecting them into `.innerHTML`.
