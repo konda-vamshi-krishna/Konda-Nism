@@ -5,6 +5,7 @@ let globalData = {
     pendingCacheRefresh: false
 };
 let currentCourseId = null;
+let currentTabId = 'dashboard';
 let testData = {};
 let notesData = { parts: [], flashcards: [] };
 let activeCourseController = null;
@@ -821,6 +822,7 @@ function refreshDashboardRegistry() {
 
   // Navigation Tabs Switch
   function switchTab(tabId) {
+      currentTabId = tabId;
       // Guard: if navigating away from simulator with an active timer, freeze it and persist state
       if (tabId !== 'simulator' && timerInterval) {
           clearInterval(timerInterval);
@@ -2625,6 +2627,26 @@ document.addEventListener('visibilitychange', () => {
 
 // Run checkpoint check on load
 document.addEventListener('DOMContentLoaded', checkCompilationCheckpoint);
+
+// Keyboard Accessibility for Flashcards
+document.addEventListener('keydown', (e) => {
+    // Scope global keydown listener to the active tab to prevent unintended cross-view behavior
+    if (currentTabId === 'flashcards' && flashcardsList && flashcardsList.length > 0) {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            prevCard();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            nextCard();
+        } else if (e.key === ' ' || e.key === 'Enter') {
+            const cardEl = document.getElementById('flashcardElement');
+            if (cardEl && (document.activeElement === cardEl || document.activeElement.tagName === 'BODY' || document.activeElement === document.documentElement)) {
+                e.preventDefault();
+                flipCard(cardEl);
+            }
+        }
+    }
+});
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
     checkCompilationCheckpoint();
 }

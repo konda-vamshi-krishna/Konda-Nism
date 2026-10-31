@@ -571,6 +571,12 @@
     perspective: 1000px;
     cursor: pointer;
     margin-bottom: 24px;
+    border-radius: 16px; /* Added to match inner curve for focus ring */
+  }
+
+  .fc-card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
   }
 
   .fc-inner {
