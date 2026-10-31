@@ -1,0 +1,3 @@
+## 2024-05-24 - Flashcard Keyboard Accessibility
+**Learning:** When implementing keyboard accessibility for interactive components like flashcards in a Vanilla JS single-page layout (where tabs hide/show content), global `keydown` listeners must be explicitly scoped to the active view state. Without this scope, pressing Space or Arrow keys on unrelated tabs (like reading notes or taking tests) causes unintended background actions.
+**Action:** Always track the active view state (e.g., `currentTabId`) and wrap component-specific global keyboard listeners in conditional checks that verify the component is currently visible and active.
