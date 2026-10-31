@@ -1,0 +1,3 @@
+## 2026-10-31 - [Optimize DOM insertions and queries in Simulator Grid]
+**Learning:** Found a specific O(N) DOM lookup and reflow issue in the app simulator view when rendering the question grid and updating status grids. Using a DocumentFragment instead of direct container appending and indexing into container.children instead of doing document.getElementById eliminates N DOM reflows and 2N DOM queries per interaction.
+**Action:** Always check loop structures for DOM mutations or lookups. Batch DOM insertions using DocumentFragment, and cache container elements referencing their children array directly.
