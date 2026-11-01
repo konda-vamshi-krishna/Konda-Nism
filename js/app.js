@@ -1,3 +1,14 @@
+// Security Helper: Sanitize HTML to prevent XSS
+function escapeHTML(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 let globalData = {
     registry: [],
     courses: {},
@@ -618,9 +629,11 @@ function refreshDashboardRegistry() {
           return;
       }
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
+
+      const safeQuestion = escapeHTML(q.question);
       document.getElementById('activeQText').innerHTML = `
-          <div class="notranslate">${q.question}</div>
-          <div class="translate-box" translate="yes">${q.question}</div>
+          <div class="notranslate">${safeQuestion}</div>
+          <div class="translate-box" translate="yes">${safeQuestion}</div>
       `;
       
       // Update Grid active classes
@@ -633,6 +646,7 @@ function refreshDashboardRegistry() {
       q.options.forEach((opt, idx) => {
           const letter = String.fromCharCode(65 + idx);
           const text = opt;
+          const safeText = escapeHTML(opt);
           
           const div = document.createElement('div');
           div.className = 'option';
@@ -654,8 +668,8 @@ function refreshDashboardRegistry() {
           div.innerHTML = `
               <div class="opt-badge notranslate">${letter}</div>
               <div class="opt-text-container">
-                  <div class="notranslate">${text}</div>
-                  <div class="translate-box" translate="yes">${text}</div>
+                  <div class="notranslate">${safeText}</div>
+                  <div class="translate-box" translate="yes">${safeText}</div>
               </div>
           `;
           optionsArea.appendChild(div);
@@ -674,8 +688,9 @@ function refreshDashboardRegistry() {
       const expPanel = document.getElementById('activeExpPanel');
       if (isSubmitted || (testMode === 'practice' && answers[currentQ] !== undefined && answers[currentQ] !== null)) {
           expPanel.style.display = 'block';
-          const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const correctText = escapeHTML(q.options[q.answer_idx] || '');
+          const safeExplanation = escapeHTML(q.explanation || 'To be reviewed.');
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${safeExplanation}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -707,8 +722,9 @@ function refreshDashboardRegistry() {
           const q = testData[currentActiveTest][currentQ];
           const expPanel = document.getElementById('activeExpPanel');
           expPanel.style.display = 'block';
-          const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const correctText = escapeHTML(q.options[q.answer_idx] || '');
+          const safeExplanation = escapeHTML(q.explanation || 'To be reviewed.');
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${safeExplanation}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -1131,9 +1147,11 @@ function refreshDashboardRegistry() {
       const card = flashcardsList[currentFcIndex];
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
+          const safeFront = escapeHTML(card.front);
+          const safeBack = escapeHTML(card.back);
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box" translate="yes">${card.front}</div>`;
-          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box" translate="yes">${card.back}</div>`;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${safeFront}</div><div class="translate-box" translate="yes">${safeFront}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${safeBack}</div><div class="translate-box" translate="yes">${safeBack}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
