@@ -937,6 +937,34 @@ function refreshDashboardRegistry() {
       cardEl.classList.toggle('flipped');
   }
 
+  // Flashcards keyboard accessibility
+  document.addEventListener('keydown', (e) => {
+      // Only process if flashcards tab is active
+      const flashcardsTab = document.getElementById('content-flashcards');
+      if (!flashcardsTab || !flashcardsTab.classList.contains('active')) return;
+
+      const flashcardEl = document.getElementById('flashcardElement');
+      if (!flashcardEl) return;
+
+      if (e.key === 'ArrowRight') {
+          if (document.activeElement === flashcardEl || document.activeElement === document.body) {
+              nextCard();
+          }
+      } else if (e.key === 'ArrowLeft') {
+          if (document.activeElement === flashcardEl || document.activeElement === document.body) {
+              prevCard();
+          }
+      } else if (e.key === ' ' || e.key === 'Enter') {
+          // If focus is specifically on the card, or if nothing else important is focused
+          if (document.activeElement === flashcardEl || document.activeElement === document.body) {
+              if (e.key === ' ') {
+                  e.preventDefault(); // Prevent page scroll
+              }
+              flipCard(flashcardEl);
+          }
+      }
+  });
+
   // Analytics UI Refresher
   window.resetAllProgress = function() {
       if (confirm("Are you sure you want to reset all your mock test progress and saved data? This cannot be undone.")) {
