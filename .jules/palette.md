@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility Keyboard Interactions
+**Learning:** In vanilla JS PWAs, using `onkeydown` to listen for Enter/Space on elements that are given `role="button"` and `tabindex="0"` pairs click functionality correctly. Additionally, when using global listeners like `document.addEventListener("keydown")` for things like arrow keys to change views, the event must be explicitly scoped to check if the specific view (e.g., `classList.contains("active")`) is visible to prevent cross-view interference and accessibility bugs.
+**Action:** Always map mouse click actions with `tabindex` and `onkeydown` (Enter/Space) and ensure global keydowns are scoped exclusively to the currently active UI section.
