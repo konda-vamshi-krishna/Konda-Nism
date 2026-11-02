@@ -1,0 +1,3 @@
+## 2024-05-19 - Replacing O(N) DOM Lookups with O(1) Cache in Render Loops
+**Learning:** Found a performance bottleneck in `updateGridStyles` where `document.getElementById` was called for every question inside a loop. Since this runs on every option selection, large tests caused severe main-thread blocking (layout thrashing) from O(N) DOM lookup overhead.
+**Action:** When repeatedly mutating a list of elements tied to a parent DOM node in Vanilla JS, ALWAYS cache the parent container (`container = document.getElementById(containerId)`) and access children sequentially via `container.children[i]`. Also use `DocumentFragment` for batch appends.

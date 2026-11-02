@@ -554,14 +554,19 @@ function refreshDashboardRegistry() {
           const container = document.getElementById(containerId);
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+
+          // ⚡ Bolt Optimization: Use DocumentFragment to batch DOM insertions.
+          // This reduces layout thrashing and reflows compared to appending inside the loop.
+          const fragment = document.createDocumentFragment();
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment);
       };
       
       buildGrid('activeGridContainer');
@@ -573,8 +578,13 @@ function refreshDashboardRegistry() {
       const updateGrid = (containerId) => {
           const numQ = testData[currentActiveTest].length;
           let answeredCount = 0;
+
+          // ⚡ Bolt Optimization: Cache the grid container to prevent O(N) DOM lookups.
+          // Accessing `container.children[i]` turns an O(N) lookup into O(1), preventing main-thread blocking on large tests.
+          const container = document.getElementById(containerId);
+          if (!container) return;
           for (let i = 0; i < numQ; i++) {
-              const btn = document.getElementById(containerId + '_' + i);
+              const btn = container.children[i];
               if (!btn) continue;
               
               btn.className = 'grid-btn';
