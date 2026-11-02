@@ -2829,3 +2829,17 @@ document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
 
     ingestFileIntoWorkspace(droppedFile);
 });
+
+// Flashcards Keyboard Shortcuts
+document.addEventListener('keydown', (e) => {
+    const flashcardsTab = document.getElementById('content-flashcards');
+    if (flashcardsTab && flashcardsTab.classList.contains('active')) {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            prevCard();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            nextCard();
+        }
+    }
+});
