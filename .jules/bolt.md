@@ -1,0 +1,1 @@
+## 2026-11-02 - Batch DOM Insertions with DocumentFragment\n**Learning:** In Vanilla JS applications, multiple sequential `appendChild` calls within a loop cause layout thrashing and poor rendering performance.\n**Action:** Use `DocumentFragment` for O(1) DOM insertion when generating dynamic lists like grids or tables.
