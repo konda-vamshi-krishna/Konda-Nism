@@ -343,6 +343,27 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
 });
 
+// Flashcard Keyboard Accessibility
+document.addEventListener('keydown', (e) => {
+    const flashcardsTab = document.getElementById('content-flashcards');
+    if (flashcardsTab && flashcardsTab.classList.contains('active')) {
+        const activeTagName = document.activeElement ? document.activeElement.tagName : '';
+        if (activeTagName === 'SELECT' || activeTagName === 'INPUT') return;
+
+        const flashcardEl = document.getElementById('flashcardElement');
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            nextCard();
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            prevCard();
+        } else if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === flashcardEl) {
+            e.preventDefault();
+            flipCard(flashcardEl);
+        }
+    }
+});
+
 // Register Service Worker for PWA Offline Isolation
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
