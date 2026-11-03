@@ -232,6 +232,8 @@ function renderCourseGrid() {
     document.getElementById('courseStatsStrip').style.display = 'none';
     gridContainer.style.display = 'grid';
     
+    // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+    const fragment = document.createDocumentFragment();
     globalData.registry.forEach(course => {
         const btn = document.createElement('button');
         btn.className = 'test-btn not-attempted';
@@ -246,8 +248,9 @@ function renderCourseGrid() {
             <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
-        gridContainer.appendChild(btn);
+        fragment.appendChild(btn);
     });
+    gridContainer.appendChild(fragment);
 }
 
 function backToCourses() {
@@ -554,14 +557,17 @@ function refreshDashboardRegistry() {
           const container = document.getElementById(containerId);
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+          // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+          const fragment = document.createDocumentFragment();
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment);
       };
       
       buildGrid('activeGridContainer');
@@ -968,6 +974,8 @@ function refreshDashboardRegistry() {
       if (history.length === 0) {
           historyContainer.innerHTML = '<div class="empty-state">No mock tests completed yet.</div>';
       } else {
+          // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+          const fragment = document.createDocumentFragment();
           history.forEach(item => {
               const div = document.createElement('div');
               div.className = 'history-item';
@@ -980,8 +988,9 @@ function refreshDashboardRegistry() {
                       Score: ${item.score} (${item.percent}%)
                   </div>
               `;
-              historyContainer.appendChild(div);
+              fragment.appendChild(div);
           });
+          historyContainer.appendChild(fragment);
       }
 
       // Render Starred/Bookmarked questions
@@ -991,6 +1000,8 @@ function refreshDashboardRegistry() {
       if (starredQuestions.length === 0) {
           bookmarksContainer.innerHTML = '<div class="empty-state">No questions bookmarked yet. Use the star icon during mock tests.</div>';
       } else {
+          // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+          const fragment = document.createDocumentFragment();
           starredQuestions.forEach((sq, idx) => {
               const div = document.createElement('div');
               div.className = 'history-item';
@@ -1004,8 +1015,9 @@ function refreshDashboardRegistry() {
                   <p style="margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 500;">${sq.question}</p>
                   <p style="margin: 0; font-size: 0.9rem; color: var(--success); font-weight: 600;">Correct Answer: ${sq.answer}</p>
               `;
-              bookmarksContainer.appendChild(div);
+              fragment.appendChild(div);
           });
+          bookmarksContainer.appendChild(fragment);
       }
   }
 
@@ -1075,6 +1087,8 @@ function refreshDashboardRegistry() {
       
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       let firstTest = null;
+      // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+      const fragment = document.createDocumentFragment();
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
           
@@ -1117,8 +1131,9 @@ function refreshDashboardRegistry() {
               startBtn.disabled = false;
           };
           
-          gridContainer.appendChild(btn);
+          fragment.appendChild(btn);
       }
+      gridContainer.appendChild(fragment);
       
       if (firstTest) {
           // Auto-select first test
@@ -1170,13 +1185,16 @@ function refreshDashboardRegistry() {
           if (fc.testName) tests.add(fc.testName);
       });
       
+      // ⚡ Bolt: Using DocumentFragment to prevent layout thrashing
+      const fragment = document.createDocumentFragment();
       tests.forEach(t => {
           const count = notesData.flashcards.filter(fc => fc.testName === t).length;
           const opt = document.createElement('option');
           opt.value = t;
           opt.textContent = `${t} (${count} cards)`;
-          select.appendChild(opt);
+          fragment.appendChild(opt);
       });
+      select.appendChild(fragment);
   }
 
   function loadFlashcardDeck(deckValue) {
