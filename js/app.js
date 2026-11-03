@@ -554,14 +554,16 @@ function refreshDashboardRegistry() {
           const container = document.getElementById(containerId);
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+          const fragment = document.createDocumentFragment(); // Bolt: Use DocumentFragment to batch DOM insertions
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment); // Bolt: Append fragment to DOM once to minimize layout thrashing
       };
       
       buildGrid('activeGridContainer');
@@ -571,10 +573,14 @@ function refreshDashboardRegistry() {
 
   function updateGridStyles() {
       const updateGrid = (containerId) => {
+          const container = document.getElementById(containerId); // Bolt: Cache container element
+          if (!container) return;
           const numQ = testData[currentActiveTest].length;
           let answeredCount = 0;
+          const children = container.children; // Bolt: Access container.children directly instead of O(n) DOM lookups
+
           for (let i = 0; i < numQ; i++) {
-              const btn = document.getElementById(containerId + '_' + i);
+              const btn = children[i];
               if (!btn) continue;
               
               btn.className = 'grid-btn';
