@@ -1,0 +1,3 @@
+## 2024-11-03 - [Optimize DOM insertions and lookups in loops]
+**Learning:** Using `document.getElementById` inside a loop for elements within the same container results in O(n) layout thrashing and slows down rendering significantly. Similarly, appending elements one by one to the DOM is expensive.
+**Action:** Always cache the container element and use `container.children` for iterating over child elements. Use `DocumentFragment` to batch DOM insertions outside the loop.
