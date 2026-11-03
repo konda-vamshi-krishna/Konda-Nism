@@ -4,6 +4,20 @@ let globalData = {
     activeSimulationInProgress: false,
     pendingCacheRefresh: false
 };
+// 🛡️ Sentinel: Mitigate Cross-Site Scripting (XSS) vulnerabilities.
+// This helper sanitizes dynamic and user-provided strings before they are injected into the DOM via innerHTML.
+function escapeHTML(str) {
+    if (str === null || str === undefined) return '';
+    return String(str).replace(/[&<>'"]/g,
+        tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag));
+}
+
 let currentCourseId = null;
 let testData = {};
 let notesData = { parts: [], flashcards: [] };
@@ -242,8 +256,8 @@ function renderCourseGrid() {
         btn.style.gap = '8px';
         btn.innerHTML = `
             <div style="font-size:24px; margin-bottom: 8px;">📚</div>
-            <div class="test-title" style="font-size: 1.1rem; font-weight: bold;">${course.title}</div>
-            <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
+            <div class="test-title" style="font-size: 1.1rem; font-weight: bold;">${escapeHTML(course.title)}</div>
+            <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${escapeHTML(course.description)}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
         gridContainer.appendChild(btn);
@@ -652,10 +666,10 @@ function refreshDashboardRegistry() {
           }
           
           div.innerHTML = `
-              <div class="opt-badge notranslate">${letter}</div>
+              <div class="opt-badge notranslate">${escapeHTML(letter)}</div>
               <div class="opt-text-container">
-                  <div class="notranslate">${text}</div>
-                  <div class="translate-box" translate="yes">${text}</div>
+                  <div class="notranslate">${escapeHTML(text)}</div>
+                  <div class="translate-box" translate="yes">${escapeHTML(text)}</div>
               </div>
           `;
           optionsArea.appendChild(div);
@@ -973,8 +987,8 @@ function refreshDashboardRegistry() {
               div.className = 'history-item';
               div.innerHTML = `
                   <div class="history-info">
-                      <h4>${item.testName}</h4>
-                      <span>${item.date} • Mode: ${item.mode === 'exam' ? 'Exam' : 'Practice'}</span>
+                      <h4>${escapeHTML(item.testName)}</h4>
+                      <span>${escapeHTML(item.date)} • Mode: ${item.mode === 'exam' ? 'Exam' : 'Practice'}</span>
                   </div>
                   <div class="history-score ${item.percent >= 60 ? 'color-correct' : 'color-wrong'}">
                       Score: ${item.score} (${item.percent}%)
@@ -998,11 +1012,11 @@ function refreshDashboardRegistry() {
               div.style.alignItems = 'flex-start';
               div.innerHTML = `
                   <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                      <strong>${sq.testName} - Q${sq.index + 1}</strong>
+                      <strong>${escapeHTML(sq.testName)} - Q${sq.index + 1}</strong>
                       <span onclick="removeBookmark(${idx})" style="color: var(--danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;">Remove</span>
                   </div>
-                  <p style="margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 500;">${sq.question}</p>
-                  <p style="margin: 0; font-size: 0.9rem; color: var(--success); font-weight: 600;">Correct Answer: ${sq.answer}</p>
+                  <p style="margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 500;">${escapeHTML(sq.question)}</p>
+                  <p style="margin: 0; font-size: 0.9rem; color: var(--success); font-weight: 600;">Correct Answer: ${escapeHTML(sq.answer)}</p>
               `;
               bookmarksContainer.appendChild(div);
           });
@@ -1132,8 +1146,8 @@ function refreshDashboardRegistry() {
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box" translate="yes">${card.front}</div>`;
-          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box" translate="yes">${card.back}</div>`;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${escapeHTML(card.front)}</div><div class="translate-box" translate="yes">${escapeHTML(card.front)}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${escapeHTML(card.back)}</div><div class="translate-box" translate="yes">${escapeHTML(card.back)}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
