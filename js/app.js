@@ -937,6 +937,27 @@ function refreshDashboardRegistry() {
       cardEl.classList.toggle('flipped');
   }
 
+  // Flashcards keyboard accessibility
+  document.addEventListener('keydown', function(e) {
+      const activeTab = document.querySelector('.tab-content.active');
+      if (!activeTab || activeTab.id !== 'content-flashcards') return;
+
+      const tag = e.target.tagName.toUpperCase();
+      if (['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'A'].includes(tag)) return;
+
+      if (e.code === 'Space' || e.code === 'Enter') {
+          e.preventDefault();
+          const cardEl = document.getElementById('flashcardElement');
+          if (cardEl) flipCard(cardEl);
+      } else if (e.code === 'ArrowRight') {
+          e.preventDefault();
+          nextCard();
+      } else if (e.code === 'ArrowLeft') {
+          e.preventDefault();
+          prevCard();
+      }
+  });
+
   // Analytics UI Refresher
   window.resetAllProgress = function() {
       if (confirm("Are you sure you want to reset all your mock test progress and saved data? This cannot be undone.")) {
