@@ -232,6 +232,7 @@ function renderCourseGrid() {
     document.getElementById('courseStatsStrip').style.display = 'none';
     gridContainer.style.display = 'grid';
     
+    const fragment = document.createDocumentFragment();
     globalData.registry.forEach(course => {
         const btn = document.createElement('button');
         btn.className = 'test-btn not-attempted';
@@ -246,8 +247,9 @@ function renderCourseGrid() {
             <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
-        gridContainer.appendChild(btn);
+        fragment.appendChild(btn);
     });
+    gridContainer.appendChild(fragment);
 }
 
 function backToCourses() {
@@ -1075,6 +1077,7 @@ function refreshDashboardRegistry() {
       
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       let firstTest = null;
+      const fragment = document.createDocumentFragment();
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
           
@@ -1117,8 +1120,9 @@ function refreshDashboardRegistry() {
               startBtn.disabled = false;
           };
           
-          gridContainer.appendChild(btn);
+          fragment.appendChild(btn);
       }
+      gridContainer.appendChild(fragment);
       
       if (firstTest) {
           // Auto-select first test
