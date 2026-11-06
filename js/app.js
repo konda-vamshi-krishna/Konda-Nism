@@ -2829,3 +2829,30 @@ document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
 
     ingestFileIntoWorkspace(droppedFile);
 });
+
+document.addEventListener('keydown', (e) => {
+    // Only handle flashcard shortcuts when the flashcards tab is active
+    const flashcardsTab = document.getElementById('content-flashcards');
+    if (!flashcardsTab || !flashcardsTab.classList.contains('active')) {
+        return;
+    }
+
+    // Ignore events from form controls and links
+    const activeElement = document.activeElement;
+    const ignoreTags = ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'A'];
+    if (activeElement && ignoreTags.includes(activeElement.tagName)) {
+        // If the active element is the flashcard itself, we DO want to handle Space/Enter for flipping
+        if (activeElement.id !== 'flashcardElement' || (e.key !== ' ' && e.key !== 'Enter')) {
+           return;
+        }
+    }
+
+    if (e.key === 'ArrowRight') {
+        nextCard();
+    } else if (e.key === 'ArrowLeft') {
+        prevCard();
+    } else if ((e.key === ' ' || e.key === 'Enter') && document.activeElement.id === 'flashcardElement') {
+        e.preventDefault(); // Prevent page scroll on Space
+        flipCard(document.getElementById('flashcardElement'));
+    }
+});
