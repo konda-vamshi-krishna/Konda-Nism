@@ -232,6 +232,10 @@ function renderCourseGrid() {
     document.getElementById('courseStatsStrip').style.display = 'none';
     gridContainer.style.display = 'grid';
     
+    // ⚡ Bolt Optimization: Use DocumentFragment to batch DOM insertions
+    // Impact: Avoids O(n) layout thrashing during course grid rendering on initial load
+    const fragment = document.createDocumentFragment();
+
     globalData.registry.forEach(course => {
         const btn = document.createElement('button');
         btn.className = 'test-btn not-attempted';
@@ -246,8 +250,10 @@ function renderCourseGrid() {
             <div class="test-status" style="font-size:0.85rem; opacity:0.8; font-weight: normal; line-height: 1.4;">${course.description}</div>
         `;
         btn.onclick = () => selectCourse(course.id);
-        gridContainer.appendChild(btn);
+        fragment.appendChild(btn);
     });
+
+    gridContainer.appendChild(fragment);
 }
 
 function backToCourses() {
@@ -554,14 +560,20 @@ function refreshDashboardRegistry() {
           const container = document.getElementById(containerId);
           container.innerHTML = '';
           const numQ = testData[currentActiveTest].length;
+
+          // ⚡ Bolt Optimization: Use DocumentFragment to batch DOM insertions
+          // Impact: Avoids O(n) layout thrashing during active grid rendering, improving performance for long test sets
+          const fragment = document.createDocumentFragment();
+
           for (let i = 0; i < numQ; i++) {
               let btn = document.createElement('button');
               btn.className = 'grid-btn';
               btn.id = containerId + '_' + i;
               btn.textContent = i + 1;
               btn.onclick = () => { currentQ = i; renderActiveQuestion(); closeDrawer(); };
-              container.appendChild(btn);
+              fragment.appendChild(btn);
           }
+          container.appendChild(fragment);
       };
       
       buildGrid('activeGridContainer');
@@ -1073,6 +1085,10 @@ function refreshDashboardRegistry() {
       
       gridContainer.innerHTML = '';
       
+      // ⚡ Bolt Optimization: Use DocumentFragment to batch DOM insertions
+      // Impact: Avoids O(n) layout thrashing during test selection grid rendering, improving UI thread responsiveness
+      const fragment = document.createDocumentFragment();
+
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
       let firstTest = null;
       for (let testName in testData) {
@@ -1117,9 +1133,11 @@ function refreshDashboardRegistry() {
               startBtn.disabled = false;
           };
           
-          gridContainer.appendChild(btn);
+          fragment.appendChild(btn);
       }
       
+      gridContainer.appendChild(fragment);
+
       if (firstTest) {
           // Auto-select first test
           const firstBtn = gridContainer.querySelector('.test-btn');
