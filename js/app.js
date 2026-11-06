@@ -9,6 +9,21 @@ let testData = {};
 let notesData = { parts: [], flashcards: [] };
 let activeCourseController = null;
 
+
+// Security helper to prevent XSS
+function escapeHTML(str) {
+    if (typeof str !== 'string') return str;
+    return str.replace(/[&<>'"]/g, function(match) {
+        switch (match) {
+            case '&': return '&amp;';
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case "'": return '&#39;';
+            case '"': return '&quot;';
+        }
+    });
+}
+
 function getStorageKey(baseKey) {
     if (!currentCourseId) return `prepmaster_global_${baseKey}`;
     return `prepmaster_${currentCourseId}_${baseKey}`;
@@ -619,8 +634,8 @@ function refreshDashboardRegistry() {
       }
       document.getElementById('activeQNumber').textContent = `Question ${currentQ + 1}/${testData[currentActiveTest].length}`;
       document.getElementById('activeQText').innerHTML = `
-          <div class="notranslate">${q.question}</div>
-          <div class="translate-box" translate="yes">${q.question}</div>
+          <div class="notranslate">${escapeHTML(q.question)}</div>
+          <div class="translate-box" translate="yes">${escapeHTML(q.question)}</div>
       `;
       
       // Update Grid active classes
@@ -654,8 +669,8 @@ function refreshDashboardRegistry() {
           div.innerHTML = `
               <div class="opt-badge notranslate">${letter}</div>
               <div class="opt-text-container">
-                  <div class="notranslate">${text}</div>
-                  <div class="translate-box" translate="yes">${text}</div>
+                  <div class="notranslate">${escapeHTML(text)}</div>
+                  <div class="translate-box" translate="yes">${escapeHTML(text)}</div>
               </div>
           `;
           optionsArea.appendChild(div);
@@ -675,7 +690,7 @@ function refreshDashboardRegistry() {
       if (isSubmitted || (testMode === 'practice' && answers[currentQ] !== undefined && answers[currentQ] !== null)) {
           expPanel.style.display = 'block';
           const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${escapeHTML(correctText)}<br><br>${escapeHTML(q.explanation || 'To be reviewed.')}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -708,7 +723,7 @@ function refreshDashboardRegistry() {
           const expPanel = document.getElementById('activeExpPanel');
           expPanel.style.display = 'block';
           const correctText = q.options[q.answer_idx] || '';
-          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${correctText}<br><br>${q.explanation || 'To be reviewed.'}<br><br>
+          const expHtml = `<h4>Explanation</h4><strong>Correct Answer:</strong> ${escapeHTML(correctText)}<br><br>${escapeHTML(q.explanation || 'To be reviewed.')}<br><br>
             <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 12px;" onclick="jumpToFlashcard('${currentActiveTest}', ${currentQ})">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 Review Related Flashcard
@@ -901,21 +916,21 @@ function refreshDashboardRegistry() {
   }
 
   function renderChapterHtml(chapter) {
-      let html = `<h2 class="chapter-title" style="margin-bottom: 20px; font-weight: 700; color: var(--text-primary);">${chapter.title}</h2>`;
+      let html = `<h2 class="chapter-title" style="margin-bottom: 20px; font-weight: 700; color: var(--text-primary);">${escapeHTML(chapter.title)}</h2>`;
       const sections = chapter.sections || [];
       sections.forEach(section => {
           html += `<div class="notes-section" style="margin-bottom: 25px;">`;
           if (section.heading) {
-              html += `<h3 class="section-heading" style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">${section.heading}</h3>`;
+              html += `<h3 class="section-heading" style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">${escapeHTML(section.heading)}</h3>`;
           }
           if (section.body) {
               // Convert newlines in JSON to paragraphs and clean lists
               const formattedBody = section.body.split('\n\n').map(p => {
                   if (p.trim().startsWith('- ') || p.trim().startsWith('* ')) {
-                      const items = p.split('\n').map(item => `<li>${item.replace(/^[\-\*\s]+/, '')}</li>`).join('');
+                      const items = p.split('\n').map(item => `<li>${escapeHTML(item.replace(/^[\-\*\s]+/, ''))}</li>`).join('');
                       return `<ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">${items}</ul>`;
                   }
-                  return `<p style="line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">${p.replace(/\n/g, '<br>')}</p>`;
+                  return `<p style="line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">${escapeHTML(p).replace(/\n/g, '<br>')}</p>`;
               }).join('');
               html += `<div class="section-body">${formattedBody}</div>`;
           }
@@ -1132,8 +1147,8 @@ function refreshDashboardRegistry() {
       document.getElementById('flashcardElement').classList.remove('flipped');
       setTimeout(() => {
           document.getElementById('fcFrontCategory').textContent = `Fact #${currentFcIndex + 1}`;
-          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${card.front}</div><div class="translate-box" translate="yes">${card.front}</div>`;
-          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${card.back}</div><div class="translate-box" translate="yes">${card.back}</div>`;
+          document.getElementById('fcFrontText').innerHTML = `<div class="notranslate">${escapeHTML(card.front)}</div><div class="translate-box" translate="yes">${escapeHTML(card.front)}</div>`;
+          document.getElementById('fcBackText').innerHTML = `<div class="notranslate">${escapeHTML(card.back)}</div><div class="translate-box" translate="yes">${escapeHTML(card.back)}</div>`;
           document.getElementById('fcProgress').textContent = `Card ${currentFcIndex + 1} / ${flashcardsList.length}`;
       }, 150);
   }
