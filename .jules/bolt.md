@@ -1,0 +1,3 @@
+## 2024-11-07 - Optimize DOM lookups in `js/app.js` loops
+**Learning:** In a Vanilla JS codebase, `document.getElementById` inside loops (e.g. `updateGridStyles`) causes unnecessary O(n) DOM lookups resulting in poor performance, especially for rendering large element grids. Furthermore, `container.appendChild` inside loops leads to repeated layout thrashing.
+**Action:** Used `DocumentFragment` to batch grid element insertions and minimized DOM tree accesses by caching elements with `container.children` resulting in O(1) element access. This optimizes rendering loops drastically in Vanilla JS PWAs without virtual DOM overhead.
