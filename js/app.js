@@ -14,6 +14,15 @@ function getStorageKey(baseKey) {
     return `prepmaster_${currentCourseId}_${baseKey}`;
 }
 
+function escapeHTML(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 // Shimmer Loader Visual Feedback
 function showShimmerLoadingState() {
     const gridContainer = document.getElementById('courseSelectionGrid');
@@ -1454,8 +1463,8 @@ function validateStagedFiles() {
         const item = document.createElement('div');
         item.className = 'staged-file-item';
         item.innerHTML = `
-            <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
-            <span class="file-status pending" id="status-${file.name.replace('.', '-')}">Pending</span>
+            <span>📄 ${escapeHTML(file.path)} (${(file.size / 1024).toFixed(1)} KB)</span>
+            <span class="file-status pending" id="status-${escapeHTML(file.name).replace('.', '-')}">Pending</span>
         `;
         stagedList.appendChild(item);
     });
