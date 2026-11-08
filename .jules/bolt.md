@@ -1,0 +1,3 @@
+## 2025-05-19 - [DOM Traversal Optimization]
+**Learning:** Found significant O(n) layout thrashing and repeated `document.getElementById` calls happening inside loops of the `buildActiveGrid` and `updateGridStyles` functions in `js/app.js`, which are hot paths triggered every time a test question option is selected.
+**Action:** Always batch DOM insertions with `DocumentFragment` inside Vanilla JS loops. Additionally, avoid querying the document in loops—cache the parent container and access child elements via the `container.children` HTMLCollection for direct positional access (O(1) instead of O(N)).
