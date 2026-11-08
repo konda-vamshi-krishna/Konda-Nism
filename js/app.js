@@ -2829,3 +2829,28 @@ document.getElementById('ai-file-dropzone')?.addEventListener('drop', (e) => {
 
     ingestFileIntoWorkspace(droppedFile);
 });
+
+// Keyboard accessibility for flashcards
+document.addEventListener('keydown', (event) => {
+    const flashcardsTab = document.getElementById('content-flashcards');
+    if (!flashcardsTab || !flashcardsTab.classList.contains('active')) {
+        return;
+    }
+
+    const activeElement = document.activeElement;
+    if (activeElement && ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'A'].includes(activeElement.tagName)) {
+        return; // Let native focusable elements handle their own keys
+    }
+
+    if (event.key === ' ' || event.key === 'Enter') {
+        event.preventDefault(); // Prevent scrolling
+        const cardElement = document.getElementById('flashcardElement');
+        if (cardElement) flipCard(cardElement);
+    } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        prevCard();
+    } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        nextCard();
+    }
+});
