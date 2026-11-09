@@ -1073,8 +1073,14 @@ function refreshDashboardRegistry() {
       
       gridContainer.innerHTML = '';
       
+      // ⚡ Bolt: Cache synchronous storage reads outside loop and use DocumentFragment to prevent layout thrashing
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
+      const activeTestRaw = localStorage.getItem(getStorageKey('active_test'));
+      const activeTestParsed = activeTestRaw ? JSON.parse(activeTestRaw) : null;
+
+      const fragment = document.createDocumentFragment();
       let firstTest = null;
+
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
           
@@ -1091,15 +1097,11 @@ function refreshDashboardRegistry() {
               statusIcon = '✅';
           }
           
-          // Check in-progress
-          const activeTest = localStorage.getItem(getStorageKey('active_test'));
-          if (activeTest) {
-              const active = JSON.parse(activeTest);
-              if (active.testName === testName) {
-                  btn.className = 'test-btn in-progress';
-                  statusText = 'In Progress';
-                  statusIcon = '⏳';
-              }
+          // Check in-progress using cached value
+          if (activeTestParsed && activeTestParsed.testName === testName) {
+              btn.className = 'test-btn in-progress';
+              statusText = 'In Progress';
+              statusIcon = '⏳';
           }
 
           btn.innerHTML = `
@@ -1117,9 +1119,11 @@ function refreshDashboardRegistry() {
               startBtn.disabled = false;
           };
           
-          gridContainer.appendChild(btn);
+          fragment.appendChild(btn);
       }
       
+      gridContainer.appendChild(fragment);
+
       if (firstTest) {
           // Auto-select first test
           const firstBtn = gridContainer.querySelector('.test-btn');
