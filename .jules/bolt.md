@@ -1,0 +1,3 @@
+## 2024-11-09 - O(n) Storage Thrashing in UI Renders
+**Learning:** Found a pattern where Vanilla JS UI render loops (`setupTestSelectors`) repeatedly hit synchronous LocalStorage reads (`localStorage.getItem`) and `JSON.parse` for every item iterated (e.g. `active_test`), slowing down execution and causing GC thrashing. Moreover, appending nodes directly to a parent container (`gridContainer.appendChild`) inside a loop causes sequential layout thrashing.
+**Action:** Lift `localStorage.getItem` and `JSON.parse` outside loop iterations and memoize/cache the result. Always use a `DocumentFragment` for batch appending dynamically generated DOM elements.
