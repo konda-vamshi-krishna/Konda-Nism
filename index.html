@@ -290,7 +290,8 @@
     </div>
 
     <div class="fc-container">
-      <div class="fc-card" onclick="flipCard(this)" id="flashcardElement">
+      <div class="fc-card" onclick="flipCard(this)" id="flashcardElement" aria-describedby="fc-instruction" tabindex="0">
+        <span id="fc-instruction" class="sr-only">Click or press Enter or Space to flip the flashcard.</span>
         <div class="fc-inner">
           <div class="fc-front">
             <h3 id="fcFrontCategory">Fact #1</h3>
