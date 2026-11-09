@@ -1,3 +1,13 @@
+function escapeHTML(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 let globalData = {
     registry: [],
     courses: {},
@@ -1454,8 +1464,8 @@ function validateStagedFiles() {
         const item = document.createElement('div');
         item.className = 'staged-file-item';
         item.innerHTML = `
-            <span>📄 ${file.path} (${(file.size / 1024).toFixed(1)} KB)</span>
-            <span class="file-status pending" id="status-${file.name.replace('.', '-')}">Pending</span>
+            <span>📄 ${escapeHTML(file.path)} (${(file.size / 1024).toFixed(1)} KB)</span>
+            <span class="file-status pending" id="status-${escapeHTML(file.name).replace('.', '-')}">Pending</span>
         `;
         stagedList.appendChild(item);
     });
@@ -1673,7 +1683,7 @@ function validateStagedFiles() {
     });
 
     if (ignoredFiles.length > 0) {
-        logContainer.innerHTML += `<div style="color:var(--warning)">⚠️ Warning: Ignored ${ignoredFiles.length} non-course file(s) (e.g. ${ignoredFiles.slice(0, 3).join(', ')}). Only config.json, tests.json, notes.json, and flashcards.json are supported.</div>`;
+        logContainer.innerHTML += `<div style="color:var(--warning)">⚠️ Warning: Ignored ${ignoredFiles.length} non-course file(s) (e.g. ${escapeHTML(ignoredFiles.slice(0, 3).join(', '))}). Only config.json, tests.json, notes.json, and flashcards.json are supported.</div>`;
     }
 
     document.getElementById('validationSpinner').style.display = 'none';
