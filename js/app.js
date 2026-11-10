@@ -932,7 +932,27 @@ function refreshDashboardRegistry() {
       return "<p>Error: Markdown parser not loaded.</p>";
   }
 
+
+  // Keyboard Accessibility for Flashcards
+  document.addEventListener('keydown', (e) => {
+      const flashcardsTab = document.getElementById('content-flashcards');
+      if (!flashcardsTab || !flashcardsTab.classList.contains('active')) return;
+
+      const ignoreTags = ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'A'];
+      if (ignoreTags.includes(e.target.tagName)) return;
+
+      if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          flipCard(document.getElementById('flashcardElement'));
+      } else if (e.key === 'ArrowLeft') {
+          prevCard();
+      } else if (e.key === 'ArrowRight') {
+          nextCard();
+      }
+  });
+
   // Flashcards flipping and loading
+
   function flipCard(cardEl) {
       cardEl.classList.toggle('flipped');
   }
