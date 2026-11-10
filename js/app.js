@@ -573,8 +573,10 @@ function refreshDashboardRegistry() {
       const updateGrid = (containerId) => {
           const numQ = testData[currentActiveTest].length;
           let answeredCount = 0;
+          const container = document.getElementById(containerId);
+          if (!container) return;
           for (let i = 0; i < numQ; i++) {
-              const btn = document.getElementById(containerId + '_' + i);
+              const btn = container.children[i];
               if (!btn) continue;
               
               btn.className = 'grid-btn';
@@ -1074,6 +1076,17 @@ function refreshDashboardRegistry() {
       gridContainer.innerHTML = '';
       
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
+
+      let activeTestObj = null;
+      const activeTestStr = localStorage.getItem(getStorageKey('active_test'));
+      if (activeTestStr) {
+          try {
+              activeTestObj = JSON.parse(activeTestStr);
+          } catch (e) {
+              console.error("Failed to parse active test:", e);
+          }
+      }
+
       let firstTest = null;
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
@@ -1092,14 +1105,10 @@ function refreshDashboardRegistry() {
           }
           
           // Check in-progress
-          const activeTest = localStorage.getItem(getStorageKey('active_test'));
-          if (activeTest) {
-              const active = JSON.parse(activeTest);
-              if (active.testName === testName) {
-                  btn.className = 'test-btn in-progress';
-                  statusText = 'In Progress';
-                  statusIcon = '⏳';
-              }
+          if (activeTestObj && activeTestObj.testName === testName) {
+              btn.className = 'test-btn in-progress';
+              statusText = 'In Progress';
+              statusIcon = '⏳';
           }
 
           btn.innerHTML = `
