@@ -1,0 +1,3 @@
+## 2024-11-12 - Hoist local storage parse out of render loop
+**Learning:** Found a pattern of synchronous storage access and `JSON.parse` occurring inside a tight render loop `for (let testName in testData)` when rendering `setupTestSelectors`. This is an O(n) layout block anti-pattern that slows UI initialization on course switch or launch, especially when test counts increase.
+**Action:** When inspecting DOM generation or grid initialization functions, ensure `localStorage.getItem` and expensive object parses like `JSON.parse` are pulled out and evaluated once per render pass before the iteration loops start.
