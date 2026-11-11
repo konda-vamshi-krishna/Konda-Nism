@@ -1,0 +1,3 @@
+## 2024-11-11 - Hoist Expensive Sync Operations Outside Render Loops
+**Learning:** Found an O(n) rendering loop in `setupTestSelectors` in `js/app.js` that repeatedly calls `localStorage.getItem(getStorageKey('active_test'))` and `JSON.parse()` inside a loop rendering UI components. This can cause significant GC thrashing and layout issues in vanilla JS SPAs. Memory instruction already mentioned: "To prevent UI render loop thrashing and GC pauses, ensure expensive synchronous operations like localStorage.getItem and JSON.parse are hoisted outside of iteration loops."
+**Action:** When working on DOM population loops, always check if `localStorage.getItem` or `JSON.parse` operations can be hoisted before the loop.
