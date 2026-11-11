@@ -1074,6 +1074,11 @@ function refreshDashboardRegistry() {
       gridContainer.innerHTML = '';
       
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
+
+      // ⚡ Bolt Optimization: Hoist expensive synchronous storage reads and JSON.parse out of the loop
+      const activeTestRaw = localStorage.getItem(getStorageKey('active_test'));
+      const activeTestObj = activeTestRaw ? JSON.parse(activeTestRaw) : null;
+
       let firstTest = null;
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
@@ -1092,14 +1097,10 @@ function refreshDashboardRegistry() {
           }
           
           // Check in-progress
-          const activeTest = localStorage.getItem(getStorageKey('active_test'));
-          if (activeTest) {
-              const active = JSON.parse(activeTest);
-              if (active.testName === testName) {
-                  btn.className = 'test-btn in-progress';
-                  statusText = 'In Progress';
-                  statusIcon = '⏳';
-              }
+          if (activeTestObj && activeTestObj.testName === testName) {
+              btn.className = 'test-btn in-progress';
+              statusText = 'In Progress';
+              statusIcon = '⏳';
           }
 
           btn.innerHTML = `
