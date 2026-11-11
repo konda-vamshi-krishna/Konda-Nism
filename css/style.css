@@ -586,6 +586,11 @@
     border: 1px solid var(--border-color);
   }
 
+  .fc-card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+  }
+
   .fc-card.flipped .fc-inner {
     transform: rotateY(180deg);
   }
@@ -1042,4 +1047,14 @@ body.translation-active .notes-wrapper {
   100% {
     transform: translateX(100%);
   }
+}.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

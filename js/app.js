@@ -1161,6 +1161,26 @@ function refreshDashboardRegistry() {
       renderFlashcard();
   }
   
+  // Keyboard navigation for flashcards
+  document.addEventListener('keydown', function(e) {
+      const flashcardsContent = document.getElementById('content-flashcards');
+      if (!flashcardsContent || !flashcardsContent.classList.contains('active')) {
+          return;
+      }
+      const targetTag = e.target.tagName;
+      if (['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'A'].includes(targetTag)) {
+          return;
+      }
+      if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          flipCard(document.getElementById('flashcardElement'));
+      } else if (e.key === 'ArrowRight') {
+          nextCard();
+      } else if (e.key === 'ArrowLeft') {
+          prevCard();
+      }
+  });
+
   function setupFlashcardDecks() {
       const select = document.getElementById('fcDeckSelect');
       if (!select) return;
