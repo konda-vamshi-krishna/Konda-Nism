@@ -1074,6 +1074,20 @@ function refreshDashboardRegistry() {
       gridContainer.innerHTML = '';
       
       const history = JSON.parse(localStorage.getItem(getStorageKey('test_history')) || '[]');
+
+      // ⚡ Bolt Performance Optimization:
+      // Hoisted synchronous localStorage access and JSON parsing outside of the loop.
+      // Expected impact: Prevents UI render thrashing and O(n) GC pauses by caching state.
+      let parsedActiveTest = null;
+      const activeTestStr = localStorage.getItem(getStorageKey('active_test'));
+      if (activeTestStr) {
+          try {
+              parsedActiveTest = JSON.parse(activeTestStr);
+          } catch (e) {
+              console.error("Failed to parse active test:", e);
+          }
+      }
+
       let firstTest = null;
       for (let testName in testData) {
           if (!firstTest) firstTest = testName;
@@ -1092,14 +1106,10 @@ function refreshDashboardRegistry() {
           }
           
           // Check in-progress
-          const activeTest = localStorage.getItem(getStorageKey('active_test'));
-          if (activeTest) {
-              const active = JSON.parse(activeTest);
-              if (active.testName === testName) {
-                  btn.className = 'test-btn in-progress';
-                  statusText = 'In Progress';
-                  statusIcon = '⏳';
-              }
+          if (parsedActiveTest && parsedActiveTest.testName === testName) {
+              btn.className = 'test-btn in-progress';
+              statusText = 'In Progress';
+              statusIcon = '⏳';
           }
 
           btn.innerHTML = `
